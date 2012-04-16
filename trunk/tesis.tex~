@@ -1,0 +1,1620 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[spanish,activeacute]{babel}
+%\usepackage{ucs}
+%\usepackage[utf-8]{inputenc}
+\usepackage{graphicx}
+\usepackage{afterpage}
+%\usepackage{multirow}
+% Title Page
+\title{Reconstrucci\'on de muones c\'osmicos en el detector interno del experimento ATLAS}
+\author{Mar\'ia Laura Gonz\'alez Silva \\ \\ \\ \\Tesis de Licenciatura en Ciencias F\'isicas\\Facultad de Ciencias Exactas y Naturales\\Universidad de Buenos Aires}
+
+\date{Marzo 2007}
+
+\includeonly{introduccion,atlas,tdaq}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\maketitle
+
+
+%---------------------------------------------------------------------
+
+\newpage
+
+\thispagestyle{empty}
+
+
+{ \underline{TEMA}:} {\small Reconstrucci\'on de muones c\'osmicos en el detector interno del experimento ATLAS}
+
+\vspace{1cm}
+
+{ \underline{ALUMNO}:} {\small Mar\'ia Laura Gonz\'alez Silva} \hspace{3cm} {\underline{ LU N$\,^{\circ}$} : {\small $217/01$} }
+
+\vspace{1cm}
+
+{ \underline{LUGAR DE TRABAJO}:} {\small Dpto. de F\'isica, FCEyN, UBA}
+
+\vspace{1cm}
+
+{ \underline{DIRECTOR DEL TRABAJO}:} {\small Dr. Ricardo Piegaia}
+
+%\vspace{1cm}
+%{ \underline{CO-DIRECTOR DE TRABAJO}:} {\small Dr. }
+
+\vspace{1cm}
+
+{ \underline{FECHA DE INICIACI\'{O}N}:} {\small Julio de $2006$}
+
+\vspace{1cm}
+
+{ \underline{FECHA DE FINALIZACI\'{O}N}:} {\small Marzo de $2007$}
+
+\vspace{1cm}
+
+{ \underline{FECHA DE EXAMEN}:}
+
+\vspace{1cm}
+
+{ \underline{INFORME FINAL APROBADO POR}:}
+
+\vspace{2.25cm}
+
+\underline{       \hspace{6cm}              }        \hspace{2cm} \underline{         \hspace{6cm}               }
+
+{\small Alumno: Mar\'ia Laura Gonz\'alez Silva}  \hspace{4cm} Jurado 1 
+
+\vspace{1cm}
+
+\underline{     \hspace{6cm}                   }        \hspace{2cm} \underline{  \hspace{6cm}                      }
+
+{\small Director: Dr. Ricardo Piegaia}     \hspace{5.2cm} Jurado 2
+
+\vspace{1cm}
+
+\underline{         \hspace{6cm}               }        \hspace{2cm} \underline{       \hspace{6cm}                 }
+
+{\small Profesora: Dra. Mirta Alicia Gil}   \hspace{5cm} Jurado 3
+
+%---------------------------------------------------------------------
+%\newpage
+%\clearpage 
+%\thispagestyle{empty}
+%\author{Mar\'ia Laura Gonz\'alez Silva}
+%\title{Reconstrucci\'on de muones c\'osmicos en el detector interno del experimento ATLAS}
+%\date{}
+%\maketitle
+%\pagenumbering{}
+
+%---------------------------------------------------------------------
+
+\newpage
+
+\thispagestyle{empty}
+
+$\\$
+\\
+
+\begin{flushright}
+\emph{Dedicado a Cristina Silva}
+\end{flushright}
+
+%---------------------------------------------------------------------
+
+%---------------------------------------------------------------------
+%\newpage
+
+%\thispagestyle{empty}
+
+% $\\$
+
+%---------------------------------------------------------------------
+
+\newpage
+
+$\\$
+$\\$
+$\\$
+$\\$
+\thispagestyle{empty}
+
+\begin{center}
+\textbf{\begin{small}AGRADECIMIENTOS\end{small}}\\
+\end{center}
+$\\$ \indent   A Ricardo, por abrirme las puertas \emph{para ir a jugar}, por las respuestas largas a preguntas cortitas,
+por las tardes marat\'onicas, por los mates... y las milanesas! Por la dedicaci\'on, gracias!
+
+A toda la gente de ATLAS y muy especialmente a Jamie Boyd por la paciencia y el trabajo compartido.
+
+A Fer y a Gastoncito, por los cafecitos en el 40... y por el ``tema 8''.
+
+A mis compa\~neritos de estos a\~nos de carrera; a todo el grupo de los qu\'imicos (el ``A'') y de manera especial a Juan Pellegrino y Melina Rossi, por estos a\~nos de amistad; a los de f\'isica, los locos como yo (bueno, no locos, ``especiales''), Alejandra Yuhjmamn, In\'es Gonz\'alez Fern\'andez y Ana Rodriguez Garraza, por ser mis compa\~neras y amigas desde los comienzos; a Alejandra Romero, Gabriela Vila, Mar\'ia Eugenia Capoulat, Iv\'an Sidelnik, Jos\'e Zurita, Juan Manuel Figueira, Anita Calabrese, Mariano Gabito, Leonardo Amarilla, Brian Wundheiler, Christian Helman, Pedro A. Gim\'enez Molinelli, Francisco Gonz\'alez Pinto y Gast\'on Romeo; gracias por los momentos compartidos, por el apoyo que me brindaron en este tiempo, y por lo que vendr\'a. A Tom\'as Teitelbaum y a Cecilia Bejarano, por su amistad y por el ``que no decaiga'' nuestro, de cada d\'ia... Chechu, lo logramos!
+
+
+A mi familia ``grande'', por el cari\~no y apoyo constante, y por seguir mis pasos a la distancia.
+A los del grupo, mis amigos y hermanos, gracias por estar siempre! No tengo palabras para ustedes.
+A Lore y a mam\'a, por el esfuerzo y por darme todo sin pedir nada, por eso y por mucho m\'as, GRACIAS! A ustedes les dedico este trabajo.
+ 
+
+
+%---------------------------------------------------------------------
+
+
+
+\begin{abstract}
+El detector ATLAS, uno de los cuatro experimentos del acelerador LHC 
+actualmente en construcci\'on en el CERN, tiene como prop\'osito 
+principal 
+el descubrimiento del bos\'on de Higgs, la part\'icula involucrada en 
+el 
+mecanismo de ruptura de la simetr\'ia electrod\'ebil y el origen de la 
+masa, 
+as\'i como la b\'usqueda de nueva f\'isica m\'as all\'a Modelo 
+Est\'andar 
+hasta la escala de 1 TeV. En el colisionador chocar\'an haces de 
+protones 
+con una energ\'ia de centro de masa de 14 TeV y una frecuencia de 
+interacci\'on de $10^9$ Hz. La selecci\'on de eventos en l\'inea de 
+ATLAS 
+debe enfrentarse con el desaf\'io de seleccionar eficientemente sucesos 
+interesantes mientras rechaza una enorme cantidad de fondo y ruido, 
+reduciendo la frecuencia desde 40MHz hasta 200Hz, el l\'imite de la 
+velocidad de almacenamiento. El sofisticado sistema de disparo del 
+experimento es llevado a cabo en tres etapas: Nivel 1, Nivel 2, y 
+Filtro de 
+Eventos. Antes del inicio de la toma de datos, prevista para fines de 
+2008, 
+esta cadena ser\'a puesta a punto con muones c\'osmicos, proyecto 
+dentro del 
+cual se enmarca la presente Tesis. En este trabajo se analiza, en 
+primer 
+lugar, la reconstrucci\'on de c\'osmicos con el detector interno de 
+ATLAS, 
+midiendo el rendimiento y la eficiencia de distintos esquemas de 
+reconocimiento de trazas en el Nivel 2, tanto sobre datos preliminares 
+como 
+simulaciones Monte Carlo. En una segunda instancia, se desarrollan y 
+analizan algoritmos para la compatibilidad de las trazas en el detector 
+interno con los candidatos encontrados por el sistema de muones, con el 
+fin 
+de construir una completa cadena de disparo que seleccione los muones 
+c\'osmicos que atraviesan ambos subdetectores de ATLAS. Estos 
+algoritmos 
+ser\'an luego implementados en el sistema de disparo en l\'inea durante 
+las 
+pruebas a realizarse en 2007.
+\end{abstract}
+
+\tableofcontents
+
+\include{introduccion} 
+\include{atlas} 
+\include{tdaq}
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reconstrucci\'on de muones c\'osmicos en el detector interno de ATLAS 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\chapter{Reconstrucci\'on de muones c\'osmicos en el detector interno de ATLAS}
+
+En este cap\'itulo se presenta el estudio realizado sobre simulaciones y datos reales correspondientes a las pruebas con muones c\'osmicos para la puesta en funcionamiento del detector interno de ATLAS, durante los meses de marzo-abril de 2006.
+
+Se analiza el desempe\~no de los algoritmos de reconstrucci\'on del Nivel 2 sobre distintas muestras y se calculan las eficiencias de los mismos considerando la geometr\'ia del detector durante la fase de pruebas. 
+
+\section{Instrumentaci\'on del detector interno.}
+
+   El experimento ATLAS iniciar\'a la toma de datos en colisiones \emph{p-p} en el a\~no 2008. Ser\'a esencial, en preparaci\'on para dicha etapa, estudiar la respuesta y el rendimiento del detector, y ganar experiencia en la operaci\'on combinada de todos los sistemas que lo componen. Con este prop\'osito, ya en el a\~no 2004, una cadena completa del experimento ha sido testeada con haces de diferentes part\'iculas, integrando peque\~nas partes de todos los subdetectores junto con el sistema de disparo y adquisici\'on de datos\cite{Valeria}. 
+
+   La etapa de puesta en funcionamiento del detector, iniciada a fines de 2005, ha implicado llevar los sistemas de ATLAS (detectores, sistemas de disparo y adquisici\'on de datos, HLT) de su fase de instalaci\'on a la fase operacional. La primera actividad para el detector interno realizada en este sentido, es la prueba con muones c\'osmicos llevada a cabo en el edificio SR1, a nivel de superficie, en el punto de ubicaci\'on de la caverna de experimento.
+  
+%Explicar mas la instrumentaci\'on
+   Para esta fase, se conect\'o s\'olo una parte del barril, para la cual fue realizado el cableado de las salidas que permiten tomar lectura de la se\~nal en cada uno de los subdetectores.
+En la figura \ref{fig:SCTimpl} se indican las regiones activas del SCT y del TRT (los p\'ixeles no est\'an presente en esta prueba). En la misma se observan 2 sectores del detector de radiaci\'on de transici\'on, uno en la regi\'on superior y otro en la inferior del detector, inclinados respecto de la vertical. Lo mismo para el SCT, en el que se conectaron 504 m\'odulos, cada uno con dos capas de microbandas detectoras (ver secci\'on \ref{'ID'}). Nos referiremos a esta parte como la regi\'on instrumentada del detector.
+    
+   El trigger para los muones est\'a provisto por dos centelladores, siendo la coincidencia de ambas partes la se\~nal de trigger o disparo que indica el paso de la part\'icula. Para la prueba combinada SCT+TRT de los meses de marzo-abril de 2006, \'estos fueron colocados cubriendo el rango de la coordenada azimutal de la regi\'on instrumentada, uno encima del barril del detector y el otro por debajo del mismo, con el mismo \'angulo de inclinaci\'on, como se muestra en la figura \ref{fig:centelladores}.
+
+   %En lo que respecta al sistema de software del experimento, el mismo deber\'a satisfacer las necesidades de cada fase de prueba. En particular, para las corridas con muones c\'osmicos, los programas de reconstrucci\'on han debido ser modificados para el reconocimiento de trayectorias de part\'iculas que no provienen del centro del detector. Las modificaciones implementadas y el desempe\~no de dichos algoritmos se describir\'a en las siguientes secciones.
+%Regi\'on implementada
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{FigSR1/TRT+SCT-read-out.eps}
+\caption{Parte instrumentada de los subdetectores TRT y SCT del detector interno para la puesta en funcionamiento del barril con muones c\'osmicos}
+\label{fig:SCTimpl}
+\end{center}
+\end{figure}
+
+%Centelladores
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{FigSR1/centelladores.eps}
+\caption{Posici\'on de los centelladores en la regi\'on instrumentada. La coincidencia de los mismos provee la se\~nal de disparo para los muones c\'osmicos.}
+\label{fig:centelladores}
+\end{center}
+\end{figure}
+
+\section{Las muestras analizadas}
+\label{'muestras'}
+   
+   Los datos cuyo an\'alisis se presenta en este cap\'itulo fueron obtenidos de una base de datos del experimento. Los mismos corresponden a las pruebas combinadas de  SCT+TRT, con la geometr\'ia descripta en la secci\'on anterior. En la tabla \ref{tb:runs} se enumeran las corridas utilizadas, identificadas con los n\'umeros 2850, 2992, y 3080; y el n\'umero de eventos en cada una de ellas. Las mismas forman parte de tres conjuntos diferentes, con distintas configuraciones en la electr\'onica de la  regi\'on instrumentada:
+\begin{itemize}
+\item Primeras corridas: En este primer conjunto los valores de los umbrales para el reconocimiento de impactos en los m\'odulos del detector de silicio no fueron fijados en los valores correctos, de manera que un 20 $\%$ de los m\'odulos no identifica los impactos y otros producen ruido excesivo. A este grupo pertence la corrida n\'umero 2850.  
+\item Corridas con correcci\'on de umbrales: Aqu\'i los valores de los umbrales en los m\'odulos est\'an configurados de manera correcta (a 1fC), pero no se consideran correcciones de la calibraci\'on por variaciones chip a chip en los circuitos. De este conjunto se extrajo la corrida 2992.
+\item Corridas con umbral en 1fC y correcciones: En este \'ultimo grupo se tienen en cuenta la variaciones en la electr\'onica de cada una de las salidas existentes en los m\'odulos. Este conjunto posee la configuraci\'on \'optima; al mismo pertenece la corrida 3080.
+\end{itemize}
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Corrida & N\'umero de eventos\\
+\hline
+2850& 7626 \\
+2992& 31897\\
+3080& 10142 \\
+\hline
+\end{tabular}
+\caption{Datos reales analizados. Se indica el n\'umero de corrida y el de eventos en cada una de ellas.}
+\label{tb:runs}
+\end{center}
+\end{table}
+
+   Los archivos de las simulaciones Monte Carlo analizadas fueron extra\'idos del sistema de almacenamiento y administraci\'on de datos del CERN. Para las pruebas con c\'osmicos se realiz\'o una gran producci\'on de datos que fueron guardados en bases para su an\'alisis. Estos archivos contienen la respuesta simulada de los eventos f\'isicos que ocurren cuando las part\'iculas (en este caso los muones atmosf\'ericos) atraviesan los subdetectores de ATLAS. Los eventos fueron generados previamente por el software de simulaci\'on, que incluye para \'esto la descripci\'on de la geometr\'ia del detector en la fase de puesta en funcionamiento. Para su implementaci\'on se modificaron los paquetes de digitalizaci\'on (respuesta del detector y la electr\'onica), incluyendo la informaci\'on de los centelladores usados para el trigger y removiendo las tapas de los detectores de silicio y TRT (los p\'ixeles no se han retirado para evitar errores en la posterior reconstrucci\'on de los datos).
+
+\section{La reconstruci\'on de muones c\'osmicos en el detector interno}
+   
+   Para la reconstrucci\'on de eventos c\'osmicos se crearon paquetes especiales dentro del entorno de sofware offline de ATLAS. El paquete correspondiente para correr los programas de reconocimiento de trazas en el detector interno es {\tt InDetCosmicRecExample}\cite{InDet}, en la versi\'on {\tt 12.0.0} del software (ver ATHENA en el Ap\'endice \ref{athena}).
+   
+   Al iniciar la reconstrucci\'on es posible elegir el algoritmo del Nivel 2 que se desea utilizar. Al mismo tiempo que \'este, se realiza la reconstrucci\'on de los datos con uno de los dos programas para el detector interno existentes en el Offline, xKalman\cite{OfflineAlgos1} e IPatRec\cite{OfflineAlgos2}, los cuales realizan el reconocimiento de las trayectorias siguiendo procesos m\'as lentos y complejos que los algoritmos del HLT, dise\~nados para la r\'apida selecci\'on de eventos de inter\'es  durante el funcionamiento del experimento. 
+ 
+ %Como se ha explicado en otras secciones,
+   Al realizar la reconstrucci\'on, ATHENA emular\'a la secuencia de trigger como si se realizase en tiempo real y entregar\'a los resultados de las trazas halladas por el Nivel 2, junto con la informaci\'on del Offline contra la que podr\'an ser comparadas. En el caso de la reconstrucci\'on de eventos simulados, tendremos, adem\'as de dichos resultados (Offline y Nivel 2), la informaci\'on de las trazas Monte Carlo (MC). Esto nos permitir\'a realizar dos tipos de an\'alisis sobre simulaciones, con respecto a Offline y con respecto a MC.
+
+\subsection{Los algoritmos del Nivel 2}
+   Los algoritmos de reconstrucci\'on de Nivel 2 en el detector interno, IDScan y SiTrack, fueron desarrollados para la selecci\'on de eventos de inter\'es producto de colisiones $p-p$ en el centro del detector.  Estos algoritmos utilizan los impactos hallados en el detector de p\'ixeles y microbandas de silicio para reconstruir la traza de las part\'iculas, y una vez hallada, permiten realizar una extrapolaci\'on de la misma al TRT.
+   
+   Los muones c\'osmicos provienen de la alta atm\'osfera, y como tales generan eventos sustancialmente distintos de los producidos en las colisiones $p-p$. Dado que los algoritmos de disparo y reconstrucci\'on asumen que la part\'icula proviene de la interacci\'on central, los programas debieron ser modificados. No se han dise\~nado algoritmos espec\'ificos para muones c\'osmicos porque el prop\'osito de este ejercicio es testear con la mayor fidelidad posible los programas que se utilizar\'an durante la toma de datos f\'isicos, tanto los algoritmos de reconstrucci\'on, como los distintos servicios que trasmiten la informaci\'on y controlan y sincronizan las distintas etapas.
+   
+\subsubsection{IDScan}
+\label{'idsForCosmics'}
+   Para eventos de f\'isica, IDScan toma como entrada los SP (\emph{Space Points}) encontrados en los subdetectores de silicio y reconstruye con ellos las trazas en el detector interno (ver secci\'on \ref{'algos'}).
+
+   Para la reconstrucci\'on de muones c\'osmicos una versi\'on modificada de IDScan fue desarrollada para tratar trazas aisladas con par\'ametro de impacto de alto valor absoluto. La nueva versi\'on cuenta con un etapa de desplazamiento de los impactos hallados, previa a la reconstrucci\'on. La rutina que implementa esta etapa toma primeramente los SP del SCT (recordemos que el detector de p\'ixeles no est\'a instrumentado en la corrida con c\'osmicos) y realiza un simple ajuste lineal a todos los puntos, removiendo aquellos con valor grande de $\chi^{2}$. La recta obtenida permite calcular el desplazamiento al que ser\'an sujetos dichos puntos, de manera que la traza parezca venir del punto de interacci\'on. Una vez llevado a cabo el transporte de los SP, el algoritmo corre de manera usual. Una vez la traza es hallada, se realiza el desplazamiento inverso para volverla al espacio real en el detector. Esta rutina es poco eficiente cuando hay m\'as de un mu\'on por evento.
+   
+   \subsubsection{SiTrack}
+
+   SiTrack tambi\'en fue modificado para la reconstrucci\'on de muones c\'osmicos. La nueva versi\'on desarrollada posee una tabla de datos (\emph{Look-up Table}) especial, construida a partir de simulaciones de eventos c\'osmicos, que reconoce los SP de trazas que no previenen del centro del detector. La misma no requiere de la informac\'ion del detector de pixels para la reconstrucci\'on (ver \ref{'algos'}).
+%MAS?
+
+\subsection{Par\'ametros de la traza reconstruida y convenci\'on de signos} 
+%Experiment Overview del TDR
+%$\eta=-\ln (\tan \theta/2)$.
+   Las trazas de las part\'iculas cargadas que atraviesan el detector, en presencia de un campo magn\'etico, pueden ser descriptas por los 5 par\'ametros de una h\'elice (los mismos par\'ametros se adoptar\'an para eventos sin campo magn\'etico).
+
+   La parametrizaci\'on m\'as com\'unmente usada es la representaci\'on en el punto del perigeo, donde los par\'ametros son medidos en el punto de m\'aximo acercamiento al eje del haz ($x=0$, $y=0$), en el plano transversal\cite{TDR}. Estos son:\\
+
+\begin{tabular}{l p{11cm}}
+$1/p_{T}$ & Inversa del momento transverso. \\
+$\phi_{0}$ & Angulo que subtiende el vector momento de la part\'icula en el punto de m\'aximo acercamiento. Para trayectorias que parten del punto de interacci\'on central y atraviesan las capas superiores (inferiores) del detector, la componente $p_{y}$ del momento se define como positiva (negativa). \\
+$d_{0}$ & Par\'ametro de impacto transverso. Es la distancia del perigeo al eje del haz. Su signo se define como positivo cuando el \'angulo azimutal $\phi$ del punto de m\'aximo acercamiento es igual a $\phi_{0}+\pi/2$ (ver figura \ref{fig:perigee}). \\
+$\cot\theta$ & Cotangente del \'angulo polar, dado por $\cot\theta= p_{z}/ p_{T}$ (relacionado con el paso de la h\'elice).  \\
+$z_{0}$ & Par\'ametro de impacto longitudinal, definido como la posici\'on \emph{z} de la traza de la part\'icula en el punto de m\'aximo acercamiento. \\
+\end{tabular}
+
+   En lugar de la coordenada $\theta$, es com\'un en colisionadores usar la pseudorapidez, definida como $\eta=-\ln (\tan \frac{\theta}{2})$, e introducida en la secci\'on \ref{'Variables'}.
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{FigSR1/Perigee.eps}
+    \caption{Definici\'on del par\'ametro de impacto y el \'angulo $\phi_{0}$ de la traza. La que se ilustra posee valor de $d_{0}$ positivo.}
+    \label{fig:perigee}
+  \end{center}
+\end{figure}
+
+
+   Dado que los muones c\'osmicos no provienen del punto de interacci\'on, la definici\'on de $\phi_{0}$ no es aplicable, ya que una misma trayectoria atraviesa ambas regiones del dector. La convenci\'on que adopta el Offline es tomar $p_{y}$ siempre negativo, es decir, asume que los muones siempre van hacia abajo. De esta manera, todas las trazas tendr\'an par\'ametro $\phi_{0}$ negativo; y el signo del $d_{0}$ depender\'a de si la part\'icula atraviesa el eje transversal del detector a izquierda o a derecha del punto central. En la figura \ref{fig:MuonReal}, se muestra la traza reconstruida por el Offline en uno de los eventos de la corrida 2850, tal como se observa en el Visor de Eventos del experimento\cite{Atlantis}. La misma, de acuerdo a lo anterior, tendr\'a $\phi_{0}$ negativo y par\'ametro de impacto positivo.
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/JiveXML_2850_00207_barrel.eps}
+    \caption{Traza reconstruida por el Offline en uno de los eventos de las primeras corridas con muones c\'osmicos. La imagen pertenece al Visor de Eventos del experimento y corresponde a un corte transversal del detector (el eje del haz es perpendicular a la hoja). Se pueden apreciar los m\'odulos que forman las 4 capas del SCT; as\'i como tambi\'en, las tres capas de menor radio correspondientes al detector de p\'ixeles (bordeando las capas del detector de microbandas de silicio se observa parte del TRT). La traza posee en total 7 hits en el SCT y, de acuerdo a la convenci\'on de signos del Offline, presenta par\'ametro de impacto positivo.}
+    \label{fig:MuonReal}
+  \end{center}
+\end{figure}
+
+ Los algoritmos del Nivel 2, a diferencia del Offline, reconstruyen, a partir de una \'unica trayectoria, semitrazas en alguno o ambos sectores del detector. Para ellos es v\'alida la definici\'on de los par\'ametros dada m\'as arriba, por lo que adoptar\'an una convenci\'on distinta que la del Offline. Volveremos sobre este tema en la siguiente secci\'on.  
+
+\subsubsection{Variables utilizadas, c\'alculo de eficiencias y resoluciones}
+
+   El an\'alisis sobre los datos reconstruidos estuvo orientado al estudio de la performance de los algoritmos del Nivel 2 mediante el c\'alculo de eficiencias y resoluciones a partir de la informaci\'on contenida en un conjunto de variables listadas en el formato de una ntupla\footnote{La ntupla es b\'asicamente una lista ordenada o vector de datos. En ella se encuentra la informaci\'on de la reconstrucci\'on, permitiendo un r\'apido estudio de la misma en el marco ofrecido por el paquete de an\'alisis de ROOT. El llenado de la misma es tambi\'en controlado por ATHENA.} de ROOT \cite{ROOT}. En estas variables se encuentra disponible la informaci\'on de cada evento en la corrida: el n\'umero de trazas reconstruidas, el n\'umero de impactos en el detector de silicio, los par\'ametros de las trazas, etc. En la tabla \ref{tb:ntuple} se enumeran las variables que ser\'an utilizadas en este estudio.
+
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|c|p{9cm}|}
+\hline
+Variable & Descripci\'on\\
+\hline
+{\tt sct\_sp\_nspacepoints}& N\'umero de SP por evento en el SCT.\\
+%sct\_clus\_x 
+%sct\_clus\_y
+{\tt trk\_nTracks}& N\'umero de trazas reconstruidas por evento por el Offline.\\
+%trk\_Sct\_clusx 
+{\tt trk\_Rec\_phi0}& $\phi_{0}$ de la traza offline.\\
+{\tt trk\_Rec\_d0}& $d_{0}$ \\
+{\tt trk\_Rec\_z0}& $z_{0}$\\
+{\tt trk\_Rec\_theta0}& $\theta_{0}$\\
+{\tt trk\_mc\_ntracks}& N\'umero de trazas reconstruidas por evento en la simulaci\'on Monte Carlo.\\
+{\tt trk\_mc\_phi}& $\phi_{0}$ de la traza MC.\\
+{\tt trk\_mc\_d}& $d_{0}$\\
+{\tt trk\_mc\_z}& $z_{0}$\\
+{\tt trk\_mc\_theta}& $\theta_{0}$\\
+{\tt T2IdNtracks}& N\'umero de trazas reconstruidas por evento en el detector interno por el algoritmo del Nivel 2.\\
+{\tt T2IdPhi0}& $\phi_{0}$ de la traza hallada en el Nivel 2.\\
+{\tt T2IdD0}& $d_{0}$ \\
+{\tt T2IdZ0}& $z_{0}$\\
+{\tt T2IdEta}& $\eta=-\log\tan\theta\/2$ \\
+{\tt T2IdNSihits}& N\'umero de SP sobre la traza reconstruida.\\
+\hline
+\end{tabular}
+\caption{Variables en la ntupla de salida, luego de la reconstrucci\'on de los datos. Las variables MC estar\'an disponibles solamente si estamos trabajando con eventos simulados.}
+\label{tb:ntuple}
+\end{center}
+\end{table}
+
+ 
+   Para el c\'omputo de las eficiencias de los algoritmos del Nivel 2 sobre datos reales, evaluamos cu\'ando los mismos reconstruyen una traza que ha sido hallada por los programas de reconocimiento del Offline. Lo antedicho se resume en la siguiente f\'ormula: 
+
+\begin{equation}
+\varepsilon = \frac{N_{\mbox{\footnotesize{{\tt T2IdNtrack}}$>$0}}}{N_{\mbox{\footnotesize{{\tt trk\_ntracks}}=1}}} \label{eff}
+\end{equation}
+%
+donde {\tt T2IdNtrack} y {\tt trk\_ntracks} son variables que representan el n\'umero de trazas reconstruidas por evento en el detector interno por los algoritmos de trigger, y el hallado por el Offline, respectivamente. La expresi\'on anterior corresponde a considerar s\'olo aquellos eventos con una \'unica traza offline (esto ha sido requerido teniendo en cuenta que la rutina de IDScan falla cuando hay m\'as de una traza por evento). Ahora, siendo $N_{\mbox{\footnotesize{{\tt trk\_ntracks}}=1}}$ el n\'umero de eventos en los que el Offline ha enconstrado una s\'ola traza, la fracci\'on de ellos con trazas reconstruidas por el Nivel 2, es una variable aleatoria binomial con distribuci\'on $B(N_{\mbox{\footnotesize{{\tt trk\_ntracks}}=1}},\varepsilon)$, donde $\varepsilon$ es la eficiencia introducida en \ref{eff}. El error en la misma se calcula entonces como\cite{Frodezen}:
+
+\begin{equation}
+\sigma_{\varepsilon} = \sqrt{\frac{\varepsilon(1-\varepsilon)}{N_{\mbox{\footnotesize{{\tt trk\_ntracks=1}}}}}} \label{Er_eff}
+\end{equation}
+%
+
+Respecto al c\'alculo de eficiencias sobre simulaciones, cuando el estudio se realiza con respecto a los eventos MC, deber\'a reemplazarse en las ecuaciones \ref{eff} y \ref{Er_eff} {\tt trk\_ntracks} por la variable MC correspondiente, {\tt trk\_mc\_ntracks}.
+ 
+\subsubsection{Convenci\'on de signos para los algoritmos del Nivel 2}
+\label{'convention'}
+
+  Como se ha dicho en la secci\'on anterior, los algoritmos de reconstrucci\'on del Nivel 2 hallan semitrazas en el sector superior y/o inferior del detector. Para estudiar la convenci\'on adoptada para el par\'ametro de impacto por dichos programas, se realizaron los gr\'aficos que se muestran en la figura \ref{fig:convenciond0}. En los mismos se observa la relaci\'on de signos entre la variable del Nivel 2 ({\tt T2IdD0}) y la del Offline ({\tt trk\_Rec\_d0}).  
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{FigSR1/new/d0Convention.eps}
+    \caption{Convenci\'on en el signo de $d_{0}$ en los algoritmos del Nivel 2, para el sector superior (izq.) y el inferior (der.).}
+   \label{fig:convenciond0}
+  \end{center}
+\end{figure}
+
+   En el caso de IDScan, la convenci\'on en $d_{0}$ para las semitrazas en el sector inferior sigue a la del Offline, mientras que en aquellas con {\tt T2IdPhi0}$>$0 se invierte el signo del par\'ametro de impacto. Para SiTrack lo mismo se cumple en trazas con par\'ametro $d_{0}$ (Offline) positivo. El signo de este par\'ametro para trazas con {\tt trk\_Rec\_d0}$<$0 no sigue la convenci\'on observada para IDScan. % QUE DECIMOS DE ESTO??
+
+   Para determinar la convenci\'on de signos en los par\'ametros en el plano longitudinal, se han hecho gr\'aficos similares al presentado para $d_{0}$. La coordenada $z_{0}$ de las semitrazas reconstruidas por los algoritmos del Nivel 2 mantiene la convenci\'on del Offline; no ocurriendo lo mismo con el par\'ametro $\eta$, cuyo signo depende del semiplano en el que se encuentre la traza. Para semitrazas con valor de \'angulo azimutal negativo, la variable {\tt T2IdEta} tiene el mismo signo que la expresi\'on $-\log\tan(\mbox{{\tt trk\_Rec\_theta0/2}})$ (que llamaremos {\tt Rec\_eta}), que calcula el valor del par\'ametro $\eta$ de la traza offline; por el contrario, cuando el valor de $\phi_{0}$ de la variable del Nivel 2 es positivo, el signo de $\eta$ es el opuesto.  
+  
+   Dado que la traza offline posee la misma convenci\'on que la simulaci\'on, el mismo resultado se obtiene si se compara contra las variables MC.
+
+   La convenci\'on de signos es importante a la hora de calcular la resoluci\'on de los par\'ametros de la traza. \'Esta se define como la desviaci\'on est\'andar de la diferencia entre el par\'ametro de la traza hallada por el Nivel 2 por un lado, y el Offline o el MC, por el otro. Esta diferencia debe tener en cuenta la peliculiar definici\'on de signos de cada par\'ametro. En la tabla \ref{tb:FormulasResoluciones} se indica c\'omo se han calculado las resoluciones en cada caso (se muestran las resoluciones con respecto a Offline, pero an\'anlogas expresiones se aplican en el an\'alisis con respecto a MC).
+
+\begin{table}
+\begin{center}
+\begin{tabular}{c | c | c}
+Par\'am. & trazas con {\tt T2IdPhi0}$>$0 & trazas con {\tt T2IdPhi0}$<$0\\
+\hline
+$d_{0}$ & $R={\tt trk\_Rec\_d + T2IdD0}$ &$R={\tt trk\_Rec\_d - T2IdD0}$ \\
+$\phi_{0}$ & $R={\tt trk\_Rec\_phi - T2IdPhi0} + \pi$ & $R={\tt trk\_Rec\_phi - T2IdPhi0}$ \\
+$z_{0}$& $R={\tt trk\_Rec\_z - T2IdZ0}$ & $R={\tt trk\_Rec\_z - T2IdZ0}$ \\
+$\eta$& $R={\tt Rec\_eta + T2IdEta}$ & $R={\tt Rec\_eta - T2IdEta}$ \\
+\end{tabular}
+\caption{F\'ormulas para el c\'alculo de las resoluciones en los par\'ametros de las trazas reconstruidas, teniendo en cuenta la convenci\'on de signos que adoptan los algoritmos de reconstrucci\'on.}
+\label{tb:FormulasResoluciones}
+\end{center}
+\end{table}
+%
+
+ Para calcular la resoluci\'on en los par\'ametros de las trazas reconstruidas por el Offline, se efect\'ua la resta entre dichas variables y las MC. Recordemos que la convenci\'on en el signo de los par\'ametros es la misma para ambos por lo que no es necesario llevar a cabo la distinci\'on por sectores, presente en el Nivel 2.
+
+\section{Estudio con datos reales y simulaciones}
+\subsection{Resultados sobre datos reales}
+
+   Los datos de las corridas con muones c\'osmicos para la puesta en funcionamiento del barril del detector interno fueron reconstruidos con ATHENA; una vez con cada uno de los dos algoritmos de reconocimiento de trazas del Nivel 2, IDScan y SiTrack. A partir de la informaci\'on contenida en la ntupla generada como salida de la reconstrucci\'on, se calcularon las eficiencias de dichos algoritmos para cada una de las corridas mencionadas. Los c\'alculos se realizaron con respecto a la reconstrucci\'on de los algoritmos que corren offline, requiriendo una \'unica traza por evento, de acuerdo a las ecuaciones \ref{eff} y \ref{Er_eff} de la secci\'on anterior.
+En las figuras \ref{fig:IDScanEff2850dip} y  \ref{fig:SiTrackEff2850} se muestran las eficiencias obtenidas en funci\'on de los par\'ametros de la traza, $\phi_{0}$, $z_{0}$ y $d_{0}$, para IDScan y SiTrack, respectivamente. 
+
+%IDScan efficiency
+\begin{figure}[htbp]
+  \begin{center}
+      %\includegraphics[angle=90,width=0.9\textwidth]{FigSR1/IdScan_eff_2850_scale.eps}
+    \includegraphics[angle=90,width=0.9\textwidth]{FigSR1/paint_IdScan_eff_2850_scale.eps}
+     \caption{Eficiencia del Nivel 2 respecto del Offline en funci\'on de los par\'ametros $\phi_{0}$,  $z_{0}$ y $d_{0}$. Reconstrucci\'on realizada por IDScan sobre la corrida 2850. Se observa una depresi\'on en la eficiencia para valores centrales del \'angulo azimutal.}
+    \label{fig:IDScanEff2850dip}
+  \end{center}
+\end{figure}
+
+%SiTrack efficiency
+\begin{figure}[htbp]
+  \begin{center}
+      %\includegraphics[angle=90,width=0.9\textwidth]{FigSR1/SiTrack_eff_2850_scale.eps}
+      \includegraphics[angle=90,width=0.9\textwidth]{FigSR1/paint_SiTrack_eff_2850_scale.eps}
+    \caption{Eficiencia de SiTrack, respecto de la reconstrucci\'on offline en funci\'on de los par\'ametros $\phi_{0}$,  $z_{0}$ y $d_{0}$.}
+    \label{fig:SiTrackEff2850}
+  \end{center}
+\end{figure}
+
+   En un primer an\'alisis de los gr\'aficos presentados (corrida 2850), se observa una ca\'ida en la eficiencia de los algoritmos, m\'as pronunciada en IDScan, para valores centrales del \'angulo azimutal, correspondientes a trazas que cruzan el detector en la zona media del sector instrumentado. Notemos que los valores son todos negativos pues pertenecen al par\'ametro $\phi_{0}$ de las trazas halladas por el Offline.  
+Por otra parte, examinando la distribuci\'on correspondiente al par\'ametro $d_{0}$, se nota una merma de la eficiencia hacia valores grandes (en valor absoluto) del par\'ametro.
+Mientras que la disminuci\'on de la eficiencia a altos valores de $d_{0}$ es comprensible teniendo en cuenta que los algoritmos fueron originalmente optimizados para part\'iculas provenientes del punto de colisi\'on ($d_{0}$), la ca\'ida en la regi\'on central de $\phi_{0}$ no era de ning\'un modo esperable.
+ 
+   Tras una serie de estudios encontramos que su origen es una correlaci\'on entre las variables $\phi_{0}$ y $d_{0}$, impuesta por la particular geometr\'ia de la zona instrumentada para las pruebas hechas en superficie. En la figura \ref{fig:corr} se muestra dicha correlaci\'on. En la misma vemos que eventos con trazas de alto par\'ametro de impacto se concentran en valores de la cordenada azimutal, y, como hemos se\~nalado, la eficiencia cae para dichos valores de $d_{0}$. Realizando entonces un corte en este par\'ametro, como el que se indica en el gr\'afico, se elimina la depresi\'on hallada en la eficiencia  (el corte se realiz\'o en $\pm 75$ mm). En la figura \ref{fig:IDScanEff2850nodip} puede verse el resultado de efectuar dicho corte para IDScan.
+
+%Correlaci\'on entre los par\'ametros $\phi_{0}$ y $d_{0}$
+\begin{figure}[htbp]
+  \begin{center}
+      %\includegraphics[width=0.8\textwidth]{FigSR1/correlation.eps}
+      \includegraphics[width=0.8\textwidth]{FigSR1/paint_correlation.eps}
+    \caption{Correlaci\'on entre los par\'ametros $\phi_{0}$ y $d_{0}$. Valores extremos de $\phi_{0}$, corresponden a valores peque\~nos de $d_{0}$; mientras que los valores centrales est\'an asociados a trazas con alto par\'ametro de impacto. Esto se debe a la particular geometr\'ia del detector en las pruebas con c\'osmicos.}
+    \label{fig:corr}
+  \end{center}
+\end{figure}
+
+%IDScan efficiency con cut en d0
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[angle=90,width=0.9\textwidth]{FigSR1/paint_IdScan_eff_2850_cutd0_scale.eps}
+    \caption{Eficiencia de IDScan con respecto de la reconstrucci\'on offline, sobre los datos de la corrida 2850. La depresi\'on observada se remueve al realizar un corte en el par\'ametro de impacto para valores superiores en valor absoluto a 75 mm.}
+    \label{fig:IDScanEff2850nodip}
+  \end{center}
+\end{figure}
+
+   Respecto de la distribuci\'on en el par\'ametro de impacto longitudinal, $z_{0}$, vemos que la eficiencia se mantiene aproximadamente constante en todo el rango de la variable (el mismo se corresponde con la longitud del barril del detector). 
+
+   Las caracter\'isticas descriptas se repiten % en  mayor o menor medida 
+para las corridas 2992 y 3080. 
+
+%tabla de eficiencias
+ \begin{table}[!h]
+   \centering
+  % \footnotesize{
+     \begin{tabular}{|  c  ||  c  |  c |}
+       \hline
+       \textbf{Datos} & \textbf{Eficiencia SiTrack} & \textbf{Eficiencia IDScan}                    \\ \hline
+       \textbf{2850}  &0.910$\pm$0.004   &0.682$\pm$0.007     \\ \hline
+       \textbf{2992}  &0.925$\pm$0.002   &0.474$\pm$0.003      \\ \hline
+       \textbf{3080}  &0.923$\pm$0.003   &0.547$\pm$0.006    \\ \hline
+%       \textbf{SIMULATION}          &0.950$\pm$0.001         &0.834$\pm$0.002    \\ \hline
+     \end{tabular}
+     \caption{Eficiencia de los algoritmos del Nivel 2 en la reconstrucci\'on de muones c\'osmicos. Los n\'umeros 2850, 2992 y 3080 identifican corridas de muones durante la puesta en funcionamiento del detector interno.}
+%   }
+     \label{tb:dataEff}
+ \end{table}
+
+En la tabla \ref{tb:dataEff} se resumen los resultados obtenidos en cada conjunto de datos, comparando los dos algoritmos utilizados para la reconstrucci\'on. En el caso de SiTrack vemos que m\'as del 90\% de eventos con trazas reconstruidas por el Offline poseen al menos una semitraza hallada en el Nivel 2, presentando poca variaci\'on al comparar los resultados de las distintas corridas. Por el contrario, la versi\'on de IDScan para muones c\'osmicos se presenta aqu\'i como un algoritmo menos eficiente en la reconstrucci\'on de trazas, variando adem\'as su performance seg\'un la corrida que se considere. 
+
+   Recordemos que las tres series de datos de las cuales fueron extra\'idas dichas corridas presentan configuraciones distintas de la electr\'onica del detector que pueden acarrear variaciones en la cantidad de impactos (genuinos y ruido) identificados en cada caso. La ineficiencia observada en IDScan entonces puede no deberse a la reconstrucci\'on en s\'i, sino al m\'etodo incorporado al algoritmo para calcular el desplazamiento de los SP\footnote{Recordemos que dos impactos en las dos capas de un m\'odulo del SCT corresponden a un \'unico punto en el espacio o SP.} encontrados, que se basa en un ajuste lineal sobre el conjunto de los mismos. 
+
+  Para confirmar dicha hip\'otesis, se calcularon las eficiencias de ambos algoritmos en funci\'on del n\'umero de SP por evento. La variable del Offline asociada a esta cantidad es {\tt sct\_sp\_nspacepoints}. El resultado obtenido (figura \ref{fig:effNsp}) muestra que la eficiencia de IDScan cae abruptamente cuando el n\'umero supera los $\sim$10 SP; mientras que SiTrack no se ve afectado, manteniendo su eficiencia constante a\'un teniendo un gran n\'umero de hits en el evento. Teniendo en cuenta esto, se realizaron histogramas con el n\'umero de SP por evento para cada corrida, con el prop\'osito de explicar el comportamiento de IDScan con los datos. Observando las distribuciones obtenidas (figura \ref{fig:nSCThits}), vemos que el n\'umero medio de SP por evento var\'ia seg\'un se considere 2850, 2992, o 3080.  M\'as a\'un, notamos que el algoritmo es m\'as eficiente a medida que el n\'umero de SP por evento decrece. Esto \'ultimo se ve claramente en la tabla \ref{tb:tablasp}, donde se resumen estos resultados.
+
+   % Con el prop\'osito de confirmar dicha hip\'otesis se graficaron en una primera instancia, las eficiencias de ambos algoritmos en funci\'on del n\'umero de SP por evento. La variable del Nivel 2 asociada a esta cantidad es {\tt sct\_sp\_nspacepoints}. El resultado para la corrida 2850 se muestra en la figura \ref{fig:effNsp}. En la misma se observa como la eficiencia de IDScan cae abruptamente cuando el n\'umero supera los $\sim$10 SP; mientras que SiTrack no se ve afectado, manteniendo su eficiencia constante a\'un teniendo un gran n\'umero de hits en el evento. Considerando este resultado y en pos de explicar el comportamiento de IDScan con cada conjunto de datos analizados, se llenaron histogramas con el n\'umero de SP por evento en cada caso. Observando los gr\'aficos obtenidos (figura \ref{fig:nSCThits}) vemos que la distribucion de la variable, as\'i  como el n\'umero medio SP por evento, var\'ia seg\'un se considere la corrida 2850, o la 2992 o la 3080. M\'as a\'un, notamos que el algoritmo es m\'as eficiente a medida que el n\'umero de SP por evento decrece, comportamiento que se ve claramente en la tabla \ref{tb:tablasp}, donde se resumen estos resultados. 
+
+   Concluimos de esta manera que la versi\'on de IDScan para muones c\'osmicos resulta menos eficiente cuano se tienen muchos SP por evento. 
+
+
+%Eficiencia vs Nsp.
+\begin{figure}[!h]
+  \begin{center}
+   %\includegraphics[width=1\textwidth]{FigSR1/new/IDScan_EffvsNsp_1OfflineTrack.eps}
+   %\includegraphics[width=1\textwidth]{FigSR1/new/SiTrack_EffvsNsp_1OfflineTrack.eps}
+
+   \includegraphics[width=1\textwidth]{FigSR1/new/paint_IDScan_EffvsNsp_1OfflineTrack.eps}
+   \includegraphics[width=1\textwidth]{FigSR1/new/paint_SiTrack_EffvsNsp_1OfflineTrack.eps}
+   \caption{Eficiencia en la reconstrucci\'on en el Nivel 2 respecto del Offline, en funci\'on del n\'umero de SP por evento, para IDScan (arriba) y SiTrack (abajo).}
+    \label{fig:effNsp}
+  \end{center}
+\end{figure}
+
+   
+%PLOT: Numeros de impactos en el SCT por evento en cada set de datos analizados.
+\begin{figure}[!h]
+  \begin{center}
+   %\includegraphics[width=0.48\textwidth]{FigSR1/IdScan_2850_Nsp.eps}
+   %\includegraphics[width=0.48\textwidth]{FigSR1/IdScan_2992_Nsp.eps}
+   \includegraphics[width=0.48\textwidth]{FigSR1/paint_IdScan_2850_Nsp.eps}
+   \includegraphics[width=0.48\textwidth]{FigSR1/paint_IdScan_2992_Nsp.eps}
+   \\
+   \includegraphics[width=0.48\textwidth]{FigSR1/paint_IdScan_3080_Nsp.eps}
+   \caption{N\'umeros de impactos en el SCT por evento para las corridas 2850, 2992 y 3080.}
+    \label{fig:nSCThits}
+  \end{center}
+\end{figure}
+
+%TABLA: Eficiencia  de IDScan y n\'umero medio de SP hallados en el detector de silicio.
+ \begin{table}[!h]
+   \centering
+     \begin{tabular}{|  c  ||  c  |  c |}
+       \hline
+       \textbf{Datos} &\textbf{Eficiencia IDScan} & \textbf{Nsp} \\ \hline
+       \textbf{2850}  &0.682$\pm$0.007 &5.86 \\ \hline
+       \textbf{2992}  &0.474$\pm$0.003 &7.68  \\ \hline
+       \textbf{3080}  &0.547$\pm$0.006 &7.33   \\ \hline
+     \end{tabular}
+     \caption{Eficiencia de IDScan en la reconstrucci\'on de muones c\'osmicos y n\'umero medio de SP hallados en el detector de silicio}
+     \label{tb:tablasp}
+\end{table}
+
+   Finalmente, para tener una estimaci\'on de cu\'antas semitrazas halla por evento cada algoritmo de reconstrucci\'on, se realizaron los histogramas que se muestran en la figura \ref{fig:Ntracks}. En el caso de SiTrack se repite el gr\'afico en escala logar\'itmica en la figura \ref{fig:SiNtracks_log} para poner en manifiesto las entradas en los bines de muchos n\'umeros de trazas. El estudio de estos resultados permite afirmar que SiTrack reconstruye una mayor proporci\'on de eventos con dos semitrazas que IDScan, y que adem\'as, el primero encuentra un mayor n\'umero de eventos con m\'as de dos semitrazas. En el caso de la corrida que se analiza en dichos gr\'aficos, se observ\'o que $\sim$ 6 \% de los sucesos con trazas reconstruidas por SiTrack son eventos de 3 o m\'as semitrazas, teniendo eventos de m\'as de 10; mientras que el mismo c\'aculo para IDScan resulta en s\'olo un 1\% de dichos eventos (no contando con sucesos de m\'as de 6 semitrazas). Este comportamiento no es peculiar de esta corrida, sino que se repite para las otras muestras de datos.
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.48\textwidth]{FigSR1/new/IDScan_Ntracks.eps}
+   \\
+   \includegraphics[width=0.49\textwidth]{FigSR1/new/SiTrack2850_Ntracks.eps}
+   \caption{N\'umero de trazas reconstruidas por evento por IDSCan (arriba) y SiTrack (abajo).}
+    \label{fig:Ntracks}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+      \includegraphics[width=0.6\textwidth]{FigSR1/SiTrack_run_2850_T2Ntracks.eps}
+    \caption{N\'umero de trazas reconstruidas por evento por SiTrack, en escala logar\'itmica.}
+    \label{fig:SiNtracks_log}
+  \end{center}
+\end{figure}
+
+   En base a lo observado, podemos decir que si bien SiTrack resulta m\'as eficiente en la reconstrucci\'on de trazas de muones c\'osmicos en eventos reales, y se comporta de manera robusta ante la variabilidad del n\'umero de impactos en el SCT, el mismo presenta una mayor tasa de eventos con trazas ``fantasma'' que IDScan.
+
+   El estudio del desempe\~no de los algoritmos de reconstrucci\'on de trazas en el detector interno se completa en esta parte con c\'alculos realizados sobre una muestra de 30 mil eventos simulados de c\'osmicos. En la tabla \ref{tb:dataEffsim} se muestran las eficiencias obtenidas, para SiTrack y IDScan, junto con los resultados ya presentados sobre datos reales. Vemos que IDScan resulta m\'as eficiente cuando se corre el algoritmo sobre la simulaci\'on MC, mientras que la eficiencia de SiTrack se mantiene aproximadamente en los valores hallados para las corridas con datos reales. 
+
+\begin{table}[!h]
+   \centering
+  % \footnotesize{
+     \begin{tabular}{|  c  ||  c  |  c |}
+       \hline
+       \textbf{Datos} & \textbf{Eficiencia SiTrack} & \textbf{Eficiencia IDScan}                    \\ \hline
+       \textbf{2850}  &0.910$\pm$0.004   &0.682$\pm$0.007     \\ \hline
+       \textbf{2992}  &0.925$\pm$0.002   &0.474$\pm$0.003      \\ \hline
+       \textbf{3080}  &0.923$\pm$0.003   &0.547$\pm$0.006    \\ \hline
+       \hline
+       \textbf{MC} &0.950$\pm$0.001         &0.834$\pm$0.002    \\ \hline
+     \end{tabular}
+     \caption{Eficiencia de los algoritmos del Nivel 2 en la reconstrucci\'on de muones c\'osmicos. Se comparan los resultados obtenidos sobre datos reales (corridas 2850, 2992 y 3080) con  la eficiencia de cada algoritmo sobre muones simulados.}
+%   }
+     \label{tb:dataEffsim}
+ \end{table}
+
+ Considerando la correlaci\'on hallada entre la eficiencia de reconstrucci\'on de IDScan y el n\'umero medio de SP en el SCT por evento, se grafic\'o el n\'umero de puntos hallados en el detector para esta nueva muestra (figura \ref{fig:sct_nsp_sim}). El n\'umero medio observado para la misma resulta menor al de la corrida 2992, de similar n\'umero de eventos. Esto confirma la caracter\'istica observada para IDSCan y permite explicar la diferencia que se observa en las eficiencias.
+
+\begin{figure}[!h]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/new/IDScan_sim_sct_nsp.eps}
+    \caption{N\'umero de impactos en el detector de silicio por evento en muones simulados. La simulaci\'on considera la geometr\'ia del detector durante las corridas con part\'iculas reales.}
+    \label{fig:sct_nsp_sim}
+  \end{center}
+\end{figure}
+
+
+
+%VERIFICAR: estas eficiencies son wrt offline...pidiendo 1 offline track?
+% HACEN FALTA LAS figuras? \ref{fig:IDScanSimEff} y \ref{fig:SiTrackSimEff} \\
+
+%IDScan sim efficiency
+%\begin{figure}[htbp]
+ % \begin{center}
+  %    \includegraphics[angle=90,width=0.9\textwidth]{FigSR1/IdScan_sim_simpleEff.eps}
+  %  \caption{Eficiencia de IDScan sobre datos simulados}
+  %  \label{fig:IDScanSimEff}
+  %\end{center}
+%\end{figure}
+
+%SiTrack sim efficiency
+%\begin{figure}[htbp]
+%  \begin{center}
+%      \includegraphics[angle=90,width=0.9\textwidth]{FigSR1/SiTrack_sim_simpleEff.eps}
+%    \caption{Eficiencia de SiTrack sobre datos simulados}
+%    \label{fig:SiTrackSimEff}
+%  \end{center}
+%\end{figure}
+
+
+\afterpage{\clearpage}
+\subsection{An\'alisis sobre simulaciones Monte Carlo}
+
+   El estudio sobre simulaciones permite realizar un an\'alisis de las trazas reconstruidas con respecto a las trayectorias genuinas de los muones del MC. Esto es \'util si queremos comparar la eficiencia de la reconstrucci\'on realizada por los programas que corren offline con la de los algoritmos del trigger. Nos interesa comparar estas eficiencias ya que es importante que todos los eventos que el Offline es capaz de reconstruir sean efectivamente reconstruidos por el algoritmo del Nivel 2.
+ 
+   En esta parte del trabajo se presentan las eficiencias, con respecto a MC, de IDScan, SiTrack y Offline sobre una muestra de ~30 mil eventos c\'osmicos simulados con la geometr\'ia correspondiente a la puesta en funcionamiento del detector interno. Puesto que en esta fase fueron instrumentadas dos regiones del barril, una en el sector superior y otra en el inferior; y, teniendo en cuenta que los algoritmos del Nivel 2 reconstruyen semitrazas en ambos sectores, se calcularon las eficiencias de manera de evaluar el rendimiento de los mismos en cada una de estas regiones en forma separada. Para el c\'alculo se consider\'o un subconjunto de eventos que cumplen con ciertos requisitos. Se tuvieron en cuenta:
+\begin{itemize}
+\item La apertura en $\phi$ de la regi\'on instrumentada, conservando s\'olo aquellas trazas MC que cruzan el detector dentro de los l\'imites de cada uno de los sectores;
+\item el n\'umero de capas del SCT atravesadas por la trayectoria\footnote{En la simulaci\'on hay s\'olo una traza por evento.} en cada zona, separando la muestra en aquellas trazas que cruzan 4 y 3 capas, respectivamente, y,
+\item la compatibilidad entre la traza reconstruida y la traza MC, evaluando la diferencia en los par\'ametros de ambas.
+\end{itemize}
+%mediante un criterio de corte basado en la resoluci\'on en cada uno de los par\'ametros de la traza hallada.
+
+   La motivaci\'on de este procedimiento ha sido la de analizar una situaci\'on m\'as representativa de lo que ocurrir\'a en colisiones \emph{p-p} en el acelerador. Las part\'iculas provenientes de la interacci\'on central atraviesan todas las capas del detector interno (al menos aquellas con alto momento transverso), en todo el rango de la coordenada azimutal, no habiendo trazas que ``escapen'' de la regi\'on instrumentada. Por otra parte, evaluar la compatibilidad de las trazas reconstruidas con las MC, nos permite descartar los casos en que el Nivel 2 dispara por haber reconstruido una trayectoria que nada tiene que ver con la del mu\'on genuino.
+
+\subsubsection{La regi\'on instrumentada y el n\'umero de capas atravesadas}
+
+   La regi\'on instrumentada del barril del SCT (no estamos usando informaci\'on del TRT) comprende dos sectores, superior e inferior, inclinados respecto de la vertical en el plano transversal (ver figura \ref{fig:SCTimpl}). Cada sector consta de 4 capas\footnote{Llamaremos ``capa'' aqu\'i al conjunto de m\'odulos que se encuentran a igual distancia del centro del detector en el plano transversal.} de m\'odulos detectores de 300, 370, 445, y 515 mm de radio medio respectivamente. El rango de $\phi$ cubierto por los m\'odulos en cada sector se determin\'o observando los clusters de impactos hallados en las capas del SCT. Lo anterior se visualiza en la figura \ref{fig:sctclusters}. Las l\'ineas trazadas en el gr\'afico corresponden a los l\'imites aproximados de la regi\'on activa, mientras que los c\'iculos  representan las distintas capas del detector.  Este gr\'afico devela la ausencia de un m\'odulo en la segunda capa de la regi\'on inferior.
+
+\begin{figure}[!h]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{FigSR1/sct_active.eps}
+    \caption{Clusters de impactos en el SCT mostrando la regi\'on instrumentada de dicho detector. Las l\'ineas rectas marcan los l\'imites en $phi_{0}$. Se distinguen los distintos m\'odulos de las capas del SCT, pudiendo visualizar la ausencia de uno de ellos en el sector inferior.}
+    \label{fig:sctclusters}
+  \end{center}
+\end{figure}
+
+    Las trayectorias de los muones simulados son l\'ineas rectas (en ausencia de campo magn\'etico) en el plano \emph{xy}.  Se consideran aquellas trazas cuyos puntos de intersecci\'on con cada una de las capas atravesadas (c\'irculos en el plano)  se hallen dentro de los l\'imites de cada sector; es decir, se requiere que la coordenada $\phi$ de los mismos se encuentre en el rango determinado por dichos l\'imites.
+    La zona abarcada por el sector superior comprende los \'angulos de 45 a $70^\circ$, determinando el intervalo ($-135^\circ$, $-110^\circ$), para el sector inferior (este rango fue fijado de manera de evitar el hueco observado en el sector inferior).
+
+   Los eventos se separar\'an en cuatro muestras (no necesariamente disjuntas) que denominaremos 4S, 3S, 4I y 3I, seg\'un la traza MC cruce 4 o 3 capas en el detector superior o en el inferior, respectivamente. La eficiencia se calcular\'a contando las trazas reconstruidas  que satisfagan, en el caso de las trayectorias halladas por los algoritmos del Nivel 2, la condici\'on {\tt T2IdPhi0}$>$0 ({\tt T2IdPhi0}$<$0) en el sector superior (inferior). Para  el c\'alculo de la eficiencia de los algoritmos offline, se requerir\'a que haya al menos una de dichas trazas,  esto es, que se cumpla {\tt trk\_ntracks}$>$0 (recordemos que todas las trazas del Offline poseen par\'ametro $\phi$ negativo).
+   A manera de ejemplo, en la figura \ref{fig:4Top} se ilustra una traza MC cruzando 4 capas en ambos sectores de la regi\'on instrumentada. Un evento de estas caracter\'isticas se ver\'a  como el que se muestra en la figura \ref{fig:MuonReal} (correspondiendo esta \'ultima a un mu\'on real).     
+
+\begin{figure}[!h]
+  \begin{center}
+      %\includegraphics[width=0.8\textwidth]{FigSR1/paint_event10.eps}
+      \includegraphics[width=0.8\textwidth]{FigSR1/paint_event10.eps}
+    \caption{Evento con 4 impactos en los sectores superior e inferior de la regi\'on instrumentada del detector de silicio.}
+    \label{fig:4Top}
+  \end{center}
+\end{figure}
+
+
+\subsubsection{El criterio de corte}
+
+    El grado de compatibilidad de la traza reconstruida (Nivel 2 y Offline) con la traza MC se estableci\'o en t\'erminos de las resoluciones en los par\'ametros $d_{0}$, $\phi_{0}$, $z_{0}$ y $\eta$.  Para determinar dichas resoluciones se graficaron las diferencias definidas en la tabla \ref{tb:FormulasResoluciones} (en este caso el an\'alisis es con respecto a las variables {\tt mc}). Los valores que se muestran en la tabla \ref{tb:resoluciones}, resultan de hacer un ajuste gaussiano sobre las distribuciones obtenidas. En la figura \ref{fig:resZ0} se presentan, a modo de ejemplo, los gr\'aficos correspondientes a la coordenada $z_{0}$, comparando la resoluci\'on en IDScan con la del Offline. Se observa una mejor resoluci\'on en el segundo caso. %Esto no ocurre con todos los par\'ametros, en particular se observa que la resoluci\'on en mejor en los par\'ametros en el plano transversal y del orden (o peor) de la calculada para los algoritmos del Nivel 2 en el longitudinal.
+  
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.6\textwidth]{FigSR1/new/sim_IDScanresolnz0.eps}\\
+      \includegraphics[width=0.6\textwidth]{FigSR1/new/sim_Offresolnz0.eps}
+    \caption{Resoluci\'on en el par\'ametro $z_{0}$ de las trazas reconstruidas por IDScan (arriba) y Offline (abajo).}
+    \label{fig:resZ0}
+  \end{center}
+\end{figure}
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{|  c  ||  c  |  c | c |}
+       \hline
+       \textbf{Par\'ametro} &\textbf{IDScan} & \textbf{SiTrack} & \textbf{Offline} \\        \hline
+       \hline
+       $d_{0}$ (mm)   &0.209 &0.212  &0.234  \\ \hline
+       $\phi_{0}$     &0.000255 &0.000258  &0.000238   \\ \hline
+       $z_{0}$ (mm)   &1.93 &1.87  &0.407   \\ \hline
+       $\eta$         &0.00459 &0.00442  &0.000130   \\ \hline
+     \end{tabular}
+     \caption{Resoluciones en los par\'ametros de traza respecto de MC. Los valores para $\phi$ y $\eta$ est\'an expresados en radianes}
+     \label{tb:resoluciones}
+\end{table}
+
+Es importante aclarar aqu\'i que no se han tenido en cuenta en el estudio correspondiente a SiTrack las trazas MC con par\'ametro de impacto negativo, puesto que el signo del valor correspondiente a la traza reconstruida por dicho algoritmo en esos casos no es consistente con la convenci\'on adoptada por IDScan y por el Offline.
+
+   Sea $R$ la diferencia entre los par\'ametros de las trazas hallados por los algoritmos de reconstrucci\'on, el criterio de corte que se adopta para el c\'alculo de las eficiencias es 
+\begin{equation}
+R < 3\sigma  \label{matching}
+\end{equation}
+%
+para cada uno de los par\'ametros, donde $\sigma$ es la resoluci\'on.
+
+
+\subsubsection{Resultados}
+
+   A continuaci\'on se presentan los resultados obtenidos en el c\'alculo de las eficiencias de los algoritmos del Nivel 2 en la reconstrucci\'on de las trayectorias de muones simulados, en los sectores superior (S) e inferior (I) de la regi\'on instrumentada durante la fase de pruebas con c\'osmicos.
+Los gr\'aficos correspondientes a la eficiencia de IDScan en funci\'on de los par\'ametros de la traza se muestran en las figuras \ref{fig:IDScan_Match_Top_d0yphi0} y \ref{fig:IDScan_Match_Top_z0yeta} para S y en las \ref{fig:IDScan_Match_btm_d0yphi0} y \ref{fig:IDScan_Match_btm_z0yeta}, para I. En dichos gr\'aficos se separan los casos con 4 y 3 capas cruzadas. 
+
+   En los resultados correspondientes a $d_{0}$, vemos que casi todas las entradas de los  histogramas para la regi\'on superior est\'an asociadas a valores de par\'ametro de impacto transversal positivos, ocurriendo lo contrario en los de la regi\'on inferior. Para confirmar esta observaci\'on, se graficaron las distribuciones correspondientes al par\'ametro $d_{0}$ de las trazas MC ({\tt trk\_mc\_d}) en ambos sectores. En la figura \ref{fig:distribd0phi0} se muestran los gr\'aficos correspondientes, junto con aquellos para el par\'ametro $\phi_{0}$. 
+\'Estos confirman el comportamiento de $d_{0}$ de las trayectorias estudiadas; y por otro lado, permiten ver una caracter\'istica adicional: los valores del \'angulo azimutal del punto de m\'aximo acercamiento de dichas trazas est\'an concentrados, en ambos sectores, alrededor del mismo valor (negativo por tratarse de la variable MC). Dicho valor ($\sim-111^{\circ}$ o $\sim$-1.95 en radianes) est\'a pr\'oximo al l\'imite superior del intervalo angular fijado para el sector I (S), $-110^{\circ}$ ($70^{\circ}$), mostrando que los muones caen en su mayor\'ia verticales. 
+
+% De tener una eficiencia muy cercana a cero\footnote{La expresi\'on para el error en la eficiencia no es v\'alida cuando la misma es exactamente 0 o 1} en el rango de valores de $d_{0}$ negativos (positivos en el caso de I), deber\'ian poder visualizarse las barras de error para dichas entradas, lo cual no sucede. Podemos concluir a partir de esta observaci\'on entonces que las trazas de muones que cruzan 4 o 3 capas en S (I), poseen casi todas ellas par\'ametro de impacto positivo (negativo); esto es, atraviesan el eje horizontal a derecha (izquierda) del punto central. 
+   La distribuci\'on angular observada es, en efecto, la que presentan estas part\'iculas\cite{distribangularCosmico}. De esta manera, teniendo en cuenta la forma en que han sido dispuestos los centelladores que dan la se\~nal de disparo para los muones (ver figura \ref{fig:centelladores}) podemos explicar el comportamiento obervado en el par\'ametro de impacto para trazas en el sector superior e inferior del SCT. Trazas de muones c\'osmicos que atraviesen 4 o 3 capas en la regi\'on superior, que den se\~nal en los centelladores, cruzar\'an el semieje horizontal positivo, resultando en un par\'ametro de impacto mayor que cero; mientras las trazas que atraviesen el sector inferior, estar\'an asociadas a valores de $d_{0}$ negativo. 
+
+   Puesto que para la reconstrucci\'on con SiTrack hemos descartado las trazas con $d_{0}<0$, el comportamiento analizado se hace m\'as evidente para este algoritmo, teniendo escasas entradas en los histogramas correspondientes al sector inferior (figura %figuras \ref{fig:SiTrack_Match_Top_d0yphi0} para el sector S
+\ref{fig:SiTrack_Match_Btm_d0yphi0}).
+
+%IDScan: matching efficiencies vs d0 y phi0
+%TOP
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{FigSR1/new/IDScan_Match_TopSimEffvsd0phi0.eps}
+    \caption{Eficiencia de reconstrucci\'on de IDScan en el sector superior de la regi\'on implementada (indicada con la palabra \emph{top}) vs. $d_{0}$ y $\phi_{0}$, para trazas mc que cruzan 4 (\emph{all}) y 3(\emph{less}) capas del detector de silicio. Se aplica aqu\'i la condici\'on $R<3\sigma$.}
+    \label{fig:IDScan_Match_Top_d0yphi0}
+  \end{center}
+\end{figure}
+%BTM
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{FigSR1/new/IDScan_Match_BtmSimEffvsd0phi0.eps}
+    \caption{Eficiencia de reconstrucci\'on de IDScan en el sector inferior de la regi\'on implementada (\emph{btm}) vs. $d_{0}$ y $\phi_{0}$, para trazas que cruzan 4 (\emph{all}) y 3 (\emph{less}) capas del detector de silicio.}
+    \label{fig:IDScan_Match_btm_d0yphi0}
+  \end{center}
+\end{figure}
+
+%IDScan matching efficiencies vs  z0 y eta
+%Top
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/new/IDScan_Match_TopSimEffvsz0eta.eps}
+    \caption{Eficiencia de reconstrucci\'on de IDScan en el sector superior (\emph{top}) vs. $z_{0}$ y $\eta$.}
+    \label{fig:IDScan_Match_Top_z0yeta}
+  \end{center}
+\end{figure}
+%BTM 
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/new/IDScan_Match_BtmSimEffvsz0eta.eps}
+    \caption{Eficiencia de IDScan en el sector inferior de la regi\'on implementada (\emph{top}) vs. $z_{0}$ y $\eta$.}
+    \label{fig:IDScan_Match_btm_z0yeta}
+  \end{center}
+\end{figure}
+
+%IDScan (match) d0 y phi0 distributions, top y btm, 4layers
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/new/IDScan_Match_distrib_mc_d0phi0.eps}
+    \caption{Distribuci\'on de las variables correspondientes a los par\'ametros de impacto $d_{0}$ y $\phi_{0}$, en los sectores superior e inferior, cuando la traza mc cruza 4 capas de la zona instrumentada del detector.}
+    \label{fig:distribd0phi0}
+  \end{center}
+\end{figure}
+
+  
+%SiTrack: matching efficiencies vs d0 y phi0; 
+%TOP
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/new/SiTrack_Match_TopSimEffvsd0phi0.eps}
+    \caption{Eficiencia de reconstrucci\'on de SiTrack en el sector superior de la regi\'on implementada (\emph{top}) vs. $d_{0}$ y $\phi_{0}$. }
+    \label{fig:SiTrack_Match_Top_d0yphi0}
+  \end{center}
+\end{figure}
+%BTM
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/new/SiTrack_Match_BtmSimEffvsd0phi0.eps}
+    \caption{Eficiencia de reconstrucci\'on de SiTrack en el sector inferior de la regi\'on implementada (\emph{btm}) vs. $d_{0}$ y $\phi_{0}$. }
+    \label{fig:SiTrack_Match_Btm_d0yphi0}
+  \end{center}
+\end{figure}
+
+  
+ En las tabla \ref{tb:eff_matching} se resumen los resultados obtenidos para las eficiencias de la reconstrucci\'on del Nivel 2 en el sector S y I, informandose adem\'as las eficiencias calculadas para el Offline. En la tabla \ref{tb:eff_Nomatch} se encuentran las eficiencias que se obtienen cuando no se aplica el corte dado por la ecuaci\'on \ref{matching}.
+
+%Tabla de eficiencias con matching
+ \begin{table}[!h]
+   \centering
+     \begin{tabular}{|  c  |  c  ||  c  |  c | c |}
+       \hline
+       Sector &\textbf{capas} &\textbf{IDScan} & \textbf{SiTrack} & \textbf{Offline} \\
+       \hline
+       \hline
+       Superior &4   &0.776$\pm$0.004  &0.894$\pm$0.003   &0.902$\pm$0.002   \\ \hline
+       &3   &0.66$\pm$0.01  &0.811$\pm$0.009  &0.58$\pm$0.01   \\ \hline
+       \hline
+       Inferior &4   &0.605$\pm$0.005 &0.82$\pm$0.01   &0.931$\pm$0.002   \\ \hline
+       &3   &0.53$\pm$0.01  &0.86$\pm$0.02  &0.60$\pm$0.01  \\ \hline
+     \end{tabular}
+     \caption{Eficiencias de los algoritmos del Nivel 2 y del Offline, para trazas que cruzan 4 y 3 capas del detector de silicio en los sectores superior e inferior de la regi\'on instrumentada. Estos c\'alculos se obtuvieron aplicando el criterio $R<3\sigma$.}
+     \label{tb:eff_matching}
+\end{table}
+
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{|  c  |  c  ||  c  |  c  |  c |}
+       \hline
+%      t\'itulo de la tabla  No matching 
+       Sector &\textbf{capas} &\textbf{IDScan} & \textbf{SiTrack} & \textbf{Offline} \\
+       \hline
+       \hline
+       Superior &4   &0.824$\pm$0.003  &0.950$\pm$0.001   &0.9997$\pm$0.0001    \\ \hline
+       &3   &0.747$\pm$0.009  &0.907$\pm$0.007  &0.972$\pm$0.003   \\ \hline
+       \hline
+       Inferior &4   &0.659$\pm$0.004  &0.899$\pm$0.009   &0.9998$\pm$0.0001   \\ \hline
+       &3   &0.60$\pm$0.01  &0.96$\pm$0.01  &0.977$\pm$0.004 \\ \hline
+     \end{tabular}
+     \caption{Eficiencias de reconstrucci\'on, sin exigir coincidencia entra la traza reconstruida y la genuina.}
+     \label{tb:eff_Nomatch}
+\end{table}
+
+  En casi todos los casos la eficiencias son mayores cuando la traza del mu\'on simulado cruza las cuatro capas del SCT en cada sector. Esto es de esperar, puesto que en estos eventos, en el caso de que alguno de los SP no sea reconstruido, la traza ser\'a igualmente hallada; no ocurriendo lo mismo cuando s\'olo tres capas son cruzadas. 
+
+ En los eventos con trazas atravesando cuatro capas, vemos que SiTrack es siempre m\'as eficiente que IDScan, y que las eficiencias de dichos algoritmos son, en la mayor\'ia de los casos mayores en el sector superior. 
+
+ Considerando el subconjunto de trazas MC que cruzan s\'olo tres de las cuatro capas del detector, vemos que SiTrack resulta m\'as eficiente en la reconstrucci\'on de trazas en el sector inferior que en el superior. Por inspecci\'on de los histogramas correspondientes a la eficiencia en funci\'on de $d_{0}$ para dichos casos (figuras \ref{fig:SiTrack_Match_Top_d0yphi0} y \ref{fig:SiTrack_Match_Btm_d0yphi0}) , vemos que en este \'ultimo sector la eficiencia cae para trazas con valores grandes del par\'ametro de impacto, mientras que dichas trazas no contribuyen en el sector inferior, mostrando una mayor eficiencia. Recordemos que para SiTrack no estamos considerando trazas con par\'ametro de impacto negativo.
+
+    
+  En todos los casos las eficiencias calculadas para el caso $R<3\sigma$ son menores que aquellas en las que esta condici\'on no es requerida, como era de esperar.
+
+  En cuanto a IDScan, concluimos que la versi\'on modificada para tratar trazas de muones c\'osmicos con alto par\'ametro de impacto resulta poco eficiente y necesita ser revisada. La ineficiencia en el sector inferior, hallada para ambos algoritmos, contin\'ua en estudio. En lo que respecta a SiTrack, el error en la convenci\'on del par\'ametro de impacto no permiti\'o estudiar trazas con valores de $d_{0}$ negativos, dejando s\'olo unos pocos eventos para el an\'alisis en el sector inferior. 
+ 
+\subsubsection{Comparaci\'on con datos reales}
+
+  Con el prop\'osito de evaluar si las eficiencias de los algoritmos sobre datos reales se modificaban al calcular de forma separada para los sectores superior e inferior, respectivamente; teniendo en cuenta, adem\'as, los l\'imites de la regi\'on instrumentada, se calcularon las eficiencias sobre la muestra 2992, de similar n\'umero de eventos que la simualci\'on anterior. Los resultados obtenidos sin exigir la coincidencia de la traza del Offline y la reconstruida por el Nivel 2, se muestran en la tabla \ref{tb:Nomatching_study_2992}. Los c\'alculos con la condici\'on de compatibilidad, en la \ref{tb:matching_study_2992}.
+ 
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{|  c  |  c  ||  c  |  c  |  c |}
+       \hline
+%      t\'itulo de la tabla  No matching 
+       Sector &\textbf{capas} &\textbf{IDScan} & \textbf{SiTrack} \\
+       \hline
+       \hline
+       Superior &4   &0.382$\pm$0.004  &0.924$\pm$0.004     \\ \hline
+       %&3   &0.209$\pm$0.009  &0.46$\pm$0.02   \\ \hline
+       \hline
+       Inferior &4   &0.352$\pm$0.004  &0.89$\pm$0.02      \\ \hline
+       %&3   &0.085$\pm$0.006  &0.73$\pm$0.05 \\ \hline
+     \end{tabular}
+     \caption{Eficiencia de los algoritmos del Nivel 2 sobre datos reales (corrida 2992), considerando los sectores superior e inferior de la regi\'on instrumentada en forma separada y el n\'umero de capas cruzadas en el SCT por la traza offline. Se presentan los resultados para trazas que atraviesan las 4 capas del detector en ambas regiones.}
+     \label{tb:Nomatching_study_2992}
+\end{table}
+
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{|  c  |  c  ||  c  |  c  |  c |}
+       \hline
+%      t\'itulo de la tabla  No matching 
+       Sector &\textbf{capas} &\textbf{IDScan} & \textbf{SiTrack} \\
+       \hline
+       \hline
+       Superior &4   &0.323$\pm$0.004  &0.721$\pm$0.006     \\ \hline
+       %&3   &0.209$\pm$0.009  &0.46$\pm$0.02   \\ \hline
+       \hline
+       Inferior &4   &0.301$\pm$0.004  &0.61$\pm$0.02      \\ \hline
+       %&3   &0.085$\pm$0.006  &0.73$\pm$0.05 \\ \hline
+     \end{tabular}
+     \caption{Eficiencia de los algoritmos del Nivel 2 sobre datos reales. En este caso se exige la compatibilidad de las trazas reconstruidas en el Nivel 2 con las del Offline.}
+     \label{tb:matching_study_2992}
+\end{table}
+
+
+   La eficiencia de SiTrack cundo no se aplica el criterio de corte, es pr\'acticamente igual a la obtenida en el c\'alculo global. Sin embargo, al exigir la coincidencia de las trazas, el rendimiento baja considerablemente, mostrando nuevamente la reconstrucci\'on de trazas fantasma, ya observada en el estudio con datos reales.
+
+  En el caso de IDScan, la eficiencia difiere poco si comparamos los resultados obtenidos, con y sin corte. En este \'ultimo caso el resultado es menor a la eficiencia global, presentada al comienzo del estudio con datos. En dicho an\'alisis el c\'alculo se realiz\'o seleccionando aquellos eventos con una \'unica traza offline, no ocurriendo lo mismo en esta parte. La presencia de dos trazas en el evento aporta un mayor n\'umero de SP, que como sabemos, disminuye la eficiencia de este algoritmo.
+
+%Para este \'ultimo, la separaci\'on de la muestra en sectores, deriv\'o en una disminuci\'on de la eficiencia, respecto del c\'alculo global. 
+
+   La versi\'on de IDScan utilizada para el an\'alisis sobre estos datos result\'o muy poco eficiente en la reconstrucci\'on de muones que atraviesan el detector interno. Al comienzo del siguiente cap\'itulo ser\'an  descriptas las soluciones propuestas para los problemas hallados en ambos algoritmos de reconstrucci\'on del Nivel 2 durante el an\'alisis presentado en esta parte del trabajo.
+
+  
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ID and Combined Trigger studies on simulated single muons and cosmics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\chapter{Algoritmos para el estudio combinado del detector interno y el sistema de muones} 
+
+%\section{Introducci\'on}
+
+\section{Trigger Combinado. \\
+Introducci\'on y motivaciones}
+
+   Con el prop\'osito de producir una cadena de selecci\'on % o trigger?
+completa para muones c\'osmicos en el Nivel 2, los algoritmos de identificaci\'on y reconstrucci\'on de trazas que utilizan la informaci\'on de la c\'amara de muones por un lado, y del detector interno por otro, fueron combinados de manera de crear un trigger que seleccione estas part\'iculas cuando sus trayectorias atraviesan ambos subdetectores de ATLAS. El desarrollo del mismo ser\'a de gran utilidad para testear la cadena del High-level Trigger (HLT): el mecanismo de la Regi\'on de Inter\'es, la configuraci\'on del Nivel 2, el \emph{Steering} o direccionamiento de dicho nivel, y la selecci\'on del Filtro de Eventos.
+
+  Para alcanzar este objetivo, se desarrollaron una serie de algoritmos y se definieron e incorporaron nuevos objetos al entorno de software offline de ATLAS. Los nuevos algoritmos, escritos en lenguaje C++, son casos simples de reconstrucci\'on e hip\'otesis (algoritmos de \emph{Feature Extraction}, secci\'on \ref{'HLTalgos'}), dise\~nados b\'asicamente para tomar las trazas halladas por ambos sistemas y combinarlas de manera de obtener, al final de la secuencia de trigger, un nuevo objeto de par\'ametros calculados a partir de los dos detectores.
+
+  El estudio realizado sobre datos reales y simulaciones, descripto en el cap\'itulo anterior, permiti\'o encarar esta tarea con un conocimiento m\'as amplio de la estructura de software del experimento, y en especial de los algoritmos de reconstrucci\'on de trazas del Nivel 2, IDScan y SiTrack. En este cap\'itulo se har\'a, en primer lugar, un breve resumen de las caracter\'isticas de los mismos, poniendo atenci\'on en los problemas encontrados y las soluciones propuestas.  Luego se proceder\'a a la descripci\'on de los programas que conforman el trigger combinado para muones c\'osmicos. Finalmente, se estudiar\'a la performance de la cadena de selecci\'on sobre simulaciones con la geometr\'ia completa del detector.
+
+
+\section{Revisi\'on de los algoritmos de reconstrucci\'on de trazas en el detector interno.}
+
+  En la reconstrucci\'on y an\'alisis de los datos tomados para la puesta en funcionamiento del detector interno se han implementado los dos algoritmos existentes para la reconstrucci\'on de trazas en el Nivel 2, IDScan y SiTrack. Dise\~nados ambos para la selecci\'on de eventos de inter\'es en colisiones \emph{p-p}, fueron modificados para trabajar con muones c\'osmicos, en la forma descripta en el cap\'itulo anterior. 
+
+  La rutina incorporada a IDScan para tratar trazas de muones c\'osmicos con alto par\'ametro de impacto mostr\'o ser poco robusta ante la variaci\'on del n\'umero de SP (\emph{Space Points}) por evento, disminuyendo marcadamente la eficiencia de reconstrucci\'on para aquellos con un alto n\'umero de impactos en el detector de microbandas de silicio (SCT). Con motivo de los resultados presentados en el cap\'itulo 4, los autores modificaron el algoritmo (ver \ref{'idsForCosmics'}). % . Para resolver este problema los autores de esta rutina desarrollaron un nuevo c\'odigo de desplazamiento (ver \ref{'idsForCosmics'}).  
+El nuevo c\'odigo busca pares de hits en la primera (m\'as interna) y \'ultima capa del SCT, y cuenta cu\'antos SP hay en la l\'inea recta que los une, eligiendo el par que posee m\'as impactos en el camino para calcular el desplazamiento que luego aplicar\'a a todos los SP para la posterior reconstrucci\'on de la traza. Esta nueva rutina ha sido testeada sobre una simulaci\'on de 1000 eventos, obteni\'endose una mejora en la eficiencia del 15$\%$. En la figura \ref{fig:newshift} se muestra la eficiencia de IDScan (su versi\'on modificada para c\'osmicos), antes y despu\'es de la implentaci\'on de la mejora. 
+
+  SiTrack, en la prueba con muones c\'osmicos se\~nalada al comienzo, ha mostrado ser m'as eficiente que IDScan. Se pudo estudiar la eficiencia, sin embargo, para las trazas con par\'ametro de impacto $d_{0}$ positivo, ya que el algoritmo ten\'ia un error en la convenci\'on de $d_{0}$ para el caso en que \'este es negativo. Este inconveniente fue resuelto por los desarrolladores del c\'odigo de SiTrack y su implementaci\'on para muones c\'osmicos. En la figura \ref{fig:SiFix} se muestra la convenci\'on de la versi\'on mejorada, junto con la adoptada por IDScan, sobre la simulaci\'on mencionada.  Se observa que el signo de $d_{0}$ en las trazas reconstruidas por sendos algoritmos, resulta consistente.  
+
+%NewShift
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{FigSR1/prov/shift_comparison.eps}
+    \caption{Eficiencia de IDScan en funci\'on del n\'umero de SP. Se compara el rendimiento de la nueva rutina mejorada para el c\'alculo del desplazamiento de los hits hallados en el SCT, con la utilizada en el an\'alisis de datos reales.}
+    \label{fig:newshift}
+  \end{center}
+\end{figure}
+
+%SiFix
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{FigSR1/prov/sitrack_d0Convention_Fix.eps}
+    \caption{Convenci\'on de signo en el par\'ametro de impacto, adoptada por los algoritmos de reconstrucci\'on de trazas en el detector interno. Se comparan IDScan y la nueva versi\'on de SiTrack, posterior a la correcci\'on del c\'odigo.}
+    \label{fig:SiFix}
+  \end{center}
+\end{figure}
+
+  
+  Finalmente, con el prop\'osito de estudiar la proporci\'on de eventos con una y dos semitrazas reconstruidas al correr los dos algoritmos en estudio sobre la muestra de 1000 muones, se realizaron los gr\'aficos que se muestran en la figura \ref{fig:ids_sit_ntracks1k}. Por simple inspecci\'on de los mismos se nota una marcada tendencia de IDScan a reconstruir una \'unica traza por evento. En t\'erminos de los resultados que se informan en la tabla \ref{tb:2TrackEff}, vemos que en el 80\% de los casos en los que SiTrack dispara, se trata de un evento en que encontr\'o dos semitrazas. Para IDScan dicho porcentaje es de tan s\'olo 20\%.
+
+  Luego de estudiar las posibles razones de este comportamiento, se ha observado que la causa del mismo radica en la forma en que la versi\'on para c\'osmicos de IDScan trata las trayectorias de estas part\'iculas. La rutina de desplazamiento que es ejecutada antes de la reconstrucci\'on no funciona de igual manera para los SP que se hallan en la regi\'on superior del detector que para los del inferior. Puesto que la RoI cubre para estas part\'iculas todo el rango de la coordenada azimutal, IDScan es llamado una vez para el conjunto de puntos, determinando que una de las semitrazas no sea reconstruida, puesto que s\'olo la mitad de los puntos son desplazados de manera correcta.
+
+%2TrackEfficiency// Son los mismos root files que use para los otros plots??
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.8\textwidth]{FigSR1/prov/idscan_sitrack_ntracks1k.eps}
+    \caption{N\'umero de semitrazas reconstruidas por evento por los algoritmos del detector interno, sobre una muestra de 1000 eventos simulados. Vemos que la proporci\'on de eventos con dos semitrazas reconstruidas es sustancialmente mayor en el caso de SiTrack, pero la eficiencia es menor.}
+    \label{fig:ids_sit_ntracks1k}
+  \end{center}
+\end{figure}
+
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{| c  ||  c  |  c  |}
+       \hline
+       {\tt T2IdNtracks} &\textbf{IDScan} &\textbf{SiTrack} \\       \hline
+       \hline
+       $>0$ &780   &643     \\ \hline
+       $=1$ &615   &112    \\ \hline
+       $=2$ &165   &519      \\ \hline
+     \end{tabular}
+     \caption{N\'umero de eventos en los que los algoritmos del Nivel2 hallan 1 y 2 trazas en el detector interno, sobre una muestra de 1000 muones simulados.}
+     \label{tb:2TrackEff}
+\end{table}
+
+% SE REDUJO EL FAKE RATE ADEMAS Y AHORA LA EFICIENCIA DE IDSCAN ES MAYOR, AL MENOS SOBRE ESTA MUESTRA...
+
+   Por \'ultimo, mirando la tabla vemos que IDScan result\'o m\'as eficiente que SiTrack, reconstruyendo el 78\% de los eventos de la simulaci\'on. Notamos, adem\'as, que se redujo la fracci\'on de trazas fantasma halladas por SiTrack. 
+   
+\section{El trigger combinado}
+
+\subsection{Estrategia general}
+
+  Los esfuerzos y logros alcanzados en el desarrollo de un trigger para muones c\'osmicos en el sistema de muones y en el detector interno han sido unidos con el pr\'oposito de crear una cadena completa que seleccione dichas part\'iculas cuando sus trayectorias atraviesan los subdetectores de ATLAS.
+
+  El estudio sobre muestras de eventos c\'osmicos (datos y simulaciones) permite adquirir experiencia en la operaci\'on de los sistemas de ATLAS de manera integrada. El desempe\~no de los detectores y el sistema de trigger y adquisici\'on de datos es probado de manera conjunta, verificando el buen funcionamiento de los mecanismos que permiten el acceso a la informaci\'on.
+
+   Para el tratamiento de estas part\'iculas en el detector interno, los algoritmos de reconstrucci\'on de trazas dise\~nados para la selecci\'on de eventos f\'isicos en el Nivel 2 de trigger han sido ligeramente modificados para el reconocimiento de trayectorias que no provienen de la interacci\'on central. En el caso del sistema de detecci\'on de muones, un nuevo algoritmo\cite{NotaTaka}\cite{gaston} ha sido desarrollado para responder a las caracter\'isticas particulares de los c\'osmicos. Este nuevo programa fue especialmente pensado para el trigger de muones que no apuntan en la direcci\'on del punto de interacci\'on, y utiliza la informaci\'on de un n\'umero variable de c\'amaras RPC y MDT (las disponibles en cada fase de pruebas). Los pasos que sigue este algoritmo para la reconstrucci\'on de trazas en el sistema de muones ser\'a descripto en la siguiente secci\'on.
+
+  La estrategia general de lo que hemos dado en llamar el ``Trigger Combinado'', puede resumirse en los siguientes pasos:\\  
+\begin{itemize}
+\item Hallar impactos en las c\'amaras de muones, de manera de construir una traza candidata en ese sistema,
+\item tomar los impactos hallados en el SCT y reconstruir con ellos semitrazas en las regiones superior y/o inferior del detector interno,  
+\item combinar, en el caso que corresponda, las semitrazas halladas para obtener un \'unico objeto en este \'ultimo;
+\item combinar los hits hallados en el sistema de  muones con la traza del detector interno, obteniendo una \'unica salida al final de la cadena.
+\end{itemize}
+
+  Las caracter\'isticas de los algoritmos que combinan la informaci\'on del sistema de muones con la del detector interno y los pasos que se requieren en la secuencia del trigger dependen del algoritmo de reconstrucci\'on empleado para hallar la traza del mu\'on c\'osmico en el SCT. En particular la etapa de combinaci\'on que se lleva a cabo en este detector (correspondiente al tercer \'item) s\'olo tendr\'a lugar cuando a partir de una \'unica traza sean reconstruidas dos o m\'as semitrazas en el SCT. 
+
+  Hemos visto que la eficiencia de IDScan en la reconstrucci\'on de dos trazas por evento es considerablemente menor que la de SiTrack. Teniendo \'esto en mente se ha decidido producir dos cadenas separadas, una para cada altoritmo. En el caso que la reconstrucci\'on sea ejecutada con SiTrack, un primer algoritmo (previo a la uni\'on de la informaci\'on de los diferentes detectores) ser\'a necesario para tomar las semitrazas halladas y crear un nuevo objeto que pueda ser combinado luego con el candidato del sistema de muones.
+% Es decir, el tercer \'item se aplica s\'olo en el caso de SiTrack.
+  La secuencia del trigger implementada en uno y otro caso sigue estrategias similares. En el presente trabajo nos dedicaremos al estudio de la que designaremos como SiTrack-\emph{Slice}.
+
+
+\subsection{La secuencia completa de trigger:\\
+Los algoritmos en la SiTrack-\emph{Slice}}
+ %podria hacer un cuadrito con toda la SiTrack Slice/secuencia de trigger cuando SiTrack es el algoritmo de reconstrucci\'on utilizado. Puedo describir todos de manera general y puntualizar sobre CombinedIDHalfTracksHypo, CombinedIDMuon, CombinedIDMuonHypo and CBNT algorithms that I wrote. 
+
+   En esta secci\'on se describir\'an en forma sencilla todos los algoritmos que componen la secuencia del HLT\footnote{Llamamos ``secuencia'' a la cadena de sucesos que deben ocurrir antes que el evento sea seleccionado. Para que sea una secuencia completa del \emph{High-level Trigger} deber\'a incluir la etapa del Filtro de Eventos, no desarrollada para c\'osmicos al momento de redacci\'on del presente trabajo.} para la cadena de trigger en donde la reconstrucci\'on de trazas en el detector interno es realizada por SiTrack. 
+
+    Los programas desarrollados son c\'odigos escritos en lenguaje C++; y se clasifican, dentro del sistema ESS (Event Selection Sofware), como algoritmos FEX (de \emph{Feature Extraction}) del HLT. Los paquetes en donde residen estos algoritmos, dentro de la estructura de an\'alisis offline del experimento, as\'i como las  versiones finales implementadas para la corrida de la cadena completa, se detallan en el Ap\'endice \ref{athena}. 
+
+  A continuaci\'on, se enumeran los pasos en la cadena:
+
+\begin{enumerate}
+\item \underline{TrigL2CosmicMuon\cite{NotaTaka}}: Es el algoritmo de reconstrucci\'on de trazas en el Sistema de Muones, para el Nivel 2 de disparo. Fue desarrollado especialmente para la selecci\'on de muones que no provienen necesariamente de la interacci\'on central (como es el caso de los muones c\'osmicos). Utiliza la informaci\'on de las c\'amaras RPC y MDT para hallar las trayectorias de estas part\'iculas. La estrategia es la siguiente:
+   \begin{itemize}
+   \item Busca impactos en las RPCs, usando el par hallado en la estaci\'on 2 como semilla (ver figura \ref{fig:RPCtrack}). 
+   \item Realiza un sencillo ajuste lineal sobre los hits, obteniendo una traza inicial.
+   \item Para cada traza RPC, busca impactos en los MDTs alrededor de la misma.
+   \item En cada una de las estaciones de MDTs ajusta segmentos en $Rz$, a partir de los hits encontrados. 
+   \item Eval\'ua el \'angulo entre el segmento trazado en cada c\'amara de MDTs y la traza inicial en las RPCs.
+   \item Finalmente, se aplican ciertos ``test de calidad'' (sobre el n\'umero de hits hallados en cada MDT y el de segmentos por cada traza RPC). Si la traza pasa estos tests, entonces se crea un nuevo objeto (CosmicMuon) que ser\'a utilizado por el pr\'oximo algoritmo en la cadena. 
+   \end{itemize}    
+
+\begin{figure}[!h]
+  \begin{center}
+      \includegraphics[width=0.4\textwidth]{FigPerformance/RPCtrack.eps}
+    \caption{Reconstrucci\'on de trazas en el sistema de muones. Se observa la traza RPC y los segmentos hallados en las tres estaciones de MDTs.}
+    \label{fig:RPCtrack}
+  \end{center}
+\end{figure}
+
+
+La informaci\'on del \'angulo de la traza en el plano transversal es provista por las RPCs. Cada segmento hallado en las estaciones de MDTs tendr\'a un valor de $\eta$ asociado. Al evaluar la compatibilidad de los mismos con la traza RPC se determina qu\'e valor se ajusta m\'as a la traza candidata. En general, el par\'ametro ser\'a proporcionado por la estaci\'on m\'as interna, es decir, la m\'as cercana al punto central. El algoritmo entrega tambi\'en la informaci\'on de las coordenadas de un punto de referencia sobre la traza reconstruida. A partir de estos datos es posible extrapolar los valores de los par\'ametros $z_{0}$ y $d_{0}$ de la misma. Sin embargo, la distancia de las c\'amaras al punto mencionado, determina que los mismos sean calculados con muy poca exactitud. 
+
+A diferencia del trigger de muones de eventos f\'isicos\footnote{Se denomina ``eventos f\'isicos'' a aquellos de inter\'es que tendr\'an lugar en colisiones \emph{p-p}.}, no es necesario en el caso de c\'osmicos reconstruir el momento de la part\'icula con exactitud. Los cortes que realiza el algoritmo est\'an basados, no en el momento en particular, sino en el ajuste de trazas rectas y en el n\'umero de impactos asociados a \'estas. EL algoritmo para muones f\'isicos realiza ajustes sobre una traza circular en el plano $Rz$, y genera como salida un objeto diferente al producido por el algoritmo para c\'osmicos.
+\item \underline{CosmicMuonHypo}: Este algoritmo es un programa sencillo que permite realizar cortes sobre el objeto creado por el algoritmo de trigger. El evento en cuesti\'on ser\'a retenido si la traza reconstruida por el programa anterior satisface dichos cortes. Una condici\'on b\'asica para pasar el evento al siguiente algoritmo es la presencia de un n\'umero de muones mayor o igual a 1.
+\item \underline{TrigSiTrack/Cosmics}: Es la versi\'on final de SiTrack para muones c\'osmicos (ver secciones \ref{'HLTalgos'} y \ref{'idsForCosmics'}). Este algoritmo reconstruye las trayectorias de muones que atraviesan el detector interno, a partir de los impactos en el SCT. Devuelve como salida la\/s semitraza\/s hallada\/s y los SP asociados a ella\/s (siendo creado un objeto TrigInDetTrack).
+\item \underline{CombinedIDHalfTracks}: Este es el primer algoritmo de combinaci\'on en la cadena. Fue desarrollado para crear en aquellos eventos donde SiTrack encuentra dos semitrazas en el SCT (en la mayor\'ia de los casos, una en cada uno de los sectores), un \'unico objeto que pueda ser combinado luego con el correspondiente en la c\'amara de muones. Si encuentra m\'as de dos, realiza todas las combinaciones posibles. 
+
+El programa toma entonces dos semitrazas y las ``asocia'' formando una nueva traza de par\'ametros calculados a partir de las originales, tomando el simple promedio de aquellos pertenecientes a las trazas reconstruidas por SiTrack. Tambi\'en son calculadas las diferencias en los par\'ametros de las semitrazas combinadas.
+
+Dos trazas halladas en lados opuestos del detector tendr\'an asociados valores de $\phi_{0}$ tambi\'en opuestos. En el c\'odigo, dichos par\'ametros se redefinen de forma tal que ambos tomen valores positivos. La diferencia se calcula siempre restando la traza inferior menos la superior, de manera que el resultado est\'e centrado alrededor de $\pi$ (este ser\'a el caso para dos semitrazas reconstruidas a partir de un \'unico mu\'on atravesando el detector). La traza combinada ``corresponder\'a'' al semiplano superior (tendr\'a $\phi_{0}>0$) .
+
+La salida ser\'a un nuevo objeto, denominado CombinedIDHalfTracksObject. 
+\item \underline{CombinedIDHalfTracksHypo}: Luego de la combinaci\'on de las semitrazas de SiTrack, este algoritmo realiza cortes en las nuevas trazas creadas, de manera de que si los satisfacen, el evento sea seleccionado y pase al siguiente algoritmo en la secuencia. 
+
+En este paso se requiere que las diferencias entre los par\'ametros, definidas en el anterior, est\'en dentro de cierto rango, que podr\'a ser ajustado mediante el archivo de configuraci\'on antes de la corrida (ver Ap\'endice\ref{athena}).
+\item \underline{CombinedIDMuon}:  Este programa ejecuta el segundo proceso de combinaci\'on en la cadena; llevando a cabo la ``uni\'on'' de las trazas halladas en los dos detectores, tomando como entradas los objetos CombinedIDHalfTracksObject y CosmicMuon, creados por los algoritmos de reconstrucci\'on o combinaci\'on, en cada uno. La salida ser\'a una traza ``combinada'', dentro de una nueva clase de objetos denominados CombinedIDMuonObject.
+Este algoritmo ser\'a descripto en detalle en la siguiente secci\'on.
+\item \underline{CombinedIDMuonHypo}: Este algoritmo de hip\'otesis, de la misma manera que el anterior, realiza cortes sobre los objetos creados por el programa de combinaci\'on. Las caracter\'isticas espec\'ificas ser\'an desarrolladas en la pr\'oxima secci\'on. Este es el \'ultimo paso en la secuencia de trigger; y los eventos que pasen esta estapa ser\'an los finalmente seleccionados.
+\end{enumerate}
+
+   Los c\'odigos han sido escritos en el marco provisto por ATHENA, utilizando los servicios que este entorno provee. Esto ha permitido incluir histogramas de monitoreo de los algoritmos, que ser\'an de utilidad luego en la corrida online. Los mismos fueron agregados tanto en los pasos de combinaci\'on como en los de eliminaci\'on de candidatos.
+
+   De esta manera, se llenar\'an histogramas con las variables de los objetos creados al finalizar los procesos de combinaci\'on; antes y despu\'es de aplicar los cortes definidos por los algoritmos que les siguen en la cadena. A modo de ejemplo, en el caso de las trazas combinadas del detector interno, tendremos las distribuciones de DeltaPhi0, DeltaEta, DeltaD0, y DeltaZ0, que designan las diferencias en los par\'ametros de las semitrazas halladas por SiTrack. Estas se obtendr\'an como salida al final de la corrida. Los mismos ser\'an presentados y explicados en la secci\'on de performance.
+
+  Utilizando otro de los recursos de la estructura de software, nuevas variables ``combinadas'' fueron definidas y agregadas a la ntupla de salida. Para ello debieron escribirse algoritmos sencillos (denominados CBNT\footnote{CombinedNtuple.}) de manera de incorporar los par\'ametros de los nuevos objetos; definiendo el nombre que se le desea poner a la variable y el tipo de informaci\'on a guardar (b\'asicamente si son n\'umeros enteros, reales o vectores). A partir de la informaci\'on contenida en la ntupla es posible construir histogramas similares a los de monitoreo. En la tabla \ref{tb:CombVariables} se enumeran las variables adicionadas.
+
+%variables "combinadas" en la ntupla
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|c|p{9cm}|}
+\hline
+\hline
+Variable & Descripci\'on\\
+\hline
+{\tt T2CombIdNtracks}& N\'umero de trazas creadas por evento, resultantes de la combinaci\'on de las semitrazas halladas por SiTrack en el Nivel 2.\\
+%{\tt T2CombIdPt}& Momento de la traza "combinada".\\
+{\tt T2CombIdPhi0}&$\phi_{0}$ de la traza en el detector interno.\\
+{\tt T2CombIdD0}& $d_{0}$ \\
+{\tt T2CombIdZ0}& $z_{0}$\\
+{\tt T2CombIdEta}& $\eta$ \\
+{\tt T2CombIdDeltaPt}& Diferencia de el momento de las semitrazas, entre las dos combinadas.\\
+{\tt T2CombIdDeltaPhi0}& Diferencia en el par\'ametro $\phi_{0}$ de las dos semitrazas.\\
+{\tt T2CombIdDeltaZ0}& Diferencia en $z_{0}$.\\
+{\tt T2CombIdDeltaD0}& Diferencia en $d_{0}$.\\
+{\tt T2CombIdDeltaEta}& Diferencia en $\eta$.\\
+{\tt T2CombIdMuPhi0}&$\phi_{0}$ de la traza combinada final.\\
+{\tt T2CombIdMuD0}& $d_{0}$ \\
+{\tt T2CombIdMuZ0}& $z_{0}$\\
+{\tt T2CombIdMuEta}& $\eta$ \\
+{\tt T2CombIdMuDeltaPt}& Diferencia en el momento de las trazas del detector interno y del sistema de muones.\\
+{\tt T2CombIdMuDeltaPhi0}& Diferencia en el par\'amtro $\phi_{0}$ de ambas trazas.\\
+{\tt T2CombIdMuDeltaZ0}& Diferencia en $z_{0}$.\\
+{\tt T2CombIdMuDeltaD0}& Diferencia en $d_{0}$.\\
+{\tt T2CombIdMuDeltaEta}& Diferencia en $\eta$.\\
+\hline
+\end{tabular}
+\caption{Nuevas variables en la ntupla que resultan de la combinaci\'on de la informaci\'on del detector interno con la traza candidata del sistema de muones.}
+\label{tb:CombVariables}
+\end{center}
+\end{table}
+
+\subsection{Combinaci\'on de la traza en el detector interno con la informaci\'on del sistema de muones.}
+  
+  
+  El algoritmo que lleva a cabo la tarea de unir las trazas halladas en ambos sistemas, cuando la trayectoria de un mu\'on c\'osmico atraviesa el detector de ATLAS, se denomina CombinedIDMuon.  El mismo toma el candidato del sistema de muones y la traza ``promedio'' en el detector interno (resultado de la reconstrucci\'on inicial realizada por SiTrack) de manera de producir un \'unico objeto a la salida de la cadena completa de selecci\'on en el Nivel 2. 
+
+  Para este paso se crearon dos clases, una para el objeto, denominada CombinedIDMuonObject; y la otra para el algoritmo. La primera fue definida en el subpaquete {\tt TrigCosmicEvent}, dentro de los algoritmos de trigger preexistentes en el software de an\'alisis offline del experimento. Para las clases asociadas a los programas de combinaci\'on se opt\'o por crear un nuevo subpaquete, el TrigL2CosmicCombined. En \'este fue definido CombinedIDMuon.
+
+  El c\'odigo hereda de la clase de algoritmos del HLT, y fue escrito en lenguaje C++\cite{C++}; en el marco provisto por ATHENA. La funci\'on que ejecuta puede resumirse en los siguientes pasos (por simplicidad, nos olvidaremos moment\'aneamente de los algoritmos de corte que act\'uan a nivel de cada detector; los mismos pueden ser ``apagados'' si se desea): 
+ 
+\begin{enumerate}
+\item Inicializaci\'on y definici\'on de histogramas (los mismos ser\'an llenados al final de la secuencia).
+\item Creaci\'on de un vector de datos con la informaci\'on de la c\'amara de muones: Los objetos CosmicMuon que han sido creados por el algoritmo de reconstrucci\'on en ese sistema (ver TrigL2CosmicMuon en la secci\'on anterior) son retirados de su almacenamiento transitorio\footnote{El servicio de almacenamiento transitorio es provisto por ATHENA.} y guardados en un vector para su posterior utilizaci\'on. Si el mecanismo de recuperaci\'on falla, se imprime un mensaje de error.
+\item Creaci\'on de un vector con las trazas halladas en el detector interno: Los objetos que resultan al combinar las semitrazas reconstruidas por SiTrack, son guardadas como CombinedIDHalfTracksObjects. En esta instancia, los mismos son recuperados para construir un segundo vector.
+\item Combinaci\'on: Por cada evento, el algoritmo buscar\'a,
+   \begin{itemize}
+   \item en primer lugar,  todas las trazas existentes en el detector interno (CombinedIDHalfTracksObjects ordenados seg\'un el n\'umero de evento en el vector mencionado);
+   \item por cada una de estas trazas, todas las trayectorias reconstruidas en el sistema de muones (objetos de salida del algoritmo TritL2CosmicMuon recuperados  en una instancia anterior);
+   \end{itemize}
+   y por cada par (detector interno, c\'amara de muones) se definir\'an los par\'ametros que se muestran en la tabla \ref{tb:combinedtrack}. 
+\item Creaci\'on del nuevo objeto: Cada vez que estos par\'ametros son exitosamente definidos en el evento, se crea un objeto de la clase CombinedIDMuonObject que es una nueva traza de par\'ametros $\phi_{0}$, $\eta$ y $\theta$, dados por {\tt av\_phi0, av\_eta y av\_theta} (tabla).
+\item Llenado de histogramas de monitoreo: al final de la secuencia se llenan los histogramas definidos al comienzo, con los valores que toman los par\'ametros {\tt av\_phi0, av\_eta, av\_theta, d\_phi0, d\_eta y d\_theta}, en cada evento.
+\end{enumerate}
+
+
+  La salida del algoritmo es entonces un nuevo objeto (CombinedIDMuonObject) de par\'ametros $\eta$ y $\phi$ promedio. % La traza final vivir\'a en el sector inferior. %RESPECTO DE ESTO?
+
+  Como hemos explicado, es posible obtener los valores de $z_{0}$ y $d_{0}$ de la traza en el sistema de muones a partir de la informaci\'on provista por las c\'amaras RPCs y MDTs. Teniendo en cuenta que los mismos son calculados con muy poca exactitud, debido a la mayor distancia de dichas c\'amaras al punto central, se ha decidido no extender la combinaci\'on con el detector interno a estas dos coordenadas.
+
+  %Cabe aclarar aqu\'i que el par\'ametro $\eta$ de la traza hallada en el sistema de muones es proporcionado por las c\'amaras de MDTs; en cada una de ellas, los segmentos reconstruidos tendr\'an asociados un valor de este par\'ametro. Al evaluar la compatibilidad del segmento hallado con la traza RPC se determinar\'a qu\'e valor se ajusta m\'as a la traza candidata. En general el par\'ametro $\eta$ ser\'a provisto por la estaci\'on MDT m\'as interna; es decir m\'as cercana al punto central. La informaci\'on del a\'ngulo de la traza en el plano transversal es provista por las c\'amaras RPCs. Es posible extrapolar de los anteriores, los valores correspondientes a los par\'ametros $z$ y $d_{0}$ de la trayectoria reconstruida en el sistema de muones; pero la distancia de las c\'amaras al punto mencionado (mucho mayor a las correspondientes a las capas del SCT), determina que los mismos sean calculados con muy poca exactitud. Es por esto que no hemos extendido la combinaci\'on a estas dos coordenadas.
+
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{  c  | p{9cm} }
+       \textbf{Par\'ametro} &\textbf{Descripci\'on} \\  
+       \hline
+       {\tt id\_z0}   &$z_{0}$ de la traza combinada del detector interno.     \\ 
+       {\tt id\_phi0}   &$phi_{0}$ de la traza. Este valor est\'a siempre entre $0$ y $\pi$.  \\ 
+       {\tt id\_eta}  &$\eta$    \\ 
+       {\tt id\_theta}   &$\theta$, calculado a partir de $\eta$.   \\ 
+       {\tt id\_pt}   &momento de la traza en el detector interno.    \\ 
+       {\tt muon\_phi}   &$\phi_{0}$ de la traza en el sistema de muones. Definido positivo. \\ 
+       {\tt muon\_eta}   &$\eta$ de la traza.     \\ 
+       {\tt muon\_theta}   &$\theta$.  \\ 
+       \hline
+       {\tt d\_phi0}  &Definido como (-1)$\ast$({\tt id\_phi0-muon\_phi})(esta diferencia deber\'a ser igual a $\pi$ para trazas de muones en el sector inferior).     \\ 
+       {\tt d\_eta}   &{\tt id\_eta}$\pm${\tt muon\_eta}, dependiendo de si ambos par\'ametros poseen igual (-) o distinto signo (+).      \\ 
+       {\tt d\_theta}   &{\tt id\_theta-muon\_theta}.      \\ 
+       {\tt av\_phi0}   &(({\tt id\_phi0+}$\pi$)+{\tt muon\_phi})/2.   \\ 
+       {\tt av\_eta}   & ({\tt id\_eta}$\pm${\tt muon\_eta})/2.    \\ 
+       {\tt av\_theta}   &({\tt id\_theta+muon\_theta})/2.     \\ 
+     \end{tabular}
+     \caption{Par\'ametros que se definen en el paso de combinaci\'on del algoritmo. Se asignar\'an al objeto final los que resultan del promedio de los dos sistemas en consideraci\'on. Se calculan adem\'as las diferencias en los par\'ametros de las trayectorias reconstruidas en ambos detectores.}
+     \label{tb:combinedtrack}
+\end{table}
+
+
+   La traza resultante es reservada para ser usada por el pr\'oximo paso en la cadena de trigger, el algoritmo de hip\'otesis denominado CombinedIDMuonhypo. El mismo ha sido dise\~nado para aplicar cortes sobre los CombinedIDMuonObject, de manera de eliminar aquellos eventos en los cuales no haya objetos que satisfagan el criterio de selecci\'on que se ha optado.
+
+   En el algoritmo se definen, en una primera instancia, cuales ser\'an los par\'ametros sobre los cuales se aplicar\'an estos ``tests de calidad''. Para ello se declaran una serie de cantidades llamadas ``datos de configuraci\'on'' (o simplemente ``propiedades''), ya que pueden ser luego modificadas a trav\'es del archivo de configuraci\'on antes de cada corrida (ver Ap\'endice \ref{athena}). \'Estas establecen los valores permitidos para las variables sobre las que se aplicar\'a el criterio de eliminaci\'on. As\'i, en el caso de la clase de objetos que combinan la informaci\'on del detector interno con la del sistema de detecci\'on de muones, fueron definidas las siguientes cantidades:
+\begin{itemize}
+\item {\tt mCombinedIDMuNtracks}\footnote{Por convenci\'on estas propiedades se nombran con una ``m'' al comienzo.}, el n\'umero m\'inimo de trazas combinadas para conservar el evento;
+\item {\tt mCombinedIDMuon\_DeltaPhi0Cut}, determina los valores que puede tomar el par\'ametro {\tt d\_phi0}, definido anteriormente;
+\item {\tt mCombinedIDMuon\_DeltaEtaCut}, el an\'alogo para el par\'ametro {\tt d\_eta};
+\item {\tt mCombinedIDMuon\_DeltaThetaCut}, lo mismo para {\tt d\_theta}.
+\end{itemize}
+%
+La primera de esta lista, ser\'a fijada siempre en 1; para las otras, deber\'a realizarse una estimaci\'on previa de las resoluciones ($\sigma$) correspondientes a la distribuci\'on de cada uno de los par\'ametros. Luego queda por decidir el criterio de corte que se adoptar\'a. En el presente estudio se ha optado (a menos que se indique lo contrario) por retener todos aquellas trazas cuyos valores de {\tt d\_eta}, y {\tt d\_theta} sean menores a 3$\sigma$. En el caso del par\'ametro $\phi$, se requerir\'a  {\tt d\_phi-}$\pi<3\sigma$; puesto que esta diferencia ser\'a igual a $\pi$ en el caso de trazas de muones en el semiplano inferior de la c\'amara.
+
+   Una vez fijadas estas cantidades, se proceder\'a a la recuperaci\'on de los objetos de salida del algoritmo anterior, creando para tal prop\'osito un vector de datos de la clase correspondiente. El paso siguiente, y el m\'as importante, consistir\'a en contar en cada evento el n\'umero de estos objetos que satisfacen el criterio de corte. Si este n\'umero es mayor o igual a 1 (valor asignado a {\tt mCombinedIDMuNtracks}) la traza o trazas candidatas ser\'an seleccionadas. Con los par\'ametros de dichas trazas se llenar\'an histogramas para el monitoreo.
+
+%Terminar... Podria ir algo as\i:
+   Los programas descriptos han sido desarrollados teniendo en mente la combinaci\'on de trazas en el detector interno con trayectorias en el sistema de muones reconstruidas en el sector inferior del mismo, con valores negativos de \'angulo $\phi$ en el plano transversal. En las c\'amaras de muones podr\'an ser halladas trazas candidatas en ambos sectores del detector.  Con los par\'ametros y la condici\'on de hip\'otesis as\'i definidos, los objetos CombinedIDMuon que resulten de la combinaci\'on de trazas superiores ser\'an eliminados al ejecutar el \'ultimo algoritmo en la cadena. %puesto que la difencia entre el par\'ametro phi de la traza del d.i. y la del sistema de muones no ser\'a de pi.
+
+%CVS repository??
+
+  
+\section{Performance de los algoritmos de combinaci\'on en la cadena de SiTrack}
+
+\subsection{Las muestras analizadas}
+
+   El rendimiento de la SiTrack-\emph{Slice} fue testeado sobre dos muestras:
+\begin{enumerate} 
+\item Muones aislados: 1000 eventos conteniendo cada uno un \'unico mu\'on, generado a 1 m por encima del punto central del detector sobre el eje $y$, apuntando hacia el barril del SCT (de radio exterior de $\sim$50 cm).  
+\item Muones c\'osmicos: 3985 eventos c\'osmicos generados a nivel de superficie, por encima de la caverna que alberga el detector. Se simulan las interacciones al atravesar los 100 m de roca. 
+\end{enumerate} 
+
+Ambas fueron simuladas en la versi\'on 12.0.3 del software de ATLAS. La cadena de simulaci\'on de eventos Monte Carlo const\'o para nosotros, de los siguiente pasos: Simulaci\'on, Digitalizaci\'on y Reconstrucci\'on (hemos incluido la generaci\'on dentro del paso de simulaci\'on). La reconstrucci\'on de los eventos es el \'ultimo paso; como resultado de \'este se obtienen las ntuplas y los histogramas de monitoreo que permitir\'an el posterior an\'alisis. 
+% (estas part\'iculas, al ser poco interactuantes, llegar\'an tal cual fueron generadas a los detectores).
+
+  En el caso de los muones ailados, se llev\'o a cabo no s\'olo la reconstrucci\'on, como en el caso del an\'alisis sobre datos, sino tambi\'en la simulaci\'on y digitalizaci\'on de los eventos. Para las tres etapas se ejecuta ATHENA, con distintas configuraciones. A continuaci\'on se describe el procedimiento seguido: 
+%En cada uno de estos pasos se corre ATHENA (los paquetes de simulaci\'on), cada vez con una configuraci\'on distinta. Lo concerniente a cada uno de los pasos en la generaci\'on de 1000 eventos de muones aislados se describe a continuaci\'on:   
+\begin{itemize}
+\item Simulaci\'on. En este paso se establecen las coordenadas del v\'ertice (punto en el espacio del detector donde es creada la part\'icula), el momento y el rango de valores que pueden tomar los par\'ametros de las trayectorias resultantes (espacio de fases de la simulaci\'on). Este conjunto de datos se denominan ``{\tt SimFlags}'', y, para esta muestra fueron fijados de la siguiente manera (lo que se muestra es un fragmento del archivo de configuraci\'on, escrito en lenguaje python):
+\begin{verbatim}
+G4AtlasApps.SimFlags:: ParticleGeneratorOrders True {
+'t:': ' constant 0.0',
+'pdgcode:': ' constant  13',
+'vertX:': ' constant 0.0',
+'eta:': ' flat -0.3 0.3',
+'vertY:': ' constant 1000.0',
+'pt:': ' constant 50000',
+'vertZ:': ' constant 0.0',
+'phi:': ' flat 4.42 5.00'}
+\end{verbatim}
+%
+Los valores fueron elegidos de manera que los muones (n\'umero 13, en el c\'odigo de numeraci\'on para las simulaciones MC \cite{pdg}) sean creados a 1 m del punto central del detector sobre el eje $y$, y atraviesen las cuatro capas del barril del SCT. Esto se logr\'o limitando el rango de valores asignado a {\tt eta} y {\tt phi} (en radianes) de forma que el \'angulo m\'aximo de las trazas en el plano transversal coincida con el radio de la primera capa ($\sim$30 cm); y que, la apertura en el plano longitudinal no supere los 160 cm de longitud de este primer cilindro. Todos los muones poseen momento transverso de 50 GeV. Las opciones {\tt flat} o {\tt constant} permiten asignar distribuciones uniformes en el intervalo elegido, o bien, optar por un valor constante. 
+
+En este paso se definen el n\'umero de eventos y se designa el nombre para el archivo de salida. 
+\item Digitalizaci\'on. El proceso de digitalizaci\'on consiste en la simulaci\'on de la respuesta de los detectores al paso de las part\'iculas generadas. En el  mismo se incluye la descripci\'on de la geometr\'ia de ATLAS. En la corrida se toma como entrada la salida de la simulaci\'on, generando al finalizar un nuevo archivo, con formato similar a datos genuinos, que ser\'a utilizado por el \'ultimo paso en la cadena.
+\item Reconstrucci\'on. En esta etapa se ejecutan los algoritmos de trigger. Previo a iniciar la corrida deben establecerse: el n\'umero de eventos a procesar, la secuencia del HLT, y los archivos de entrada (datos digitalizados) y salida (ntupla e histogramas de monitoreo). En esta instancia se podr\'an modificar los datos de configuraci\'on y ``apagar'' aquellos algoritmos que no se desean ejecutar dentro de la secuencia. Para esta muestra se ha corrido la cadena completa.
+
+La reconstrucci\'on de los datos en el Nivel 2 de trigger parte de la informaci\'on provista por el Nivel 1 a trav\'es de la RoI (regi\'on de inter\'es). En este caso se ha simulado una RoI ficticia, que cubre todo el rango de $\phi$ en el plano transversal, y el espacio caracterizado por $|\eta|<2.1$; en el longitudinal.  
+\end{itemize}
+%
+Debido a un problema en la etapa de digitalizaci\'on del tiempo en que las part\'iculas atraviesan cada uno de los detectores, los muones aislados generados a alturas mayores a 10 m (m\'as all\'a de la \'ultima estaci\'on de MDTs) por encima del punto de interacci\'on no producen impactos en el SCT. Esto \'ultimo ha sido comprobado generando unos pocos eventos a distintas alturas. Por esta raz\'on no se han podido generar muestras estos muones viniendo desde el techo de la caverna de ATLAS (de donde los c\'osmicos provienen), para el estudio de la performance de la cadena de trigger desarrollada. 
+
+   Los muones aislados generados, puesto que son creados a un metro del punto central del detector, no dan se\~nal en los sectores superiores del sistema de muones. Las trazas candidatas en este sistema se hallan en la regi\'on inferior del detector. En la figura \ref{fig:MuonSector13} se visualiza un evento de la simulaci\'on; en la misma puede distinguirse los impactos de la traza en el detector interno y la trayectoria reconstruida en las c\'amaras de muones (se observa tambi\'en la se\~nal en los calor\'imetros).
+
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=\textwidth]{Fig2/IDandMuTrack.eps}
+%   \includegraphics{Fig2/IDandMuTrack.eps}
+     \caption{Imagen del Visor de Eventos perteneciente a la simulaci\'on de muones aislados. Se visualizan la traza en el detector interno (SCT) y la trayectoria reconstruida en las c\'amaras de muones.}
+    \label{fig:MuonSector13}
+  \end{center}
+\end{figure}
+
+
+   Los muones c\'osmicos tambi\'en fueron generados apuntando hacia el barril del detector interno. Si bien para ellos el problema en la digitalizaci\'on pudo ser solucionado, la mayor\'ia de los muones generados en la superficie no llegan al mismo como consecuencia del scattering m\'ultiple que sufren las part\'iculas al atravesar los 100 m de roca (incluidos en la simulaci\'on) que median entre \'este y el punto donde son creados. S\'olo un peque\~no porcentaje de muones ($\sim$3\%), de la muestra de 3895 eventos, tienen impactos en el SCT. Esto implica la existencia de pocos eventos con trazas en el detector interno para ser combinadas. Ante lo observado, se opt\'o, con el objetivo de poder evaluar el funcionamiento de la cadena sobre eventos c\'osmicos, por redefinir el criterio de corte aplicado por los algoritmos de hip\'otesis, de manera de tener m\'as estad\'isatica en el an\'alisis final. El criterio adoptado para c\'osmicos fue $R<5\sigma$, con $R$ designando la diferencia en cada uno de los par\'ametros. 
+
+
+\subsection{Resultados}
+
+   En esta secci\'on se presentan algunos de los histogramas de monitoreo que han resultado de correr la cadena de trigger completa sobre las muestras descriptas en la secci\'on anterior. Estos histogramas ser\'an de gran utilidad en la corrida \emph{online}, pues permitir\'an evaluar el desempe\~no de los algoritmos en tiempo real durante el experimento.
+
+   Como hemos visto, en cada uno de los pasos de combinaci\'on se llenan histogramas con las variables asociadas a los nuevos objetos. As\'i, en la combinaci\'on de las semitrazas halladas por SiTrack en el detector interno se generar\'an gr\'aficos mostrando las distribuciones de los par\'ametros {\tt d0, phi0, z0, eta, d\_d0, d\_phi0, d\_z0} y {\tt d\_eta} del objeto CombinedIDHalfTrackObject producido (ver tabla \ref{tb:combinedtrack}. De la misma manera, para los CombinedIDMuonObjects tendremos histogramas para {\tt av\_phi0, av\_eta, d\_phi0} y {\tt d\_eta}. Por otro lado, en la ejecuci\'on de los algoritmos de eliminaci\'on de candidatos, ser\'an generados nuevos histogramas de los par\'ametros sobre los que se aplican los cortes de la hip\'otesis. 
+   
+\subsubsection{Muones c\'osmicos}
+
+   Loas histogramas de monitoreo obtenidos para las diferencias en el par\'ametro $\eta$ de las trazas combinadas, se muestran en las figuras \ref{fig:cCombIDdEta} y \ref{fig:cCombIDMuDeltaEta}. En las mismas se graficaron de manera superpuesta las distribuciones para {\tt d\_eta}, antes y despu\'es de la eliminaci\'on de aquellos eventos que no cumpl\'ian con los cortes. La comparaci\'on del n\'umero de entradas en cada uno de estos, nos permite cuantificar la cantidad de trazas candidatas rechazadas en cada paso (ver tabla \ref{tb:c_beforeAndAfterCuts}). 
+
+   Analizando la combinaci\'on de las semitrazas en el detector interno, vemos que casi el 50\% de los objetos creados es descartado por el algoritmo de hip\'otesis. Este \'ultimo aplica cortes en todos los par\'ametros y, en particular, requiere que las dos semitrazas combinadas est\'en en semiplanos opuestos, y que sean \emph{back-to-back}, es decir, que la diferencia angular en el plano transversal sea de $\pi$. Aquellos eventos en los que SiTrack encuentra m\'as de dos semitrazas en el detector interno, contribuir\'an con m\'ultiples combinaciones que no satisfacen este requisito. El histograma de la figura \ref{fig:cT2IdNtracks} muestra un porcentaje no despreciable ($\sim$10\%) de dichos eventos. Tomando como ejemplo aquellos 5 en los que SiTrack encuentra 3 trazas; vemos que resultan 15 combinaciones (3 por cada evento), de las cuales solo 7 corresponden a dos semitrazas en sectores opuestos (podemos evaluar el valor de $\phi_{0}$ de las trazas a partir de la ntupla de salida). En el histograma encontramos eventos de hasta 6 semitrazas, luego es de esperar una gran cantidad de combinaciones con valores de {\tt d\_phi0} fuera de la condici\'on exigida. 
+Por otra parte, es factible que las resoluciones utilizadas para aplicar los cortes sobre c\'osmicos\footnote{Dada la poca estad\'istica no fue posible realizar el ajuste gausiano en las diferencias para determinar las resoluciones en los par\'ametros en esta muestra, por lo que se emplearon las correspondientes a los muones aislados.} no sean del todo aplicables, y que haya que optar por un corte menos restrictivo.
+
+   Un comportamiento similar se observa para los CombinedIDMuonObjects. En la figura \ref{fig:cNCosmicMuons} vemos que m\'as del 50\% de los eventos poseen dos trazas reconstruidas en el sistema de muones. Puesto que el algoritmo de hip\'otesis en este paso requiere que la diferencia en el $\phi_{0}$ de las trazas combinadas est\'e centrada en $\pi$; aquellos objetos que combinan trayectorias en el detector interno, definidas para tener par\'ametro azimutal positivo, con candidatos del sistema de muones en el sector superior, ser\'an eliminados. 
+
+   Para estudiar el valor de $\phi_{0}$ de las trayectorias reconstruidas, se realiz\'o el histograma (2D) que se muestra en la figura \ref{fig:cCosmicMuonPhi}. En \'este se observa que en la mayor\'ia de los eventos con dos trazas, las mismas se encuentran en regiones opuestas del detector. La mitad de ellas ser\'an rechazadas entonces por el corte. El razonamiento se puede extender a eventos con m\'as de dos trazas halladas en las c\'amaras de muones.
+
+   El histograma mencionado devela la existencia de un conjunto no despreciable de eventos con dos trazas reconstruidas de igual \'angulo. Este error en el algoritmo de reconstrucci\'on del sistema de muones deber\'a ser revisado.
+%CombinedID d_eta for cosmics, antes y despues del corte
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.7\textwidth]{FigPerformance/monPlots/cosmics_CombID_dEta.eps}
+     \caption{Histograma de monitoreo de la combinaci\'on de las semitrazas halladas por SiTrack; resultado de la corrida de la cadena completa de trigger sobre la muestra de muones c\'osmicos. Distribuci\'on de {\tt d\_eta} de la traza combinada (tabla \ref{tb:combinedtrack}), antes (negro) y despu\'es (rojo) del corte aplicado por el algoritmo de hip\'otesis.}
+    \label{fig:cCombIDdEta}
+  \end{center}
+\end{figure}
+%CombinedIDMuon d_eta for cosmics, antes y despues del corte
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.7\textwidth]{FigPerformance/monPlots/cosmics_CombIdMu_DeltaEta.eps}
+     \caption{Histograma de monitoreo del proceso de combinaci\'on de las trazas en el detector interno con las  candidatas halladas en la c\'amara de muones (resultado sobre c\'osmicos). Se observa la distribuci\'on del par\'ametro {\tt d\_eta} de la traza combinada, antes (negro) y despu\'es (rojo) del corte aplicado por el algoritmo de hip\'otesis.}
+    \label{fig:cCombIDMuDeltaEta}
+  \end{center}
+\end{figure}
+
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{| l ||  c  |  c  |}
+       \hline
+       & CombinedIDHalfTrackObjects &CombinedIDMuonObjects \\       \hline
+       \hline
+       antes &140   &112     \\ \hline
+       despu\'es &67   &49    \\ \hline
+      \end{tabular}
+      \caption{N\'umero de trazas combinadas candidatas, antes y despu\'es de la ejecuci\'on de los algoritmos de hip\'otesis, en ambos pasos de combinaci\'on de la cadena de trigger (corrida sobre c\'osmicos).}
+      \label{tb:c_beforeAndAfterCuts}
+\end{table}
+
+% T2IdNtracks / cosmics
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.75\textwidth]{FigPerformance/FromNtuple/c_T2IdNtracks.eps}
+     \caption{N\'umero de semitrazas halladas por evento por Sitrack sobre la muestra de c\'osmicos. En aproximadamente 10\%­ de los eventos, el algoritmo halla m\'as de dos semitrazas; contribuyendo con m\'ultiples combinaciones (CombinedIDHalfTracksObjects) con valor incorrecto de {\tt d\_phi0}.}
+    \label{fig:cT2IdNtracks}
+  \end{center}
+\end{figure}
+
+% NCosmicMuon / cosmics
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.75\textwidth]{FigPerformance/FromNtuple/cNCosmicMuons.eps}
+     \caption{N\'umero de trazas halladas por evento en la c\'amara de muones, sobre la muestra de c\'osmicos. Resulta un 20\% m\'as probable encontrar eventos con dos trazas que con una s\'ola.}
+    \label{fig:cNCosmicMuons}
+  \end{center}
+\end{figure}
+
+% Cosmic Phi / cosmics
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{FigPerformance/FromNtuple/c_2CosmicMuons_Phi.eps}
+     \caption{Par\'ametro $\phi_{0}$ de las trayectorias, en eventos con 2 CosmicMuons (muestra de c\'osmicos). Se observa que la mayor\'ia de los casos ambas trazas poseen valores con signos opuestos.}
+    \label{fig:cCosmicMuonPhi}
+  \end{center}
+\end{figure}
+
+\afterpage{\clearpage}
+\subsubsection{Muones aislados}
+
+    Los histogramas de monitoreo correspondientes a la muestra de muones aislados se muestran en las figuras \ref{fig:smCombIDmon} y \ref{fig:smCombIdMUmon}. En ellas, al igual que para c\'osmicos, se presentan las diferencias que se obtienen antes y despu\'es de aplicar los cortes. Las pertenecientes a $\phi_{0}$ se encuentran centradas alrededor de $\pi$, como estaba previsto.
+
+    El primer conjunto de histogramas corresponde los par\'ametros {\tt d\_d0, d\_phi0, d\_z0} y {\tt d\_eta} de la traza en el detector interno. Las distribuciones se muestran tal cual se observar\'ian en tiempo real. Puesto que los rangos elegidos resultaron demasiado grandes, para obtener las resoluciones se modificaron, de manera de poder realizar un mejor ajuste. 
+En la tabla \ref{tb:sm_resoln_CutDeltas} se muestran los resultados del c\'alculo para las diferencias luego de los algoritmos de hip\'otesis. Las trazas en el detector interno presentan una mejor resoluci\'on en $\phi_{0}$ y $\eta$, respecto de la que se observa en la combinaci\'on de \'estas con las halladas en el sistema de muones. Debido a un problema para incluir la informaci\'on del MC en la ntupla de salida no fue posible calcular las resoluciones en los par\'ametros reconstruidos por los algoritmos del Nivel 2, respecto de las trazas genuinas.
+ 
+    En la figura \ref{fig:dEta_ntupla} se muestra el histograma para {\tt d\_eta} construido a partir de la ntupla de salida. El rango elegido para el par\'ametro en este caso permite visualizar mejor el ancho de la distribuci\'on. Cabe aclarar que la ntupla es llenada cada vez que un objeto de la clase CombinedIDHalfTracksObjects (o CombinedIDMuonObjects, seg\'un en qu\'e paso de la cadena estemos) es creado, luego, la cantidad de entradas en el histograma se corresponde con el n\'umero de objetos candidatos antes de aplicar el criterio de eliminaci\'on. El estudio de las variables en la ntupla nos permite analizar el comportamiento de otros par\'ametros de la reconstrucci\'on, y, eventualmente realizar correcciones a los algoritmos de la cadena de trigger. En la corrida online no contaremos con la ntupla conteniendo la informaci\'on para la evaluaci\'on del desempe\~no de los algoritmos; all\'i es cuando los histogramas de monitoreo son de gran utilidad. 
+
+  Los histogramas de la segunda figura muestran las diferencias en el caso de la combinaci\'on de las trazas reconstruidas en los diferentes detectores. En \'esta s\'olo se muestran las distribuciones que se obtienen para aquellos eventos que satisfacen los cortes, incluyendo los ajustes gaussianos que permiten el c\'alculo de las resoluciones (en este caso, no fue necesario modificar los rangos).
+
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=1\textwidth]{FigPerformance/sm_CombinedID_delta.eps}
+     \caption{Histogramas de monitoreo del proceso de combinaci\'on de las semitrazas en el detector interno (muones aislados). Distribuciones de las diferencias en $d_{0}$, $z_{0}$, $\phi_{0}$ y $\eta$ de las trazas combinadas, antes (negro) y despu\'es (rojo) del corte aplicado por el algoritmo de hip\'otesis.}
+    \label{fig:smCombIDmon}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.6\textwidth]{FigPerformance/FromNtuple/sm_T2CombIdDeltaEta.eps}
+     \caption{Diferencia en la pseudorapidez de las trazas reconstruidas con el detector interno y las c\'amaras de muones. Histograma realizado a partir de la ntupla de salida.}
+    \label{fig:dEta_ntupla}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=1\textwidth]{FigPerformance/sm_CombinedIDMu_after_fit.eps}
+     \caption{Histogramas de monitoreo de la combinaci\'on de la traza en el detector interno con el candidato hallado en la c\'amara de muones. Se muestran las diferencias en los par\'ametros $\eta$ (izq.) y $\phi_{0}$ (der.) luego de la aplicaci\'on de los cortes. El ajuste gaussiano permite el c\'alculo de las resoluciones.}
+    \label{fig:smCombIdMUmon}
+  \end{center}
+\end{figure}
+
+
+  Respecto del n\'umero de eventos descartados por los algoritmos de hip\'otesis en la corrida con muones aislados (tabla \ref{tb:sm_beforeAndAfterCuts}), vemos  en el caso de las trazas en el detector interno, que $\sim$15\% de los objetos fueron descartados al aplicar los cortes en las diferencias de los par\'ametros. Este porcentaje es mucho menor al hallado en el caso de la reconstrucci\'on de eventos c\'osmicos. Si ponemos nuevamente atenci\'on al n\'umero de semitrazas por evento halladas por SiTrack (figura \ref{fig:smT2IdNtracks}) vemos que en el $\sim$80\% de los casos el algoritmo encuentra 2 semitrazas, siendo la mayor\'ia de ellas trazas \emph{back-to-back} (chequeamos el valor de $\phi_{0}$ de las trazas a partir de las variables de la ntupla). S\'olo un 2\% de los eventos contribuir\'a con combinaciones de par\'ametro {\tt d\_phi0} fuera de la condici\'on impuesta por el algoritmo de hip\'otesis.  Este \'ultimo, recordemos, aplica cortes en las diferencias de todos los par\'ametros, eliminando aquellos objetos que no satisfagan alguno de los \'estos.
+
+   Observando el n\'umero de objetos creados a partir de las trazas en los distintos sistemas, vemos que la cantidad de CombinedIDMuonObjects producidos por el algoritmo de combinaci\'on es superior a la esperada. Puesto que los muones en esta muestra son generados a 1 m del punto central no hay trazas en el sector superior de la c\'amara de muones. Todas las trazas halladas en este sistema ser\'an combinadas con las del detector interno (con aquellas que pasen los cortes); en la figura \ref{fig:smNCosmicMuons} vemos que en la gran mayor\'ia de los eventos el algoritmo de reconstrucci\'on del sistema de muones halla dos trazas. Evaluando los par\'ametros $\phi_{0}$ y $\eta$ de cada una de los candidatos en dichos eventos (figuras \ref{fig:smCosmicMuonPhi2} y \ref{fig:smCosmicMuonTheta}, respectivamente) vemos que en la mayor\'ia de los casos ambos coinciden, es decir, el algoritmo reconstruye dos trazas con iguales par\'ametros. Esto explica la multiplicidad de objetos CombinedIDMuon que se tienen una vez realizadas todas las combinaciones posibles de las trayectorias en los dos sistemas. De \'estos, el $\sim$5\% de las trazas no pasan los cortes de la hip\'otesis.
+
+   El problema hallado en TrigL2ComicMuon\cite{NotaTaka}, el algoritmo que reconstruye las trazas de en el sistema de muones, se oberv\'o tambi\'en, aunque en menor medida, al correr la cadena de trigger sobre la muestra de eventos c\'osmicos. Al momento no se ha corrido nuevamente el algoritmo sobre otras muestras de muones aislados de manera de determinar si el comportamiento observado es com\'un a este tipo de simulaci\'on. 
+
+   El correcto funcionamiento de la cadena de trigger que llamamos SiTrack-\emph{Slice}, fue testeado sobre muones aislados y muestras preliminares de eventos c\'osmicos. Se espera continuar su evaluaci\'on sobre nuevas simulaciones y probar su desempe\~no en corridas online, durante las pr\'oximas tomas de datos en el experimento.    
+
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{| l ||  c  |  c  |}
+       \hline
+       & CombinedIDHalfTrackObjects &CombinedIDMuonObjects \\       \hline
+       \hline
+       antes &560   &807     \\ \hline
+       despu\'es &479   &762    \\ \hline
+      \end{tabular}
+      \caption{N\'umero de trazas combinadas candidatas, antes y despu\'es de la ejecuci\'on de los algoritmos de hip\'otesis, en ambos pasos de combinaci\'on de la cadena de trigger (muones aislados)}
+      \label{tb:sm_beforeAndAfterCuts}
+\end{table}
+
+% T2IdNtracks / sm
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.7\textwidth]{FigPerformance/FromNtuple/sm_T2IdNtracks.eps}
+     \caption{N\'umero de semitrazas halladas por evento por Sitrack sobre la muestra de muones aislados.}
+    \label{fig:smT2IdNtracks}
+  \end{center}
+\end{figure}
+
+% NCosmicMuon / sm
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.7\textwidth]{FigPerformance/FromNtuple/smNCosmicMuons.eps}
+     \caption{N\'umero de trazas halladas por evento en la c\'amara de muones, sobre la muestra de muones aislados. En m\'as del 80\% de los eventos con al menos 1 trayectoria reconstruida, se tienen 2 trazas candidatas.}
+    \label{fig:smNCosmicMuons}
+  \end{center}
+\end{figure}
+
+% Cosmic theta / sm 
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.7\textwidth]{FigPerformance/FromNtuple/sm_2CosmicMuons_Theta.eps}
+     \caption{Par\'ametro $\theta$ de cada una de las trayectorias en los eventos con 2 CosmicMuons en la c\'amara de muones (muestra de 1000 muones aislados). Se observa que en casi todos los casos ambas trazas poseen igual valor de este par\'ametro.}
+    \label{fig:smCosmicMuonTheta}
+  \end{center}
+\end{figure}
+
+% Cosmic phi / sm 
+\begin{figure}[!h]
+  \begin{center}
+   \includegraphics[width=0.7\textwidth]{FigPerformance/FromNtuple/sm_2CosmicMuons_Phi2.eps}
+     \caption{Par\'ametro $\phi_{0}$ de cada una de las trayectorias en los eventos con 2 CosmicMuons en la c\'amara de muones (muestra de 1000 muones aislados). Ambas trazas se encuentran en el sector inferior de dicho sistema.}
+    \label{fig:smCosmicMuonPhi2}
+  \end{center}
+\end{figure}
+
+
+% Cosmic phi distribution / sm 
+%\begin{figure}[!h]
+%  \begin{center}
+%   \includegraphics[width=0.7\textwidth]{FigPerformance/FromNtuple/sm_2CosmicMuons_Phi.eps}
+%     \caption{Distribuci\'on del par\'ametro $\phi$ para todos aquellos eventos con 2 CosmicMuons en la c\'amara de muones (muestra de 1k muones aislados).}
+%    \label{fig:smCosmicMuonPhi}
+%  \end{center}
+%\end{figure}
+
+%En la tabla \ref{tb:sm_resoln_CutDeltas} se presentan las resoluciones obtenidas a partir de los ajustes sobre las distribuciones correspondientes a los histogramas de monitoreo (post-algoritmos de hip\'otesis) para muones aislados.
+\begin{table}[!h]
+   \centering
+     \begin{tabular}{| c ||  c  |  c  |}
+       \hline
+       Par\'ametros &$\sigma$\{\footnotesize{CombinedIDHalfTrackObecjts}\} &$\sigma$\{\footnotesize{CombinedIDMuonObjects}\} \\       \hline
+       \hline
+       d\_Phi0 &0.00185$\pm$0.00007   &0.0131$\pm$0.0007     \\ \hline
+       d\_eta &0.0087$\pm$0.0003   &0.0113$\pm$0.0005    \\ \hline
+       d\_D0 &(0.60$\pm$0.02)cm   & -      \\ \hline
+       d\_Z0 &(4.1$\pm$0.2)cm   & -      \\ \hline
+     \end{tabular}
+     \caption{Resoluciones en los par\'ametros de las trazas combinadas. Los valores se obtuvieron a partir de los histogramas de monitoreo una vez realizada la reconstrucci\'on de los eventos de muones simulados, para la prueba del Trigger Combinado.}
+     \label{tb:sm_resoln_CutDeltas}
+\end{table}
+
+
+%is better to put this one at the end...?
+%In figure \ref{fig:smEffZ0} are shown SiTrack and combining effciencies versus Z0.\\
+%\begin{figure}[!h]
+%  \begin{center}
+%   \includegraphics[width=0.6\textwidth]{FigPerformance/sm_SiEffvsZ0.eps}
+%    \caption{SiTrack and combining effciency wrt mc versus Z0, when runnning on single muons}
+%    \label{fig:smEffZ0}
+%  \end{center}
+%\end{figure}
+
+
+%Timing for both samples ??
+
+\chapter{Conclusiones}
+
+En el presente trabajo se estudi\'o la eficiencia de los algoritmos de 
+reconstrucci\'on de trazas para el segundo nivel de disparo del 
+experimento 
+ATLAS. Los programas dise\~nados para la selecci\'on de eventos de 
+f\'isica 
+en el detector interno, IDScan y SiTrack, fueron modificados para el 
+estudio 
+de eventos c\'osmicos durante la fase de puesta en funcionamiento del 
+barril 
+del detector, antes de ser descendido a la caverna; permitiendo evaluar 
+por 
+primera vez, su rendimiento sobre datos reales.
+
+Los resultados de este an\'alisis mostraron que la rutina incorporada a 
+IDScan para tratar trazas de muones con alto par\'ametro de impacto 
+resultaba poco robusta ante la variaci\'on del n\'umero de impactos en 
+el 
+detector por evento; disminuyendo marcadamente su eficiencia de 
+reconstrucci\'on para aquellos con un alto n\'umero de impactos. 
+SiTrack, 
+por otro lado, se mostr\'o eficiente en la reconstrucci\'on de las 
+trazas de 
+muones c\'osmicos, pero hallando una proporci\'on no despreciable de 
+trazas 
+fantasma. En ambos casos, el Nivel 2 result\'o consistente con la 
+reconstrucci\'on de los algoritmos que corren offline.
+
+En el estudio sobre simulaciones con la geometr\'ia instrumentada para 
+la 
+fase de pruebas, se calcularon las eficiencias de los esquemas de 
+reconstrucci\'on del Nivel 2 en forma separada para los dos sectores 
+conectados, teniendo en cuenta adem\'as el n\'umero de capas 
+atravesadas por 
+la trayectoria de los muones del MC y la apertura angular de ambas 
+regiones 
+en el plano transversal. Este an\'alisis confirm\'o el comportamiento 
+observado en datos y devel\'o un error en SiTrack en la convenci\'on 
+del 
+par\'ametro de impacto para trayectorias que atraviesan el detector 
+interno 
+con $d_0$ negativo.
+
+Los problemas hallados en los algoritmos durante el estudio de datos y 
+MC, 
+con una parte del detector interno instrumentado, fueron 
+satifactoriamente 
+solucionados.
+
+En la segunda parte del trabajo presentado, se describi\'o la cadena de 
+selecci\'on creada para el disparo de muones c\'osmicos con la 
+geometr\'ia 
+completa del detector. Con el prop\'osito de construir una secuencia 
+completa en el Nivel 2 se escribieron algoritmos de combinaci\'on para 
+unir 
+las trazas halladas en el detector interno con los candidatos del 
+sistema de 
+muones. Los nuevos programas fueron incorporados al entorno de software 
+offline del experimento, definiendo nuevas clases dentro de los 
+algoritmos 
+de trigger para los objetos producidos.
+
+Puesto que las versiones mejoradas de los algoritmos de 
+reconstrucci\'on en 
+el detector interno mostraron distintas eficiencias en la 
+reconstrucci\'on 
+de eventos con dos trazas, se decidi\'o realizar la uni\'on con el 
+sistema 
+de muones en dos cadenas separadas, una para cada esquema. En este 
+estudio 
+se desarroll\'o y teste\'o la correspondiente a SiTrack.
+
+El algoritmo que combina los dos detectores toma los par\'ametros de 
+las 
+trazas reconstruidas en cada uno de ellos y calcula los promedios y las 
+diferencias, creando un nuevo objeto en cada combinaci\'on. La 
+resoluci\'on 
+en los par\'ametros de las trayectorias mide la compatibilidad de las 
+trazas 
+en ambos sistemas. Los candidatos que no satisfacen el criterio de 
+compatibilidad elegido son eliminados por el algoritmo de hip\'otesis 
+que le 
+sigue en la cadena.
+
+La cadena de selecci\'on creada fue verificada satisfactoriamente sobre 
+simulaciones de muones c\'osmicos y aislados.  En la secuencia fueron 
+agregados histogramas de monitoreo con el prop\'osito de evaluar el 
+rendimiento de los algoritmos en l\'inea, cuando sean utilizados por el 
+sistema de toma de datos con c\'osmicos a mediados de 2007. Esta es una 
+etapa esencial en la puesta en funcionamiento del detector antes de las 
+primeras colisiones hadr\'onicas previstas para fines de 2008. En el 
+marco 
+de este trabajo nos permitir\'a testear para el Nivel 2, la 
+configuraci\'on, 
+el direccionamiento, y la implementaci\'on de la restricci\'on de la 
+zona de 
+recontrucci\'on mediante el mecanismo de regi\'on de inter\'es provisto 
+por 
+el Nivel 1.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\appendix
+\chapter{ATHENA}\label{athena}
+%https://twiki.cern.ch/twiki/bin/view/Atlas/WorkBookAthenaFramework
+   
+   ATHENA\cite{Athena} es el marco/estructura de software del experimento ATLAS. Es una implementaci\'on de una arquitectura subyacente llamada Gaudi, originalmente desarrollada para LHCb. Actualmente Gaudi es el n\'ucleo de software com\'un a ambos experimentos, mientras que ATHENA es la suma de dicho n\'ucleo m\'as las mejoras espec\'ificas de ATLAS. 
+
+   Por definici\'on, un marco de software (\emph{framework}) es una aplicaci\'on esqueleto en la que los programadores insertan el c\'odigo que implementa los distintos algoritmos y servicios. Provee la funcionalidad com\'un a las diferentes componentes y los protocolos de comunicaci\'on entre ellas. En pocas palabras esta estructura es la que asegura que los c\'odigos se ejecuten en forma compatible, en el tiempo requerido y con los correctos datos de entrada, haci\'endose cargo de los objetos de salida.
+
+  A continuaci\'on se enumeran y definen los principales (de inter\'es para el trabajo) elementos constituyentes de este software, de inter\'es para el trabajo:
+\begin{itemize}
+\item Algoritmos: Bloques componentes de la aplicaci\'on desarrollados por el usuario, visibles y controlados por ATHENA. Estos c\'odigos implementan m\'etodos por invocaci\'on a dicho entorno: initialize(), execute(), beginRun(), endRun(), finalize().
+\item Objetos de datos (\emph{Data objects}): Salidas de los algoritmos, que sirven como entrada para subsecuentes programas. Por ejemplo, la colecci\'on de objetos conteniendo informaci\'on de las trazas.
+\item Servicios: Componentes de software globalmente disponibles, que llevan a cabo funciones espec\'ificas dentro de la estructura, por ejemplo, servicios de almacenamiento transitorio (via \emph{StoreGate}), configuraci\'on interactiva de \emph{jobs}, servicios de mensajer\'ia y llenado de histogramas.
+\item C\'odigos para la configuraci\'on de los \emph{jobs} (\emph{job options}): C\'odigos escritos en lenguaje \emph{python} para configurar una aplicaci\'on de ATHENA \emph{at run time}. Determinan qu\'e algoritmos ser\'an ejecutados y en qu\'e orden, permitiendo la modificaci\'on de ciertas propiedades tales como la cantidad de eventos en la corrida, nombre de los objetos de entrada y salida, informaci\'on que debe ser guardada, etc. 
+\end{itemize}
+%
+Otros componentes son: Conversores de formato, Propiedades, Auditores, Secuencias y Filtros. Una completa descripci\'on de ATHENA puede encontrarse en la Gu\'ia para Programadores de Athena\cite{Athena2}.
+
+\subsubsection{Proyectos, paquetes y versiones}
+
+   El software de ATLAS est\'a organizado en una estructura jer\'arquica de proyectos y paquetes. Cada paquete tiene un n\'umero de ``etiqueta'' o \emph{Tag} que distingue diferentes versiones. Cada versi\'on de un proyecto tiene un n\'umero de lanzamiento (\emph{release}), existiendo un n\'umero global que identifica una completa colecci\'on de paquetes. 
+
+  La estructura offline est\'a dividida en un conjunto de proyectos. Entre los mismos podemos mencionar: AtlasEvent, AtlasOffline, AtlasProduction, AtlasReconstruction, AtlasSimulation, AtlasTrigger; conteniendo las herramientas usadas para la producci\'on, an\'alisis, simulaci\'on, y reconstrucci\'on de datos,  as\'i como los algoritmos y servicios asociados al \emph{High-level Trigger} de ATLAS (HLT).
+
+   Dentro de cada proyecto, el software es organizado en un n\'umero de paquetes. Los principales son:
+\begin{itemize}
+\item Paquetes de Generaci\'on, Simulaci\'on, Trigger, Reconstrucci\'on, PhysicsAnalysis, 
+\item paquetes de software de los subdetectores de ATLAS,
+\item paquetes de software com\'un para la reconstrucci\'on de trazas, etc.
+\end{itemize}
+%
+Todos ellos a su vez est\'an divididos en ``subpaquetes''. Por ejemplo el paquete de software del detector interno cuenta con alrededor de 20 subpaquetes.
+
+   Muchos de los paquetes listados son contenedores usados para organizar el software y manipular las distintas versiones en las \emph{releases}.
+
+\subsubsection{El n\'umero de \emph{release}}
+
+   El software de ATLAS es cont\'inuamente actualizado de manera de permitir la inserci\'on de nuevos programas y enmendar fallas encontradas en los distintos componentes. Cada actualizaci\'on recibe un n\'umero de \emph{release}. Este n\'umero est\'a formado por tres enteros, designando la versi\'on general (N), una divisi\'on/rama (m),  y los cambios menores que la misma incluye (n).
+\begin{itemize}
+\item Las series N.0.n son releases de producci\'on.
+\item Las series N.m.0 son releases desarrolladas por usuarios.
+\item Las N.m.n son lanzamientos especiales como el realizado para las  pruebas con haces de part\'iculas, previas al comienzo de la toma de datos.
+\end{itemize}
+
+ %Opcional
+\subsubsection{Los paquetes y \emph{releases} utilizados en el presente trabajo}
+
+   Para las simulaciones MC y la reconstrucci\'on de datos reales de la producci\'on realizada para la puesta en funcionamiento del barril del detector interno se utiliz\'o el siguiente subpaquete en la release 12.0.0: 
+\begin{verbatim}
+InnerDetector/InDetExample/InDetCosmicRecExample
+\end{verbatim}
+La simulaci\'on y an\'alisis de muones aislados y  c\'osmicos fue llevada a cabo en 12.0.1 y 12.0.3, utilizando, 
+\begin{verbatim}
+Reconstruction/RecExample/RecExCommon.
+\end{verbatim}
+Las \emph{tags} utilizadas para correr la cadena completa de SiTrack en 12.0.3,  fueron:
+\begin{verbatim}
+TrigL2CosmicCombined-00-00-07 Trigger/TrigAlgorithms/TrigL2CosmicCombined
+TrigL2CosmicMuon-00-02-09 Trigger/TrigAlgorithms/TrigL2CosmicMuon
+TrigCosmicEvent-00-00-08 Trigger/TrigEvent/TrigCosmicEvent
+TrigL2CosmicMuonHypo-00-00-04 Trigger/TrigHypothesis/TrigL2CosmicMuonHypo
+TriggerRelease-00-03-81 Trigger/TriggerRelease
+RecExCommon-00-07-04-19 Reconstruction/RecExample/RecExCommon
+\end{verbatim} 
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%BIBLIOGRAFIA
+
+\begin{thebibliography}{1}
+\bibitem{Halzen} F. Halzen, A.D.Martin, Quarks and leptons: an introductory course in modern particle physics, John Wiley \& Sons, 1984.
+\bibitem{tesis} Hern\'an Wahlberg, Calibraci\'on en Energ\'ia transversa de Jets y Medici\'on de su Distribuci\'on Espectral en Colisiones Prot\'on-Antiprot\'on, Tesis de Licenciatura, Septiembre 2000.
+\bibitem{QCD}R.K. Ellis, W.J.S. Stirling, B.R. Webber, QCD and collider physics, Cambridge University Press, 1996. %Completar cita
+\bibitem{HadroColis} Andrew R. Baden, Jets and Kinematics in Hadronic Collisions, International Journal of Modern Physics A, Vol. 13, No. 11 (1998) 1817-1845.
+\bibitem{TDR} ATLAS Collaboration. ATLAS Detector and Physics Performance Technical Design Report. CERN/LHCC/99-14, 99-15, 1999.
+\bibitem{Valeria} Valeria Perez Reale, Electron/photon Identiﬁcation and Standard Model Higgs Process Studies at the High Level Trigger for the ATLAS experiment, CERN-THESIS-2006-055 02/02/2006
+\bibitem{TDRtdaq} ATLAS HLT/DAQ/DCS Group, ATLAS High-Level Trigger, Data Acquisition and Controls Technical Design Report, CERN/LHCC/2003-022.
+ \bibitem{Athena} The ATLAS Computing Workbook, Catmore et. Al, 2006.
+\bibitem{IDScan}  M.Sutton et. Al, Fast tracking for the ATLAS LVL2 Trigger.
+\bibitem{Kalman} Kalman, R. E. A New Approach to Linear Filtering and Prediction Problems Transactions of the ASME - Journal of Basic Engineering Vol. 82: pp. 35-45 (1960). 
+\bibitem{Sitrack} Schiavi et. al, Fast tracking for the Second Level Trigger of the ATLAS Experiment using silicon detectors data, ATLAS-DAQ-CONF-2005-011, 22 April 2005.
+\bibitem{InDet} https://twiki.cern.ch/twiki/bin/view/Atlas/InDetCommissioning
+\bibitem{Frodezen} A. G. Frodesen, Probability and Statistics in Particle Physics, Oxford Univ Pr (Sd), September 1979.
+\bibitem{ROOT} http://root.cern.ch
+\bibitem{OfflineAlgos1} https://twiki.cern.ch/twiki/bin/view/Atlas/InDetXKalman
+\bibitem{OfflineAlgos2} https://twiki.cern.ch/twiki/bin/view/Atlas/IPatRec
+\bibitem{Atlantis} http://www.hep.ucl.ac.uk/atlas/atlantis
+\bibitem{distribangularCosmico} S.Eidelman et al, Phys.Lett. B592 (2004) 1
+\bibitem{NotaTaka} Muon trigger software group, HLT muon review -LVL2 cosmic muon trigger, July 2, 2006.
+\bibitem{gaston} Gast\'on L. Romeo, tesis en elaboraci\'on.
+\bibitem{C++} Herbert Schildt, C++ from the ground up, Second Edition, Osborne 
+McGraw-Hill, 1998.
+\bibitem{pdg} W.-M. Yao et al., Review of Particle Physics, Journal of Physics G 33, 1 (2006).
+\bibitem{Athena2} Athena, The ATLAS Common Framework, Developer Guide.
+\end{thebibliography}
+
+\end{document}

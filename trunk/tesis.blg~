@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: TaggingGbbJetsCONF.aux
+The style file: common/atlasnote.bst
+Database file #1: TaggingGbbJetsCONF.bib
+Repeated entry---line 215 of file TaggingGbbJetsCONF.bib
+ : @techreport{JESnote
+ :                    ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 294 of file TaggingGbbJetsCONF.bib
+ :      
+ :      %eprint    = "0802.1189",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I'm ignoring Frixione:1996nh's extra "primaryclass" field
+--line 365 of file TaggingGbbJetsCONF.bib
+Warning--empty author in ATLAS-CONF-2010-091
+Warning--empty author in ATLAS-CONF-2010-042
+Warning--empty author in ATLAS-CONF-2011-102
+Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
+while executing---line 1152 of file common/atlasnote.bst
+Warning--empty author in ATLAS-CONF-2011-098
+Warning--empty author in Pythia_MC11tune
+Warning--empty author in ATLAS-CONF-2010-038
+Warning--empty author in JESnote
+Warning--empty author in ATLAS-CONF-2010-009
+Warning--empty author in JER2011
+You've used 33 entries,
+            2318 wiz_defined-function locations,
+            764 strings with 9429 characters,
+and the built_in function-call counts, 7957 in all, are:
+= -- 812
+> -- 244
+< -- 11
++ -- 96
+- -- 63
+* -- 742
+:= -- 997
+add.period$ -- 46
+call.type$ -- 33
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 42
+duplicate$ -- 452
+empty$ -- 845
+format.name$ -- 63
+if$ -- 2095
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 84
+newline$ -- 128
+num.names$ -- 24
+pop$ -- 159
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 242
+stack$ -- 0
+substring$ -- 211
+swap$ -- 149
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 9
+while$ -- 46
+width$ -- 35
+write$ -- 284
+(There were 3 error messages)
