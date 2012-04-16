@@ -1,0 +1,233 @@
+\documentclass[11pt,a4paper,12pt]{report}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage{ucs}
+%\usepackage[utf-8]{inputenc}
+\usepackage{graphicx}
+\usepackage{afterpage}
+
+%atlas note packages
+%\usepackage{subfigure}
+%\usepackage{mathrsfs}
+%\usepackage{authblk}
+%\usepackage{bm}% bold math
+%\usepackage{multirow}
+%\usepackage{amsmath,amssymb}
+
+\newcommand{\pt}{{\emph{p}_{T}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title
+\title{Double $B$-hadron Jet Tagging and Identification of Gluon to $b \bar{b}$ jets with the ATLAS Detector}
+\author{Lic. Mar\'ia Laura Gonz\'alez Silva \\ \\ \\ \\Tesis Doctoral en Ciencias F\'isicas\\Facultad de Ciencias Exactas y Naturales\\Universidad de Buenos Aires}
+
+\date{Noviembre 2012}
+
+%\includeonly{introduccion,atlas,tdaq}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is where the document begins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%atlasnotes commands
+\newcommand{\pho}{\phantom{0}}
+\newcommand{\bslash}{\ensuremath{\backslash}}
+\newcommand{\BibTeX}{{\sc Bib\TeX}}
+
+\begin{document}
+%\renewcommand{\tablename}{Tabla}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Portada
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\thispagestyle{empty}
+
+
+{ \underline{TEMA}:} {\small Double $B$-hadron Jet Tagging and Identification of Gluon to $b \bar{b}$ jets with the ATLAS Detector}
+
+\vspace{1cm}
+
+{ \underline{ALUMNA}:} {\small Lic. Mar\'ia Laura Gonz\'alez Silva} \hspace{2cm} {\underline{ LU N$\,^{\circ}$} : {\small $217/01$} }
+
+\vspace{1cm}
+
+{ \underline{LUGAR DE TRABAJO}:} {\small Dpto. de F\'isica, FCEyN, UBA}
+
+\vspace{1cm}
+
+{ \underline{DIRECTOR DEL TRABAJO}:} {\small Dr. Ricardo Piegaia}
+
+%\vspace{1cm}
+%{ \underline{CO-DIRECTOR DE TRABAJO}:} {\small Dr. }
+
+\vspace{1cm}
+
+{ \underline{FECHA DE INICIACI\'{O}N}:} {\small Abril de $2007$}
+
+\vspace{1cm}
+
+{ \underline{FECHA DE FINALIZACI\'{O}N}:} {\small Noviembre de $2012$}
+
+\vspace{1cm}
+
+{ \underline{FECHA DE EXAMEN}:}
+
+\vspace{1cm}
+
+{ \underline{INFORME FINAL APROBADO POR}:}
+
+\vspace{2.25cm}
+
+\underline{       \hspace{6cm}              }        \hspace{2cm} \underline{         \hspace{6cm}               }
+
+{\small Alumna:Lic. Mar\'ia Laura Gonz\'alez Silva}  \hspace{4cm} Jurado 1 
+
+\vspace{1cm}
+
+\underline{     \hspace{6cm}                   }        \hspace{2cm} \underline{  \hspace{6cm}                      }
+
+{\small Director: Dr. Ricardo Piegaia}     \hspace{5.2cm} Jurado 2
+
+\vspace{1cm}
+
+\underline{         \hspace{6cm}               }        \hspace{2cm} \underline{       \hspace{6cm}                 }
+
+{\small Sra. Marta Pedernera}   \hspace{5cm} Jurado 3
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dedicacion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\thispagestyle{empty}
+
+$\\$
+\\
+
+\begin{flushright}
+\emph{Dedicado a Cristina Silva}
+\end{flushright}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Agradecimientos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+$\\$
+$\\$
+$\\$
+$\\$
+\thispagestyle{empty}
+
+\begin{center}
+\textbf{\begin{small}AGRADECIMIENTOS\end{small}}\\
+\end{center}
+$\\$ \indent   A Ricardo, a mi familia... 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+El detector ATLAS, uno de los cuatro experimentos del acelerador LHC 
+actualmente en construcci\'on en el CERN, tiene como prop\'osito 
+principal 
+el descubrimiento del bos\'on de Higgs, la part\'icula involucrada en 
+el 
+mecanismo de ruptura de la simetr\'ia electrod\'ebil y el origen de la 
+masa, 
+as\'i como la b\'usqueda de nueva f\'isica m\'as all\'a Modelo 
+Est\'andar 
+hasta la escala de 1 TeV. En el colisionador chocar\'an haces de 
+protones 
+con una energ\'ia de centro de masa de 14 TeV y una frecuencia de 
+interacci\'on de $10^9$ Hz.
+
+This thesis describes a method that allows the identification of merged $b$-quark
+jets originating from gluon-splitting. The technique exploits the kinematic
+differences between merged and single $B$-hadron jets using %track information
+track-based jet shape and jet substructure variables combined in a multivariate likelihood analysis.  The ability to reject $b$-jets
+from gluon splitting is important to reduce and to improve the estimation of
+the $b$-tag background in Standard Model analyses and in new physics searches involving
+$b$-jets in the final state. %The present algorithm, tuned in QCD Monte Carlo samples
+In the simulation, the algorithm rejects 95\% (50\%) of merged $B$-hadron jets while retaining 50\% (90\%) of the tagged $b$-jets, although
+the exact values depend on the jet $\pt$. 
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\include{Introduction/introduction} 
+\include{Introduction/lhc_atlas} 
+\include{Introduction/reconstruction} 
+\include{Main/core} 
+%\include{Main/main} 
+\include{Summary/summary}
+
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\appendix
+%\chapter{Title}\label{appendixa}
+%https://twiki.cern.ch/twiki/bin/view/Atlas/WorkBookAthenaFramework
+   
+  
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%BIBLIOGRAFIA
+\bibliographystyle{unsrt}
+\bibliography{tesis}
+
+
+%\begin{thebibliography}{1}
+%\bibitem{Halzen} F. Halzen, A.D.Martin, Quarks and leptons: an introductory course in modern particle physics, John Wiley \& Sons, 1984.
+%\bibitem{tesis} Hern\'an Wahlberg, Calibraci\'on en Energ\'ia transversa de Jets y Medici\'on de su Distribuci\'on Espectral en Colisiones Prot\'on-Antiprot\'on, Tesis de Licenciatura, Septiembre 2000.
+%\bibitem{QCD}R.K. Ellis, W.J.S. Stirling, B.R. Webber, QCD and collider physics, Cambridge University Press, 1996. %Completar cita
+%\bibitem{HadroColis} Andrew R. Baden, Jets and Kinematics in Hadronic Collisions, International Journal of Modern Physics A, Vol. 13, No. 11 (1998) 1817-1845.
+%\bibitem{TDR} ATLAS Collaboration. ATLAS Detector and Physics Performance Technical Design Report. CERN/LHCC/99-14, 99-15, 1999.
+%\bibitem{Valeria} Valeria Perez Reale, Electron/photon Identiﬁcation and Standard Model Higgs Process Studies at the High Level Trigger for the ATLAS experiment, CERN-THESIS-2006-055 02/02/2006
+%\bibitem{TDRtdaq} ATLAS HLT/DAQ/DCS Group, ATLAS High-Level Trigger, Data Acquisition and Controls Technical Design Report, CERN/LHCC/2003-022.
+ %\bibitem{Athena} The ATLAS Computing Workbook, Catmore et. Al, 2006.
+%\bibitem{IDScan}  M.Sutton et. Al, Fast tracking for the ATLAS LVL2 Trigger.
+%\bibitem{Kalman} Kalman, R. E. A New Approach to Linear Filtering and Prediction Problems Transactions of the ASME - Journal of Basic Engineering Vol. 82: pp. 35-45 (1960). 
+%\bibitem{Sitrack} Schiavi et. al, Fast tracking for the Second Level Trigger of the ATLAS Experiment using silicon detectors data, ATLAS-DAQ-CONF-2005-011, 22 April 2005.
+%\bibitem{InDet} https://twiki.cern.ch/twiki/bin/view/Atlas/InDetCommissioning
+%\bibitem{Frodezen} A. G. Frodesen, Probability and Statistics in Particle Physics, Oxford Univ Pr (Sd), September 1979.
+%\bibitem{ROOT} http://root.cern.ch
+%\bibitem{OfflineAlgos1} https://twiki.cern.ch/twiki/bin/view/Atlas/InDetXKalman
+%\bibitem{OfflineAlgos2} https://twiki.cern.ch/twiki/bin/view/Atlas/IPatRec
+%\bibitem{Atlantis} http://www.hep.ucl.ac.uk/atlas/atlantis
+%\bibitem{distribangularCosmico} S.Eidelman et al, Phys.Lett. B592 (2004) 1
+%\bibitem{NotaTaka} Muon trigger software group, HLT muon review -LVL2 cosmic muon trigger, July 2, 2006.
+%\bibitem{gaston} Gast\'on L. Romeo, tesis en elaboraci\'on.
+%\bibitem{C++} Herbert Schildt, C++ from the ground up, Second Edition, Osborne 
+McGraw-Hill, 1998.
+%\bibitem{pdg} W.-M. Yao et al., Review of Particle Physics, Journal of Physics G 33, 1 (2006).
+%\bibitem{Athena2} Athena, The ATLAS Common Framework, Developer Guide.
+%\end{thebibliography}
+
+\end{document}
