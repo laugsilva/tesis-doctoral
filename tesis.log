@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  16 APR 2012 19:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  17 APR 2012 15:07
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -65,11 +65,8 @@ LaTeX Warning: Label `sec:atlasCALO' multiply defined.
 
 LaTeX Warning: Label `sec:atlasSim' multiply defined.
 
-) (./Introduction/reconstruction.aux) (./Main/core.aux
-
-LaTeX Warning: Label `sec:FractionSystematics' multiply defined.
-
-) (./Summary/summary.aux))
+) (./Introduction/reconstruction.aux) (./Main/core.aux) (./Summary/summary.aux)
+)
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -84,8 +81,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen105
@@ -810,75 +806,83 @@ File: FIGS/dataMCItoM/VarNtrkPT080.pdf Graphic file (type pdf)
 <FIGS/dataMCItoM/VarNtrkPT200.pdf, id=1088, 569.12625pt x 549.05125pt>
 File: FIGS/dataMCItoM/VarNtrkPT200.pdf Graphic file (type pdf)
 
-<use FIGS/dataMCItoM/VarNtrkPT200.pdf>
+<use FIGS/dataMCItoM/VarNtrkPT200.pdf> [38] [39 <./FIGS/dataMC/VarNtrkPT080.pdf
+, page is rotated 90 degrees> <./FIGS/dataMC/VarNtrkPT200.pdf, page is rotated 
+90 degrees> <./FIGS/dataMC/VarTrkWidthPT080.pdf, page is rotated 90 degrees> <.
+/FIGS/dataMC/VarTrkWidthPT200.pdf, page is rotated 90 degrees> <./FIGS/dataMC/V
+arDRktaxisPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/VarDRktaxisPT20
+0.pdf, page is rotated 90 degrees>] [40 <./FIGS/dataMCItoM/VarNtrkPT080.pdf, pa
+ge is rotated 90 degrees> <./FIGS/dataMCItoM/VarNtrkPT200.pdf, page is rotated 
+90 degrees>]
+Chapter 7.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.211 ... the contribution of subleading lower \pt
+l.219 ... the contribution of subleading lower \pt
                                                   \ jets from high \pt\ even...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.211 ... the contribution of subleading lower \pt
+l.219 ... the contribution of subleading lower \pt
                                                   \ jets from high \pt\ even...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.212 
+l.220 
       
 ? 
 
-Overfull \hbox (521.23492pt too wide) in paragraph at lines 209--212
+Overfull \hbox (521.23492pt too wide) in paragraph at lines 217--220
 \OT1/cmr/m/n/12 bu-tion of sub-lead-ing lower \OT1/cmr/m/it/12 p$[] \OML/cmm/m/
 it/12 jetsfromhigh[] events; andthusincreasethestatisticsofmergedjetsinthelow[]
  bins:Fortheevaluationofthemethodthesameprocedurewasfollowed:$ 
  []
 
 
-<FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, id=1089, 569.12625pt x 549.05125pt>
+<FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, id=1443, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/NNoutput040_LihoodKDE.pdf Graphic file (type pdf)
 <use FIGS/Likelihood/NNoutput040_LihoodKDE.pdf>
-<FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, id=1091, 569.12625pt x 549.05125pt>
+<FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, id=1445, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/NNoutput080_LihoodKDE.pdf Graphic file (type pdf)
 <use FIGS/Likelihood/NNoutput080_LihoodKDE.pdf>
-<FIGS/Likelihood/NNoutput270_LihoodKDE.pdf, id=1093, 569.12625pt x 549.05125pt>
+<FIGS/Likelihood/NNoutput270_LihoodKDE.pdf, id=1447, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/NNoutput270_LihoodKDE.pdf Graphic file (type pdf)
 <use FIGS/Likelihood/NNoutput270_LihoodKDE.pdf>
-<FIGS/Likelihood/KDE_RejvsEff.pdf, id=1095, 569.12625pt x 549.05125pt>
+<FIGS/Likelihood/KDE_RejvsEff.pdf, id=1449, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/KDE_RejvsEff.pdf Graphic file (type pdf)
 
 <use FIGS/Likelihood/KDE_RejvsEff.pdf>
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.252 ...merged jets attained as a function of \pt
+l.260 ...merged jets attained as a function of \pt
                                                   \ for the 50\% and 60\% ef...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.252 ...merged jets attained as a function of \pt
+l.260 ...merged jets attained as a function of \pt
                                                   \ for the 50\% and 60\% ef...
 
 ? 
 
-LaTeX Warning: Reference `tb:rejection' on page 38 undefined on input line 252.
+LaTeX Warning: Reference `tb:rejection' on page 41 undefined on input line 260.
 
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.252 ...of events in the merged and single $b\bar
+l.260 ...of events in the merged and single $b\bar
                                                   {b}$ distributions. The er...
 
 ? 
 
-Overfull \hbox (1002.87672pt too wide) in paragraph at lines 252--253
+Overfull \hbox (1002.87672pt too wide) in paragraph at lines 260--261
 []\OT1/cmr/m/n/12 The re-jec-tion of merged jets at-tained as a func-tion of \O
 T1/cmr/m/it/12 p$[] \OML/cmm/m/it/12 forthe\OT1/cmr/m/n/12 50%\OML/cmm/m/it/12 
 and\OT1/cmr/m/n/12 60%\OML/cmm/m/it/12 efficiencyworkingpointsaresummarizedinTa
@@ -886,43 +890,38 @@ ble [][]; togetherwiththeirrelativestatisticalerror:ThesearepropagatedfromthePo
 issonfluctuationsofthenumberofeventsinthemergedandsingle$\OT1/cmr/m/n/12 b$[]$
  []
 
-[38] [39 <./FIGS/dataMC/VarNtrkPT080.pdf, page is rotated 90 degrees> <./FIGS/d
-ataMC/VarNtrkPT200.pdf, page is rotated 90 degrees> <./FIGS/dataMC/VarTrkWidthP
-T080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/VarTrkWidthPT200.pdf, page
- is rotated 90 degrees> <./FIGS/dataMC/VarDRktaxisPT080.pdf, page is rotated 90
- degrees> <./FIGS/dataMC/VarDRktaxisPT200.pdf, page is rotated 90 degrees>]
-[40 <./FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, page is rotated 90 degrees> <
-./FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, page is rotated 90 degrees> <./FIG
-S/Likelihood/NNoutput270_LihoodKDE.pdf, page is rotated 90 degrees> <./FIGS/dat
-aMCItoM/VarNtrkPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMCItoM/VarNtr
-kPT200.pdf, page is rotated 90 degrees>] [41 <./FIGS/Likelihood/KDE_RejvsEff.pd
-f, page is rotated 90 degrees>]
+[41
 
-LaTeX Warning: Reference `sec:validation' on page 42 undefined on input line 29
-0.
+] [42 <./FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, page is rotated 90 degrees>
+ <./FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, page is rotated 90 degrees> <./F
+IGS/Likelihood/NNoutput270_LihoodKDE.pdf, page is rotated 90 degrees> <./FIGS/L
+ikelihood/KDE_RejvsEff.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Reference `sec:validation' on page 43 undefined on input line 29
+8.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.316 ...erminations (2 working points with 10 \pt
+l.324 ...erminations (2 working points with 10 \pt
                                                   \ bins each) of performanc...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.316 ...erminations (2 working points with 10 \pt
+l.324 ...erminations (2 working points with 10 \pt
                                                   \ bins each) of performanc...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.318 
+l.326 
       
 ? 
 
-Overfull \hbox (902.65181pt too wide) in paragraph at lines 312--318
+Overfull \hbox (902.65181pt too wide) in paragraph at lines 320--326
 \OT1/cmr/m/it/12 p$[] \OML/cmm/m/it/12 binseach\OT1/cmr/m/n/12 )\OML/cmm/m/it/1
 2 ofperformancedifferencesbetweenhighandlownumberofprimaryverticesevents; itiso
 bservedthat\OT1/cmr/m/n/12 12\OML/cmm/m/it/12 ofthemarepositiveand\OT1/cmr/m/n/
@@ -934,25 +933,25 @@ aredtoothersourceofuncertainties:$
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.336 ...the true flavor of the jet and on its \pt
+l.344 ...the true flavor of the jet and on its \pt
                                                   , but these are basically ...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.336 ...the true flavor of the jet and on its \pt
+l.344 ...the true flavor of the jet and on its \pt
                                                   , but these are basically ...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.337 
+l.345 
       
 ? 
 
-Overfull \hbox (430.50537pt too wide) in paragraph at lines 334--337
+Overfull \hbox (430.50537pt too wide) in paragraph at lines 342--345
 \OT1/cmr/m/n/12 the true fla-vor of the jet and on its \OT1/cmr/m/it/12 p$[]\OM
 L/cmm/m/it/12 ; butthesearebasicallyconstantintheperformancedetermination; whic
 hisbasedonsingleflavor\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 true$\OT1/cmr/m/n/12 b$
@@ -961,46 +960,46 @@ msy/m/n/12 ^^@
  []
 
 
-<FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf, id=1628, 569.12625pt x 549.05
+<FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf, id=1631, 569.12625pt x 549.05
 125pt>
 File: FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf Graphic file (type pdf)
  <use FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf>
-<FIGS/systematics/BTagCalib_DataVarTrkWidthPT060.pdf, id=1629, 569.12625pt x 54
+<FIGS/systematics/BTagCalib_DataVarTrkWidthPT060.pdf, id=1632, 569.12625pt x 54
 9.05125pt>
 File: FIGS/systematics/BTagCalib_DataVarTrkWidthPT060.pdf Graphic file (type pd
 f)
  <use FIGS/systematics/BTagCalib_DataVarTrkWidthPT060.pdf>
-<FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf, id=1630, 569.12625pt x 54
+<FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf, id=1633, 569.12625pt x 54
 9.05125pt>
 File: FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf Graphic file (type pd
 f)
- <use FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf> [42]
-[43 <./FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf, page is rotated 90 degr
+ <use FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf> [43]
+[44 <./FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf, page is rotated 90 degr
 ees> <./FIGS/systematics/BTagCalib_DataVarTrkWidthPT060.pdf, page is rotated 90
  degrees> <./FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf, page is rotat
 ed 90 degrees>]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.367 ...er systematically present over all 16 \pt
+l.375 ...er systematically present over all 16 \pt
                                                   \ bin/working points, with...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.367 ...er systematically present over all 16 \pt
+l.375 ...er systematically present over all 16 \pt
                                                   \ bin/working points, with...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.368 
+l.376 
       
 ? 
 
-Overfull \hbox (573.0995pt too wide) in paragraph at lines 367--368
+Overfull \hbox (573.0995pt too wide) in paragraph at lines 375--376
 \OT1/cmr/m/it/12 p$[] \OML/cmm/m/it/12 bin=workingpoints; withoutaclear[] depen
 dence:Wehavethustakentheaverageover[]; andobtainedaglobalsystematicuncertaintyo
 f\OT1/cmr/m/n/12 4%\OML/cmm/m/it/12 bothforthe\OT1/cmr/m/n/12 50%\OML/cmm/m/it/
@@ -1008,14 +1007,14 @@ f\OT1/cmr/m/n/12 4%\OML/cmm/m/it/12 bothforthe\OT1/cmr/m/n/12 50%\OML/cmm/m/it/
  []
 
 
-<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf, id=176
-6, 569.12625pt x 503.8825pt>
+<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf, id=177
+0, 569.12625pt x 503.8825pt>
 File: FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf Gr
 aphic file (type pdf)
 
 <use FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff270.pdf, id=176
-7, 569.12625pt x 503.8825pt>
+<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff270.pdf, id=177
+1, 569.12625pt x 503.8825pt>
 File: FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff270.pdf Gr
 aphic file (type pdf)
 
@@ -1023,82 +1022,82 @@ aphic file (type pdf)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.381 ...ion. The actual smearing is done in 1/\pt
+l.389 ...ion. The actual smearing is done in 1/\pt
                                                   , with an upper bound to t...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.381 ...ion. The actual smearing is done in 1/\pt
+l.389 ...ion. The actual smearing is done in 1/\pt
                                                   , with an upper bound to t...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.381 ...e resolution uncertainty given by $\sigma
+l.389 ...e resolution uncertainty given by $\sigma
                                                   (1/\pt)=0.02/\pt$~\cite{AT...
 
 ? 
 
-Overfull \hbox (38.68692pt too wide) in paragraph at lines 378--382
+Overfull \hbox (38.68692pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/12 1/\OT1/cmr/m/it/12 p$[]\OML/cmm/m/it/12 ; withanupperboundtothe
 resolutionuncertaintygivenby$$^^[\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 =[]\OT1/cmr
 /m/n/12 ) = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 02\OML/cmm/m/it/12 =[]$ \OT1/cmr
 /m/n/12 [[]].
  []
 
-[44 <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf, 
+[45 <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf, 
 page is rotated 90 degrees> <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertain
 tyTest_rejvseff270.pdf, page is rotated 90 degrees>]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.387 ...decrease by 6\%, without a particular \pt
+l.395 ...decrease by 6\%, without a particular \pt
                                                   \ dependence.
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.387 ...decrease by 6\%, without a particular \pt
+l.395 ...decrease by 6\%, without a particular \pt
                                                   \ dependence.
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.388 
+l.396 
       
 ? 
 
-LaTeX Warning: Reference `tb:systematics' on page 45 undefined on input line 39
-7.
+LaTeX Warning: Reference `tb:systematics' on page 46 undefined on input line 40
+5.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.424 ...rnative simulations for four selected \pt
+l.432 ...rnative simulations for four selected \pt
                                                   \ bins covering the full k...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.424 ...rnative simulations for four selected \pt
+l.432 ...rnative simulations for four selected \pt
                                                   \ bins covering the full k...
 
 ? 
 
-LaTeX Font Warning: Command \sc invalid in math mode on input line 424.
+LaTeX Font Warning: Command \sc invalid in math mode on input line 432.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.425 
+l.433 
       
 ? 
 
-Overfull \hbox (717.11209pt too wide) in paragraph at lines 424--425
+Overfull \hbox (717.11209pt too wide) in paragraph at lines 432--433
 \OT1/cmr/m/n/12 nom-i-nal \OT1/cmr/m/sc/12 pythia \OT1/cmr/m/n/12 and the al-te
 r-na-tive sim-u-la-tions for four se-lected \OT1/cmr/m/it/12 p$[] \OML/cmm/m/it
 /12 binscoveringthefullkinematicrange:Thelargererrorsareduetothereducedstatisti
@@ -1108,28 +1107,28 @@ csavailable; whichareevenlowerforthePerugiacasethanfor[]:$
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.429 ...stematic trend, with agreement at low \pt
+l.437 ...stematic trend, with agreement at low \pt
                                                   \ and increasingly poor pe...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.429 ...stematic trend, with agreement at low \pt
+l.437 ...stematic trend, with agreement at low \pt
                                                   \ and increasingly poor pe...
 
 ? 
 
-LaTeX Font Warning: Command \sc invalid in math mode on input line 429.
+LaTeX Font Warning: Command \sc invalid in math mode on input line 437.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.430 
+l.438 
       
 ? 
 
-Overfull \hbox (1017.3142pt too wide) in paragraph at lines 429--430
+Overfull \hbox (1017.3142pt too wide) in paragraph at lines 437--438
 \OT1/cmr/m/n/12 low \OT1/cmr/m/it/12 p$[] \OML/cmm/m/it/12 andincreasinglypoorp
 erformancescomparedto[]as[] grows:ForthePerugiatune; ontheotherhand; thereisnod
 efinitebehavior; withtheperformancefluctuatingaboveorbelowthenominalsimulationf
@@ -1139,96 +1138,96 @@ ordifferent[] binsconsistentlywiththestatisticaluncertainties:$
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.431 ...data, particularly at medium and high \pt
+l.439 ...data, particularly at medium and high \pt
                                                   . Although not shown, the ...
 
 ? 
 ! Extra }, or forgotten $.
 \pt ->{\emph {p}_{T}}
                      
-l.431 ...data, particularly at medium and high \pt
+l.439 ...data, particularly at medium and high \pt
                                                   . Although not shown, the ...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.432 
+l.440 
       
 ? 
 
-Overfull \hbox (124.4439pt too wide) in paragraph at lines 431--432
+Overfull \hbox (124.4439pt too wide) in paragraph at lines 439--440
 \OT1/cmr/m/n/12 tic-u-larly at medium and high \OT1/cmr/m/it/12 p$[]\OML/cmm/m/
 it/12 :Althoughnotshown; thelevelofagreementisfoundtobebetterforjet \OMS/cmsy/m
 /n/12 ^^@
  []
 
 
-Overfull \hbox (103.94722pt too wide) in paragraph at lines 431--432
+Overfull \hbox (103.94722pt too wide) in paragraph at lines 439--440
 \OML/cmm/m/it/12 trackwidthandtheanglebetweentheleadingsubjets; thetwoothervari
 ablesusedfordiscrimination:$ 
  []
 
 
-<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf, id=1858, 56
+<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf, id=1861, 56
 9.12625pt x 503.8825pt>
 File: FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf Graphic
  file (type pdf)
 
 <use FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf>
-<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf, id=1859, 56
+<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf, id=1862, 56
 9.12625pt x 503.8825pt>
 File: FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf Graphic
  file (type pdf)
 
 <use FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf>
-<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf, id=1860, 56
+<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf, id=1863, 56
 9.12625pt x 503.8825pt>
 File: FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf Graphic
  file (type pdf)
 
 <use FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf>
-<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf, id=1861, 56
+<FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf, id=1864, 56
 9.12625pt x 503.8825pt>
 File: FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf Graphic
  file (type pdf)
 
 <use FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf>
-<FIGS/systematics/DataVarNtrkPT040.pdf, id=1862, 569.12625pt x 549.05125pt>
+<FIGS/systematics/DataVarNtrkPT040.pdf, id=1865, 569.12625pt x 549.05125pt>
 File: FIGS/systematics/DataVarNtrkPT040.pdf Graphic file (type pdf)
 
 <use FIGS/systematics/DataVarNtrkPT040.pdf>
-<FIGS/systematics/DataVarNtrkPT200.pdf, id=1863, 569.12625pt x 549.05125pt>
+<FIGS/systematics/DataVarNtrkPT200.pdf, id=1866, 569.12625pt x 549.05125pt>
 File: FIGS/systematics/DataVarNtrkPT200.pdf Graphic file (type pdf)
 
-<use FIGS/systematics/DataVarNtrkPT200.pdf> [45] [46 <./FIGS/systematics/newInt
+<use FIGS/systematics/DataVarNtrkPT200.pdf> [46] [47 <./FIGS/systematics/newInt
 erpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf, page is rotated 90 degrees> <./FIGS
 /systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf, page is rotated 
 90 degrees> <./FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pd
 f, page is rotated 90 degrees> <./FIGS/systematics/newInterpLlhoodKDE_ISO_DiffM
-CGen_rejvseff360.pdf, page is rotated 90 degrees>] [47 <./FIGS/systematics/Data
+CGen_rejvseff360.pdf, page is rotated 90 degrees>] [48 <./FIGS/systematics/Data
 VarNtrkPT040.pdf, page is rotated 90 degrees> <./FIGS/systematics/DataVarNtrkPT
 200.pdf, page is rotated 90 degrees>]
-Chapter 7.
-) [48
+Chapter 8.
+) [49
 
 ]
 \openout2 = `Summary/summary.aux'.
 
  (./Summary/summary.tex
-Chapter 8.
-) [49
+Chapter 9.
+) [50
 
 
 
-] (./tesis.bbl [50
+] (./tesis.bbl [51
 
 
 ]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ” in font cmr12!
- [51]
+ [52]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
 
@@ -1238,7 +1237,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 l.187 \end{thebibliography}
                            
 ? 
-) [52] (./tesis.aux (./Introduction/introduction.aux)
+) [53] (./tesis.aux (./Introduction/introduction.aux)
 (./Introduction/lhc_atlas.aux) (./Introduction/reconstruction.aux)
 (./Main/core.aux) (./Summary/summary.aux))
 
@@ -1250,16 +1249,16 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 15)
 
-### simple group (level 15) entered at line 431 ({)
-### simple group (level 14) entered at line 429 ({)
-### simple group (level 13) entered at line 424 ({)
-### simple group (level 12) entered at line 387 ({)
-### simple group (level 11) entered at line 381 ({)
-### simple group (level 10) entered at line 367 ({)
-### simple group (level 9) entered at line 336 ({)
-### simple group (level 8) entered at line 316 ({)
-### simple group (level 7) entered at line 252 ({)
-### simple group (level 6) entered at line 211 ({)
+### simple group (level 15) entered at line 439 ({)
+### simple group (level 14) entered at line 437 ({)
+### simple group (level 13) entered at line 432 ({)
+### simple group (level 12) entered at line 395 ({)
+### simple group (level 11) entered at line 389 ({)
+### simple group (level 10) entered at line 375 ({)
+### simple group (level 9) entered at line 344 ({)
+### simple group (level 8) entered at line 324 ({)
+### simple group (level 7) entered at line 260 ({)
+### simple group (level 6) entered at line 219 ({)
 ### simple group (level 5) entered at line 125 ({)
 ### simple group (level 4) entered at line 42 ({)
 ### simple group (level 3) entered at line 20 ({)
@@ -1269,11 +1268,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  1419 strings out of 495061
  24822 string characters out of 1182621
- 71187 words of memory out of 3000000
+ 71179 words of memory out of 3000000
  4526 multiletter control sequences out of 15000+50000
  15565 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,11n,22p,1583b,570s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,11n,21p,1583b,570s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10
 .pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
 share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texm
@@ -1292,9 +1291,9 @@ exmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmti8.pfb>
-Output written on tesis.pdf (57 pages, 1650762 bytes).
+Output written on tesis.pdf (58 pages, 1651467 bytes).
 PDF statistics:
- 2201 PDF objects out of 2487 (max. 8388607)
+ 2204 PDF objects out of 2487 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
