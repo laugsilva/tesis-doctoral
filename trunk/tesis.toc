@@ -34,14 +34,13 @@
 \contentsline {section}{\numberline {5.3} $b$-jet Tagging}{27}
 \contentsline {section}{\numberline {5.4}Event and jet selections}{27}
 \contentsline {section}{\numberline {5.5}Track selection }{29}
-\contentsline {chapter}{\numberline {6}$BB$-jet tagging}{30}
+\contentsline {chapter}{\numberline {6}Double $B$-hadron tagging}{30}
 \contentsline {section}{\numberline {6.1}Introduction}{30}
 \contentsline {section}{\numberline {6.2}Kinematid differences between single $b$- and merged $b\mathaccent "7016\relax {b}$-jets}{30}
 \contentsline {section}{\numberline {6.3}Validation of the jet variables in data}{35}
-\contentsline {section}{\numberline {6.4}Multivariate Analysis}{38}
-\contentsline {section}{\numberline {6.5}Systematic uncertainties}{42}
-\contentsline {section}{\numberline {6.6}Other Monte Carlo generators}{45}
-\contentsline {chapter}{\numberline {7}Fraction of gluon-splitting jets in data}{48}
-\contentsline {section}{\numberline {7.1}Template fits}{48}
-\contentsline {section}{\numberline {7.2}Systematic uncertainties}{48}
-\contentsline {chapter}{\numberline {8}Conclusions}{49}
+\contentsline {chapter}{\numberline {7}Multivariate Analysis}{41}
+\contentsline {section}{\numberline {7.1}Systematic uncertainties}{43}
+\contentsline {section}{\numberline {7.2}Other Monte Carlo generators}{46}
+\contentsline {chapter}{\numberline {8}??Fraction of gluon-splitting jets in data??}{49}
+\contentsline {section}{\numberline {8.1}Template fits??}{49}
+\contentsline {chapter}{\numberline {9}Conclusions}{50}
