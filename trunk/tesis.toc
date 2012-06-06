@@ -1,46 +1,11 @@
-\contentsline {chapter}{\numberline {1}Introduction}{3}
-\contentsline {section}{\numberline {1.1}Identification of $b$-jets from gluon splitting}{3}
-\contentsline {section}{\numberline {1.2}Physics Motivation}{4}
-\contentsline {chapter}{\numberline {2}The theory of the strong interactions}{9}
-\contentsline {section}{\numberline {2.1}The parton model}{9}
-\contentsline {section}{\numberline {2.2}Jet physics}{9}
-\contentsline {subsection}{\numberline {2.2.1}Monte Carlo simulations}{9}
-\contentsline {subsection}{\numberline {2.2.2}Jet algorithms}{9}
-\contentsline {chapter}{\numberline {3}The Large Hadron Collider}{10}
-\contentsline {section}{\numberline {3.1}Luminosity and pile-up}{11}
-\contentsline {chapter}{\numberline {4}The ATLAS Detector}{12}
-\contentsline {section}{\numberline {4.1}Detector overview}{12}
-\contentsline {section}{\numberline {4.2}The Inner Detector}{13}
-\contentsline {subsubsection}{El detector de p\'ixeles}{13}
-\contentsline {subsubsection}{El detector de microbandas de silicio}{13}
-\contentsline {subsubsection}{El detector de radiaci\'on de transici\'on}{14}
-\contentsline {section}{\numberline {4.3}The Calorimeters}{15}
-\contentsline {subsection}{\numberline {4.3.1}El calor\'imetro}{15}
-\contentsline {subsubsection}{El calor\'imetro de arg\'on l\'iquido}{16}
-\contentsline {subsubsection}{El calor\'imetro hadr\'onico de tejas}{17}
-\contentsline {section}{\numberline {4.4}The Muon System}{17}
-\contentsline {section}{\numberline {4.5}Trigger and Data Adquisition}{19}
-\contentsline {section}{\numberline {4.6}Arquitectura general}{19}
-\contentsline {section}{\numberline {4.7}El Nivel 1}{20}
-\contentsline {section}{\numberline {4.8}El HLT}{21}
-\contentsline {subsection}{\numberline {4.8.1}El Nivel 2}{21}
-\contentsline {subsection}{\numberline {4.8.2}El Filtro de Eventos}{22}
-\contentsline {subsection}{\numberline {4.8.3}El software de selecci\'on}{23}
-\contentsline {section}{\numberline {4.9}Data quality}{24}
-\contentsline {section}{\numberline {4.10}Simulation of particle interactions in the ATLAS Detector}{24}
-\contentsline {chapter}{\numberline {5}Object reconstruction and event selection}{25}
-\contentsline {section}{\numberline {5.1}Data and Monte Carlo samples}{25}
-\contentsline {section}{\numberline {5.2}Reconstruction}{26}
-\contentsline {section}{\numberline {5.3} $b$-jet Tagging}{27}
-\contentsline {section}{\numberline {5.4}Event and jet selections}{27}
-\contentsline {section}{\numberline {5.5}Track selection }{29}
-\contentsline {chapter}{\numberline {6}Double $B$-hadron tagging}{30}
-\contentsline {section}{\numberline {6.1}Introduction}{30}
-\contentsline {section}{\numberline {6.2}Kinematid differences between single $b$- and merged $b\mathaccent "7016\relax {b}$-jets}{30}
-\contentsline {section}{\numberline {6.3}Validation of the jet variables in data}{35}
-\contentsline {chapter}{\numberline {7}Multivariate Analysis}{41}
-\contentsline {section}{\numberline {7.1}Systematic uncertainties}{43}
-\contentsline {section}{\numberline {7.2}Other Monte Carlo generators}{46}
-\contentsline {chapter}{\numberline {8}??Fraction of gluon-splitting jets in data??}{49}
-\contentsline {section}{\numberline {8.1}Template fits??}{49}
-\contentsline {chapter}{\numberline {9}Conclusions}{50}
+\contentsline {chapter}{\numberline {1}Kinematic differences between single and double $B$-hadron jets}{2}
+\contentsline {section}{\numberline {1.1}Introduction}{2}
+\contentsline {section}{\numberline {1.2}Data and Monte Carlo samples}{2}
+\contentsline {section}{\numberline {1.3}Event and object selection}{3}
+\contentsline {section}{\numberline {1.4}Analysis}{4}
+\contentsline {section}{\numberline {1.5}Validation of the jet variables in data}{12}
+\contentsline {chapter}{\numberline {2}Multivariate Analysis}{14}
+\contentsline {section}{\numberline {2.1}Systematic uncertainties}{15}
+\contentsline {section}{\numberline {2.2}Other Monte Carlo generators}{20}
+\contentsline {chapter}{\numberline {3}??Fraction of gluon-splitting jets in data??}{22}
+\contentsline {section}{\numberline {3.1}Template fits??}{22}

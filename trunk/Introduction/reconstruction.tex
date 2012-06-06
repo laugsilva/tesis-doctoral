@@ -4,118 +4,44 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\chapter{Object reconstruction and event selection}
+\chapter{Object reconstruction and $b$-Tagging }
 
-%------------------------------------------------------------------------
-\section{Data and Monte Carlo samples}\label{sec:Simulation}
-%------------------------------------------------------------------------
 
-%\partab The technique(?) has been derived using dijet events from PYTHIA 6.4.21 event generator~\cite{PYTHIA}. PYTHIA simulates non-diffractive collisions in 2 $\rightarrow$ 2 scattering processes at a center of mass energy of 7~TeV using a matrix-element plus parton shower model in a leading log approximation. Hadronization, fragmentation and underlying event are also modeled and simulated with PYTHIA. The parameters used for PYTHIA are denoted as ATLAS MC10~\cite{MCtunes}, and they have been tuned using data from previous collider experiments. 
-
-The method presented in this note relies on Monte Carlo predictions for the signal (single $b$) or background (merged $b$) hypotheses, but we assess with experimental data the extent to which the simulation accurately reproduces the measured distributions for the different variables explored.
-
-Samples of jet events from proton-proton collisions processes are simulated with {\sc pythia 8}~\cite{PYTHIA8} using a $2\rightarrow 2$ matrix element at leading order in the strong coupling to model the hard subprocess, \pt-ordered parton showers to model additional radiation~\cite{Pythia_partonshowers}, underlying event and multiple parton interactions~\cite{Pythia_mpi}, and fragmentation and hadronisation based on the Lund string model~\cite{Lund_string_model}. 
-%The proton parton distribution function (PDF) set used is the modified leading-order PDF set MRST LO*~\cite{}. 
-The ATLAS MC11 tune of the soft model parameters was used~\cite{Pythia_MC11tune}.
-In order to have sufficient statistics over the entire $\pt$ spectrum, eight samples were generated with different thresholds of the hard-scattering partonic transverse momentum $\hat{p}_T$. The first six of these samples were mixed taking into account their respective production cross sections.
-
-After the event generation, the events are passed through a full {\sc Geant4}~\cite{GEANT4} detector simulation with a detailed description of the geometry and the material of the ATLAS experiment, and QGSP$\_$BERT~\cite{QGSP, BERT} as 
-the set of processes describing the hadronic interactions. The energy deposited by particles in the active detector material is converted into detector signals in the same format as the detector read-out. Finally the Monte Carlo generated events are processed through the trigger simulation package of the experiment, and are reconstructed and analyzed with the same software as for the real data.
-The simulated data sample used for the analysis (MC11b) gives an accurate description of the pile-up content and detector conditions for the full 2011 data-taking period. 
-
-The data samples employed correspond to proton-proton collisions at $\sqrt{s}=7$ TeV delivered by the LHC and collected by the ATLAS experiment during 2011. Only data collected during stable beam periods in which all sub-detectors were fully operational are used.  After the aplication of the data quality selection, the total integrated luminosity is about  4.7 fb$^{-1}$.  The LHC performance steadily improved during 2011, surpassing in the second half of the year the design values for several machine parameters. In particular the average number of minimum-bias pile-up events, originating from collisions of additional protons in the same bunch as the signal collision, grew from from 3 to 20. This fact will be of importance when discussing the selection of discriminating variables.  
-
-For the study of systematic effects and for result comparison, other Monte Carlo samples were utilised. Results were produced with the {\sc Herwig++} generator~\cite{Herwig} and with {\sc Pythia8} using the Perugia tune~\cite{Perugia}.
+Experimental data and simulated events were both reconstructed using the latest version available of the ATLAS software. In this chapter we brielfy describe the reconstruction of the two key objects used in this analysis, namely jets and tracks.
+We describe how $b$-Tagging is done in ATLAS.
 
 
 %------------------------------------------------------------------------
-\section{Reconstruction}\label{sec:ObjSelection}
+\section{Jets}\label{sec:ObjSelection}
 %------------------------------------------------------------------------
 
-Both experimental data and simulated events were reconstructed using version 17 of the ATLAS software. In this section we brielfy describe the reconstruction of the two key objects used in this analysis, namely jets and tracks.
+
+Jets are reconstructed using the anti-$k_t$ jet algorithm~\cite{antiktalg} with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.  %Topological clusters are built starting from seed calorimeter cells with a signal at least four times higher than the root-mean-square (RMS) of the total noise contribution, consisting of electronic and pile-up noise corresponding to an average %luminosity number of interactions of $\mu=8$. Cells neighbouring the seed which have a signal-to-RMS-noise-ratio of two are then iteratively added. Finally, all nearest neighbour cells are added to the cluster without any threshold. 
+Several quality criteria are applied to eliminate ``fake'' jets that are %produced by problematic calorimeter behaviour~\cite{ATLAS-CONF-2010-038}.
+caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
+%~\cite{ATLAS-CONF-2010-038}.
+%In particular the jet is rejected if 90\% of the jet energy is distributed over less than 6 calorimeter cells (this handles fake jets caused by sporadic noise bursts in the LAr calorimeter). Jets are also discarded if the fraction of jet energy from LAr calorimeter cells flagged as problematic is greater than 0.8. If the fraction of energy deposited in the electromagnetic calorimeter is greater than 0.95 the jet is eliminated (this removes fake jets caused by noise bursts). 
+%In order to reject jets reconstructed from large out-of-time energy deposits a loose cut on the jet time, measured with respect to the event time, is imposed.
+%Jets are required to have an energy-squared-weighted cell time to be within two beam bunch crossings, i.e. out-of-time jets are selected with jet time $> 50$~ns.
 
 
-%The ATLAS calorimeter system~\cite{TDR} is composed of several sub-detectors. A high granularity liquid-argon (LAr) electromagnetic sampling calorimeter covers the pseudo-rapidity range $|\eta| < 3.2$ and it is split into an electromagnetic barrel ($|\eta| < 1.475$) and the end-caps ($ 1.375 < |\eta| < 3.2$). The hadronic calorimetry is provided with a scintillator-tile calorimeter in the range $|\eta| < 1.7 $. The tile hadronic calorimeter is separated into a large barrel and two smaller extended barrel cylinders, one on either side of the central barrel. In the end-caps, LAr technology is also implemented for the hadronic end-cap calorimeters (HEC), covering $1.5 <|\eta| < 3.2$. 
-Jets are reconstructed using the anti-$k_t$ jet algorithm~\cite{antiktalg} with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as inputs. Topological clusters are built starting from seed calorimeter cells with a signal at least four times higher than the root-mean-square (RMS) of the total noise contribution, consisting of electronic and pile-up noise corresponding to an average luminosity of $\mu=8$. Cells neighbouring the seed which have a signal-to-RMS-noise-ratio of two are then iteratively added. Finally, all nearest neighbour cells are added to the cluster without any threshold. Several quality criteria are applied to eliminate jets that are produced by problematic calorimeter behaviour~\cite{ATLAS-CONF-2010-038}.
-In particular the jet is rejected if 90\% of the jet energy is distributed over less than 6 calorimeter cells (this handles fake jets caused by sporadic noise bursts in the LAr calorimeter), if the fraction of jet energy from LAr calorimeter cells flagged as problematic is greater than 0.8, if the fraction of energy deposited in the electromagnetic calorimeter is greater than 0.95 (this removes fake jets caused by noise bursts) and if the cell-weighted time of the jet is more than 50 ns different from that of the average event time (which can be jets with large out-of-time energy deposits). %{\bf (are these the latest cleaning cuts?)} 
 The jet energies are corrected for inhomogeneities and for
-the non-compensating nature of the calorimeter by using \pt- and $\eta$-dependent calibration factors determined from Monte Carlo simulation~\cite{JESnote}. This calibration is referred to a the EM+JES scale.
-Using test beam results, in-situ track and calorimeter measurements, estimations of pile-up energy depositions, and detailed Monte Carlo comparisons establish an uncertainty of the absolute jet energy scale smaller than $\pm 10\%$ for $\eta < 2.8$ and $\pt > 20$ GeV. More sophisticated techniques undergoing commissioning, such as local cluster weighting, are expected to considerably improve the jet energy uncertainty and resolution~\cite{CSC}. 
+the non-compensating nature of the calorimeter by using \pt- and $\eta$-dependent calibration factors determined from Monte Carlo simulation~\cite{JESnote}. This calibration is referred to as the EM+JES scale.
+Using test beam results, in-situ track and calorimeter measurements, estimations of pile-up energy depositions, and detailed Monte Carlo comparisons, an uncertainty on the absolute jet energy scale was estabished. This uncertainty is smaller than $\pm 10\%$ for $\eta < 2.8$ and $\pt > 20$ GeV. More sophisticated techniques undergoing commissioning, such as local cluster weighting, are expected to considerably improve the jet energy uncertainty and resolution~\cite{CSC}. 
 
-The tracks of charged particles with a pseudorapidity $|\eta| < 2.5$ are reconstructed in the the Inner Detector. It is composed of a barrel, consisting of 3 Pixel layers, 4 double layers of single-sided silicon strip sensors, and 73 layers of Transition Radiation Tracker straws concentric with the beam, plus a system of disks on each end of the barrel, occupying in total a cylindrical volume around the interaction point of radious of 1.15~m and length of 7.024~m. The Pixel detector's innermost layer is located at a radius of 5 cm from the beam axis, has a position resolution of approximately 10~$\mu$m in the $r-\phi$ plane and 115 $\mu$m along the beam axis ($z$). Tracks with $p^{\rm{track}}_{\rm{T}} > 150$ MeV and consistent with the beamspot are associated in primary vertices via a finding/fitting two-stage algorithm. Several primary vertices can be reconstructed per event due to the presence of in-time pile-up. The one with at least five associated tracks, a $z$ position within 100~mm of the ATLAS geometrical center, and the largest $\sum_{\rm trk}\pt^2$, is selected as the one associated to the hard interaction.
+%------------------------------------------------------------------------
+\section{Tracks}\label{sec:ObjSelection}
+%------------------------------------------------------------------------
+
+
+The tracks of charged particles with a pseudorapidity $|\eta| < 2.5$ are reconstructed in the the Inner Detector. It is composed of a barrel, consisting of 3 Pixel layers, 4 double layers of single-sided silicon strip sensors, and 73 layers of Transition Radiation Tracker straws concentric with the beam, plus a system of disks on each end of the barrel, occupying in total a cylindrical volume around the interaction point of radius of 1.15~m and length of 7.024~m. The Pixel detector's innermost layer is located at a radius of 5 cm from the beam axis, has a position resolution of approximately 10~$\mu$m in the $r-\phi$ plane and 115 $\mu$m along the beam axis ($z$). %Tracks with $p^{\rm{track}}_{\rm{T}} > 150$
+Tracks with $p^{\rm{track}}_{\rm{T}} > 400$ MeV and consistent with the beamspot are associated in primary vertices via a finding/fitting sequential algorithm. Several primary vertices can be reconstructed per event due to the presence of in-time pile-up. The one with at least five associated tracks, a $z$ position within 100~mm of the ATLAS geometrical center, and the largest $\sum_{\rm trk}\pt^2$, is selected as the one associated to the hard interaction.
+%are selected as good vertices.
 
 %-------------------------------------------------------------------
 \section{ $\bm b$-jet Tagging}\label{sec:btagging}
 %------------------------------------------------------------------------
 
-%The ability to identify jets containing b-hadrons is important 
-In this analysis jets are identified as $b$-quark candidates (‘b-tagged’) by ATLAS MV1 b-tagging algorithm, based on a neural network using the output weights of three advanced taggers: IP3D, SV1 and the combination of JetFitter and IP3D \cite{ATLAS-CONF-2011-102}. All these algorithms are based on Monte Carlo predictions for the signal (b-jet) or background (light- or in some cases c-jet) hypotheses. They use the information from the impact parameters of displaced tracks in the jet as well as the topological characteristics of secondary decay vertices reconstructed within it. $b$-jets were selected using a working point with 60\% efficiency for $b$-quark jets.
-
-
-%------------------------------------------------------------------------
-\section{Event and jet selections}\label{sec:EventSelection}
-%------------------------------------------------------------------------
-
-%In this section we examine the procedure for event selection and the conditions that the calorimeter jets must satisfy in order to be considered.
-
-All data jets considered in this analysis was collected by the jet trigger chain of the ATLAS  3-level Trigger System. At the hardware Level 1 and local software Level 2, cluster-based jet triggers are used to select events. The last stage, the so-called Event Filter, runs  the offline anti-$k_t$ jet finding algorithm with R = 0.4 on topological clusters over the complete calorimeter. For this analysis, the events are required to come from single-jet triggers with different thresholds at the Event Filter, ranging from 40 GeV to 480 GeV. Except for the highest $\pt$ thresholds, these triggers were increasingly prescaled with the rapid increase in instantaneous luminosity over time. The triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. A logical OR of these triggers is used for selecting the events. The offline event selection consists of requiring at least one primary vertex candidate to have 5 or more tracks. 
-
-%Only events with exactly two B hadrons were considered.
-
-%Monte Carlo jets belong to the QCD simulation described in section~\ref{sec:Simulation}.
-
-All jets, reconstructed with the anti-$k_t$ $R=0.4$ algorithm built from topological clusters, were required to be in a region with full tracking coverage, $|\eta_{jet}|<2.1$. Jets were subdivided in eight $\pt$ bins chosen such as to match the ATLAS inclusive jet trigger thresholds of 98\% triggering efficiency. The trigger strategy is detailed in Table~\ref{tab:trigger}. Trigger selection is not applied over Monte Carlo sample events but the same $\pt$ bins were chosen for consistency in comparisons.
-
-Jets were classified as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point, corresponding to a weight $w > 0.905$. The reconstructed $b$-tagged jets were further classified into single and merged $b$-jets based on truth Monte Carlo information. A B hadron is considered to be associated to a jet if the $\Delta R$ distance in $\eta-\phi$ space between the direction of the hadron and the jet axis is smaller than 0.4. Jets were labeled as merged (single) $b$-jets if they contain two (only one) B hadron.
-
-Only $b$-tagged jets having no close-by jet with $\pt$ higher than 7~GeV at electromagnetic scale were considered for the analysis. 
-
-\begin{table}
-\renewcommand{\arraystretch}{1.3}
-\centering
-{\small
-\begin{tabular}{|   c   |   c   |   c   |}
-\hline $\pt$ (GeV) & Run 177531 - 187109 & Run $>$ 187109 \\  \hline
-%(30,40)     & EF\_j15\_a4\_EFFS  OR  EF\_j10\_a4\_EFFS  & EF\_j15\_a4tc\_EFFS OR  EF\_j10\_a4tc\_EFFS   \\ \hline \hline
-(40,60)     & EF\_j20\_a4\_EFFS  OR  EF\_j15\_a4\_EFFS  & EF\_j20\_a4tc\_EFFS OR  EF\_j15\_a4tc\_EFFS   \\ 
-(60,80)     & EF\_j30\_a4\_EFFS  OR  EF\_j20\_a4\_EFFS  & EF\_j30\_a4tc\_EFFS OR  EF\_j20\_a4tc\_EFFS   \\ 
-(80,110)    & EF\_j40\_a4\_EFFS  OR  EF\_j30\_a4\_EFFS  & EF\_j40\_a4tc\_EFFS OR  EF\_j30\_a4tc\_EFFS   \\ 
-(110,150)   & EF\_j55\_a4\_EFFS  OR  EF\_j40\_a4\_EFFS  & EF\_j55\_a4tc\_EFFS OR  EF\_j40\_a4tc\_EFFS   \\ 
-(150,200)   & EF\_j75\_a4\_EFFS  OR  EF\_j55\_a4\_EFFS  & EF\_j75\_a4tc\_EFFS OR  EF\_j55\_a4tc\_EFFS   \\ 
-(200,270)   & EF\_j100\_a4\_EFFS OR  EF\_j75\_a4\_EFFS  & EF\_j100\_a4tc\_EFFS OR  EF\_j75\_a4tc\_EFFS  \\ 
-(270,360)   & EF\_j135\_a4\_EFFS OR  EF\_j100\_a4\_EFFS & EF\_j135\_a4tc\_EFFS OR  EF\_j100\_a4tc\_EFFS \\ 
-(360,480)   & EF\_j180\_a4\_EFFS OR  EF\_j135\_a4\_EFFS & EF\_j180\_a4tc\_EFFS OR  EF\_j135\_a4tc\_EFFS \\ %\hline \hline
-%$>$480     & EF\_j240\_a4\_EFFS OR  EF\_j180\_a4\_EFFS & EF\_j240\_a4tc\_EFFS OR  EF\_j180\_a4tc\_EFFS \\
-\hline
-\end{tabular}
-}
-\caption{The \pt\ bins used in the present analysis and the respective triggers the must satisfy.}
-\label{tab:trigger}
-\end{table}
-
-%\begin{itemize}\addtolength{\itemsep}{-0.3\baselineskip}
-%\item
-%40 GeV to 60 GeV
-%\item
-%60 GeV to 80 GeV
-%\item
-%80 GeV to 110 GeV
-%\item
-%110 GeV to 150 GeV
-%\item
-%150 GeV to 200 GeV
-%\item
-%200 GeV to 270 GeV
-%\item
-%270 GeV to 360 GeV
-%\item
-%360 GeV to 480 GeV
-%\end{itemize}
-
-%------------------------------------------------------------------------
-\section{Track selection }\label{sec:TrackSelection}
-%------------------------------------------------------------------------
-
-It is important to select genuine tracks belonging to jets. Only tracks located  within a cone of radius $\Delta R(jet^{\rm reco},\rm track) \leq R$ around the jet axis were considered. Cuts on $p_{\rm{T}}^{\rm{trk}}>1.0$~GeV and $\chi^2/{\it ndf}<3$ are applied as a minimum starting point. In addition, tracks are required to have at least seven precision hits (both pixel or micro-strip) in order to guarantee at least 3 $z$-measurements. Tracks are also required to fulfill cuts on the transverse plane and longitudinal impact parameters at the perigee to ensure that they arise from  the primary vertex. As cutting on impact parameter (IP) significance might be detrimental for $b$-jets, where large IP values are expected, the relaxed cuts were $|IP_{xy}|<200\,\mu$m, and $|IP_{z}\sin\theta|<200\,\mu$m. %This, however, might still be too tight for $b$-jets.
+Jets are classified as $b$-quark candidates by the ATLAS MV1 $b$-tagging algorithm, based on a neural network that combines the information from three high-performance taggers: IP3D, SV1 and JetFitter \cite{ATLAS-CONF-2011-102}.  These three tagging algorithms use a likelihood ratio technique in which input variables are compared to smoothed normalized distributions for both the $b$- and background (light- or in some cases $c$-jet) hypotheses, obtained from Monte Carlo simulation.  The IP3D tagger takes advantage of the signed transverse and longitudinal impact parameter significances. The SV1 tagger reconstructs an inclusive vertex formed by the decay products of the $b$-hadron and relies on the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet and the number of two-track vertices. The JetFitter tagger exploits the topology of the primary, $b$- and $c$-vertices and combines vertex variables with the flight length significance.  The $b$-tagging performance is determined using a simulated $t\bar{t}$ sample and is calibrated using experimental data with jets containing muons and with a sample of $t\bar{t}$ events~\cite{ATLAS-CONF-2011-089}.
 
 
