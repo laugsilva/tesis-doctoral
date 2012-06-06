@@ -1,92 +1,190 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Double B-hadron tagging
+% Kinematic differences between single and double $B$-hadron jetsDouble 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\chapter{Double $B$-hadron tagging}
+\chapter{Kinematic differences between single and double $B$-hadron jets}
 
 %------------------------------------------------------------------------
-\section{Introduction}\label{sec:gbbintro}
+%\section{Introduction}\label{sec:gbbintro}
 %------------------------------------------------------------------------
 
-the strategy. We should explain that the purpose is to find 2 B-hadrons inside a single jet and that there are two different strategies: attempt to reconstruct multiple vertices, or use jet shape/substructure information. You can then discuss the issues with the former approach, in particular the lower efficiency due to the double b-tag requirement that goes as b-tag eff square, and reference CDF. Then say that for this paper we are exploring a different way to tag double B-hadron jets, that does not rely on explicitly finding vertices. Eventually, the goal should be to combine both approaches.
+%The purpose of this note is to describe the development of an algorithm to identify the $b$-jet flavor structure of single jets.  In particular, the proposed technique attempts to identify if the $b$-jet substructure is consistent with the decay of one or two $B$-hadrons within a single jet. There are two different strategies to approach this problem. One approach is to attempt to reconstruct multiple vertices originating from the decay of long-lived $B$-hadrons\cite{CDFAzimutalCorrelation}. % or use jet shape/substructure information. The former approach has low efficiency due to the double $b$-tag requirement that goes as the square of the $b$-tagging efficiency\cite{CDFAzimutalCorrelation}.
+
+%In the present analysis we are exploring a different way to tag double $B$-hadron jets that does not rely on explicitly finding vertices but uses the jet shape/substructure information. Eventually, the goal should be to combine both approaches.
+
+%------------------------------------------------------------------------
+\section{Data and Monte Carlo samples}\label{sec:Simulation}
+%------------------------------------------------------------------------
+
+
+The tagging technique presented in this thesis relies on Monte Carlo predictions for the signal (single $b$) or background (merged $b$) hypotheses. The accuracy of the simulation is validated with data by comparing the distributions of the different variables explored.
+
+Samples of jet events from proton-proton collision processes are simulated with {\sc Pythia8}~\cite{PYTHIA8} event generator using a $2\rightarrow 2$ matrix element at leading order in the strong coupling to model the hard subprocess, and $\pt$-ordered parton showers are utilized to model additional radiation in the leading-logarithmic approximation~\cite{Pythia_partonshowers}. Multiple parton interactions~\cite{Pythia_mpi}, as well as fragmentation and hadronisation based on the Lund string model~\cite{Lund_string_model} are also simulated.
+%The proton parton distribution function (PDF) set used is the modified leading-order PDF set MRST LO*~\cite{}. 
+The ATLAS MC11 tune of the soft model parameters was used~\cite{Pythia_MC11tune}.
+In order to have sufficient statistics over the entire $\pt$ spectrum, eight samples were generated with different thresholds of the hard-scattering partonic transverse momentum $\hat{p}_T$. Events from different samples were mixed taking into account their respective production cross sections.
+
+%After the event generation, the events are passed through a full {\sc Geant4}~\cite{GEANT4} detector simulation with a detailed description of the geometry and the material of the ATLAS experiment, and %QGSP$\_$BERT~\cite{QGSP, BERT} asthe set of processes describing the hadronic interactions.
+%using Bertini Cascades~\cite{QGSP, BERT} for the modeling of interactions of high energy hadrons. 
+The {\sc Geant4}~\cite{GEANT4} software toolkit within the ATLAS simulation framework~\cite{ATLASSimulation} propagates the generated particles through the ATLAS detector and simulates their interactions with the detector material. The energy deposited by particles in the active detector material is converted into detector signals in the same format as the detector read-out. Finally the Monte Carlo generated events are processed through the trigger simulation package of the experiment, and are reconstructed and analyzed with the same software as for the real data.
+The simulated data sample used for the analysis %(MC11b)
+gives an accurate description of the pile-up content and detector conditions for the full 2011 data-taking period. 
+
+The data samples employed correspond to proton-proton collisions at $\sqrt{s}=7$ TeV delivered by the LHC and recorded by ATLAS between May and November 2011, with the LHC running with 50~ns bunch spacing, and bunches organized in bunch trains. Only data collected during stable beam periods in which all sub-detectors were fully operational are used.  After the application of the data quality selection, % the total integrated luminosity is about  4.7 fb$^{-1}$.  
+the surviving data corresponds to an integrated luminosity of 4.7~fb$^{-1}$. The LHC performance steadily improved during 2011. In particular  the average number of minimum-bias pile-up events, originating from collisions of additional protons in the same bunch as the signal collision, grew from from 3 to 20. This fact will be of importance when discussing the selection of discriminating variables.  
+%the average number of interactions per bunch crossing throughout the data-taking period considered was approximately $3 \leq  \mu \leq 8$ until summer 2011, with a global average for this period of $\mu \approx 6$. Starting in August 2011 and lasting through the end of the proton run, $\mu$ ranged from approximately 5 to 17, with an average of about 12. 
+
+For the study of systematic effects and for result comparison, other Monte Carlo samples were utilised. Results were produced with the {\sc herwig}++  generator~\cite{Herwig} and with {\sc Pythia8} using the Perugia tune~\cite{Perugia}. The former is based on the event generator {\sc herwig}, but redesigned in the $C$++ programming language. The generator contains a few modlleing improvements. It also uses angular-ordered parton showers, but with an updated evolution variable and a better phase space treatment. Hadronisation is perfromed using the cluster model. The underlying event and soft inclusive interactions are described using a hard and soft multiple partonic interactions model~\cite{Bahr:2008dy}. The Perugia tune is an independent tune of {\sc pythia} with increased final state radiation to better reproduce the jet shapes and hadronic event shapes using LEP and {\sc tevatron} data. In addition, paramteres sensitive to the production of particles with strangeness and related to jet fragmentation have been adjusted.
+
+
+%en realidad voy a referir al capitulo donde describo los distintos MC generators y voy a decir
+%The Monte Carlo event generators discussed in Section... are used here. 
+%Pythia, pythia with the Perugia tune and herwig++ where these are used both for the simulation of the hard 2-2 process as well as for the parton shower, underlying event, and hadrnisation models.
 
 
 %------------------------------------------------------------------------
-\section{Kinematid differences between single $b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
+\section{Event and object selection}\label{sec:EventSelection}
+%------------------------------------------------------------------------
+
+%In this section we examine the procedure for event selection and the conditions that the calorimeter jets must satisfy in order to be considered.
+
+%%% The following was taken from this BTagging note, https://cdsweb.cern.ch/record/1435194
+%%% from 2012! 
+The event sample for this analysis was collected  using a logical OR of single jet triggers which select events with at least one jet with transverse energy above a given threshold at the highest trigger level. The ATLAS Trigger system uses three consecutive trigger levels. At the hardware Level 1 and local software Level 2, cluster-based jet triggers are used to select events. The Level 3, the so-called Event Filter, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2. The triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. %The offline event selection consists of requiring at least one primary vertex candidate to have 5 or more tracks. 
+
+%Only events with exactly two B hadrons were considered.
+
+%Monte Carlo jets belong to the QCD simulation described in section~\ref{sec:Simulation}.
+
+The offline event selection requires at least one primary vertex candidate with 5 or more tracks. All jets, with transverse momentum between 40 and 480~GeV,  %, reconstructed with the anti-$k_t$ $R=0.4$ algorithm built from topological clusters, 
+were required to be in a region with full tracking coverage, $|\eta_{jet}|<2.1$, and they were classified in eight $\pt$ bins chosen such as to match the jet trigger 99\% efficiency thresholds (in GeV): 40, 60, 80, 110, 150, 200, 270, 360.  %The trigger strategy is detailed in Table~\ref{tab:trigger}. 
+ Only jets tagged as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point were considered. $b$-tagged jets with close-by jets ($\Delta R < 0.8$) with $\pt$ higher than 7~GeV at electromagnetic scale were not included in the analysis. Unless otherwise indicated, performance plots are shown for one medium  $\pt$ bin (80 to 110~GeV) and one high $\pt$ bin (200 to 270~GeV).
+
+
+In the case of MC the reconstructed $b$-tagged jets were further classified into single and merged $b$-jets based on truth Monte Carlo information. A $B$-hadron is considered to be associated to a jet if the $\Delta R$ distance in $\eta-\phi$ space between the direction of the hadron and the jet axis is smaller than 0.4. Jets were labeled as merged (single) $b$-jets if they contain two (only one) $B$-hadron.%\footnote[2]{Another approach is to match particles using the 'active area' of the jet, defined with the concept of ghost-particles but utilizing true particles as ghost constituents\cite{CatchmentArea}. This procedure will be implemented in a future version of this analysis.}.
+
+ 
+
+
+%\begin{table}
+%\renewcommand{\arraystretch}{1.3}
+%\centering
+%{\small
+%\begin{tabular}{|   c   |   c   |   c   |}
+%\hline $\pt$ (GeV) & Run 177531 - 187109 & Run $>$ 187109 \\  \hline
+%%(30,40)     & EF\_j15\_a4\_EFFS  OR  EF\_j10\_a4\_EFFS  & EF\_j15\_a4tc\_EFFS OR  EF\_j10\_a4tc\_EFFS   \\ \hline \hline
+%(40,60)     & EF\_j20\_a4\_EFFS  OR  EF\_j15\_a4\_EFFS  & EF\_j20\_a4tc\_EFFS OR  EF\_j15\_a4tc\_EFFS   \\ 
+%(60,80)     & EF\_j30\_a4\_EFFS  OR  EF\_j20\_a4\_EFFS  & EF\_j30\_a4tc\_EFFS OR  EF\_j20\_a4tc\_EFFS   \\ 
+%(80,110)    & EF\_j40\_a4\_EFFS  OR  EF\_j30\_a4\_EFFS  & EF\_j40\_a4tc\_EFFS OR  EF\_j30\_a4tc\_EFFS   \\ 
+%(110,150)   & EF\_j55\_a4\_EFFS  OR  EF\_j40\_a4\_EFFS  & EF\_j55\_a4tc\_EFFS OR  EF\_j40\_a4tc\_EFFS   \\ 
+%(150,200)   & EF\_j75\_a4\_EFFS  OR  EF\_j55\_a4\_EFFS  & EF\_j75\_a4tc\_EFFS OR  EF\_j55\_a4tc\_EFFS   \\ 
+%(200,270)   & EF\_j100\_a4\_EFFS OR  EF\_j75\_a4\_EFFS  & EF\_j100\_a4tc\_EFFS OR  EF\_j75\_a4tc\_EFFS  \\ 
+%(270,360)   & EF\_j135\_a4\_EFFS OR  EF\_j100\_a4\_EFFS & EF\_j135\_a4tc\_EFFS OR  EF\_j100\_a4tc\_EFFS \\ 
+%(360,480)   & EF\_j180\_a4\_EFFS OR  EF\_j135\_a4\_EFFS & EF\_j180\_a4tc\_EFFS OR  EF\_j135\_a4tc\_EFFS \\ %\hline \hline
+%$>$480     & EF\_j240\_a4\_EFFS OR  EF\_j180\_a4\_EFFS & EF\_j240\_a4tc\_EFFS OR  EF\_j180\_a4tc\_EFFS \\
+%\hline
+%\end{tabular}
+%}
+%\caption{The \pt\ bins used in the present analysis and the respective triggers the must satisfy.}
+%\label{tab:trigger}
+%\end{table}
+
+
+
+%------------------------------------------------------------------------
+%\section{Track selection }\label{sec:TrackSelection}
+%------------------------------------------------------------------------
+
+It is important to select genuine tracks belonging to jets. Only tracks located  within a cone of radius $\Delta R(jet^{\rm reco},\rm track) \leq 0.4$ around the jet axis were considered. %\footnote[2]{In a future version of the study the concept of ghost-particles\cite{CatchmentArea} can be applied in the track-to-jet assignment using tracks as ghost constituents.}.
+  Cuts on $p_{\rm{T}}^{\rm{trk}}>1.0$~GeV and the $\chi^2$ of the track fit, $\chi^2/{\it ndf}<3$, are applied. % as a minimum starting point. 
+ In addition, tracks are required to have a total of at least seven precision hits (pixel or micro-strip) in order to guarantee at least 3 $z$-measurements. Tracks are also required to fulfill cuts on the transverse and longitudinal impact parameters at the perigee to ensure that they arise from  the primary vertex. As cutting on impact parameter (IP) significance might be detrimental for $b$-jets, where large IP values are expected, the relaxed cuts were used, $|IP_{xy}|<2$~mm, and $|IP_{z}\sin\theta|<2$~mm, with $\theta$ being the polar angle measured with respect to the beam axis. %This, however, might still be too tight for $b$-jets.
+
+
+
+%------------------------------------------------------------------------
+%\section{Kinematid differences between single $b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
+\section{Preliminary studies in standalone {sc pythia } generator}\label{sec:gbbKine}
 %------------------------------------------------------------------------ 
-The distinct characteristics between $b$ and $b \bar{b}$ jets are expected to arise from the two-prong (two B-hadrons) substructure of merged jets.  They are thus expected, for the same jet $\pt$, to have higher track-multiplicity and be wider than single $b$-jets. Based on these charcteristics, the following calorimeter and tracking variables were studied in simulated QCD samples of $b$-tagged jets:
+
+
+%------------------------------------------------------------------------
+%\section{Kinematid differences between single $b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
+\section{Full ATLAS Monte Carlo Analysis}\label{sec:gbbKine}
+%------------------------------------------------------------------------ 
+
+
+
+The differences between genuine $b$-quark jets and $b \bar{b}$ jets are expected to arise from the two-subjet (two $B$-hadrons) substructure of merged jets.  They are thus expected, for the same jet $\pt$, to have higher track-multiplicity and be wider than single $b$-jets. Based on these characteristics %, the following properties were studied in simulated QCD samples of $b$-tagged jets using either calorimeter or track constituents:
+simulated QCD samples of $b$-tagged jets were used to study the following properties, discussed in the next paragraphs, built from jet constituents either at calorimeter level (topological clusters) or tracks associated to the jet:
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
-Jet track multiplicity
+Jet multiplicity (number of constituents)
 \item
-Track jet width ($\pt$ weighted)
-\item
-Nr.\ of sub track-jets
-\item
-$\Delta R_{\rm max}$ (tracks)
-\item
-$\Delta R$ leading tracks
-\item
-$\Delta R$ ($k_t$ subjets)
-\item
-Jet topological-cluster multiplicity
-\item
-Calorimeter width
+Jet width, $\pt$ weighted %Track jet width ($\pt$ weighted)
 \item 
 Jet Mass
-\item 
-Eccentricity (track \& calo)
+%\item
+%Nr.\ of subjets %track-jets
+\item
+Maximum $\Delta R$ between pairs of constituents % (tracks)
+\item
+$\Delta R$ between 2 $k_t$ subjets within the $b$-jet
 \item
 $\tau_2$: 2-subjettiness 
 \item
 $\tau_2/\tau_1$
+\item
+$\Delta R$ of leading constituents %tracks
+\item 
+Eccentricity %(track & calo)
 \end{itemize}
 
 
 
 
-Figures~\ref{fig:ntrksinglemerged} to~\ref{fig:tauratiosinglemerged} show the distributions and correlations of some of theses variables in selected bins of $b$-tagged jet $\pt$.
+Figures~\ref{fig:ntrksinglemerged} to~\ref{fig:tauratiosinglemerged} show the distributions and correlations of some of these variables in selected bins of $b$-tagged jet $\pt$. 
 
-Figure~\ref{fig:ntrksinglemerged} shows the distribution of jet track-multiplicity. This variable is simple to calculate and carries important information of the jet inner structure. As it can be seen merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. The track-multiplicity corresponds to tracks with $\pt$ above 1 GeV. The effect of using a minimum track $\pt$ of 0.5 GeV was also examined. This was motivated by the fact that it could lead to an improvement in discrimination if it captured more information about the fragmentation process.  On ther other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.  What it was observed is that reducing the $\pt$ cut only widens the distributions without increasing the separation between single and merged jets. 
+Figure~\ref{fig:ntrksinglemerged} shows the distribution of jet track multiplicity. This variable is simple to calculate and carries important information of the jet inner structure. It was observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. The jet track multiplicity corresponds to tracks with $\pt$ above 1 GeV, satisfying the quality cuts described in section~\ref{sec:EventSelection}. The effect of using a minimum track $\pt$ of 0.5 GeV was also examined. This was motivated by the fact that it could lead to an improvement in discrimination if it captured more information about the fragmentation process.  On ther other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.  What it was observed is that reducing the $\pt$ cut only widens the distributions without increasing the separation between single and merged jets. 
 
-Figure~\ref{fig:trkwidthsinglemerged} shows that, as expected, merged $b$-jets are wider than single $b$-jets. The track-jet width was computed as the track $\pt$ weighted average of the $\Delta R$ distance between the tracks matched to the jet and the jet axis:
-\begin{equation*} 
-{\it Width} = \frac{\sum_{i=1}^N \pt^{trk_i} \,\Delta R (trk_i,jet) }{\sum_{i=1}^N \pt^{trk_i} }
-\end{equation*} 
+Figure~\ref{fig:trkwidthsinglemerged} shows that, as expected, merged $b$-jets are wider than single $b$-jets. The track-jet width was computed as the track $\pt$ weighted average of the $\Delta R$ distance between the associated tracks and the jet axis:
+\begin{equation} 
+\mbox{ {\it track-jet width}} = \frac{\sum_{i=1}^N \pt^{trk_i} \,\Delta R (trk_i,jet) }{\sum_{i=1}^N \pt^{trk_i} }
+\label{eqn:trackjetwidth}
+\end{equation} 
 where $N$ is the total number of tracks in the jet.
 
 
-In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the track-multiplicity is shown for single and merged $b$ jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ merged jets.
+In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the jet track multiplicity is shown for single and merged $b$-jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ jets.
 
 
-The calorimeter width, using the topo-cluster jet constituents, gives also good separation. However, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. In Fig.~\ref{fig:calowidthpileup} the distributions of calorimeter width for single and merged $b$-jets can be seen for events with low and high number of primary vertices (NPV). In Fig.~\ref{fig:trkwidthpileup} the same distributions are shown for the track-jet width. Calorimeter width varies %significatively
-with NPV and due to this behavior the track-based version is more suitable as a more robust discriminator. For similar reasons, the topo-cluster multiplicity and the jet mass were discarded as discriminating variables.
+The calorimeter jet width (as in Equation~\ref{eqn:trackjetwidth} but using topological clusters) gives also good separation. However, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. In Fig.~\ref{fig:calowidthpileup} the distributions of calorimeter width for single and merged $b$-jets  can be seen for events with low and high Number of Primary Vertices (NPV), in a low $\pt$ region where the effect of pile-up is more important. In Fig.~\ref{fig:trkwidthpileup} the same distributions are shown for the track-jet width. Calorimeter jet width varies %significatively
+with NPV and due to this behavior the track-based version is more suitable as a more robust discriminator. For similar reasons, the jet topological cluster multiplicity and the jet mass were discarded as discriminating variables.
 
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk150.pdf}
-\caption{Distribution of track multiplicity in jets for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk200.pdf}
+\caption{Distribution of the track multiplicity in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:ntrksinglemerged}
 \end{figure}
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/trkWidth060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/trkWidth150.pdf}
-\caption{Distribution of track-jet width in jets for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/trkWidth080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/trkWidth200.pdf}
+\caption{Distribution of track-jet width in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:trkwidthsinglemerged}
 \end{figure}
 
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth150.pdf}
-\caption{Correlation between track-multiplicity and track-jet width for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth200.pdf}
+\caption{Correlation between jet track multiplicity and track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:ntrktrkwidthsinglemerged}
 \end{figure}
 
@@ -96,76 +194,79 @@ with NPV and due to this behavior the track-based version is more suitable as a 
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/Widthsingle_060.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/Widthmerged_060.pdf}
-\caption{Distribution of calorimeter jet width for single (left) and merged (right) $b$-jets in bins of the Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
+\caption{Distribution of calorimeter jet width (using topological clusters) for single (left) and merged (right) $b$-jets in two bins of Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
 \label{fig:calowidthpileup}
 \end{figure}
-systematics.ods
+
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/trkWidthsingle_060.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/trkWidthmerged_060.pdf}
-\caption{Distribution of track-jet width for single (left) and merged (right) $b$-jets in bins of the Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
+\caption{Distribution of track-jet width for single (left) and merged (right) $b$-jets in two bins of Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
 \label{fig:trkwidthpileup}
 \end{figure}
 
 
-Figure~\ref{fig:drmaxsinglemerged} shows the distribution of the maximum $\Delta R$ between track pairs in the jets ($\Delta R_{\rm max}$). Merged $b$-jets show significantly higher values for this variable over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, we have looked for alternatives to $\Delta R_{\rm max}$ as it is not an infrared safe magnitude and is sensitive to soft tracks originating from pile-up. 
+Figure~\ref{fig:drmaxsinglemerged} shows the distribution of the maximum $\Delta R$ between track pairs in the jets (Max$\{\Delta R(trk,trk)\}$). Merged $b$-jets show significantly higher values for this variable over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, we have looked for alternatives to Max$\{\Delta R(trk,trk)\}$ as it is not an infrared safe observable and is sensitive to soft tracks originating from pile-up. 
 
-The distribution of the $\Delta R$ between the axis of the two $k_t$-subjets in the jet is shown in Fig.~\ref{fig:drktsinglemerged} for single and merged $b$-jets. For this variable, tracks inside the jets are clustered into exactly two subjets using the $k_t$ jet algorithm implemented in fastjet~\cite{fastjet}. We observe that it also provides good separation, with the advantage of infrared safeness and insensitivity to pile-up. % revealing the two-prong substructure of merged $b$-jets.
+The distribution of the $\Delta R$ between the axes of the two exclusive $k_t$ subjets in the jet is shown in Fig.~\ref{fig:drktsinglemerged} for single and merged $b$-jets. In order to build this variable the $k_t$ algorithm~\cite{kt1} is applied to all the tracks associated to the jet using a large $k_t$  distance parameter to ensure that all of them get clustered. The clustering is stopped once it reaches exactly two jets. We observe that this variable also provides good separation, with the advantage of infrared safeness and insensitivity to pile-up. % revealing the two-prong substructure of merged $b$-jets.
+%For the subjet reconstruction a track-jet is built with all the tracks inside the jet using the $k_t$ jet algorithm~\cite{kt1}. A large radius is used in order to ensure that all tracks are clustered. Once the new jet is built a step back in the $k_t$ sequence is taken to obtained the two subjets that contributed to the final one. 
+
 
 $N$-subjettiness variables, as described in Ref.~\cite{nsubjettiness}, were originally designed to identify boosted objects, like electroweak bosons and top quarks, decaying into collimated shower of hadrons which a standard jet algorithm would reconstruct as single jets. It is defined as:
-\begin{equation*} 
+\begin{equation} 
 \tau_N = \frac{1}{\sum_k {\pt}_k\,R_0} \sum_k {\pt}_k \min \{ \Delta R_{S_1,k},\,\Delta R_{S_2,k},...,\,\Delta R_{S_N,k} \}
-\end{equation*} 
-where $R_0$ is the jet radius used in the jet clustering algorithm and the sum runs over the components of the jet. To avoid dependence on pile-up we consider the track-based subjettiness, where the sum 
+\end{equation} 
+where $R_0$ is the jet radius used in the jet clustering algorithm and the sum runs over the constituents of the jet. To avoid dependence on pile-up we consider the track-based $n$-subjettiness, where the sum 
  is over the tracks in the $b$-tagged jet. $\Delta R_{S_j,k} $ is the distance in the rapidity-azimuth plane between the axis of subjet $j$ and constituent track $k$. This jet shape variable quantifies to what degree a jet can be regarded as composed of $N$ subjets. For instance, a jet with a two pronged structure, with all tracks clustered along two directions, is expected to have a smaller $\tau_2$ value than a jet with tracks uniformly distributed in $\eta-\phi$ space.
 
-Plots of $ \tau_2$ are shown in Fig.~\ref{fig:tau2singlemerged}. In spite of its expected 2-prong substructure, merged $b$-jets have higher values of $ \tau_2$ than single $b$-jets. The explanation of this behavior can be found in Fig.~\ref{fig:tau2trkwidthsinglemerged}, where its correlation with  track-width ($\tau_1$) is shown for single and merged $b$-jets. The two variables are highly correlated and for this reason wider jets  have a larger $ \tau_2$. This suggests to switch from an absolute to a width-normalized
-$\tau_2$. Fig.~\ref{fig:tauratiosinglemerged} thus shows the distributions of $\tau_2/\tau_1$. Although as expected somewhat larger values are obtained for single than for merged $b$-jets, especially at high \pt, we decided not to use this variable as it offers only marginal discrimination. 
-
-Variables such as the $\Delta R$ between the two leading tracks in jets and the jet eccentricity did not show good discrimination either and were not considered for the multivariate study.
+Plots of $ \tau_2$ are shown in Fig.~\ref{fig:tau2singlemerged}. In spite of its expected 2-prong substructure, merged $b$-jets have higher values of $ \tau_2$ than single $b$-jets. The explanation of this behavior can be found in Fig.~\ref{fig:tau2trkwidthsinglemerged}, where its correlation with  track-jet width ($\sim \tau_1$) is shown for single and merged $b$-jets. The two variables are highly correlated and for this reason wider jets  have a larger $ \tau_2$. This suggests to switch from an absolute to a width-normalized
+$\tau_2$. Fig.~\ref{fig:tauratiosinglemerged} thus shows the distributions of $\tau_2/\tau_1$. This ratio is often used but, although as expected somewhat larger values are obtained for single than for merged $b$-jets, specially at high $\pt$, we decided not to use this variable as it offers only marginal discrimination. 
+%often this ratio is used, but proves not to be useful. 
+Variables such as the $\DeltaR$ between the two leading constituents of the jet (those with highest transverse momentum) and the jet eccentricity (the ratio of the principal axes of the jet area) did not show good discrimination either and were not considered for the multivariate study.
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax150.pdf}
-\caption{Distribution of the maximum $\Delta R$ between pairs in jets ($\Delta R_{\rm max}$) for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax200.pdf}
+\caption{Distribution of the maximum $\Delta R$ between pairs of tracks in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:drmaxsinglemerged}
 \end{figure}
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes150.pdf}
-\caption{Distribution of the maximum $\Delta R$ between two $k_t$ axis in jets ($\Delta R_{\rm max}$) for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes200.pdf}
+\caption{Distribution of the $\Delta R$ between the axes of the two $k_t$ subjets in the jet for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:drktsinglemerged}
 \end{figure}
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2150.pdf}
-\caption{Distribution of $\tau_2$ in jets for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2200.pdf}
+\caption{Distribution of $\tau_2$ in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:tau2singlemerged}
 \end{figure}
 
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2trkWidth060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2trkWidth150.pdf}
-\caption{Correlation between $\tau _2$ and track-jet width for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2trkWidth080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Tau2trkWidth200.pdf}
+\caption{Correlation between $\tau _2$ and track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:tau2trkwidthsinglemerged}
 \end{figure}
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/TauRatio060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/TauRatio150.pdf}
-\caption{Distribution of $\tau_2/\tau_1$ in jets for single and merged $b$-jets between 60~GeV to 80~GeV (left) and 150~GeV to 200~GeV (right).}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/TauRatio080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/TauRatio200.pdf}
+\caption{Distribution of $\tau_2/\tau_1$ in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:tauratiosinglemerged}
 \end{figure}
+
 
 
 %We also explored the potential improvement of constructing kinematic variables with only displaced tracks, as these are the ones expected to arise from the decay of B-hadrons. Cuts of 2, 2.5 and 3 on the track transverse impact parameter significance were investigated leading however to no gain in discrimation power.  
@@ -174,37 +275,41 @@ Variables such as the $\Delta R$ between the two leading tracks in jets and the 
 %------------------------------------------------------------------------
 \section{Validation of the jet variables in data}\label{sec:gbbValidation}
 %------------------------------------------------------------------------
-In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored a set comparison plots is presented. Fig.~\ref{fig:datamcinputvars} shows the distributions of $N_{\it trk}$, track-jet width ($\pt$ weighted) and $\Delta {\rm R}_{k_{\rm T}}$ in two different jet $\pt$ bins in dijet Monte Carlo and data events from periods B to H overlaid. The distributions are normalized to unit area to allow for shape comparisons. There is a good agreement between data and simulation. 
 
- For the sake of evaluating the effect of the increasing amount of pile-up in the last periods of data-taking, %affected the agreement between experimental data and Monte Carlo
-the same distributions were built using data events from periods I to M. As expected, no variation was observed. In Fig.~\ref{fig:datamcinputvarsItoM} the track-multiplicity is shown for these periods, in the same two $\pt$ bins for comparison.  
+ In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored a set of comparison plots is presented. Fig.~\ref{fig:datamcinputvars} shows the distributions of jet track multiplicity, track-jet width and $\Delta R$ between the axes of the two $k_t$ subjets, in two different jet $\pt$ bins in dijet Monte Carlo and data events collected by ATLAS %until summer 2011 ($\mu \approx 6$) overlaid.
+during 2011. The distributions are normalized to unit area to allow for shape comparisons. There is a good agreement between data and simulation. It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, some level of compensation can take place between these two effects.
+
+% For the sake of evaluating the effect of the increasing amount of pile-up in the last period of data-taking, %affected the agreement between experimental data and Monte Carlo
+%the same distributions were built using data events recorded in the second half of the year ($\mu \approx 12$).  As expected, no significant variation was observed. In Fig.~\ref{fig:datamcinputvarsItoM} the jet track multiplicity is shown for this period, in the same two $\pt$ bins for comparison.  
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/VarNtrkPT080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/VarNtrkPT200.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/VarTrkWidthPT080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/VarTrkWidthPT200.pdf}  
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/VarDRktaxisPT080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/VarDRktaxisPT200.pdf}  
-\caption{ Distribution of three tracking variables in 2 different jet $\pt$ bins, for experimental data from data-taking periods B to H (solid black points) and simulated data (filled histograms). The ratio datab\/simulation is shown at the bottom of the plot.}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarNtrkPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarNtrkPT200.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT200.pdf}  
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT200.pdf}  
+%\caption{ Distribution of three tracking variables in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS until summer 2011, with $\mu \approx 6$ (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\caption{ Distribution of three tracking variables in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
 \label{fig:datamcinputvars}
 \end{figure}
 
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/dataMCItoM/VarNtrkPT080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMCItoM/VarNtrkPT200.pdf}
-\caption{ Distribution of the jet track-multiplicity in 2 different jet $\pt$ bins, for experimental data from data-taking periods I to M (solid black points) and simulated data (filled histograms). The ratio data\/simulation is shown at the bottom of the plot.}
-\label{fig:datamcinputvarsItoM}
-\end{figure}
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMCItoM/VarNtrkPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMCItoM/VarNtrkPT200.pdf}
+%\caption{ Distribution of the jet track-multiplicity in 2 different jet $\pt$ bins, for experimental data from the last period of data-taking, with $\mu \approx 12$ (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+%\label{fig:datamcinputvarsItoM}
+%\end{figure}
+
 
 
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Double B-hadron tagging
+% Multivariate Analysis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \chapter{Multivariate Analysis}\label{sec:gbbTMVA}
@@ -212,52 +317,70 @@ the same distributions were built using data events from periods I to M. As expe
 %------------------------------------------------------------------------
 %\section{Introduction}
 %------------------------------------------------------------------------
-A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator in the context of the Toolkit for Multivariate Data Analysism, TMVA~\cite{Hocker:2007ht}.
 
-A sub-set of the di-jet Monte Carlo sample was used for training. After the event and jet selections were performed, the jets with $|\eta| < 2.1$ and $w > 0.905$ were classified as signal (single $b$-jets) or background (merged $b$). % depending on whether one or two $B$-hadrons were found within a 0.4 cone around the jet axis. %For the evaluation of the method the same procedure was followed.
+
+
+A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}.
+
+A sub-set of the dijet Monte Carlo sample was used for training. After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). % depending on whether one or two $B$-hadrons were found within a 0.4 cone around the jet axis. %For the evaluation of the method the same procedure was followed.
 The likelihood training was done in bins of calorimeter jet $\pt$. % and only isolated jets were considered. 
-Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower \pt\ jets from high \pt\ events, and thus increase the statistics of merged jets in the low \pt\ bins. For the evaluation of the method the same procedure was followed.
+Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. For the evaluation of the method the same procedure was followed.
 
-Several combinations of the tracking and jet shape variables studied in the previous section were tested as input variables. We found that $N_{\it trk}$, track-jet width and $\Delta {\rm R}_{k_{\rm T}}$ offer the best performance.
+Several combinations of the tracking and jet shape variables studied in the previous section were tested as input variables. We found that the following three offer the best performance:
+% that the jet track multiplicity, the track-jet width and $\Delta R$  between the axes of the two $k_t$ subjets offered the best performance. 
+\begin{enumerate}\addtolength{\itemsep}{-0.4\baselineskip}
+\item
+Jet track multiplicity
+\item
+Track-jet width
+\item
+$\Delta R$ between the axes of 2 $k_t$ subjets within the jet
+\end{enumerate}
+%
+A requirement of at least two matching tracks was imposed to all $b$-tagged jets in order to build the third variable listed. This cut was applied in both training and testing samples.
 
-The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for three different bins of calorimeter jet $\pt$.
+The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for low, medium and high transverse momentum jets.
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.32\textwidth,viewport=35 45 540 550,clip]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth,viewport=35 45 540 550,clip]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
-%\includegraphics[width=0.49\textwidth,viewport=45 45 696 672,clip]{FIGS/Likelihood/NNoutput150_LihoodKDE.png}
-\includegraphics[width=0.32\textwidth,viewport=35 45 540 550,clip]{FIGS/Likelihood/NNoutput270_LihoodKDE.pdf}  
-\caption{Distribution of the $g\rightarrow b \bar{b}$ likelihood output for single and merged $b$-jets for different jet $\pt$ bins.}
+\includegraphics[width=0.32\textwidth,viewport=40 0 540 550]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth,viewport=40 0 540 550,clip]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth,viewport=40 0 540 550,clip]{FIGS/Likelihood/NNoutput200_LihoodKDE.pdf}  
+\caption{Distribution of the $g\rightarrow b \bar{b}$ likelihood output for single and merged $b$-jets for low, medium and high $\pt$ jets.}
 \label{fig:outputinbins}
 \end{figure}
 
-The performance of the $g\rightarrow b \bar{b}$ tagger in the simulation can be seen in Fig.~\ref{fig:performanceinbins}. In this plot the rejection ($1/\epsilon_{bkg}$) of merged $b$-jets from gluon splitting is shown as a function of single $b$-jet efficiency for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
+The performance of the $g\rightarrow b \bar{b}$ tagger in the simulation can be  %seen in Fig.~\ref{fig:performanceinbins}. In this plot the rejection ($1/\epsilon_{bkg}$) of merged $b$-jets from gluon splitting is shown as a function of single $b$-jet efficiency for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
+displayed in a plot of rejection ($1/\epsilon_{bkg}$) of merged $b$-jets as a function of single $b$-jet efficiency, where $\epsilon_{bkg}$ is the probability that a $b \bar{b}$-jet passes the tagger. This is shown in Fig.~\ref{fig:performanceinbins} for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
 
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
 $\pt>40$ GeV: %\\[1mm]
- over 85\% rejection at 50\% eff.
+rejection above 8 at 50\% eff.
+% over 85\% rejection at 50\% eff.
 \item
 $\pt>60$ GeV: %\\[1mm]
- 90\% rejection at 50\% eff.
+rejection above 10 at 50\% eff.
+ %90\% rejection at 50\% eff.
 \item
-$\pt>150$ GeV: %\\[1mm]
- over 95\% rejection at 50\% eff.
+$\pt>200$ GeV: %\\[1mm]
+rejection above 30 at 50\% eff.
+ %over 95\% rejection at 50\% eff.
 \end{itemize}
 
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Likelihood/KDE_RejvsEff.pdf}
-\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency for dijet events in 8 jet $\pt$ bins.}
+\caption{Rejection of $g\rightarrow b \bar{b}$ merged $b$-jets as a function of $b$-jet efficiency for dijet events in 8 jet $\pt$ bins.}
 \label{fig:performanceinbins}
 \end{figure}
 
 The likelihood was trained with jets that had been first tagged by the MV1 algorithm. In order to use the  $g\rightarrow b \bar{b}$ classifier for jets tagged by another tagger a new training is required.
 
-The rejection of merged jets attained as a function of \pt\ for the 50\% and 60\% efficiency working points are summarized in Table~\ref{tb:rejection}, together with their relative statistical error. These are propagated from the Poisson fluctuations of the number of events in the merged and single $b\bar{b}$ distributions. The error is slightly lower for the 60\% efficiency working point because a higher efficiency allows for a greater number of Monte Carlo events to measure the performance. %the higher the efficiency, the larger the number of Monte Carlo events available to measure the performance.
+The rejection of merged jets attained as a function of $\pt$ for the 50\% and 60\% efficiency working points are summarized in Table~\ref{tb:rejection}, together with their relative statistical error. These are propagated from the Poisson fluctuations of the number of events in the merged and single $b\bar{b}$ distributions. The error is slightly lower for the 60\% efficiency working point because a higher efficiency allows for a greater number of Monte Carlo events to measure the performance. %the higher the efficiency, the larger the number of Monte Carlo events available to measure the performance.
 
 %Although the tagger was derived with isolated jets it can also be applied to non-isolated jets. Studies were performed to evaluate the likelihood rejection in $b$-jets with close-by jet with $\pt$ between 7 GeV at electromagnetic scale scale and 90$\%$ of the $b$-jet $\pt$. The results can be seen in  Fig.~\ref{fig:testisolation}. The presence of close-by jets with a susbtancial fraction of the $b$-jet pt worsens the performance in more than 50$\%$ at very high $\pt$. 
 
@@ -269,33 +392,46 @@ The rejection of merged jets attained as a function of \pt\ for the 50\% and 60\
 %\label{fig:testisolation}
 %\end{figure}
 
-
-%\begin{table}[!hbt] %[h]
-%\renewcommand{\arraystretch}{1.2}
-%\centering
-%\begin{tabular}{ | c || c | c || c | c||}
-%  \hline
-%  Jet \pt & \multicolumn{2}{c||}{Efficiency 50\%} & 
-%            \multicolumn{2}{c||}{Efficiency 60\%}\\ \cline{2-5}
-%    (GeV )  & Rejection & ~stat.err.~ & Rejection & ~stat.err.~ \\ \hline
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c || c | c || c | c||}
+  \hline
+  Jet $\pt$ & \multicolumn{2}{c||}{single $b$-jet efficiency 50\%} & 
+            \multicolumn{2}{c||}{single $b$-jet efficiency 60\%}\\ \cline{2-5}
+    (GeV )  & Rejection & ~stat.err.~ & Rejection & ~stat.err.~ \\ \hline
 %   40 - 60 &  ~7.6 &  4\%  &  ~5.4  &  3\%    \\ 
-%   60 - 80 &  10.6 &  4\%  &  ~7.3  &  4\%    \\ 
-%   80 - 110&  14.0 &  5\%  &  ~9.4  &  4\%    \\ 
+%   60 - 80 &  10.4 &  4\%  &  ~7.3  &  4\%    \\ 
+%   80 - 110&  13.9 &  5\%  &  ~9.4  &  4\%    \\ 
 %  110 - 150&  18.7 &  5\%  &  12.0  &  4\%    \\ 
-%  150 - 200&  23.8 &  5\%  &  14.0  &  5\%    \\ 
-%  200 - 270&  28.9 &  7\%  &  15.6  &  6\%    \\ 
-%  270 - 360&  35.3 &  7\%  &  18.7  &  6\%    \\ 
-%  360 - 480&  39.4 &  8\%  &  18.2  &  8\%    \\ \hline
-%\end{tabular}
-%\caption{The merged $b$-jet rejection for the 50\% and 60\% efficiency working points in bins of $\pt$.}
-%\label{tb:rejection}
-%\end{table}
+%  150 - 200&  23.2 &  5\%  &  14.0  &  5\%    \\ 
+%  200 - 270&  29.5 &  7\%  &  15.6  &  6\%    \\ 
+%  270 - 360&  36.4 &  7\%  &  18.7  &  6\%    \\ 
+%  360 - 480&  41.4 &  8\%  &  18.2  &  8\%    \\ \hline
+   40 - 60 &  ~8 &  4\%  &  ~5  &  3\%    \\ 
+   60 - 80 &  ~10 &  4\%  &  ~7  &  4\%    \\ 
+   80 - 110&  ~14 &  5\%  &  ~9  &  4\%    \\ 
+  110 - 150&  19 &  5\%  &  12  &  4\%    \\ 
+  150 - 200&  23 &  5\%  &  14  &  5\%    \\ 
+  200 - 270&  30 &  7\%  &  16  &  6\%    \\ 
+  270 - 360&  36 &  7\%  &  19  &  6\%    \\ 
+  360 - 480&  41 &  8\%  &  18  &  8\%    \\ \hline
+\end{tabular}
+\caption{The merged $b$-jet rejection for the 50\% and 60\% efficiency working points in bins of $\pt$.}
+\label{tb:rejection}
+\end{table}
+
+
+
+
+
 
 
 %------------------------------------------------------------------------
 \section{Systematic uncertainties}\label{sec:gbbSystematics}
 %------------------------------------------------------------------------
-The development, training and performance determination of the tagger is based on simulated events. Although the agreement between simulation and data explored in section~\ref{sec:validation} is a necessary validation condition, it is important to investigate how the tagger performance depends on relevant systematics in the data. In particular we have considered:
+
+The development, training and performance determination of the tagger is based on simulated events. Although the agreement between simulation and data explored in section~\ref{sec:validation} is a necessary validation condition, it is also important to investigate how the tagger performance depends on systematics relevant in the data. In particular we have considered:
 %
 %There are uncertainties in the data that, although not spoiling the data/MC agreement, might change the performance of the tagger. This uncertainties would also be present in an eventual future data-driven determination of the performance as  the data are not known better that this.The following systematic effects have been studied and their influence on the tagger performance ascertained:
 %
@@ -321,7 +457,7 @@ uncertainty in the jet transverse momentum resolution
 \\[3mm]
   The size of this effect was studied by comparing the performance of the likelihood discriminant with $b$-jets in events with small (1-9) and large (9-20) number of primary vertices. 
 %The comparison of the performance in these two sub-samples can be seen in Fig.~\ref{fig:performanceinbinsMu}. 
-As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. Of the 20 determinations (2 working points with 10 \pt\ bins each) of performance differences between high and low number of primary vertices events, it is observed that 12 of them are positive and 8 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
+As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. Of the 16 determinations (2 working points with 8 $\pt$ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
 %
 
 %\begin{figure}[tp]
@@ -337,19 +473,22 @@ As expected from the use of tracking (as opposed to calorimeter) variables no si
 \\[3mm]
 The performance of heavy-flavor tagging in Monte Carlo events is calibrated to experimental data by means of the scale factors (SFs) measured by the $b$-tagging group. %scale factors defined as the ratio of the heavy-flavor tagging efficiency in data over that in Monte Carlo (MC) for the different jet flavors, and probably also as a function of jet pT and η 
 Such a measurement carries a systematic uncertainty, and in order to estimate its effect a conservative approach is followed: %https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface
-the SFs are varied in all the $\pt$ bins simultaneously by one standard deviation both in the up and down directions. The result of this procedure for the distribution of the tracking variables used as discriminant is illustrated in Fig.~\ref{fig:btaggingSFs}. 
+the SFs are varied in all the $\pt$ bins simultaneously by one standard deviation both in the up and down directions. The result of this procedure for the distribution of two of the tracking variables used in our discriminant is illustrated in Fig.~\ref{fig:btaggingSFs}. 
 
-The effect of the $b$-tagging calibration uncertainty on the likelihood peformance is negligible.
+The effect of the $b$-tagging calibration uncertainty on the likelihood peformance is $< 1$\%, negligible with respect to the statistical uncertainty.
 % as it can be seen in Fig.~\ref{fig:btaggingSFsPerf}.
-This was indeed expected. The scale factors depend on the true flavor of the jet and on its \pt, but these are basically constant in the performance determination, which is based on single flavor (true $b$-) jets classified in \pt-bins.
+This was indeed expected. The scale factors depend on the true flavor of the jet and on its $\pt$, but these are basically constant in the performance determination, which is based on single flavor (true $b$-) jets classified in $\pt$-bins.
 
 %\textwidth,viewport=45 45 696 672,clip
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarNtrkPT040.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarTrkWidthPT060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarDRktaxisPT150.pdf}
-\caption{The effect of a variation in the $b$-tagging scale factors on the tracking variables distributions. SFs were varied up (down) by 1-sigma to evaluate the systematic uncertainty from this source.}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarNtrkPT200.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarTrkWidthPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarTrkWidthPT200.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarDRktaxisPT200.pdf}
+\caption{The effect of a variation in the $b$-tagging Scale Factors on the tracking variables distributions. Scale Factors were varied up (down) by 1-sigma to evaluate the systematic uncertainty from this source. The ratio data over MC is shown for MC {\sc pythia} with SFs varied up (circles) and down (triangles).}
 \label{fig:btaggingSFs}
 \end{figure}
 
@@ -366,19 +505,19 @@ This was indeed expected. The scale factors depend on the true flavor of the jet
 \vspace{3mm}
 { \em III. Track reconstruction efficiency}
 \\[3mm]
-This uncertainty arises from the limit of in the understanding of the material layout of the Inner Detector. To test its impact a fraction of tracks determined from the track efficiency uncertainty was randomly removed following the method in Ref.~\cite{JetMassNote}.%https://cdsweb.cern.ch/record/1344082?ln=en
+This uncertainty arises from the limit in the understanding of the material layout of the Inner Detector. To test its impact a fraction of tracks determined from the track efficiency uncertainty was randomly removed following the method in Ref.~\cite{JetMassNote}.%https://cdsweb.cern.ch/record/1344082?ln=en
 
 The tracking efficiency systematics are given in bins of track $\eta$. For tracks with $p_{\rm{T}}^{\rm{track}} > 500$~MeV the uncertainties are independent of $\pt$:  2\% for $|\eta^{\rm{track}}|<1.3$, 3\% for $1.3<|\eta^{\rm{track}}|<1.9$, 4\% for $1.9<|\eta^{\rm{track}}|<2.1$, 4\% for $2.1<|\eta^{\rm{track}}|<2.3$ and 7\% for $2.3<|\eta^{\rm{track}}|<2.5$~\cite{chargemultiplicity}. All numbers are relative to the corresponding tracking efficiencies.  
 %https://cdsweb.cern.ch/record/1286839
 %http://arxiv.org/abs/1012.5104
 
-The tracking variables were re-calculated and the performance of the nominal (pythia) likelihood was evaluated in the new sample with worse tracking efficiency. The rejection-efficiency plots, shown in Fig.~\ref{fig:trackefficiency}, show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 \pt\ bin/working points, without a clear \pt\ dependence. We have thus taken the average over \pt, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points.
+The tracking variables were re-calculated and the performance of the nominal likelihood was evaluated in the new sample with worse tracking efficiency. The rejection-efficiency plots, shown in Fig.~\ref{fig:trackefficiency}, show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 $\pt$ bin/working points, without a clear $\pt$ dependence. We have thus taken the average over $\pt$, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points.
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff270.pdf}
-\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency showing shift in likelihood performance caused by rejecting additional tracks.}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf}
+\caption{Rejection of $g\rightarrow b \bar{b}$ merged $b$-jets as a function of $b$-jet efficiency showing shift in likelihood performance caused by a reduction in the tracking efficiency .}
 \label{fig:trackefficiency}
 \end{figure}
 
@@ -386,13 +525,13 @@ The tracking variables were re-calculated and the performance of the nominal (py
 {\em IV. Track momentum resolution}
 \\[3mm]
 The knowledge of the track momentum resolution is limited by the precision both in the material description of the Inner Detector and in the mapping of the magnetic field. Its uncertainty propagates to the kinematic variables used in the 
-$g\rightarrow b \bar{b}$ tagger. In order to study this effect, track momenta are over-smeared according to the measured resolution uncertainties before computing the rejection. The actual smearing is done in 1/\pt, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible with respect to the statistical uncertainty.
+$g\rightarrow b \bar{b}$ tagger. In order to study this effect, track momenta are over-smeared according to the measured resolution uncertainties before computing the rejection. The actual smearing is done in 1/$\pt$, with an upper bound to the resolution uncertainty given by $\sigma$(1/$\pt$)=0.02/$\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible. %with respect to the statistical uncertainty.
 
 \vspace{3mm}
 { \em V. Jet transverse momentum resolution}
 \\[3mm]
-The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the MC11 {\sc pythia8}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins, and, is typically 10\%.
-The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance is found to globally decrease by 6\%, without a particular \pt\ dependence.
+The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the {\sc pythia8}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins,is typically 10\%.
+The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance is found to globally decrease by 6\%, without a particular $\pt$ dependence.
 
 %\begin{figure}[tp]
 %\centering
@@ -403,24 +542,21 @@ The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estim
 %\end{figure}
 \vspace{3mm}
 The different contributions to the systematic uncertainty on the $g\rightarrow b \bar{b}$ rejection are summarized in Table~\ref{tb:systematics}.
-
-%\begin{table}[!hbt] %[h]
-%\renewcommand{\arraystretch}{1.2}
-%\centering
-%\begin{tabular}{ | c | c |}
-%\hline
-%  Systematic source &~~Uncertainty~~\\ \hline
-%   pile-up          &  neglible     \\ 
-%   $b$-tag eff.     &  neglible     \\ 
-%   track reco eff.  &    4\%        \\ 
-%   track \pt\ resol.&  neglible     \\
-%   jet \pt\ resol.  &    6\%        \\ \hline 
-%\end{tabular}
-%\caption{Systematic uncertainities in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
-%\label{tb:systematics}
-%\end{table}
-
-
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c | c |}
+\hline
+  ~~~~~~~Systematic source~~~~~~~ &~~Uncertainty~~\\ \hline
+  pile-up          &  neglible     \\ 
+  $b$-tagging efficiency     &  neglible     \\ 
+  track reconstruction efficiency  &    4\%        \\ 
+  track $\pt$ resolution &  neglible     \\
+  jet $\pt$ resolution  &    6\%        \\ \hline 
+\end{tabular}
+\caption{Systematic uncertainities in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
+\label{tb:systematics}
+\end{table}
 
 %------------------------------------------------------------------------
 \section{Other Monte Carlo generators}\label{sec:otherMC}
@@ -429,14 +565,16 @@ The different contributions to the systematic uncertainty on the $g\rightarrow b
 
 The development, training and performance determination of the tagger has been done using Monte Carlo events generated with the {\sc pythia8} event simulator, interfaced to the {\sc geant4} based simulation of the ATLAS detector. An immediate question is what the performance would be if studied with a different simulation. In this section we investigate this question for the Perugia tune of {\sc pythia8} and the {\sc herwig++} event generators.
 
-Fig.~\ref{fig:performanceotherMC} shows a comparison of the performance-efficiency plots between nominal {\sc pythia} and the alternative simulations for four selected \pt\ bins covering the full kinematic range. The larger errors are due to the reduced statistics available, which are even lower for the Perugia case than for {\sc herwig}.
+Fig.~\ref{fig:performanceotherMC} shows a comparison of the likelihood rejection, at the 50\% efficiency working point,  between nominal {\sc pythia} and the alternative simulations % for four selected $\pt$ bins covering the full kinematic range. 
+as a function of the jet $\pt$ . The larger errors are due to the reduced statistics available, which are even lower for the Perugia case than for {\sc herwig}.
+
 
 
 %In order to account for the dependence on different generator models and tunes the likelihood performance was tested using other Monte Carlo simulations. Results with nominal Pythia were compared to the performance derived with dijet samples generated with Herwig++ and with the Perugia tune of Pythia. The comparison can be seen in Fig.~\ref{fig:performanceotherMC}. 
 
-The performance in {\sc herwig} shows a systematic trend, with agreement at low \pt\ and increasingly poor performances compared to {\sc pythia} as \pt\ grows. For the Perugia tune, on the other hand, there is no definite behavior, with the performance fluctuating above or below the nominal simulation for different \pt\ bins consistently with the statistical uncertainties.
+The performance in {\sc herwig} shows a systematic trend, with agreement at low $\pt$ and increasingly poor performances compared to {\sc pythia} as $\pt$ grows. For the Perugia tune, on the other hand, there is no definite behavior, with the performance fluctuating above or below the nominal simulation for different $\pt$ bins consistently with the statistical uncertainties.
 
-The reason for the systematic difference observed between the performances of {\sc pythia} and {\sc herwig} can be traced to the extent with which jets are accurately modelled. Fig.~\ref{fig:herwigdatamc} compares the measured jet track multiplicity distributions in $b$-tagged jets and the prediction from both simulations. It is observed that indeed {\sc herwig++} does not correctly reproduce the data, particularly at medium and high \pt. Although not shown, the level of agreement is found to be better for jet-track width and the angle between the leading subjets, the two other variables used for discrimination.
+The reason for the systematic difference observed between the performances of {\sc pythia} and {\sc herwig} can be traced to the extent with which jets are accurately modelled. Fig.~\ref{fig:herwigdatamc} compares the measured jet track multiplicity distributions in $b$-tagged jets and the prediction from both simulations, for low and high $\pt$ jets. It is observed that indeed {\sc herwig++} does not correctly reproduce the data, particularly at high $\pt$. The level of agreement is found to be better for track-jet width and the $\Delta R$ between the axes of the two $k_t$ subjets in the jet, the two other variables used for discrimination.
 
 
 
@@ -446,11 +584,12 @@ The reason for the systematic difference observed between the performances of {\
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf}
-\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of single $b$-jet identification efficiency for different Monte Carlo generators.}
+\includegraphics[width=0.49\textwidth]{gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf}
+\caption{Rejection of $g\rightarrow b \bar{b}$ merged $b$-jets as a function of jet $\pt$ for different Monte Carlo generators, at the 50\% efficiency working point.}
 \label{fig:performanceotherMC}
 \end{figure}
 
@@ -458,9 +597,10 @@ The reason for the systematic difference observed between the performances of {\
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/DataVarNtrkPT040.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/DataVarNtrkPT200.pdf}
-\caption{Distribution of the jet track-multiplicity in 2 different jet $\pt$ bins, for experimental data from data-taking periods B to H (solid black points) and Herwig++ events (solid violet triangules). The ratio datab\/Herwig++ simulation is shown at the bottom of the plot. Pythia distribution is also shown for reference.}
+\caption{Distribution of the jet track multiplicity in 2 different jet $\pt$ bins, for experimental data  collected during 2011 (solid black points) and {\sc herwig}++ events (solid violet triangules). The ratio data over {\sc herwig}++ simulation is shown at the bottom of the plot. {\sc pythia} distribution is also shown for reference.}
 \label{fig:herwigdatamc}
 \end{figure}
+
 
 
 %

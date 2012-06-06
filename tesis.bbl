@@ -1,75 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{ATLAS-CONF-2010-091}
-Performance of impact parameter-based $b$-tagging algorithms with the atlas
-  detector using proton-proton collisions at $\sqrt{s}$ = 7 tev.
-\newblock Technical Report ATLAS-CONF-2010-091, CERN, Geneva, Oct 2010.
-
-\bibitem{ATLAS-CONF-2010-042}
-Performance of the atlas secondary vertex $b$-tagging algorithm in 7 tev
-  collision data.
-\newblock Technical Report ATLAS-CONF-2010-042, CERN, Geneva, Jul 2010.
-
-\bibitem{ATLAS-CONF-2011-102}
-Commissioning of the atlas high-performance $b$-tagging algorithms in the 7 tev
-  collision data.
-\newblock Technical Report ATLAS-CONF-2011-102, CERN, Geneva, Jul 2011.
-
-\bibitem{Frixione:1996nh}
-Stefano Frixione and Michelangelo~L. Mangano.
-\newblock {Heavy quark jets in hadronic collisions}.
-\newblock {\em Nucl.Phys.}, B483:321--338, 1997.
-
-\bibitem{Salam.AccurateHQ}
-Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
-\newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
-  lhc.
-\newblock {\em JHEP}, 0707:026, 2007.
-
-\bibitem{kt1}
-S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
-\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
-  hadron collisions}.
-\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
-
-\bibitem{Herwig}
-G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
-\newblock {HERWIG 6: An Event generator for hadron emission reactions with
-  interfering gluons (including supersymmetric processes)}.
-\newblock {\em JHEP}, 0101:010, 2001.
-
-\bibitem{Campbell:2006}
-John~M. Campbell, R.Keith Ellis, F.~Maltoni, and S.~Willenbrock.
-\newblock {Production of a $W$ boson and two jets with one $b^-$ quark tag}.
-\newblock {\em Phys.Rev.}, D75:054015, 2007.
-
-\bibitem{ATLAS-CONF-2011-098}
-Search for supersymmetry in pp collisions at $\sqrt{s}=7$ tev in final states
-  with missing transverse momentum, $b$-jets and no leptons with the atlas
-  detector.
-\newblock Technical Report ATLAS-CONF-2011-098, CERN, Geneva, Jul 2011.
-
-\bibitem{boost2010}
-A.~Abdesselam et~al.
-\newblock Boosted objects: a probe of beyond the standard model physics.
-\newblock {\em The European Physical Journal C - Particles and Fields},
-  71:1--19, 2011.
-
-\bibitem{boost2010b}
-A.~Altheimer et~al.
-\newblock {Jet Substructure at the Tevatron and LHC: New results, new tools,
-  new benchmarks}.
-\newblock 2012.
-
-\bibitem{Butterworth:2008iy}
-Jonathan~M. Butterworth, Adam~R. Davison, Mathieu Rubin, and Gavin~P. Salam.
-\newblock {Jet substructure as a new Higgs search channel at the LHC}.
-\newblock {\em Phys.Rev.Lett.}, 100:242001, 2008.
-
-\bibitem{TDR}
-Atlas detector and physics performance: Technical design report, 1.
-\newblock Technical Report CERN-LHCC-99-14, ATLAS-TDR-14, CERN, Geneva, 1999.
-
 \bibitem{PYTHIA8}
 Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
 \newblock A brief introduction to pythia 8.1.
@@ -100,56 +30,27 @@ S.~Agostinelli et~al.
 \newblock Geant4 — a simulation toolkit.
 \newblock {\em Nucl.\ Inst.\ Meth.\ Section A}, 506(3):250 -- 303, 2003.
 
-\bibitem{QGSP}
-G.~Folger and J.~P. Wellisch.
-\newblock {String parton models in Geant4}.
-\newblock 2003.
+\bibitem{ATLASSimulation}
+{ATLAS Collaboration}.
+\newblock {The ATLAS Simulation Infrastructure}.
+\newblock {\em Eur.Phys.J.C}, 70:051, 2010.
 
-\bibitem{BERT}
-H.~W. Bertini.
-\newblock {Intranuclear-cascade calculation of the secondary nucleon spectra
-  from nucleon-nucleus interactions in the energy range 340 to 2900 MeV and
-  comparisons with experiment}.
-\newblock {\em Phys.\ Rev.}, 188:1711--1730, 1969.
+\bibitem{Herwig}
+G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
+\newblock {HERWIG 6: An Event generator for hadron emission reactions with
+  interfering gluons (including supersymmetric processes)}.
+\newblock {\em JHEP}, 0101:010, 2001.
 
 \bibitem{Perugia}
 Peter~Z. Skands.
 \newblock {The Perugia Tunes}.
 \newblock 2009.
 
-\bibitem{antiktalg}
-Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
-\newblock {The anti-$k_t$ jet clustering algorithm}.
-\newblock {\em JHEP}, 04:063, 2008.
-
-\bibitem{topoClusters}
-W~Lampl et~al.
-\newblock Calorimeter clustering algorithms: Description and performance.
-\newblock Technical Report ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-003, CERN,
-  Geneva, Apr 2008.
-
-\bibitem{ATLAS-CONF-2010-038}
-Data-quality requirements and event cleaning for jets and missing transverse
-  energy reconstruction with the atlas detector in proton-proton collisions at
-  a center-of-mass energy of $sqrt{s}=7$ tev.
-\newblock Technical Report ATLAS-CONF-2010-038, CERN, Geneva, Jul 2010.
-
-\bibitem{JESnote}
-Jet energy scale and its systematic uncertainty for jets produced in
-  proton-proton collisions at $\sqrt{s}$ = 7 tev and measured with the atlas
-  detector.
-\newblock Technical Report ATLAS-CONF-2010-056, CERN, Geneva, Jul 2010.
-
-\bibitem{CSC}
-G.~Aad et~al.
-\newblock {Expected Performance of the ATLAS Experiment - Detector, Trigger and
-  Physics}.
-\newblock 2009.
-
-\bibitem{fastjet}
-M~Cacciari and G.P. Salam.
-\newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
-\newblock {\em Phys.\ Lett.\ B\}, 661:057, 2006.
+\bibitem{kt1}
+S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
+\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
+  hadron collisions}.
+\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
 
 \bibitem{nsubjettiness}
 Jesse Thaler and Ken Van~Tilburg.
@@ -164,9 +65,9 @@ Andreas Hoecker, Peter Speckmayer, Joerg Stelzer, Jan Therhaag, Eckhard von
 
 \bibitem{JetMassNote}
 R~Alon et~al.
-\newblock Backup note for measurement of jet mass and substructure in qcd with
-  the atlas experiment.
-\newblock Technical Report ATL-COM-PHYS-2011-401, CERN, Geneva, Apr 2011.
+\newblock {Backup Note for Measurement of Jet Mass and Substructure in QCD with
+  the ATLAS Experiment}.
+\newblock {\em ATL-COM-PHYS-2011-401}, 2011.
 
 \bibitem{chargemultiplicity}
 G.~Aad et~al.
@@ -175,13 +76,15 @@ G.~Aad et~al.
 \newblock {\em New J.Phys.}, 13:053033, 2011.
 
 \bibitem{ATLAS-CONF-2010-009}
-Estimating track momentum resolution in minimum bias events using simulation
-  and $k_s$ in $\sqrt{s}$ = 900 gev collision data.
-\newblock Technical Report ATLAS-CONF-2010-009, CERN, Geneva, Jun 2010.
+{ATLAS Collaboration}.
+\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
+  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
+\newblock {\em ATLAS-CONF-2010-009}, 2010.
 
 \bibitem{JER2011}
-Jet transverse momentum resolution 2011.
-\newblock Technical Report \em Add this reference if ready before this note.,
-  CERN, Geneva, 2012.
+G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
+\newblock Jet energy resolution from in-situ techniques with the atlas detector
+  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
+\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
 
 \end{thebibliography}
