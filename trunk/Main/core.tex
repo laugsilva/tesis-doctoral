@@ -108,9 +108,71 @@ It is important to select genuine tracks belonging to jets. Only tracks located 
 %------------------------------------------------------------------------ 
 
 
+A small set of dijet events was generated using {sc pythia}. With the help of fastjet~\cite{fastjet}, anti-$k_t$ jets with distance parameters $R$ of 0.4 and 0.6 were built using as inputs:
+
+\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
+\item
+all stable particles
+\item
+charged stable particles
+\item 
+0.1 $k_t$ jets, using all particles 
+\item 
+0.1 $k_t$ jets, using charged particles 
+\end{itemize}
+
+The labeling was done in the same procedure as in the Full ATLAS analysis.
+
+Figures (FIGURES HERE) show the distributions and correlations of most of the tracking variables, for single and merged $b$-jets, in bins of the jet $\pt$.
+
+- Ntrk, trkwidth, drmax, tau1, tau2, tau3, drktaxis: for single  and merged jets in bins of pt, in some cases for both R=0.4 and R=0.6, and for the 4 types of inputs.
+- Correlations: Tau1/Tau2 vs drktaxis, Tau1/Tau2 vs DR(B,B), Tau2 vs Tau1.
+- Event displays of single and merged jets showing constituents for different pt's.
+
+
+%See email from Jesse Thaler
+%Thu, Jun 2, 2011 at 7:43 PM
+%subject:	 Re: N-subjettiness Code
+%This is really fascinating, and it is starting to make some physical sense.  
+For the b jets, tau1, tau2, and deltaR12 are all small which is expected for a pencil-like jet.  For the g>bb jets, tau1, tau2 and deltaR12 are all large, which is typical of a gluon jet.  But the correlations are really fascinating in the g>bb sample.  tau1 and deltaR12 are nearly linearly related, which is expected if there are two hard lobes of energy.  But tau2 is almost independent of deltaR_12, meaning that regardless of where the axes are, the energy is uniformly distributed around them.
+%So the question is whether you can make use of this.  tau1 and deltaR_12 are clearly useful variables, but they are also quite correlated.  tau2 appear to be uncorrelated with deltaR_12, but semi-correlated with tau_1.  By eye, the best discriminator for the R = 0.4 jets looks to be something like
+%tau2 > (10 GeV/pT), deltaR_12 > (10 GeV/pT)
+%or maybe
+%(tau2 + deltaR_12) >  (20 GeV/pT).
+%At this point, what would be helpful is to know whether your selection is really picking out g>bb jets or just picking up gluon jets in general.  For example, is the tau2 vs deltaR_12 non-correlation the same for generic gluon jets, or is it special to g>bb?  My intuition is that this must be a special feature of g>bb, since otherwise, it would be quite easy to separate gluon jets from quark jets...
+
+
+%See this page for comparisons between g/b/bb from Max
+%http://slac.stanford.edu/~swiatlow/gbb_plots/plots.html
+
+%See mail from ariel 2 Jun 2011
+%Quiza lo que este ocurriendo es que gbb fragmenta como normal (gluon) qcd, con mas splittings que b-jets (quarks) y sin la 2-body decay structura que estamos esperando.
+
+%Date: Thu, 2 Jun 2011 20:37:57 +0200
+%From: Ariel Schwartzman <sch@slac.stanford.edu>
+%To: Maria Laura Gonzalez Silva <laugs@mail.cern.ch>
+%Cc: Ricardo Piegaia <aia@df.uba.ar>, Laura <laugs@cern.ch>
+%Subject: Re: N-subjettiness
+% Muy interesante Laura.
+% Tau1 aumenta con DRbb, como se espera, pues es como el jet width.
+% Tau2 es casi flat con DR, lo que puede indicar dos cosas:
+%  i) los kt-axis a los que se refiere Jesse no estan encontrando los dos B's
+% ii) la contribucion de los tracks from B's es pequenia comparada con el resto de la fragmentacion, de modo de a que un gbb jet seria ungluon jet plus algunos soft displaced tracks on top.
+% Te propngo algunos plots:
+% 1) Jesse sugiere plotar el DR entre los dos kt axes para b y bb. Espero que quede claro en su codigo como axeder a esta variable...
+% 2) Hace un 2D plot con la correlacion entre el DR entre los axes (1) y DR(B,B) para ver si esta definicion de axes corresponde a lo queesperamos.
+%3) Vos habias mirado a DR(1,2) que es el DR entre los dos leading tracks. Podrias re-vivir estos estudios ahora con el generator study? Yhacer tambien el 2D plot de DR(1,2) vs DR(B,B)?
+%4) Seria bueno repetir todas las input variables para pure gluon jets (esto lo sugeri en un mail el otro dia) para entender mejor cual es la diferencia entre gluones y gbb.
+%5) Los dos blobs de energy que esperamos vienen de la hadronizacion de los B hadrons, mas que de la fragmentacion del gluon. Quiza estesea un key point que estamos ignorando. Yo estoy tentado a sugerir que calculemos las variables usando "displaced tracks" solamente. Ricardo, es posible ponerle un flag a las particulas que vienen de los B decays como para que Laura solo use estas particulas para calcular N-subjettiness?
+%6) Event displays... son como la tool ideal para entender que esta pasando. Uno puede mirar event displays para jets con distinto DR(B,B), distuntos taus, etc... Fijate que todavia no tenemos una picture de cual es la shape de un gbb jet! Estuvimos asumiendo que uno espera 2 blobs de energy, pero no tenemos ningun plot que soporte esta idea en forma contundente.
+%En todo caso, me parace perfecto tener esta discucion con Jesse. Ciertamente vamos a aprender mucho mas sobre gluon splitting...
+
+
+
+
 %------------------------------------------------------------------------
-%\section{Kinematid differences between single $b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
-\section{Full ATLAS Monte Carlo Analysis}\label{sec:gbbKine}
+\section{Kinematid differences between single $b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
+%\section{Full ATLAS Monte Carlo Analysis}\label{sec:gbbKine}
 %------------------------------------------------------------------------ 
 
 
@@ -125,8 +187,8 @@ Jet multiplicity (number of constituents)
 Jet width, $\pt$ weighted %Track jet width ($\pt$ weighted)
 \item 
 Jet Mass
-%\item
-%Nr.\ of subjets %track-jets
+\item
+Nr.\ of $k_t$ subjets %track-jets
 \item
 Maximum $\Delta R$ between pairs of constituents % (tracks)
 \item
@@ -142,27 +204,11 @@ Eccentricity %(track & calo)
 \end{itemize}
 
 
+%Figures~\ref{fig:ntrksinglemerged} to~\ref{fig:tauratiosinglemerged} show the distributions and correlations of some of these variables in selected bins of $b$-tagged jet $\pt$. 
 
-
-Figures~\ref{fig:ntrksinglemerged} to~\ref{fig:tauratiosinglemerged} show the distributions and correlations of some of these variables in selected bins of $b$-tagged jet $\pt$. 
-
-Figure~\ref{fig:ntrksinglemerged} shows the distribution of jet track multiplicity. This variable is simple to calculate and carries important information of the jet inner structure. It was observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. The jet track multiplicity corresponds to tracks with $\pt$ above 1 GeV, satisfying the quality cuts described in section~\ref{sec:EventSelection}. The effect of using a minimum track $\pt$ of 0.5 GeV was also examined. This was motivated by the fact that it could lead to an improvement in discrimination if it captured more information about the fragmentation process.  On ther other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.  What it was observed is that reducing the $\pt$ cut only widens the distributions without increasing the separation between single and merged jets. 
-
-Figure~\ref{fig:trkwidthsinglemerged} shows that, as expected, merged $b$-jets are wider than single $b$-jets. The track-jet width was computed as the track $\pt$ weighted average of the $\Delta R$ distance between the associated tracks and the jet axis:
-\begin{equation} 
-\mbox{ {\it track-jet width}} = \frac{\sum_{i=1}^N \pt^{trk_i} \,\Delta R (trk_i,jet) }{\sum_{i=1}^N \pt^{trk_i} }
-\label{eqn:trackjetwidth}
-\end{equation} 
-where $N$ is the total number of tracks in the jet.
-
-
-In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the jet track multiplicity is shown for single and merged $b$-jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ jets.
-
-
-The calorimeter jet width (as in Equation~\ref{eqn:trackjetwidth} but using topological clusters) gives also good separation. However, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. In Fig.~\ref{fig:calowidthpileup} the distributions of calorimeter width for single and merged $b$-jets  can be seen for events with low and high Number of Primary Vertices (NPV), in a low $\pt$ region where the effect of pile-up is more important. In Fig.~\ref{fig:trkwidthpileup} the same distributions are shown for the track-jet width. Calorimeter jet width varies %significatively
-with NPV and due to this behavior the track-based version is more suitable as a more robust discriminator. For similar reasons, the jet topological cluster multiplicity and the jet mass were discarded as discriminating variables.
-
-
+{ \em I. Jet track multiplicity}
+\\[3mm]
+This variable is defined as the number of tracks associated to the jet, it is simple to calculate and carries important information of the jet inner structure. Figure~\ref{fig:ntrksinglemerged} shows the distribution of the observable for single and merged $b$-jets.  It was observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. The jet track multiplicity corresponds to tracks with $\pt$ above 1 GeV, satisfying the quality cuts described in section~\ref{sec:EventSelection}. The effect of using a minimum track $\pt$ of 0.5 GeV was also examined. This was motivated by the fact that it could lead to an improvement in discrimination if it captured more information about the fragmentation process.  On ther other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.  What it was observed is that reducing the $\pt$ cut only widens the distributions without increasing the separation between single and merged jets. 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk080.pdf}
@@ -170,6 +216,20 @@ with NPV and due to this behavior the track-based version is more suitable as a 
 \caption{Distribution of the track multiplicity in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:ntrksinglemerged}
 \end{figure}
+
+{ \em II. Jet width}
+\\[3mm]
+ The jet width was computed as the $\pt$ weighted average of the $\Delta R$ distance between the associated constituent (``$const$'') and the jet axis:
+\begin{equation} 
+\mbox{ {\it Jet width}} = \frac{\sum_{i=1}^N \pt^{const_i} \,\Delta R (const_i,jet) }{\sum_{i=1}^N \pt^{const_i} }
+\label{eqn:trackjetwidth}
+\end{equation} 
+where $N$ is the total number of calorimeter or track constituents.
+
+Figure~\ref{fig:trkwidthsinglemerged} shows the distribution for the Track-jet width. As expected, merged $b$-jets are wider than single $b$-jets. In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the jet track multiplicity is shown for single and merged $b$-jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ jets.
+
+The calorimeter jet width ( using topological clusters) gives also good separation. However, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. In Fig.~\ref{fig:calowidthpileup} the distributions of calorimeter width for single and merged $b$-jets  can be seen for events with low and high Number of Primary Vertices (NPV), in a low $\pt$ region where the effect of pile-up is more important. In Fig.~\ref{fig:trkwidthpileup} the same distributions are shown for the track-jet width. Calorimeter jet width varies %significatively
+with NPV and due to this behavior the track-based version is more suitable as a more robust discriminator. For similar reasons, the jet topological cluster multiplicity and the jet mass were discarded as discriminating variables.
 
 \begin{figure}[tp]
 \centering
@@ -179,7 +239,6 @@ with NPV and due to this behavior the track-based version is more suitable as a 
 \label{fig:trkwidthsinglemerged}
 \end{figure}
 
-
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth080.pdf}
@@ -187,8 +246,6 @@ with NPV and due to this behavior the track-based version is more suitable as a 
 \caption{Correlation between jet track multiplicity and track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:ntrktrkwidthsinglemerged}
 \end{figure}
-
-
 
 \begin{figure}[tp]
 \centering
@@ -208,11 +265,35 @@ with NPV and due to this behavior the track-based version is more suitable as a 
 \end{figure}
 
 
+
+{ \em III. Maximum $\Delta R$ between track pairs}
+\\[3mm]
 Figure~\ref{fig:drmaxsinglemerged} shows the distribution of the maximum $\Delta R$ between track pairs in the jets (Max$\{\Delta R(trk,trk)\}$). Merged $b$-jets show significantly higher values for this variable over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, we have looked for alternatives to Max$\{\Delta R(trk,trk)\}$ as it is not an infrared safe observable and is sensitive to soft tracks originating from pile-up. 
 
-The distribution of the $\Delta R$ between the axes of the two exclusive $k_t$ subjets in the jet is shown in Fig.~\ref{fig:drktsinglemerged} for single and merged $b$-jets. In order to build this variable the $k_t$ algorithm~\cite{kt1} is applied to all the tracks associated to the jet using a large $k_t$  distance parameter to ensure that all of them get clustered. The clustering is stopped once it reaches exactly two jets. We observe that this variable also provides good separation, with the advantage of infrared safeness and insensitivity to pile-up. % revealing the two-prong substructure of merged $b$-jets.
-%For the subjet reconstruction a track-jet is built with all the tracks inside the jet using the $k_t$ jet algorithm~\cite{kt1}. A large radius is used in order to ensure that all tracks are clustered. Once the new jet is built a step back in the $k_t$ sequence is taken to obtained the two subjets that contributed to the final one. 
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax200.pdf}
+\caption{Distribution of the maximum $\Delta R$ between pairs of tracks in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
+\label{fig:drmaxsinglemerged}
+\end{figure}
 
+
+{ \em IV. $\Delta R$ between the axes of two $k_t$ subjets}
+\\[3mm]
+The distribution of the $\Delta R$ between the axes of the two exclusive $k_t$ subjets in the jet is shown in Fig.~\ref{fig:drktsinglemerged} for single and merged $b$-jets. In order to build this variable the $k_t$ algorithm~\cite{kt1} is applied to all the tracks associated to the jet using a large $k_t$  distance parameter to ensure that all of them get clustered. The clustering is stopped once it reaches exactly two jets. We observe that this variable also provides good separation, with the advantage of infrared safeness and insensitivity to pile-up. % revealing the two-prong substructure of merged $b$-jets.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes200.pdf}
+\caption{Distribution of the $\Delta R$ between the axes of the two $k_t$ subjets in the jet for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
+\label{fig:drktsinglemerged}
+\end{figure}
+
+
+{ \em V. $N$-subjettiness variables}
+\\[3mm]
 
 $N$-subjettiness variables, as described in Ref.~\cite{nsubjettiness}, were originally designed to identify boosted objects, like electroweak bosons and top quarks, decaying into collimated shower of hadrons which a standard jet algorithm would reconstruct as single jets. It is defined as:
 \begin{equation} 
@@ -224,23 +305,6 @@ where $R_0$ is the jet radius used in the jet clustering algorithm and the sum r
 Plots of $ \tau_2$ are shown in Fig.~\ref{fig:tau2singlemerged}. In spite of its expected 2-prong substructure, merged $b$-jets have higher values of $ \tau_2$ than single $b$-jets. The explanation of this behavior can be found in Fig.~\ref{fig:tau2trkwidthsinglemerged}, where its correlation with  track-jet width ($\sim \tau_1$) is shown for single and merged $b$-jets. The two variables are highly correlated and for this reason wider jets  have a larger $ \tau_2$. This suggests to switch from an absolute to a width-normalized
 $\tau_2$. Fig.~\ref{fig:tauratiosinglemerged} thus shows the distributions of $\tau_2/\tau_1$. This ratio is often used but, although as expected somewhat larger values are obtained for single than for merged $b$-jets, specially at high $\pt$, we decided not to use this variable as it offers only marginal discrimination. 
 %often this ratio is used, but proves not to be useful. 
-Variables such as the $\DeltaR$ between the two leading constituents of the jet (those with highest transverse momentum) and the jet eccentricity (the ratio of the principal axes of the jet area) did not show good discrimination either and were not considered for the multivariate study.
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax200.pdf}
-\caption{Distribution of the maximum $\Delta R$ between pairs of tracks in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
-\label{fig:drmaxsinglemerged}
-\end{figure}
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes200.pdf}
-\caption{Distribution of the $\Delta R$ between the axes of the two $k_t$ subjets in the jet for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
-\label{fig:drktsinglemerged}
-\end{figure}
 
 \begin{figure}[tp]
 \centering
@@ -268,8 +332,9 @@ Variables such as the $\DeltaR$ between the two leading constituents of the jet 
 \end{figure}
 
 
+Variables such as the $\DeltaR$ between the two leading constituents of the jet (those with highest transverse momentum) and the jet eccentricity (the ratio of the principal axes of the jet area) did not show good discrimination either and were not considered for the multivariate study.
 
-%We also explored the potential improvement of constructing kinematic variables with only displaced tracks, as these are the ones expected to arise from the decay of B-hadrons. Cuts of 2, 2.5 and 3 on the track transverse impact parameter significance were investigated leading however to no gain in discrimation power.  
+We also explored the potential improvement of constructing kinematic variables with only displaced tracks, as these are the ones expected to arise from the decay of B-hadrons. Cuts of 2, 2.5 and 3 on the track transverse impact parameter significance were investigated leading however to no gain in discrimation power.  
 
 
 %------------------------------------------------------------------------

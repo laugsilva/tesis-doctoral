@@ -1,11 +1,11 @@
 \contentsline {chapter}{\numberline {1}Kinematic differences between single and double $B$-hadron jets}{2}
-\contentsline {section}{\numberline {1.1}Introduction}{2}
-\contentsline {section}{\numberline {1.2}Data and Monte Carlo samples}{2}
-\contentsline {section}{\numberline {1.3}Event and object selection}{3}
-\contentsline {section}{\numberline {1.4}Analysis}{4}
-\contentsline {section}{\numberline {1.5}Validation of the jet variables in data}{12}
-\contentsline {chapter}{\numberline {2}Multivariate Analysis}{14}
-\contentsline {section}{\numberline {2.1}Systematic uncertainties}{15}
-\contentsline {section}{\numberline {2.2}Other Monte Carlo generators}{20}
-\contentsline {chapter}{\numberline {3}??Fraction of gluon-splitting jets in data??}{22}
-\contentsline {section}{\numberline {3.1}Template fits??}{22}
+\contentsline {section}{\numberline {1.1}Data and Monte Carlo samples}{2}
+\contentsline {section}{\numberline {1.2}Event and object selection}{3}
+\contentsline {section}{\numberline {1.3}Preliminary studies in standalone {sc pythia } generator}{4}
+\contentsline {section}{\numberline {1.4}Kinematid differences between single $b$- and merged $b\mathaccent "7016\relax {b}$-jets}{5}
+\contentsline {section}{\numberline {1.5}Validation of the jet variables in data}{13}
+\contentsline {chapter}{\numberline {2}Multivariate Analysis}{15}
+\contentsline {section}{\numberline {2.1}Systematic uncertainties}{16}
+\contentsline {section}{\numberline {2.2}Other Monte Carlo generators}{21}
+\contentsline {chapter}{\numberline {3}??Fraction of gluon-splitting jets in data??}{23}
+\contentsline {section}{\numberline {3.1}Template fits??}{23}
