@@ -104,7 +104,7 @@ It is important to select genuine tracks belonging to jets. Only tracks located 
 
 %------------------------------------------------------------------------
 %\section{Kinematid differences between single $b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
-\section{Preliminary studies in standalone {sc pythia } generator}\label{sec:gbbKine}
+\section{Preliminary studies in standalone {\sc pythia} generator}\label{sec:gbbKine}
 %------------------------------------------------------------------------ 
 
 
@@ -121,20 +121,56 @@ charged stable particles
 0.1 $k_t$ jets, using charged particles 
 \end{itemize}
 
-The labeling was done in the same procedure as in the Full ATLAS analysis.
+The labeling was done in the same procedure as in the Full ATLAS Monte Carlo analysis.
 
-Figures (FIGURES HERE) show the distributions and correlations of most of the tracking variables, for single and merged $b$-jets, in bins of the jet $\pt$.
+Figures~\ref{fig:pythiaTrkWidthAnkt4and6} to~\ref{fig:CorrTau1Tau2DRkt} show the distributions and correlations of some of the tracking variables, for single and merged $b$-jets, in bins of the jet $\pt$.
 
-- Ntrk, trkwidth, drmax, tau1, tau2, tau3, drktaxis: for single  and merged jets in bins of pt, in some cases for both R=0.4 and R=0.6, and for the 4 types of inputs.
-- Correlations: Tau1/Tau2 vs drktaxis, Tau1/Tau2 vs DR(B,B), Tau2 vs Tau1.
-- Event displays of single and merged jets showing constituents for different pt's.
 
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/trkWidth060.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt6/allparticles/trkWidth060.pdf}
+\caption{Distribution of track-jet width in anti-$k_T$ 0.4 (left) and 0.6 (right) jets, for single and merged $b$-jets between 60~GeV to 80~GeV. Jets were built using all stable particles in the simulation.}
+\label{fig:pythiaTrkWidthAnkt4and6}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2060.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedparticles/Tau2060.pdf}
+\caption{Distribution of $\tau_2$ in anti-$k_T$ 0.4 jets, for single and merged $b$-jets between 60~GeV to 80~GeV. Jets were built using all stable particles (left) and charged particles only (right).}
+\label{fig:pythiaTau2AllandCharged}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/minijets/DRkt2axes060.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedminijets/DRkt2axes060.pdf}
+\caption{Distribution of $\Delta R$ between the axes of two $k_T$ subjets in anti-$k_T$ 0.4 jets, for single and merged $b$-jets between 60~GeV to 80~GeV. Jets were built using 0.1 $k_t$ jets from all stable particles (left) and charged particles only (right).}
+\label{fig:pythiaDRktAllJetandChargedJet}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.pdf}
+\caption{Correlation between $\tau_1$ (left) and $\tau_2$ (right) and the $\Delta R$ between the $B$-hadrons in merged anti-$k_T$ 0.4 jets  between 60~GeV to 80~GeV. Jets were built using all stable particles.}
+\label{fig:CorrTau1Tau2DRBB}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DRkT2axesCorr_PT60_merged.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2DRkT2axesCorr_PT60_merged.pdf}
+\caption{Correlation between $\tau_1$ (left) and $\tau_2$ (right) and the $\Delta R$ between the $k_T$ subjets in merged anti-$k_T$ 0.4 jets  between 60~GeV to 80~GeV. Jets were built using all stable particles.}
+\label{fig:CorrTau1Tau2DRkt}
+\end{figure}
 
 %See email from Jesse Thaler
 %Thu, Jun 2, 2011 at 7:43 PM
 %subject:	 Re: N-subjettiness Code
 %This is really fascinating, and it is starting to make some physical sense.  
-For the b jets, tau1, tau2, and deltaR12 are all small which is expected for a pencil-like jet.  For the g>bb jets, tau1, tau2 and deltaR12 are all large, which is typical of a gluon jet.  But the correlations are really fascinating in the g>bb sample.  tau1 and deltaR12 are nearly linearly related, which is expected if there are two hard lobes of energy.  But tau2 is almost independent of deltaR12, meaning that regardless of where the axes are, the energy is uniformly distributed around them.
+For the single $b$-jets, $\tau_1$, $\tau_2$, and $\Delta R$ between the $k_T$ axes in the jet are all small which is expected for a pencil-like jet.  For the $b \bar{b}$-jets, these variables are all large, which is typical of a gluon jet.  But the correlations are really fascinating in merged $b$-jets.   $\tau_1$ and $\Delta R$ between the $k_T$ axes are nearly linearly related, which is expected if there are two hard lobes of energy.  But $\tau_2$ is almost independent of $\Delta R$ between the $k_T$ axes, meaning that regardless of where the axes are, the energy is uniformly distributed around them.
 %So the question is whether you can make use of this.  tau1 and deltaR_12 are clearly useful variables, but they are also quite correlated.  tau2 appear to be uncorrelated with deltaR_12, but semi-correlated with tau_1.  By eye, the best discriminator for the R = 0.4 jets looks to be something like
 %tau2 > (10 GeV/pT), deltaR_12 > (10 GeV/pT)
 %or maybe
@@ -402,8 +438,8 @@ We also explored the potential improvement of constructing kinematic variables w
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_80-120.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_260-310.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_80-120.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_260-310.pdf}
 \caption{Distribution of the jet track multiplicity single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
 \label{fig:displacedntrk}
 \end{figure}
@@ -411,11 +447,53 @@ We also explored the potential improvement of constructing kinematic variables w
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-120.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-310.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-120.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-310.pdf}
 \caption{Distribution of the track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
-\label{fig:displacedntrk}
+\label{fig:displacedtrkwidth}
 \end{figure}
+
+
+\subsection{Further studies using ``ghost-association'' and bigger cone jets}
+
+In order to better understand the behavior observed for $\tau_2$, $\Delta R$ between the axes of $k_T$ subjets and jet eccentricity in anti-$k_T$ 0.4 jets, these variables were studied for other two different scenarios,
+
+\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
+\item 
+using the active area of jets (with clusters used as input to jet reconstruction).
+\item
+using bigger 0.6 anti-$k_T$ jets
+\end{itemize}
+%
+in order to enhance the efficiency to capture the decay products in gluon to $b \bar{b}$-jets.
+
+Figures~\ref{fig:tau2GhostAndAntikt6} to~\ref{fig:jeteccGhostAndAntikt6} show distributions of variables mentioned above for single and merged $b$-jets  between 80~GeV to 110~GeV.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf}
+\caption{Distribution of $\tau_2$ for single and merged $b$-jets between 80~GeV to 110~GeV in anti-$k_T$ 0.6 jets using track constituents (left) and anti-$k_T$ 0.4 jets using the active area of the jet, with calorimeter topoclusters as input.}
+\label{fig:tau2GhostAndAntikt6}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRkt2axes080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf}
+\caption{Distribution of $\Delta R$ between $k_T$ subjets for single and merged $b$-jets between 80~GeV to 110~GeV in anti-$k_T$ 0.6 jets using track constituents (left) and anti-$k_T$ 0.4 jets using the active area of the jet, with calorimeter topoclusters as input.}
+\label{fig:drktaxisGhostAndAntikt6}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf}
+\caption{Distribution of the jet eccentricity for single and merged $b$-jets between 80~GeV to 110~GeV in anti-$k_T$ 0.6 jets using track constituents (left) and anti-$k_T$ 0.4 jets using the active area of the jet, with calorimeter topoclusters as input.}
+\label{fig:jeteccGhostAndAntikt6}
+\end{figure}
+
+
 
 
 %------------------------------------------------------------------------
@@ -460,11 +538,102 @@ during 2011. The distributions are normalized to unit area to allow for shape co
 %
 \chapter{Multivariate Analysis}\label{sec:gbbTMVA}
 
+
 %------------------------------------------------------------------------
-%\section{Introduction}
+\section{The multivariate classifiers}
 %------------------------------------------------------------------------
 
+The following multivariate methods were explored:
 
+\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
+\item
+Likelihood ratio estimators 
+\item
+Neural Networks (NN)
+\item
+Boosted decision Trees (BDTs)
+\end{itemize}
+
+And different trainings were tested:
+
+\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
+\item
+Inclusive, with $\pt$-weighting
+\item
+In bins of jet $\pt$
+\end{itemize}
+
+
+Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. 
+
+
+Figure~\ref{fig:diffmethodsInclusive} and~\ref{fig:diffmethodsBins} show distributions of the MVA outputs in different bins of jet $\pt$ for the two proposed trainings. In figures~\ref{fig:diffmethodsPerfInclusive} and~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all methods, for inclusive and ``in-bins'', training is illustrated.
+
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf}
+\caption{Distribution of the MVA discriminant outputs, for inclusive training, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
+\label{fig:diffmethodsInclusive}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf}
+\caption{Distribution of the MVA discriminant outputs, for training in bins of jet $\pt$, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
+\label{fig:diffmethodsBins}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf}
+\caption{Distribution of the MVA discriminant performance for inclusive training, in single and merged $b$-jets, for low and high jet $\pt$.}
+\label{fig:diffmethodsPerfInclusive}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf}
+\caption{Distribution of the MVA discriminant performance for training in bins of jet $\pt$, in single and merged $b$-jets, for low and high jet $\pt$.}
+\label{fig:diffmethodsPerfBins}
+\end{figure}
+
+%------------------------------------------------------------------------
+\section{The input variables}
+%------------------------------------------------------------------------
+
+Different groups of input variables were tested. Figure~\ref{fig:difftrainings} shows the performance for three sets of variables for MVA classifier.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf}
+\caption{Distribution of the MVA discriminant performance for three sets of input variables, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
+\label{fig:outputinbin}
+\end{figure}
+
+%------------------------------------------------------------------------
+\section{$\bm{ g\rightarrow b\bar{b}}$ likelihood training and performance}
+%------------------------------------------------------------------------
 
 A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}.
 
@@ -528,15 +697,7 @@ The likelihood was trained with jets that had been first tagged by the MV1 algor
 
 The rejection of merged jets attained as a function of $\pt$ for the 50\% and 60\% efficiency working points are summarized in Table~\ref{tb:rejection}, together with their relative statistical error. These are propagated from the Poisson fluctuations of the number of events in the merged and single $b\bar{b}$ distributions. The error is slightly lower for the 60\% efficiency working point because a higher efficiency allows for a greater number of Monte Carlo events to measure the performance. %the higher the efficiency, the larger the number of Monte Carlo events available to measure the performance.
 
-%Although the tagger was derived with isolated jets it can also be applied to non-isolated jets. Studies were performed to evaluate the likelihood rejection in $b$-jets with close-by jet with $\pt$ between 7 GeV at electromagnetic scale scale and 90$\%$ of the $b$-jet $\pt$. The results can be seen in  Fig.~\ref{fig:testisolation}. The presence of close-by jets with a susbtancial fraction of the $b$-jet pt worsens the performance in more than 50$\%$ at very high $\pt$. 
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.4\textwidth]{FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png}
-%\includegraphics[width=0.4\textwidth]{FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png}
-%\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency for two different isolation cuts.}
-%\label{fig:testisolation}
-%\end{figure}
 
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
@@ -602,17 +763,17 @@ uncertainty in the jet transverse momentum resolution
 { \em I. Pile-up}
 \\[3mm]
   The size of this effect was studied by comparing the performance of the likelihood discriminant with $b$-jets in events with small (1-9) and large (9-20) number of primary vertices. 
-%The comparison of the performance in these two sub-samples can be seen in Fig.~\ref{fig:performanceinbinsMu}. 
+The comparison of the performance in these two sub-samples can be seen in Fig.~\ref{fig:performanceinbinsMu}. 
 As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. Of the 16 determinations (2 working points with 8 $\pt$ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
 %
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf}
-%\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency in bins of $N_{\rm vtx}$ for two low jet $\pt$ bins.}
-%\label{fig:performanceinbinsMu}
-%\end{figure}
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf}
+\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency in bins of $N_{\rm vtx}$ for two low jet $\pt$ bins.}
+\label{fig:performanceinbinsMu}
+\end{figure}
 
 \vspace{3mm}
 {\em II. b-tagging efficiency} %energy scale and 
@@ -621,8 +782,7 @@ The performance of heavy-flavor tagging in Monte Carlo events is calibrated to e
 Such a measurement carries a systematic uncertainty, and in order to estimate its effect a conservative approach is followed: %https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface
 the SFs are varied in all the $\pt$ bins simultaneously by one standard deviation both in the up and down directions. The result of this procedure for the distribution of two of the tracking variables used in our discriminant is illustrated in Fig.~\ref{fig:btaggingSFs}. 
 
-The effect of the $b$-tagging calibration uncertainty on the likelihood peformance is $< 1$\%, negligible with respect to the statistical uncertainty.
-% as it can be seen in Fig.~\ref{fig:btaggingSFsPerf}.
+The effect of the $b$-tagging calibration uncertainty on the likelihood peformance is $< 1$\%, negligible with respect to the statistical uncertainty as it can be seen in Fig.~\ref{fig:btaggingSFsPerf}.
 This was indeed expected. The scale factors depend on the true flavor of the jet and on its $\pt$, but these are basically constant in the performance determination, which is based on single flavor (true $b$-) jets classified in $\pt$-bins.
 
 %\textwidth,viewport=45 45 696 672,clip
@@ -638,13 +798,13 @@ This was indeed expected. The scale factors depend on the true flavor of the jet
 \label{fig:btaggingSFs}
 \end{figure}
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf}
-%\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency with and without scale factors.}
-%\label{fig:btaggingSFsPerf}
-%\end{figure}
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf}
+\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency with and without scale factors.}
+\label{fig:btaggingSFsPerf}
+\end{figure}
 
 %
 
@@ -703,6 +863,21 @@ The different contributions to the systematic uncertainty on the $g\rightarrow b
 \caption{Systematic uncertainities in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
 \label{tb:systematics}
 \end{table}
+
+
+%------------------------------------------------------------------------
+\section{Isolation studies}
+%------------------------------------------------------------------------
+Although the tagger was derived with isolated jets it can also be applied to non-isolated jets. Studies were performed to evaluate the likelihood rejection in $b$-jets with close-by jet with $\pt$ between 7 GeV at electromagnetic scale scale and 90$\%$ of the $b$-jet $\pt$. The results can be seen in  Fig.~\ref{fig:testisolation}. The presence of close-by jets with a susbtancial fraction of the $b$-jet pt worsens the performance in more than 50$\%$ at very high $\pt$. 
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.4\textwidth]{FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png}
+\includegraphics[width=0.4\textwidth]{FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png}
+\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency for two different isolation cuts.}
+\label{fig:testisolation}
+\end{figure}
+
 
 %------------------------------------------------------------------------
 \section{Other Monte Carlo generators}\label{sec:otherMC}

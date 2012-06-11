@@ -1,0 +1,9 @@
+convert NNoutput040_MLP.gif NNoutput040_MLP.pdf
+convert NNoutput080_MLP.gif NNoutput080_MLP.pdf
+convert NNoutput200_MLP.gif NNoutput200_MLP.pdf
+convert NNoutput040_BDT.gif NNoutput040_BDT.pdf
+convert NNoutput080_BDT.gif NNoutput080_BDT.pdf
+convert NNoutput200_BDT.gif NNoutput200_BDT.pdf
+convert NNoutput040_LihoodKDE.gif NNoutput040_LihoodKDE.pdf
+convert NNoutput080_LihoodKDE.gif NNoutput080_LihoodKDE.pdf
+convert NNoutput200_LihoodKDE.gif NNoutput200_LihoodKDE.pdf
