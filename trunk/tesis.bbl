@@ -1,100 +1,14 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
-\bibitem{PYTHIA8}
-Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
-\newblock A brief introduction to pythia 8.1.
-\newblock {\em Comput.\ Phys.\ Commun.}, 178:852, 2008.
-
-\bibitem{Pythia_partonshowers}
-R.~Corke and T.~Sj\"ostrand.
-\newblock Improved parton showers at large transverse momenta.
-\newblock {\em European Physical Journal C}, 69:1, 2010.
-
-\bibitem{Pythia_mpi}
-T.~Sj\"ostrand and P.~Z. Skands.
-\newblock Transverse-momentum-ordered showers and interleaved multiple
-  interactions.
-\newblock {\em European Physical Journal C}, 39:129, 2005.
-
-\bibitem{Lund_string_model}
-B.~Andersson et~al.
-\newblock Parton fragmentation and string dynamics.
-\newblock {\em Phys.\ Rep.}, 97:31, 1983.
-
-\bibitem{Pythia_MC11tune}
-Atlas tunes of pythia 6 and pythia 8 for mc11.
-\newblock Technical Report ATL-PHYS-PUB-2011-009, CERN, Geneva, Jul 2011.
-
-\bibitem{GEANT4}
-S.~Agostinelli et~al.
-\newblock Geant4 — a simulation toolkit.
-\newblock {\em Nucl.\ Inst.\ Meth.\ Section A}, 506(3):250 -- 303, 2003.
-
-\bibitem{ATLASSimulation}
+\bibitem{ATLAS-CONF-2011-116}
 {ATLAS Collaboration}.
-\newblock {The ATLAS Simulation Infrastructure}.
-\newblock {\em Eur.Phys.J.C}, 70:051, 2010.
+\newblock {Luminosity Determination in pp Collisions at sqrt(s) = 7 TeV using
+  the ATLAS Detector in 2011}.
+\newblock {\em ATLAS-CONF-2011-116}, Aug 2011.
 
-\bibitem{Herwig}
-G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
-\newblock {HERWIG 6: An Event generator for hadron emission reactions with
-  interfering gluons (including supersymmetric processes)}.
-\newblock {\em JHEP}, 0101:010, 2001.
-
-\bibitem{Perugia}
-Peter~Z. Skands.
-\newblock {The Perugia Tunes}.
-\newblock 2009.
-
-\bibitem{Bahr:2008dy}
-Manuel Bahr, Stefan Gieseke, and Michael~H. Seymour.
-\newblock {Simulation of multiple partonic interactions in Herwig++}.
-\newblock {\em JHEP}, 0807:076, 2008.
-
-\bibitem{fastjet}
-M~Cacciari and G.P. Salam.
-\newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
-\newblock {\em Phys.\ Lett.\ B\}, 661:057, 2006.
-
-\bibitem{kt1}
-S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
-\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
-  hadron collisions}.
-\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
-
-\bibitem{nsubjettiness}
-Jesse Thaler and Ken Van~Tilburg.
-\newblock {Identifying Boosted Objects with N-subjettiness}.
-\newblock {\em JHEP}, 1103:015:026, 2011.
-
-\bibitem{Hocker:2007ht}
-Andreas Hoecker, Peter Speckmayer, Joerg Stelzer, Jan Therhaag, Eckhard von
-  Toerne, and Helge Voss.
-\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
-\newblock {\em PoS}, ACAT:040, 2007.
-
-\bibitem{JetMassNote}
-R~Alon et~al.
-\newblock {Backup Note for Measurement of Jet Mass and Substructure in QCD with
-  the ATLAS Experiment}.
-\newblock {\em ATL-COM-PHYS-2011-401}, 2011.
-
-\bibitem{chargemultiplicity}
-G.~Aad et~al.
-\newblock {Charged-particle multiplicities in pp interactions measured with the
-  ATLAS detector at the LHC}.
-\newblock {\em New J.Phys.}, 13:053033, 2011.
-
-\bibitem{ATLAS-CONF-2010-009}
+\bibitem{TDR}
 {ATLAS Collaboration}.
-\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
-  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
-\newblock {\em ATLAS-CONF-2010-009}, 2010.
-
-\bibitem{JER2011}
-G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
-\newblock Jet energy resolution from in-situ techniques with the atlas detector
-  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
-\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
+\newblock {ATLAS detector and physics performance: Technical Design Report, 1}.
+\newblock (CERN-LHCC-99-14, ATLAS-TDR-14), 1999.
 
 \end{thebibliography}
