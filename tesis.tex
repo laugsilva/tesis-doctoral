@@ -15,6 +15,7 @@
 
 \newcommand{\pt}{{\emph{p}_{T}}}
 
+\renewcommand{\baselinestretch}{1.5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Preamble
@@ -37,6 +38,7 @@
 \newcommand{\pho}{\phantom{0}}
 \newcommand{\bslash}{\ensuremath{\backslash}}
 \newcommand{\BibTeX}{{\sc Bib\TeX}}
+\renewcommand{\baselinestretch}{1.5}
 
 \begin{document}
 %\renewcommand{\tablename}{Tabla}
@@ -49,58 +51,43 @@
 \newpage
 
 \thispagestyle{empty}
+\begin{figure}[h]
+  %\vspace{2cm}
+  \begin{center}
+    %\scalebox{0.975}{\includegraphics{figs/logo_UBA.eps}}
+    \scalebox{0.75}{\includegraphics{logo_FCEN.pdf}}
+  \end{center}
+\end{figure}
 
+\begin{center}
+  {\bfseries UNIVERSIDAD DE BUENOS AIRES}\\
+  \vspace{0.5cm}
+  Facultad de Ciencias Exactas y Naturales\\
+  \vspace{0.5cm}
+  Departamento de F\'isica\\
+  \vspace{1.5cm}
+         {\large {\bfseries Double $B$-hadron Jet Tagging and Identification of Gluon to $b \bar{b}$ jets with the ATLAS Detector}}\\
+         \vspace{1.5cm}
+         %%%%%%%%%%%%%%%%
+         %\textbf{{\LARGE VERSI\'ON PRELIMINAR}}
+         %%%%%%%%%%%%%%%%
+         Trabajo de Tesis para optar por el t\'itulo de \\
+         Doctor de la Universidad de Buenos Aires en el \'area Ciencias F\'isicas\\
+         \vspace{1.5cm}
+         %por $\qquad ${\it \bfseries Cecilia Soledad Bejarano}\\
+         por $\qquad ${\bfseries Mar\'ia Laura Gonz\'alez Silva}\\
+         \vspace{1.5cm}
+\end{center}
 
-{ \underline{TEMA}:} {\small Double $B$-hadron Jet Tagging and Identification of Gluon to $b \bar{b}$ jets with the ATLAS Detector}
-
-\vspace{1cm}
-
-{ \underline{ALUMNA}:} {\small Lic. Mar\'ia Laura Gonz\'alez Silva} \hspace{2cm} {\underline{ LU N$\,^{\circ}$} : {\small $217/01$} }
-
-\vspace{1cm}
-
-{ \underline{LUGAR DE TRABAJO}:} {\small Dpto. de F\'isica, FCEyN, UBA}
-
-\vspace{1cm}
-
-{ \underline{DIRECTOR DEL TRABAJO}:} {\small Dr. Ricardo Piegaia}
-
-%\vspace{1cm}
-%{ \underline{CO-DIRECTOR DE TRABAJO}:} {\small Dr. }
-
-\vspace{1cm}
-
-{ \underline{FECHA DE INICIACI\'{O}N}:} {\small Abril de $2007$}
-
-\vspace{1cm}
-
-{ \underline{FECHA DE FINALIZACI\'{O}N}:} {\small Noviembre de $2012$}
-
-\vspace{1cm}
-
-{ \underline{FECHA DE EXAMEN}:}
-
-\vspace{1cm}
-
-{ \underline{INFORME FINAL APROBADO POR}:}
-
-\vspace{2.25cm}
-
-\underline{       \hspace{6cm}              }        \hspace{2cm} \underline{         \hspace{6cm}               }
-
-{\small Alumna:Lic. Mar\'ia Laura Gonz\'alez Silva}  \hspace{4cm} Jurado 1 
-
-\vspace{1cm}
-
-\underline{     \hspace{6cm}                   }        \hspace{2cm} \underline{  \hspace{6cm}                      }
-
-{\small Director: Dr. Ricardo Piegaia}     \hspace{5.2cm} Jurado 2
-
-\vspace{1cm}
-
-\underline{         \hspace{6cm}               }        \hspace{2cm} \underline{       \hspace{6cm}                 }
-
-{\small Sra. Marta Pedernera}   \hspace{5cm} Jurado 3
+{\small \flushleft{
+    Director de Tesis: Dr. Ricardo Piegaia\\
+    Consejero de estudios: Dr.  Daniel Deflorian\\
+    \vspace{0.5cm}
+    Lugar de Trabajo: Departamento de F\'isica {\scriptsize(CONICET-UBA)}\\
+    \vspace{0.5cm}
+    Buenos Aires, 2012
+  }
+}
 
 
 
@@ -108,21 +95,23 @@
 % Dedicacion
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+%\newpage
 
-\thispagestyle{empty}
+%\thispagestyle{empty}
 
-$\\$
-\\
+%$\\$
+%\\
 
-\begin{flushright}
-\emph{Dedicado a Cristina Silva}
-\end{flushright}
+%\begin{flushright}
+%\emph{Dedicado a Cristina Silva}
+%\end{flushright}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Agradecimientos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\baselinestretch}{1.5}
+
 \newpage
 
 $\\$
@@ -143,6 +132,7 @@ $\\$ \indent   A Ricardo, a mi familia...
 % Abstract
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \begin{abstract}
 El detector ATLAS, uno de los cuatro experimentos del acelerador LHC 
 actualmente en construcci\'on en el CERN, tiene como prop\'osito 
@@ -158,9 +148,10 @@ protones
 con una energ\'ia de centro de masa de 14 TeV y una frecuencia de 
 interacci\'on de $10^9$ Hz.
 
-This thesis describes a method that allows the identification of merged $b$-quark
-jets originating from gluon-splitting. The technique exploits the kinematic
-differences between merged and single $B$-hadron jets using %track information
+
+This thesis describes a method that allows the identification of double $B$-hadron jets
+ originating from gluon-splitting. The technique exploits the kinematic
+differences between the so called ``merged'' jets and single $B$-hadron jets using %track information
 track-based jet shape and jet substructure variables combined in a multivariate likelihood analysis.  The ability to reject $b$-jets
 from gluon splitting is important to reduce and to improve the estimation of
 the $b$-tag background in Standard Model analyses and in new physics searches involving
@@ -177,9 +168,9 @@ the exact values depend on the jet $\pt$.
 \tableofcontents
 
 %\include{Introduction/introduction} 
-%\include{Introduction/lhc_atlas} 
+\include{Introduction/lhc_atlas} 
 %\include{Introduction/reconstruction} 
-\include{Main/core} %\include{Main/main} 
+%\include{Main/core} %\include{Main/main} 
 %\include{Summary/summary}
 
 

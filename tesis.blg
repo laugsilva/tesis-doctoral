@@ -1,51 +1,52 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Main/core.aux
+A level-1 auxiliary file: Introduction/lhc_atlas.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
-Warning--empty author in Pythia_MC11tune
-Warning--empty journal in Perugia
-Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
-while executing---line 944 of file unsrt.bst
-You've used 18 entries,
+Warning--I didn't find a database entry for "LHCBook"
+Warning--I didn't find a database entry for "TDRtdaq"
+Warning--I didn't find a database entry for "Athena"
+Warning--empty journal in TDR
+Warning--there's a number but no volume in TDR
+You've used 2 entries,
             1791 wiz_defined-function locations,
-            563 strings with 6147 characters,
-and the built_in function-call counts, 3338 in all, are:
-= -- 270
-> -- 170
-< -- 1
-+ -- 64
-- -- 46
-* -- 209
-:= -- 592
-add.period$ -- 53
-call.type$ -- 18
-change.case$ -- 18
+            464 strings with 3852 characters,
+and the built_in function-call counts, 290 in all, are:
+= -- 22
+> -- 8
+< -- 0
++ -- 4
+- -- 2
+* -- 15
+:= -- 57
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 156
-empty$ -- 323
-format.name$ -- 46
-if$ -- 719
+cite$ -- 4
+duplicate$ -- 16
+empty$ -- 30
+format.name$ -- 2
+if$ -- 58
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 17
-newline$ -- 92
-num.names$ -- 17
-pop$ -- 29
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 2
+pop$ -- 7
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 60
+skip$ -- 5
 stack$ -- 0
-substring$ -- 135
-swap$ -- 17
-text.length$ -- 1
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 30
-width$ -- 20
-write$ -- 194
-(There was 1 error message)
+while$ -- 2
+width$ -- 3
+write$ -- 22
+(There were 5 warnings)
