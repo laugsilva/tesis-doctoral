@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  12 JUN 2012 17:46
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  13 JUN 2012 14:14
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -138,9 +138,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--122
 
  (./Introduction/lhc_atlas.tex
 Chapter 1.
-
-LaTeX Warning: Citation `LHCBook' on page 2 undefined on input line 12.
-
 [2
 
 
@@ -154,61 +151,80 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [3 <./Fig2/CERNacceleratorcomplexCut.pdf>] [4]
-<Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf, id=54, 1660.2025pt x 1282.7925pt>
+ [3 <./Fig2/CERNacceleratorcomplexCut.pdf>]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [4]
+
+LaTeX Warning: Reference `tab:beamparameters' on page 5 undefined on input line
+ 36.
+
+[5] <Fig2/peakAvgMuByDay.pdf, id=55, 569.12625pt x 408.52625pt>
+File: Fig2/peakAvgMuByDay.pdf Graphic file (type pdf)
+
+<use Fig2/peakAvgMuByDay.pdf> [6] [7 <./Fig2/peakAvgMuByDay.pdf>]
+<Fig2/sumLumiByDay.pdf, id=70, 569.12625pt x 408.52625pt>
+File: Fig2/sumLumiByDay.pdf Graphic file (type pdf)
+
+<use Fig2/sumLumiByDay.pdf> [8 <./Fig2/sumLumiByDay.pdf>] [9]
+<Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf, id=84, 1660.2025pt x 1282.7925pt>
 File: Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf Graphic file (type pdf)
 
-<use Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf> [5] [6 <./Fig2/TDRchapter1_fig1_
-ATLAS_DETECTOR.pdf>]
-<Fig2/innnerdetector3d.pdf, id=64, 523.9575pt x 339.2675pt>
+<use Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf> [10] [11 <./Fig2/TDRchapter1_fig
+1_ATLAS_DETECTOR.pdf>]
+<Fig2/innnerdetector3d.pdf, id=94, 523.9575pt x 339.2675pt>
 File: Fig2/innnerdetector3d.pdf Graphic file (type pdf)
 
-<use Fig2/innnerdetector3d.pdf> [7 <./Fig2/innnerdetector3d.pdf>] [8] [9]
-[10]
+<use Fig2/innnerdetector3d.pdf> [12 <./Fig2/innnerdetector3d.pdf>] [13]
+[14] [15]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 142.
- [11] [12] [13] [14]
-<Fig2/muonspectrometeradele-bw.pdf, id=97, 570.13pt x 570.13pt>
+(Font)              <5> on input line 192.
+ [16] [17] [18] [19]
+<Fig2/muonspectrometeradele-bw.pdf, id=126, 570.13pt x 570.13pt>
 File: Fig2/muonspectrometeradele-bw.pdf Graphic file (type pdf)
 
-<use Fig2/muonspectrometeradele-bw.pdf> [15] [16 <./Fig2/muonspectrometeradele-
+<use Fig2/muonspectrometeradele-bw.pdf> [20] [21 <./Fig2/muonspectrometeradele-
 bw.pdf>]
 
-LaTeX Warning: Citation `TDRtdaq' on page 17 undefined on input line 197.
+LaTeX Warning: Citation `TDRtdaq' on page 22 undefined on input line 247.
 
-<Fig3/paint_TDAQ.pdf, id=109, 401.5pt x 440.64626pt>
+<Fig3/paint_TDAQ.pdf, id=139, 401.5pt x 440.64626pt>
 File: Fig3/paint_TDAQ.pdf Graphic file (type pdf)
  <use Fig3/paint_TDAQ.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (10.73611pt too wide) in paragraph at lines 215--216
+Overfull \hbox (10.73611pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/12 lizando una se-cuen-cia de r^^Sapidos al-go-rit-mos de se-lecci
 ^^Son que op-eran t^^S^^Ppicamente
  []
 
-[17] [18 <./Fig3/paint_TDAQ.pdf>] [19]
-<Fig3/HLTchain_seeding.pdf, id=122, 809.0225pt x 386.44376pt>
+[22] [23 <./Fig3/paint_TDAQ.pdf>] [24]
+<Fig3/HLTchain_seeding.pdf, id=152, 809.0225pt x 386.44376pt>
 File: Fig3/HLTchain_seeding.pdf Graphic file (type pdf)
 
 <use Fig3/HLTchain_seeding.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20] [21 <./Fig3/HLTchain_seeding.pdf>] [22]
+[25] [26 <./Fig3/HLTchain_seeding.pdf>] [27]
 
-LaTeX Warning: Citation `Athena' on page 23 undefined on input line 271.
+LaTeX Warning: Citation `Athena' on page 28 undefined on input line 321.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 278.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 328.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 278.
- [23]) [24] (./tesis.bbl)
-[25
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 328.
+ [28]) [29] (./tesis.bbl
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¼ in font cmr12!
+)
+[30
 
 
 ] (./tesis.aux (./Introduction/lhc_atlas.aux))
@@ -220,13 +236,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1064 strings out of 493848
- 13926 string characters out of 1152823
- 66896 words of memory out of 3000000
- 4357 multiletter control sequences out of 15000+50000
+ 1080 strings out of 493848
+ 14290 string characters out of 1152823
+ 67947 words of memory out of 3000000
+ 4371 multiletter control sequences out of 15000+50000
  11330 words of font info for 39 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,8n,22p,1583b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,11n,22p,1583b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
@@ -240,9 +256,9 @@ e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
 sy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (30 pages, 1469618 bytes).
+Output written on tesis.pdf (35 pages, 1745872 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
+ 222 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

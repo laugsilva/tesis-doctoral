@@ -1,22 +1,23 @@
 \contentsline {chapter}{\numberline {1}The ATLAS detector at the LHC}{2}
 \contentsline {section}{\numberline {1.1}The Large Hadron Collider}{2}
-\contentsline {section}{\numberline {1.2}The ATLAS Detector}{4}
-\contentsline {subsection}{\numberline {1.2.1}Detector overview}{4}
-\contentsline {subsection}{\numberline {1.2.2}The Inner Detector}{5}
-\contentsline {subsubsection}{El detector de p\'ixeles}{7}
-\contentsline {subsubsection}{El detector de microbandas de silicio}{8}
-\contentsline {subsubsection}{El detector de radiaci\'on de transici\'on}{9}
-\contentsline {subsection}{\numberline {1.2.3}The Calorimeters}{10}
-\contentsline {subsubsection}{El calor\'imetro}{11}
-\contentsline {subsubsection}{El calor\'imetro de arg\'on l\'iquido}{11}
-\contentsline {subsubsection}{El calor\'imetro hadr\'onico de tejas}{13}
-\contentsline {subsection}{\numberline {1.2.4}The Muon System}{14}
-\contentsline {subsection}{\numberline {1.2.5}Trigger and Data Adquisition}{17}
-\contentsline {subsubsection}{Arquitectura general}{17}
-\contentsline {subsubsection}{El Nivel 1}{19}
-\contentsline {subsection}{\numberline {1.2.6}El HLT}{20}
-\contentsline {subsubsection}{El Nivel 2}{20}
-\contentsline {subsubsection}{El Filtro de Eventos}{22}
-\contentsline {subsubsection}{El software de selecci\'on}{22}
-\contentsline {subsection}{\numberline {1.2.7}Data quality}{24}
-\contentsline {subsection}{\numberline {1.2.8}Simulation of particle interactions in the ATLAS Detector}{24}
+\contentsline {subsection}{\numberline {1.1.1}Luminosity and pile-up}{6}
+\contentsline {section}{\numberline {1.2}The ATLAS Detector}{9}
+\contentsline {subsection}{\numberline {1.2.1}Detector overview}{9}
+\contentsline {subsection}{\numberline {1.2.2}The Inner Detector}{10}
+\contentsline {subsubsection}{El detector de p\'ixeles}{12}
+\contentsline {subsubsection}{El detector de microbandas de silicio}{13}
+\contentsline {subsubsection}{El detector de radiaci\'on de transici\'on}{13}
+\contentsline {subsection}{\numberline {1.2.3}The Calorimeters}{15}
+\contentsline {subsubsection}{El calor\'imetro}{16}
+\contentsline {subsubsection}{El calor\'imetro de arg\'on l\'iquido}{16}
+\contentsline {subsubsection}{El calor\'imetro hadr\'onico de tejas}{18}
+\contentsline {subsection}{\numberline {1.2.4}The Muon System}{19}
+\contentsline {subsection}{\numberline {1.2.5}Trigger and Data Adquisition}{22}
+\contentsline {subsubsection}{Arquitectura general}{22}
+\contentsline {subsubsection}{El Nivel 1}{24}
+\contentsline {subsection}{\numberline {1.2.6}El HLT}{25}
+\contentsline {subsubsection}{El Nivel 2}{25}
+\contentsline {subsubsection}{El Filtro de Eventos}{27}
+\contentsline {subsubsection}{El software de selecci\'on}{27}
+\contentsline {subsection}{\numberline {1.2.7}Data quality}{29}
+\contentsline {subsection}{\numberline {1.2.8}Simulation of particle interactions in the ATLAS Detector}{29}
