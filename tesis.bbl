@@ -1,10 +1,20 @@
 \begin{thebibliography}{1}
 
+\bibitem{Breskin:1244506}
+Amos Breskin and Rüdiger Voss.
+\newblock {\em The CERN Large Hadron Collider: Accelerator and Experiments}.
+\newblock CERN, Geneva, 2009.
+
 \bibitem{ATLAS-CONF-2011-116}
 {ATLAS Collaboration}.
 \newblock {Luminosity Determination in pp Collisions at sqrt(s) = 7 TeV using
   the ATLAS Detector in 2011}.
 \newblock {\em ATLAS-CONF-2011-116}, Aug 2011.
+
+\bibitem{vanderMeer:296752}
+S~van~der Meer.
+\newblock Calibration of the effective beam height in the isr.
+\newblock {\em CERN-ISR-PO-68-31. ISR-PO-68-31}, 1968.
 
 \bibitem{TDR}
 {ATLAS Collaboration}.
