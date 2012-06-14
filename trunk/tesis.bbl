@@ -16,9 +16,27 @@ S~van~der Meer.
 \newblock Calibration of the effective beam height in the isr.
 \newblock {\em CERN-ISR-PO-68-31. ISR-PO-68-31}, 1968.
 
-\bibitem{TDR}
+\bibitem{ATLAS}
+{Aad, G. and others}.
+\newblock {The ATLAS Experiment at the CERN Large Hadron Collider}.
+\newblock CERN, Geneva, 2008.
+
+\bibitem{chargemultiplicity}
+G.~Aad et~al.
+\newblock {Charged-particle multiplicities in pp interactions measured with the
+  ATLAS detector at the LHC}.
+\newblock {\em New J.Phys.}, 13:053033, 2011.
+
+\bibitem{ATLAS-CONF-2010-009}
 {ATLAS Collaboration}.
-\newblock {ATLAS detector and physics performance: Technical Design Report, 1}.
-\newblock (CERN-LHCC-99-14, ATLAS-TDR-14), 1999.
+\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
+  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
+\newblock {\em ATLAS-CONF-2010-009}, 2010.
+
+\bibitem{ATLAS-CONF-2010-070}
+{ATLAS Collaboration}.
+\newblock {Tracking Studies for b-tagging with 7 TeV Collision Data with the
+  ATLAS Detector}.
+\newblock {\em ATLAS-CONF-2010-070}, 2010.
 
 \end{thebibliography}
