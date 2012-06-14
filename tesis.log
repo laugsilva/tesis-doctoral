@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  13 JUN 2012 14:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  14 JUN 2012 19:17
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -138,10 +138,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--122
 
  (./Introduction/lhc_atlas.tex
 Chapter 1.
-[2
-
-
-] <Fig2/CERNacceleratorcomplexCut.pdf, id=41, 912.40875pt x 747.79375pt>
+<Fig2/CERNacceleratorcomplexCut.pdf, id=36, 912.40875pt x 747.79375pt>
 File: Fig2/CERNacceleratorcomplexCut.pdf Graphic file (type pdf)
 
 <use Fig2/CERNacceleratorcomplexCut.pdf>
@@ -151,7 +148,10 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [3 <./Fig2/CERNacceleratorcomplexCut.pdf>]
+ [2
+
+
+] [3 <./Fig2/CERNacceleratorcomplexCut.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -168,63 +168,73 @@ File: Fig2/peakAvgMuByDay.pdf Graphic file (type pdf)
 File: Fig2/sumLumiByDay.pdf Graphic file (type pdf)
 
 <use Fig2/sumLumiByDay.pdf> [8 <./Fig2/sumLumiByDay.pdf>] [9]
-<Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf, id=84, 1660.2025pt x 1282.7925pt>
-File: Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf Graphic file (type pdf)
+Missing character: There is no â in font cmr12!
+Missing character: There is no ˆ in font cmr12!
+Missing character: There is no ’ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no ˆ in font cmr12!
+Missing character: There is no ’ in font cmr12!
 
-<use Fig2/TDRchapter1_fig1_ATLAS_DETECTOR.pdf> [10] [11 <./Fig2/TDRchapter1_fig
-1_ATLAS_DETECTOR.pdf>]
-<Fig2/innnerdetector3d.pdf, id=94, 523.9575pt x 339.2675pt>
-File: Fig2/innnerdetector3d.pdf Graphic file (type pdf)
+<Fig2/ATLASDetector.pdf, id=84, 3162.25409pt x 2032.87483pt>
+File: Fig2/ATLASDetector.pdf Graphic file (type pdf)
 
-<use Fig2/innnerdetector3d.pdf> [12 <./Fig2/innnerdetector3d.pdf>] [13]
-[14] [15]
+<use Fig2/ATLASDetector.pdf> [10] [11 <./Fig2/ATLASDetector.pdf>]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+
+<Fig2/InnerDetector.pdf, id=95, 3614.00188pt x 2409.34137pt>
+File: Fig2/InnerDetector.pdf Graphic file (type pdf)
+
+<use Fig2/InnerDetector.pdf> [12] [13 <./Fig2/InnerDetector.pdf>]
+Missing character: There is no Î in font cmr12!
+Missing character: There is no ¼ in font cmr12!
+ [14] [15]
+<Fig2/Calorimeters.pdf, id=114, 3915.16707pt x 2635.21526pt>
+File: Fig2/Calorimeters.pdf Graphic file (type pdf)
+
+<use Fig2/Calorimeters.pdf> [16]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 192.
- [16] [17] [18] [19]
-<Fig2/muonspectrometeradele-bw.pdf, id=126, 570.13pt x 570.13pt>
-File: Fig2/muonspectrometeradele-bw.pdf Graphic file (type pdf)
+(Font)              <5> on input line 211.
+ [17 <./Fig2/Calorimeters.pdf>] [18] [19]
+[20] <Fig2/MuonChamber.pdf, id=138, 3012.42432pt x 2259.50154pt>
+File: Fig2/MuonChamber.pdf Graphic file (type pdf)
 
-<use Fig2/muonspectrometeradele-bw.pdf> [20] [21 <./Fig2/muonspectrometeradele-
-bw.pdf>]
+<use Fig2/MuonChamber.pdf> [21]
 
-LaTeX Warning: Citation `TDRtdaq' on page 22 undefined on input line 247.
+LaTeX Warning: Citation `TDRtdaq' on page 22 undefined on input line 266.
 
-<Fig3/paint_TDAQ.pdf, id=139, 401.5pt x 440.64626pt>
+[22 <./Fig2/MuonChamber.pdf>]
+<Fig3/paint_TDAQ.pdf, id=149, 401.5pt x 440.64626pt>
 File: Fig3/paint_TDAQ.pdf Graphic file (type pdf)
  <use Fig3/paint_TDAQ.pdf>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (10.73611pt too wide) in paragraph at lines 265--266
+[23 <./Fig3/paint_TDAQ.pdf>]
+Overfull \hbox (10.73611pt too wide) in paragraph at lines 284--285
 \OT1/cmr/m/n/12 lizando una se-cuen-cia de r^^Sapidos al-go-rit-mos de se-lecci
 ^^Son que op-eran t^^S^^Ppicamente
  []
 
-[22] [23 <./Fig3/paint_TDAQ.pdf>] [24]
-<Fig3/HLTchain_seeding.pdf, id=152, 809.0225pt x 386.44376pt>
+[24] <Fig3/HLTchain_seeding.pdf, id=159, 809.0225pt x 386.44376pt>
 File: Fig3/HLTchain_seeding.pdf Graphic file (type pdf)
 
-<use Fig3/HLTchain_seeding.pdf>
+<use Fig3/HLTchain_seeding.pdf> [25] [26 <./Fig3/HLTchain_seeding.pdf>]
+[27]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `Athena' on page 28 undefined on input line 340.
 
-[25] [26 <./Fig3/HLTchain_seeding.pdf>] [27]
+[28]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 347.
 
-LaTeX Warning: Citation `Athena' on page 28 undefined on input line 321.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 328.
-
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 328.
- [28]) [29] (./tesis.bbl
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 347.
+ [29]) [30]
+(./tesis.bbl
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¼ in font cmr12!
-)
-[30
+) [31
 
 
 ] (./tesis.aux (./Introduction/lhc_atlas.aux))
@@ -236,29 +246,30 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1080 strings out of 493848
+ 1087 strings out of 493848
  14290 string characters out of 1152823
- 67947 words of memory out of 3000000
- 4371 multiletter control sequences out of 15000+50000
+ 66955 words of memory out of 3000000
+ 4377 multiletter control sequences out of 15000+50000
  11330 words of font info for 39 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,11n,22p,1583b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,20p,1583b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (35 pages, 1745872 bytes).
+/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on tesis.pdf (36 pages, 19592021 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
+ 235 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
