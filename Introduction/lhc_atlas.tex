@@ -151,10 +151,6 @@ The pixel detector, SCT, and TRT sensors are arranged on concentric cylinders ar
 
 The pixel detector consists of three concentric barrel layers. The innermost one, the so called ``b-layer'' due to its role in identifying $b$-quarks initiated jets, is located at 5~cm from the interaction region. Three additional disks are located at each end-cap, producing typically three pixel position measurements per charged particle track.  Each layer or disk is instrumented with modules that form the basic unit of data acquisition, each with 47232 pixels.  All pixel sensors are identical and have a minimum pixel size in $r$ - $\phi \times z$ of 50 $\times$ 400~$\mu m^2$. The intrinsic accuracies in the barrel are 10 $\mu m$ in $r$ - $\phi$ and 115 $\mu m$ along $z$, or along $r$ in the end-caps. The pixel detector has approximately 80.4 million readout channels, an order of magnitude more readout channels than the rest of ATLAS combined, and it extends to a total length of $z \sim \pm$650~mm and radius of $r \sim$150~mm, providing good reconstruction efficiency for tracks up to $|\eta| <$2.5.
 
-
-
-
-
  
 \subsubsection{The SCT}
 
@@ -178,35 +174,38 @@ In addition to directly detecting charged particles produced by the collision, t
  
  % Este sistema de detecci\'on por tubos provee un gran n\'umero de puntos por traza (t\'ipicamente 36 puntos), lo cual determina un seguimiento cont\'inuo de la misma, con mucho menos material por punto y menor costo (mucho menor comparado con la tecnolog\'ia de p\'ixeles implementada en el subdetector m\'as interno).  La gran cantidad de puntos o impactos por traza es un instrumento poderoso en la b\'usqueda y reconstrucci\'on de trazas en el detector interno.
 
-One of the most important tasks of the inner detector for is to provide accurate collision vertex identification, exploiting the excellent position resolution and tracking efficiency. Vertices are reconstructed by matching inner detector tracks with pT > 150 MeV back to a common origin.% [67].
+One of the most important tasks of the inner detector for is to provide accurate collision vertex identification, exploiting the excellent position resolution and tracking efficiency. Vertices are reconstructed by matching inner detector tracks with $\pt >$ 150~MeV back to a common origin.% [67].
 
 %------------------------------------------------------------------------
-\subsection{The Calorimeters}\label{sec:atlasCALO}
+\subsection{The Calorimeter System}\label{sec:atlasCALO}
 %------------------------------------------------------------------------
- El sistema de imanes superconductores de ATLAS consiste en un solenoide central que provee el campo magn\'etico necesario al detector interno, rodeado por un arreglo de bobinas o bucles, con forma de pista de carrera, que generan un campo magn\'etico toroidal para el espectr\'ometro de muones.Todo el sistema es enfriado de manera indirecta mediante el flujo de helio l\'iquido a 4,5 K.
 
-   El solenoide es un electroim\'an superconductor de 5,3 m de largo, situado en el interior del calor\'imetro electromagn\'etico. Comparte el cri\'ostato con el calor\'imetro de arg\'on l\'iquido, evitando la presencia de dos paredes criost\'aticas y reduciendo as\'i la cantidad de material introducido. La longitud del solenoide es considerablemente m\'as peque\~na que la del barril del detector de trazas. Este es el resultado de un compromiso: un bobinado corto reduce la cantidad de material introducido mientras que uno largo proporciona un campo magn\'etico m\'as uniforme en dicho detector. El campo magn\'etico a lo largo del eje \emph{z} es de 2 T en el punto de interacci\'on.
-% existe .criost\'aticas.?
+The purpose of the ATLAS calorimeter system is to measure the energy of electrons, photons, taus and jets, within the pseudorapidity region of $|\eta| < $4.9 and with full $\phi$ symmetry and coverage around the beam axis. It also provides fast position and energy measurements to serve as trigger signals for these objects as well as the missing transverse energy. 
 
-   El arreglo de bobinas est\'a dividido en un barril central y dos regiones laterales, al igual que los detectores. El barril central est\'a constituido por 8 bobinas de 5 m de ancho por 25 metros de largo aproximadamente, dispuestas sim\'etricamente alrededor del haz de manera radial. Las bobinas del barril se encuentran en cri\'ostatos separdos, mientras que las 8 bobinas en cada una de las tapas o toroides laterales est\'an ubicadas en un cri\'ostato com\'un.
+It consists of an electromagnetic (EM) calorimeter system and a hadronic one.  Both calorimeters are sampling calorimeters meaning that they utilize alternating layers of absorber material, composed of heavy atoms that interact with energetic particles and cause them to loose energy, and an active material, that produce a signal in response to the deposited  energy.
 
-   Con un campo magn\'etico toroidal las part\'iculas atravesar\'an todo el rango de pseudorapidez casi perpendicularmente al haz. El n\'umero peque\~no de bobinas que generan el campo toroidal resulta en una intensidad de campo que var\'ia fuertemente con la coordenada $\phi$. En el barril el campo magn\'etico es de 2 T, mientras que en las tapas es de 4 T en las zonas de mayor intensidad.   
+It is very important to note that each calorimeter is segmented both laterally and longitudinally. This leads to high granularity EM calorimeter that maximizes the accuracy with which electrons and photons can be reconstructed. It also provides detailed information on the transverse and longitudinal shower shapes of hadronic jets.
+
+The calorimeters closest to the beam-line are housed in three cryostats, one barrel and two end-caps. The barrel cryostat contains the electromagnetic barrel calorimeter, whereas the two end-cap cryostats each contain an electromagnetic end-cap calorimeter (EMEC), a hadronic end-cap calorimeter (HEC), located behind the EMEC, and a forward calorimeter (FCal) to cover the region closest to the beam.  These calorimeters use liquid argon as the active detector medium and need to be mantained at a constant temperature of $\sim$88K.  Liquid argon (LAr) has been chosen for its intrinsic linear behaviour (production of ionization charge as a function of incident charge), its stability of response over time and its intrinsic radiation-hardness.  An illustration of these components together with the tile hadronic calorimeter can be found in Fig.~\ref{fig:figcalo}. Further specifications are given in the next sections.
+
+%s\'i el calor\'imetro de ATLAS consiste en un sector electromagn\'etico que cubre una regi\'on de pseudorapidez $|\eta|<3.2$ (barril y tapas),  y uno hadr\'onico formado por tres partes: un gran barril cubriendo la zona de $|\eta|<1.7$, dos tapas en los extremos cubriendo la regi\'on de $1.5<|\eta|<3.2$, y calor\'imetros de bajo \'angulo cubriendo la regi\'on de pseudorapidez de  $3.1 <|\eta|< 4.9$. % Para la identificaci\'on de energ\'ia transversa faltante el calor\'imetro debe constar de una alta hemeticidad lo que significa que la cobertura en pseudorapidez debe alcanzar $|\eta|<5$. 
 
 \begin{figure}[htbp]
   \begin{center}
       \includegraphics[width=0.9\textwidth]{Fig2/Calorimeters.pdf}
-    \caption{Calorimeters}
+    \caption{Layout of the ATLAS electromagnetic and hadronic calorimeter systems. The total length is $\sim$ 12~m, extending to a maximum radius of 4.25~m.}
     \label{fig:figcalo}
   \end{center}
 \end{figure}
 
-\subsubsection{El calor\'imetro}
 
-   Una vez que la part\'icula atraviesa el detector interno, ingresa al calor\'imetro. Un detector calorim\'etrico est\'a dise\~nado para absorber la energ\'ia de las part\'iculas que lo atraviesan y se encuentra dividido normalmente en un calor\'imetro electromagn\'etico y uno hadr\'onico dado el diferente comportamiento de fotones/electrones por un lado, y hadrones por el otro.  As\'i el calor\'imetro de ATLAS consiste en un sector electromagn\'etico que cubre una regi\'on de pseudorapidez $|\eta|<3.2$ (barril y tapas),  y uno hadr\'onico formado por tres partes: un gran barril cubriendo la zona de $|\eta|<1.7$, dos tapas en los extremos cubriendo la regi\'on de $1.5<|\eta|<3.2$, y calor\'imetros de bajo \'angulo cubriendo la regi\'on de pseudorapidez de  $3.1 <|\eta|< 4.9$. % Para la identificaci\'on de energ\'ia transversa faltante el calor\'imetro debe constar de una alta hemeticidad lo que significa que la cobertura en pseudorapidez debe alcanzar $|\eta|<5$. 
-
-\subsubsection{El calor\'imetro de arg\'on l\'iquido}
+\subsubsection{The electromagnetic calorimeter}
   
-   El calor\'imetro electromagn\'etico de ATLAS consiste en un gran barril interno y dos ruedas (\emph{end-caps}), una a cada lado del mismo. Se trata de un calor\'imetro de muestreo que funciona con arg\'on l\'iquido (se denomina de muestreo porque mide s\'olo una fracci\'on de la energ\'ia depositada por la part\'icula incidente). Est\'a formado por placas de plomo/acero inoxidable intercaladas con electrodos de cobre; el espacio entre ambos se llena con arg\'on l\'iquido, permitiendo la deriva de los electrones de ionizaci\'on bajo el alto voltaje aplicado. 
+
+The EM calorimeter uses lead as the absorber and LAr as the active material.  
+
+
+
 
   Con el fin de asegurar una perfecta cobertura en todo el rango de pseudorapidez  y proveer una completa simetr\'ia en la coordenada $\phi$ se ha elegido una geometr\'ia en forma de acorde\'on. En la regi\'on dedicada a f\'isica de precisi\'on ($|\eta|<2.5$) el calor\'imetro electromagn\'etico est\'a dividido en cuatro secciones de muestreo. La primera o \emph{Presampler} consiste en una delgada capa de arg\'on desprovista de material absorbente, cuyo prop\'osito es la correcci\'on por la p\'erdida de energ\'ia  en el solenoide y las paredes del cri\'ostato. La segunda secci\'on posee una profundidad de 4.3$X_{0}$\footnote{$X_{0}$ es el s\'imbolo utilizado para la Longitud de Radiaci\'on (\emph{Radiation length}), definida como la distancia media sobre la cual un elect\'on muy energ\'etico pierde $1/e$ de su energ\'ia por bremsstrahlung o bien, como $7/9$ del camino libre medio en la producci\'on de pares. Contituye una escala de longitud apropiada para describir cascadas electromagn\'eticas de alta energ\'ia.} y en ella la lectura se lleva a cabo mediante celdas en forma de tiras delgadas en $\eta$, dando una buena resoluci\'on en dicha coordenada, con $\Delta\eta=0.0031$. La secci\'on de \emph{2nd Sampling} (16$X_{0}$) es donde se deposita la mayor\'ia de la energ\'ia, teniendo ambas coordenadas igual importancia. All\'i el tama\~no de celda es de $\Delta\phi\Delta\eta=0.0245\times 0.0245$. S\'olo los electrones m\'as energ\'eticos llegar\'an a la cuarta secci\'on de muestreo (\emph{3rd Sampling}).
 
@@ -214,7 +213,7 @@ One of the most important tasks of the inner detector for is to provide accurate
 
    En la regi\'on de bajo \'angulo, el calor\'imetro hadr\'onico funciona tambi\'en con arg\'on l\'iquido de manera de resistir los altos niveles de radiaci\'on. Su dise\~no es m\'as sencillo que el del calor\'imetro electromagn\'etico y como absorbentes posee placas paralelas de cobre, perpendiculares al haz. La regi\'on de esta parte del calor\'imetro hadr\'onico, que cubre hasta $|\eta|=4.9$, est\'a hecha de cobre/tungsteno. La elecci\'on de este material es necesaria para limitar el ancho y la profundidad de las lluvias provenientes de jets de altas energ\'ias cercanas a la l\'inea del haz. %and to sep the background levels low in the surrounding calorimeteres from particles spraying out from the forward region.
 
-\subsubsection{El calor\'imetro hadr\'onico de tejas}
+\subsubsection{The hadronic calorimeter}
 % TileCal [ ] Tile Calorimeter Technical Design Report, CERN/LHCC 96-42, 15-12-1996;
 
    El calor\'imetro hadr\'onico de tejas de ATLAS est\'a compuesto por tres barriles, uno central de 5,6m y dos extensiones de 2,9m cada una. El radio interno es de 2,2m y el externo, de 4,2m.  
@@ -225,6 +224,11 @@ One of the most important tasks of the inner detector for is to provide accurate
 
    El calor\'imetro hadr\'onico debe tener el espesor suficiente para contener la energ\'ia de los hadrones. Con este prop\'osito y para obtener una buena resoluci\'on se han elegido 11 longitudes de absorci\'on como camino previo a las c\'amaras de muones.
  
+
+
+The ATLAS hadronic calorimeters are non-compensating calorimeters, meaning that the signal response for incident electromagnetic and hadronic particles is different. This difference for hadronic objects, such as jets, must be accounted for when reconstructing the final object energy in a separate step after the signal reconstruction. The procedure for translating the measured EM energy to the correct hadronic scale is detailed in Section~\ref{sec:BLABLA}.
+
+
 
 %------------------------------------------------------------------------
 \subsection{The Muon System}\label{sec:atlasCALO}
@@ -252,6 +256,19 @@ En las tapas, esta funci\'on es cumplida por tres estaciones de TGCs (\emph{Thin
     \label{fig:MUON1}
   \end{center}
 \end{figure}
+
+
+
+%EL SYSTEMA DE IMANES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+El sistema de imanes superconductores de ATLAS consiste en un solenoide central que provee el campo magn\'etico necesario al detector interno, rodeado por un arreglo de bobinas o bucles, con forma de pista de carrera, que generan un campo magn\'etico toroidal para el espectr\'ometro de muones.Todo el sistema es enfriado de manera indirecta mediante el flujo de helio l\'iquido a 4,5 K.
+
+   El solenoide es un electroim\'an superconductor de 5,3 m de largo, situado en el interior del calor\'imetro electromagn\'etico. Comparte el cri\'ostato con el calor\'imetro de arg\'on l\'iquido, evitando la presencia de dos paredes criost\'aticas y reduciendo as\'i la cantidad de material introducido. La longitud del solenoide es considerablemente m\'as peque\~na que la del barril del detector de trazas. Este es el resultado de un compromiso: un bobinado corto reduce la cantidad de material introducido mientras que uno largo proporciona un campo magn\'etico m\'as uniforme en dicho detector. El campo magn\'etico a lo largo del eje \emph{z} es de 2 T en el punto de interacci\'on.
+% existe .criost\'aticas.?
+
+   El arreglo de bobinas est\'a dividido en un barril central y dos regiones laterales, al igual que los detectores. El barril central est\'a constituido por 8 bobinas de 5 m de ancho por 25 metros de largo aproximadamente, dispuestas sim\'etricamente alrededor del haz de manera radial. Las bobinas del barril se encuentran en cri\'ostatos separdos, mientras que las 8 bobinas en cada una de las tapas o toroides laterales est\'an ubicadas en un cri\'ostato com\'un.
+
+   Con un campo magn\'etico toroidal las part\'iculas atravesar\'an todo el rango de pseudorapidez casi perpendicularmente al haz. El n\'umero peque\~no de bobinas que generan el campo toroidal resulta en una intensidad de campo que var\'ia fuertemente con la coordenada $\phi$. En el barril el campo magn\'etico es de 2 T, mientras que en las tapas es de 4 T en las zonas de mayor intensidad.   
 
 
 
