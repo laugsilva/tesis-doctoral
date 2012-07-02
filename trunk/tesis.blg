@@ -1,66 +1,50 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Introduction/lhc_atlas.aux
-A level-1 auxiliary file: Introduction/reconstruction.aux
-A level-1 auxiliary file: Main/core.aux
-A level-1 auxiliary file: Summary/summary.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
-Repeated entry---line 275 of file tesis.bib
- : @article{JESnote
- :                 ,
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "TDRtdaq"
 Warning--I didn't find a database entry for "Athena"
-Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
-while executing---line 944 of file unsrt.bst
-Warning--empty journal in boost2010b
 Warning--empty journal in ATLAS
-Warning--empty journal in topoClusters
-Warning--there's a number but no volume in topoClusters
-Warning--empty journal in CSC
-Warning--empty author in Pythia_MC11tune
-Warning--empty journal in Perugia
-You've used 41 entries,
+You've used 7 entries,
             1791 wiz_defined-function locations,
-            679 strings with 9604 characters,
-and the built_in function-call counts, 7008 in all, are:
-= -- 576
-> -- 324
-< -- 1
-+ -- 127
-- -- 86
-* -- 379
-:= -- 1241
-add.period$ -- 122
-call.type$ -- 41
-change.case$ -- 40
+            486 strings with 4535 characters,
+and the built_in function-call counts, 1046 in all, are:
+= -- 87
+> -- 36
+< -- 0
++ -- 16
+- -- 9
+* -- 38
+:= -- 190
+add.period$ -- 21
+call.type$ -- 7
+change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 350
-empty$ -- 700
-format.name$ -- 86
-if$ -- 1519
+cite$ -- 8
+duplicate$ -- 59
+empty$ -- 112
+format.name$ -- 9
+if$ -- 227
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 41
-newline$ -- 207
-num.names$ -- 40
-pop$ -- 92
+int.to.str$ -- 7
+missing$ -- 8
+newline$ -- 38
+num.names$ -- 7
+pop$ -- 24
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 134
+skip$ -- 22
 stack$ -- 0
-substring$ -- 234
-swap$ -- 36
-text.length$ -- 1
+substring$ -- 18
+swap$ -- 6
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 61
-width$ -- 43
-write$ -- 430
-(There were 2 error messages)
+warning$ -- 1
+while$ -- 8
+width$ -- 8
+write$ -- 73
+(There were 3 warnings)
