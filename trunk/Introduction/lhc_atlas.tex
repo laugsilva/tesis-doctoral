@@ -1,4 +1,3 @@
-
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The LHC
@@ -182,11 +181,11 @@ One of the most important tasks of the inner detector is to provide accurate col
 
 The purpose of the ATLAS calorimeter system is to measure the energy of electrons, photons, taus and jets, within the pseudorapidity region of $|\eta| < $4.9 and with full $\phi$ symmetry and coverage around the beam axis. It also provides fast position and energy measurements to serve as trigger signals for these objects as well as the missing transverse energy. 
 
-It consists of an electromagnetic (EM) calorimeter system and a hadronic one.  Both calorimeters are sampling calorimeters meaning that they utilize alternating layers of absorber material, composed of heavy atoms that interact with energetic particles and cause them to loose energy, and an active material, that produce a signal in response to the deposited  energy.
+It consists of an electromagnetic (EM) calorimeter covering the pseudorapidity region $|\eta| < 3.2$, a hadronic barrel calorimeter covering $|\eta| < 1.7$, hadronic end–cap calorimeters covering $1.5 < |\eta| < 3.2$, and forward calorimeters covering $3.1 < |\eta| < 4.9$. The EM and hadronic calorimeters are sampling calorimeters meaning that they utilize alternating layers of absorber material, composed of heavy atoms that interact with energetic particles and cause them to loose energy, and an active material, that produce a signal in response to the deposited  energy.
 
-It is very important to note that each calorimeter is segmented both laterally and longitudinally. This leads to high granularity EM calorimeter that maximizes the accuracy with which electrons and photons can be reconstructed. It also provides detailed information on the transverse and longitudinal shower shapes of hadronic jets.
+It is very important to note that each calorimeter is segmented both laterally and longitudinally. This leads to high granularity in the EM calorimeter that maximizes the accuracy with which electrons and photons can be reconstructed. It also provides detailed information on the transverse and longitudinal shower shapes of hadronic jets.
 
-The calorimeters closest to the beam-line are housed in three cryostats, one barrel and two end-caps. The barrel cryostat contains the electromagnetic barrel calorimeter, whereas the two end-cap cryostats each contain an electromagnetic end-cap calorimeter (EMEC), a hadronic end-cap calorimeter (HEC), located behind the EMEC, and a forward calorimeter (FCal) to cover the region closest to the beam.  These calorimeters use liquid argon as the active detector medium and need to be mantained at a constant temperature of $\sim$88K.  Liquid argon (LAr) has been chosen for its intrinsic linear behaviour (production of ionization charge as a function of incident charge), its stability of response over time and its intrinsic radiation-hardness.  An illustration of these components together with the tile hadronic calorimeter can be found in Fig.~\ref{fig:figcalo}. Further specifications are given in the next sections.
+The calorimeters closest to the beam-line are housed in three cryostats, one barrel and two end-caps. The barrel cryostat contains the electromagnetic barrel calorimeter, and the two end-cap cryostats each contain an electromagnetic end-cap calorimeter (EMEC), a hadronic end-cap calorimeter (HEC), located behind the EMEC, and a forward calorimeter (FCal) to cover the region closest to the beam.  These calorimeters use liquid argon as the active detector medium and need to be mantained at a constant temperature of $\sim$88K.  Liquid argon (LAr) has been chosen for its intrinsic linear behaviour (production of ionization charge as a function of incident charge), its stability of response over time and its intrinsic radiation-hardness.  An illustration of these components together with the tile hadronic calorimeter can be found in Fig.~\ref{fig:figcalo}. Further specifications are given in the next sections.
 
 %s\'i el calor\'imetro de ATLAS consiste en un sector electromagn\'etico que cubre una regi\'on de pseudorapidez $|\eta|<3.2$ (barril y tapas),  y uno hadr\'onico formado por tres partes: un gran barril cubriendo la zona de $|\eta|<1.7$, dos tapas en los extremos cubriendo la regi\'on de $1.5<|\eta|<3.2$, y calor\'imetros de bajo \'angulo cubriendo la regi\'on de pseudorapidez de  $3.1 <|\eta|< 4.9$. % Para la identificaci\'on de energ\'ia transversa faltante el calor\'imetro debe constar de una alta hemeticidad lo que significa que la cobertura en pseudorapidez debe alcanzar $|\eta|<5$. 
 
@@ -202,11 +201,33 @@ The calorimeters closest to the beam-line are housed in three cryostats, one bar
 \subsubsection{The electromagnetic calorimeter}
   
 
+The precision electromagnetic calorimeters are lead-liquid argon detectors with accordion-shape absorbers and electrodes. Such a geometry provides naturally a
+full coverage in $\phi$ without any cracks and allows the calorimeters to have several active layers in depth, three in the precision-measurement region ($0 < |\eta| < 2.5$) and two in the higher $\eta$ region ($2.5 < |\eta| < 3.2$) and in the overlap region between the barrel and the EMEC. 
+%In this region, an accurate position measurement is obtained by finely segmenting the first layer in $\eta$. 
+Figure~\ref{fig:EMacordion} shows how this geometry is divided in rectangular cells in $\eta \times \phi$ space, the individual readout elements of varying size,  finely segmented both laterally and longitudinally. Such fine segmentation – $\Delta \eta \times \Delta \phi = 0.025 \times 0.025$ in the second layer of the EM barrel, for example – permits a detailed mapping of both EM and hadronic showers in the calorimeter. 
+
+In the region $0 <|\eta| < 1.8$ the electromagnetic calorimeters are complemented by a ``presampler'' detector, an instrumented argon layer, which provides a measurement of the energy lost in the solenoid and the outer wall of the barrel cryostat. The first sampling layer has a depth of 4.3$X_0$\footnote{$X_{0}$ es el s\'imbolo utilizado para la Longitud de Radiaci\'on (\emph{Radiation length}), definida como la distancia media sobre la cual un elect\'on muy energ\'etico pierde $1/e$ de su energ\'ia por bremsstrahlung o bien, como $7/9$ del camino libre medio en la producci\'on de pares. Contituye una escala de longitud apropiada para describir cascadas electromagn\'eticas de alta energ\'ia.}
+Towers of readout cells with coarser granularity, $0.1 \times 0.1$ in the barrel, sum the energy in all three layers of cells and feed information to the trigger system.
 
 
 
 
-  Con el fin de asegurar una perfecta cobertura en todo el rango de pseudorapidez  y proveer una completa simetr\'ia en la coordenada $\phi$ se ha elegido una geometr\'ia en forma de acorde\'on. En la regi\'on dedicada a f\'isica de precisi\'on ($|\eta|<2.5$) el calor\'imetro electromagn\'etico est\'a dividido en cuatro secciones de muestreo. La primera o \emph{Presampler} consiste en una delgada capa de arg\'on desprovista de material absorbente, cuyo prop\'osito es la correcci\'on por la p\'erdida de energ\'ia  en el solenoide y las paredes del cri\'ostato. La segunda secci\'on posee una profundidad de 4.3$X_{0}$\footnote{$X_{0}$ es el s\'imbolo utilizado para la Longitud de Radiaci\'on (\emph{Radiation length}), definida como la distancia media sobre la cual un elect\'on muy energ\'etico pierde $1/e$ de su energ\'ia por bremsstrahlung o bien, como $7/9$ del camino libre medio en la producci\'on de pares. Contituye una escala de longitud apropiada para describir cascadas electromagn\'eticas de alta energ\'ia.} y en ella la lectura se lleva a cabo mediante celdas en forma de tiras delgadas en $\eta$, dando una buena resoluci\'on en dicha coordenada, con $\Delta\eta=0.0031$. La secci\'on de \emph{2nd Sampling} (16$X_{0}$) es donde se deposita la mayor\'ia de la energ\'ia, teniendo ambas coordenadas igual importancia. All\'i el tama\~no de celda es de $\Delta\phi\Delta\eta=0.0245\times 0.0245$. S\'olo los electrones m\'as energ\'eticos llegar\'an a la cuarta secci\'on de muestreo (\emph{3rd Sampling}).
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.9\textwidth]{Fig2/EM_acordionstructure.pdf}
+    \caption{Cross section of the LAr barrel calorimeter where the different layers are visible. The granurality in $\eta$ and $\phi$ of the cells of each of the three layers is also shown.}
+    \label{fig:EMacordion}
+  \end{center}
+\end{figure}
+
+
+%The calorimeter system also has electromagnetic coverage at higher $\eta$ ($3.1 < |\eta| < 4.9$) provided by the FCal. 
+
+
+
+
+
+. La segunda secci\'on posee una profundidad de 4.3$X_{0}$\footnote{$X_{0}$ es el s\'imbolo utilizado para la Longitud de Radiaci\'on (\emph{Radiation length}), definida como la distancia media sobre la cual un elect\'on muy energ\'etico pierde $1/e$ de su energ\'ia por bremsstrahlung o bien, como $7/9$ del camino libre medio en la producci\'on de pares. Contituye una escala de longitud apropiada para describir cascadas electromagn\'eticas de alta energ\'ia.} y en ella la lectura se lleva a cabo mediante celdas en forma de tiras delgadas en $\eta$, dando una buena resoluci\'on en dicha coordenada, con $\Delta\eta=0.0031$. La secci\'on de \emph{2nd Sampling} (16$X_{0}$) es donde se deposita la mayor\'ia de la energ\'ia, teniendo ambas coordenadas igual importancia. All\'i el tama\~no de celda es de $\Delta\phi\Delta\eta=0.0245\times 0.0245$. S\'olo los electrones m\'as energ\'eticos llegar\'an a la cuarta secci\'on de muestreo (\emph{3rd Sampling}).
 
    Las ruedas calorim\'etricas comienzan en $|\eta|=1.5$ y contin\'uan abajo hasta $|\eta|=3.2$, pero con un tama\~no de celda mayor por encima de $|\eta|=2.5$.
 
