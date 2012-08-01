@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  2 JUL 2012 10:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  1 AUG 2012 10:58
 entering extended mode
  %&-line parsing enabled.
 **tesis
 (./tesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -158,7 +152,7 @@ Missing character: There is no “ in font cmr12!
  [4]
 
 LaTeX Warning: Reference `tab:beamparameters' on page 5 undefined on input line
- 36.
+ 35.
 
 [5] <Fig2/peakAvgMuByDay.pdf, id=55, 569.12625pt x 408.52625pt>
 File: Fig2/peakAvgMuByDay.pdf Graphic file (type pdf)
@@ -189,60 +183,83 @@ File: Fig2/InnerDetector.pdf Graphic file (type pdf)
 <use Fig2/InnerDetector.pdf> [12] [13 <./Fig2/InnerDetector.pdf>]
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ¼ in font cmr12!
- [14] [15]
+ [14]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [15]
 <Fig2/Calorimeters.pdf, id=114, 3915.16707pt x 2635.21526pt>
 File: Fig2/Calorimeters.pdf Graphic file (type pdf)
 
 <use Fig2/Calorimeters.pdf>
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [16] [17 <./Fig2/Calorimeters.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 209.
- [16] [17 <./Fig2/Calorimeters.pdf>] [18]
 
-LaTeX Warning: Reference `sec:BLABLA' on page 19 undefined on input line 228.
+<Fig2/EM_acordionstructure.pdf, id=125, 710.655pt x 627.34375pt>
+File: Fig2/EM_acordionstructure.pdf Graphic file (type pdf)
 
-[19] [20] <Fig2/MuonChamber.pdf, id=138, 3012.42432pt x 2259.50154pt>
+<use Fig2/EM_acordionstructure.pdf> [18] [19 <./Fig2/EM_acordionstructure.pdf>]
+[20]
+
+LaTeX Warning: Reference `sec:BLABLA' on page 21 undefined on input line 249.
+
+[21] [22] <Fig2/MuonChamber.pdf, id=149, 3012.42432pt x 2259.50154pt>
 File: Fig2/MuonChamber.pdf Graphic file (type pdf)
 
 <use Fig2/MuonChamber.pdf>
-Overfull \hbox (0.53911pt too wide) in paragraph at lines 263--264
+Overfull \hbox (0.53911pt too wide) in paragraph at lines 284--285
 []\OT1/cmr/m/n/12 El sis-tema de imanes su-per-con-duc-tores de AT-LAS con-sist
 e en un solenoide
  []
 
-[21] [22 <./Fig2/MuonChamber.pdf>]
+[23] [24 <./Fig2/MuonChamber.pdf>]
 
-LaTeX Warning: Citation `TDRtdaq' on page 23 undefined on input line 282.
+LaTeX Warning: Citation `TDRtdaq' on page 25 undefined on input line 303.
 
-[23] <Fig3/paint_TDAQ.pdf, id=152, 401.5pt x 440.64626pt>
+<Fig3/paint_TDAQ.pdf, id=160, 401.5pt x 440.64626pt>
 File: Fig3/paint_TDAQ.pdf Graphic file (type pdf)
+ <use Fig3/paint_TDAQ.pdf>
 
-<use Fig3/paint_TDAQ.pdf> [24 <./Fig3/paint_TDAQ.pdf>]
-Overfull \hbox (10.73611pt too wide) in paragraph at lines 300--301
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25]
+Overfull \hbox (10.73611pt too wide) in paragraph at lines 321--322
 \OT1/cmr/m/n/12 lizando una se-cuen-cia de r^^Sapidos al-go-rit-mos de se-lecci
 ^^Son que op-eran t^^S^^Ppicamente
  []
 
-[25] <Fig3/HLTchain_seeding.pdf, id=162, 809.0225pt x 386.44376pt>
+[26 <./Fig3/paint_TDAQ.pdf>] [27]
+<Fig3/HLTchain_seeding.pdf, id=174, 809.0225pt x 386.44376pt>
 File: Fig3/HLTchain_seeding.pdf Graphic file (type pdf)
 
-<use Fig3/HLTchain_seeding.pdf> [26] [27 <./Fig3/HLTchain_seeding.pdf>]
-[28]
+<use Fig3/HLTchain_seeding.pdf>
 
-LaTeX Warning: Citation `Athena' on page 29 undefined on input line 356.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 363.
+[28] [29 <./Fig3/HLTchain_seeding.pdf>] [30]
+
+LaTeX Warning: Citation `Athena' on page 31 undefined on input line 377.
+
+[31]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 384.
 
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 363.
- [30]) [31]
-(./tesis.bbl
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 384.
+) [32] (./tesis.bbl
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¼ in font cmr12!
-) [32
+)
+[33
 
 
 ] (./tesis.aux (./Introduction/lhc_atlas.aux))
@@ -254,13 +271,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1088 strings out of 493848
- 14302 string characters out of 1152823
- 66955 words of memory out of 3000000
- 4378 multiletter control sequences out of 15000+50000
+ 1094 strings out of 495061
+ 14477 string characters out of 1182621
+ 64988 words of memory out of 3000000
+ 4284 multiletter control sequences out of 15000+50000
  11330 words of font info for 39 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
- 27i,9n,20p,1583b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28 hyphenation exceptions out of 8191
+ 27i,9n,20p,1077b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
@@ -275,9 +292,9 @@ sfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (37 pages, 19593498 bytes).
+Output written on tesis.pdf (38 pages, 19717756 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 249 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
