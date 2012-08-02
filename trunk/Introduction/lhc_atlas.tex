@@ -211,15 +211,15 @@ The position resolution of the EM is driven by the readout geometry (rectangular
 
 In the region $0 <|\eta| < 1.8$ the electromagnetic calorimeters are complemented by a ``presampler'' detector, an instrumented argon layer, which provides a measurement of the energy lost in the solenoid and the outer wall of the barrel cryostat.
 
-The signal readout chain for the LAr calorimeter (indeed for all calorimeter systems) is divided into a fast analog readout for the trigger system and a slower digital readout used for more redefined trigger decisions and the offline reconstruction. However, regardless of the readout path, the signal is initiated within the active LAr medium.  Shaping electronics induce a bipolar puse shape in the ionization signal. This shape is characterized by having both a positive and a negative component, which renders the integral of the signal exactly equal to zero.
+The EMEC uses the same accordion geometry as the EMB, whereas the granularity is typically slightly larger than in the barrel.
+
+The signal readout chain for the LAr calorimeter (indeed for all calorimeter systems) is divided into a fast analog readout for the trigger system and a slower digital readout used for more redefined trigger decisions and the offline reconstruction. However, regardless of the readout path, the signal is initiated within the active LAr medium. To minimize noise and increase speed the first level of readout is located on the detector (both for LAr and Tile calorimeter, see~\ref{sec:Tile}). The front-end electronics amplify and shape the signal. Shaping electronics induce a bipolar puse shape in the ionization signal. This shape is characterized by having both a positive and a negative component, which renders the integral of the signal exactly equal to zero.
 
 The performance of the shaping electronics is critical for a correct energy calibration of the detector since the energy is primarily determined from the peak height of the pulse. % Figure??
 In each calorimeter region, the overall pulse shape and duration are optimized to approximately cancel a constant injection of energy into the detector. The motivation for this approach is to effectively redefine the baseline of the energy measurement. In the high luminosity environment of the LHC, this reduces the sensitivity to the background from multiple $pp$ interactions on average.
 
-Finally, the EMEC uses the same accrodion geometry as the EMB, whereas the granularity is typically slightly larger than in the barrel.
+To translate these analog signals to digital signals that can be transmitted long distances to the next stage of the readout system, the pulse shape is measured over several 25~ns (nominal) time intervals, known as samples. The challenge of calorimeter calibration is to map these measured signals to the energy deposited in the active detector medium, known as the visible energy. This calibration is established using test-beam measurements of electrons in the EMB (REFERENCES) and EMEC calorimeters (REFERENCES). 
 
- %The first sampling layer has a depth of 4.3$X_0$\footnote{$X_{0}$ es el s\'imbolo utilizado para la Longitud de Radiaci\'on (\emph{Radiation length}), definida como la distancia media sobre la cual un elect\'on muy energ\'etico pierde $1/e$ de su energ\'ia por bremsstrahlung o bien, como $7/9$ del camino libre medio en la producci\'on de pares. Contituye una escala de longitud apropiada para describir cascadas electromagn\'eticas de alta energ\'ia.}
-%Towers of readout cells with coarser granularity, $0.1 \times 0.1$ in the barrel, sum the energy in all three layers of cells and feed information to the trigger system.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -231,7 +231,7 @@ Finally, the EMEC uses the same accrodion geometry as the EMB, whereas the granu
 
 
 
-\subsubsection{The hadronic calorimeter}
+\subsubsection{The hadronic calorimeter}\label{sec:Tile}
 % TileCal [ ] Tile Calorimeter Technical Design Report, CERN/LHCC 96-42, 15-12-1996;
 
 
@@ -240,26 +240,27 @@ Outside the EM calorimeter lies the system of hadronic calorimeters. The barrel 
 The tile calorimeter is composed of 3~mm thick scintillating tiles, arranged to lie parallel  to the incoming particle direction, interleaved with 14~mm thick iron plates. %as shown in Figure!!!!!!!!!!!
 It is divided into the barrel calorimeter, covering $|\eta|<1.0$, and two extended barrel calorimeters, covering  $0.8 < |\eta| <1.7$. Each tile is read out by two wavelength-shifting fibers, which convert the scintillator signal to visible light. The readout fibers of several tiles are grouped to a single photomultiplier tube forming cells in $\eta \times \phi$ space. As in the EM calorimeter, these cells are segmented into three layers, the first two of size $\Delta \eta = 0.1$ and  $\Delta \phi = 0.1$ and the last of size   $\Delta \eta = 0.2$ and  $\Delta \phi = 0.1$.  Towers to provide information to the trigger systema are formed from 0.1$\times$0.1 grouping of all three layers.
 
+The HEC uses the LAr active readout design due to the higher radiation tolerance required for the forward regions.  Although housed in the same cryostat as the accordion geometry EMEC, the HEC implements a flat-plate design.
+
+The forward calorimeter extends to cover the region $3.1<|\eta|<4.9$. Since it is the only calorimeter that covers this very forward region, it must provide both electromagnetic and hadronic measurements. In addition, the high particle fluxes in this region necessitate a finely granulated design. The FCal is approximately 10 interaction lenghts deep, and consists of three modules in each end-cap: the first, made of copper, is optimised for electromagnetic measurements, while the other two, made of tungsten, measure predominantly the energy of hadronic interactions.
+
+The hadronic calorimeters are calibrated using muons in test-beam experiments (REFERENCIAS) and those muons produced by cosmic-rays in situ (REFERENCIA). The invariant mass of the $Z$ boson in $Z \rightarrow ee$ events measured in-situ in the 2010 $pp$ collisions is then used to adjust the calibration derived from test-beams and cosmic-muons.
+
+
+
 
 
 %------------------------------------------------------------------------
-\subsection{The Muon System}\label{sec:atlasCALO}
+\subsection{The Muon System}\label{sec:Muon}
 %------------------------------------------------------------------------
- El sistema de muones sirve a un doble prop\'osito: funciona como sistema de disparo (o \emph{trigger}) para la selecci\'on de eventos con muones de alta energ\'ia, y como espectr\'ometro de muones de alta precisi\'on. En este sentido, este detector llevar\'a a cabo la identificaci\'on de los muones producidos en las colisiones \emph{p-p}, determinando sus trayectorias y momentos.
-% Las part\'iculas provenientes del punto de interacci\'on atraviesan tres conjuntos de c\'amaras, uno situado previo al toroide, uno interior y otro posterior. 
-   El sistema consiste en un conjunto de toroides (llamamos as\'i, por su forma, a los tres conjuntos de bobinas que proveen el campo magn\'etico toroidal) y c\'amaras de tubos de deriva que se encuentran rodeando al calor\'imetro. En la parte del barril del detector, las c\'amaras est\'an situadas en el interior del toroide lo que permite la medici\'on del momento de las part\'iculas a partir de la desviaci\'on de sus trayectorias en el campo magn\'etico. En las tapas, donde la presencia del cri\'ostato impide posicionar las c\'amaras dentro del campo magn\'etico, el momento es medido a partir de la diferencia entre los \'angulos de entrada y salida del im\'an.
-En el plano trasversal, tanto en la regi\'on del barril como en las tapas laterales, el sistema de c\'amaras estar\'a dividido en 16 sectores, siguiendo la simetr\'ia determinada por las 8 bobinas del barril central del sistema magn\'etico. Las c\'amaras cubren el espacio entre las bobinas, y todo el rango acimutal en la regi\'on que las rodea. Los sectores se numeran comenzando a partir de $\phi = 0$, en el sentido contrario de las agujas del reloj, teniendo en la direcci\'on vertical a los sectores 6 (en la parte superior del detector) y 13 (sector inferior).  
+ 
+The muon system gives the ATLAS detector its overall shape and imposing nature, as depicted in Fig.~\ref{fig:MUON1}.
+Muons have much smaller cross section to interact in material than electrons and hadrons, for this, they 
+do not deposit all their energy in the calorimeters. The muon spectrometer is designed to detect muons within $|\eta|<2.7$. Because many new physics signatures involve high-momentum muons, the system is also required to provide trigger signals based on the particle $\pt$ for  $|\eta|<2.4$.
 
-   Los c\'amaras de tubos de deriva (MDTs) son c\'amaras proporcionales hechas de tubos de aluminio de 30 mm de di\'ametro y longitudes variables de 70 a 630 cm, con un hilo central de 50$\mu$m de di\'ametro, de W-Re. En la regi\'on del barril dichas c\'amaras est\'an distribuidas en 3 capas cil\'indricas conc\'entricas (estaciones) alrededor del haz, de 5; 7,5 y 10 metros de radio. Los tubos est\'an dispuestos de manera transversal al eje \emph{z} de manera de medir la coordenada en el plano de desviaci\'on de la trayectoria de la part\'icula (plano \emph{Rz}).  Estas c\'amaras miden el tiempo de deriva de la ionizaci\'on producida por el paso del mu\'on, teniendo una resoluci\'on de 80 $\mu$m.
-% MAS del TDR? Falta los radios de las estaciones(?)
-   
-   Cada c\'amara MDT est\'a cubierta por una o dos c\'amaras de placas resistivas (RPCs). Cada una de ellas encierra un volumen de gas entre planchas resistivas de baquelita, dotada una de ellas con tiras de electrodos. Dado que los tubos de deriva poseen un di\'ametro relativamente grande que resulta en un tiempo de deriva m\'aximo de 480ns, mucho mayor que los 25 ns entre cruce de \emph{bunches}, se requieren c\'amaras especiales de disparo para la selecci\'on de eventos. La funci\'on de trigger en el barril es provista por tres capas de RPCs, situadas, dos de ellas, a ambos lados de la segunda estaci\'on de MDTs y la restante, en la cara interior de la estaci\'on m\'as externa. 
-En las tapas, esta funci\'on es cumplida por tres estaciones de TGCs (\emph{Thing Gap Chambers}). Estas c\'amaras son similares en dise\~no a c\'amaras prporcionales multihilo, con la diferencia de que poseen una distancia c\'atodo-c\'atodo menor que la pendiente del \'anodo (hilo). 
-   Las c\'amaras de disparo proveen una estimaci\'on de las coordenadas $\phi$ y $\eta$ del punto de impacto de la traza, mientras que las c\'amaras MDTs dar\'an (con mayor precisi\'on) la coordenada $\eta$.
+To provide a momentum measurement, the muons trajectorires are bent in a toroidal magnetic field. This field is provided by one large barrel toroid and two large end-cap toroids.  
 
-    En la regi\'on de bajo \'angulo, donde la densidad de trazas es mayor, se utilizan c\'amaras de tiras de c\'atodos (CSCs) de granularidad m\'as fina comparadas con las MDTs, para la detecci\'on de trayectorias. Estas c\'amaras son c\'amaras proporcionales, con un espacio entre hilo de 2,5 mm. Cada una de ellas proporciona medida de dos coordenadas y puede operar en condiciones de alto campo magn\'etico.
-
-   En la figura \ref{fig:MUON1} se puede ver un esquema del espectr\'ometro de muones, donde se indica la posici \'on de las diferentes c\'amaras descriptas.
+ 
 
 \begin{figure}[htbp]
   \begin{center}
@@ -269,18 +270,6 @@ En las tapas, esta funci\'on es cumplida por tres estaciones de TGCs (\emph{Thin
   \end{center}
 \end{figure}
 
-
-
-%EL SYSTEMA DE IMANES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-El sistema de imanes superconductores de ATLAS consiste en un solenoide central que provee el campo magn\'etico necesario al detector interno, rodeado por un arreglo de bobinas o bucles, con forma de pista de carrera, que generan un campo magn\'etico toroidal para el espectr\'ometro de muones.Todo el sistema es enfriado de manera indirecta mediante el flujo de helio l\'iquido a 4,5 K.
-
-   El solenoide es un electroim\'an superconductor de 5,3 m de largo, situado en el interior del calor\'imetro electromagn\'etico. Comparte el cri\'ostato con el calor\'imetro de arg\'on l\'iquido, evitando la presencia de dos paredes criost\'aticas y reduciendo as\'i la cantidad de material introducido. La longitud del solenoide es considerablemente m\'as peque\~na que la del barril del detector de trazas. Este es el resultado de un compromiso: un bobinado corto reduce la cantidad de material introducido mientras que uno largo proporciona un campo magn\'etico m\'as uniforme en dicho detector. El campo magn\'etico a lo largo del eje \emph{z} es de 2 T en el punto de interacci\'on.
-% existe .criost\'aticas.?
-
-   El arreglo de bobinas est\'a dividido en un barril central y dos regiones laterales, al igual que los detectores. El barril central est\'a constituido por 8 bobinas de 5 m de ancho por 25 metros de largo aproximadamente, dispuestas sim\'etricamente alrededor del haz de manera radial. Las bobinas del barril se encuentran en cri\'ostatos separdos, mientras que las 8 bobinas en cada una de las tapas o toroides laterales est\'an ubicadas en un cri\'ostato com\'un.
-
-   Con un campo magn\'etico toroidal las part\'iculas atravesar\'an todo el rango de pseudorapidez casi perpendicularmente al haz. El n\'umero peque\~no de bobinas que generan el campo toroidal resulta en una intensidad de campo que var\'ia fuertemente con la coordenada $\phi$. En el barril el campo magn\'etico es de 2 T, mientras que en las tapas es de 4 T en las zonas de mayor intensidad.   
 
 
 
