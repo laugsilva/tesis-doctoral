@@ -7,8 +7,8 @@
 \contentsline {subsubsection}{The SCT}{13}
 \contentsline {subsubsection}{The TRT}{14}
 \contentsline {subsection}{\numberline {1.2.2}The Calorimeter System}{15}
-\contentsline {subsubsection}{The electromagnetic calorimeter}{16}
-\contentsline {subsubsection}{The hadronic calorimeter}{20}
+\contentsline {subsubsection}{Liquid argon EM calorimeter}{16}
+\contentsline {subsubsection}{The hadronic calorimeter}{19}
 \contentsline {subsection}{\numberline {1.2.3}The Muon System}{21}
 \contentsline {subsection}{\numberline {1.2.4}Trigger and Data Adquisition}{25}
 \contentsline {subsubsection}{Arquitectura general}{25}
