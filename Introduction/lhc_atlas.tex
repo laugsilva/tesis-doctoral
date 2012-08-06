@@ -280,115 +280,92 @@ A description of the subsystems can be found elsewhere (REFERENCIAS!!!).
 \subsection{Forward detectors}\label{sec:forward}
 %------------------------------------------------------------------------
 
-Three smaller detector systems cover the ATLAS forward region. The main function of the first two systems is to determine the luminosity delivered to ATLAS. At $\pm$17~m from the interaction point lies LUCID (LUminosity measurement using Cerenkov Integrating Detector). The principle of LUCID is to detect inelastic $p-p$ scattering in the forward region, exploiting the fact that the number of particles detectted is proportional to the total, both primary and pileup, interactins in a bunch$-$crossing.  LUCID thus provides a relative luminosity measurement, in which the detected number of particles must be translated to the total number of proton$-$proton interactions via calibration runs.
+Three smaller detector systems cover the ATLAS forward region. The main function of the first two systems is to determine the luminosity delivered to ATLAS. At $\pm$17~m from the interaction point lies LUCID (LUminosity measurement using Cerenkov Integrating Detector). The principle of LUCID is to detect inelastic $p-p$ scattering in the forward region, exploiting the fact that the number of particles detectted is proportional to the total, both primary and pileup, interactins in a bunch-crossing.  LUCID thus provides a relative luminosity measurement, in which the detected number of particles must be translated to the total number of proton-proton interactions via calibration runs.
 The second detector is ALFA (Absolute Luminosity For ATLAS). Located at $\pm$240~m, it consists of scintillating fibre trackers located inside Roman pots which are designed to approach as close as 1~mm to the beam. 
-The third system is Zero$-$Degree Calorimeter (ZDC), which place a role in determining the centrality of heavy$-$collisions.
+The third system is Zero-Degree Calorimeter (ZDC), which place a role in determining the centrality of heavy-collisions.
 
 
 
 %------------------------------------------------------------------------
-\subsection{Trigger and Data Adquisition}\label{sec:atlasCALO}
+\subsection{Trigger and Data Adquisition}\label{sec:TDAQ}
 %------------------------------------------------------------------------
- En este cap\'itulo se analiza la estructura del trigger de ATLAS, y el sistema de adquisici\'on y flujo de los datos. Se presenta, asimismo, una breve descripci\'on de los algoritmos usados en la reconstrucci\'on de trayectorias para la selecci\'on de eventos en el detector interno. 
 
 
-\subsubsection{Arquitectura general}
 
-   El sistema de Trigger y Adquisici\'on de Datos\cite{TDRtdaq} de ATLAS est\'a basado en tres niveles de selecci\'on \emph{online}: Nivel 1, Nivel 2 y Filtro de Eventos. Cada nivel es m\'as lento pero m\'as preciso que el anterior. Trabajando con una frecuencia de interacci\'on de $10^{9}$ Hz y luminosidades del orden de $10^{34}$ $cm^{-2}$ $s^{-1}$, este sistema ser\'a el encargado de reducir la frecuencia de eventos inicial de 40 MHz a 200Hz, que es la velocidad con la que pueden almacenarse. 
+At design luminoisty, the LHC will deliver approximately 40 million collision events every second. With an average ATLAS event size of $\sim$1.5~MB, this is far more information than can be saved into the finite data storage resources available. The goal of the trigger system is to move interesting physics events to permanent storage, while rejecting the vast majority of other events.
 
-   En la figura \ref{fig:TDAQ} se muestra un vista simplificada de los principales componentes y funciones.  
+The online selection is done in three stages: the Level 1 (L1), Level 2 (L2) and Event Filter (EF) stages.  Each trigger level refines the decisions made at the previous level and, where necessary, applies additional selection criteria. The data acquisition (DAQ) system  receives and buffers the event data from the detector-specific readout electronics, at the L1 trigger accept rate, over 1600 point-to-point readout links. The L1 trigger uses a limited amount of the total detector information (only from the calorimeter and the muon systems) using only simple hardware based algorithms to make a decision in less than 2.5~$\mu$s, reducing the rate to about 75~kHz. The L2 and EF, collectively referred to as the High Level Trigger (HLT), are based on fast software algorithms running on large farms of commercial processors.  The L2 is the first stage of the ATLAS DAQ system that has access to data from the ID and is capable of doing partial reconstruction of events up to the L1 accept rate. L2 trigger is designed to reduce the rate to approximately 3.5~kHz, with an event processing time of about 40~ms, averaged over all events. The EF reduces the rate to roughtly 200~Hz. Its selections are implemented  using offline analysis procedures within an average event processing time of the order of 4~s.
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.5\textwidth]{Fig3/paint_TDAQ.pdf}
-\caption{Principales componentes del sistema de trigger y adquisici\'on de datos de ATLAS. } 
-\label{fig:TDAQ}
-\end{center}
-\end{figure}
+The L1 trigger is desinged to accept high-$\pt$ muons, electrons, photons, jets, and taus, as well as events with large missing transverse energy or sum energy. It uses signals from the TGCs and RPCs from muon triggers and reduced granularity calorimeter information for electron, photon, jet, tau and total energy triggers. The calorimeter trigger system, which maintains a fast readout independent from the remainder of the calorimeter is known as the Level-1 Calorimeter. % (L1Calo).  
+At this level coarse calorimeter information is available in the form of jet elements with $\Delta \eta \times \Delta \phi = 0.2 \times 0.2$ for $|\eta|<3.2$. Jets are reconstructed using a square sliding window algorithm. In addition to coarse jets, the total transverse energy is also measured at the L1. 
+The region of the detector corresponding to the location where the L1 thresholds were passed $-$ so called ``region of interes'' (RoI) $-$ are then delivered to the L2 sofware algorithms.
 
-   El mecanismo que lleva a cabo el movimiento de la informaci\'on (Data Flow System), es el responsable de recibir los datos de los detectores, pasando parte de ellos al sistema de trigger y enviando luego, los eventos seleccionados al lugar de almacenamiento. Siguiendo el esquema de la figura, la comunicaci\'on entre los \emph{drivers} de lectura %controladores de lectura?
-de cada detector (RODs) y el sistema de adquisici\'on de datos, est\'a dada por los \emph{buffers} de almacenamiento transitorio (ROBs). La informaci\'on de los eventos aceptados por el Nivel 1 son transportados de los primeros al sistema de lectura (ROS), que consta de numerosos ROBs, guardando los datos a la espera de la decisi\'on del trigger. La informaci\'on requerida por el segundo nivel es provista por estos \'ultimos. Los eventos aceptados son reconstruidos (a partir de fragmentos contenidos en diferentes ROBs) y pasados al siguiente nivel.
-%(\emph{Read Out Drivers})
-%(\emph{Read Out Buffers})
-% (\emph{Read Out System})
+The L2 trigger applies additional energy thresholds and multiplicity requirements using the RoI around triggered L1 objects. For example, the L2 jet trigger retrieves the data from cells surrounding the L1 RoI and constructs jets using a simplified cone jet algorithm. 
 
-   El Nivel 2 y el Filtro de Eventos componen el \emph{High-level Trigger} (HLT) de ATLAS. El Nivel 2 trabaja a la frecuencia de aceptaci\'on del Nivel 1, utilizando una secuencia de r\'apidos algoritmos de selecci\'on que operan t\'ipicamente sobre una fracci\'on de los datos del evento, contenida en regiones del detector previamente seleccionadas por ese nivel (ver el mecanismo de la regi\'on de inter\'es en la siguiente secci\'on). Si la decisi\'on del Nivel 2 es rechazar el evento, los datos del mismo son eliminados de los buffers correspondientes. Si el evento es aceptado,  se reconstruye  en el EB (Event Builder) y es pasado al Filtro de Eventos. Este nivel ejecutar\'a algoritmos de reconstrucci\'on m\'as sofisticados, adaptados de aquellos para el an\'alisis \emph{offline}, utilizando informaci\'on detallada de los detectores para efectuar el proceso de selecci\'on final, que determinar\'a cu\'ales son los eventos que ser\'an guardados para posteriores estudios.
+The next step and last stage in the trigger chain is the EF, which receives events that have been selected by the L2 triggers and processes the entire event with the full detector granularity instead of only a restricted region. 
 
-  En las siguientes secciones se presenta una descripci\'on m\'as detallada de los niveles de trigger.
+The monitoring infrastructure of the HLT supports the real-time accumulation of histograms, and their aggregation across the farm, so that parameters can be extracted from cumulative distributions that contain events from all processor nodes. Beam parameters determined from those live  histograms are transmitted online to the LHC and are also available to fed back into the HLT itself for use by its own trigger algorithms that depend on the precise knowledge of the luminous regino (such as $b$-jet tagging).
+
+
 
  
-\subsubsection{El Nivel 1}
 
-   El primer nivel de trigger de ATLAS es implementado mediante hardware. \'Este realiza una decisi\'on inicial a partir de la informaci\'on provista por los calor\'imetros y del detector de muones, basando su estrategia en la combinaci\'on de objetos en coincidencia. %or veto.
+ %  En la figura \ref{fig:TDAQ} se muestra un vista simplificada de los principales componentes y funciones.  
+
+%\begin{figure}[!h]
+%\begin{center}
+%\includegraphics[width=0.5\textwidth]{Fig3/paint_TDAQ.pdf}
+%\caption{Principales componentes del sistema de trigger y adquisici\'on de datos de ATLAS. } 
+%\label{fig:TDAQ}
+%\end{center}
+%\end{figure}
+
   
-   En el sistema de muones, los candidatos de alto momento transverso son identificados en las c\'amaras especiales de trigger: RPCs en el barril y TGCs en las tapas. En el caso del calor\'imetro, se definen una serie de conjuntos de umbrales de $p_T$ para cada objeto (electrones, fotones, jets, etc.), seleccionando aquellos que pasen los criterios de selecci\'on correspondientes al evento f\'isico de inter\'es. 
 
-   Puesto que la decisi\'on de aceptar un evento no puede ser realizada en los 25 ns que median entre dos cruces de \emph{bunches}, los subdetectores almacenan localmente la informaci\'on del mismo en \emph{pipelined buffers} hasta que el Nivel 1 efect\'ua la selecci\'on. Luego, los datos son enviados a los RODs especi\'ficos de cada detector para luego dirigirse a los ROBs, donde son almacenados hasta que la decisi\'on del Nivel 2 sea alcanzada. 
-   Cuando un evento es aceptado, el Nivel 1 comunica la decisi\'on al mecanismo que se encargar\'a de construir una Regi\'on de Inter\'es (RoI). Este mecanismo es una importante pieza sobre la que descansa la estrategia del sistema de trigger; a trav\'es del mismo, el Nivel 2 har\'a uso de la informaci\'on del evento en regiones localizadas del detector, de manera que los algoritmos de reconstrucci\'on en ese nivel s\'olo transfieran los ROBs necesarios para arribar a una r\'apida decisi\'on. %Es importante notar que la informaci\'on de todos los subdetectores est\'a disponible para dichos algoritmos en caso de ser necesario.
-La RoI contendr\'a la informaci\'on de la posici\'on ($\eta$ y $\phi$) y el momento de los objetos candidatos.
-
-   Este nivel est\'a dise\~nado para llevar a cabo su decisi\'on en un tiempo menor a 2.5 $\mu$s, medidos desde la colisi\'on \emph{p-p}, hasta que la informaci\'on del evento est\'a disponible en la electr\'onica de salida de los detectores. En este proceso la frecuencia de eventos ser\'a reducida a 75KHz (l\'imite fijado por la electr\'onica).
-
-\subsection{El HLT}
-
- El High-level Trigger de ATLAS abarca la segunda y tercera etapa de la selecci\'on de eventos. Comprende el Nivel 2 y el Filtro de Eventos, y contiene adem\'as, el Software de Selecci\'on (ESS). Este \'ultimo comparte la estructura usada por el Offline para los c\'odigos de selecci\'on, facilitando el an\'alisis \emph{offline} de los datos, y el desarrollo de algoritmos en el HLT.
-
-   El punto de entrada del trigger es el resultado del Nivel 1. \'Este provee informaci\'on acerca de la regi\'on de inter\'es, fundamental para el r\'apido funcionamiento de los algoritmos del Nivel 2. As\'i, los datos del Nivel 1 gu\'ian la selecci\'on del Nivel 2; y \'esta a su vez guiar\'a la del Filtro de eventos, como se ilustra en la figura \ref{fig:HLTchainseed}. 
-%HLTchain_seeding.pdf
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.9\textwidth]{Fig3/HLTchain_seeding.pdf} 
-\caption{Cadena de selecci\'on del \emph{High-level Trigger} de ATLAS. Cada nivel es guiado por el resultado del paso anterior.}
-\label{fig:HLTchainseed}
-\end{center}
-\end{figure}
-
-
-\subsubsection{El Nivel 2}
-   La tarea espec\'ifica del Nivel 2 es reducir la frecuencia de eventos de $\sim$ 100 kHz a alrededor de 2 kHz, combinando la informaci\'on de todos los detectores para su decisi\'on global. A diferencia del Nivel 1, esta segunda etapa de selecci\'on realiza operaciones no sincronizadas sobre los eventos, con un tiempo de decisi\'on de 10 ms.
-%asynchronous??
-
-   El Nivel 2 utiliza las regiones de inter\'es provistas por el Nivel 1. Cada regi\'on es examinada en el subdetector de origen (calor\'imetro o sistema de muones) para su confirmaci\'on; para luego buscar informaci\'on de otros subdetectores. En el caso del trigger de muones, el poder de rechazo del Nivel 2 proviene de ajustar los umbrales de $p_{T}$, respecto de los utilizados en el primer nivel, a partir de la informaci\'on de las c\'amaras de precisi\'on del sistema de muones (MDTs) y la correspondiente al detector interno.
-Los procesadores del Nivel 2 son los encargados de ejecutar luego el software de selecci\'on de eventos, utilizando la informaci\'on almacenada en los \emph{buffers}. Usando las RoIs del Nivel 1, el Nivel 2 acceder\'a de manera selectiva a los datos en los ROBs, moviendo s\'olo la informaci\'on requerida para efectuar la decisi\'on. T\'ipicamente, s\'olo una peque\~na fracci\'on del detector, correspondiente a las regiones centradas en los objetos indicados por el Nivel 1, ser\'an necesitados por el segundo nivel.
-
-  Hasta que un evento es aceptado o rechazado (en $\sim$ 10 ms), los datos son retenidos en los ROBs. En caso de aceptaci\'on, los fragmentos del evento almacenados en distintos buffers ser\'an requeridos por el sistema de control del Nivel 2 (L2SVs) para ser enviados al constructor de eventos (EB). El evento ensamblado es guardado en una \'unica direcci\'on de memoria para ser utilizado por el Filtro de Eventos. El tama\~no promedio de un evento ser\'a del orden de 1,5 MB.
-
-
-\subsubsection{El Filtro de Eventos}
-
-  Luego del Nivel 2, la \'ultima etapa de selecci\'on \emph{online} es realizada por el Filtro de Eventos (EF). El EF emplea algoritmos y m\'etodos similares a los implementados en el an\'alisis \emph{offline}, adaptados para su corrida en el tiempo real del experimento; su poder de rechazo radica en el uso de algoritmos y criterios de selecci\'on m\'as complejos, que por l\'imites en el tiempo de procesamiento no pueden ser utilizados en el Nivel 2.
-  
-  El EF utilizar\'a informaci\'on actualizada de la calibraci\'on y alineamiento del detector y un completo mapa del campo magn\'etico; llevando a cabo con ello la selecci\'on final del evento f\'isico que ser\'a guardado para su estudio en el Offline. La frecuencia de aceptaci\'on del nivel anterior ser\'a reducida en un orden de magnitud, almacenando a una tasa de $\sim$100 MB/s.
-
-
-\subsubsection{El software de selecci\'on}
-\label{'HLTalgos'}
-   
- La tarea del software de selecci\'on (ESS) es la selecci\'on y clasificaci\'on de los eventos. Candidatos tales como electrones, jets, muones, etc., representados por objetos abstractos, son reconstruidos utilizando un particular conjunto de algoritmos. Un evento es seleccionado si el objeto reconstruido satisface al menos una de las signaturas establecidas en el men\'u del sistema de disparo. En el Nivel 2 y el Filtro de Eventos (EF), los eventos ser\'an rechazados si no pasan los espec\'ificos criterios de selecci\'on, dise\~nados para la reducci\'on de la frecuencia de eventos, al l\'imite dado por la velocidad a la que \'estos pueden ser almacenados.
-
- El ESS se compone de una infraestructura y un conjunto de programas de selecci\'on para las dos etapas del HLT.  Los algoritmos de reconstrucci\'on para el trigger est\'an basados en aquellos utilizados para la reconstrucci\'on \emph{offline}, pero correr\'an \emph{online} en el entorno de software provisto por los procesadores del Nivel 2 y el EF. 
-
-  De manera de facilitar el desarrollo de los algoritmos del HLT y simplificar los estudios del Offline; el ESS ha sido dise\~nado de manera de poder ser ejecutado directamente en el entorno provisto por la estructura de software de an\'alisis offline del experimento, ATHENA\cite{Athena}. La estructura dada por este paquete de software es lo suficientemente flexible como para abarcar una variedad de procesos, incluyendo no s\'olo algoritmos de trigger sino tambi\'en tareas de calibraci\'on y monitoreo. Se ha destinado un ap\'endice (A) para su descripci\'on.
- 
-  En el Offline, la tarea del ESS es la de emular la cadena completa de selecci\'on \emph{online}. Para su ejecuci\'on el sistema se sirve de cuatro sub-paquetes: el direccionamiento o \emph{Steering}, los algoritmos del HLT, y los paquetes de software para la clasificaci\'on y movimiento de los datos, EDM (\emph{Event Data Model}) y el DM (\emph{Data Manager}). Los \'ultimos toman los datos del evento en el formato que poseen a la salida de los sistemas de lectura (\emph{Raw data} en formato \emph{byte stream}), y los convierten en objetos que puedan ser usados por los algoritmos en la cadena de selecci\'on (\emph{Raw Data Objects}).
-
-  La tarea de los algoritmos del HLT es la de analizar los datos del evento, reconstruyendo partes del mismo, luego de la selecci\'on del Nivel 1. El paquete se compone de dos subconjuntos principales:
-%itemize
-\begin{itemize}
-   \item Programas de preparaci\'on de datos. Son los algoritmos ejecutados por los sistemas EDM y DM para la conversi\'on del formato de los datos del evento. 
-   \item Algoritmos FEX o de \emph{Feature Extraction}. Comprende los programas de reconstrucci\'on y los llamados algoritmos de ``hip\'otesis''. Estos \'ultimos (a los primeros nos referiremos en la siguiente secci\'on) son aquellos programas que se encargan de eliminar, una vez realizada la reconstrucci\'on, aquellos candidatos que no cumplen con las caracter\'isticas o atributos asignados al evento f\'isico en consideraci\'on (hip\'otesis), aplicando espec\'ificos criterios de selecci\'on. La presencia de los algoritmos de hip\'otesis es fundamental en la secuencia del HLT ya que evita la ejecuci\'on innecesaria de algoritmos al descartar eventos en las primeras etapas de la cadena.
-\end{itemize}
-
-  Por \'ultimo, el subpaquete de \emph{Steering} es aquel que organiza el procesamiento de los datos del evento en el Nivel 2 y el Filtro de eventos; controlando el orden en el que los algoritmos de reconstrucci\'on e hip\'otesis son ejecutados. El Steering define la secuencia del HLT, y manipula los resultados en cada paso de selecci\'on de manera que la decisi\'on del trigger sea alcanzada.
 
 
 %------------------------------------------------------------------------
-\subsection{Data quality}\label{sec:atlasSim}
+\subsection{ATLAS Performance and Data quality}\label{sec:DQ}
 %------------------------------------------------------------------------
+
+The ATLAS detector has been operational for a number of years collecting large amounts of data. Before the start-up of the LHC, measuring muons from cosmic rays, which were used to test, understand and align the detector. In 2010 and 2011 ATLAS recorded over 5.2fb$^{-1}$ of collision data. Fig.~\ref{fig:integratedlumi} presented the luminosity delivered by the LHC in 2011 as well as the recorded luminosity by the detector, showing a good performance of the ATLAS Experiment.
+
+The fraction of time that each subdetector system was operational during data-taking is shown in Table~\ref{tb:operational}.
+
+The Data Quality (DQ) selection within ATLAS is based on the inspection of a standard set of distributions that lead to a data quality assesment which is encoded in so-called DQ flags. DQ flags are issued for each detector, usually segmented in subdetectors like barrel, end-caps and forward. DQ flags are also issued for trigger slices and for each physics object reconstruction. In this way, the state of the ATLAS detector from hardware to physics object reconstruction is expressed through DQ flags, which are saved per luminosity block. A luminosity block is a time interval of typically two minutes. 
+
+The DQ information is used in analyses through dedicated lists of good runs/luminosity blocks. Good run lists are formed by DQ selection criteria in addition to other criteria, such as run range, magnetic field configuration and beam energy. A complete list of valid physics runs and luminosity blocks is used in each analysis.
+
+
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c | c |}
+\hline
+  ~~~~~~~~~~Detector component~~~~~~~~~~ &~~operational~~ \\ \hline
+  Inner Detector         &   \\ 
+  ~~Pixel     & $\approx$96.4\%  \\
+  ~~SCT       & $\approx$99.2\%  \\
+  ~~TRT       & $\approx$97.5\%  \\ \hline 
+  Calorimeter               &   \\ 
+  ~~EM                      & $\approx$99.8\%  \\
+  ~~Tile                    & $\approx$96.2\%  \\
+  ~~Hadronic, end-cap       & $\approx$99.6\%  \\ 
+  ~~Forward calorimeter     & $\approx$99.8\%  \\ \hline 
+  Muon Spectrometer         &   \\ 
+  ~~MDT       & $\approx$99.7\%  \\
+  ~~CSC       & $\approx$97.7\%  \\
+  ~~RPC       & $\approx$97.0\%  \\ 
+  ~~TGC       & $\approx$97.9\%  \\ \hline 
+\end{tabular}
+\caption{The approximate fraction of time that each individual subdetector system was operational during data-taking. }
+\label{tb:operational}
+\end{table}
+
 
 %------------------------------------------------------------------------
 \subsection{Simulation of particle interactions in the ATLAS Detector}\label{sec:atlasSim}
 %------------------------------------------------------------------------
 
-
+HERE????
 

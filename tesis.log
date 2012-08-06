@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  2 AUG 2012 12:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  6 AUG 2012 10:52
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -55,17 +55,7 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@partial=\box26
 \AP@footins=\box27
 ) (./tesis.aux
-(./Introduction/lhc_atlas.aux
-
-LaTeX Warning: Label `sec:atlasCALO' multiply defined.
-
-
-LaTeX Warning: Label `sec:atlasCALO' multiply defined.
-
-
-LaTeX Warning: Label `sec:atlasSim' multiply defined.
-
-))
+(./Introduction/lhc_atlas.aux))
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
@@ -80,7 +70,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
- (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen105
@@ -195,11 +186,6 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
  [18]
-Overfull \hbox (3.69882pt too wide) in paragraph at lines 219--220
-[]\OT1/cmr/m/n/12 Finally, the EMEC uses the same ac-cro-dion ge-om-e-try as th
-e EMB, whereas
- []
-
 <Fig2/EM_acordionstructure.pdf, id=128, 710.655pt x 627.34375pt>
 File: Fig2/EM_acordionstructure.pdf Graphic file (type pdf)
 
@@ -210,70 +196,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 d=148, 3012.42432pt x 2259.50154pt>
 File: Fig2/MuonChamber.pdf Graphic file (type pdf)
 
-<use Fig2/MuonChamber.pdf>
-Overfull \hbox (0.53911pt too wide) in paragraph at lines 276--277
-[]\OT1/cmr/m/n/12 El sis-tema de imanes su-per-con-duc-tores de AT-LAS con-sist
-e en un solenoide
- []
-
-[23] [24 <./Fig2/MuonChamber.pdf>]
-
-LaTeX Warning: Citation `TDRtdaq' on page 25 undefined on input line 295.
-
+<use Fig2/MuonChamber.pdf> [23] [24 <./Fig2/MuonChamber.pdf>]
 <Fig3/paint_TDAQ.pdf, id=159, 401.5pt x 440.64626pt>
 File: Fig3/paint_TDAQ.pdf Graphic file (type pdf)
  <use Fig3/paint_TDAQ.pdf>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `fig:integratedlumi' on page 25 undefined on input line
+ 320.
 
-[25]
-Overfull \hbox (10.73611pt too wide) in paragraph at lines 313--314
-\OT1/cmr/m/n/12 lizando una se-cuen-cia de r^^Sapidos al-go-rit-mos de se-lecci
-^^Son que op-eran t^^S^^Ppicamente
- []
+[25 <./Fig3/paint_TDAQ.pdf>]
 
-[26 <./Fig3/paint_TDAQ.pdf>] [27]
-<Fig3/HLTchain_seeding.pdf, id=173, 809.0225pt x 386.44376pt>
-File: Fig3/HLTchain_seeding.pdf Graphic file (type pdf)
+LaTeX Warning: Reference `tab:operational' on page 26 undefined on input line 3
+22.
 
-<use Fig3/HLTchain_seeding.pdf>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28] [29 <./Fig3/HLTchain_seeding.pdf>] [30]
-
-LaTeX Warning: Citation `Athena' on page 31 undefined on input line 369.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 376.
-
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 376.
- [31]) [32] (./tesis.bbl
+) [26] [27] (./tesis.bbl
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¼ in font cmr12!
-)
-[33
+) [28
 
 
 ] (./tesis.aux (./Introduction/lhc_atlas.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 1091 strings out of 495061
- 14444 string characters out of 1182621
- 64988 words of memory out of 3000000
- 4282 multiletter control sequences out of 15000+50000
+ 1071 strings out of 495061
+ 14064 string characters out of 1182621
+ 65999 words of memory out of 3000000
+ 4266 multiletter control sequences out of 15000+50000
  10984 words of font info for 38 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,9n,20p,1077b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,19p,1077b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
@@ -287,9 +241,9 @@ e1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
 fonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (38 pages, 19705846 bytes).
+Output written on tesis.pdf (33 pages, 19675955 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
+ 223 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
