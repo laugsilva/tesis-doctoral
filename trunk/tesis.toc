@@ -8,14 +8,9 @@
 \contentsline {subsubsection}{The TRT}{14}
 \contentsline {subsection}{\numberline {1.2.2}The Calorimeter System}{15}
 \contentsline {subsubsection}{Liquid argon EM calorimeter}{16}
-\contentsline {subsubsection}{The hadronic calorimeter}{19}
-\contentsline {subsection}{\numberline {1.2.3}The Muon System}{21}
-\contentsline {subsection}{\numberline {1.2.4}Trigger and Data Adquisition}{25}
-\contentsline {subsubsection}{Arquitectura general}{25}
-\contentsline {subsubsection}{El Nivel 1}{27}
-\contentsline {subsection}{\numberline {1.2.5}El HLT}{28}
-\contentsline {subsubsection}{El Nivel 2}{28}
-\contentsline {subsubsection}{El Filtro de Eventos}{30}
-\contentsline {subsubsection}{El software de selecci\'on}{30}
-\contentsline {subsection}{\numberline {1.2.6}Data quality}{32}
-\contentsline {subsection}{\numberline {1.2.7}Simulation of particle interactions in the ATLAS Detector}{32}
+\contentsline {subsubsection}{The hadronic calorimeter}{21}
+\contentsline {subsection}{\numberline {1.2.3}The Muon System}{22}
+\contentsline {subsection}{\numberline {1.2.4}Forward detectors}{23}
+\contentsline {subsection}{\numberline {1.2.5}Trigger and Data Adquisition}{24}
+\contentsline {subsection}{\numberline {1.2.6}ATLAS Performance and Data quality}{25}
+\contentsline {subsection}{\numberline {1.2.7}Simulation of particle interactions in the ATLAS Detector}{26}
