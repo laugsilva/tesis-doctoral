@@ -38,7 +38,7 @@ Knowing QCD predictions is crucial in the design of methods to search for new ph
 %The above shower descriptions hold for final-state branching. With initial-state hadrons, one also needs to be careful with the treatment of the PDFs, since the collinear splitting that is accounted for in the parton shower is also connected with the way the PDF is built up at the scale of the hard scattering.
 (This) procedure for generating a parton shower event is present in PYTHIA (pt-oredered and HERWIG (angular ordering), the ones we use in this thesis and others like SHERPA. (REFERENCIAS!). 
 Real events consist not of partons but of hadrons. Since we have no idea how to calculate the transition between partons and hadrons, Monte Carlo event generators resort to ‘hadronization’ models. One widely-used model involves stretching a colour ‘string’ across quarks and gluons, and breaking it up into hadrons [REFERENCIAS]. This is the Lund model  in Monte Carlo program PYTHIA.
-Another model breaks each gluon into a q q pair and then groups quarks and anti-quarks into colourless ‘clusters’, which then give the hadrons. This cluster type hadronization is implemented in the H ERWIG event generator [REFERENCIAS] and recent versions of SHERPA.
+Another model breaks each gluon into a q q pair and then groups quarks and anti-quarks into colourless ‘clusters’, which then give the hadrons. This cluster type hadronization is implemented in the HERWIG event generator [REFERENCIAS] and recent versions of SHERPA.
 Hadronization models involve a number of ‘non-perturbative’ parameters. The parton-shower
 itself involves the non-perturbative cutoff Q0 . These different parameters are usually tuned to data from
 the LEP experiments.
@@ -49,7 +49,37 @@ few GeV, and known as multiple parton interactions. This modelling of the underl
 order to give an accurate reproduction of the (quite noisy) energy flow that accompanies hard scatterings
 in hadron-collider events.
 
+\subsubsection{Pythia}
 
+PYTHIA is a general-purpuse event generator. It has been used extensively for $e^+ e^-$, $ep$ and $pp/p\bar{p}$, e.g at LEP, HERA and the Tevatron, and during the last 20 years has probably been the most used generators for LHC physics studies. 
+
+%PYTHIA in its version 6 is the product of over thirty years of progress. 
+
+PYTHIA contains an extensive list of hardcoded subprocesses, over 200, that can be switched on individually. These are mainly 2$\rightarrow$1 and  2$\rightarrow$2, some  2$\rightarrow$3, but no multiplicities higher than that. Consecutive resonance decays may of course lead to more final-state particles, as will parton showers.
+
+In PYTHIA generator showers are ordered in transverse momentum (REFERENCIA)%http://arxiv.org/abs/hep-ph/0408302
+both for ISR and for FSR. Also MPIs are ordered in $\pt$.
+
+
+
+\subsubsection{Herwig$++$}
+
+Herwig$++$ is based on the event generator HERWIG (Hadron Emission Reactions With Interfering Gluons), which was first published in 1986 and was developed throughout the era of LEP.  HERWIG was written in Fortran, and the new generator, Herwig$++$ developped in C$++$. The version used in this thesis is versin 2.4.2 released in 2009. Some distinctive features of Herwig$++$ are:
+
+\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
+\item
+Angular ordered parton showers.
+\item
+Cluster hadronization.
+\item 
+Hard and soft multiple partonic interactions to model the underlying event and soft inclusive interactions (REFERENCIA) %http://arxiv.org/abs/0803.3633
+%\item 
+\end{itemize}
+
+
+A more detailed descripcion can be found elsewhere (REFERENCIAS).
+%http://arxiv.org/abs/0803.0883
+%http://arxiv.org/abs/arXiv:1101.2599
 
 \subsection{Jet algorithms}
 
