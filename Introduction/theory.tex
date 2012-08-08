@@ -1,0 +1,58 @@
+\%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theory
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\chapter{Quantum Chromodynamics}
+\chapter{The theory of the strong interactions}
+
+%------------------------------------------------------------------------
+\section{The Standar Model}\label{sec:qcdintro}
+%------------------------------------------------------------------------
+
+
+%------------------------------------------------------------------------
+%\section{QCD calculations}\label{sec:qcd}
+%------------------------------------------------------------------------
+
+%------------------------------------------------------------------------
+\section{Jet physics}\label{sec:jets}
+%------------------------------------------------------------------------
+
+\subsection{Monte Carlo parton-shower programs}
+
+%From Gavins's http://arxiv.org/abs/1011.5131
+Different classes of techniques can be used to make QCD predictions at hadron colliders, and in particular at the LHC. 
+The so called Matrix Element Monte Carlos, including LO, NLO, and NNLO calculations. These ``fixed-order predictions'' involve the first couple of terms in the QCD perturbative expansion for a given cross section; as one includes further orders in the expansion one can reasonably hope to see systematic improvement in the accuracy of one's predictions.
+%Are these characteristics representative of the ‘typical’ situation for collider observables? We only have predictions up to NNLO in a handful of cases (see below) and in those it is. In cases where wejust have NLO predictions, the features of large ‘K-factors’ (NLO/LO enhancements) with a reduced NLO uncertainty band are not uncommon, suggesting that beyond NLO corrections should be small. Exceptions are known to arise in two types of case: those where new enhanced partonic scattering channels open up at NLO (or beyond); and that involve two disparate physical scales.
+%Technically, one main consideration has so far limited the range of processes for which NLO results exist: the availability of the loop amplitude. Until recently loop amplitudes were usually calculated semi-manually for each process. The complexity of the calculations increased significantly with the number of outgoing legs, limiting available results to those with at most three outgoing partons. Many NLO results for 2 → 2 and 2 → 3 processes are incorporated into programs such as NLOJ ET++ for jet production [65], MCFM for processes with heavy quarks and/or heavy electroweak bosons [66]
+
+The Monte Carlo parton shower programs, which simulate the full hadronic final state, are crucial in evaluating detector acceptances and response.  
+Knowing QCD predictions is crucial in the design of methods to search for new physics, as well as for extracting meaning from the data.
+
+%how to get a parton shower event
+%A quantity called Sudakov form factor (P (no emission above kt ) ≡ ∆(kt , Q)) allows us to easily calculate the distribution in transverse momentum of the gluon with largest transverse momentum in an event.
+%FORMULA
+%This distribution is easy to generate by Monte Carlo methods: take a random number r from a distribution that is uniform in the range 0 < r < 1 and find the kt1 that solves ∆(kt1 , Q) = r. Given kt1 we also need to generate the energy for the gluon, but that’s trivial. If we started from a q q system (with some randomly generated orientation), then this gives us a q q g system. As a next step one can work out the Sudakov form factor in the soft/collinear limit for there to be no emission from the q q g system as a whole above some scale kt2 (< kt1 ) and use this to generate a second gluon. The procedure is then repeated over and over again until you find that the next gluon you would generate is below some non-perturbative cutoff scale Q0 , at which point you stop. This gives you one ‘parton shower’ event.
+%The above shower descriptions hold for final-state branching. With initial-state hadrons, one also needs to be careful with the treatment of the PDFs, since the collinear splitting that is accounted for in the parton shower is also connected with the way the PDF is built up at the scale of the hard scattering.
+(This) procedure for generating a parton shower event is present in PYTHIA (pt-oredered and HERWIG (angular ordering), the ones we use in this thesis and others like SHERPA. (REFERENCIAS!). 
+Real events consist not of partons but of hadrons. Since we have no idea how to calculate the transition between partons and hadrons, Monte Carlo event generators resort to ‘hadronization’ models. One widely-used model involves stretching a colour ‘string’ across quarks and gluons, and breaking it up into hadrons [REFERENCIAS]. This is the Lund model  in Monte Carlo program PYTHIA.
+Another model breaks each gluon into a q q pair and then groups quarks and anti-quarks into colourless ‘clusters’, which then give the hadrons. This cluster type hadronization is implemented in the H ERWIG event generator [REFERENCIAS] and recent versions of SHERPA.
+Hadronization models involve a number of ‘non-perturbative’ parameters. The parton-shower
+itself involves the non-perturbative cutoff Q0 . These different parameters are usually tuned to data from
+the LEP experiments.
+In addition to the hard interaction that is generated by the Monte Carlo
+simulation, it is also necessary to account for the interactions between the incoming proton 
+remnants. This is usually modelled through multiple extra 2 → 2 scattering, occurring at a scale of a
+few GeV, and known as multiple parton interactions. This modelling of the underlying event is crucial in
+order to give an accurate reproduction of the (quite noisy) energy flow that accompanies hard scatterings
+in hadron-collider events.
+
+
+
+\subsection{Jet algorithms}
+
+%------------------------------------------------------------------------
+\subsection{Jet substructure}
+%------------------------------------------------------------------------

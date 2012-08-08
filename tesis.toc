@@ -1,16 +1,24 @@
-\contentsline {chapter}{\numberline {1}The ATLAS detector at the LHC}{2}
-\contentsline {section}{\numberline {1.1}The Large Hadron Collider}{2}
-\contentsline {subsection}{\numberline {1.1.1}Luminosity and pile-up}{6}
-\contentsline {section}{\numberline {1.2}The ATLAS Detector}{9}
-\contentsline {subsection}{\numberline {1.2.1}Inner tracking system}{11}
-\contentsline {subsubsection}{The Pixel detector}{12}
-\contentsline {subsubsection}{The SCT}{13}
-\contentsline {subsubsection}{The TRT}{14}
-\contentsline {subsection}{\numberline {1.2.2}The Calorimeter System}{15}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{16}
-\contentsline {subsubsection}{The hadronic calorimeter}{21}
-\contentsline {subsection}{\numberline {1.2.3}The Muon System}{22}
-\contentsline {subsection}{\numberline {1.2.4}Forward detectors}{23}
-\contentsline {subsection}{\numberline {1.2.5}Trigger and Data Adquisition}{24}
-\contentsline {subsection}{\numberline {1.2.6}ATLAS Performance and Data quality}{25}
-\contentsline {subsection}{\numberline {1.2.7}Simulation of particle interactions in the ATLAS Detector}{26}
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {1.1}Identification of $b$-jets from gluon splitting}{4}
+\contentsline {section}{\numberline {1.2}Physics Motivation}{6}
+\contentsline {chapter}{\numberline {2}The theory of the strong interactions}{13}
+\contentsline {section}{\numberline {2.1}The parton model of QCD}{13}
+\contentsline {section}{\numberline {2.2}Jet physics}{13}
+\contentsline {subsection}{\numberline {2.2.1}Monte Carlo simulations}{13}
+\contentsline {subsection}{\numberline {2.2.2}Jet algorithms}{13}
+\contentsline {subsection}{\numberline {2.2.3}Jet substructure}{13}
+\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{14}
+\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{14}
+\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{18}
+\contentsline {section}{\numberline {3.2}The ATLAS Detector}{21}
+\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{23}
+\contentsline {subsubsection}{The Pixel detector}{24}
+\contentsline {subsubsection}{The SCT}{25}
+\contentsline {subsubsection}{The TRT}{26}
+\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{27}
+\contentsline {subsubsection}{Liquid argon EM calorimeter}{28}
+\contentsline {subsubsection}{The hadronic calorimeter}{33}
+\contentsline {subsection}{\numberline {3.2.3}The Muon System}{34}
+\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{35}
+\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{36}
+\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{38}
