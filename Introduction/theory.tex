@@ -37,6 +37,11 @@ Knowing QCD predictions is crucial in the design of methods to search for new ph
 %This distribution is easy to generate by Monte Carlo methods: take a random number r from a distribution that is uniform in the range 0 < r < 1 and find the kt1 that solves ∆(kt1 , Q) = r. Given kt1 we also need to generate the energy for the gluon, but that’s trivial. If we started from a q q system (with some randomly generated orientation), then this gives us a q q g system. As a next step one can work out the Sudakov form factor in the soft/collinear limit for there to be no emission from the q q g system as a whole above some scale kt2 (< kt1 ) and use this to generate a second gluon. The procedure is then repeated over and over again until you find that the next gluon you would generate is below some non-perturbative cutoff scale Q0 , at which point you stop. This gives you one ‘parton shower’ event.
 %The above shower descriptions hold for final-state branching. With initial-state hadrons, one also needs to be careful with the treatment of the PDFs, since the collinear splitting that is accounted for in the parton shower is also connected with the way the PDF is built up at the scale of the hard scattering.
 (This) procedure for generating a parton shower event is present in PYTHIA (pt-oredered and HERWIG (angular ordering), the ones we use in this thesis and others like SHERPA. (REFERENCIAS!). 
+
+Hadronization cannot be calculated from first principles, but has to be
+modelled. The two most commonly used model classes are the string
+and cluster ones.
+
 Real events consist not of partons but of hadrons. Since we have no idea how to calculate the transition between partons and hadrons, Monte Carlo event generators resort to ‘hadronization’ models. One widely-used model involves stretching a colour ‘string’ across quarks and gluons, and breaking it up into hadrons [REFERENCIAS]. This is the Lund model  in Monte Carlo program PYTHIA.
 Another model breaks each gluon into a q q pair and then groups quarks and anti-quarks into colourless ‘clusters’, which then give the hadrons. This cluster type hadronization is implemented in the HERWIG event generator [REFERENCIAS] and recent versions of SHERPA.
 Hadronization models involve a number of ‘non-perturbative’ parameters. The parton-shower
@@ -49,6 +54,9 @@ few GeV, and known as multiple parton interactions. This modelling of the underl
 order to give an accurate reproduction of the (quite noisy) energy flow that accompanies hard scatterings
 in hadron-collider events.
 
+
+
+
 \subsubsection{Pythia}
 
 PYTHIA is a general-purpuse event generator. It has been used extensively for $e^+ e^-$, $ep$ and $pp/p\bar{p}$, e.g at LEP, HERA and the Tevatron, and during the last 20 years has probably been the most used generators for LHC physics studies. 
@@ -59,6 +67,20 @@ PYTHIA contains an extensive list of hardcoded subprocesses, over 200, that can 
 
 In PYTHIA generator showers are ordered in transverse momentum (REFERENCIA)%http://arxiv.org/abs/hep-ph/0408302
 both for ISR and for FSR. Also MPIs are ordered in $\pt$.
+%Parton showering
+The initial- and final-state algorithms are partly based on a dipole-type approach to recoils.
+
+%Multiple parotn interactions and beam remnants
+MPI modelling has traditionally been a hallmark of PYTHIA. 
+
+%Hadronization 
+Hadronization is based solely on the Lund string fragmentation framework.
+%the Field–Feynman model http://www.sciencedirect.com/science/article/pii/0550321378900159 (sent pdf by email, only accesible from cern)
+% a few years later kickstarted the whole field of hadronization studies by Monte Carlo simulation
+%On the Lund's String model
+%Now consider a simple qqbar two-parton event further. As thea q and qbar move apart from the creation vertex, say along the ±z axis, the potential energy stored in the string increases, and the string may break by the production of a new qprima qbarprima pair, so that the system splits into two colour-singlet systems qqbarprima and qprima qbar. These two systems move apart, and a widening no-field region opens up in between, Fig. 13b. For simplicity the quarks are shown as massless, so they move with the speed of light. If the invariant mass of either of these systems is large enough, further breaks may occur, and so on until only ordinary hadrons remain. Typically, a break occurs when the q and the qbar ends of a colour singlet system are 1–5 fm apart in the qqbar rest frame, but note that the higher-momentum particles at the outskirts of the system are appreciably Lorentz contracted.
+
+
 
 
 
@@ -71,6 +93,10 @@ Herwig$++$ is based on the event generator HERWIG (Hadron Emission Reactions Wit
 Angular ordered parton showers.
 \item
 Cluster hadronization.
+%The cluster model of hadronization is based on the so-called preconfinement property of parton showers, discovered by Amati and Veneziano http://www.sciencedirect.com/science/article/pii/0370269379908967
+%They showed that the colour structure of the shower at any evolution scale Q0 is such that colour singlet combinations of partons (clusters) can be formed with an asymptotically universal invariant mass distribution. Here ‘universal’ means dependent only on Q0 and the QCD scale Λ, and not on the scale Q or nature of the hard process initiating the shower, while ‘asymptotically’ means Q Q0 . If in addition Q0 Λ, then the mass distribution of these colour singlet clusters, together with their (Q-dependent) momentum and multiplicity distributions, can be computed perturbatively.
+%Once these clusters have been formed, how should they decay into the observed hadrons? The typical cluster masses are low enough for them to be treated as a smoothed-out spectrum of excited mesons, in which case quasi two-body decay into less excited states seems to be preferred by Nature.
+
 \item 
 Hard and soft multiple partonic interactions to model the underlying event and soft inclusive interactions (REFERENCIA) %http://arxiv.org/abs/0803.3633
 %\item 
