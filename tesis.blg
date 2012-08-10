@@ -3,59 +3,54 @@ The top-level auxiliary file: tesis.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Introduction/theory.aux
 A level-1 auxiliary file: Introduction/lhc_atlas.aux
-A level-1 auxiliary file: Introduction/reconstruction.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
-Repeated entry---line 275 of file tesis.bib
- : @article{JESnote
- :                 ,
-I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "1126-6708-2008-07-07"
 Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
 while executing---line 944 of file unsrt.bst
 Warning--empty journal in boost2010b
+Warning--empty author in Pythia_MC11tune
+Warning--empty journal in Perugia
 Warning--empty journal in ATLAS
-Warning--empty journal in topoClusters
-Warning--there's a number but no volume in topoClusters
-Warning--empty journal in CSC
-You've used 26 entries,
+You've used 32 entries,
             1791 wiz_defined-function locations,
-            584 strings with 7625 characters,
-and the built_in function-call counts, 4305 in all, are:
-= -- 353
-> -- 192
-< -- 0
-+ -- 77
-- -- 51
-* -- 213
-:= -- 770
-add.period$ -- 78
-call.type$ -- 26
-change.case$ -- 25
+            641 strings with 9199 characters,
+and the built_in function-call counts, 6393 in all, are:
+= -- 484
+> -- 396
+< -- 1
++ -- 147
+- -- 115
+* -- 440
+:= -- 1146
+add.period$ -- 95
+call.type$ -- 32
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 220
-empty$ -- 434
-format.name$ -- 51
-if$ -- 931
+cite$ -- 36
+duplicate$ -- 276
+empty$ -- 581
+format.name$ -- 115
+if$ -- 1350
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 27
-newline$ -- 133
-num.names$ -- 26
-pop$ -- 68
+int.to.str$ -- 32
+missing$ -- 32
+newline$ -- 162
+num.names$ -- 31
+pop$ -- 66
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 82
+skip$ -- 101
 stack$ -- 0
-substring$ -- 129
-swap$ -- 22
-text.length$ -- 0
+substring$ -- 265
+swap$ -- 29
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 36
-width$ -- 28
-write$ -- 270
-(There were 2 error messages)
+warning$ -- 4
+while$ -- 51
+width$ -- 34
+write$ -- 339
+(There was 1 error message)

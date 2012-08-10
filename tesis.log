@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  10 AUG 2012 10:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  10 AUG 2012 19:26
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -56,7 +56,7 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@footins=\box27
 ) (./tesis.aux
 (./Introduction/introduction.aux) (./Introduction/theory.aux)
-(./Introduction/lhc_atlas.aux) (./Introduction/reconstruction.aux))
+(./Introduction/lhc_atlas.aux))
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
@@ -113,13 +113,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--122
 
  []
 
-[3] [1] (./tesis.toc [1
-
-])
+[3] [1] (./tesis.toc)
 \tf@toc=\write3
 \openout3 = `tesis.toc'.
 
- [2]
+ [1
+
+] [2]
 \openout2 = `Introduction/introduction.aux'.
 
  (./Introduction/introduction.tex [3
@@ -193,6 +193,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `sec:Simulation' on page 5 undefined on input line 32.
 
+
+
+LaTeX Warning: Reference `sec:ObjSelection' on page 5 undefined on input line 3
+2.
 
 
 LaTeX Warning: Reference `sec:EventSelection' on page 5 undefined on input line
@@ -278,77 +282,41 @@ l.135 ...arge transverse momentum, ${\pt}_H\gtrsim
 
 ]
 Chapter 2.
+
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 28--31
+\OT1/cmr/m/n/12 strong cou-pling con-stant grows with in-creas-ing dis-tance be
+-tween color charges,
+ []
+
 [14
 
-]
-Overfull \hbox (4.40007pt too wide) in paragraph at lines 52--54
-[]\OT1/cmr/m/n/12 The Monte Carlo par-ton shower pro-grams, which sim-u-late th
-e full hadronic
- []
-
-
-Overfull \hbox (2.07185pt too wide) in paragraph at lines 52--54
-\OT1/cmr/m/n/12 fi-nal state, are cru-cial in eval-u-at-ing de-tec-tor ac-cep-t
-ances and re-sponse. Know-
- []
-
-
-Overfull \hbox (9.90141pt too wide) in paragraph at lines 60--61
-[]\OT1/cmr/m/n/12 (This) pro-ce-dure for gen-er-at-ing a par-ton shower event i
-s present in PYTHIA
- []
-
+] [15]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 52.
+ [16]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ˜ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ˜ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ˜ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ˜ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no ’ in font cmr12!
-[15]
-Overfull \hbox (2.87244pt too wide) in paragraph at lines 89--93
-[]\OT1/cmr/m/n/12 In PYTHIA gen-er-a-tor show-ers are or-dered in trans-verse m
-o-men-tum (REF-
+ [17]
+Overfull \hbox (10.87798pt too wide) in paragraph at lines 80--81
+\OT1/cmr/m/n/12 from proton-proton col-li-sion pro-cesses were gen-er-ated with
+ P YTHIA 6.423 [[]].
  []
 
-[16]
-Missing character: There is no â in font cmr12!
-Missing character: There is no † in font cmr12!
-Missing character: There is no ’ in font cmr12!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
+[18]
 
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
-) [17] [18]
+LaTeX Warning: Citation `1126-6708-2008-07-07' on page 19 undefined on input li
+ne 93.
+
+) [19] [20]
 \openout2 = `Introduction/lhc_atlas.aux'.
 
-
-(./Introduction/lhc_atlas.tex
+ (./Introduction/lhc_atlas.tex
 Chapter 3.
-<Fig2/CERNacceleratorcomplexCut.pdf, id=140, 912.40875pt x 747.79375pt>
+<Fig2/CERNacceleratorcomplexCut.pdf, id=149, 912.40875pt x 747.79375pt>
 File: Fig2/CERNacceleratorcomplexCut.pdf Graphic file (type pdf)
 
 <use Fig2/CERNacceleratorcomplexCut.pdf>
@@ -358,27 +326,27 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [19
+ [21
 
 
 
-] [20 <./Fig2/CERNacceleratorcomplexCut.pdf>]
+] [22 <./Fig2/CERNacceleratorcomplexCut.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [21]
+ [23]
 
-LaTeX Warning: Reference `tab:beamparameters' on page 22 undefined on input lin
+LaTeX Warning: Reference `tab:beamparameters' on page 24 undefined on input lin
 e 35.
 
-[22] <Fig2/peakAvgMuByDay.pdf, id=158, 569.12625pt x 408.52625pt>
+[24] <Fig2/peakAvgMuByDay.pdf, id=166, 569.12625pt x 408.52625pt>
 File: Fig2/peakAvgMuByDay.pdf Graphic file (type pdf)
 
-<use Fig2/peakAvgMuByDay.pdf> [23] [24 <./Fig2/peakAvgMuByDay.pdf>]
-<Fig2/sumLumiByDay.pdf, id=172, 569.12625pt x 408.52625pt>
+<use Fig2/peakAvgMuByDay.pdf> [25] [26 <./Fig2/peakAvgMuByDay.pdf>]
+<Fig2/sumLumiByDay.pdf, id=181, 569.12625pt x 408.52625pt>
 File: Fig2/sumLumiByDay.pdf Graphic file (type pdf)
 
-<use Fig2/sumLumiByDay.pdf> [25 <./Fig2/sumLumiByDay.pdf>] [26]
+<use Fig2/sumLumiByDay.pdf> [27 <./Fig2/sumLumiByDay.pdf>] [28]
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
@@ -386,125 +354,78 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
 
-<Fig2/ATLASDetector.pdf, id=186, 3162.25409pt x 2032.87483pt>
+<Fig2/ATLASDetector.pdf, id=194, 3162.25409pt x 2032.87483pt>
 File: Fig2/ATLASDetector.pdf Graphic file (type pdf)
 
-<use Fig2/ATLASDetector.pdf> [27] [28 <./Fig2/ATLASDetector.pdf>]
+<use Fig2/ATLASDetector.pdf> [29] [30 <./Fig2/ATLASDetector.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 
-<Fig2/InnerDetector.pdf, id=197, 3614.00188pt x 2409.34137pt>
+<Fig2/InnerDetector.pdf, id=205, 3614.00188pt x 2409.34137pt>
 File: Fig2/InnerDetector.pdf Graphic file (type pdf)
 
-<use Fig2/InnerDetector.pdf> [29] [30 <./Fig2/InnerDetector.pdf>]
+<use Fig2/InnerDetector.pdf> [31] [32 <./Fig2/InnerDetector.pdf>]
 Missing character: There is no Î in font cmr12!
 Missing character: There is no ¼ in font cmr12!
- [31] [32]
-<Fig2/Calorimeters.pdf, id=216, 3915.16707pt x 2635.21526pt>
+ [33] [34]
+<Fig2/Calorimeters.pdf, id=224, 3915.16707pt x 2635.21526pt>
 File: Fig2/Calorimeters.pdf Graphic file (type pdf)
 
-<use Fig2/Calorimeters.pdf> [33] [34 <./Fig2/Calorimeters.pdf>]
+<use Fig2/Calorimeters.pdf> [35] [36 <./Fig2/Calorimeters.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [35]
-<Fig2/EM_acordionstructure.pdf, id=230, 710.655pt x 627.34375pt>
+ [37]
+<Fig2/EM_acordionstructure.pdf, id=238, 710.655pt x 627.34375pt>
 File: Fig2/EM_acordionstructure.pdf Graphic file (type pdf)
 
-<use Fig2/EM_acordionstructure.pdf>
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 238.
- [36] [37 <./Fig2/EM_acordionstructure.pdf>] [38] [39] <Fig2/MuonChamber.pdf, i
-d=250, 3012.42432pt x 2259.50154pt>
+<use Fig2/EM_acordionstructure.pdf> [38] [39 <./Fig2/EM_acordionstructure.pdf>]
+[40] [41] <Fig2/MuonChamber.pdf, id=257, 3012.42432pt x 2259.50154pt>
 File: Fig2/MuonChamber.pdf Graphic file (type pdf)
 
-<use Fig2/MuonChamber.pdf> [40] [41 <./Fig2/MuonChamber.pdf>] [42] [43])
-[44] [45]
-\openout2 = `Introduction/reconstruction.aux'.
-
- (./Introduction/reconstruction.tex
-Chapter 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 7.
-! Missing $ inserted.
-<inserted text> 
-                $
-l.29 ...ing nature of the calorimeter by using \pt
-                                                  - and $\eta$-dependent cal...
-
-? 
-! Extra }, or forgotten $.
-\pt ->{\emph {p}_{T}}
-                     
-l.29 ...ing nature of the calorimeter by using \pt
-                                                  - and $\eta$-dependent cal...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.29 ...of the calorimeter by using \pt- and $\eta
-                                                  $-dependent calibration fa...
-
-? 
-
-Overfull \hbox (28.62204pt too wide) in paragraph at lines 28--31
-[]\OT1/cmr/m/n/12 The jet en-er-gies are cor-rected for in-ho-mo-geneities and 
-for the non-compensating
- []
-
-[46
+<use Fig2/MuonChamber.pdf> [42] [43 <./Fig2/MuonChamber.pdf>] [44] [45])
+[46] [47] (./tesis.bbl [48
 
 
-
-]
-! Undefined control sequence.
-<recently read> \bm 
-                    
-l.42 \section{ $\bm b$-jet Tagging}
-                                   \label{sec:btagging}
-? 
-! Undefined control sequence.
-<argument> ...ame thesection\endcsname }\fi  $\bm 
-                                                  b$-jet Tagging}{\thepage }}
-l.42 \section{ $\bm b$-jet Tagging}
-                                   \label{sec:btagging}
-? 
-) [47] (./tesis.bbl [48
-
-
-]
+] [49]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¶ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [50]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ” in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¼ in font cmr12!
- [49]
-Underfull \hbox (badness 1097) in paragraph at lines 124--127
-\OT1/cmr/m/n/12 Per-for-mance.  (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-
- []
-
-[50]) [51] (./tesis.aux (./Introduction/introduction.aux)
-(./Introduction/theory.aux) (./Introduction/lhc_atlas.aux)
-(./Introduction/reconstruction.aux))
+ [51]) [52] (./tesis.aux
+(./Introduction/introduction.aux) (./Introduction/theory.aux)
+(./Introduction/lhc_atlas.aux))
 
 LaTeX Warning: There were undefined references.
 
  )
-(\end occurred inside a group at level 2)
+(\end occurred inside a group at level 1)
 
-### simple group (level 2) entered at line 29 ({)
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1174 strings out of 495061
- 16040 string characters out of 1182621
- 69910 words of memory out of 3000000
- 4339 multiletter control sequences out of 15000+50000
- 12214 words of font info for 42 fonts, out of 3000000 for 9000
+ 1153 strings out of 495061
+ 15559 string characters out of 1182621
+ 69662 words of memory out of 3000000
+ 4328 multiletter control sequences out of 15000+50000
+ 11599 words of font info for 40 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,9n,21p,1366b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,21p,1795b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10
 .pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
 share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf
@@ -519,9 +440,9 @@ type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/
 amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
 usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (56 pages, 20193128 bytes).
+Output written on tesis.pdf (57 pages, 20197249 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
+ 340 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
