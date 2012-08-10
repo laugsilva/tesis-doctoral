@@ -1,52 +1,61 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
 A level-1 auxiliary file: Introduction/introduction.aux
+A level-1 auxiliary file: Introduction/theory.aux
 A level-1 auxiliary file: Introduction/lhc_atlas.aux
+A level-1 auxiliary file: Introduction/reconstruction.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
+Repeated entry---line 275 of file tesis.bib
+ : @article{JESnote
+ :                 ,
+I'm skipping whatever remains of this entry
 Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
 while executing---line 944 of file unsrt.bst
 Warning--empty journal in boost2010b
 Warning--empty journal in ATLAS
-You've used 20 entries,
+Warning--empty journal in topoClusters
+Warning--there's a number but no volume in topoClusters
+Warning--empty journal in CSC
+You've used 26 entries,
             1791 wiz_defined-function locations,
-            558 strings with 6766 characters,
-and the built_in function-call counts, 3416 in all, are:
-= -- 281
-> -- 153
+            584 strings with 7625 characters,
+and the built_in function-call counts, 4305 in all, are:
+= -- 353
+> -- 192
 < -- 0
-+ -- 61
-- -- 41
-* -- 175
-:= -- 610
-add.period$ -- 60
-call.type$ -- 20
-change.case$ -- 19
++ -- 77
+- -- 51
+* -- 213
+:= -- 770
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 171
-empty$ -- 344
-format.name$ -- 41
-if$ -- 740
+cite$ -- 31
+duplicate$ -- 220
+empty$ -- 434
+format.name$ -- 51
+if$ -- 931
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 21
-newline$ -- 103
-num.names$ -- 20
-pop$ -- 49
+int.to.str$ -- 26
+missing$ -- 27
+newline$ -- 133
+num.names$ -- 26
+pop$ -- 68
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 63
+skip$ -- 82
 stack$ -- 0
-substring$ -- 120
-swap$ -- 18
+substring$ -- 129
+swap$ -- 22
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 29
-width$ -- 22
-write$ -- 210
-(There was 1 error message)
+warning$ -- 5
+while$ -- 36
+width$ -- 28
+write$ -- 270
+(There were 2 error messages)

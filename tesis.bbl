@@ -115,4 +115,39 @@ G.~Aad et~al.
   ATLAS Detector}.
 \newblock {\em ATLAS-CONF-2010-070}, 2010.
 
+\bibitem{antiktalg}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The anti-$k_t$ jet clustering algorithm}.
+\newblock {\em JHEP}, 04:063, 2008.
+
+\bibitem{topoClusters}
+W~Lampl et~al.
+\newblock {Calorimeter Clustering Algorithms: Description and Performance}.
+\newblock (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-003), Apr 2008.
+
+\bibitem{ATLAS-CONF-2012-020}
+{ATLAS Collaboration}.
+\newblock {Selection of jets produced in proton-proton collisions with the
+  ATLAS detector using 2011 data}.
+\newblock {\em ATLAS-CONF-2012-020}, 2012.
+
+\bibitem{JESnote}
+{ATLAS Collaboration}.
+\newblock {Jet energy scale and its systematic uncertainty for jets produced in
+  proton-proton collisions at $\sqrt{s}$ = 7 TeV and measured with the ATLAS
+  detector}.
+\newblock {\em ATLAS-CONF-2010-056}, 2010.
+
+\bibitem{CSC}
+G.~Aad et~al.
+\newblock {Expected Performance of the ATLAS Experiment - Detector, Trigger and
+  Physics}.
+\newblock 2009.
+
+\bibitem{ATLAS-CONF-2011-089}
+{ATLAS Collaboration}.
+\newblock {Calibrating the b-Tag Efficiency and Mistag Rate in 35 pb$^{-1}$ of
+  Data with the ATLAS Detector}.
+\newblock {\em ATLAS-CONF-2011-089}, 2011.
+
 \end{thebibliography}
