@@ -8,19 +8,19 @@
 \contentsline {subsubsection}{Pythia}{18}
 \contentsline {subsubsection}{Herwig$++$}{19}
 \contentsline {subsection}{\numberline {2.2.2}Jet algorithms}{20}
-\contentsline {subsection}{\numberline {2.2.3}Jet substructure}{20}
-\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{21}
-\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{21}
-\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{25}
-\contentsline {section}{\numberline {3.2}The ATLAS Detector}{28}
-\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{30}
-\contentsline {subsubsection}{The Pixel detector}{31}
-\contentsline {subsubsection}{The SCT}{32}
-\contentsline {subsubsection}{The TRT}{33}
-\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{34}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{35}
-\contentsline {subsubsection}{The hadronic calorimeter}{40}
-\contentsline {subsection}{\numberline {3.2.3}The Muon System}{41}
-\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{42}
-\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{43}
-\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{45}
+\contentsline {subsection}{\numberline {2.2.3}Jet substructure}{24}
+\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{25}
+\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{25}
+\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{29}
+\contentsline {section}{\numberline {3.2}The ATLAS Detector}{32}
+\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{34}
+\contentsline {subsubsection}{The Pixel detector}{35}
+\contentsline {subsubsection}{The SCT}{36}
+\contentsline {subsubsection}{The TRT}{37}
+\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{38}
+\contentsline {subsubsection}{Liquid argon EM calorimeter}{39}
+\contentsline {subsubsection}{The hadronic calorimeter}{44}
+\contentsline {subsection}{\numberline {3.2.3}The Muon System}{45}
+\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{46}
+\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{47}
+\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{49}
