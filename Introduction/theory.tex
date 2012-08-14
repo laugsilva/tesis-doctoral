@@ -157,7 +157,7 @@ d_{ij} = min(p^{-2}_{ti},p^{-2}_{tj}) \frac{\Delta R^2_{ij}}{R^2}
 
 and the  beam distance, $d_{iB}=p^{-2}_{ti}$. This definition results in the clustering of the hardest emissions first. This has several benefits in the context of high-luminosity hadron collisions.
 
-Note that the anti-$k_t$ algorithm does not provide useful information on jet substructureL if a jet contains two hard cores, then the $k_t$ (or C/A) algorithms first reconstruct those hard cores and merge the resulting two subjets. The anti-$k_t$ will often first cluster the harder of the two cores and then gradually aglomerate the contents of the second hard core.
+Note that the anti-$k_t$ algorithm does not provide useful information on jet substructure if a jet contains two hard cores, then the $k_t$ (or C/A) algorithms first reconstruct those hard cores and merge the resulting two subjets. The anti-$k_t$ will often first cluster the harder of the two cores and then gradually aglomerate the contents of the second hard core.
 
 These algorithms, and more, are implemented in {\sc Fastjet}~\cite{fastjet} software package for jet-finding. 
 
@@ -168,9 +168,11 @@ These algorithms, and more, are implemented in {\sc Fastjet}~\cite{fastjet} soft
 
 The study of a quantity related to the distributions and multiplicity of particles in the event phase space lead to the first evidence of jet structure, as pointed out in ref.~\cite{PhysRevLett.35.1609}. In general, all final hadronic states in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the energy flow by means of so called ``event shape'' variables. This family of variables attempt to extract information about the global geometry of event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa}\cite{Aad:2012np}. 
 
-Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet in the event. In new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. For example, when an unstable particle with large transverse momentum decays hadronically, the final state may contain a number of nearly collinear jets. These jets may be merged by a jet finder.%The decay products of boosted heavy quarks or bosons might be reconstructed as a single jet, 
-A method for selecting these jets would allow for the study of their properties.
-  This interest lead to the development of a wide range of jet substructure techniques in the recent years.  Jet substructure methods probe the internal structure of jets from a detailed study of its constituents (see chapter\ref{sec:reconstruction}). These techniques have been first thought for distinguishing boosted hadronic objects from the background of jets initiated by light quarks and gluon, see for example~\cite{ATLASBoostedHbb},
+Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet in the event. In new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. For example, when an unstable particle with large transverse momentum decays hadronically, the final state may contain a number of nearly collinear jets. These jets may be merged by a jet finder; %The decay products of boosted heavy quarks or bosons might be reconstructed as a single jet, 
+a method for selecting these jets would allow for the study of their properties.
+  This interest lead to the development of a wide range of jet substructure techniques in the recent years.
+
+  Jet substructure methods probe the internal structure of jets from a detailed study of its constituents (see chapter\ref{sec:reconstruction}). These techniques have been first thought for distinguishing boosted hadronic objects from the background of jets initiated by light quarks and gluon, see for example~\cite{ATLASBoostedHbb},
 %http://cdsweb.cern.ch/record/1201444/
 but they have been also used succesfully in other applications, including separating quark jets from gluon jets~\cite{PhysRevLett.107.172001} and identifying boosted decay producs in new physics~\cite{PhysRevD.82.095012}.
 
@@ -179,74 +181,73 @@ Jet shapes, which are event shape-like observables applied to single jets, are a
 The study of the distribution of particles within a jet has proven to be useful for distinguishing jets initiated by different flavors of quark or by a gluon, see for instance~\cite{PhysRevLett.107.172001}. The shape of a jet no only depends on the type of parton (quark or gluon) but is also sensitive to non-perturbative fragmentation effects and underlying event contributions~\cite{ATLASJetShapes}.
 
 
-In the particular case of the present analysis, several distinguishing characteristics between jets originating from $b$-quarks and jets originating from the the splitting of a gluon into a $b\bar{b}$ pair can be determined using the techniques of jet substructure. 
- 
-
 %from Jet substructure at the Tevatron and LHC
 %Observables desinged to be sensitive to the internal structure of jets are expected to also be sensitive to pile-up. Large-radius jets, such as those used in the measurements of jet substructure, are naturally more susceptile to pile-up due to their larger catchment area~\cite{CatchmentArea}; the invariant mass of these large jets is particularly affected. %http://arxiv.org/abs/1009.1143
 %Techniques for correcting these effects or mitigating their impact $-$such as the splitting and filtering procedure pioneered in ATLAS$-$  are essential in producing precision measurements for several of the analyses presented by the Tevatron and LHC experiments.  A more thorough review of these issues at ATLAS can be found in~\cite{DavidMillerThesis}
 
 
-\subsubsection{Jet width}
+In the particular case of the present analysis, several distinguishing characteristics between jets originating from $b$-quarks and jets originating from the the splitting of a gluon into a $b\bar{b}$ pair can be determined using the techniques of jet substructure. 
 
-%From~\cite{PhysRevLett.107.172001}%Quark and Gluon Tagging at the LHC
-We find the best single observable in the continuous category is the linear radial moment—a measure of the ‘‘width’’ or ‘‘girth’’ of the jet—constructed by adding up the pT deposits within the jet, weighted by the distance from the jet axis. It is defined as:
-FORMULA
-where ri 1⁄4 Áy2 þ Á2 and where the true boost-ii invariant rapidity y should be used for the (massive) jet axis instead of the geometric pseudorapidity . Under the assumption of central jets with massless constituents at small angles, this linear moment is identical to jet broadening, defined as the sum of momenta transverse to the jet axis normalized by the sum of momenta. While jet broadening is natural at an eþ eÀ collider, the linear radial moment is more natural and works a bit better at the LHC.
+
+\subsubsection{Jet width}
 
 
 %From http://www.springerlink.com/content/54748j617818718q/?MUD=MP
-A radial moment sums these distances (or a function of these distances), weighted by a quantity like pT , then normalized t o the total pT of the jet. For example, the linear radial moment, girth, is defined as [12]
+The jet width is part of a set of continuous variables that try to distinguish individual particles/subjets within the jet as a smooth funcion of $(\delta \eta, \delta \phi)$ away from the jet axis, in order to form combinations like geometric moments.  This particular combination sums the distances between the jet constituents and its axes, weighted by the constituent $\pt$, and then normalized to the total $\pt$ of the jet. The compact definition is 
+
+%\begin{equation} 
+%g = \sum_{i\in jet} \frac{p^i_T}{p^{jet}_T} |\Delta R_i|
+%\label{eqn:girth}
+%\end{equation}
+%where $\Delta R_i = \sqrt{\Delta y^2_i + \Delta \phi^2_i}$
 
 \begin{equation} 
-g = \sum_{i\in jet} \frac{p^i_T}{p^{jet}_T} |\Delta R_i|
-\label{eqn:girth}
-\end{equation}
+\mbox{ {\it Jet width}} = \frac{\sum_{i=1}^N \pt^{const_i} \,\Delta R (const_i,jet) }{\sum_{i=1}^N \pt^{const_i} }
+\label{eqn:trackjetwidth}
+\end{equation} 
+where $N$ is the total number of calorimeter or track constituents.  This observable is also highly correlated to the mass of the jet.
 
-where $\Delta R_i = \sqrt{\Delta y^2_i + \Delta \phi^2_i}$
-The girth distribution is shown in figure 9.
-Jet Angularities are also radial moments, but their “radial distances” are rescaled intothe angular coordinates appropriate for e+ e− event shapes. They are defined by [24]
+This linear radial moment is a measure of the width or ``girth''~\cite{PhysRevLett.105.022001} of the jet.  Under the assumption of central jets with massless constituents at small angles, this linear moment is identical to jet broadening~\cite{Catani1992269}, defined as the sum of momenta transverse to the jet axis normalized by the sum of momenta. While jet broadening is natural at an $e^+ e^-$ collider, the linear radial moment is more natural at the LHC.
 
-This is a boost-invariant versionof the jet broadening, to which it reduces in the limit of massless constituents at small angles to the jet axis.
-
-
-%Jet shapes and jet algorithms in SCET, by Ellis, Vermillon, et all
-%The angularity τa of a jet, defined by (cf. [12, 17]), τa ≡ ... pi e−ηi (1−a) , where a is a parameter taking values −∞ < a < 2 (for IR safety, although factorizability will require a < 1), the sum is over all particles in the jet, EJ is the jet energy, pT is the transverse momentum relative to the jet direction, and η = − ln tan(θ/2) is the (pseudo)rapidity measured from the jet direction A small jet mass or angularity forces harder particles to be closer to the jet axis.
-
-%Measurement of QCD jet broadening~\cite{PhysRevD.44.601}.In this paper, we discuss the use of an event-shape parameter QT introduced by Ellis and Webber to describe hadronic final states in proton-antiproton collisions [18]. QT is defined as the scalar sum of the momenta perpendicular to the transverse thrust axis, where the transverse thrust axis represents the direction of maximum energy flow in the plane transverse to the beam. It has the property of being both finite and calculable for all multiparton final-state configurations, the case where particularly singularities occur in perturbation theory associated with the collinear emission of gluons. The behavior of QT with increasing energy is termed jet broadening because of its sensitivity to the increasing multiparton nature of a jet as the energy of the jet increases.
-% $Q_T / E_T$ ~ similar behavior with $E_T$ as Jet Width.
+An alternative approach to measuring the width is to use the angular separation of the two hardest constituents inside jets. This has the advantage of effectively removing any dependence on the shower development within the calorimeter and focuses on the hard component of the jet.
 
 
-\subsubsection{Eccentricity?}
 
-In constructing a jet moment, there are a number of ways to weight the momentum, such by energy or $\pt$, and to define the center of the jet. We have defined the jet width as a linear radial moment. Another effective combination is a $\pt$-weighted vector called pull~\cite{PhysRevLett.105.022001}. But is also natural to look at higher moments, such as those contained in the covariance tensor
+%Measurement of QCD jet broadening~\cite{PhysRevD.44.601}.In this paper, we discuss the use of an event-shape parameter QT introduced by Ellis and Webber to describe hadronic final states in proton-antiproton collisions [18]. QT is defined as the scalar sum of the momenta perpendicular to the transverse thrust axis, where the transverse thrust axis represents the direction of maximum energy flow in the plane transverse to the beam. It has the property of being both finite and calculable for all multiparton final-state configurations, the case where particularly singularities occur in perturbation theory associated with the collinear emission of gluons. The behavior of QT with increasing energy is termed jet broadening because of its sensitivity to the increasing multiparton nature of a jet as the energy of the jet increases. % $Q_T / E_T$ ~ similar behavior with $E_T$ as Jet Width.
 
+%Jet Angularities~\cite{springerlink:10.1007/JHEP11(2010)101} are also radial moments, but their “radial distances” are rescaled into the angular coordinates appropriate for $e^+ e^−$ event shapes. 
+
+
+
+\subsubsection{Eccentricity}
+
+In defining a jet moment there are several ways to weight the momentum and define the center of the jet. We have defined the jet width as the first moment of the transverse energy with respect to the jet axis; another example of useful combination is the jet pull~\cite{PhysRevLett.105.022001}. But it is also natural to look at higher moments, such as those contained in the covariance tensor,
 
 \[ C = \sum_{i\in jet}\frac{p^i_T|r_i|}{p^{jet}_T} \left( \begin{array}{cc}
  \Delta y^2_i & \Delta y_i \Delta\phi_i \\ 
  \Delta\phi_i \Deltay_i & \Delta \phi^2_i \end{array} \right). \]
 
 
-Here, $\vect{r}_i = (\Delta y_i, \Delta \phi_i) = \vect{c}_i - \vect{J}$, where $\vect{J} = (y_J,\phi_J)$ is the location of the jet and $\vect{c}_i$ is the position of a cell or particle with transverse momentum $p^i_T$. The eigenvalues $a \geq b$ of this tensor are similar to the semimajor and semiminor axes of an elliptical jet. The jet eccentricity, defined in equation~\ref{eqn:ecc}, is a combination of these eigenvalues, and it is a measure of how elongated is the area of a jet.
+Here, $\vect{r}_i = (\Delta y_i, \Delta \phi_i) = \vect{c}_i - \vect{J}$, where $\vect{J} = (y_J,\phi_J)$ is the location of the jet and $\vect{c}_i$ is the position of a cell or particle with transverse momentum $p^i_T$. The eigenvalues $a \geq b$ of this tensor are similar to the semimajor and semiminor axes of an elliptical jet. The jet eccentricity, defined below, is a combination of these eigenvalues, and it is a measure of how elongated is the area of a jet.
 
 \begin{equation} 
 e = \sqrt{\frac{(a^2 - b^2)}{a}}
 \label{eqn:ecc}
 \end{equation}
 
-No significan difference in eccentricity was found between quark and gluon jets.
+%No significan difference in eccentricity was found between quark and gluon jets.
 
 
+\subsubsection{Jet Mass}
 
-\subsubsection{Jet Mass?}
 
+Jet mass is the most basic observable for distinguishing a boosted object from an ordinary quark- or gluon-initiated jet.
 
 The jet mass can be used to discriminate at a high-level between jets initiated by a massive object and those that are the result of succesive branchings of the parton shower. Massive jets formed by the latter are expected to be dominated by wide-angle emissions. %http://prd.aps.org/abstract/PRD/v79/i7/e074012
 %...
 There is an increase probability to see high mass jets initiated from a gluon as opposed to a quark.  And, large radii jets at high $\pt$ are expected to exhibit higher mass scales.
 
 In the recent ATLAS analysis of 35~pb$^{-1}$ of data, the sensitivity of individual jet mass to pile-up is directly tested (for jets with at least 300~GeV). The mean jet mass is observed to increase linearly with NPV~\cite{ATLAS-CONF-2011-073}. %The filtering procedure significantly reduces the effect of pile-up on jet mass.
-
 
 
 
@@ -273,6 +274,8 @@ In addition to fixed distance parameter subjets, it is also possible to ``unfold
 % uses the C/A algorithm. Subjets are then defined by de-clustering the C/A algorithm and evaluating the relative mass of the subjets compared to the parent jet. As a final step, the three hardest identified subjets are recombined to define the resulting ``filtered'' jet.
 
 It is also possible to extend the use of individual subjets in conjunction with more traditional jet shape variables. Using these tools, an inclusive jet shape based on the substructure topology of a single jet, ``$N$-subjettiness''~\cite{nsubjettiness} is defined.
+
+
 
 
 
@@ -304,4 +307,15 @@ To separate boosted hadronic objects from the QCD jet background, one could use 
 In subsequent work~\cite{mininsubjettiness}, Thaler and van Tilburg showed that the initial step of choosing candidate subjet axes is in fact unnecessary. In particular, the quantity in equation\label{eqn:nsubjet} can be minimised over the candidate subjet directions, further improving boosted object discrimination.
 
 
+%From Nsubjettiness paper
+(We can) use $N$-subjettiness to effectively ``count'' the number of subjets in a jet. Compare to previous jet substructure techniques, $N$-subjettiness  has the advantage of finding jets that contain two or more lobes of energy.
+Consider for instance the decay of a boosted $W$ boson. Since the $W$ decays to two quarks, a single jet containing a boosted $W$ boson should be composed of two distinct hard subjets with a combined invariant mass around 80~GeV. A boosted QCD jet with an invariant mass of 80~GeV usually originates from a single hard parton and acquires mass through large angle soft splittings. Therefore the difference in expected energy flow between these two types of jets can be exploited by ``counting'' the number of hard lobes of energy within a jet.
+
+Jets with $\tau_N\approx 0$ have all their radiation aligned with the candidate subjet directions and therefore have $N$ (or fewer) subjets. Jets with $\tau_N\gg 0$ have a large fraction of their energy distributed away from the candidate subjet direction and therefore have at least $N+1$ subjets.
+A key step for defining $N$-subjettiness is to appropiately chosse the candidate subjet directions.
+In its version such candidates where determined by using the exclusive $k_t$ algorithm, forcing it to return exactly $N$ jets.
+
+Once the candidate subjets are identified, $N$-subjettiness is a proper inclusive jet shape. Since eq.~\ref{eqn:nsubjet} is linear in each of the constituent particle momenta, it is an infrared- and colliner-safe observable.
+
+The definition of $N$-subjettiness is not unique, and different choises can be sued to give different weights to the emissions within a jet. There generalizations of $N$-subjettiness are similar to different ``angularities''~\cite{angularities} used in $e^+e^- \rightarrow$hadrons measurements.
 
