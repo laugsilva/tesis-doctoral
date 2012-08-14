@@ -190,6 +190,12 @@ Georges Aad et~al.
   ATLAS detector in pp collisions at sqrt(s) = 7 TeV}.
 \newblock 2012.
 
+\bibitem{ATLASBoostedHbb}
+{ATLAS Collaboration}.
+\newblock Atlas sensitivity to the standard model higgs in the hw and hz
+  channels at high transverse momenta.
+\newblock {\em ATL-PHYS-PUB-2009-088}, Aug 2009.
+
 \bibitem{PhysRevLett.107.172001}
 Jason Gallicchio and Matthew~D. Schwartz.
 \newblock Quark and gluon tagging at the lhc.
@@ -207,10 +213,27 @@ Stephen Ellis, Christopher Vermilion, Jonathan Walsh, Andrew Hornig, and
 \newblock {\em Journal of High Energy Physics}, 2010:1--83, 2010.
 \newblock 10.1007/JHEP11(2010)101.
 
+\bibitem{ATLASJetShapes}
+G.~Aad et~al.
+\newblock Study of jet shapes in inclusive jet production in $pp$ collisions at
+  $\sqrt{s}=7\text{\,}\text{\,}\mathrm{TeV}$ using the atlas detector.
+\newblock {\em Phys. Rev. D}, 83:052003, Mar 2011.
+
 \bibitem{PhysRevLett.105.022001}
 Jason Gallicchio and Matthew~D. Schwartz.
 \newblock Seeing in color: Jet superstructure.
 \newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
+
+\bibitem{Catani1992269}
+S.~Catani, G.~Turnock, and B.R. Webber.
+\newblock Jet broadening measures in e+e− annihilation.
+\newblock {\em Physics Letters B}, 295(3–4):269 -- 276, 1992.
+
+\bibitem{ATLAS-CONF-2011-073}
+{ATLAS Collaboration}.
+\newblock {Measurement of Jet Mass and Substructure for Inclusive Jetsin √s =
+  7 TeV pp Collisions with the ATLAS Experiment}.
+\newblock {\em ATLAS-CONF-2011-073}, May 2011.
 
 \bibitem{MultivariateDiscrim}
 Jason Gallicchio, John Huth, Michael Kagan, Matthew Schwartz, Kevin Black, and
@@ -219,26 +242,26 @@ Jason Gallicchio, John Huth, Michael Kagan, Matthew Schwartz, Kevin Black, and
 \newblock {\em Journal of High Energy Physics}, 2011:1--41, 2011.
 \newblock 10.1007/JHEP04(2011)069.
 
-\bibitem{ATLAS-CONF-2011-073}
-{ATLAS Collaboration}.
-\newblock {Measurement of Jet Mass and Substructure for Inclusive Jetsin √s =
-  7 TeV pp Collisions with the ATLAS Experiment}.
-\newblock {\em ATLAS-CONF-2011-073}, May 2011.
+\bibitem{pruning}
+Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
+\newblock Techniques for improved heavy particle searches with jet
+  substructure.
+\newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
 
-\bibitem{exclusivekt}
-Stephen~D. Ellis and Davison~E. Soper.
-\newblock Successive combination jet algorithm for hadron collisions.
-\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
+\bibitem{nsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock {Identifying Boosted Objects with N-subjettiness}.
+\newblock {\em JHEP}, 1103:015:026, 2011.
 
 \bibitem{njetti}
 Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
 \newblock $n$ jettiness: An inclusive event shape to veto jets.
 \newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
 
-\bibitem{nsubjettiness}
-Jesse Thaler and Ken Van~Tilburg.
-\newblock {Identifying Boosted Objects with N-subjettiness}.
-\newblock {\em JHEP}, 1103:015:026, 2011.
+\bibitem{exclusivekt}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock Successive combination jet algorithm for hadron collisions.
+\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
 
 \bibitem{mininsubjettiness}
 Jesse Thaler and Ken Van~Tilburg.

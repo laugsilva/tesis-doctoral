@@ -10,22 +10,22 @@
 \contentsline {subsection}{\numberline {2.2.2}Jet algorithms}{20}
 \contentsline {subsection}{\numberline {2.2.3}Jet substructure}{24}
 \contentsline {subsubsection}{Jet width}{25}
-\contentsline {subsubsection}{Eccentricity?}{26}
-\contentsline {subsubsection}{Subjet multiplicity?}{27}
+\contentsline {subsubsection}{Eccentricity}{26}
 \contentsline {subsubsection}{Jet Mass?}{27}
-\contentsline {subsubsection}{$N$-subjettiness}{27}
-\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{28}
-\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{28}
-\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{32}
-\contentsline {section}{\numberline {3.2}The ATLAS Detector}{35}
-\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{37}
-\contentsline {subsubsection}{The Pixel detector}{38}
-\contentsline {subsubsection}{The SCT}{39}
-\contentsline {subsubsection}{The TRT}{40}
-\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{41}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{42}
-\contentsline {subsubsection}{The hadronic calorimeter}{47}
-\contentsline {subsection}{\numberline {3.2.3}The Muon System}{48}
-\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{49}
-\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{50}
-\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{52}
+\contentsline {subsubsection}{Subjet multiplicity?}{27}
+\contentsline {subsubsection}{$N$-subjettiness}{28}
+\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{30}
+\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{30}
+\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{34}
+\contentsline {section}{\numberline {3.2}The ATLAS Detector}{37}
+\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{39}
+\contentsline {subsubsection}{The Pixel detector}{40}
+\contentsline {subsubsection}{The SCT}{41}
+\contentsline {subsubsection}{The TRT}{42}
+\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{43}
+\contentsline {subsubsection}{Liquid argon EM calorimeter}{44}
+\contentsline {subsubsection}{The hadronic calorimeter}{49}
+\contentsline {subsection}{\numberline {3.2.3}The Muon System}{50}
+\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{51}
+\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{52}
+\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{54}
