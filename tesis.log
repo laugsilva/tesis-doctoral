@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  11 AUG 2012 15:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.24)  14 AUG 2012 10:45
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -55,11 +55,8 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@partial=\box26
 \AP@footins=\box27
 ) (./tesis.aux
-(./Introduction/introduction.aux) (./Introduction/theory.aux
-
-LaTeX Warning: Label `eqn:kt' multiply defined.
-
-) (./Introduction/lhc_atlas.aux))
+(./Introduction/introduction.aux) (./Introduction/theory.aux)
+(./Introduction/lhc_atlas.aux))
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
@@ -295,7 +292,7 @@ Overfull \hbox (4.01257pt too wide) in paragraph at lines 28--31
 
 ] [15]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 52.
+(Font)              <5> on input line 53.
  [16]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -304,7 +301,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
  [17]
-Overfull \hbox (10.87798pt too wide) in paragraph at lines 80--81
+Overfull \hbox (10.87798pt too wide) in paragraph at lines 81--82
 \OT1/cmr/m/n/12 from proton-proton col-li-sion pro-cesses were gen-er-ated with
  P YTHIA 6.423 [[]].
  []
@@ -312,21 +309,108 @@ Overfull \hbox (10.87798pt too wide) in paragraph at lines 80--81
 [18]
 
 LaTeX Warning: Citation `1126-6708-2008-07-07' on page 19 undefined on input li
-ne 93.
+ne 94.
 
 [19] <Fig2/jetdefinition.png, id=146, 1202.4925pt x 409.53pt>
 File: Fig2/jetdefinition.png Graphic file (type png)
 
 <use Fig2/jetdefinition.png> [20] [21 <./Fig2/jetdefinition.png (PNG copy)>]
 
-LaTeX Warning: Citation `CamAchen' on page 22 undefined on input line 125.
+LaTeX Warning: Citation `CamAchen' on page 22 undefined on input line 126.
 
-[22] [23]) [24]
+[22] [23]
+
+LaTeX Warning: Reference `sec:reconstruction' on page 24 undefined on input lin
+e 173.
+
+[24]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Å in font cmr12!
+Missing character: There is no Ñ in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no Å in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no æ in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no Å in font cmr12!
+
+! Text line contains an invalid character.
+l.188 where ri 1‚ÅÑ4 √Åy2 √æ √Å^^^
+                                  2 and where the true boost-ii invariant ra...
+
+? 
+! Text line contains an invalid character.
+l.188 ...stead of the geometric pseudorapidity ^^Q
+                                                  . Under the assumption of ...
+
+? 
+Missing character: There is no √ in font cmr12!
+Missing character: There is no æ in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+[25]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no à in font cmr12!
+Missing character: There is no à in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no à in font cmr12!
+Missing character: There is no í in font cmr12!
+
+! Undefined control sequence.
+l.216  \Delta\phi_i \Deltay
+                           _i & \Delta \phi^2_i \end{array} \right) \]
+? 
+! Double subscript.
+l.216  \Delta\phi_i \Deltay_
+                            i & \Delta \phi^2_i \end{array} \right) \]
+? 
+! Undefined control sequence.
+l.221 The eigenvalues $a \greq
+                               b$ of this tensor are similar to the semimajo...
+
+? 
+[26]) [27]
 \openout2 = `Introduction/lhc_atlas.aux'.
 
  (./Introduction/lhc_atlas.tex
 Chapter 3.
-<Fig2/CERNacceleratorcomplexCut.pdf, id=163, 912.40875pt x 747.79375pt>
+<Fig2/CERNacceleratorcomplexCut.pdf, id=174, 912.40875pt x 747.79375pt>
 File: Fig2/CERNacceleratorcomplexCut.pdf Graphic file (type pdf)
 
 <use Fig2/CERNacceleratorcomplexCut.pdf>
@@ -336,27 +420,27 @@ Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [25
+ [28
 
 
 
-] [26 <./Fig2/CERNacceleratorcomplexCut.pdf>]
+] [29 <./Fig2/CERNacceleratorcomplexCut.pdf>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [27]
+ [30]
 
-LaTeX Warning: Reference `tab:beamparameters' on page 28 undefined on input lin
+LaTeX Warning: Reference `tab:beamparameters' on page 31 undefined on input lin
 e 35.
 
-[28] <Fig2/peakAvgMuByDay.pdf, id=181, 569.12625pt x 408.52625pt>
+[31] <Fig2/peakAvgMuByDay.pdf, id=191, 569.12625pt x 408.52625pt>
 File: Fig2/peakAvgMuByDay.pdf Graphic file (type pdf)
 
-<use Fig2/peakAvgMuByDay.pdf> [29] [30 <./Fig2/peakAvgMuByDay.pdf>]
-<Fig2/sumLumiByDay.pdf, id=195, 569.12625pt x 408.52625pt>
+<use Fig2/peakAvgMuByDay.pdf> [32] [33 <./Fig2/peakAvgMuByDay.pdf>]
+<Fig2/sumLumiByDay.pdf, id=205, 569.12625pt x 408.52625pt>
 File: Fig2/sumLumiByDay.pdf Graphic file (type pdf)
 
-<use Fig2/sumLumiByDay.pdf> [31 <./Fig2/sumLumiByDay.pdf>] [32]
+<use Fig2/sumLumiByDay.pdf> [34 <./Fig2/sumLumiByDay.pdf>] [35]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no à in font cmr12!
 Missing character: There is no í in font cmr12!
@@ -364,44 +448,44 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no à in font cmr12!
 Missing character: There is no í in font cmr12!
 
-<Fig2/ATLASDetector.pdf, id=209, 3162.25409pt x 2032.87483pt>
+<Fig2/ATLASDetector.pdf, id=218, 3162.25409pt x 2032.87483pt>
 File: Fig2/ATLASDetector.pdf Graphic file (type pdf)
 
-<use Fig2/ATLASDetector.pdf> [33] [34 <./Fig2/ATLASDetector.pdf>]
+<use Fig2/ATLASDetector.pdf> [36] [37 <./Fig2/ATLASDetector.pdf>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-<Fig2/InnerDetector.pdf, id=220, 3614.00188pt x 2409.34137pt>
+<Fig2/InnerDetector.pdf, id=229, 3614.00188pt x 2409.34137pt>
 File: Fig2/InnerDetector.pdf Graphic file (type pdf)
 
-<use Fig2/InnerDetector.pdf> [35] [36 <./Fig2/InnerDetector.pdf>]
+<use Fig2/InnerDetector.pdf> [38] [39 <./Fig2/InnerDetector.pdf>]
 Missing character: There is no Œ in font cmr12!
 Missing character: There is no º in font cmr12!
- [37] [38]
-<Fig2/Calorimeters.pdf, id=239, 3915.16707pt x 2635.21526pt>
+ [40] [41]
+<Fig2/Calorimeters.pdf, id=248, 3915.16707pt x 2635.21526pt>
 File: Fig2/Calorimeters.pdf Graphic file (type pdf)
 
-<use Fig2/Calorimeters.pdf> [39] [40 <./Fig2/Calorimeters.pdf>]
+<use Fig2/Calorimeters.pdf> [42] [43 <./Fig2/Calorimeters.pdf>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [41]
-<Fig2/EM_acordionstructure.pdf, id=253, 710.655pt x 627.34375pt>
+ [44]
+<Fig2/EM_acordionstructure.pdf, id=263, 710.655pt x 627.34375pt>
 File: Fig2/EM_acordionstructure.pdf Graphic file (type pdf)
 
-<use Fig2/EM_acordionstructure.pdf> [42] [43 <./Fig2/EM_acordionstructure.pdf>]
-[44] [45] <Fig2/MuonChamber.pdf, id=272, 3012.42432pt x 2259.50154pt>
+<use Fig2/EM_acordionstructure.pdf> [45] [46 <./Fig2/EM_acordionstructure.pdf>]
+[47] [48] <Fig2/MuonChamber.pdf, id=281, 3012.42432pt x 2259.50154pt>
 File: Fig2/MuonChamber.pdf Graphic file (type pdf)
 
-<use Fig2/MuonChamber.pdf> [46] [47 <./Fig2/MuonChamber.pdf>] [48] [49])
-[50] [51] (./tesis.bbl [52
+<use Fig2/MuonChamber.pdf> [49] [50 <./Fig2/MuonChamber.pdf>] [51] [52])
+[53] [54] (./tesis.bbl [55
 
 
-] [53]
+] [56]
 Missing character: There is no √ in font cmr12!
 Missing character: There is no § in font cmr12!
 Missing character: There is no √ in font cmr12!
@@ -411,7 +495,7 @@ Missing character: There is no ∂ in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [54]
+ [57]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
@@ -428,23 +512,24 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 180.
- [55]
+ [58]
+Missing character: There is no ‚ in font cmti12!
+Missing character: There is no à in font cmti12!
+Missing character: There is no ö in font cmti12!
+ [59]
 Missing character: There is no √ in font cmti12!
 Missing character: There is no º in font cmti12!
-
+ [60]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.221 \end{thebibliography}
+l.288 \end{thebibliography}
                            
 ? 
-) [56] (./tesis.aux (./Introduction/introduction.aux)
+) [61] (./tesis.aux (./Introduction/introduction.aux)
 (./Introduction/theory.aux) (./Introduction/lhc_atlas.aux))
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred inside a group at level 1)
@@ -452,10 +537,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1188 strings out of 495061
- 16114 string characters out of 1182621
- 69771 words of memory out of 3000000
- 4358 multiletter control sequences out of 15000+50000
+ 1203 strings out of 495061
+ 16387 string characters out of 1182621
+ 69802 words of memory out of 3000000
+ 4373 multiletter control sequences out of 15000+50000
  11900 words of font info for 41 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,9n,21p,1813b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -474,9 +559,9 @@ ic/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
 m/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
 texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (61 pages, 20272303 bytes).
+Output written on tesis.pdf (66 pages, 20285872 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
+ 373 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  82 words of extra memory for PDF output out of 10000 (max. 10000000)
 

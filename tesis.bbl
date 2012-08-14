@@ -179,6 +179,73 @@ M~Cacciari and G.P. Salam.
 \newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
 \newblock {\em Phys.\ Lett.\ B\}, 661:057, 2006.
 
+\bibitem{Abbiendi:2007aa}
+G.~Abbiendi et~al.
+\newblock {Measurement of alpha(s) with Radiative Hadronic Events}.
+\newblock 2007.
+
+\bibitem{Aad:2012np}
+Georges Aad et~al.
+\newblock {Measurement of event shapes at large momentum transfer with the
+  ATLAS detector in pp collisions at sqrt(s) = 7 TeV}.
+\newblock 2012.
+
+\bibitem{PhysRevLett.107.172001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Quark and gluon tagging at the lhc.
+\newblock {\em Phys. Rev. Lett.}, 107:172001, Oct 2011.
+
+\bibitem{PhysRevD.82.095012}
+Graham~D. Kribs, Adam Martin, Tuhin~S. Roy, and Michael Spannowsky.
+\newblock Discovering higgs bosons of the mssm using jet substructure.
+\newblock {\em Phys. Rev. D}, 82:095012, Nov 2010.
+
+\bibitem{springerlink:10.1007/JHEP11(2010)101}
+Stephen Ellis, Christopher Vermilion, Jonathan Walsh, Andrew Hornig, and
+  Christopher Lee.
+\newblock Jet shapes and jet algorithms in scet.
+\newblock {\em Journal of High Energy Physics}, 2010:1--83, 2010.
+\newblock 10.1007/JHEP11(2010)101.
+
+\bibitem{PhysRevLett.105.022001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Seeing in color: Jet superstructure.
+\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
+
+\bibitem{MultivariateDiscrim}
+Jason Gallicchio, John Huth, Michael Kagan, Matthew Schwartz, Kevin Black, and
+  Brock Tweedie.
+\newblock Multivariate discrimination and the higgs+w/z search.
+\newblock {\em Journal of High Energy Physics}, 2011:1--41, 2011.
+\newblock 10.1007/JHEP04(2011)069.
+
+\bibitem{ATLAS-CONF-2011-073}
+{ATLAS Collaboration}.
+\newblock {Measurement of Jet Mass and Substructure for Inclusive Jetsin √s =
+  7 TeV pp Collisions with the ATLAS Experiment}.
+\newblock {\em ATLAS-CONF-2011-073}, May 2011.
+
+\bibitem{exclusivekt}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock Successive combination jet algorithm for hadron collisions.
+\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
+
+\bibitem{njetti}
+Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
+\newblock $n$ jettiness: An inclusive event shape to veto jets.
+\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
+
+\bibitem{nsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock {Identifying Boosted Objects with N-subjettiness}.
+\newblock {\em JHEP}, 1103:015:026, 2011.
+
+\bibitem{mininsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock Maximizing boosted top identification by minimizing n-subjettiness.
+\newblock {\em Journal of High Energy Physics}, 2012:1--33, 2012.
+\newblock 10.1007/JHEP02(2012)093.
+
 \bibitem{Breskin:1244506}
 Amos Breskin and Rüdiger Voss.
 \newblock {\em The CERN Large Hadron Collider: Accelerator and Experiments}.
