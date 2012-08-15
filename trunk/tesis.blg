@@ -15,45 +15,45 @@ Warning--empty journal in Perugia
 Warning--empty journal in Abbiendi:2007aa
 Warning--empty journal in Aad:2012np
 Warning--empty journal in ATLAS
-You've used 54 entries,
+You've used 57 entries,
             1791 wiz_defined-function locations,
-            761 strings with 12390 characters,
-and the built_in function-call counts, 10934 in all, are:
-= -- 863
-> -- 626
+            786 strings with 12915 characters,
+and the built_in function-call counts, 11785 in all, are:
+= -- 934
+> -- 668
 < -- 1
-+ -- 232
-- -- 178
-* -- 758
-:= -- 1924
-add.period$ -- 164
-call.type$ -- 54
-change.case$ -- 53
++ -- 247
+- -- 190
+* -- 837
+:= -- 2061
+add.period$ -- 173
+call.type$ -- 57
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 469
-empty$ -- 1013
-format.name$ -- 178
-if$ -- 2331
+cite$ -- 63
+duplicate$ -- 497
+empty$ -- 1095
+format.name$ -- 190
+if$ -- 2515
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 54
-newline$ -- 275
-num.names$ -- 53
-pop$ -- 99
+int.to.str$ -- 57
+missing$ -- 57
+newline$ -- 290
+num.names$ -- 56
+pop$ -- 100
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 178
+skip$ -- 187
 stack$ -- 0
-substring$ -- 533
-swap$ -- 49
+substring$ -- 623
+swap$ -- 52
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 91
-width$ -- 56
-write$ -- 580
+while$ -- 98
+width$ -- 59
+write$ -- 614
 (There was 1 error message)

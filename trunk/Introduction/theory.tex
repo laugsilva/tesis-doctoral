@@ -166,7 +166,7 @@ These algorithms, and more, are implemented in {\sc Fastjet}~\cite{fastjet} soft
 \subsection{Jet substructure}\label{sec:substructure}
 %------------------------------------------------------------------------
 
-The study of a quantity related to the distributions and multiplicity of particles in the event phase space lead to the first evidence of jet structure, as pointed out in ref.~\cite{PhysRevLett.35.1609}. In general, all final hadronic states in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the energy flow by means of so called ``event shape'' variables. This family of variables attempt to extract information about the global geometry of event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa}\cite{Aad:2012np}. 
+The study of a quantity related to the distributions and multiplicity of particles in the event phase space lead to the first evidence of jet structure, as pointed out in ref.~\cite{PhysRevLett.35.1609}. In general, all final hadronic states in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the event energy flow by means of so called ``event shape'' variables. This family of variables attempt to extract information about the global geometry of an event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa}\cite{Aad:2012np}. 
 
 Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet in the event. In new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. For example, when an unstable particle with large transverse momentum decays hadronically, the final state may contain a number of nearly collinear jets. These jets may be merged by a jet finder; %The decay products of boosted heavy quarks or bosons might be reconstructed as a single jet, 
 a method for selecting these jets would allow for the study of their properties.
@@ -178,7 +178,7 @@ but they have been also used succesfully in other applications, including separa
 
 %Jet shapes and jet algorithms in SCET, by Ellis, Vermillon, et all
 Jet shapes, which are event shape-like observables applied to single jets, are an effective tool to measure the structure of individual jets~\cite{springerlink:10.1007/JHEP11(2010)101}.% {\bm ELEGIR REFERENCIA}. 
-The study of the distribution of particles within a jet has proven to be useful for distinguishing jets initiated by different flavors of quark or by a gluon, see for instance~\cite{PhysRevLett.107.172001}. The shape of a jet no only depends on the type of parton (quark or gluon) but is also sensitive to non-perturbative fragmentation effects and underlying event contributions~\cite{ATLASJetShapes}.
+ The shape of a jet no only depends on the type of parton (quark or gluon) but is also sensitive to non-perturbative fragmentation effects and underlying event contributions~\cite{ATLASJetShapes}.
 
 
 %from Jet substructure at the Tevatron and LHC
@@ -241,32 +241,25 @@ e = \sqrt{\frac{(a^2 - b^2)}{a}}
 \subsubsection{Jet Mass}
 
 
-Jet mass is the most basic observable for distinguishing a boosted object from an ordinary quark- or gluon-initiated jet.
-
-The jet mass can be used to discriminate at a high-level between jets initiated by a massive object and those that are the result of succesive branchings of the parton shower. Massive jets formed by the latter are expected to be dominated by wide-angle emissions. %http://prd.aps.org/abstract/PRD/v79/i7/e074012
-%...
-There is an increase probability to see high mass jets initiated from a gluon as opposed to a quark.  And, large radii jets at high $\pt$ are expected to exhibit higher mass scales.
-
-In the recent ATLAS analysis of 35~pb$^{-1}$ of data, the sensitivity of individual jet mass to pile-up is directly tested (for jets with at least 300~GeV). The mean jet mass is observed to increase linearly with NPV~\cite{ATLAS-CONF-2011-073}. %The filtering procedure significantly reduces the effect of pile-up on jet mass.
+The jet mass, like the linear radial moment, also depends on the radiation pattern of the event. It is the most basic observable for disinguishing massive boosted objects from jets originating from quarks or gluons. The latter are expected to be dominated by wide-angle emissions, with increase probability to see high mass jets initiated from gluons as opposed to quarks~\cite{PhysRevD.79.074012}.  
 
 
+{\sc Need to complete this}.
 
 
-\subsubsection{Subjet multiplicity?}
+%In the recent ATLAS analysis of 35~pb$^{-1}$ of data, the sensitivity of individual jet mass to pile-up is directly tested (for jets with at least 300~GeV). The mean jet mass is observed to increase linearly with NPV~\cite{ATLAS-CONF-2011-073}. %The filtering procedure significantly reduces the effect of pile-up on jet mass.
 
-Radiation variable, which are dependent on the radiation pattern of the event~\cite{MultivariateDiscrim}.
 
-By using succesive recombination algorithms such as those described in previus sectin, it is straightforward to define a ``subjet algorithm'' in which the structure of the constituents of a given jet are parsed using either the original algorithm or a new one at a fixed distance parameter. This concept was initially suggested in different works%  http://www.sciencedirect.com/science/article/pii/055032139290296N
-%http://www.sciencedirect.com/science/article/pii/037026939291467N
-in order to quantify the jet multiplicity at various kinematic scales. 
-Subsequent to the development of the $k_t$ algorithm, 
-%http://prd.aps.org/abstract/PRD/v48/i7/p3160_1
-%http://www.sciencedirect.com/science/article/pii/037026939291467N
-a similar approach was also used at hadron colliders.
-%http://www.sciencedirect.com/science/article/pii/S0920563299007641
-%http://iopscience.iop.org/1126-6708/1999/09/009/
 
-In addition to fixed distance parameter subjets, it is also possible to ``unfold'' the jet algorithm, or to undo the last recombination step in a succesive recombination algorithm so as to identify decays products of a (massive)object. This approach is used in seveal jet grooming procedures, see for instance~\cite{pruning}.
+
+\subsubsection{Subjet multiplicity}
+
+With the development of the $k_t$ algorithm, subjets were first used in the description of the hadronic final state in $e^+e^-$ annihilation, such as the study of the jet multiplicity at different energy scales~\cite{Catani1992445}. By using the sequential recombination algorithms introduced in the previus section, it is straightforward to define a ``subjet algorithm'' in which the structure of the jet's constituents is resolved using either the same jet finder algorithm or a new one with a fixed (smaller) distance parameter.
+
+The subjet multiplicity $-$ the number of subjets within a jet $-$ provides information on the distribution of energy and multiplicity of particles within a jet. For instance, in~\cite{Snihur1999494} the result of meassuring this ``radiation variable'' on quark- and gluon-initiated jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity. This result is consistent with the QCD prediction that gluons radiate more than quarks. In the case of this and different other analyses % see for instance  http://iopscience.iop.org/1126-6708/1999/09/009/
+the $k_t$ algorithm is rerun for subjet finding.
+
+As an alternative to fixed distance parameter subjets, it is also possible to undo the last step in the recombination sequence~\cite{kt2} in order to identify the decay products of an object.  This approach is used in seveal jet grooming procedures\footnote{Jet grooming comprises dedicated techniques to remove uncorrelated radiation within a jet. A review of these procedures can be found in~\cite{Abdesselam:2010pt}. }, see for instance~\cite{pruning}.
 
 %In contrast to the $k_t$ algorithm, it is not useful just to undo the last stage of C/A clustering: The absence of any momentum scale in its distance measure means that the last clustering often involves soft radiation on the edges of the jet and so, is unrelated to the heavy object's decay. 
 %The so-called BDRS method of jet grooming
@@ -281,41 +274,30 @@ It is also possible to extend the use of individual subjets in conjunction with 
 
 \subsubsection{$N$-subjettiness}
 
-$N$-subjettiness~\cite{nsubjettiness}. is jet shape that describes the energy flow of a jet with respect to candidate subjet axes.  
+As mentioned above, the $N$-subjettiness~\cite{nsubjettiness} is a jet shape that describes the energy flow within a jet. It quantifies the degree to which  radiation is aligned along specified subjet axes. This jet shape was adapted from the event shape $N$-jettiness~\cite{njetti}.
 
-%From david's
-This observable seeks to measure the extent to which a given jet is likely to be composed of $N$ subjets by first identifying a set of subjets and  then comparing the energy flow in the jet to the direction of these subjets.
+Given candidate subjets directions determined by an external algorithm such as the exclusive $k_t$ procedure~\cite{exclusivekt}, the variables is defined as,
+
 
 \begin{equation} 
-\tau^{(\beta)}_N = \frac{1}{\sum_k {\pt}_k\,(R_0)^{\beta}} \sum_k {\pt}_k (\min \{ \Delta R_{S_1,k},\,\Delta R_{S_2,k},...,\,\Delta R_{S_N,k} \})^{\beta}
+\tau^{(\beta)}_N = \frac{1}{\sum_k {\pt}_k\,(R_0)^{\beta}} \sum_k {\pt}_k (\min \{ \Delta R_{j1,k},\,\Delta R_{j2,k},...,\,\Delta R_{jN,k} \})^{\beta}
 \label{eqn:nsubjet}
 \end{equation} 
 
-
 The sum runs over the $k$ constituent particles in a given jet where $p_{T,k}$ are their transverse momenta, and $\Delta R_{j1,k}$ is the distance between the candidate subjet $j1$ and a constituent particle $k$.  $R_0$ is the characteristic jet radius used in the original jet clustering algorithm.
-An exponential weight $\beta$ may optinally be applied to the angular distance computed between the subjets and the jet constituents.
+The exponential weight, $\beta$, can optionally be applied to the angular distance computed between the subjets and the jet constituents.  
 
-
-%From boost2011 summary
-This jet shape was designed to identify boosted $N$-prong hadronic decays. 
-$N$-subjettiness quantifies the degree to which a radiation is aligned along specified subjet axes, such that small values of $\tau_N$ correspond to N or fewer subjets, while larger values of $\tau_N$  indicate more than $N$ subjets.
-This event shape was adapted from the event shape $N$-jettiness~\cite{njetti}.
-Given candidate subjets directions determined by an external algorithm such as the exclusive $k_t$ procedure~\cite{exclusivekt}, the variables is defined as (EQUATION).
+This jet shape was designed to identify boosted $N$-prong hadronic decays. With $\beta=1$, the definition above indicates that jets with $\tau_N\approx 0$ have all their radiation aligned with the candidate subjet directions and therefore have $N$ (or fewer) subjets. Jets with $\tau_N\gg 0$ have a large fraction of their energy distributed away from the candidate subjet direction and therefore have at least $N+1$ subjets.
 
 To separate boosted hadronic objects from the QCD jet background, one could use the complete set of  $\tau_N$ (with different values of $\beta$) in a multivariate analysis. However, \cite{nsubjettiness} showed that a simple cut on the ratio $\tau_N/\tau_{N-1}$ provides excellent discrimination power for $N$-prong hadronic objects. In particular, $\tau_2/\tau_1$ can identify boosted $W/Z$ and Higgs bosons, with the angular weighting exponent $\beta =1$ providing the best discrimination.
 
-In subsequent work~\cite{mininsubjettiness}, Thaler and van Tilburg showed that the initial step of choosing candidate subjet axes is in fact unnecessary. In particular, the quantity in equation\label{eqn:nsubjet} can be minimised over the candidate subjet directions, further improving boosted object discrimination.
+Since eq.~\ref{eqn:nsubjet} is linear in each of the constituent particle momenta, this variable is an infrared- and colliner-safe observable.  In subsequent work~\cite{mininsubjettiness}, Thaler and van Tilburg showed that the initial step of choosing candidate subjet axes is in fact unnecessary. In particular, the quantity in equation~\ref{eqn:nsubjet} can be minimised over the candidate subjet directions, further improving boosted object discrimination.
+
+The definition of $N$-subjettiness is not unique, and different choises can be sued to give different weights to the emissions within a jet. There generalizations of $N$-subjettiness are similar to different ``angularities''~\cite{angularities} used in $e^+e^- \rightarrow$hadrons measurements.
 
 
 %From Nsubjettiness paper
-(We can) use $N$-subjettiness to effectively ``count'' the number of subjets in a jet. Compare to previous jet substructure techniques, $N$-subjettiness  has the advantage of finding jets that contain two or more lobes of energy.
-Consider for instance the decay of a boosted $W$ boson. Since the $W$ decays to two quarks, a single jet containing a boosted $W$ boson should be composed of two distinct hard subjets with a combined invariant mass around 80~GeV. A boosted QCD jet with an invariant mass of 80~GeV usually originates from a single hard parton and acquires mass through large angle soft splittings. Therefore the difference in expected energy flow between these two types of jets can be exploited by ``counting'' the number of hard lobes of energy within a jet.
+%use $N$-subjettiness to effectively ``count'' the number of subjets in a jet. Compare to previous jet substructure techniques, $N$-subjettiness  has the advantage of finding jets that contain two or more lobes of energy.
+%Subjet candidates where determined by using the exclusive $k_t$ algorithm, forcing it to return exactly $N$ jets.
 
-Jets with $\tau_N\approx 0$ have all their radiation aligned with the candidate subjet directions and therefore have $N$ (or fewer) subjets. Jets with $\tau_N\gg 0$ have a large fraction of their energy distributed away from the candidate subjet direction and therefore have at least $N+1$ subjets.
-A key step for defining $N$-subjettiness is to appropiately chosse the candidate subjet directions.
-In its version such candidates where determined by using the exclusive $k_t$ algorithm, forcing it to return exactly $N$ jets.
-
-Once the candidate subjets are identified, $N$-subjettiness is a proper inclusive jet shape. Since eq.~\ref{eqn:nsubjet} is linear in each of the constituent particle momenta, it is an infrared- and colliner-safe observable.
-
-The definition of $N$-subjettiness is not unique, and different choises can be sued to give different weights to the emissions within a jet. There generalizations of $N$-subjettiness are similar to different ``angularities''~\cite{angularities} used in $e^+e^- \rightarrow$hadrons measurements.
 
