@@ -1,0 +1,51 @@
+From Halse & Martin,
+
+The fundamental interactions are widely believed to be described by quantum field theories possesing local gauge symmetry.
+All the particles which undergo strong interactions, baryons and mesons, are collectively called "hadrons". The baryons are bound states of three quarks; the mesons are composed of a quark and an antiquark.
+We use "colorless" to mean a singlet representation of the color group.
+Color solves the embarrasment that our succesful quark model appears to violate Fermi statistics. 
+All forces of nature are the result of particle exchange.
+Quarks interact strongly by exchanging color.
+Since gluons carry themselves a color charge, they can directly interact with other gluons. Theories in which field quanta my interact directly are called "non-abelian".
+Asymptotic freedom -> "anti-screening"
+A synchrocyclotron, using a series of accelerating rf cavities placed in a circle, differs from a cyclotron in tow ways: (1) the B field, supplied by dipole bending magnets iterspaced between the rf cavities, is not constant but is continuosly adjusted to force the particles into a fixed orbit; (2) the frequency of the oscillating electric field in the rf cavities is "synchronized" with the changing rotation frequency omega of the protons, omega = eB/m. Only protons entering the cavity at the right momenet are accelerated. Thus, we are forced to accelerate bunches of protons rather than a continuous beam.
+
+
+
+From Peskin,
+Quantum Chromodynamics
+
+Non-Abelian gauge theoies are asymptotically free.
+The natural candidate for a model of the strong interactions is the non-Abelian gauge theory with gauge group SU(3), coupled to fermions (quarks) in the fundamental representation. This theory is known as QCD.
+Our current theoretical picture of the strong interactions began with the identification of the elementary fermions that make up the proton and other hadrons.
+In 1963, Gell-Mann and Zweig proposed a model that explained the spectrum of strongly interacting particles in terms of elementary constituents called quarks.
+Mesons were expected to be quark-antiquark bound states and Baryons were interpreted as bound states of three quarks. To explain the electric charges and quantum numbers of the hadrons, Gell-Mann and Zweig needed to assume three species of quarks, up (u), down (d), and strange (s). Additional hadrons discovered since that time required the existence of three more species: charm (c), bottom (b) and top (t). To make baryons with integer charges, the quarks neeeded to be assigned fractional electric charge: +2/3 for u, c, t, and -1/3 for d, s, b. The six types of quarks are conventionally referred to as flavors.
+
+Despite the phenomenological success of the original quark model, it had two serious problems. First, despite considerable effort, free particles with fractional charge could not be found.  Second,  the spectrum of baryons required the assumption that the wavefunction of the three quarks be totally symmetric under the interchange of the quark spin and flavor quantum numbers, contradicting the expectation that quarks, which must have spin 1/2, should obey Fermi-Dirac statistics. To reconcile the baryon spectrum with the spin-statistics theorem, Han and Nambu, Greenberg, and Gell-Mann proposed that quarks carry an additional, unobserved quantum number, called color.
+
+The simplest model of color would be to assign quarks to the fundamental representation of a new, internal SU(3) global symmetry.
+
+What mechanism insures that all hadron wavefunctions are color singlets? The answer to this question came from deep-inelastic scattering experiments and the  ensuing %consiguiente
+search for a theory of parton binding with the property of asymptotic freedom.
+(The reasoning resulted in) a model of the strong interactions as a system of quarks, of the varius flavors, each assigned to the fundamental representation of the local group SU(3). The quanta of the SU(3) gauge field are called gluons, and the theory is known as Quantum Chromodynamics.
+
+If one attempts to separate a color-singlet state into colored components a tube of gauge field forms between the two sources. In a non-Abelian gauge theory with sufficiently strong coupling, this tube has fixed radius and energy density, sot the energy cost of separating color sources grows proportionally to the separtion. A force law of this type consistently be weak at short distances and strong at long distances, accounting for the fact that isolated quarks are not observed. 
+
+QCD perturbation theory is valid only when Q is somewhat larger than this ($\Lambda \approx 200$~MeV), say above Q = 1~GeV, where $\alpha_s \approx$0.4. The strong interactins become strong at distances larger than $\sim 1/\Lambda$, which is roughly the size of the light hadrons.
+
+If Q is large, the asymptotic freedom of QCD implies that Feynman diagrams for quarks and gluons will correctly predict the behavior of the final system of hadronic jets. 
+
+(...)These soft processes, will, however,  create gluons and quark-antiquark pairs that evenetually neutralize the color and cause the struck quark to materialize as a jet of hadrons.
+The probability that the proton contains a certain constituent with a certain fraction of momentum cannot be computed using QCD perturbation theory, since it depends on the soft processes that determine the structure of the proton as a bound state of quarks and gluons. We will therefore consider this probability to be an unknown function, to be determined from experiment. This function is called, for each of the flavors, parton distribution functions.
+
+Collectively, the constituents of the proton are called partons.
+ 
+
+The distribution functions of quarks and antiquarks in the proton, as extracted from deep inelastic scattering data, contribute only about half of the total momentum of the proton. The remaining energy-momentum must be carried by the gluons.
+
+If one collides hadrons with other hadrons at very high energy, most of the collisions will involve only soft interactions of the constituents quarks and gluons. Such interactions cannot be treated using perturbative QCD, because $\alpha_s$ is large when the momentum transfer is small. In some collisions, however, two quarks or gluons will exchange a large momentum pt perpendicular to the collision axis.
+
+Dreel-Yann process: high-mass lepton pair emerges from qq annihilation in a proton-proton collision.
+
+
+In the case of QCD cross sections calculations, the contributions from the regin of collinear gluon or quark emission should be associated with the parton distributions rather than with the hard-scattering cross sections. If we make this association, we find that the parton distributions are no longer independent of the momentum Q that characterizes the hard-scattering process; rather, they now evolve logarithmically with Q. The evolution equations for parton distributions in QCD are known as the Altarelli-Parisi equations. They describe the coupled evolution of parton distributions for each flavor of quark and antiquark that can be treated as massless at the scale Q, together with the parton distribution of gluons.
