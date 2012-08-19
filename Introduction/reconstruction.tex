@@ -7,9 +7,7 @@
 \chapter{Jet reconstruction and $b$-Tagging }\label{sec:reconstruction}
 
 
-Experimental data and simulated events were both reconstructed using the latest version available of the ATLAS software. In this chapter we brielfy describe the reconstruction of the two key objects used in this analysis, namely jets and tracks.
-We describe how $b$-Tagging is done in ATLAS.
-
+The reconstruction of the key objects for $b$-tagging purposes, namely the tracks, the primary vertex and jets is briefly described in the following.
 
 %------------------------------------------------------------------------
 \section{Jets reconstruction and calibration}\label{sec:ObjSelection}
@@ -29,19 +27,64 @@ The jet energies are corrected for inhomogeneities and for
 the non-compensating nature of the calorimeter by using \pt- and $\eta$-dependent calibration factors determined from Monte Carlo simulation~\cite{JESnote}. This calibration is referred to as the EM+JES scale.
 Using test beam results, in-situ track and calorimeter measurements, estimations of pile-up energy depositions, and detailed Monte Carlo comparisons, an uncertainty on the absolute jet energy scale was estabished. This uncertainty is smaller than $\pm 10\%$ for $\eta < 2.8$ and $\pt > 20$ GeV. More sophisticated techniques undergoing commissioning, such as local cluster weighting, are expected to considerably improve the jet energy uncertainty and resolution~\cite{CSC}. 
 
-%------------------------------------------------------------------------
-%\section{Tracks Reconstruction}\label{sec:ObjSelection}
-%------------------------------------------------------------------------
-
-
-%The tracks of charged particles with a pseudorapidity $|\eta| < 2.5$ are reconstructed in the the Inner Detector. It is composed of a barrel, consisting of 3 Pixel layers, 4 double layers of single-sided silicon strip sensors, and 73 layers of Transition Radiation Tracker straws concentric with the beam, plus a system of disks on each end of the barrel, occupying in total a cylindrical volume around the interaction point of radius of 1.15~m and length of 7.024~m. The Pixel detector's innermost layer is located at a radius of 5 cm from the beam axis, has a position resolution of approximately 10~$\mu$m in the $r-\phi$ plane and 115 $\mu$m along the beam axis ($z$). %Tracks with $p^{\rm{track}}_{\rm{T}} > 150$
-%Tracks with $p^{\rm{track}}_{\rm{T}} > 400$ MeV and consistent with the beamspot are associated in primary vertices via a finding/fitting sequential algorithm. Several primary vertices can be reconstructed per event due to the presence of in-time pile-up. The one with at least five associated tracks, a $z$ position within 100~mm of the ATLAS geometrical center, and the largest $\sum_{\rm trk}\pt^2$, is selected as the one associated to the hard interaction.
-%are selected as good vertices.
 
 %-------------------------------------------------------------------
 \section{ $\bm b$-jet Tagging}\label{sec:btagging}
 %------------------------------------------------------------------------
 
+
+%From Gbb note
 Jets are classified as $b$-quark candidates by the ATLAS MV1 $b$-tagging algorithm, based on a neural network that combines the information from three high-performance taggers: IP3D, SV1 and JetFitter \cite{ATLAS-CONF-2011-102}.  These three tagging algorithms use a likelihood ratio technique in which input variables are compared to smoothed normalized distributions for both the $b$- and background (light- or in some cases $c$-jet) hypotheses, obtained from Monte Carlo simulation.  The IP3D tagger takes advantage of the signed transverse and longitudinal impact parameter significances. The SV1 tagger reconstructs an inclusive vertex formed by the decay products of the $b$-hadron and relies on the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet and the number of two-track vertices. The JetFitter tagger exploits the topology of the primary, $b$- and $c$-vertices and combines vertex variables with the flight length significance.  The $b$-tagging performance is determined using a simulated $t\bar{t}$ sample and is calibrated using experimental data with jets containing muons and with a sample of $t\bar{t}$ events~\cite{ATLAS-CONF-2011-089}.
 
 
+
+%From https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2011-102/
+
+The ability to identify jets containing $b$-hadrons is important for the high-$\pt$ physics program of a general-purpose experiment at the LHC such as ATLAS. Two robust $b$-tagging algorithms taking advantage of the impact parameter of tracks (JetProb) or reconstructing secondary vertices (SV0) have been quickly commisssioned~\cite{ATLAS-CONF-2010-091}\cite{ATLAS-CONF-2010-042} and used for several analyses of the 2012 and 2011 data (REFERENCIAS).
+Building on this success, more advanced $b$-tagging algorithms have been commissioned with the 2011 data. All these algorithms are based on Monte Carlo predictions for the signal ($b$-jet) or background (light- or in some cases $c$-jet) hypotheses.
+
+The $b$-tagging performance relies criticaly on the accurate reconstruction of the charged tracks in the ATLAS Inner Detector. 
+The innermost part, the pixel detector, has an intrinsic measurement accuracy of around 10~$\mu$m in the transverse plane, and 115~$\mu$m along the beam axis ($z$).  For a central track with $\pt=$5~GeV, which is typical for $b$-tagging, the transverse momentum resolution is around 75~MeV and the transverse impact parameter resolutioni is about 35~$\mu$m.
+
+\subsection{Primary vertex}
+
+The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-tagging since it defines the reference point with respect to which impact parameters and vertex displacements are measured.
+
+See primary vertex recontruction in~\cite{ATLAS-CONF-2010-069}.
+
+\subsection{Pile-up}
+
+Out-of-time pile-up events ($pp$ collisions from neighboring bunches in the same train) also generate calorimeter activity and consequently extra jets. However, given the time resolution of the Inner Detector, and since the $b$-tagging algorithms reject jets with no track associtaed to them, the contribution of the out-of-time pile-up for this analysis is expected to be negligible.
+
+
+
+
+%------------------------------------------------------------------------
+\subsection{Tracks selection and properties}\label{sec:ObjSelection}
+%------------------------------------------------------------------------
+
+\subsubsection{Track quality cuts}
+
+
+The track selection for $b$-tagging is designed to select well-measured tracks rejecting fake tracks and tracks from long-lived particles ($K_s$, $\Lambda$, and other hyperon decays, generically referred to as $V^0$ decays) and material description.
+
+The tracks of charged particles with a pseudorapidity $|\eta| < 2.5$ are reconstructed in the the Inner Detector. It is composed of a barrel, consisting of 3 Pixel layers, 4 double layers of single-sided silicon strip sensors, and 73 layers of Transition Radiation Tracker straws concentric with the beam, plus a system of disks on each end of the barrel, occupying in total a cylindrical volume around the interaction point of radius of 1.15~m and length of 7.024~m. The Pixel detector's innermost layer is located at a radius of 5 cm from the beam axis, has a position resolution of approximately 10~$\mu$m in the $r-\phi$ plane and 115 $\mu$m along the beam axis ($z$). %Tracks with $p^{\rm{track}}_{\rm{T}} > 150$
+%Tracks with $p^{\rm{track}}_{\rm{T}} > 400$ MeV and consistent with the beamspot are associated in primary vertices via a finding/fitting sequential algorithm. Several primary vertices can be reconstructed per event due to the presence of in-time pile-up. The one with at least five associated tracks, a $z$ position within 100~mm of the ATLAS geometrical center, and the largest $\sum_{\rm trk}\pt^2$, is selected as the one associated to the hard interaction.
+%are selected as good vertices.
+
+
+\subsubsection{Track association to jets}
+
+The actual tagging is performed on the sub-set of tracks in the event that are associated to the jets. Tracks are associtaed to the jets with a spatial matching in $\Delta R_{(jet,track)}$. The association cut $\Delta R$ is varied as a function of the jet $\pt$ in order to have a smaller cone for high-$pt$ jets which are more collimated.
+
+
+
+
+\subsubsection{Impact parameters}
+The most critical track parameters for $b$-tagging are the transverse and longitudinal impact parameters. The transverse parameter $d_0$ is the distance of closest approach of the track to the primary vertex point in the $r\phi$ projection. The $z$ coordinate of the track at this point of closest approach is referred to as $z_0$. It is often called the longitudinal impact parameter\footnote{Stricktly speaking the impact parameter is $|z_0|sin\theta$, where $\theta$ is the polar angle of the track.}. On the basis that the decay point of the $b$-hadron must lie along its flight path, the impact parameter is signed to further discriminate the tracks from $b$-hadron decays from tracks originating from the primary vertex. The sign is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. Therefore, tracks from $b/c$ hadron decays tend to have positive sign.
+
+The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters.
+
+\subsection{$b$-tagging algorithms}
+
+%A first stag
