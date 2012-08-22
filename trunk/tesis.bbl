@@ -1,128 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{ATLAS-CONF-2010-091}
-{ATLAS Collaboration}.
-\newblock {Performance of Impact Parameter-Based $b$-tagging Algorithms with
-  the ATLAS Detector using Proton-Proton Collisions at $\sqrt{s}$ = 7 TeV}.
-\newblock {\em ATLAS-CONF-2010-091}, 2010.
-
-\bibitem{ATLAS-CONF-2010-042}
-{ATLAS Collaboration}.
-\newblock {Performance of the ATLAS Secondary Vertex $b$-tagging Algorithm in 7
-  TeV Collision Data}.
-\newblock {\em ATLAS-CONF-2010-042}, 2010.
-
-\bibitem{ATLAS-CONF-2011-102}
-{ATLAS Collaboration}.
-\newblock {Commissioning of the ATLAS high-performance $b$-tagging algorithms
-  in the 7 TeV collision data}.
-\newblock {\em ATLAS-CONF-2011-102}, 2011.
-
-\bibitem{CDFAzimutalCorrelation}
-{CDF Collaboration}.
-\newblock {Measurements of Bottom Anti-Bottom Azimuthal Production Correlations
-  in Proton-Antiproton Collisions at s**(1/2)= 1.8 TeV}.
-\newblock {\em Phys.Rev.D}, 71:38, 2005.
-
-\bibitem{Frixione:1996nh}
-S.~Frixione and M.L. Mangano.
-\newblock {Heavy quark jets in hadronic collisions}.
-\newblock {\em Nucl.Phys.}, B483:321--338, 1997.
-
-\bibitem{Salam.AccurateHQ}
-Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
-\newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
-  lhc.
-\newblock {\em JHEP}, 0707:026, 2007.
-
-\bibitem{kt1}
-S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
-\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
-  hadron collisions}.
-\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
-
-\bibitem{Herwig}
-G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
-\newblock {HERWIG 6: An Event generator for hadron emission reactions with
-  interfering gluons (including supersymmetric processes)}.
-\newblock {\em JHEP}, 0101:010, 2001.
-
-\bibitem{Campbell:2006}
-John~M. Campbell, R.Keith Ellis, F.~Maltoni, and S.~Willenbrock.
-\newblock {Production of a $W$ boson and two jets with one $b^-$ quark tag}.
-\newblock {\em Phys.Rev.}, D75:054015, 2007.
-
-\bibitem{ATLAS-CONF-2011-098}
-{ATLAS Collaboration}.
-\newblock {Search for supersymmetry in pp collisions at $\sqrt{s}=7$TeV in
-  final states with missing transverse momentum, $b$-jets and no leptons with
-  the ATLAS detector}.
-\newblock {\em ATLAS-CONF-2011-098}, 2011.
-
-\bibitem{boost2010}
-A.~Abdesselam et~al.
-\newblock Boosted objects: a probe of beyond the standard model physics.
-\newblock {\em The European Physical Journal C - Particles and Fields},
-  71:1--19, 2011.
-
-\bibitem{boost2010b}
-A.~Altheimer et~al.
-\newblock {Jet Substructure at the Tevatron and LHC: New results, new tools,
-  new benchmarks}.
-\newblock 2012.
-
-\bibitem{Butterworth:2008iy}
-Jonathan~M. Butterworth, Adam~R. Davison, Mathieu Rubin, and Gavin~P. Salam.
-\newblock {Jet substructure as a new Higgs search channel at the LHC}.
-\newblock {\em Phys.Rev.Lett.}, 100:242001, 2008.
-
-\bibitem{PhysRev.75.486}
-F.~J. Dyson.
-\newblock The radiation theories of tomonaga, schwinger, and feynman.
-\newblock {\em Phys. Rev.}, 75:486--502, Feb 1949.
-
-\bibitem{Glashow1961579}
-Sheldon~L. Glashow.
-\newblock Partial-symmetries of weak interactions.
-\newblock {\em Nuclear Physics}, 22(4):579 -- 588, 1961.
-
-\bibitem{Salam1964168}
-A.~Salam and J.C. Ward.
-\newblock Electromagnetic and weak interactions.
-\newblock {\em Physics Letters}, 13(2):168 -- 171, 1964.
-
-\bibitem{PhysRevLett.19.1264}
-Steven Weinberg.
-\newblock A model of leptons.
-\newblock {\em Phys. Rev. Lett.}, 19:1264--1266, Nov 1967.
-
-\bibitem{Banner1983476}
-M~Banner et~al.
-\newblock Observation of single isolated electrons of high transverse momentum
-  in events with missing transverse energy at the cern pp collider.
-\newblock {\em Physics Letters B}, 122(5–6):476 -- 485, 1983.
-
-\bibitem{Arnison1983398}
-G.~Arnison et~al.
-\newblock Experimental observation of lepton pairs of invariant mass around 95
-  gev/c2 at the cern sps collider.
-\newblock {\em Physics Letters B}, 126(5):398 -- 410, 1983.
-
-\bibitem{GellMann1964214}
-M.~Gell-Mann.
-\newblock A schematic model of baryons and mesons.
-\newblock {\em Physics Letters}, 8(3):214 -- 215, 1964.
-
-\bibitem{Zweig2}
-G.~Zweig.
-\newblock {AN SU(3) MODEL FOR STRONG INTERACTION SYMMETRY AND ITS BREAKING. 2.}
-\newblock 1964.
-
-\bibitem{Fritzsch1973365}
-H.~Fritzsch, M.~Gell-Mann, and H.~Leutwyler.
-\newblock Advantages of the color octet gluon picture.
-\newblock {\em Physics Letters B}, 47(4):365 -- 368, 1973.
-
 \bibitem{PhysRevLett.74.2626}
 F.~Abe et~al.
 \newblock Observation of top quark production in
@@ -151,6 +28,58 @@ Georges Aad et~al.
 A.~{Sherstnev} and R.~S. {Thorne}.
 \newblock {Parton distributions for LO generators}.
 \newblock {\em European Physical Journal C}, 55:553--575, June 2008.
+
+\bibitem{PhysRev.75.486}
+F.~J. Dyson.
+\newblock The radiation theories of tomonaga, schwinger, and feynman.
+\newblock {\em Phys. Rev.}, 75:486--502, Feb 1949.
+
+\bibitem{Banner1983476}
+M~Banner et~al.
+\newblock Observation of single isolated electrons of high transverse momentum
+  in events with missing transverse energy at the cern pp collider.
+\newblock {\em Physics Letters B}, 122(5–6):476 -- 485, 1983.
+
+\bibitem{Arnison1983398}
+G.~Arnison et~al.
+\newblock Experimental observation of lepton pairs of invariant mass around 95
+  gev/c2 at the cern sps collider.
+\newblock {\em Physics Letters B}, 126(5):398 -- 410, 1983.
+
+\bibitem{Glashow1961579}
+Sheldon~L. Glashow.
+\newblock Partial-symmetries of weak interactions.
+\newblock {\em Nuclear Physics}, 22(4):579 -- 588, 1961.
+
+\bibitem{Salam1964168}
+A.~Salam and J.C. Ward.
+\newblock Electromagnetic and weak interactions.
+\newblock {\em Physics Letters}, 13(2):168 -- 171, 1964.
+
+\bibitem{PhysRevLett.19.1264}
+Steven Weinberg.
+\newblock A model of leptons.
+\newblock {\em Phys. Rev. Lett.}, 19:1264--1266, Nov 1967.
+
+\bibitem{GellMann1964214}
+M.~Gell-Mann.
+\newblock A schematic model of baryons and mesons.
+\newblock {\em Physics Letters}, 8(3):214 -- 215, 1964.
+
+\bibitem{Zweig2}
+G.~Zweig.
+\newblock {AN SU(3) MODEL FOR STRONG INTERACTION SYMMETRY AND ITS BREAKING. 2.}
+\newblock 1964.
+
+\bibitem{Fritzsch1973365}
+H.~Fritzsch, M.~Gell-Mann, and H.~Leutwyler.
+\newblock Advantages of the color octet gluon picture.
+\newblock {\em Physics Letters B}, 47(4):365 -- 368, 1973.
+
+\bibitem{PhysRevLett.23.1415}
+Richard~P. Feynman.
+\newblock Very high-energy collisions of hadrons.
+\newblock {\em Phys. Rev. Lett.}, 23:1415--1417, Dec 1969.
 
 \bibitem{springerlink:10.1140/epjc/s10052-009-1072-5}
 A.~Martin, W.~Stirling, R.~Thorne, and G.~Watt.
@@ -282,6 +211,12 @@ Stephen~D. Ellis and Davison~E. Soper.
 \newblock {Successive combination jet algorithm for hadron collisions}.
 \newblock {\em Phys.\ Rev.}, D48:3160--3166, 1993.
 
+\bibitem{kt1}
+S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
+\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
+  hadron collisions}.
+\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
+
 \bibitem{fastjet}
 M~Cacciari and G.P. Salam.
 \newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
@@ -392,44 +327,5 @@ Jesse Thaler and Ken Van~Tilburg.
 Carola~F. Berger, Tibor K\'ucs, and George Sterman.
 \newblock Event shape\char21{}energy flow correlations.
 \newblock {\em Phys. Rev. D}, 68:014012, Jul 2003.
-
-\bibitem{Breskin:1244506}
-Amos Breskin and Rüdiger Voss.
-\newblock {\em The CERN Large Hadron Collider: Accelerator and Experiments}.
-\newblock CERN, Geneva, 2009.
-
-\bibitem{ATLAS-CONF-2011-116}
-{ATLAS Collaboration}.
-\newblock {Luminosity Determination in pp Collisions at sqrt(s) = 7 TeV using
-  the ATLAS Detector in 2011}.
-\newblock {\em ATLAS-CONF-2011-116}, Aug 2011.
-
-\bibitem{vanderMeer:296752}
-S~van~der Meer.
-\newblock Calibration of the effective beam height in the isr.
-\newblock {\em CERN-ISR-PO-68-31. ISR-PO-68-31}, 1968.
-
-\bibitem{ATLAS}
-{Aad, G. and others}.
-\newblock {The ATLAS Experiment at the CERN Large Hadron Collider}.
-\newblock CERN, Geneva, 2008.
-
-\bibitem{chargemultiplicity}
-G.~Aad et~al.
-\newblock {Charged-particle multiplicities in pp interactions measured with the
-  ATLAS detector at the LHC}.
-\newblock {\em New J.Phys.}, 13:053033, 2011.
-
-\bibitem{ATLAS-CONF-2010-009}
-{ATLAS Collaboration}.
-\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
-  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
-\newblock {\em ATLAS-CONF-2010-009}, 2010.
-
-\bibitem{ATLAS-CONF-2010-070}
-{ATLAS Collaboration}.
-\newblock {Tracking Studies for b-tagging with 7 TeV Collision Data with the
-  ATLAS Detector}.
-\newblock {\em ATLAS-CONF-2010-070}, 2010.
 
 \end{thebibliography}

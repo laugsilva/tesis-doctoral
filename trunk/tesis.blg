@@ -1,12 +1,10 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Introduction/theory.aux
-White space in argument---line 16 of file Introduction/theory.aux
+White space in argument---line 21 of file Introduction/theory.aux
  : \citation{Current
  :                   Algebra}
 I'm skipping whatever remains of this command
-A level-1 auxiliary file: Introduction/lhc_atlas.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 499 of file tesis.bib
@@ -19,62 +17,70 @@ I was expecting a `,' or a `}'---line 514 of file tesis.bib
  :   collaboration = {D0 Collaboration},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1376 of file tesis.bib
+ :       
+ :       title        = "{Performance of the ATLAS Secondary Vertex b-tagging Algorithm in 7 TeV Collision Data}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1384 of file tesis.bib
+ :       
+ :       title        = "{Performance of primary vertex reconstruction in
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Zweig:1964j"
 Warning--I didn't find a database entry for "1126-6708-2008-07-07"
 Warning--I didn't find a database entry for "CamAchen"
-Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
-while executing---line 944 of file unsrt.bst
-Warning--empty journal in boost2010b
-Warning--empty journal in Zweig2
 Warning--empty journal in PhysRevLett.74.2626
 Warning--empty year in PhysRevLett.74.2626
 Warning--empty journal in PhysRevLett.74.2422
 Warning--empty year in PhysRevLett.74.2422
 Warning--empty journal in :2012gk
+Warning--empty journal in Zweig2
 Warning--empty author in Pythia_MC11tune
 Warning--empty journal in Perugia
+Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
+while executing---line 944 of file unsrt.bst
 Warning--empty journal in Abbiendi:2007aa
 Warning--empty journal in Aad:2012np
-Warning--empty journal in ATLAS
-You've used 76 entries,
+You've used 58 entries,
             1791 wiz_defined-function locations,
-            900 strings with 15698 characters,
-and the built_in function-call counts, 15897 in all, are:
-= -- 1300
-> -- 823
+            817 strings with 12891 characters,
+and the built_in function-call counts, 12952 in all, are:
+= -- 1060
+> -- 688
 < -- 1
-+ -- 307
-- -- 231
-* -- 1135
-:= -- 2724
-add.period$ -- 230
-call.type$ -- 76
-change.case$ -- 75
++ -- 253
+- -- 195
+* -- 996
+:= -- 2199
+add.period$ -- 176
+call.type$ -- 58
+change.case$ -- 58
 chr.to.int$ -- 0
-cite$ -- 88
-duplicate$ -- 664
-empty$ -- 1513
-format.name$ -- 231
-if$ -- 3421
+cite$ -- 68
+duplicate$ -- 511
+empty$ -- 1214
+format.name$ -- 195
+if$ -- 2778
 int.to.chr$ -- 0
-int.to.str$ -- 76
-missing$ -- 76
-newline$ -- 385
-num.names$ -- 75
-pop$ -- 135
+int.to.str$ -- 58
+missing$ -- 57
+newline$ -- 295
+num.names$ -- 57
+pop$ -- 88
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 253
+skip$ -- 195
 stack$ -- 0
-substring$ -- 970
-swap$ -- 67
+substring$ -- 890
+swap$ -- 51
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 12
-while$ -- 134
-width$ -- 78
-write$ -- 815
-(There were 4 error messages)
+warning$ -- 10
+while$ -- 110
+width$ -- 60
+write$ -- 629
+(There were 6 error messages)

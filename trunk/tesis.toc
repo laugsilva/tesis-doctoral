@@ -1,32 +1,14 @@
-\contentsline {chapter}{\numberline {1}Introduction}{4}
-\contentsline {section}{\numberline {1.1}Identification of $b$-jets from gluon splitting}{4}
-\contentsline {section}{\numberline {1.2}Physics Motivation}{6}
-\contentsline {chapter}{\numberline {2}The theory of the strong interactions}{14}
-\contentsline {section}{\numberline {2.1}The Standar Model}{14}
-\contentsline {subsection}{\numberline {2.1.1}Perturbative QCD}{16}
-\contentsline {section}{\numberline {2.2}Jet physics}{18}
-\contentsline {subsection}{\numberline {2.2.1}Monte Carlo tools}{19}
-\contentsline {subsubsection}{Pythia}{22}
-\contentsline {subsubsection}{Herwig$++$}{23}
-\contentsline {subsection}{\numberline {2.2.2}Jet algorithms}{23}
-\contentsline {subsection}{\numberline {2.2.3}Jet substructure}{28}
-\contentsline {subsubsection}{Jet width}{29}
-\contentsline {subsubsection}{Eccentricity}{30}
-\contentsline {subsubsection}{Jet Mass}{31}
-\contentsline {subsubsection}{Subjet multiplicity}{31}
-\contentsline {subsubsection}{$N$-subjettiness}{32}
-\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{34}
-\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{34}
-\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{38}
-\contentsline {section}{\numberline {3.2}The ATLAS Detector}{41}
-\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{43}
-\contentsline {subsubsection}{The Pixel detector}{44}
-\contentsline {subsubsection}{The SCT}{45}
-\contentsline {subsubsection}{The TRT}{46}
-\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{47}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{48}
-\contentsline {subsubsection}{The hadronic calorimeter}{53}
-\contentsline {subsection}{\numberline {3.2.3}The Muon System}{54}
-\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{55}
-\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{56}
-\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{58}
+\contentsline {chapter}{\numberline {1}Theoretical framework}{3}
+\contentsline {section}{\numberline {1.1}The Standar Model}{3}
+\contentsline {section}{\numberline {1.2}Perturbative Quantum Chromodynamics}{6}
+\contentsline {section}{\numberline {1.3}Jet physics}{8}
+\contentsline {subsection}{\numberline {1.3.1}Monte Carlo tools}{9}
+\contentsline {subsubsection}{Pythia}{12}
+\contentsline {subsubsection}{Herwig$++$}{13}
+\contentsline {subsection}{\numberline {1.3.2}Jet algorithms}{14}
+\contentsline {subsection}{\numberline {1.3.3}Jet substructure}{18}
+\contentsline {subsubsection}{Jet width}{20}
+\contentsline {subsubsection}{Eccentricity}{20}
+\contentsline {subsubsection}{Jet Mass}{21}
+\contentsline {subsubsection}{Subjet multiplicity}{21}
+\contentsline {subsubsection}{$N$-subjettiness}{22}
