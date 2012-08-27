@@ -1,57 +1,17 @@
-\contentsline {chapter}{\numberline {1}Introduction}{3}
-\contentsline {chapter}{\numberline {2}Theoretical framework}{9}
-\contentsline {section}{\numberline {2.1}The Standard Model}{9}
-\contentsline {section}{\numberline {2.2}Perturbative QCD}{12}
-\contentsline {section}{\numberline {2.3}Jet physics}{15}
-\contentsline {subsection}{\numberline {2.3.1}Monte Carlo tools}{16}
-\contentsline {subsubsection}{Pythia}{18}
-\contentsline {subsubsection}{Herwig$++$}{19}
-\contentsline {subsection}{\numberline {2.3.2}Jet algorithms}{20}
-\contentsline {subsection}{\numberline {2.3.3}Jet substructure}{25}
-\contentsline {subsubsection}{Jet width}{26}
-\contentsline {subsubsection}{Eccentricity}{27}
-\contentsline {subsubsection}{Jet Mass}{27}
-\contentsline {subsubsection}{Subjet multiplicity}{28}
-\contentsline {subsubsection}{$N$-subjettiness}{29}
-\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{31}
-\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{31}
-\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{35}
-\contentsline {section}{\numberline {3.2}The ATLAS Detector}{38}
-\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{40}
-\contentsline {subsubsection}{The Pixel detector}{41}
-\contentsline {subsubsection}{The SCT}{42}
-\contentsline {subsubsection}{The TRT}{43}
-\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{44}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{45}
-\contentsline {subsubsection}{The hadronic calorimeter}{50}
-\contentsline {subsection}{\numberline {3.2.3}The Muon System}{51}
-\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{52}
-\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{53}
-\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{55}
-\contentsline {chapter}{\numberline {4}Jet reconstruction and $b$-Tagging }{58}
-\contentsline {section}{\numberline {4.1}Jets reconstruction and calibration}{58}
-\contentsline {section}{\numberline {4.2} $b$-jet Tagging}{59}
-\contentsline {subsection}{\numberline {4.2.1}Primary vertex}{60}
-\contentsline {subsection}{\numberline {4.2.2}Pile-up}{60}
-\contentsline {subsection}{\numberline {4.2.3}Tracks selection and properties}{61}
-\contentsline {subsubsection}{Track quality cuts}{61}
-\contentsline {subsubsection}{Track association to jets}{61}
-\contentsline {subsubsection}{Impact parameters}{61}
-\contentsline {subsection}{\numberline {4.2.4}$b$-tagging algorithms}{62}
-\contentsline {chapter}{\numberline {5}Double $B$-hadron jet identification}{63}
-\contentsline {section}{\numberline {5.1}Data and Monte Carlo samples}{63}
-\contentsline {section}{\numberline {5.2}Event and object selection}{65}
-\contentsline {section}{\numberline {5.3}Preliminary studies in standalone {\sc pythia} generator}{67}
-\contentsline {section}{\numberline {5.4}Kinematic differences between single and double $B$-hadron jets}{70}
-\contentsline {subsection}{\numberline {5.4.1}Further studies using ``ghost-association'' and bigger cone jets}{81}
-\contentsline {section}{\numberline {5.5}Validation of the jet variables in data}{83}
-\contentsline {chapter}{\numberline {6}Multivariate Analysis}{87}
-\contentsline {section}{\numberline {6.1}The multivariate classifiers}{87}
-\contentsline {section}{\numberline {6.2}The input variables}{91}
-\contentsline {section}{\numberline {6.3}${ g\rightarrow b\mathaccent "7016\relax {b}}$ likelihood training and performance}{91}
-\contentsline {section}{\numberline {6.4}Systematic uncertainties}{94}
-\contentsline {section}{\numberline {6.5}Isolation studies}{99}
-\contentsline {section}{\numberline {6.6}Other Monte Carlo generators}{100}
-\contentsline {chapter}{\numberline {7}??Fraction of gluon-splitting jets in data??}{103}
-\contentsline {section}{\numberline {7.1}??Template fits??}{103}
-\contentsline {chapter}{\numberline {8}Conclusions}{104}
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {chapter}{\numberline {2}Double $B$-hadron jet identification}{8}
+\contentsline {section}{\numberline {2.1}Data and Monte Carlo samples}{8}
+\contentsline {section}{\numberline {2.2}Event and object selection}{10}
+\contentsline {section}{\numberline {2.3}Preliminary studies in standalone {\sc pythia} generator}{12}
+\contentsline {section}{\numberline {2.4}Kinematic differences between single and double $B$-hadron jets}{15}
+\contentsline {subsection}{\numberline {2.4.1}Further studies using ``ghost-association'' and bigger cone jets}{26}
+\contentsline {section}{\numberline {2.5}Validation of the jet variables in data}{28}
+\contentsline {chapter}{\numberline {3}Multivariate Analysis}{32}
+\contentsline {section}{\numberline {3.1}The multivariate classifiers}{32}
+\contentsline {section}{\numberline {3.2}The input variables}{36}
+\contentsline {section}{\numberline {3.3}${ g\rightarrow b\mathaccent "7016\relax {b}}$ likelihood training and performance}{36}
+\contentsline {section}{\numberline {3.4}Systematic uncertainties}{39}
+\contentsline {section}{\numberline {3.5}Isolation studies}{44}
+\contentsline {section}{\numberline {3.6}Other Monte Carlo generators}{45}
+\contentsline {chapter}{\numberline {4}??Fraction of gluon-splitting jets in data??}{48}
+\contentsline {section}{\numberline {4.1}??Template fits??}{48}
