@@ -7,25 +7,31 @@
 \chapter{Jet reconstruction and $b$-Tagging }\label{ch:reco}
 
 
-The reconstruction of the key objects for $b$-tagging purposes, namely the tracks, the primary vertex and jets is briefly described in the following.
+This chapter describes the reconstruction of and physics contained within the hadronic final state in ATLAS.
+Characteristics of the methods used for the identification of $b$-quark originated jet candidates and the properties of tracks in jets are also summarized. 
 
 %------------------------------------------------------------------------
 \section{Jets reconstruction and calibration}\label{sec:ObjSelection}
 %------------------------------------------------------------------------
 
+Four primary inputs to jet reconstruction are considered in ATLAS. Jets can be form from two different types of geometric calorimeter signal, calorimeter towers or topological clusters, or utilizing charged particle tracks reconstructed in the Inner Detectors. The calorimeter towers can combine all calorimeter cells in projective towers, or use only those with energies above a noise threshold. The latter are known as ``noise-suppressed'' towers.  The noise of a calorimeter cell is measured by recording calorimeter signals in periods where no beam is present in the acelerator.  The standard deviation $\sigma$ around the mean measured energy is interpreted as the noise of the cell, and dependes on the sampling layer in which the cell resides and the position in $\eta$.
 
-Jets are reconstructed using the anti-$k_t$ jet algorithm~\cite{antiktalg} with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.  %Topological clusters are built starting from seed calorimeter cells with a signal at least four times higher than the root-mean-square (RMS) of the total noise contribution, consisting of electronic and pile-up noise corresponding to an average %luminosity number of interactions of $\mu=8$. Cells neighbouring the seed which have a signal-to-RMS-noise-ratio of two are then iteratively added. Finally, all nearest neighbour cells are added to the cluster without any threshold. 
-Several quality criteria are applied to eliminate ``fake'' jets that are %produced by problematic calorimeter behaviour~\cite{ATLAS-CONF-2010-038}.
-caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
-%~\cite{ATLAS-CONF-2010-038}.
-%In particular the jet is rejected if 90\% of the jet energy is distributed over less than 6 calorimeter cells (this handles fake jets caused by sporadic noise bursts in the LAr calorimeter). Jets are also discarded if the fraction of jet energy from LAr calorimeter cells flagged as problematic is greater than 0.8. If the fraction of energy deposited in the electromagnetic calorimeter is greater than 0.95 the jet is eliminated (this removes fake jets caused by noise bursts). 
-%In order to reject jets reconstructed from large out-of-time energy deposits a loose cut on the jet time, measured with respect to the event time, is imposed.
-%Jets are required to have an energy-squared-weighted cell time to be within two beam bunch crossings, i.e. out-of-time jets are selected with jet time $> 50$~ns.
+The jets used in the present analysis are built from noise-suppressed topological clusters of energy in the calorimeter, aslo known as ``topo-clusters''. Topological clusters are three-dimensional objects seeded by a calorimeter cell with $|E_{cell}| > 4 \sigma$ above the noise. Neighbor cells that have an energy at least 2$\sigma$ above their mean noise are added to the cluster. In a final step, all nearest-neighbor cells surrounding the clustered cells are added to the cluster, regardless of signal-to-noise ratio. The position of the cluster is assigned as the energy-weighted centroid of all constituent cells.  
+
+In either case, the jet inputs are combined as massless four-momentum objects in order to form the final four-momentum of the jet, which allows for a well-defined single-jet mass~\cite{Busato:1271710}.
+%In the case of track-jets, the track four-momentum is constructed assuming the $\pi$ meson mass for each track.
 
 
-The jet energies are corrected for inhomogeneities and for
-the non-compensating nature of the calorimeter by using \pt- and $\eta$-dependent calibration factors determined from Monte Carlo simulation~\cite{JESnote}. This calibration is referred to as the EM+JES scale.
-Using test beam results, in-situ track and calorimeter measurements, estimations of pile-up energy depositions, and detailed Monte Carlo comparisons, an uncertainty on the absolute jet energy scale was estabished. This uncertainty is smaller than $\pm 10\%$ for $\eta < 2.8$ and $\pt > 20$ GeV. More sophisticated techniques undergoing commissioning, such as local cluster weighting, are expected to considerably improve the jet energy uncertainty and resolution~\cite{CSC}. 
+In ATLAS, jets are reconstructed using two different size parameters: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. And the default jet algorithm is the anti-$kt$ algorithm~\cite{Asquith:1311867}. The effect of multiple simultaneous interactions on the reconstruction of jets is one of the primary factors that influence the decision on the jet algorithm, due to the expected level of pile-up in the LHC. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is too susceptible to this effect. On the contrary, the anti-$kt$ algorithm is the most stable after the introduction of pile-up.  
+
+
+
+%The jet constituents are uncalibrated; that is, the energy scale of the constituent is at the EM scale of the detector.
+%from david's
+The baseline calibration of the calorimeters only corrects the energy measured in the detector to the EM energy scale. In order to compensate for the difference between the energy measurement of purely EM objects (electrons and photons) and the energy of a hadronic jet, an additional jet calibration procedure must be applied.  The procedure used for the 2011 data...
+
+
+
 
 
 %-------------------------------------------------------------------

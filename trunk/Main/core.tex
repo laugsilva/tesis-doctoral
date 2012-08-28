@@ -14,6 +14,10 @@
 
 %In the present analysis we are exploring a different way to tag double $B$-hadron jets that does not rely on explicitly finding vertices but uses the jet shape/substructure information. Eventually, the goal should be to combine both approaches.
 
+
+
+
+
 %------------------------------------------------------------------------
 \section{Data and Monte Carlo samples}\label{sec:Simulation}
 %------------------------------------------------------------------------
@@ -45,8 +49,24 @@ For the study of systematic effects and for result comparison, other Monte Carlo
 
 
 %------------------------------------------------------------------------
-\section{Event and object selection}\label{sec:EventSelection}
+\section{Data analysis}\label{sec:EventSelection}
 %------------------------------------------------------------------------
+
+
+Jets are reconstructed using the anti-$k_t$ jet algorithm~\cite{antiktalg} with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.  %Topological clusters are built starting from seed calorimeter cells with a signal at least four times higher than the root-mean-square (RMS) of the total noise contribution, consisting of electronic and pile-up noise corresponding to an average %luminosity number of interactions of $\mu=8$. Cells neighbouring the seed which have a signal-to-RMS-noise-ratio of two are then iteratively added. Finally, all nearest neighbour cells are added to the cluster without any threshold. 
+Several quality criteria are applied to eliminate ``fake'' jets that are %produced by problematic calorimeter behaviour~\cite{ATLAS-CONF-2010-038}.
+caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
+%~\cite{ATLAS-CONF-2010-038}.
+%In particular the jet is rejected if 90\% of the jet energy is distributed over less than 6 calorimeter cells (this handles fake jets caused by sporadic noise bursts in the LAr calorimeter). Jets are also discarded if the fraction of jet energy from LAr calorimeter cells flagged as problematic is greater than 0.8. If the fraction of energy deposited in the electromagnetic calorimeter is greater than 0.95 the jet is eliminated (this removes fake jets caused by noise bursts). 
+%In order to reject jets reconstructed from large out-of-time energy deposits a loose cut on the jet time, measured with respect to the event time, is imposed.
+%Jets are required to have an energy-squared-weighted cell time to be within two beam bunch crossings, i.e. out-of-time jets are selected with jet time $> 50$~ns.
+
+
+The jet energies are corrected for inhomogeneities and for
+the non-compensating nature of the calorimeter by using \pt- and $\eta$-dependent calibration factors determined from Monte Carlo simulation~\cite{JESnote}. This calibration is referred to as the EM+JES scale.
+Using test beam results, in-situ track and calorimeter measurements, estimations of pile-up energy depositions, and detailed Monte Carlo comparisons, an uncertainty on the absolute jet energy scale was estabished. This uncertainty is smaller than $\pm 10\%$ for $\eta < 2.8$ and $\pt > 20$ GeV. More sophisticated techniques undergoing commissioning, such as local cluster weighting, are expected to considerably improve the jet energy uncertainty and resolution~\cite{CSC}. 
+
+
 
 %In this section we examine the procedure for event selection and the conditions that the calorimeter jets must satisfy in order to be considered.
 
