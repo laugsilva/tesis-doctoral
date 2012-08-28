@@ -25,12 +25,38 @@ In either case, the jet inputs are combined as massless four-momentum objects in
 In ATLAS, jets are reconstructed using two different size parameters: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. And the default jet algorithm is the anti-$kt$ algorithm~\cite{Asquith:1311867}. The effect of multiple simultaneous interactions on the reconstruction of jets is one of the primary factors that influence the decision on the jet algorithm, due to the expected level of pile-up in the LHC. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is too susceptible to this effect. On the contrary, the anti-$kt$ algorithm is the most stable after the introduction of pile-up.  
 
 
-
+%FROM DAVID'S
 %The jet constituents are uncalibrated; that is, the energy scale of the constituent is at the EM scale of the detector.
-%from david's
 The baseline calibration of the calorimeters only corrects the energy measured in the detector to the EM energy scale. In order to compensate for the difference between the energy measurement of purely EM objects (electrons and photons) and the energy of a hadronic jet, an additional jet calibration procedure must be applied.  The procedure used for the 2011 data...
 
+%FROM KIRSTEN'S
+%something on reconstruction efficiency??
+%The drop in efficiency at low pT is mainly due to jets that, as a result of jet energy resolution smearing, have energies below the 7 GeV threshold that is required by the ATLAS software in order to reconstruct jets.
 
+The jet energy is first reconstructed from the constituent cell energies at EM-scale. These
+cells have been calibrated to return the energy corresponding to electromagnetic showers
+in the calorimeter, based on test-beam injection of electrons and pions [69], measurements
+of cosmic muons [79], and reconstruction of the Z mass peak in Z → ee decays. Cells are
+combined to form clusters, as described in Section 4.2, which are by construction massless
+objects. The cluster four-momenta are then vectorially summed to yield the final jet four-
+momentum, with its energy at EM-scale.
+The purpose of the jet energy calibration, or jet energy scale, is to correct this mea-
+sured EM-scale energy to the energy of the particles within a jet.
+The jet energy calibration must account for energy lost in in-active regions of the de-
+tector, such as in the cryostat walls or cabling; energy that escapes the calorimeters, such
+as that of highly-energetic particles that “punch-through” to the muon system; energy of
+cells that are not included in clusters, due to inefficiencies in the noise-suppression scheme;
+and energy of clusters not included in the final reconstructed jet, due to inefficiencies in the
+jet reconstruction algorithm. The muons and neutrinos that may be present within the jet
+are not expected to interact within the calorimeters, and are not included in this energy
+calibration.
+Due to the varying calorimeter coverage, detector technology, and amount of upstream
+in-active material, the calibration that must be applied to each jet to bring it to the hadronic
+scale varies with its η position within the detector. 
+
+%The jet response is defined EM in Monte Carlo as R = Ejet /Etruth , where each reconstructed jet at EM-scale is matched to a truth jet within ∆R < 0.3. 
+The goal of the jet energy calibration is to bring the calibrated jet response to R = 1, flat
+across all η.
 
 
 
