@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  27 AUG 2012 18:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  28 AUG 2012 12:03
 entering extended mode
  %&-line parsing enabled.
 **tesis
 (./tesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -43,7 +49,7 @@ File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
@@ -55,9 +61,9 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@partial=\box26
 \AP@footins=\box27
 ) (./tesis.aux
-(./Introduction/introduction.aux) (./Main/core.aux
+(./Introduction/introduction.aux) (./Introduction/theory.aux
 
-LaTeX Warning: Label `sec:gbbKine' multiply defined.
+LaTeX Warning: Label `fig:qcd_diagrams' multiply defined.
 
 ))
 \openout1 = `tesis.aux'.
@@ -131,7 +137,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [2
 
 
-] <FIGS/Single_b_Merged_bb.png, id=40, 523.9575pt x 223.83624pt>
+] <FIGS/Single_b_Merged_bb.png, id=38, 523.9575pt x 223.83624pt>
 File: FIGS/Single_b_Merged_bb.png Graphic file (type png)
 
 <use FIGS/Single_b_Merged_bb.png>
@@ -149,7 +155,7 @@ l.62 \\[5mm]
 LaTeX Warning: Citation `GSP' on page 3 undefined on input line 81.
 
 [3 <./FIGS/Single_b_Merged_bb.png (PNG copy)>]
-<FIGS/bb_diagrams.jpg, id=45, 3014.26125pt x 1660.2025pt>
+<FIGS/bb_diagrams.jpg, id=43, 3014.26125pt x 1660.2025pt>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
 <use FIGS/bb_diagrams.jpg>
@@ -176,736 +182,213 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.164 \\[5mm]
+l.166 \\[5mm]
              
 ? 
 [6]
 
-LaTeX Warning: Reference `ch:theory' on page 7 undefined on input line 168.
+LaTeX Warning: Reference `ch:lhc_atlas' on page 7 undefined on input line 170.
 
 
-LaTeX Warning: Reference `ch:lhc_atlas' on page 7 undefined on input line 168.
+LaTeX Warning: Reference `ch:reco' on page 7 undefined on input line 170.
 
 
-LaTeX Warning: Reference `ch:reco' on page 7 undefined on input line 168.
+LaTeX Warning: Reference `ch:kinematic' on page 7 undefined on input line 170.
 
 
-LaTeX Warning: Reference `ch:conclusions' on page 7 undefined on input line 173
+LaTeX Warning: Reference `ch:mva' on page 7 undefined on input line 170.
+
+
+LaTeX Warning: Reference `ch:gbbfraction' on page 7 undefined on input line 173
+.
+
+
+LaTeX Warning: Reference `ch:conclusions' on page 7 undefined on input line 175
 .
 
 ) [7]
-\openout2 = `Main/core.aux'.
+\openout2 = `Introduction/theory.aux'.
 
- (./Main/core.tex
+ (./Introduction/theory.tex
 Chapter 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 7.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 7.
 [8
 
 
 
-] [9] [10] [11]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
-
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+ [9]
 
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/trkWidth060.pdf, id=78, 64
-8.4225pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/trkWidth060.pdf Graph
-ic file (type pdf)
+LaTeX Warning: Citation `Zweig:1964j' on page 10 undefined on input line 58.
 
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/trkWidth060.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt6/allparticles/trkWidth060.pdf, id=79, 64
-8.4225pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt6/allparticles/trkWidth060.pdf Graph
-ic file (type pdf)
 
-<use FIGS/TEMPFigs/PythisStandalone/Antikt6/allparticles/trkWidth060.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2060.pdf, id=80, 648.42
-25pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2060.pdf Graphic f
-ile (type pdf)
+LaTeX Warning: Citation `Current Algebra' on page 10 undefined on input line 60
+.
 
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2060.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedparticles/Tau2060.pdf, id=81, 64
-8.4225pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedparticles/Tau2060.pdf Graph
-ic file (type pdf)
+[10] [11]
+File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
+ <use FIGS/bb_diagrams.jpg>
+File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
+ <use FIGS/bb_diagrams.jpg>
+File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedparticles/Tau2060.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/minijets/DRkt2axes060.pdf, id=82, 648.4
-225pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/minijets/DRkt2axes060.pdf Graphic 
-file (type pdf)
+<use FIGS/bb_diagrams.jpg>
 
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/minijets/DRkt2axes060.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedminijets/DRkt2axes060.pdf, id=83
-, 648.4225pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedminijets/DRkt2axes060.pdf G
-raphic file (type pdf)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedminijets/DRkt2axes060.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.pdf, i
-d=84, 713.66624pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.p
-df Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.pd
-f>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.p
-df Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.pd
-f>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DRkT2axesCorr_PT60_mer
-ged.pdf, id=85, 744.7825pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DRkT2axesCorr_PT6
-0_merged.pdf Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau1DRkT2axesCorr_PT60
-_merged.pdf>
-<FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2DRkT2axesCorr_PT60_mer
-ged.pdf, id=86, 744.7825pt x 574.145pt>
-File: FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2DRkT2axesCorr_PT6
-0_merged.pdf Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2DRkT2axesCorr_PT60
-_merged.pdf> [12] [13 <./FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/tr
-kWidth060.pdf> <./FIGS/TEMPFigs/PythisStandalone/Antikt6/allparticles/trkWidth0
-60.pdf> <./FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2060.pdf> <./
-FIGS/TEMPFigs/PythisStandalone/Antikt4/chargedparticles/Tau2060.pdf>] [14 <./FI
-GS/TEMPFigs/PythisStandalone/Antikt4/minijets/DRkt2axes060.pdf> <./FIGS/TEMPFig
-s/PythisStandalone/Antikt4/chargedminijets/DRkt2axes060.pdf> <./FIGS/TEMPFigs/P
-ythisStandalone/Antikt4/allparticles/Tau1DeltaRCorr_PT60.pdf>] [15 <./FIGS/TEMP
-Figs/PythisStandalone/Antikt4/allparticles/Tau1DRkT2axesCorr_PT60_merged.pdf> <
-./FIGS/TEMPFigs/PythisStandalone/Antikt4/allparticles/Tau2DRkT2axesCorr_PT60_me
-rged.pdf>] <FIGS/VarsSingleMerged/Ntrk080.pdf, id=154, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/Ntrk080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Ntrk080.pdf>
-<FIGS/VarsSingleMerged/Ntrk200.pdf, id=155, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/Ntrk200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Ntrk200.pdf> [16]
-Underfull \hbox (badness 10000) in paragraph at lines 268--271
-
+[12]
+Missing character: There is no Î in font cmr12!
+Missing character: There is no ¼ in font cmr12!
+ [13]
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 115--118
+\OT1/cmr/m/n/12 strong cou-pling con-stant grows with in-creas-ing dis-tance be
+-tween color charges,
  []
 
-<FIGS/VarsSingleMerged/trkWidth080.pdf, id=161, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/trkWidth080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/trkWidth080.pdf>
-<FIGS/VarsSingleMerged/trkWidth200.pdf, id=162, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/trkWidth200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/trkWidth200.pdf> [17 <./FIGS/VarsSingleMerged/Ntrk08
-0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Ntrk200.pdf, page i
-s rotated 90 degrees>]
-<FIGS/VarsSingleMerged/NtrktrkWidth080.pdf, id=252, 569.12625pt x 549.05125pt>
-File: FIGS/VarsSingleMerged/NtrktrkWidth080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/NtrktrkWidth080.pdf>
-<FIGS/VarsSingleMerged/NtrktrkWidth200.pdf, id=253, 569.12625pt x 549.05125pt>
-File: FIGS/VarsSingleMerged/NtrktrkWidth200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/NtrktrkWidth200.pdf>
-<FIGS/systematics/Widthsingle_060.pdf, id=254, 569.12625pt x 549.05125pt>
-File: FIGS/systematics/Widthsingle_060.pdf Graphic file (type pdf)
-
-<use FIGS/systematics/Widthsingle_060.pdf>
-<FIGS/systematics/Widthmerged_060.pdf, id=255, 569.12625pt x 549.05125pt>
-File: FIGS/systematics/Widthmerged_060.pdf Graphic file (type pdf)
-
-<use FIGS/systematics/Widthmerged_060.pdf>
-<FIGS/systematics/trkWidthsingle_060.pdf, id=256, 569.12625pt x 549.05125pt>
-File: FIGS/systematics/trkWidthsingle_060.pdf Graphic file (type pdf)
-
-<use FIGS/systematics/trkWidthsingle_060.pdf>
-<FIGS/systematics/trkWidthmerged_060.pdf, id=257, 569.12625pt x 549.05125pt>
-File: FIGS/systematics/trkWidthmerged_060.pdf Graphic file (type pdf)
-
-<use FIGS/systematics/trkWidthmerged_060.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
-
- []
-
-<FIGS/VarsSingleMerged/drmax080.pdf, id=258, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/drmax080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/drmax080.pdf>
-<FIGS/VarsSingleMerged/drmax200.pdf, id=259, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/drmax200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/drmax200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
-
- []
-
-[18 <./FIGS/VarsSingleMerged/trkWidth080.pdf, page is rotated 90 degrees> <./FI
-GS/VarsSingleMerged/trkWidth200.pdf, page is rotated 90 degrees>] [19 <./FIGS/V
-arsSingleMerged/NtrktrkWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSi
-ngleMerged/NtrktrkWidth200.pdf, page is rotated 90 degrees> <./FIGS/systematics
-/Widthsingle_060.pdf, page is rotated 90 degrees> <./FIGS/systematics/Widthmerg
-ed_060.pdf, page is rotated 90 degrees>] [20 <./FIGS/systematics/trkWidthsingle
-_060.pdf, page is rotated 90 degrees> <./FIGS/systematics/trkWidthmerged_060.pd
-f, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/drmax080.pdf, page is r
-otated 90 degrees> <./FIGS/VarsSingleMerged/drmax200.pdf, page is rotated 90 de
-grees>]
-<FIGS/VarsSingleMerged/DRkt2axes080.pdf, id=699, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/DRkt2axes080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/DRkt2axes080.pdf>
-<FIGS/VarsSingleMerged/DRkt2axes200.pdf, id=700, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/DRkt2axes200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/DRkt2axes200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 335--337
-
- []
-
-[21 <./FIGS/VarsSingleMerged/DRkt2axes080.pdf, page is rotated 90 degrees> <./F
-IGS/VarsSingleMerged/DRkt2axes200.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 345--348
-
- []
-
-<FIGS/VarsSingleMerged/Tau2080.pdf, id=792, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/Tau2080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Tau2080.pdf>
-<FIGS/VarsSingleMerged/Tau2200.pdf, id=793, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/Tau2200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Tau2200.pdf>
-<FIGS/VarsSingleMerged/Tau2trkWidth080.pdf, id=794, 569.12625pt x 549.05125pt>
-File: FIGS/VarsSingleMerged/Tau2trkWidth080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Tau2trkWidth080.pdf>
-<FIGS/VarsSingleMerged/Tau2trkWidth200.pdf, id=795, 569.12625pt x 549.05125pt>
-File: FIGS/VarsSingleMerged/Tau2trkWidth200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Tau2trkWidth200.pdf>
-<FIGS/VarsSingleMerged/TauRatio080.pdf, id=796, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/TauRatio080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/TauRatio080.pdf>
-<FIGS/VarsSingleMerged/TauRatio200.pdf, id=797, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/TauRatio200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/TauRatio200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
-
+[14] [15]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+ [16] [17]
+Overfull \hbox (10.87798pt too wide) in paragraph at lines 166--167
+\OT1/cmr/m/n/12 from proton-proton col-li-sion pro-cesses were gen-er-ated with
+ P YTHIA 6.423 [[]].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--382
+LaTeX Warning: Citation `1126-6708-2008-07-07' on page 18 undefined on input li
+ne 179.
 
- []
+[18] [19] <Fig2/jetdefinition.png, id=110, 1202.4925pt x 409.53pt>
+File: Fig2/jetdefinition.png Graphic file (type png)
 
-<FIGS/VarsSingleMerged/JetMass080.pdf, id=798, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/JetMass080.pdf Graphic file (type pdf)
+<use Fig2/jetdefinition.png> [20 <./Fig2/jetdefinition.png (PNG copy)>]
 
-<use FIGS/VarsSingleMerged/JetMass080.pdf>
-<FIGS/VarsSingleMerged/JetMass200.pdf, id=799, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/JetMass200.pdf Graphic file (type pdf)
+LaTeX Warning: Citation `CamAchen' on page 21 undefined on input line 211.
 
-<use FIGS/VarsSingleMerged/JetMass200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 391--393
+[21] [22] [23]
 
- []
+LaTeX Warning: Reference `sec:reconstruction' on page 24 undefined on input lin
+e 260.
 
-[22] [23 <./FIGS/VarsSingleMerged/Tau2080.pdf, page is rotated 90 degrees> <./F
-IGS/VarsSingleMerged/Tau2200.pdf, page is rotated 90 degrees> <./FIGS/VarsSingl
-eMerged/Tau2trkWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerg
-ed/Tau2trkWidth200.pdf, page is rotated 90 degrees>] [24 <./FIGS/VarsSingleMerg
-ed/TauRatio080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/TauRat
-io200.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/JetMass080.pdf,
- page is rotated 90 degrees> <./FIGS/VarsSingleMerged/JetMass200.pdf, page is r
-otated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 394--396
-
- []
-
-<FIGS/VarsSingleMerged/Nsubjets080.pdf, id=1153, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/Nsubjets080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Nsubjets080.pdf>
-<FIGS/VarsSingleMerged/Nsubjets200.pdf, id=1154, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/Nsubjets200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/Nsubjets200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 406--408
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
-
- []
-
-<FIGS/VarsSingleMerged/DRtrk12080.pdf, id=1155, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/DRtrk12080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/DRtrk12080.pdf>
-<FIGS/VarsSingleMerged/DRtrk12200.pdf, id=1156, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/DRtrk12200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/DRtrk12200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 421--423
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--426
-
- []
-
-[25 <./FIGS/VarsSingleMerged/Nsubjets080.pdf, page is rotated 90 degrees> <./FI
-GS/VarsSingleMerged/Nsubjets200.pdf, page is rotated 90 degrees>]
-<FIGS/VarsSingleMerged/JetEcc080.pdf, id=1246, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/JetEcc080.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/JetEcc080.pdf>
-<FIGS/VarsSingleMerged/JetEcc200.pdf, id=1247, 569.12625pt x 546.04pt>
-File: FIGS/VarsSingleMerged/JetEcc200.pdf Graphic file (type pdf)
-
-<use FIGS/VarsSingleMerged/JetEcc200.pdf>
-<FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_80-120.pdf, id
-=1248, 613.29124pt x 589.20125pt>
-File: FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_80-120.pd
-f Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_80-120.pdf
->
-<FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_260-310.pdf, i
-d=1249, 613.29124pt x 589.20125pt>
-File: FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_260-310.p
-df Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_260-310.pd
-f>
-<FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-120.pdf
-, id=1250, 613.29124pt x 589.20125pt>
-File: FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-12
-0.pdf Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-120
-.pdf>
-<FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-310.pd
-f, id=1251, 613.29124pt x 589.20125pt>
-File: FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-3
-10.pdf Graphic file (type pdf)
-
-<use FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-31
-0.pdf>
-Overfull \hbox (6.79794pt too wide) in paragraph at lines 458--458
-[]\OT1/cmr/bx/n/14.4 Further stud-ies us-ing ``ghost-association'' and big-
- []
-
-[26 <./FIGS/VarsSingleMerged/DRtrk12080.pdf, page is rotated 90 degrees> <./FIG
-S/VarsSingleMerged/DRtrk12200.pdf, page is rotated 90 degrees>] [27 <./FIGS/Var
-sSingleMerged/JetEcc080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerg
-ed/JetEcc200.pdf, page is rotated 90 degrees> <./FIGS/TEMPFigs/DisplacedTracks/
-ntrk_singlemerged_AllandDisplaced_80-120.pdf> <./FIGS/TEMPFigs/DisplacedTracks/
-ntrk_singlemerged_AllandDisplaced_260-310.pdf>]
-<FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf, id=1443, 698.61pt x 674.52p
-t>
-File: FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf Graphic file (type pdf)
-
- <use FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf>
-<FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf, id=1444, 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf Graphic file (type pdf)
-<use FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf>
-<FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRkt2axes080.pdf, id=1445, 698.61pt x 67
-4.52pt>
-File: FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRkt2axes080.pdf Graphic file (type
- pdf)
- <use FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRkt2axes080.pdf>
-<FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf, id=1446, 698.61pt x 674.
-52pt>
-File: FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf Graphic file (type p
-df)
- <use FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf>
-<FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf, id=1447, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf>
-<FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf, id=1448, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf Graphic fi
-le (type pdf)
-
-<use FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf> [28 <./FIG
-S/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-120.pdf> <.
-/FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-310.pd
-f>] [29 <./FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf> <./FIGS/TEMPFigs/
-GhostMatchingVarsClus/Tau2080.pdf> <./FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRk
-t2axes080.pdf> <./FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf>]
-<FIGS/dataMC/FullDataVarNtrkPT080.pdf, id=1491, 569.12625pt x 549.05125pt>
-File: FIGS/dataMC/FullDataVarNtrkPT080.pdf Graphic file (type pdf)
-
-<use FIGS/dataMC/FullDataVarNtrkPT080.pdf>
-<FIGS/dataMC/FullDataVarNtrkPT200.pdf, id=1492, 569.12625pt x 549.05125pt>
-File: FIGS/dataMC/FullDataVarNtrkPT200.pdf Graphic file (type pdf)
-
-<use FIGS/dataMC/FullDataVarNtrkPT200.pdf>
-<FIGS/dataMC/FullDataVarTrkWidthPT080.pdf, id=1493, 569.12625pt x 549.05125pt>
-File: FIGS/dataMC/FullDataVarTrkWidthPT080.pdf Graphic file (type pdf)
-
-<use FIGS/dataMC/FullDataVarTrkWidthPT080.pdf>
-<FIGS/dataMC/FullDataVarTrkWidthPT200.pdf, id=1494, 569.12625pt x 549.05125pt>
-File: FIGS/dataMC/FullDataVarTrkWidthPT200.pdf Graphic file (type pdf)
-
-<use FIGS/dataMC/FullDataVarTrkWidthPT200.pdf>
-<FIGS/dataMC/FullDataVarDRktaxisPT080.pdf, id=1495, 569.12625pt x 549.05125pt>
-File: FIGS/dataMC/FullDataVarDRktaxisPT080.pdf Graphic file (type pdf)
-
-<use FIGS/dataMC/FullDataVarDRktaxisPT080.pdf>
-<FIGS/dataMC/FullDataVarDRktaxisPT200.pdf, id=1496, 569.12625pt x 549.05125pt>
-File: FIGS/dataMC/FullDataVarDRktaxisPT200.pdf Graphic file (type pdf)
-
-<use FIGS/dataMC/FullDataVarDRktaxisPT200.pdf>
-
-LaTeX Warning: Float too large for page by 62.42133pt on input line 521.
-
-[30 <./FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf> <./FI
-GS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf>] [31 <./FIGS/data
-MC/FullDataVarNtrkPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDat
-aVarNtrkPT200.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTrkWid
-thPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTrkWidthPT20
-0.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarDRktaxisPT080.pdf,
- page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarDRktaxisPT200.pdf, page 
-is rotated 90 degrees>]
-Chapter 3.
-
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf, id=177
-3, 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf Gr
-aphic file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf, id=177
-4, 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf Gr
-aphic file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf, id=177
-5, 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf Gr
-aphic file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf, id=1776, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf, id=1777, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf, id=1778, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf, id=1779, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf, id=1780, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf, id=1781, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf, id=1782, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf, id=1783, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf, id=1784, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf, id=1785, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf, id=1786, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf, id=1787, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf, id=1788, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf, id=1789, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf, id=1790, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf, id=1791, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf, id=1792, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf, id=1793, 698.61pt
- x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf, id=1794, 698.61p
-t x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf Graphic file
- (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf>
-
-LaTeX Warning: Reference `fig:difftrainings' on page 32 undefined on input line
- 624.
-
-
-<FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf, id=1795, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf>
-<FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf, id=1796, 69
-8.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf>
-<FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf, id=1797, 6
-98.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf Graphi
-c file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf>
-[32
-
-] [33 <./FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf
-> <./FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf> <.
-/FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf> <./FIG
-S/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf> <./FIGS/TEMPFigs
-/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf> <./FIGS/TEMPFigs/MVA_diffe
-rentMethods/inclusive/NNoutput200_MLP.pdf> <./FIGS/TEMPFigs/MVA_differentMethod
-s/inclusive/NNoutput040_BDT.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/inclusiv
-e/NNoutput080_BDT.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput
-200_BDT.pdf>] [34 <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_Lihood
-KDE.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf> 
-<./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf> <./FIGS/T
-EMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf> <./FIGS/TEMPFigs/MVA_dif
-ferentMethods/bins/NNoutput080_MLP.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/b
-ins/NNoutput200_MLP.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040
-_BDT.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf> <./FI
-GS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf>] [35 <./FIGS/TEMPFig
-s/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf> <./FIGS/TEMPFigs/MVA_diff
-erentMethods/inclusive/MVAs_RejvsEff200.pdf> <./FIGS/TEMPFigs/MVA_differentMeth
-ods/bins/MVAs_RejvsEff40.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_R
-ejvsEff200.pdf>]
+[24] [25]
 ! Undefined control sequence.
-<recently read> \bm 
-                    
-l.636 ...b}}$ likelihood training and performance}
-                                                  
+l.313  \Delta\phi_i \Deltay
+                           _i & \Delta \phi^2_i \end{array} \right). \]
 ? 
-
-Overfull \hbox (7.68936pt too wide) in paragraph at lines 636--636
-[]$[]$ \OT1/cmr/bx/n/17.28 like-li-hood train-ing and per-for-mance 
- []
-
+! Double subscript.
+l.313  \Delta\phi_i \Deltay_
+                            i & \Delta \phi^2_i \end{array} \right). \]
+? 
 ! Undefined control sequence.
-<argument> ...name thesection\endcsname }\fi $\bm 
-                                                  { g\rightarrow b\bar {b}}$...
-l.636 ...b}}$ likelihood training and performance}
-                                                  
+<recently read> \vect 
+                      
+l.316 Here, $\vect
+                  {r}_i = (\Delta y_i, \Delta \phi_i) = \vect{c}_i - \vect{J...
+
 ? 
-[36 <./FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf> <./FI
-GS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf> <./FIGS/TEMPFi
-gs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf>]
-<FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, id=1964, 569.12625pt x 549.05125pt>
-File: FIGS/Likelihood/NNoutput040_LihoodKDE.pdf Graphic file (type pdf)
-<use FIGS/Likelihood/NNoutput040_LihoodKDE.pdf>
-<FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, id=1965, 569.12625pt x 549.05125pt>
-File: FIGS/Likelihood/NNoutput080_LihoodKDE.pdf Graphic file (type pdf)
-<use FIGS/Likelihood/NNoutput080_LihoodKDE.pdf>
-<FIGS/Likelihood/NNoutput200_LihoodKDE.pdf, id=1967, 569.12625pt x 549.05125pt>
-File: FIGS/Likelihood/NNoutput200_LihoodKDE.pdf Graphic file (type pdf)
-<use FIGS/Likelihood/NNoutput200_LihoodKDE.pdf> [37 <./FIGS/Likelihood/NNoutput
-080_LihoodKDE.pdf, page is rotated 90 degrees> <./FIGS/Likelihood/NNoutput200_L
-ihoodKDE.pdf, page is rotated 90 degrees> <./FIGS/Likelihood/NNoutput040_Lihood
-KDE.pdf, page is rotated 90 degrees>]
-<FIGS/Likelihood/KDE_RejvsEff.pdf, id=2103, 569.12625pt x 549.05125pt>
-File: FIGS/Likelihood/KDE_RejvsEff.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.316 ...}_i = (\Delta y_i, \Delta \phi_i) = \vect
+                                                  {c}_i - \vect{J}$, where $...
 
-<use FIGS/Likelihood/KDE_RejvsEff.pdf> [38 <./FIGS/Likelihood/KDE_RejvsEff.pdf,
- page is rotated 90 degrees>]
+? 
+! Undefined control sequence.
+l.316 ... y_i, \Delta \phi_i) = \vect{c}_i - \vect
+                                                  {J}$, where $\vect{J} = (y...
 
-LaTeX Warning: Reference `sec:validation' on page 39 undefined on input line 74
-2.
+? 
+! Undefined control sequence.
+<recently read> \vect 
+                      
+l.316 ...i) = \vect{c}_i - \vect{J}$, where $\vect
+                                                  {J} = (y_J,\phi_J)$ is the...
 
-[39]
-<FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf, id=2154, 569.1262
-5pt x 503.8825pt>
-File: FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf Graphic file 
-(type pdf)
+? 
+! Undefined control sequence.
+<recently read> \vect 
+                      
+l.316 ...J)$ is the location of the jet and $\vect
+                                                  {c}_i$ is the position of ...
 
-<use FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf>
-<FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf, id=2155, 569.1262
-5pt x 503.8825pt>
-File: FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf Graphic file 
-(type pdf)
+? 
+[26] [27] [28]
+! Undefined control sequence.
+l.394 ...d scatter is defined as the $2 \righarrow
+                                                   2$ subprocess with the la...
 
-<use FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf> [40 <./FIGS/s
-ystematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf, page is rotated 90 degre
-es> <./FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf, page is rot
-ated 90 degrees>]
-<FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf, id=2245, 569.12625pt x 549.05
-125pt>
-File: FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf Graphic file (type pdf)
- <use FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf>
-<FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf, id=2246, 569.12625pt x 54
-9.05125pt>
-File: FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf Graphic file (type pd
-f)
- <use FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf, id=2247, 569.126
-25pt x 503.8825pt>
-File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf Graphic file
- (type pdf)
+? 
+! Undefined control sequence.
+l.403 ...e, but they are produced in $g \righarrow
+                                                   Q\bar{Q}$ branchings in t...
 
-<use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf, id=2248, 569.126
-25pt x 503.8825pt>
-File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf Graphic file
- (type pdf)
-
-<use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf> [41]
-[42 <./FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf, page is rotated 90 degr
-ees> <./FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf, page is rotated 90
- degrees> <./FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf, page
- is rotated 90 degrees> <./FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvsef
-f270.pdf, page is rotated 90 degrees>]
-<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf, id=242
-7, 569.12625pt x 503.8825pt>
-File: FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf Gr
-aphic file (type pdf)
-
-<use FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf, id=242
-8, 569.12625pt x 503.8825pt>
-File: FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf Gr
-aphic file (type pdf)
-
-<use FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf>
-[43 <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf, 
-page is rotated 90 degrees> <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertain
-tyTest_rejvseff200.pdf, page is rotated 90 degrees>] [44]
-<FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png, id=2521, 698.61pt x 674.
-52pt>
-File: FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png Graphic file (type p
-ng)
- <use FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png>
-<FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png, id=2522, 698.61pt x 674
-.52pt>
-File: FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png Graphic file (type 
-png)
- <use FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png> [45 <./FIGS/system
-atics/DiffIsolationCutsKDE_RejvsEff40.png (PNG copy)> <./FIGS/systematics/DiffI
-solationCutsKDE_RejvsEff270.png (PNG copy)>]
-<gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf, id=2527, 569.12625pt x 551.05875pt>
-File: gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf Graphic file (type pdf)
-<use gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf>
-<FIGS/systematics/DataVarNtrkPT040.pdf, id=2528, 569.12625pt x 549.05125pt>
-File: FIGS/systematics/DataVarNtrkPT040.pdf Graphic file (type pdf)
-
-<use FIGS/systematics/DataVarNtrkPT040.pdf>
-<FIGS/systematics/DataVarNtrkPT200.pdf, id=2529, 569.12625pt x 549.05125pt>
-File: FIGS/systematics/DataVarNtrkPT200.pdf Graphic file (type pdf)
-
-<use FIGS/systematics/DataVarNtrkPT200.pdf> [46 <./gbbRejection_vs_PT_3MonteCar
-los_50Eff.pdf, page is rotated 90 degrees>] [47 <./FIGS/systematics/DataVarNtrk
-PT040.pdf, page is rotated 90 degrees> <./FIGS/systematics/DataVarNtrkPT200.pdf
-, page is rotated 90 degrees>]
-Chapter 4.
-) [48
-
-] (./tesis.bbl [49
+? 
+[29]) [30] (./tesis.bbl [31
 
 
 ]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [32] [33]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¶ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [34]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
 Missing character: There is no ” in font cmr12!
-
-Underfull \hbox (badness 3260) in paragraph at lines 73--76
-[]\OT1/cmr/m/n/12 ATLAS Col-lab-o-ra-tion.  The AT-LAS Sim-u-la-tion In-fras-tr
-uc-ture.
- []
-
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no â in font cmr8!
+Missing character: There is no ˆ in font cmr12!
+Missing character: There is no ’ in font cmr12!
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
-[50]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 240.
+ [35]
+! Undefined control sequence.
+l.279   $\sqrt{s}=7\text
+                        {\,}\text{\,}\mathrm{TeV}$ using the atlas detector.
+? 
+! Undefined control sequence.
+l.279   $\sqrt{s}=7\text{\,}\text
+                                 {\,}\mathrm{TeV}$ using the atlas detector.
+? 
+Missing character: There is no â in font cmti12!
+Missing character: There is no ˆ in font cmti12!
+Missing character: There is no ’ in font cmti12!
+Missing character: There is no â in font cmti12!
+Missing character: There is no € in font cmti12!
+Missing character: There is no “ in font cmti12!
+Missing character: There is no â in font cmti12!
+Missing character: There is no ˆ in font cmti12!
+Missing character: There is no ’ in font cmti12!
+[36]
+Missing character: There is no â in font cmti12!
+Missing character: There is no € in font cmti12!
+Missing character: There is no “ in font cmti12!
+ [37]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.139 \end{thebibliography}
+l.353 \end{thebibliography}
                            
 ? 
-) [51] (./tesis.aux (./Introduction/introduction.aux) (./Main/core.aux))
+) [38] (./tesis.aux (./Introduction/introduction.aux)
+(./Introduction/theory.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -914,13 +397,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1602 strings out of 495061
- 39044 string characters out of 1182621
- 67450 words of memory out of 3000000
- 4699 multiletter control sequences out of 15000+50000
- 14210 words of font info for 48 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 27i,12n,21p,1238b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 1136 strings out of 493848
+ 14688 string characters out of 1152823
+ 66397 words of memory out of 3000000
+ 4421 multiletter control sequences out of 15000+50000
+ 11986 words of font info for 41 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 27i,8n,21p,1798b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/font
@@ -931,14 +414,13 @@ pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/
 type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/f
-onts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (55 pages, 2320237 bytes).
+/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on tesis.pdf (42 pages, 724652 bytes).
 PDF statistics:
- 2733 PDF objects out of 2984 (max. 8388607)
+ 224 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 521 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

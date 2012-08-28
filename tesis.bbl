@@ -39,10 +39,137 @@ Toshinori Abe et~al.
   in Proton-Antiproton Collisions at s**(1/2)= 1.8 TeV}.
 \newblock {\em Phys.Rev.D}, 71:38, 2005.
 
-\bibitem{PYTHIA8}
+\bibitem{PhysRevLett.74.2626}
+F.~Abe et~al.
+\newblock Observation of top quark production in
+  $\overline{\mathit{p}}\mathit{p}$ collisions with the collider detector at
+  fermilab.
+
+\bibitem{PhysRevLett.74.2422}
+S.~Abachi et~al.
+\newblock Search for high mass top quark production in $\mathit{p}\overline{p}$
+  collisions at
+  $\sqrt{\mathit{s}}\phantom{\rule{0ex}{0ex}}=\phantom{\rule{0ex}{0ex}}$ 1.8
+  tev.
+
+\bibitem{Higgs1964132}
+P.W. Higgs.
+\newblock Broken symmetries, massless particles and gauge fields.
+\newblock {\em Physics Letters}, 12(2):132 -- 133, 1964.
+
+\bibitem{:2012gk}
+Georges Aad et~al.
+\newblock {Observation of a new particle in the search for the Standard Model
+  Higgs boson with the ATLAS detector at the LHC}.
+\newblock 2012.
+
+\bibitem{}
+A.~{Sherstnev} and R.~S. {Thorne}.
+\newblock {Parton distributions for LO generators}.
+\newblock {\em European Physical Journal C}, 55:553--575, June 2008.
+
+\bibitem{PhysRev.75.486}
+F.~J. Dyson.
+\newblock The radiation theories of tomonaga, schwinger, and feynman.
+\newblock {\em Phys. Rev.}, 75:486--502, Feb 1949.
+
+\bibitem{Banner1983476}
+M~Banner et~al.
+\newblock Observation of single isolated electrons of high transverse momentum
+  in events with missing transverse energy at the cern pp collider.
+\newblock {\em Physics Letters B}, 122(5–6):476 -- 485, 1983.
+
+\bibitem{Arnison1983398}
+G.~Arnison et~al.
+\newblock Experimental observation of lepton pairs of invariant mass around 95
+  gev/c2 at the cern sps collider.
+\newblock {\em Physics Letters B}, 126(5):398 -- 410, 1983.
+
+\bibitem{Glashow1961579}
+Sheldon~L. Glashow.
+\newblock Partial-symmetries of weak interactions.
+\newblock {\em Nuclear Physics}, 22(4):579 -- 588, 1961.
+
+\bibitem{Salam1964168}
+A.~Salam and J.C. Ward.
+\newblock Electromagnetic and weak interactions.
+\newblock {\em Physics Letters}, 13(2):168 -- 171, 1964.
+
+\bibitem{PhysRevLett.19.1264}
+Steven Weinberg.
+\newblock A model of leptons.
+\newblock {\em Phys. Rev. Lett.}, 19:1264--1266, Nov 1967.
+
+\bibitem{GellMann1964214}
+M.~Gell-Mann.
+\newblock A schematic model of baryons and mesons.
+\newblock {\em Physics Letters}, 8(3):214 -- 215, 1964.
+
+\bibitem{Zweig2}
+G.~Zweig.
+\newblock {AN SU(3) MODEL FOR STRONG INTERACTION SYMMETRY AND ITS BREAKING. 2.}
+\newblock 1964.
+
+\bibitem{Fritzsch1973365}
+H.~Fritzsch, M.~Gell-Mann, and H.~Leutwyler.
+\newblock Advantages of the color octet gluon picture.
+\newblock {\em Physics Letters B}, 47(4):365 -- 368, 1973.
+
+\bibitem{PhysRevLett.23.1415}
+Richard~P. Feynman.
+\newblock Very high-energy collisions of hadrons.
+\newblock {\em Phys. Rev. Lett.}, 23:1415--1417, Dec 1969.
+
+\bibitem{Collins:1989gx}
+John~C. Collins, Davison~E. Soper, and George~F. Sterman.
+\newblock {Factorization of Hard Processes in QCD}.
+\newblock {\em Adv.Ser.Direct.High Energy Phys.}, 5:1--91, 1988.
+
+\bibitem{Altarelli1977298}
+G.~Altarelli and G.~Parisi.
+\newblock Asymptotic freedom in parton language.
+\newblock {\em Nuclear Physics B}, 126(2):298 -- 318, 1977.
+
+\bibitem{PhysRevLett.35.1609}
+G.~Hanson, G.~S. Abrams, A.~M. Boyarski, M.~Breidenbach, F.~Bulos,
+  W.~Chinowsky, G.~J. Feldman, C.~E. Friedberg, D.~Fryberger, G.~Goldhaber,
+  D.~L. Hartill, B.~Jean-Marie, J.~A. Kadyk, R.~R. Larsen, A.~M. Litke,
+  D.~L\"uke, B.~A. Lulu, V.~L\"uth, H.~L. Lynch, C.~C. Morehouse, J.~M.
+  Paterson, M.~L. Perl, F.~M. Pierre, T.~P. Pun, P.~A. Rapidis, B.~Richter,
+  B.~Sadoulet, R.~F. Schwitters, W.~Tanenbaum, G.~H. Trilling, F.~Vannucci,
+  J.~S. Whitaker, F.~C. Winkelmann, and J.~E. Wiss.
+\newblock Evidence for jet structure in hadron production by ${e}^{+}{e}^{-}$
+  annihilation.
+\newblock {\em Phys. Rev. Lett.}, 35:1609--1612, Dec 1975.
+
+\bibitem{ALPGEN}
+Michelangelo~L. Mangano, Fulvio Piccinini, Antonio~D. Polosa, Mauro Moretti,
+  and Roberto Pittau.
+\newblock Alpgen, a generator for hard multiparton processes in hadronic
+  collisions.
+\newblock {\em Journal of High Energy Physics}, 2003(07):001, 2003.
+
+\bibitem{MADGRAPH}
+Johan Alwall, Pavel Demin, Simon de~Visscher, Rikkert Frederix, Michel Herquet,
+  Fabio Maltoni, Tilman Plehn, David~L. Rainwater, and Tim Stelzer.
+\newblock Madgraph/madevent v4: the new web generation.
+\newblock {\em Journal of High Energy Physics}, 2007(09):028, 2007.
+
+\bibitem{PYTHIA6}
 Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
-\newblock A brief introduction to pythia 8.1.
-\newblock {\em Comput.\ Phys.\ Commun.}, 178:852, 2008.
+\newblock {PYTHIA 6.4 Physics and Manual}.
+\newblock {\em JHEP}, 05:026, 2006.
+
+\bibitem{HerwigPP}
+M~Bähr, S.~Gieseke, M.A. Gigg, A.~Grellscheid, K.~Hamilton, O.~Latunde-Dada,
+  S~Plätzer, P~Richardson, M.H Seymour, M~Sherstnev, et~al.
+\newblock {Herwig++ physics and manual}.
+\newblock {\em Eur.Phys.J.C}, 58:68, 2008.
+
+\bibitem{LUNDMODEL}
+B.~Andersson, G.~Gustafson, G.~Ingelman, and T.~Sjöstrand.
+\newblock Parton fragmentation and string dynamics.
+\newblock {\em Physics Reports}, 97(2–3):31 -- 145, 1983.
 
 \bibitem{Pythia_partonshowers}
 R.~Corke and T.~Sj\"ostrand.
@@ -55,45 +182,51 @@ T.~Sj\"ostrand and P.~Z. Skands.
   interactions.
 \newblock {\em European Physical Journal C}, 39:129, 2005.
 
-\bibitem{Lund_string_model}
-B.~Andersson et~al.
-\newblock Parton fragmentation and string dynamics.
-\newblock {\em Phys.\ Rep.}, 97:31, 1983.
-
 \bibitem{Pythia_MC11tune}
 Atlas tunes of pythia 6 and pythia 8 for mc11.
 \newblock Technical Report ATL-PHYS-PUB-2011-009, CERN, Geneva, Jul 2011.
-
-\bibitem{GEANT4}
-S.~Agostinelli et~al.
-\newblock Geant4 — a simulation toolkit.
-\newblock {\em Nucl.\ Inst.\ Meth.\ Section A}, 506(3):250 -- 303, 2003.
-
-\bibitem{ATLASSimulation}
-{ATLAS Collaboration}.
-\newblock {The ATLAS Simulation Infrastructure}.
-\newblock {\em Eur.Phys.J.C}, 70:051, 2010.
-
-\bibitem{Herwig}
-G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
-\newblock {HERWIG 6: An Event generator for hadron emission reactions with
-  interfering gluons (including supersymmetric processes)}.
-\newblock {\em JHEP}, 0101:010, 2001.
 
 \bibitem{Perugia}
 Peter~Z. Skands.
 \newblock {The Perugia Tunes}.
 \newblock 2009.
 
-\bibitem{Bahr:2008dy}
-Manuel Bahr, Stefan Gieseke, and Michael~H. Seymour.
-\newblock {Simulation of multiple partonic interactions in Herwig++}.
-\newblock {\em JHEP}, 0807:076, 2008.
+\bibitem{Perugia2010}
+Peter~Zeiler Skands.
+\newblock {Tuning Monte Carlo Generators: The Perugia Tunes}.
+\newblock {\em Phys. Rev. D}, 82:074018, 2010.
 
-\bibitem{fastjet}
-M~Cacciari and G.P. Salam.
-\newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
-\newblock {\em Phys.\ Lett.\ B\}, 661:057, 2006.
+\bibitem{Geant4}
+S.~Agostinelli et~al.
+\newblock Geant4 — a simulation toolkit.
+\newblock {\em Nucl.\ Inst.\ Meth.\ Section A}, 506(3):250 -- 303, 2003.
+
+\bibitem{GavinLectures}
+{Salam, G.P.}
+\newblock {Ellements of QCD for hadron colliders}.
+\newblock {\em CERN-2010-002}, Jan 2011.
+
+\bibitem{SISCone}
+Gavin~P. Salam and Grégory Soyez.
+\newblock A practical seedless infrared-safe cone jet algorithm.
+\newblock {\em Journal of High Energy Physics}, 2007(05):086, 2007.
+
+\bibitem{antiktalg}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The anti-$k_t$ jet clustering algorithm}.
+\newblock {\em JHEP}, 04:063, 2008.
+
+\bibitem{JADE}
+W.~Bartel, L.~Becker, R.~Felst, D.~Haidt, G.~Knies, H.~Krehbiel,
+  P.~Laurikainen, N.~Magnussen, R.~Meinke, B.~Naroska, et~al.
+\newblock {Experimental studies on multijet production in $e^+e^−$
+  annihilation at PETRA energies}.
+\newblock {\em EPJ C Particles and Fields}, 33:8, 1986.
+
+\bibitem{kt2}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock {Successive combination jet algorithm for hadron collisions}.
+\newblock {\em Phys.\ Rev.}, D48:3160--3166, 1993.
 
 \bibitem{kt1}
 S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
@@ -101,39 +234,120 @@ S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
   hadron collisions}.
 \newblock {\em Nucl.\ Phys.}, B406:187, 1993.
 
+\bibitem{fastjet}
+M~Cacciari and G.P. Salam.
+\newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
+\newblock {\em Phys.\ Lett.\ B\}, 661:057, 2006.
+
+\bibitem{Abbiendi:2007aa}
+G.~Abbiendi et~al.
+\newblock {Measurement of alpha(s) with Radiative Hadronic Events}.
+\newblock 2007.
+
+\bibitem{Aad:2012np}
+Georges Aad et~al.
+\newblock {Measurement of event shapes at large momentum transfer with the
+  ATLAS detector in pp collisions at sqrt(s) = 7 TeV}.
+\newblock 2012.
+
+\bibitem{ATLASBoostedHbb}
+{ATLAS Collaboration}.
+\newblock Atlas sensitivity to the standard model higgs in the hw and hz
+  channels at high transverse momenta.
+\newblock {\em ATL-PHYS-PUB-2009-088}, Aug 2009.
+
+\bibitem{PhysRevLett.107.172001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Quark and gluon tagging at the lhc.
+\newblock {\em Phys. Rev. Lett.}, 107:172001, Oct 2011.
+
+\bibitem{PhysRevD.82.095012}
+Graham~D. Kribs, Adam Martin, Tuhin~S. Roy, and Michael Spannowsky.
+\newblock Discovering higgs bosons of the mssm using jet substructure.
+\newblock {\em Phys. Rev. D}, 82:095012, Nov 2010.
+
+\bibitem{springerlink:10.1007/JHEP11(2010)101}
+Stephen Ellis, Christopher Vermilion, Jonathan Walsh, Andrew Hornig, and
+  Christopher Lee.
+\newblock Jet shapes and jet algorithms in scet.
+\newblock {\em Journal of High Energy Physics}, 2010:1--83, 2010.
+\newblock 10.1007/JHEP11(2010)101.
+
+\bibitem{ATLASJetShapes}
+G.~Aad et~al.
+\newblock Study of jet shapes in inclusive jet production in $pp$ collisions at
+  $\sqrt{s}=7\text{\,}\text{\,}\mathrm{TeV}$ using the atlas detector.
+\newblock {\em Phys. Rev. D}, 83:052003, Mar 2011.
+
+\bibitem{PhysRevLett.105.022001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Seeing in color: Jet superstructure.
+\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
+
+\bibitem{Catani1992269}
+S.~Catani, G.~Turnock, and B.R. Webber.
+\newblock Jet broadening measures in e+e− annihilation.
+\newblock {\em Physics Letters B}, 295(3–4):269 -- 276, 1992.
+
+\bibitem{PhysRevD.79.074012}
+Leandro~G. Almeida, Seung~J. Lee, Gilad Perez, Ilmo Sung, and Joseph Virzi.
+\newblock Top quark jets at the lhc.
+\newblock {\em Phys. Rev. D}, 79:074012, Apr 2009.
+
+\bibitem{Catani1992445}
+S.~Catani, Yu.L. Dokshitzer, F.~Fiorani, and B.R. Webber.
+\newblock Average number of jets in e+e− annihilation.
+\newblock {\em Nuclear Physics B}, 377(3):445 -- 460, 1992.
+
+\bibitem{Snihur1999494}
+R.~Snihur.
+\newblock Subjet multiplicity in quark and gluon jets at d0.
+\newblock {\em Nuclear Physics B - Proceedings Supplements}, 79(1–3):494 --
+  496, 1999.
+\newblock <ce:title>Proceedings of the 7th International Workshop on Deep
+  Inelastic Scattering and QCD</ce:title>.
+
+\bibitem{Abdesselam:2010pt}
+A.~Abdesselam, E.~Bergeaas Kuutmann, U.~Bitenc, G.~Brooijmans, J.~Butterworth,
+  et~al.
+\newblock {Boosted objects: A Probe of beyond the Standard Model physics}.
+\newblock {\em Eur.Phys.J.}, C71:1661, 2011.
+
+\bibitem{pruning}
+Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
+\newblock Techniques for improved heavy particle searches with jet
+  substructure.
+\newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
+
 \bibitem{nsubjettiness}
 Jesse Thaler and Ken Van~Tilburg.
 \newblock {Identifying Boosted Objects with N-subjettiness}.
 \newblock {\em JHEP}, 1103:015:026, 2011.
 
-\bibitem{Hocker:2007ht}
-Andreas Hoecker, Peter Speckmayer, Joerg Stelzer, Jan Therhaag, Eckhard von
-  Toerne, and Helge Voss.
-\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
-\newblock {\em PoS}, ACAT:040, 2007.
+\bibitem{njetti}
+Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
+\newblock $n$ jettiness: An inclusive event shape to veto jets.
+\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
 
-\bibitem{JetMassNote}
-R~Alon et~al.
-\newblock {Backup Note for Measurement of Jet Mass and Substructure in QCD with
-  the ATLAS Experiment}.
-\newblock {\em ATL-COM-PHYS-2011-401}, 2011.
+\bibitem{exclusivekt}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock Successive combination jet algorithm for hadron collisions.
+\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
 
-\bibitem{chargemultiplicity}
-G.~Aad et~al.
-\newblock {Charged-particle multiplicities in pp interactions measured with the
-  ATLAS detector at the LHC}.
-\newblock {\em New J.Phys.}, 13:053033, 2011.
+\bibitem{mininsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock Maximizing boosted top identification by minimizing n-subjettiness.
+\newblock {\em Journal of High Energy Physics}, 2012:1--33, 2012.
+\newblock 10.1007/JHEP02(2012)093.
 
-\bibitem{ATLAS-CONF-2010-009}
-{ATLAS Collaboration}.
-\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
-  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
-\newblock {\em ATLAS-CONF-2010-009}, 2010.
+\bibitem{angularities}
+Carola~F. Berger, Tibor K\'ucs, and George Sterman.
+\newblock Event shape\char21{}energy flow correlations.
+\newblock {\em Phys. Rev. D}, 68:014012, Jul 2003.
 
-\bibitem{JER2011}
-G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
-\newblock Jet energy resolution from in-situ techniques with the atlas detector
-  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
-\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
+\bibitem{Norrbin:2000zc}
+E.~Norrbin and T.~Sjostrand.
+\newblock {Production and hadronization of heavy quarks}.
+\newblock {\em Eur.Phys.J.}, C17:137--161, 2000.
 
 \end{thebibliography}
