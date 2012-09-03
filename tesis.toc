@@ -1,16 +1,16 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {chapter}{\numberline {2}Theoretical framework}{8}
-\contentsline {section}{\numberline {2.1}The Standard Model}{8}
-\contentsline {section}{\numberline {2.2}Perturbative QCD}{11}
-\contentsline {section}{\numberline {2.3}Jet physics}{14}
-\contentsline {subsection}{\numberline {2.3.1}Monte Carlo tools}{15}
-\contentsline {subsubsection}{Pythia}{17}
-\contentsline {subsubsection}{Herwig$++$}{18}
-\contentsline {subsection}{\numberline {2.3.2}Jet algorithms}{19}
-\contentsline {subsection}{\numberline {2.3.3}Jet substructure}{24}
-\contentsline {subsubsection}{Jet width}{25}
-\contentsline {subsubsection}{Eccentricity}{26}
-\contentsline {subsubsection}{Jet Mass}{26}
-\contentsline {subsubsection}{Subjet multiplicity}{27}
-\contentsline {subsubsection}{$N$-subjettiness}{28}
-\contentsline {section}{\numberline {2.4}Heavy flavor jet production}{29}
+\contentsline {chapter}{\numberline {1}Double $B$-hadron jet identification}{2}
+\contentsline {section}{\numberline {1.1}Data and Monte Carlo samples}{2}
+\contentsline {section}{\numberline {1.2}Data analysis}{4}
+\contentsline {section}{\numberline {1.3}Preliminary studies in standalone {\sc pythia} generator}{6}
+\contentsline {section}{\numberline {1.4}Kinematic differences between single and double $B$-hadron jets}{10}
+\contentsline {subsection}{\numberline {1.4.1}Further studies using ``ghost-association'' and bigger cone jets}{21}
+\contentsline {section}{\numberline {1.5}Validation of the jet variables in data}{23}
+\contentsline {chapter}{\numberline {2}Multivariate Analysis}{27}
+\contentsline {section}{\numberline {2.1}The multivariate classifiers}{27}
+\contentsline {section}{\numberline {2.2}The input variables}{31}
+\contentsline {section}{\numberline {2.3}${ g\rightarrow b\mathaccent "7016\relax {b}}$ likelihood training and performance}{31}
+\contentsline {section}{\numberline {2.4}Systematic uncertainties}{34}
+\contentsline {section}{\numberline {2.5}Isolation studies}{39}
+\contentsline {section}{\numberline {2.6}Other Monte Carlo generators}{40}
+\contentsline {chapter}{\numberline {3}??Fraction of gluon-splitting jets in data??}{43}
+\contentsline {section}{\numberline {3.1}??Template fits??}{43}

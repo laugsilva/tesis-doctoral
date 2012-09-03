@@ -1,11 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/introduction.aux
-A level-1 auxiliary file: Introduction/theory.aux
-White space in argument---line 22 of file Introduction/theory.aux
- : \citation{Current
- :                   Algebra}
-I'm skipping whatever remains of this command
+A level-1 auxiliary file: Main/core.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 541 of file tesis.bib
@@ -18,6 +13,10 @@ I was expecting a `,' or a `}'---line 556 of file tesis.bib
  :   collaboration = {D0 Collaboration},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Repeated entry---line 973 of file tesis.bib
+ : @article{JESnote
+ :                 ,
+I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 1418 of file tesis.bib
  :       
  :       title        = "{Performance of the ATLAS Secondary Vertex b-tagging Algorithm in 7 TeV Collision Data}",
@@ -28,62 +27,67 @@ I was expecting a `,' or a `}'---line 1426 of file tesis.bib
  :       title        = "{Performance of primary vertex reconstruction in
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "GSP"
-Warning--I didn't find a database entry for "Zweig:1964j"
-Warning--I didn't find a database entry for "1126-6708-2008-07-07"
-Warning--I didn't find a database entry for "CamAchen"
-Warning--empty journal in Abe:1999vw
-Warning--empty journal in PhysRevLett.74.2626
-Warning--empty year in PhysRevLett.74.2626
-Warning--empty journal in PhysRevLett.74.2422
-Warning--empty year in PhysRevLett.74.2422
-Warning--empty journal in :2012gk
-Warning--empty journal in Zweig2
+I was expecting a `,' or a `}'---line 1436 of file tesis.bib
+ :       
+ :       title        = "{Properties of tracks in jets observed in proton-proton
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1445 of file tesis.bib
+ :      
+ :      title        = "{Properties of Jets and Inputs to Jet Reconstruction and
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1454 of file tesis.bib
+ :       
+ :       title        = "{Performance of Jet Algorithms in the ATLAS Detector}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty author in Pythia_MC11tune
 Warning--empty journal in Perugia
+Warning--empty journal in topoClusters
+Warning--there's a number but no volume in topoClusters
+Warning--empty journal in CSC
 Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
 while executing---line 944 of file unsrt.bst
-Warning--empty journal in Abbiendi:2007aa
-Warning--empty journal in Aad:2012np
-You've used 63 entries,
+You've used 23 entries,
             1791 wiz_defined-function locations,
-            850 strings with 13340 characters,
-and the built_in function-call counts, 13845 in all, are:
-= -- 1140
-> -- 715
+            585 strings with 6820 characters,
+and the built_in function-call counts, 4098 in all, are:
+= -- 331
+> -- 205
 < -- 1
-+ -- 264
-- -- 201
-* -- 1043
-:= -- 2346
-add.period$ -- 189
-call.type$ -- 63
-change.case$ -- 63
++ -- 78
+- -- 55
+* -- 244
+:= -- 728
+add.period$ -- 68
+call.type$ -- 23
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 74
-duplicate$ -- 555
-empty$ -- 1312
-format.name$ -- 201
-if$ -- 2978
+cite$ -- 28
+duplicate$ -- 197
+empty$ -- 399
+format.name$ -- 55
+if$ -- 882
 int.to.chr$ -- 0
-int.to.str$ -- 63
-missing$ -- 62
-newline$ -- 318
-num.names$ -- 62
-pop$ -- 99
+int.to.str$ -- 23
+missing$ -- 22
+newline$ -- 117
+num.names$ -- 22
+pop$ -- 45
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 213
+skip$ -- 76
 stack$ -- 0
-substring$ -- 953
-swap$ -- 55
+substring$ -- 144
+swap$ -- 20
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 11
-while$ -- 119
-width$ -- 65
-write$ -- 678
-(There were 6 error messages)
+warning$ -- 5
+while$ -- 36
+width$ -- 25
+write$ -- 244
+(There were 9 error messages)
