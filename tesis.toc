@@ -1,16 +1,10 @@
-\contentsline {chapter}{\numberline {1}Double $B$-hadron jet identification}{2}
-\contentsline {section}{\numberline {1.1}Data and Monte Carlo samples}{2}
-\contentsline {section}{\numberline {1.2}Data analysis}{4}
-\contentsline {section}{\numberline {1.3}Preliminary studies in standalone {\sc pythia} generator}{6}
-\contentsline {section}{\numberline {1.4}Kinematic differences between single and double $B$-hadron jets}{10}
-\contentsline {subsection}{\numberline {1.4.1}Further studies using ``ghost-association'' and bigger cone jets}{21}
-\contentsline {section}{\numberline {1.5}Validation of the jet variables in data}{23}
-\contentsline {chapter}{\numberline {2}Multivariate Analysis}{27}
-\contentsline {section}{\numberline {2.1}The multivariate classifiers}{27}
-\contentsline {section}{\numberline {2.2}The input variables}{31}
-\contentsline {section}{\numberline {2.3}${ g\rightarrow b\mathaccent "7016\relax {b}}$ likelihood training and performance}{31}
-\contentsline {section}{\numberline {2.4}Systematic uncertainties}{34}
-\contentsline {section}{\numberline {2.5}Isolation studies}{39}
-\contentsline {section}{\numberline {2.6}Other Monte Carlo generators}{40}
-\contentsline {chapter}{\numberline {3}??Fraction of gluon-splitting jets in data??}{43}
-\contentsline {section}{\numberline {3.1}??Template fits??}{43}
+\contentsline {chapter}{\numberline {1}Event reconstruction and $b$-Tagging }{2}
+\contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{2}
+\contentsline {subsubsection}{Jet calibration}{4}
+\contentsline {section}{\numberline {1.2} $b$-jet Tagging}{5}
+\contentsline {subsection}{\numberline {1.2.1}Primary vertex reconstruction}{6}
+\contentsline {subsection}{\numberline {1.2.2}Tracks selection and properties}{7}
+\contentsline {subsubsection}{Track quality cuts}{7}
+\contentsline {subsubsection}{Track association to jets}{8}
+\contentsline {subsubsection}{Impact parameters}{8}
+\contentsline {subsection}{\numberline {1.2.3}$b$-tagging algorithms}{8}

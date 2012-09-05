@@ -1,129 +1,64 @@
 \begin{thebibliography}{10}
 
-\bibitem{PYTHIA8}
-Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
-\newblock A brief introduction to pythia 8.1.
-\newblock {\em Comput.\ Phys.\ Commun.}, 178:852, 2008.
-
-\bibitem{Pythia_partonshowers}
-R.~Corke and T.~Sj\"ostrand.
-\newblock Improved parton showers at large transverse momenta.
-\newblock {\em European Physical Journal C}, 69:1, 2010.
-
-\bibitem{Pythia_mpi}
-T.~Sj\"ostrand and P.~Z. Skands.
-\newblock Transverse-momentum-ordered showers and interleaved multiple
-  interactions.
-\newblock {\em European Physical Journal C}, 39:129, 2005.
-
-\bibitem{Lund_string_model}
-B.~Andersson et~al.
-\newblock Parton fragmentation and string dynamics.
-\newblock {\em Phys.\ Rep.}, 97:31, 1983.
-
-\bibitem{Pythia_MC11tune}
-Atlas tunes of pythia 6 and pythia 8 for mc11.
-\newblock Technical Report ATL-PHYS-PUB-2011-009, CERN, Geneva, Jul 2011.
-
-\bibitem{GEANT4}
-S.~Agostinelli et~al.
-\newblock Geant4 — a simulation toolkit.
-\newblock {\em Nucl.\ Inst.\ Meth.\ Section A}, 506(3):250 -- 303, 2003.
-
-\bibitem{ATLASSimulation}
+\bibitem{Asquith:1311867}
 {ATLAS Collaboration}.
-\newblock {The ATLAS Simulation Infrastructure}.
-\newblock {\em Eur.Phys.J.C}, 70:051, 2010.
-
-\bibitem{Herwig}
-G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
-\newblock {HERWIG 6: An Event generator for hadron emission reactions with
-  interfering gluons (including supersymmetric processes)}.
-\newblock {\em JHEP}, 0101:010, 2001.
-
-\bibitem{Perugia}
-Peter~Z. Skands.
-\newblock {The Perugia Tunes}.
-\newblock 2009.
-
-\bibitem{Bahr:2008dy}
-Manuel Bahr, Stefan Gieseke, and Michael~H. Seymour.
-\newblock {Simulation of multiple partonic interactions in Herwig++}.
-\newblock {\em JHEP}, 0807:076, 2008.
-
-\bibitem{antiktalg}
-Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
-\newblock {The anti-$k_t$ jet clustering algorithm}.
-\newblock {\em JHEP}, 04:063, 2008.
 
 \bibitem{topoClusters}
 W~Lampl et~al.
 \newblock {Calorimeter Clustering Algorithms: Description and Performance}.
 \newblock (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-003), Apr 2008.
 
-\bibitem{ATLAS-CONF-2012-020}
+\bibitem{Busato:1271710}
 {ATLAS Collaboration}.
-\newblock {Selection of jets produced in proton-proton collisions with the
-  ATLAS detector using 2011 data}.
-\newblock {\em ATLAS-CONF-2012-020}, 2012.
 
-\bibitem{JESnote}
+\bibitem{Aharrouche2006601}
+M.~Aharrouche et~al.
+\newblock Energy linearity and resolution of the atlas electromagnetic barrel
+  calorimeter in an electron test-beam.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 568(2):601
+  -- 623, 2006.
+
+\bibitem{Cooke:1071187}
+M~Cooke, P~S Mangeard, M~Plamondon, M~Aleksa, M~Delmastro, L~Fayard,
+  S~Henrot-Versillé, F~Hubaut, R~Lafaye, W~Lampl, J~Lévêque, H~Ma,
+  E~Monnier, J~Parsons, P~Pralavorio, Ph~Schwemling, L~Serin, B~Trocmé,
+  G~Unal, M~Vincter, and H~Wilkens.
+\newblock {In situ commissioning of the ATLAS electromagnetic calorimeter with
+  cosmic muons}.
+\newblock {\em ATL-LARG-PUB-2007-013}, 2007.
+
+\bibitem{Aad:2011mk}
+Georges Aad et~al.
+\newblock {Electron performance measurements with the ATLAS detector using the
+  2010 LHC proton-proton collision data}.
+\newblock {\em Eur.Phys.J.}, C72:1909, 2012.
+
+\bibitem{ATLAS-CONF-2011-102}
 {ATLAS Collaboration}.
-\newblock {Jet energy scale and its systematic uncertainty for jets produced in
-  proton-proton collisions at $\sqrt{s}$ = 7 TeV and measured with the ATLAS
-  detector}.
-\newblock {\em ATLAS-CONF-2010-056}, 2010.
+\newblock {Commissioning of the ATLAS high-performance $b$-tagging algorithms
+  in the 7 TeV collision data}.
+\newblock {\em ATLAS-CONF-2011-102}, 2011.
 
-\bibitem{CSC}
-G.~Aad et~al.
-\newblock {Expected Performance of the ATLAS Experiment - Detector, Trigger and
-  Physics}.
-\newblock 2009.
-
-\bibitem{fastjet}
-M~Cacciari and G.P. Salam.
-\newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
-\newblock {\em Phys.\ Lett.\ B\}, 661:057, 2006.
-
-\bibitem{kt1}
-S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
-\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
-  hadron collisions}.
-\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
-
-\bibitem{nsubjettiness}
-Jesse Thaler and Ken Van~Tilburg.
-\newblock {Identifying Boosted Objects with N-subjettiness}.
-\newblock {\em JHEP}, 1103:015:026, 2011.
-
-\bibitem{Hocker:2007ht}
-Andreas Hoecker, Peter Speckmayer, Joerg Stelzer, Jan Therhaag, Eckhard von
-  Toerne, and Helge Voss.
-\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
-\newblock {\em PoS}, ACAT:040, 2007.
-
-\bibitem{JetMassNote}
-R~Alon et~al.
-\newblock {Backup Note for Measurement of Jet Mass and Substructure in QCD with
-  the ATLAS Experiment}.
-\newblock {\em ATL-COM-PHYS-2011-401}, 2011.
-
-\bibitem{chargemultiplicity}
-G.~Aad et~al.
-\newblock {Charged-particle multiplicities in pp interactions measured with the
-  ATLAS detector at the LHC}.
-\newblock {\em New J.Phys.}, 13:053033, 2011.
-
-\bibitem{ATLAS-CONF-2010-009}
+\bibitem{ATLAS-CONF-2011-089}
 {ATLAS Collaboration}.
-\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
-  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
-\newblock {\em ATLAS-CONF-2010-009}, 2010.
+\newblock {Calibrating the b-Tag Efficiency and Mistag Rate in 35 pb$^{-1}$ of
+  Data with the ATLAS Detector}.
+\newblock {\em ATLAS-CONF-2011-089}, 2011.
 
-\bibitem{JER2011}
-G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
-\newblock Jet energy resolution from in-situ techniques with the atlas detector
-  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
-\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
+\bibitem{ATLAS-CONF-2010-091}
+{ATLAS Collaboration}.
+\newblock {Performance of Impact Parameter-Based $b$-tagging Algorithms with
+  the ATLAS Detector using Proton-Proton Collisions at $\sqrt{s}$ = 7 TeV}.
+\newblock {\em ATLAS-CONF-2010-091}, 2010.
+
+\bibitem{ATLAS-CONF-2010-042}
+{ATLAS Collaboration}.
+\newblock {Performance of the ATLAS Secondary Vertex $b$-tagging Algorithm in 7
+  TeV Collision Data}.
+\newblock {\em ATLAS-CONF-2010-042}, 2010.
+
+\bibitem{ATLAS-CONF-2010-069}
+{ATLAS Collaboration}.
 
 \end{thebibliography}
