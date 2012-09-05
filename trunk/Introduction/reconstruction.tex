@@ -7,57 +7,60 @@
 \chapter{Event reconstruction and $b$-Tagging }\label{ch:reco}
 
 
-This chapter describes the reconstruction of and physics contained within the hadronic final state in ATLAS.
-Characteristics of the methods used for the identification of $b$-quark jet candidates and the properties of tracks in jets are also summarized. 
+The event reconstruction software, which in ATLAS is implemented in the software framework ATHENA, process the events, starting from the raw data obtained from the various sub-detectors (energy deposits and hits), processing them in many different stages and finally interpreting it as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
+In this chapter the algorithms for the identification of $b$-quark jets are presented.  These algorithms are mainly based on the reconstruction of the primary interaction vertex, on the reconstruction of charged particles in the Inner Detector and on the reconstruction of jets in the calorimeter.   
 
 %------------------------------------------------------------------------
-\section{Jets reconstruction and calibration}\label{sec:ObjSelection}
+\section{Jet reconstruction and calibration}\label{sec:ObjSelection}
 %------------------------------------------------------------------------
 
-Four primary inputs to jet reconstruction are considered in ATLAS. Jets can be form from two different types of geometric calorimeter signal, calorimeter towers or topological clusters, or utilizing charged particle tracks reconstructed in the Inner Detectors. The calorimeter towers can combine all calorimeter cells in projective towers, or use only those with energies above a noise threshold. The latter are known as ``noise-suppressed'' towers.  The noise of a calorimeter cell is measured by recording calorimeter signals in periods where no beam is present in the acelerator.  The standard deviation $\sigma$ around the mean measured energy is interpreted as the noise of the cell, and dependes on the sampling layer in which the cell resides and the position in $\eta$.
+Hadronic jets used for ATLAS analyses are reconstructed by a jet algorithm, starting from the energy depositions of electromagnetic and hadronic showers in the calorimeters.  Two different size parameters are used: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. The default jet algorithm is the anti-$kt$ algorithm~\cite{Asquith:1311867}, described in the previous chapter. Due to the expected level of pile-up in the LHC, one of the primary factors that influenced the decision on the jet algorithm was the effect of multiple simultaneous interactions on the reconstruction of jets. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is very susceptible to this effect. On the contrary, the anti-$kt$ algorithm is the most stable after the introduction of pile-up.  
 
-The jets used in the present analysis are built from noise-suppressed topological clusters of energy in the calorimeter, aslo known as ``topo-clusters''. Topological clusters are three-dimensional objects seeded by a calorimeter cell with $|E_{cell}| > 4 \sigma$ above the noise. Neighbor cells that have an energy at least 2$\sigma$ above their mean noise are added to the cluster. In a final step, all nearest-neighbor cells surrounding the clustered cells are added to the cluster, regardless of signal-to-noise ratio. The position of the cluster is assigned as the energy-weighted centroid of all constituent cells.  
+The input to calorimeter jet reconstruction can be calorimeter towers or topological cell clusters. Charged particle tracks reconstructed in the Inner Detectors are also used to define jets. The latter have the further advantage of being insensitive to pile-up and provide a stable reference for systematic studies. The jet inputs are combined as massless four-momentum objects in order to form the final four-momentum of the jet, which allows for a well-defined jet mass~\cite{Busato:1271710}. In the case of track-jets, the track four-momentum is constructed assuming the $\pi$ meson mass for each track.
 
-In either case, the jet inputs are combined as massless four-momentum objects in order to form the final four-momentum of the jet, which allows for a well-defined single-jet mass~\cite{Busato:1271710}.
-%In the case of track-jets, the track four-momentum is constructed assuming the $\pi$ meson mass for each track.
+Calorimeter towers are static, $\Delta \eta \times \Delta \phi = 0.1 \times 0.1$, grid elements built directly from calorimeter cells. There are two types of calorimeter towers: with or without noise supression. The latter are called ``noise-suppressed'' towers and use only the cells with energies above a certain noise threshold.  The noise of a calorimeter cell is measured by recording calorimeter signals in periods where no beam is present in the acelerator.  The standard deviation $\sigma$ around the mean measured energy is interpreted as the noise of the cell, and dependes on the sampling layer in which the cell resides and the position in $\eta$.
+
+The results presented in this thesis show jets which were built from noise-suppressed topological clusters of energy in the calorimeter, aslo known as ``topo-clusters''~\cite{topoClusters}. Topological clusters are groups of calorimeter cells that are designed to follow the shower development taking advantage of the fine segmentataion of the ATLAS calorimeters. The topological cluster formation starts from a seed cell with $|E_{cell}| > 4 \sigma$ above the noise. In a second step, neighbor cells that have an energy at least 2$\sigma$ above their mean noise are added to the cluster. Finally, all nearest-neighbor cells surrounding the clustered cells are added to the cluster, regardless of signal-to-noise ratio\footnote{Noise-supressed towers make use of the topological clusters algorithm~\cite{topoClusters} to select cells, i.e. only calorimeter cells that are included in topo-clusters are used.}. The position of the cluster is assigned as the energy-weighted centroid of all constituent cells (the weight used is the absolute cell energy).
+
+In Monte Carlo simulation, reference jets (``truth jets'') are formed from simulated stable particles using the jet algorithm utilized for the reconstructed jets. 
+
+\subsubsection{Jet calibration}
+
+The purpose of the jet energy calibration, or jet energy scale (JES), is to correct the measured electromagnetic scale (EM-scale) energy to the energy of the stable particles within a jet.  The jet energy calibration must account for the calorimeter non-compensation; the energy lost in inactive regions of the detector, such as in the cryostat walls or cabling; energy that escapes the calorimeters, such as that of highly-energetic particles that “punch-through” to the muon system; energy of cells that are not included in clusters, due to inefficiencies in the noise-suppression scheme; and energy of clusters not included in the final reconstructed jet, due to inefficiencies in the jet reconstruction algorithm. The muons and neutrinos that may be present within the jet are not expected to interact within the calorimeters, and are not included in this energy calibration.
+Due to the varying calorimeter coverage, detector technology, and amount of upstream inactive material, the calibration that must be applied to each jet to bring it to the hadronic scale varies with its $\eta$ position within the detector. 
+
+The jet energy is first reconstructed from the constituent cell energies at EM-scale. These cells have been calibrated to return the energy corresponding to electromagnetic showers in the calorimeter, based on test-beam injection of electrons and pions~\cite{Aharrouche2006601} and measurements of cosmic muons~\cite{Cooke:1071187} and the reconstruction of the $Z$ mass peak in $Z \rightarrow ee$ decays~\cite{Aad:2011mk}. The correction for the lower response to hadrons is based on the topology of the energy depositions observed in the calorimeter. 
+
+In the simplest case the measured jet energy is corrected, on average, using Monte Carlo simulations, as follows:
+%
+\begin{equation}
+E^{jet}_{calib} = E^{jet}_{meas} / \emph{F}_{calib}(E^{jet}_{meas}),   \mbox{with  }   E^{jet}_{meas} = E^{jet}_{EM} - \emph{O}(\mbox{NPV}),
+\end{equation}
+%
+where $E^{jet}_{EM}$ is the calorimeter energy measured at the electromagnetic scale, $E^{jet}_{calib}$ is the calibrated energy and $\emph{F}_{calib}$ is the calibration function that depends on the measured jet energy and is evaluated in small jet $\eta$ regions. The variable $ \emph{O}(NPV)$ denotes the correction for additional energy from multiple proton-proton interactions depending on the number of primary vertices (NPV).
+
+The simplest calibration scheme, the so called ``EM+JES'', applies the corrections as a function of the jet energy and pseudorapidity to jets reconstructed at the electromagnetic scale.  The additional energy due to multiple proton-proton collisions within the same bunch crossing (pile-up) is corrected before the hadronic energy scale is restored, such that the derivation of the jet energy scale calibration is factorised and does not depend on the number of additional interactions in the event. The EM+JES calibration scheme consists of three subsequent stops:
+
+\begin{itemize}
+\item
+Pile-up correction: An offset correction is applied in order to substract the additional average energy measured in the calorimeter due to multiple proton-proton interactions. This correction is derived from minimum bias data as a function of NPV, the jet pseudorapidity and the bunch spacing.
+\item
+Vertex correction: The jet four momentum is corrected such that the jet originates from the primary vertex of the interaction instead of the geometrical centre of the detector. 
+\item
+Jet energy and direction correction: The jet energy and direction are corrected using constants derived from the comparison of the kinematic observables of reconstructed jets and those from truth jets in the simulation.
+
+The final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet. 
+
+Other calibrations schemes are the global calorimeter cell weighting (GCW) calibration and the local cluster weighting (LCW) calibration.  The GCW scheme exploits the observation that electromagnetic showers in the calorimeter leave more compact energy depositions than hadronic showers with the same energy.  Energy corrections are derived for each cell within a jet.  The cell corrections account for all energy loses of a jet in the detector. Since these corrections are only applicable to jets and not to energy depositions, they are called ``global'' corrections.
+
+The LCW calibration method first classifies topo-clusters as either electromagnetic of hadronic, based on the measured energy density. Energy corrections are derived according to this classification from single charged and neutral pion Monte Carlo simulations. Dedicated corrections are derived for the effects of non-compensation, signal losses due to noise threshold effects, and energy lost in non-instrumented regions. Since the energy corrections are applied without reference to a jet definition they are called ``local'' corrections. Jets are then built from these calibrated clusters using a jet algorithm.  
+
+The final jet energy calibration (see equation above) can be applied to EM scale jets, with the resulting calibrated jets referred to as EM+JES, or to LCW (GCW) calibrated jets, with the resulting jets referred to as LCW+JES (GCW+JES) jets.
+
+A further jet calibration scheme called global sequential (GS) calibration, starts from jets calibrated with the EM+JES calibration and exploits the topology of the energy deposits in the calorimeter to characterise fluctuations in the jet particle content of the hadronic shower development.  Correcting for such fluctuations can improve the jet energy resolution. The correction uses several jet properties, and each correction is applied sequentially.
 
 
-In ATLAS, jets are reconstructed using two different size parameters: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. And the default jet algorithm is the anti-$kt$ algorithm~\cite{Asquith:1311867}. The effect of multiple simultaneous interactions on the reconstruction of jets is one of the primary factors that influence the decision on the jet algorithm, due to the expected level of pile-up in the LHC. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is too susceptible to this effect. On the contrary, the anti-$kt$ algorithm is the most stable after the introduction of pile-up.  
-
-
-%FROM DAVID'S
-%The jet constituents are uncalibrated; that is, the energy scale of the constituent is at the EM scale of the detector.
-The baseline calibration of the calorimeters only corrects the energy measured in the detector to the EM energy scale. In order to compensate for the difference between the energy measurement of purely EM objects (electrons and photons) and the energy of a hadronic jet, an additional jet calibration procedure must be applied.  The procedure used for the 2011 data...
-
-%FROM KIRSTEN'S
-%something on reconstruction efficiency??
-%The drop in efficiency at low pT is mainly due to jets that, as a result of jet energy resolution smearing, have energies below the 7 GeV threshold that is required by the ATLAS software in order to reconstruct jets.
-
-The jet energy is first reconstructed from the constituent cell energies at EM-scale. These
-cells have been calibrated to return the energy corresponding to electromagnetic showers
-in the calorimeter, based on test-beam injection of electrons and pions [69], measurements
-of cosmic muons [79], and reconstruction of the Z mass peak in Z → ee decays. Cells are
-combined to form clusters, as described in Section 4.2, which are by construction massless
-objects. The cluster four-momenta are then vectorially summed to yield the final jet four-
-momentum, with its energy at EM-scale.
-The purpose of the jet energy calibration, or jet energy scale, is to correct this mea-
-sured EM-scale energy to the energy of the particles within a jet.
-The jet energy calibration must account for energy lost in in-active regions of the de-
-tector, such as in the cryostat walls or cabling; energy that escapes the calorimeters, such
-as that of highly-energetic particles that “punch-through” to the muon system; energy of
-cells that are not included in clusters, due to inefficiencies in the noise-suppression scheme;
-and energy of clusters not included in the final reconstructed jet, due to inefficiencies in the
-jet reconstruction algorithm. The muons and neutrinos that may be present within the jet
-are not expected to interact within the calorimeters, and are not included in this energy
-calibration.
-Due to the varying calorimeter coverage, detector technology, and amount of upstream
-in-active material, the calibration that must be applied to each jet to bring it to the hadronic
-scale varies with its η position within the detector. 
-
-%The jet response is defined EM in Monte Carlo as R = Ejet /Etruth , where each reconstructed jet at EM-scale is matched to a truth jet within ∆R < 0.3. 
-The goal of the jet energy calibration is to bring the calibrated jet response to R = 1, flat
-across all η.
-
+For the 2011 data the recomended calibration schemes were the EM+JES and the LCW calibrations. The simple EM+JES calibration does not provide the best performance, but allows in the central detector region the most direct evaluation of the systematic uncertainties from the calorimeter response to single isolated hadron measured $in situ$ and in test-beams and from systematic variations in the Monte Carlo simulation.  For the LCW+JES calibration scheme the JES uncertainty is determined from $in situ$ techniques. For all calibration schemes, the JES uncertainty in the forward regions is derived from the uncertainty in the central region using the transverse momentum balance in events where only two jets are produced. 
 
 
 %-------------------------------------------------------------------

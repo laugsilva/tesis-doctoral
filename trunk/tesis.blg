@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Main/core.aux
+A level-1 auxiliary file: Introduction/reconstruction.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 541 of file tesis.bib
@@ -13,14 +13,13 @@ I was expecting a `,' or a `}'---line 556 of file tesis.bib
  :   collaboration = {D0 Collaboration},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 973 of file tesis.bib
- : @article{JESnote
- :                 ,
+Repeated entry---line 1408 of file tesis.bib
+ : @article{ATLAS-CONF-2010-091
+ :                             ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1418 of file tesis.bib
- :       
- :       title        = "{Performance of the ATLAS Secondary Vertex b-tagging Algorithm in 7 TeV Collision Data}",
-(Error may have been on previous line)
+Repeated entry---line 1416 of file tesis.bib
+ : @article{ATLAS-CONF-2010-042
+ :                             ,
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 1426 of file tesis.bib
  :       
@@ -42,52 +41,60 @@ I was expecting a `,' or a `}'---line 1454 of file tesis.bib
  :       title        = "{Performance of Jet Algorithms in the ATLAS Detector}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty author in Pythia_MC11tune
-Warning--empty journal in Perugia
+I was expecting a `,' or a `}'---line 1473 of file tesis.bib
+ : author = "M. Aharrouche and others"
+ :                                    ",
+I'm skipping whatever remains of this entry
+Warning--empty title in Asquith:1311867
+Warning--empty journal in Asquith:1311867
+Warning--empty year in Asquith:1311867
 Warning--empty journal in topoClusters
 Warning--there's a number but no volume in topoClusters
-Warning--empty journal in CSC
-Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
-while executing---line 944 of file unsrt.bst
-You've used 23 entries,
+Warning--empty title in Busato:1271710
+Warning--empty journal in Busato:1271710
+Warning--empty year in Busato:1271710
+Warning--empty title in ATLAS-CONF-2010-069
+Warning--empty journal in ATLAS-CONF-2010-069
+Warning--empty year in ATLAS-CONF-2010-069
+You've used 11 entries,
             1791 wiz_defined-function locations,
-            585 strings with 6820 characters,
-and the built_in function-call counts, 4098 in all, are:
-= -- 331
-> -- 205
-< -- 1
-+ -- 78
-- -- 55
-* -- 244
-:= -- 728
-add.period$ -- 68
-call.type$ -- 23
-change.case$ -- 23
+            497 strings with 5332 characters,
+and the built_in function-call counts, 1888 in all, are:
+= -- 126
+> -- 117
+< -- 0
++ -- 45
+- -- 34
+* -- 126
+:= -- 346
+add.period$ -- 27
+call.type$ -- 11
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 197
-empty$ -- 399
-format.name$ -- 55
-if$ -- 882
+cite$ -- 22
+duplicate$ -- 90
+empty$ -- 174
+format.name$ -- 34
+if$ -- 384
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 22
-newline$ -- 117
-num.names$ -- 22
-pop$ -- 45
+int.to.str$ -- 11
+missing$ -- 11
+newline$ -- 52
+num.names$ -- 11
+pop$ -- 42
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 76
+skip$ -- 34
 stack$ -- 0
-substring$ -- 144
-swap$ -- 20
-text.length$ -- 1
+substring$ -- 39
+swap$ -- 7
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 36
-width$ -- 25
-write$ -- 244
+warning$ -- 11
+while$ -- 13
+width$ -- 13
+write$ -- 99
 (There were 9 error messages)
