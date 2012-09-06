@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  4 SEP 2012 19:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  6 SEP 2012 12:34
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -60,7 +60,17 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@output=\toks15
 \AP@partial=\box26
 \AP@footins=\box27
-) (./tesis.aux
+)
+(/usr/share/texmf-texlive/tex/latex/fundus/calligra.sty
+Package: calligra 1996/07/18 v1.8 LaTeX package calligra
+)
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)) (./tesis.aux
 (./Introduction/reconstruction.aux
 
 LaTeX Warning: Label `sec:ObjSelection' multiply defined.
@@ -68,18 +78,18 @@ LaTeX Warning: Label `sec:ObjSelection' multiply defined.
 ))
 \openout1 = `tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
@@ -94,30 +104,30 @@ LaTeX Font Info:    ... okay on input line 43.
 \everyMPtoPDFconversion=\toks17
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 45.
+(Font)              <20.74> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 45.
+(Font)              <14.4> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 45.
+(Font)              <12> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 45.
+(Font)              <7> on input line 49.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<logo_FCEN.pdf, id=8, 108.405pt x 108.405pt>
+<logo_FCEN.pdf, id=9, 108.405pt x 108.405pt>
 File: logo_FCEN.pdf Graphic file (type pdf)
  <use logo_FCEN.pdf>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 78.
+(Font)              <8> on input line 82.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 78.
+(Font)              <6> on input line 82.
  [1 <./logo_FCEN.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 117--122
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--122
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
 
  []
 
@@ -132,80 +142,110 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--122
 
  (./Introduction/reconstruction.tex
 Chapter 1.
+! Undefined control sequence.
+<argument> ...pter }Event reconstruction and $\bm 
+                                                  b$-Tagging }{\thepage }}
+l.7 ...{Event reconstruction and $\bm b$-Tagging }
+                                                  \label{ch:reco}
+? 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <24.88> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 7.
-[2
-
-
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 23.
- [3]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
- [4]
 ! Undefined control sequence.
 <recently read> \bm 
                     
-l.49 \section{ $\bm b$-jet Tagging}
+l.7 ...{Event reconstruction and $\bm b$-Tagging }
+                                                  \label{ch:reco}
+? 
+[2
+
+
+] [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 23.
+ [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+ [6]
+[7]
+Overfull \hbox (5.93811pt too wide) in paragraph at lines 82--83
+[]\T1/cmr/m/n/12 For the 2011 data the re-comended cal-i-bra-tion schemes were 
+the EM+JES
+ []
+
+[8]
+! Undefined control sequence.
+<recently read> \bm 
+                    
+l.86 \section{ $\bm b$-jet Tagging}
                                    \label{sec:btagging}
 ? 
 ! Undefined control sequence.
 <argument> ...ame thesection\endcsname }\fi  $\bm 
                                                   b$-jet Tagging}{\thepage }}
-l.49 \section{ $\bm b$-jet Tagging}
+l.86 \section{ $\bm b$-jet Tagging}
                                    \label{sec:btagging}
 ? 
-[5] [6] [7]) [8] (./tesis.bbl
-Underfull \hbox (badness 1097) in paragraph at lines 7--10
-\OT1/cmr/m/n/12 Per-for-mance.  (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-
- []
-
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-[9
+[9] [10] [11]) [12] [13] (./tesis.bbl [14
 
 
-]) [10] (./tesis.aux (./Introduction/reconstruction.aux))
+])
+
+! LaTeX Error: \begin{itemize} on input line 44 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188 \end{document}
+                    
+? 
+[15] (./tesis.aux (./Introduction/reconstruction.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 44 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 1011 strings out of 493848
- 12782 string characters out of 1152823
- 64818 words of memory out of 3000000
- 4316 multiletter control sequences out of 15000+50000
- 12214 words of font info for 42 fonts, out of 3000000 for 9000
+ 1272 strings out of 493848
+ 15117 string characters out of 1152823
+ 65328 words of memory out of 3000000
+ 4553 multiletter control sequences out of 15000+50000
+ 21508 words of font info for 50 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,8n,19p,1346b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb>
-Output written on tesis.pdf (14 pages, 210702 bytes).
+ 27i,8n,21p,1346b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-t
+exlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb
+>
+Output written on tesis.pdf (19 pages, 363302 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
