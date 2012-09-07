@@ -45,6 +45,11 @@ I was expecting a `,' or a `}'---line 1473 of file tesis.bib
  : author = "M. Aharrouche and others"
  :                                    ",
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1509 of file tesis.bib
+ :        
+ :        title        = "{ATLAS Calorimeter Response to Single Isolated Hadrons and Estimation of the Calorimeter Jet Scale Uncertainty}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty title in Asquith:1311867
 Warning--empty journal in Asquith:1311867
 Warning--empty year in Asquith:1311867
@@ -53,48 +58,51 @@ Warning--empty journal in Busato:1271710
 Warning--empty year in Busato:1271710
 Warning--empty journal in topoClusters
 Warning--there's a number but no volume in topoClusters
+Warning--empty title in ATLAS-CONF-2011-028
+Warning--empty journal in ATLAS-CONF-2011-028
+Warning--empty year in ATLAS-CONF-2011-028
 Warning--empty title in ATLAS-CONF-2010-069
 Warning--empty journal in ATLAS-CONF-2010-069
 Warning--empty year in ATLAS-CONF-2010-069
-You've used 11 entries,
+You've used 14 entries,
             1791 wiz_defined-function locations,
-            497 strings with 5332 characters,
-and the built_in function-call counts, 1888 in all, are:
-= -- 126
-> -- 117
+            514 strings with 5640 characters,
+and the built_in function-call counts, 2443 in all, are:
+= -- 172
+> -- 137
 < -- 0
-+ -- 45
-- -- 34
-* -- 126
-:= -- 346
-add.period$ -- 27
-call.type$ -- 11
-change.case$ -- 8
++ -- 53
+- -- 39
+* -- 162
+:= -- 436
+add.period$ -- 34
+call.type$ -- 14
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 90
-empty$ -- 174
-format.name$ -- 34
-if$ -- 384
+cite$ -- 28
+duplicate$ -- 116
+empty$ -- 233
+format.name$ -- 39
+if$ -- 505
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 11
-newline$ -- 52
-num.names$ -- 11
-pop$ -- 42
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 65
+num.names$ -- 14
+pop$ -- 51
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 34
+skip$ -- 45
 stack$ -- 0
-substring$ -- 39
-swap$ -- 7
+substring$ -- 78
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 11
-while$ -- 13
-width$ -- 13
-write$ -- 99
-(There were 9 error messages)
+warning$ -- 14
+while$ -- 18
+width$ -- 16
+write$ -- 126
+(There were 10 error messages)

@@ -1,10 +1,11 @@
 \contentsline {chapter}{\numberline {1}Event reconstruction and $b$-Tagging }{2}
 \contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{3}
 \contentsline {subsubsection}{Jet calibration}{4}
-\contentsline {section}{\numberline {1.2} $b$-jet Tagging}{9}
-\contentsline {subsection}{\numberline {1.2.1}Primary vertex reconstruction}{10}
-\contentsline {subsection}{\numberline {1.2.2}Tracks selection and properties}{11}
-\contentsline {subsubsection}{Track quality cuts}{11}
-\contentsline {subsubsection}{Track association to jets}{12}
-\contentsline {subsubsection}{Impact parameters}{12}
-\contentsline {subsection}{\numberline {1.2.3}$b$-tagging algorithms}{13}
+\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{9}
+\contentsline {section}{\numberline {1.2} $b$-jet Tagging}{10}
+\contentsline {subsection}{\numberline {1.2.1}Primary vertex reconstruction}{12}
+\contentsline {subsection}{\numberline {1.2.2}Tracks selection and properties}{12}
+\contentsline {subsubsection}{Track quality cuts}{12}
+\contentsline {subsubsection}{Track association to jets}{13}
+\contentsline {subsubsection}{Impact parameters}{13}
+\contentsline {subsection}{\numberline {1.2.3}$b$-tagging algorithms}{14}
