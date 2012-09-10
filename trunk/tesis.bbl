@@ -63,29 +63,11 @@ M.~G. Bowler.
   1981.
 \newblock 10.1007/BF01574001.
 
-\bibitem{ATLAS-CONF-2011-102}
-{ATLAS Collaboration}.
-\newblock {Commissioning of the ATLAS high-performance $b$-tagging algorithms
-  in the 7 TeV collision data}.
-\newblock {\em ATLAS-CONF-2011-102}, 2011.
-
-\bibitem{ATLAS-CONF-2011-089}
-{ATLAS Collaboration}.
-\newblock {Calibrating the b-Tag Efficiency and Mistag Rate in 35 pb$^{-1}$ of
-  Data with the ATLAS Detector}.
-\newblock {\em ATLAS-CONF-2011-089}, 2011.
-
-\bibitem{ATLAS-CONF-2010-091}
-{ATLAS Collaboration}.
-\newblock {Performance of Impact Parameter-Based $b$-tagging Algorithms with
-  the ATLAS Detector using Proton-Proton Collisions at $\sqrt{s}$ = 7 TeV}.
-\newblock {\em ATLAS-CONF-2010-091}, 2010.
-
-\bibitem{ATLAS-CONF-2010-042}
-{ATLAS Collaboration}.
-\newblock {Performance of the ATLAS Secondary Vertex $b$-tagging Algorithm in 7
-  TeV Collision Data}.
-\newblock {\em ATLAS-CONF-2010-042}, 2010.
+\bibitem{Cornelissen:1020106}
+T~Cornelissen, M~Elsing, S~Fleischmann, W~Liebig, E~Moyse, and A~Salzburger.
+\newblock {Concepts, Design and Implementation of the ATLAS New Tracking
+  (NEWT)}.
+\newblock {\em {ATL-SOFT-PUB-2007-007. ATL-COM-SOFT-2007-002}}, 2007.
 
 \bibitem{ATLAS-CONF-2010-069}
 {ATLAS Collaboration}.
