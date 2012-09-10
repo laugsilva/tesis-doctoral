@@ -101,19 +101,20 @@ The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertai
 \section{Reconstruction of charged particle tracks}\label{sec:trackreco}
 %------------------------------------------------------------------------
 
-The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{sec:atlasID} of Chapter~\ref{ch:lhc_atlas}. The tracking algorithm is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main stepts of the tracking algorithm are the following:
+The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{sec:atlasID} of Chapter~\ref{ch:lhc_atlas}. The tracking algorithm is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main steps of the tracking algorithm are the following:
 
 \begin{itemize}
 \item
 Firstly, the raw data from the pixel and SCT detectors are converted into clusters, while the TRT raw timing information is turned into calibrated drift circles. The SCT clusters need to be further transformed into space-points, by combining the clusters information from opposite sides of the SCT module (stereo strip layers).
 \item
 In a second stage, the track-finding is performed, in which the pattern recognition and a global $\chi^2$ minimization procedure is implemented as a default.
+\end{itemize}
 
-In the track-finding stage, track seeds are found in the first three pixel layers and in the first SCT layer. These are extended throughout the SCT to form track candidates and a first track fit is performed. Afterwards, ambiguities in the track candidates found in the silicon detectors are resolved, and tracks are extended into the TRT (which covers up to $|eta|<2.$). The final track candidate is refitted with the full information from the three tracking subdetectors. The baseline algorithm is designed for the efficient reconstruction of primary charged particles. Primary particles are defined as particles with a meanlife of greater than $3 \times 10^{-11}$~s directly produced in a proton-proton interaction, or from the subsequent decays or interactions of particles with lifetime shorter than $3 \times 10^{-11}$~s. The tracks reconstructed in this stage are required to have $\pt> 400$~MeV.
+In the track-finding stage, track seeds are found in the first three pixel layers and in the first SCT layer. These are extended throughout the SCT to form track candidates and a first track fit is performed. Afterwards, ambiguities in the track candidates found in the silicon detectors are resolved, and tracks are extended into the TRT (which covers up to $|\eta|<2.$). The final track candidate is refitted with the full information from the three tracking subdetectors. The baseline algorithm is designed for the efficient reconstruction of primary charged particles. Primary particles are defined as particles with a meanlife of greater than $3 \times 10^{-11}$~s directly produced in a proton-proton interaction, or from the subsequent decays or interactions of particles with lifetime shorter than $3 \times 10^{-11}$~s. The tracks reconstructed in this stage are required to have $\pt> 400$~MeV.
 
 In a complementary stage, a track search starts from segments reconstructed in the TRT and extends them inwards by adding silicon hits, which is referred to as ``back-tracking''. This recovers tracks for which the first hits in the pixel layers are missing, e.g. because they originate from secondaries, which are produced in the interaction of primaries.
 
-The reconstructed track trajectory is usually defined at its closest point to the interaction region on the transverse plane by its impact parameters in the transverse plane and in the longitudinal direction, respectively called $d_0$ and $z_0$, and by its momentum, typically expressed in azimuthal angle $\phi$, polar angle $\theta$ and inverse momentum $1/p$. 
+The final reconstructed track trajectory is usually defined at its closest point to the interaction region on the transverse plane by its impact parameters in the transverse plane and in the longitudinal direction, respectively called $d_0$ and $z_0$\footnote{Stricktly speaking the impact parameter is $|z_0|sin\theta$, where $\theta$ is the polar angle of the track.}., and by its momentum, typically expressed in azimuthal angle $\phi$, polar angle $\theta$ and inverse momentum $1/p$. 
 
  The track reconstruction efficiency is defined as the fraction of primary particles with $\pt> 400$~MeV and $|\eta|<2.5$ matched to a reconstructed track. The reconstruction efficiency for primary tracks with transverse momentum above 1~GeV and central $\eta$ is above 80\%, reaching values below 70\% for tracks at the edge of the Inner Detector acceptance. %REFERENCIAS?
 The dense environment of a jet decreases the track reconstruction efficiency and increases the fake rate. This is caused by the ocurrence of shared hits between different tracks, which makes the pattern recognition and track fitting tasks more difficult.
@@ -121,7 +122,7 @@ The dense environment of a jet decreases the track reconstruction efficiency and
 The relative transverse momentum scale and resolution of tracks is defined as the Gaussian mean and width of
 %
 \begin{equation}
-\pt^{MC} \times (1/\pt^{MC}  - 1/\pt^{reco} = 1 - \frac{\pt^{MC}}{\pt^{reco}}
+\pt^{MC} \times (1/\pt^{MC}  - 1/\pt^{reco}) = 1 - \frac{\pt^{MC}}{\pt^{reco}}
 \end{equation}
 
 where $\pt^{MC,reco}$, refers to the track's transverse momentum given by simulation truth (MC) or by reconstruction (reco). It should be noted that the ($1/\pt$) resolution is used instead of $\sigma(\pt)$ as the Inner Detector measures the sagitta and not directly the transverse momentum\footnote{The relation between sagitta $s$ and transverse momentum ($\pt$) is given by $s \sim  1/\pt$. }.  However, the resolution obtained from the equation above is the relative transverse momentum resolution,  $\sigma(\pt) / \pt$. At low $\pt$ the multiple scattering dominates the resolution, and at high momenta, the resolution is limited by the bending power of the solenoid field and by the instrinsic detector resolution.  For a central track with $\pt=$5~GeV %, which is typical for $b$-tagging, 
@@ -137,65 +138,66 @@ Primary vertices are reconstructed using an iterative vertex finding algorithm~\
 The parameters of the beam spot are used both during the finding to preselect compatible tracks and during the fitting step to constrain the vertex fit.
 
 
-The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-quark jets identification since it defines the reference point with respect to which impact parameters and vertex displacements are measured. 
+The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-quark jets identification since it defines the reference point with respect to which impact parameters and vertex displacements are measured.  The typical vertexing resolution in $z$ is $O$($100 \mu$m).
 
 
+To ensure a good resolution on the vertex position, the primary vertex
+must be reconstructed from at least five tracks. The choice of the primary vertex is less trivial in the presence of minimum-bias events from pile-up:
+the primary vertex from a pile-up event may be mistakenly used as the signal vertex, or a fake primary vertex built from tracks from two different vertices may be reconstructed. The current strategy is to choose the primary vertex candidate that maximizes $\sum_{tracks} \pt^2$.
 
 %-------------------------------------------------------------------
 \section{ ${\bm b}$-jet Tagging}\label{sec:btagging}
 %------------------------------------------------------------------------
 
-
 %From Gbb note
 %Jets are classified as $b$-quark candidates by the ATLAS MV1 $b$-tagging algorithm, based on a neural network that combines the information from three high-performance taggers: IP3D, SV1 and JetFitter \cite{ATLAS-CONF-2011-102}.  These three tagging algorithms use a likelihood ratio technique in which input variables are compared to smoothed normalized distributions for both the $b$- and background (light- or in some cases $c$-jet) hypotheses, obtained from Monte Carlo simulation.  The IP3D tagger takes advantage of the signed transverse and longitudinal impact parameter significances. The SV1 tagger reconstructs an inclusive vertex formed by the decay products of the $b$-hadron and relies on the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet and the number of two-track vertices. The JetFitter tagger exploits the topology of the primary, $b$- and $c$-vertices and combines vertex variables with the flight length significance.  The $b$-tagging performance is determined using a simulated $t\bar{t}$ sample and is calibrated using experimental data with jets containing muons and with a sample of $t\bar{t}$ events~\cite{ATLAS-CONF-2011-089}.
 
 
+The ability to identify jets originating from $bottom$-quarks (denoted as $b$-tagging in the following) is important for the high-$\pt$ physics program of a general-purpose experiment at the LHC such as ATLAS since many interesting physics processes contain $b$-quarks in the final, state while the most abundant backgrounds contain mostly up, down and strange quark or gluon jets or, in a smaller fraction of cases, charm quark jets. The aim of $b$-tagging is therefore to identify the $b$-quark jets with high efficiency, while rejecting most of the background contamination from jets originating from the fragmentation of light ($u$, $d$, and $s$) quarks, gluons and $c$-quarks.
+
+A $b$-quark, once produced, fragments necessarily into a $b$-flavoured hadron, $b$-hadron in the following. In most of the cases ($\approx$87\%), first an excited $b$-hadron, like a $B^{*}$ or a $B^{**}$, which decays inmediately, strongly or electromagnetically, into a ground state $b$-hadron plus one or more further particles; while in the remaining cases, a ground state $b$-hadron is produced directly.  One is only interested in the transition from a $b$-quark into the final state $b$-hadron, since the typical timescale for electromagnetic or strong interactions is so small that the  $B^{*}$, $B^{**}$ decay vertices are not significantly displaced with respect to the primary vertex.   In most of the cases ($\approx$ 91\%) a $B$-meson is produced out of the fragmentation of an original $b$-quark (40\% $B^+$, 40\% $B^0$ and 11\% $B^0_s$). The rest are $b$-baryons.
+
+Due to the $b$-quark fragmentation function being very hard, most of the original $b$-quark energy is transmitted to the final $b$-hadron. This fraction is for example 70\% for $b$-quarks with a momentum of $\approx$45~GeV. This property can be exploited during $b$-tagging, since the fragmentation for light quarks into light hadrons or $c$-quarks into $c$-hadrons is softer.
+
+Any of the finally produced $b$-hadrons decay through weak interactions and therefore have a significant lifetime, which is on average, for all $b$-hadrons considered, $(1.568\pm0.009) \times 10^{-12}$~s.  The effective distance travelled in the detector by the $b$-hadron before decaying depends on the $b$-hadron momentum, which enters the relativistic boost factor $\beta\gamma$. A $b$-quark with momentum of 50~GeV will travel around 3~mm, which is a visible flight length in the detector. Due to the combination of the $b$-hadron lifetime and relatively high mass ($m_B \approx 5.28$~GeV), which results in a non-negligible decay angle of the $b$-hadron decay products %PUEDO EXPLICAR ESTO?
+with respect to the $b$-hadron flight direction, the charged particles produced at the decay vertex will be on average significantly displaced with respect to the primary vertex position.
+
+This is the main signature which is exploited by the $lifetime$ based $b$-tagging algorithms, which are based either on the presence of significantly displaced tracks, as in impact parameter based $b$-tagging algorithms, or on the explicit reconstruction of the $b$-hadron decay vertex, as in secondary vertex based $b$-tagging algorithms.
+
+
+$b$-hadrons decay preferably into a $c$-hadron plus additional particles\footnote{Weak decays are governed by the CKM matrix mechanism, and $|V_{cb}|^2 >> |V_{ub}|^2$.}. The lifetime of a $c$-hadron is not much lower than for $b$-hadrons, but in general the momentum of the $c$-hadron will be lower than the original $b$-hadron momentum. However, the $c$-hadron can still travel for a significant path in the detector and form with its decay producs a visible $tertiary$ vertex. 
+%MORE ON C-HADRONS HERE OR LATER??
+%There are several strategies to deal with tertiary vertices from $c$-hadron decays. In the case of $b$-tagging algorithms based purely on impact parameter information from charged particle tracks, the presence of tracks with a more significant displacement  does not require an explicit strategy: these tracks will in general improve the $b$-tagging performance. In the case of a secondary vertex based $b$-tagging algorithm, the more conventional approach is to tray to find a single inclusive secondary vertex, which will result in a weighted average of the $b$- and one or more $c$-hadron vertex posotions. This approach is reasonable, since in most of the cases either the resolution of the tracks or the decay vertex multiplicities at such vertices do not allow to separate them efficienctly. An alternative approach instead tries to resolve the $b$- and $c$-hadron decay vertices.
+
+Another property which is usually exploited by $b$-tagging is the fraction of $b$- and $c$-hadron decays into leptons: a lepton from the semi-leptonic decay of a $b$-hadron ($b \rightarrow l$) or from the subsequent $c$-hadron decay ($b \rightarrow c \rightarrow l$) is produced in a $b$-quark in $\approx$21\% of the cases. This is valid both in case the lepton is a an electron or a muon, which brings the overall fraction of $b$-quarks ending up into a lepton to $\approx$42\%. Due to the $b$- or $c$-hadron mass, the lepton will be emitted with an average transverse momentum comparable with $m_{b-had}$ or $m_{c-had}$. By identifying either an electron or a muon originating from a jet and by requiring it ti have sufficiently high $\pt$ with respect to the jet axis, it is possible to identify $b$-jets.
 
 
 
+\subsubsection{Association of tracks to jets}
+
+The $b$-tagging performance relies criticaly on the accurate reconstruction of the charged tracks in the ATLAS Inner Detector.  The actual tagging is performed on the sub-set of tracks in the event that are associated to jets.  The $b$-tagging algorithm takes as input the three-momenta of the jets, reconstructed by a jet algorithm, and uses the jet direction to associate the charged particles tracks to the jet. Since the 2 Tesla solenoidal magnetic field of the ATLAS Inner Detector bends charged particles in the transverse plane, in particular in the case of low $\pt$ tracks, the tracks are best matched to the jet by using the direction of their momenta at the point of closest approach to the interaction region.  The criterion for associating charged particle tracks to jets is simply:
+%
+\begin{equation}
+\Delta R(jet, track) < \Delta R_{cut}
+\end{equation}
+%
+where usually the value of $\Delta R_{cut} = R$ is used; with $R$, the distance parameter of the jet algorithm used for jet reconstruction.
+
+After the tracks are associated to the jets, they are filtered in order to remove tracks with bad quality or which can easily be erroneously identified as secondary tracks from $b$-decays. These include tracks originating from decays of even longer lived particles, like $K^0_s$ (c$\tau \approx$2.69~cm) and $Lambda$ baryons (c$\tau \approx$7.89~cm); from electromagnetic interactions in the detector material, like conversions in electron-positron pairs ($\gamma \rightarrow e^+ e^-$); or from hadronic interactions with the detector material, which result in two or more tracks with high impact parameter.
+
+In order to reject badly reconstructed tracks, quality cuts are applied. Requirements are imposed on the number of silicon hits, the track fit quality,  the track momentum, and the transverse and longitudinal impact parameters. The track selection needs to be particularly tight in the case of the impact parameter based $b$-tagging algorithms, since in that case the explicit presence of a vertex is not required, so that the influence of badly reconstructed tracks or tracks from long lived particles does directly limit the performance. The minimum track $\pt$ required is of 1~GeV in the case of the impact parameter based algorithms and of 400-500~MeV otherwise. The transverse and longitudinal
+impact parameters must fullfill  $|d_0|<$1~mm (3.5~mm) and $|z_0| \sin \theta < 1.5$~mm (none) in the case of the algorithms relying on the impact parameters of tracks (on the reconstruction of secondary vertices).  The minimum number of precision hits required is typically of 7 hits, for both approaches. 
 
 
-
-%From https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2011-102/
-
-The ability to identify jets containing $b$-hadrons is important for the high-$\pt$ physics program of a general-purpose experiment at the LHC such as ATLAS. Two robust $b$-tagging algorithms taking advantage of the impact parameter of tracks (JetProb) or reconstructing secondary vertices (SV0) have been quickly commisssioned~\cite{ATLAS-CONF-2010-091}\cite{ATLAS-CONF-2010-042} and used for several analyses of the 2012 and 2011 data (REFERENCIAS).
-Building on this success, more advanced $b$-tagging algorithms have been commissioned with the 2011 data. All these algorithms are based on Monte Carlo predictions for the signal ($b$-jet) or background (light- or in some cases $c$-jet) hypotheses.
-
-The $b$-tagging performance relies criticaly on the accurate reconstruction of the charged tracks in the ATLAS Inner Detector. 
-
-
-
-%\subsection{Pile-up}
-
-Out-of-time pile-up events ($pp$ collisions from neighboring bunches in the same train) also generate calorimeter activity and consequently extra jets. However, given the time resolution of the Inner Detector, and since the $b$-tagging algorithms reject jets with no track associtaed to them, the contribution of the out-of-time pile-up for this analysis is expected to be negligible.
-
-
-
-
-%------------------------------------------------------------------------
-%\subsection{Tracks selection and properties}\label{sec:ObjSelection}
-%------------------------------------------------------------------------
-
-\subsubsection{Track quality cuts}
-
-
-The track selection for $b$-tagging is designed to select well-measured tracks rejecting fake tracks and tracks from long-lived particles ($K_s$, $\Lambda$, and other hyperon decays, generically referred to as $V^0$ decays) and material description.
-
-
-
-
-\subsubsection{Track association to jets}
-
-The actual tagging is performed on the sub-set of tracks in the event that are associated to the jets. Tracks are associtaed to the jets with a spatial matching in $\Delta R_{(jet,track)}$. The association cut $\Delta R$ is varied as a function of the jet $\pt$ in order to have a smaller cone for high-$pt$ jets which are more collimated.
-
-
-
-
-\subsubsection{Impact parameters}
-The most critical track parameters for $b$-tagging are the transverse and longitudinal impact parameters. The transverse parameter $d_0$ is the distance of closest approach of the track to the primary vertex point in the $r\phi$ projection. The $z$ coordinate of the track at this point of closest approach is referred to as $z_0$. It is often called the longitudinal impact parameter\footnote{Stricktly speaking the impact parameter is $|z_0|sin\theta$, where $\theta$ is the polar angle of the track.}. On the basis that the decay point of the $b$-hadron must lie along its flight path, the impact parameter is signed to further discriminate the tracks from $b$-hadron decays from tracks originating from the primary vertex. The sign is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. Therefore, tracks from $b/c$ hadron decays tend to have positive sign.
+On the basis that the decay point of the $b$-hadron must lie along its flight path, the impact parameter is signed to further discriminate the tracks from $b$-hadron decays from tracks originating from the primary vertex. The sign is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. Therefore, tracks from $b/c$ hadron decays tend to have positive sign.
 
 The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters.
 
 \subsection{$b$-tagging algorithms}
 
 %A first stag
+
+
+
+%\subsection{Pile-up}
+%Out-of-time pile-up events ($pp$ collisions from neighboring bunches in the same train) also generate calorimeter activity and consequently extra jets. However, given the time resolution of the Inner Detector, and since the $b$-tagging algorithms reject jets with no track associtaed to them, the contribution of the out-of-time pile-up for this analysis is expected to be negligible.
