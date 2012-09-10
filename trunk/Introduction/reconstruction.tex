@@ -7,7 +7,7 @@
 \chapter{Event reconstruction and $\bm b$-Tagging }\label{ch:reco}
 
 
-The event reconstruction software, which in ATLAS is implemented in the software framework ATHENA, process the events, starting from the raw data obtained from the various sub-detectors (energy deposits and hits), processing them in many different stages and finally interpreting them as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
+The event reconstruction software, which in ATLAS is implemented in the software framework ATHENA, process the events starting from the raw data obtained from the various sub-detectors (energy deposits and hits), processing them in many different stages and finally interpreting them as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
 In this chapter the reconstruction of these objects is briefly described together with the algorithms for the identification of $b$-quark jets.  These algorithms are mainly based on the reconstruction of the primary interaction vertex, on the reconstruction of charged particles in the Inner Detector and on the reconstruction of jets in the calorimeter.   
 
 %------------------------------------------------------------------------
@@ -26,7 +26,7 @@ In Monte Carlo simulation, reference jets (``truth jets'') are formed from simul
 
 \subsubsection{Jet calibration}
 
-The purpose of the jet energy calibration, or jet energy scale (JES), is to correct the measured electromagnetic scale (EM scale) energy to the energy of the stable particles within a jet.  The jet energy calibration must account then for the calorimeter non-compensation; the energy lost in inactive regions of the detector, such as in the cryostat walls or cabling; energy that escapes the calorimeters, such as that of highly-energetic particles that “punch-through” to the muon system; energy of cells that are not included in clusters, due to inefficiencies in the noise-suppression scheme; and energy of clusters not included in the final reconstructed jet, due to inefficiencies in the jet reconstruction algorithm. The muons and neutrinos that may be present within the jet are not expected to interact within the calorimeters, and are not included in this energy calibration.
+The purpose of the jet energy calibration, or jet energy scale (JES), is to correct the measured electromagnetic scale (EM scale) energy to the energy of the stable particles within a jet.  The jet energy calibration must account then for the calorimeter non-compensation; the energy lost in inactive regions of the detector, such as in the cryostat walls or cabling; energy that escapes the calorimeters, such as that of highly-energetic particles that ``punch-through'' to the muon system; energy of cells that are not included in clusters, due to inefficiencies in the noise-suppression scheme; and energy of clusters not included in the final reconstructed jet, due to inefficiencies in the jet reconstruction algorithm. The muons and neutrinos that may be present within the jet are not expected to interact within the calorimeters, and are not included in this energy calibration.
 Due to the varying calorimeter coverage, detector technology, and amount of upstream inactive material, the calibration that must be applied to each jet to bring it to the hadronic scale varies with its $\eta$ position within the detector. 
 
 The jet energy is first reconstructed from the constituent cell energies at EM scale. These cells have been calibrated to return the energy corresponding to electromagnetic showers in the calorimeter, based on test-beam injection of electrons and pions~\cite{Aharrouche2006601},  measurements of cosmic muons~\cite{Cooke:1071187} and the reconstruction of the $Z$ mass peak in $Z \rightarrow ee$ decays~\cite{Aad:2011mk}. The correction for the lower response to hadrons is based on the topology of the energy depositions observed in the calorimeter. 
@@ -39,7 +39,7 @@ E^{jet}_{calib} = E^{jet}_{meas} /F_{calib}(E^{jet}_{meas}),   \mbox{with  }   E
 %
 where $E^{jet}_{EM}$ is the calorimeter energy measured at the electromagnetic scale, $E^{jet}_{calib}$ is the calibrated energy and $\emph{F}_{calib}$ is the calibration function that depends on the measured jet energy and is evaluated in small jet $\eta$ regions. The variable $ O(NPV)$ denotes the correction for additional energy from multiple proton-proton interactions depending on the number of primary vertices (NPV).
 
-The simplest calibration scheme and the one used in for thesis is the so called ``EM+JES''. This calibration applies the corrections as a function of the jet energy and pseudorapidity to jets reconstructed at the electromagnetic scale.  The additional energy due to multiple proton-proton collisions within the same bunch crossing (pile-up) is corrected before the hadronic energy scale is restored, such that the derivation of the jet energy scale calibration is factorised and does not depend on the number of additional interactions in the event. The EM+JES calibration scheme consists of three subsequent stops:
+The simplest calibration scheme and the one used in this thesis is the so called ``EM+JES''. This calibration applies the corrections as a function of the jet energy and pseudorapidity to jets reconstructed at the electromagnetic scale.  The additional energy due to multiple proton-proton collisions within the same bunch crossing (pile-up) is corrected before the hadronic energy scale is restored, such that the derivation of the jet energy scale calibration is factorised and does not depend on the number of additional interactions in the event. The EM+JES calibration scheme consists of three subsequent stops:
 
 \begin{itemize}
 \item
@@ -49,7 +49,7 @@ Vertex correction: The jet four momentum is corrected such that the jet originat
 \item
 Jet energy and direction correction: The jet energy and direction are corrected using constants derived from the comparison of the kinematic observables of reconstructed jets and those from truth jets in the simulation.
 
-The final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet.  The EM scale response is written as,
+In the final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet.  The EM scale response is written as,
 %
 \begin{equation}
 R^{jet}_{EM} = E^{jet}_{EM} / E^{jet}_{truth}
@@ -85,7 +85,7 @@ For the 2011 data the recomended calibration schemes were the EM+JES and the LCW
 
 \subsubsection{Jet energy scale uncertainties for the EM+JES scheme}
 
-For many physics analyses, the uncertainty on the JES constitutes the dominant systematic uncertainty because of its tendency to shift jets in and out of analysis selections due to the steeply falling jet $\pt$ spectrum. The uncertainty on the EM+JES scale  is determined primarily by six factors:  varying the physics models for hadronization and parameters of the Monte Carlo generators, evaluating the baseline calorimeter response to single particles, comparing multiple models for the detector simulation of hadronic showers, assesing the calibration scales as a function of pseudorapidity, and by adjusting the JES calibration methods itself.  The final JES uncertainty in the central region, $|\eta| < 0.8$, is determined from the maximum deviation in response observed with respect to the response in the nominal sample.  For the more forward region, the so called ``$\eta$-intercalibration contribution is estimated. This is a procedure that uses direct di-jet balance measurements in two-jet events to measure the relative energy scale of jets in the more forward regions compared to jets in a reference region. The technique exploits the fact that these jets are expected to have equal $\pt$ due to transverse momentum conservation. Figure~\ref{fig:JESuncertainty}  shows the final fractional jet energy scale uncertainty and its individual contributions as a function of $\pt$ for three selected $\eta$ regions. The JES uncertainty for anti-$kt$ jets with $R = 0.4$ is between $\approx$4\% (8\%, 14\%) at low jet $\pt$ and $\approx$2.5\%-3\% (2.5\%-3.5\%, 5\%) for jets with $\pt > 60$~GeV in the centrak (endcap, forward) region.
+For many physics analyses, the uncertainty on the JES constitutes the dominant systematic uncertainty because of its tendency to shift jets in and out of analysis selections due to the steeply falling jet $\pt$ spectrum. The uncertainty on the EM+JES scale  is determined primarily by six factors:  varying the physics models for hadronization and parameters of the Monte Carlo generators, evaluating the baseline calorimeter response to single particles, comparing multiple models for the detector simulation of hadronic showers, assesing the calibration scales as a function of pseudorapidity, and by adjusting the JES calibration methods itself.  The final JES uncertainty in the central region, $|\eta| < 0.8$, is determined from the maximum deviation in response observed with respect to the response in the nominal sample.  For the more forward region, the so called ``$\eta$-intercalibration'' contribution is estimated. This is a procedure that uses direct di-jet balance measurements in two-jet events to measure the relative energy scale of jets in the more forward regions compared to jets in a reference region. The technique exploits the fact that these jets are expected to have equal $\pt$ due to transverse momentum conservation. Figure~\ref{fig:JESuncertainty}  shows the final fractional jet energy scale uncertainty and its individual contributions as a function of $\pt$ for three selected $\eta$ regions. The JES uncertainty for anti-$kt$ jets with $R = 0.4$ is between $\approx$4\% (8\%, 14\%) at low jet $\pt$ and $\approx$2.5\%-3\% (2.5\%-3.5\%, 5\%) for jets with $\pt > 60$~GeV in the central (endcap, forward) region.
 
 In addition to the tests above, \emph{in situ} tests of the JES using direct $\gamma$-jet balance, multi-jet balance, and track-jets indicate that the uncertainties in Fig.~\ref{fig:JESuncertainty} reflect accurately the true uncertainties in the JES.  
 
@@ -94,18 +94,65 @@ In the case of jets induced by bottom quarks ($b$-jets), the calorimeter respons
 
 The JES uncertainty arising from the modelling of the $b$-quark fragmentation can be determined from systematics variations of the Monte Carlo simulation. The fragmentation function is used to estimate the momentum carried by the $B$-hadron with respect to that of the $b$-quark after quark fragmentation.   The fragmentation function included in {\sc pythia} originates from a detailed study of the $b$-quark fragmentation function in comparison with OPAL~\cite{Abbiendi:2002vt} and SLD~\cite{Abe:2002iq} data. To assess the impact of the $b$-fragmentation, the nominal parameters of the {\sc pythia} fragmentation function are replaced by the values from a tune using the Professor framework~\cite{Professor}. In addition, the nominal fragmentation function is replaced by the modified Bowler-Lund fragmentation function~\cite{BowlerLund}. The $b$-jet response uncertainty is evaluated from the ratio between the response of $b$-jets in the varied Monte Carlo samples to the nominal {\sc pythia}. The response variations are well within 2\%.
 
-The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertainty and the uncertainties from the systematic Monte Carlo variations in quadrature. The resulting additional JES uncertainty for $b$-jets is shown in Fig.~\ref{fig:bjetJESuncertainty}. It is about 2\% up to $\pt \approx 100$~GeV and below 1\% for higher $pt$. To obtain the overall $b$-jet uncertainty this uncertainty is added in quadrature to the JES uncertainty for inclusive jets.
+The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertainty and the uncertainties from the systematic Monte Carlo variations in quadrature. The resulting additional JES uncertainty for $b$-jets is shown in Fig.~\ref{fig:bjetJESuncertainty}. It is about 2\% up to $\pt \approx 100$~GeV and below 1\% for higher $\pt$. To obtain the overall $b$-jet uncertainty this uncertainty is added in quadrature to the JES uncertainty for inclusive jets.
 
+
+%-------------------------------------------------------------------
+\section{Reconstruction of charged particle tracks}\label{sec:trackreco}
+%------------------------------------------------------------------------
+
+The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{sec:atlasID} of Chapter~\ref{ch:lhc_atlas}. The tracking algorithm is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main stepts of the tracking algorithm are the following:
+
+\begin{itemize}
+\item
+Firstly, the raw data from the pixel and SCT detectors are converted into clusters, while the TRT raw timing information is turned into calibrated drift circles. The SCT clusters need to be further transformed into space-points, by combining the clusters information from opposite sides of the SCT module (stereo strip layers).
+\item
+In a second stage, the track-finding is performed, in which the pattern recognition and a global $\chi^2$ minimization procedure is implemented as a default.
+
+In the track-finding stage, track seeds are found in the first three pixel layers and in the first SCT layer. These are extended throughout the SCT to form track candidates and a first track fit is performed. Afterwards, ambiguities in the track candidates found in the silicon detectors are resolved, and tracks are extended into the TRT (which covers up to $|eta|<2.$). The final track candidate is refitted with the full information from the three tracking subdetectors. The baseline algorithm is designed for the efficient reconstruction of primary charged particles. Primary particles are defined as particles with a meanlife of greater than $3 \times 10^{-11}$~s directly produced in a proton-proton interaction, or from the subsequent decays or interactions of particles with lifetime shorter than $3 \times 10^{-11}$~s. The tracks reconstructed in this stage are required to have $\pt> 400$~MeV.
+
+In a complementary stage, a track search starts from segments reconstructed in the TRT and extends them inwards by adding silicon hits, which is referred to as ``back-tracking''. This recovers tracks for which the first hits in the pixel layers are missing, e.g. because they originate from secondaries, which are produced in the interaction of primaries.
+
+The reconstructed track trajectory is usually defined at its closest point to the interaction region on the transverse plane by its impact parameters in the transverse plane and in the longitudinal direction, respectively called $d_0$ and $z_0$, and by its momentum, typically expressed in azimuthal angle $\phi$, polar angle $\theta$ and inverse momentum $1/p$. 
+
+ The track reconstruction efficiency is defined as the fraction of primary particles with $\pt> 400$~MeV and $|\eta|<2.5$ matched to a reconstructed track. The reconstruction efficiency for primary tracks with transverse momentum above 1~GeV and central $\eta$ is above 80\%, reaching values below 70\% for tracks at the edge of the Inner Detector acceptance. %REFERENCIAS?
+The dense environment of a jet decreases the track reconstruction efficiency and increases the fake rate. This is caused by the ocurrence of shared hits between different tracks, which makes the pattern recognition and track fitting tasks more difficult.
+
+The relative transverse momentum scale and resolution of tracks is defined as the Gaussian mean and width of
+%
+\begin{equation}
+\pt^{MC} \times (1/\pt^{MC}  - 1/\pt^{reco} = 1 - \frac{\pt^{MC}}{\pt^{reco}}
+\end{equation}
+
+where $\pt^{MC,reco}$, refers to the track's transverse momentum given by simulation truth (MC) or by reconstruction (reco). It should be noted that the ($1/\pt$) resolution is used instead of $\sigma(\pt)$ as the Inner Detector measures the sagitta and not directly the transverse momentum\footnote{The relation between sagitta $s$ and transverse momentum ($\pt$) is given by $s \sim  1/\pt$. }.  However, the resolution obtained from the equation above is the relative transverse momentum resolution,  $\sigma(\pt) / \pt$. At low $\pt$ the multiple scattering dominates the resolution, and at high momenta, the resolution is limited by the bending power of the solenoid field and by the instrinsic detector resolution.  For a central track with $\pt=$5~GeV %, which is typical for $b$-tagging, 
+the transverse momentum resolution is around 75~MeV and the transverse impact parameter resolution is about 35~$\mu$m.
 
 
 
 %-------------------------------------------------------------------
-\section{ $\bm b$-jet Tagging}\label{sec:btagging}
+\section{Vertex reconstruction}\label{sec:trackreco}
+%------------------------------------------------------------------------
+
+Primary vertices are reconstructed using an iterative vertex finding algorithm~\cite{ATLAS-CONF-2010-069}. In a first step, a dedicated vertex finding algorithm associates tracks to vertex candidates. Vertex seeds are obtained by looking for the global maximum in the distribution of the $z$ coordinates of the tracks. In a second stage, an iterative $\chi^2$ fit is made using the seed and nearby tracks. Each track carries a weight which is a measure of its compatibility with the fitted vertex depending on the $\chi^2$ of the fit. Tracks displaced by more than 7$\sigma$ from the vertex are used to seed a new vertex and the procedure is repeated until no additional verteces can be found.  %During reconstruction vertices are required to contain at least two tracks.
+The parameters of the beam spot are used both during the finding to preselect compatible tracks and during the fitting step to constrain the vertex fit.
+
+
+The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-quark jets identification since it defines the reference point with respect to which impact parameters and vertex displacements are measured. 
+
+
+
+%-------------------------------------------------------------------
+\section{ ${\bm b}$-jet Tagging}\label{sec:btagging}
 %------------------------------------------------------------------------
 
 
 %From Gbb note
-Jets are classified as $b$-quark candidates by the ATLAS MV1 $b$-tagging algorithm, based on a neural network that combines the information from three high-performance taggers: IP3D, SV1 and JetFitter \cite{ATLAS-CONF-2011-102}.  These three tagging algorithms use a likelihood ratio technique in which input variables are compared to smoothed normalized distributions for both the $b$- and background (light- or in some cases $c$-jet) hypotheses, obtained from Monte Carlo simulation.  The IP3D tagger takes advantage of the signed transverse and longitudinal impact parameter significances. The SV1 tagger reconstructs an inclusive vertex formed by the decay products of the $b$-hadron and relies on the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet and the number of two-track vertices. The JetFitter tagger exploits the topology of the primary, $b$- and $c$-vertices and combines vertex variables with the flight length significance.  The $b$-tagging performance is determined using a simulated $t\bar{t}$ sample and is calibrated using experimental data with jets containing muons and with a sample of $t\bar{t}$ events~\cite{ATLAS-CONF-2011-089}.
+%Jets are classified as $b$-quark candidates by the ATLAS MV1 $b$-tagging algorithm, based on a neural network that combines the information from three high-performance taggers: IP3D, SV1 and JetFitter \cite{ATLAS-CONF-2011-102}.  These three tagging algorithms use a likelihood ratio technique in which input variables are compared to smoothed normalized distributions for both the $b$- and background (light- or in some cases $c$-jet) hypotheses, obtained from Monte Carlo simulation.  The IP3D tagger takes advantage of the signed transverse and longitudinal impact parameter significances. The SV1 tagger reconstructs an inclusive vertex formed by the decay products of the $b$-hadron and relies on the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet and the number of two-track vertices. The JetFitter tagger exploits the topology of the primary, $b$- and $c$-vertices and combines vertex variables with the flight length significance.  The $b$-tagging performance is determined using a simulated $t\bar{t}$ sample and is calibrated using experimental data with jets containing muons and with a sample of $t\bar{t}$ events~\cite{ATLAS-CONF-2011-089}.
+
+
+
+
+
 
 
 
@@ -115,13 +162,8 @@ The ability to identify jets containing $b$-hadrons is important for the high-$\
 Building on this success, more advanced $b$-tagging algorithms have been commissioned with the 2011 data. All these algorithms are based on Monte Carlo predictions for the signal ($b$-jet) or background (light- or in some cases $c$-jet) hypotheses.
 
 The $b$-tagging performance relies criticaly on the accurate reconstruction of the charged tracks in the ATLAS Inner Detector. 
-The innermost part, the pixel detector, has an intrinsic measurement accuracy of around 10~$\mu$m in the transverse plane, and 115~$\mu$m along the beam axis ($z$).  For a central track with $\pt=$5~GeV, which is typical for $b$-tagging, the transverse momentum resolution is around 75~MeV and the transverse impact parameter resolutioni is about 35~$\mu$m.
 
-\subsection{Primary vertex reconstruction}
 
-The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-tagging since it defines the reference point with respect to which impact parameters and vertex displacements are measured.
-
-See primary vertex recontruction in~\cite{ATLAS-CONF-2010-069}.
 
 %\subsection{Pile-up}
 
@@ -131,7 +173,7 @@ Out-of-time pile-up events ($pp$ collisions from neighboring bunches in the same
 
 
 %------------------------------------------------------------------------
-\subsection{Tracks selection and properties}\label{sec:ObjSelection}
+%\subsection{Tracks selection and properties}\label{sec:ObjSelection}
 %------------------------------------------------------------------------
 
 \subsubsection{Track quality cuts}
@@ -139,9 +181,7 @@ Out-of-time pile-up events ($pp$ collisions from neighboring bunches in the same
 
 The track selection for $b$-tagging is designed to select well-measured tracks rejecting fake tracks and tracks from long-lived particles ($K_s$, $\Lambda$, and other hyperon decays, generically referred to as $V^0$ decays) and material description.
 
-The tracks of charged particles with a pseudorapidity $|\eta| < 2.5$ are reconstructed in the the Inner Detector. It is composed of a barrel, consisting of 3 Pixel layers, 4 double layers of single-sided silicon strip sensors, and 73 layers of Transition Radiation Tracker straws concentric with the beam, plus a system of disks on each end of the barrel, occupying in total a cylindrical volume around the interaction point of radius of 1.15~m and length of 7.024~m. The Pixel detector's innermost layer is located at a radius of 5 cm from the beam axis, has a position resolution of approximately 10~$\mu$m in the $r-\phi$ plane and 115 $\mu$m along the beam axis ($z$). %Tracks with $p^{\rm{track}}_{\rm{T}} > 150$
-%Tracks with $p^{\rm{track}}_{\rm{T}} > 400$ MeV and consistent with the beamspot are associated in primary vertices via a finding/fitting sequential algorithm. Several primary vertices can be reconstructed per event due to the presence of in-time pile-up. The one with at least five associated tracks, a $z$ position within 100~mm of the ATLAS geometrical center, and the largest $\sum_{\rm trk}\pt^2$, is selected as the one associated to the hard interaction.
-%are selected as good vertices.
+
 
 
 \subsubsection{Track association to jets}

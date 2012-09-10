@@ -2,10 +2,10 @@
 \contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{3}
 \contentsline {subsubsection}{Jet calibration}{4}
 \contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{9}
-\contentsline {section}{\numberline {1.2} $b$-jet Tagging}{10}
+\contentsline {section}{\numberline {1.2} $b$-jet Tagging}{11}
 \contentsline {subsection}{\numberline {1.2.1}Primary vertex reconstruction}{12}
-\contentsline {subsection}{\numberline {1.2.2}Tracks selection and properties}{12}
-\contentsline {subsubsection}{Track quality cuts}{12}
-\contentsline {subsubsection}{Track association to jets}{13}
-\contentsline {subsubsection}{Impact parameters}{13}
-\contentsline {subsection}{\numberline {1.2.3}$b$-tagging algorithms}{14}
+\contentsline {subsection}{\numberline {1.2.2}Tracks selection and properties}{13}
+\contentsline {subsubsection}{Track quality cuts}{13}
+\contentsline {subsubsection}{Track association to jets}{14}
+\contentsline {subsubsection}{Impact parameters}{14}
+\contentsline {subsection}{\numberline {1.2.3}$b$-tagging algorithms}{15}
