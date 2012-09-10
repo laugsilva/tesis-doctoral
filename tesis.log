@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  7 SEP 2012 10:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  10 SEP 2012 10:58
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -194,22 +194,115 @@ LaTeX Warning: Reference `fig:JESuncertainty' on page 9 undefined on input line
 LaTeX Warning: Reference `fig:JESuncertainty' on page 10 undefined on input lin
 e 90.
 
+
+LaTeX Warning: Reference `fig:bjetJESuncertainty' on page 10 undefined on input
+ line 97.
+
+[10]
 ! Undefined control sequence.
 <recently read> \bm 
                     
-l.101 \section{ $\bm b$-jet Tagging}
+l.103 \section{ $\bm b$-jet Tagging}
                                     \label{sec:btagging}
 ? 
 ! Undefined control sequence.
 <argument> ...ame thesection\endcsname }\fi  $\bm 
                                                   b$-jet Tagging}{\thepage }}
-l.101 \section{ $\bm b$-jet Tagging}
+l.103 \section{ $\bm b$-jet Tagging}
                                     \label{sec:btagging}
 ? 
-[10] [11] [12] [13]) [14] (./tesis.bbl [15
+[11] [12] [13]) [14] [15] (./tesis.bbl [16
 
 
-])
+]
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.60   &
+        lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&
+             gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&
+                  lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&
+                        gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&
+                            lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&lt;sup&
+                                   gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&
+                                        lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&
+                                                gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60 ...;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&
+                                                  lt;i&gt;e&lt;/i&gt;&lt;sup...
+
+? 
+! Misplaced alignment tab character &.
+l.60 ...;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&
+                                                  gt;e&lt;/i&gt;&lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&
+                                                  lt;/i&gt;&lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&
+                                                  gt;&lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&
+                                                  lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;sup&
+                                                  gt;â%
+? 
+! Misplaced alignment tab character &.
+l.61 ˆ’&
+        lt;/sup&gt; production of heavy quarks in the string model.
+? 
+! Misplaced alignment tab character &.
+l.61 ˆ’&lt;/sup&
+                gt; production of heavy quarks in the string model.
+? 
+
+Overfull \hbox (82.0013pt too wide) in paragraph at lines 58--65
+[]\T1/cmr/m/n/12 M. G. Bowler.  lt;igt;elt;/igt;lt;supgt;+lt;/supgt;lt;igt;elt;
+/igt;lt;supgt;âˆ’lt;/supgt;
+ []
+
+
+Underfull \hbox (badness 7451) in paragraph at lines 58--65
+\T1/cmr/m/it/12 fÃ¼r Physik C Par-ti-cles and Fields\T1/cmr/m/n/12 , 11:169--17
+4, 1981.
+ []
+
+)
 
 ! LaTeX Error: \begin{itemize} on input line 44 ended by \end{document}.
 
@@ -220,7 +313,7 @@ Type  H <return>  for immediate help.
 l.188 \end{document}
                     
 ? 
-[16] (./tesis.aux (./Introduction/reconstruction.aux))
+[17] (./tesis.aux (./Introduction/reconstruction.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -233,13 +326,13 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 44 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1278 strings out of 493848
- 15209 string characters out of 1152823
- 66341 words of memory out of 3000000
- 4558 multiletter control sequences out of 15000+50000
+ 1281 strings out of 493848
+ 15256 string characters out of 1152823
+ 65349 words of memory out of 3000000
+ 4561 multiletter control sequences out of 15000+50000
  22183 words of font info for 51 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,8n,21p,1709b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,21p,1709b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/
@@ -261,9 +354,9 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (20 pages, 371157 bytes).
+Output written on tesis.pdf (21 pages, 375853 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
+ 178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
