@@ -240,7 +240,7 @@ On the basis that the decay point of the $b$-hadron must lie along its flight pa
 The lifetime sign can be defined in three-dimensions, acording to the variables $\vect{\pt}_{jet}$, $\vect{\pt}_{trk}$ and $\vect{\Delta r}_{IP} = \vect{r}_{IP} = \vect{r}_{PV}$, the three-dimensional impact parameter of the track with respect to the primary vertex:
 %
 \begin{equation}
-sign_{3D} = sign([\vect{\pt}_{trk} \times \vect{\pt}_{jet}]\cdot[\vect{\pt}_{trk} \times \vect{\Delta r}_{IP} ]).
+sign_{3D} = sign([\vect{p}_{trk} \times \vect{p}_{jet}]\cdot[\vect{p}_{trk} \times \vect{\Delta r}_{IP} ]).
 \end{equation}
 %
 The computation of the lifetime sign assumes that the jet direction reproduces, up to a good approximation, the $b$-hadron direction. Under this assumption and up to resolution effects both on the jet direction and on the impact parameter and momentum of the track, the lifetime sign of tracks originating from $b$-hadron decays is positive.
@@ -252,7 +252,7 @@ The lifetime sign can also be defined on the transverse plane $(x-y)$ or on the 
 \end{equation}
 %
 %PLOTS
-Distributions for the transverse and longitudinal impact parameter significance are shown in Fig.~\ref{fig:IPsignificance}; the sign of the transverse impact parameter is defined by ``sign$_r\phi$'', while the longitudinal impact parameters significance uses ``sign$_z$''.  %Tracks from the fragmentation in light-jets have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions.
+Distributions for the transverse and longitudinal impact parameter significance are shown in Fig.~\ref{fig:IPsignificance}; the sign of the transverse impact parameter is defined by ``sign$_{r\phi}$'', while the longitudinal impact parameters significance uses ``sign$_z$''.  %Tracks from the fragmentation in light-jets have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions.
 %%%%Extra info
 % The definition for sign$_r\phi$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, that the longitudinal component of the lifetime sign is diluting the information from the transverse component.
 
@@ -265,12 +265,93 @@ Distributions for the transverse and longitudinal impact parameter significance 
   \end{center}
 \end{figure}
 
-The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters.
+The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters. Now, the impact parameter significance of all $N$ tracks associated to the jet to tag need to be combined into a single discriminating variable. It is assumed that tracks are uncorrelated, so their probability density functions (PDF), defined based on the transverse and/or longitudinal impact parameter significance distributions for the different hipothesis, are uniquely  defined as a function of the jet flavour. Using a likelihood function defined according to the product of these PDFs, under the hypothesis of uncorrelated tracks, the following likelihood ratio provides the optimal separation, according to Neyman-Person lemma~\cite{1933RSPTA.231..289N}:
+%
+\begin{equation}
+\text{LR}(IP_1,IP_2,...,IP_N) = \frac{\prod_{i=1}^N \text{PDF}_b(IP_i)}{\prod_{i=1}^N \text{PDF}_l(IP_i)}
+\end{equation}
+%
+For convention, the discriminant variable used for $b$-tagging is then defined as:
+%
+\begin{equation}
+\text{weight}(IP_1,IP_2,...,IP_N) = \log(\text{LR}(IP_1,IP_2,...,IP_N))
+\end{equation}
+%
+Using such a formalism, two impact parameter based $b$-tagging algorithms are constructed, based on the definition of PDF($IP_i$):
+
+\begin{itemize}
+\item
+1. IP2D: PDF($IP_i$) = PDF($IP_{i,r\phi}$)
+\item
+2. IP3D:  PDF($IP_i$) = PDF($IP_{i,r\phi}$,$IP_z$)
+\end{itemize}
+
+In the first case the track PDF is one-dimensional, based on the transverse impact parameter significance. In the second case the PDF is based on a two-dimensional histogram of the transverse and longitudinal impact parameter significance. 
+%PLOTS OF THE WEIGHTS?
+
+The \textbf{IP3D} is one of the high-performance tagging algorithms supported for the 2011 data-taking, in which input variables are compared to pre-defined smooth Monte Carlo PDFs for both $b$-jet and light jet hypotheses~\cite{ATLAS-CONF-2011-102}.  Prior to the use of these advanced tagger, a simpler tagging algorithm, the \textbf{JetProb}, combining the impact parameter significances of all tracks associated to the jet was devised to be used for early data, being extensively used during 2010~\cite{ATLAS-CONF-2010-091}. 
 
 
+The impact parameter based algorithm permits to obtain a very good $b$-tagging performance, as will be shown at the end of this chapter. 
+%One of the reason of the good performance is that the likelihood method contains implicity, as a prior knowledge in the PDF for $b$-jets, the fraction of tracks expected to arise from fragmentation and the fracion expected to arise from $b$ and $c$-hadron decays. This Method has also a few drawbacks. One is that it does not account for the momentum dependence of the PDFs. And the second is that, while the impact parameter as such is nearly invariant under Lorentz boosts of the $b$-hadron, the error decreases with increasing track $\pt$ and smaller $\eta$. The track-based PDF is thus not invariant neither under a boost of the $b$-quark nor under a boost of its emerging charged particle tracks.This can be cured both by making a track-PDF category dependent. This approach was tried out in ATLAS with significant improvement in performance, but has the disadvantage of increasing the number of free parameters of the likelihood model and making an eventual calibration on data more difficult.
+This performance can be improved by using some information from the secondary vertex based vertexing algorithms in two aspects: tracks associated to long lived particle vertices can be removed from the tracks considered for the impact parameter based algorithms; and, the direction between the secondary and the primary vertex positions can be used to improve the reliability of the lifetime sign, subtituting $\vect{p}_{jet}$ with $\vect{r}_{SV} - \vect{r}_{PV} $. The latter improves significantly the estimation of the $b$-hadron direction. Both kinds of information improve the performance of the impact parameter based $b$-tagging algorithms.
 
 
+\subsubsection{Secondary vertex based $b$-tagging algorithms }
 
+The typical topology of particle decays in a $b$-jet is a decay chain with two vertices, one steaming from the $b$-hadron decay and at least one from $c$-hadron decays. The reconstruction of these secondary vertices is done in an inclusive way, where the number of charged particle tracks originating from the $b$- and $c$-hadron decays is not known a-priori. An exclusive reconstruction of the huge number of different possible $b$-decay modes cannot be performed, the set of selection cuts needed to reconstruct all of them would severely limit the reconstruction efficiency.
+
+Two strategies to detect a secondary decay vertex in $b$-jets are available in ATLAS. The first one is based on the fit of a single geometrical vertex. Even if this hypothesis is not correct, this approximation works well for a large fraction of cases.  The second algorithm is based on a kinematic approach, which assumes that the primary event vertex and the $b$- and the $c$-hadron decay vertices lie approximately on the same line, the flight path of the $b$-hadron. 
+
+The inclusive fit of a single displaced vertex in $b$-jets is based on the VKalVrt~\cite{Kostyukhin:685551} reconstruction package. The main idea of the algorithm implemented in this package is to maximise the $b/c$-hadron vertex detection efficiency, keeping at the same time the probability to find a vertex inside a light jet low. 
+
+The algorithm starts with all tracks associated to the jet and passing a loose cut selection. The vertex search starts with looking for all track pairs and trying to form a two-track vertex. Each track of the pair must have a three-dimensional impact parameter significance with respect to the primary vertex larger than 2$\sigma$ and the sum of these two significances must be larger than 6$\sigma$. To reduce the influence of badly measured tracks, the two-tracks vertices are required to be produced in the direction of flight of the $b$-quark, by requiring the scalar product of $(\vect{r}_{2-track} - \vect{r}_{PV})\cdot \vect{p}_{jet} $ to be positive. Charged particles coming from long lived particles and conversions are not considered for the inclusive $b$-decay vertex fit. All the corresponding to the accepted two-track vertices are used to determined a single secondary vertex.  If the resulting vertex has a very small vertex probability, the track with the highest constribution to the vertex $\chi^2$  is removed from the vertex fit and the vertex fit is repeated until the $\chi^2$ of the vertex fit is good. The result of this procedure is the (eventual) presence of a vertex, its position, and the list of its associated tracks.
+
+The \textbf{SV1} secondary vertex algorithm uses this procedure to reconstruct inclusive secondary vertices. This advanced tagger takes advantage of three of the reconstructed vertex properties: the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet, and the number of two-track vertices. These variables are combined using a likelihood ratio technique. SV1 relies on a two-dimensional distribution of the two first variables and a one-dimensional distribution of the number of two-track vertices. In addition the distance $\Delta R$ between the jet axis and the line joining the primary vertex to the secondary one is used. 
+
+The three-dimensional decay length significance alone,  signed with respect to the jet direction can be used as a discriminating variable between $b$-jets and light jets: this is the principle of the early data \textbf{SV0} tagger, extensively used as well with the 2010 and 2011 data~\cite{ATLAS-CONF-2010-042}.
+
+
+As opposed to the algorithm described above, in which the displaced tracks are selected and an inclusive single vertex is obtained, a second algorithm, called \textbf{JetFitter}, is based on a different hypothesis. It assumes that the $b$- and the $c$-hadron decay vertices lie on the same line defined through the $b$-hadron flight path. All charged particle tracks stemming from either decay intersect this $b$-hadron flight axis. This method has the advantage of reconstructing imcomplete topologies, with, for instance, a single track from the $b$-hadron and a single track from the $c$-hadron decay. The fit in this case evaluates the compatibility of the given set of tracks with a $b$-$c$-hadron like cascade topology, increasing the discrimination power against light quark jets.
+The lateral displacement of the $c$-hadron decay vertex with respect to the $b$-hadron flight path is small enough not to violate significantly the basic assumption within the typical resolutions of the tracking detector.
+The discrimination between $b$-, $c$- and light jets is based on a likelihood using similar variables as in the SV1 tagging algorithm above, and additional
+variables such as the flight length significances of the vertices.
+
+\subsubsection{Algorithm combinations and performance}
+
+The IP3D and SV1 tagging algorithms both use the likelihood ratio method, and due to this they can be easily combined: the weights of the individual tagging algorithms are simply summed up. 
+
+The combination of the JetFitter and the IP3D algorithms can be performed using an artificial neural network technique with Monte Carlo simulated training samples and additional variables describing the topology of the decay chain. 
+
+Figure~\ref{fig:btaggingperformance} compares the performance for the various ATLAS $b$-tagging algorithms described in a simulated sample of $t\bar{t}$ events.
+It can be seen that by combining the vertexing techniques and the impact parameter information, the IP3D+SV1 and IP3D+JetFitter algorithms can reach very high tagging efficiencies.
+
+ The performance of a $b$-tagging algorithm is usally  measured in terms of the \emph{light-jet rejection} obtained for a given \emph{$b$-jet tagging efficiency}.  Curves are obtained by varying continuously the \emph{operating point} of each tagger, i.e. the cut on its output discriminating variable (weight).  The $b$-jet tagging efficiency,  $\epsilon_b$,  is the fraction of jets labeled as $b$-jets that are properly tagged while the light-jet rejection, defined as $1/\epsilon_{light}$, is the reciprocal of the fraction of jets that are labeled as light jets and are actually tagged incorrectly by the algorithm. The labeling procedure used for $b$-tagging is based on the flavor of true quarks: a jet is labeled as a $b$-quark jet if a $b$-quark is found in a cone of size $\Delta R = 0.3$ around the jet direction.  The various labeling hypotheses are tried in this order: $b$ quark, $c$ quark and $\tau$ lepton. When none of these hypotheses are satisfied, the jet
+is labeled as a light jet. No attempt is made to distinguish light jets originating from gluons from those originating from quarks at this stage.
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{btaggingperformance.png}
+    \caption{Light-jet rejection as a function of the $b$-jet tagging efficiency for the early tagging algorithms (JetProb and SV0) and for the high-performance algorithms, based on simulated $t\bar{t}$ events. }
+    \label{fig:btaggingperformance}
+  \end{center}
+\end{figure}
+
+By combining the vertexing techniques and the impact parameter information, the IP3D+SV1 and IP3D+JetFitter algorithms can reach very high tagging efficiencies.
+
+
+\subsubsection{The MV1 tagging algorithm}
+
+
+The \textbf{MV1} $b$-tagging algorithm is a combined algorithm based on a neural network using the output weights of the JetFitter+IP3D combination, IP3D and SV1 algorithms as input.  For being the best performing algorithm (better light rejection for the same signal efficiency) it is the recomended tagger for 2011 and 2012 analyses. This is the $b$-tagging algorithm used in this thesis.
+
+%%PLOT OF THE MV1 WEIGHT???????????????
+%%TABLA DE LOS SUPPORTED OPERATING POINTS????????
+
+\subsection{$b$-tagging calibration}
+
+
+The measurements of the $b$-tag efficiency and mistag rate are provided in the form of jet-$\pt$ dependent scale factors that correct the $b$-tagging performance in simulation to that observed in data. 
 
 
 
