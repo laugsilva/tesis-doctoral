@@ -2,9 +2,9 @@
 \contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{3}
 \contentsline {subsubsection}{Jet calibration}{4}
 \contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{9}
-\contentsline {section}{\numberline {1.2}Reconstruction of charged particle tracks}{11}
-\contentsline {section}{\numberline {1.3}Vertex reconstruction}{13}
-\contentsline {section}{\numberline {1.4} ${b}$-jet Tagging}{14}
-\contentsline {subsubsection}{Association of tracks to jets}{17}
-\contentsline {subsubsection}{Impact parameters}{17}
-\contentsline {subsection}{\numberline {1.4.1}$b$-tagging algorithms}{18}
+\contentsline {section}{\numberline {1.2}Reconstruction of charged particle tracks}{13}
+\contentsline {section}{\numberline {1.3}Vertex reconstruction}{15}
+\contentsline {section}{\numberline {1.4} ${b}$-jet Tagging}{16}
+\contentsline {subsubsection}{Association of tracks to jets}{18}
+\contentsline {subsection}{\numberline {1.4.1}$b$-tagging algorithms}{19}
+\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{20}

@@ -48,6 +48,7 @@ Pile-up correction: An offset correction is applied in order to substract the ad
 Vertex correction: The jet four momentum is corrected such that the jet originates from the primary vertex of the interaction instead of the geometrical centre of the detector. 
 \item
 Jet energy and direction correction: The jet energy and direction are corrected using constants derived from the comparison of the kinematic observables of reconstructed jets and those from truth jets in the simulation.
+\end{itemize}
 
 In the final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet.  The EM scale response is written as,
 %
@@ -85,7 +86,15 @@ For the 2011 data the recomended calibration schemes were the EM+JES and the LCW
 
 \subsubsection{Jet energy scale uncertainties for the EM+JES scheme}
 
-For many physics analyses, the uncertainty on the JES constitutes the dominant systematic uncertainty because of its tendency to shift jets in and out of analysis selections due to the steeply falling jet $\pt$ spectrum. The uncertainty on the EM+JES scale  is determined primarily by six factors:  varying the physics models for hadronization and parameters of the Monte Carlo generators, evaluating the baseline calorimeter response to single particles, comparing multiple models for the detector simulation of hadronic showers, assesing the calibration scales as a function of pseudorapidity, and by adjusting the JES calibration methods itself.  The final JES uncertainty in the central region, $|\eta| < 0.8$, is determined from the maximum deviation in response observed with respect to the response in the nominal sample.  For the more forward region, the so called ``$\eta$-intercalibration'' contribution is estimated. This is a procedure that uses direct di-jet balance measurements in two-jet events to measure the relative energy scale of jets in the more forward regions compared to jets in a reference region. The technique exploits the fact that these jets are expected to have equal $\pt$ due to transverse momentum conservation. Figure~\ref{fig:JESuncertainty}  shows the final fractional jet energy scale uncertainty and its individual contributions as a function of $\pt$ for three selected $\eta$ regions. The JES uncertainty for anti-$kt$ jets with $R = 0.4$ is between $\approx$4\% (8\%, 14\%) at low jet $\pt$ and $\approx$2.5\%-3\% (2.5\%-3.5\%, 5\%) for jets with $\pt > 60$~GeV in the central (endcap, forward) region.
+For many physics analyses, the uncertainty on the JES constitutes the dominant systematic uncertainty because of its tendency to shift jets in and out of analysis selections due to the steeply falling jet $\pt$ spectrum. The uncertainty on the EM+JES scale  is determined primarily by six factors:  varying the physics models for hadronization and parameters of the Monte Carlo generators, evaluating the baseline calorimeter response to single particles, comparing multiple models for the detector simulation of hadronic showers, assesing the calibration scales as a function of pseudorapidity, and by adjusting the JES calibration methods itself.  The final JES uncertainty in the central region, $|\eta| < 0.8$, is determined from the maximum deviation in response observed with respect to the response in the nominal sample.  For the more forward region, the so called ``$\eta$-intercalibration'' contribution is estimated. This is a procedure that uses direct di-jet balance measurements in two-jet events to measure the relative energy scale of jets in the more forward regions compared to jets in a reference region. The technique exploits the fact that these jets are expected to have equal $\pt$ due to transverse momentum conservation. Figure~\ref{fig:JESuncertainty}  shows the final fractional jet energy scale uncertainty and its individual contributions as a function of $\pt$ for a central $\eta$ region. The JES uncertainty for anti-$kt$ jets with $R = 0.4$ is between $\approx$4\% (8\%, 14\%) at low jet $\pt$ and $\approx$2.5\%-3\% (2.5\%-3.5\%, 5\%) for jets with $\pt > 60$~GeV in the central (endcap, forward) region.
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{JESUncertainty.png}
+    \caption{Fractional jet energy scale uncertainty as a function of jet $\pt$ for jets in the pseudorapidity region 0.3$ < |\eta| < $0.8 in the calorimeter barrel. The total uncertainty is shown as the solid tight blue area. The individual sources are also shown.}
+    \label{fig:JESuncertainty}
+  \end{center}
+\end{figure}
 
 In addition to the tests above, \emph{in situ} tests of the JES using direct $\gamma$-jet balance, multi-jet balance, and track-jets indicate that the uncertainties in Fig.~\ref{fig:JESuncertainty} reflect accurately the true uncertainties in the JES.  
 
@@ -95,6 +104,14 @@ In the case of jets induced by bottom quarks ($b$-jets), the calorimeter respons
 The JES uncertainty arising from the modelling of the $b$-quark fragmentation can be determined from systematics variations of the Monte Carlo simulation. The fragmentation function is used to estimate the momentum carried by the $B$-hadron with respect to that of the $b$-quark after quark fragmentation.   The fragmentation function included in {\sc pythia} originates from a detailed study of the $b$-quark fragmentation function in comparison with OPAL~\cite{Abbiendi:2002vt} and SLD~\cite{Abe:2002iq} data. To assess the impact of the $b$-fragmentation, the nominal parameters of the {\sc pythia} fragmentation function are replaced by the values from a tune using the Professor framework~\cite{Professor}. In addition, the nominal fragmentation function is replaced by the modified Bowler-Lund fragmentation function~\cite{BowlerLund}. The $b$-jet response uncertainty is evaluated from the ratio between the response of $b$-jets in the varied Monte Carlo samples to the nominal {\sc pythia}. The response variations are well within 2\%.
 
 The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertainty and the uncertainties from the systematic Monte Carlo variations in quadrature. The resulting additional JES uncertainty for $b$-jets is shown in Fig.~\ref{fig:bjetJESuncertainty}. It is about 2\% up to $\pt \approx 100$~GeV and below 1\% for higher $\pt$. To obtain the overall $b$-jet uncertainty this uncertainty is added in quadrature to the JES uncertainty for inclusive jets.
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{bjetJESUncertainty.png}
+    \caption{Additional fractional $b$-jet JES uncertainty as a function of the truth jet transverse momentum for anti-$kt$ jets with $R=0.4$ calibrated with EM+JES scheme for $|\eta| < 2.5$. Shown are systematic Monte Carlo variations using different modelling of the $b$-quark fragmentation and physics effects as well as variations in the detector geometry and the uncertainty in the calorimeter response to $b$-jets as evaluated from single hadron response measurements.  Uncertainties in the individual points are statistical only. }
+    \label{fig:bjetJESuncertainty}
+  \end{center}
+\end{figure}
 
 
 %-------------------------------------------------------------------
@@ -169,7 +186,7 @@ $b$-hadrons decay preferably into a $c$-hadron plus additional particles\footnot
 %MORE ON C-HADRONS HERE OR LATER??
 %There are several strategies to deal with tertiary vertices from $c$-hadron decays. In the case of $b$-tagging algorithms based purely on impact parameter information from charged particle tracks, the presence of tracks with a more significant displacement  does not require an explicit strategy: these tracks will in general improve the $b$-tagging performance. In the case of a secondary vertex based $b$-tagging algorithm, the more conventional approach is to tray to find a single inclusive secondary vertex, which will result in a weighted average of the $b$- and one or more $c$-hadron vertex posotions. This approach is reasonable, since in most of the cases either the resolution of the tracks or the decay vertex multiplicities at such vertices do not allow to separate them efficienctly. An alternative approach instead tries to resolve the $b$- and $c$-hadron decay vertices.
 
-Another property which is usually exploited by $b$-tagging is the fraction of $b$- and $c$-hadron decays into leptons: a lepton from the semi-leptonic decay of a $b$-hadron ($b \rightarrow l$) or from the subsequent $c$-hadron decay ($b \rightarrow c \rightarrow l$) is produced in a $b$-quark in $\approx$21\% of the cases. This is valid both in case the lepton is a an electron or a muon, which brings the overall fraction of $b$-quarks ending up into a lepton to $\approx$42\%. Due to the $b$- or $c$-hadron mass, the lepton will be emitted with an average transverse momentum comparable with $m_{b-had}$ or $m_{c-had}$. By identifying either an electron or a muon originating from a jet and by requiring it ti have sufficiently high $\pt$ with respect to the jet axis, it is possible to identify $b$-jets.
+Another property which is usually exploited by $b$-tagging is the fraction of $b$- and $c$-hadron decays into leptons: a lepton from the semi-leptonic decay of a $b$-hadron ($b \rightarrow l$) or from the subsequent $c$-hadron decay ($b \rightarrow c \rightarrow l$) is produced in a $b$-quark in $\approx$21\% of the cases. This is valid both in case the lepton is a an electron or a muon, which brings the overall fraction of $b$-quarks ending up into a lepton to $\approx$42\%. Due to the $b$- or $c$-hadron mass, the lepton will be emitted with an average transverse momentum comparable with $m_{b-had}$ or $m_{c-had}$. By identifying either an electron or a muon originating from a jet and by requiring it to have sufficiently high $\pt$ with respect to the jet axis, it is possible to identify $b$-jets.
 
 
 
@@ -183,19 +200,77 @@ The $b$-tagging performance relies criticaly on the accurate reconstruction of t
 %
 where usually the value of $\Delta R_{cut} = R$ is used; with $R$, the distance parameter of the jet algorithm used for jet reconstruction.
 
-After the tracks are associated to the jets, they are filtered in order to remove tracks with bad quality or which can easily be erroneously identified as secondary tracks from $b$-decays. These include tracks originating from decays of even longer lived particles, like $K^0_s$ (c$\tau \approx$2.69~cm) and $Lambda$ baryons (c$\tau \approx$7.89~cm); from electromagnetic interactions in the detector material, like conversions in electron-positron pairs ($\gamma \rightarrow e^+ e^-$); or from hadronic interactions with the detector material, which result in two or more tracks with high impact parameter.
-
+After the tracks are associated to the jets, they are filtered in order to remove tracks with bad quality or which can easily be erroneously identified as secondary tracks from $b$-decays. These include tracks originating from decays of even longer lived particles, like $K^0_s$ (c$\tau \approx$2.69~cm) and $\Lambda$ baryons (c$\tau \approx$7.89~cm); from electromagnetic interactions in the detector material, like conversions in electron-positron pairs ($\gamma \rightarrow e^+ e^-$); or from hadronic interactions with the detector material, which result in two or more tracks with high impact parameter. 
 In order to reject badly reconstructed tracks, quality cuts are applied. Requirements are imposed on the number of silicon hits, the track fit quality,  the track momentum, and the transverse and longitudinal impact parameters. The track selection needs to be particularly tight in the case of the impact parameter based $b$-tagging algorithms, since in that case the explicit presence of a vertex is not required, so that the influence of badly reconstructed tracks or tracks from long lived particles does directly limit the performance. The minimum track $\pt$ required is of 1~GeV in the case of the impact parameter based algorithms and of 400-500~MeV otherwise. The transverse and longitudinal
-impact parameters must fullfill  $|d_0|<$1~mm (3.5~mm) and $|z_0| \sin \theta < 1.5$~mm (none) in the case of the algorithms relying on the impact parameters of tracks (on the reconstruction of secondary vertices).  The minimum number of precision hits required is typically of 7 hits, for both approaches. 
+impact parameters must fullfill  $|d_0|<$1~mm (3.5~mm) and $|z_0| \sin \theta < 1.5$~mm (no cut on $z_0$) in the case of the algorithms relying on the impact parameters of tracks (on the reconstruction of secondary vertices).  The minimum number of precision hits required is typically of 7 hits, for both approaches. 
 
 
-On the basis that the decay point of the $b$-hadron must lie along its flight path, the impact parameter is signed to further discriminate the tracks from $b$-hadron decays from tracks originating from the primary vertex. The sign is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. Therefore, tracks from $b/c$ hadron decays tend to have positive sign.
 
-The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters.
+
 
 \subsection{$b$-tagging algorithms}
 
-%A first stag
+For the 2011 data-taking a set of lifetime taggers were commissioned and calibrated. In this section a brief description of the main features of these algorithms will be given. 
+
+\subsubsection{Impact parameter based $b$-tagging algorithms }
+
+% AQUI PLOTS OF TRACK PROPERTIES IN JETS???????????
+
+The charged particle tracks originating from $b$-hadrons are expected to have significantly higher transverse and longitudinal impact parameters compared to prompt tracks originating directly from fragmentation. If the effect of long lived particles, conversions and hadronic interactions can be reduced, the best discrimination between prompt tracks and displaced tracks from $b$- and $c$-hadron decays can be obtained using the impact parameter significance, both in the transverse and longitudianl plane. Being,
+\begin{equation}
+    IP_{r\phi} = d_0\;\;  \text{and} \;\;  IP_{z} = z_0 \sin \theta,
+\end{equation}
+The transverse and longitudinal impact parameter significances are obtained by dividing $IP_{r\phi}$ and $IP_z$ by their respective errors,
+\begin{equation}
+    IP_{r\phi}/\sigma(IP_{r\phi})\;\; \text{and} \;\;  IP_{z}/\sigma(IP_{z}).
+\end{equation}
+%
+
+On the basis that the decay point of the $b$-hadron must lie along its flight path, and in order to increase the discriminating power of the impact parameter significance, a lifetime sign is assigned to these variables (replacing the sign of the geometrical definition of the impact parameter). The sign is positive if the track extrapolation crosses the jet direction in front of the primary vertex (i.e. is more compatible with having its origin in a secondary decay vertex in the direction of flight expected for the $b$-hadron) or negative if the track is more likely to intersect the flight axis behind the primary vertex, opposite to the jet direction. Both cases are illustrated in Fig.~\ref{fig:signedIP}. 
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{signedFinal.png}
+    \caption{Lifetime sign of tracks. A positive and a negative lifetime signed track is shown.}
+    \label{fig:signedIP}
+  \end{center}
+\end{figure}
+
+%more formal definition of the sign
+The lifetime sign can be defined in three-dimensions, acording to the variables $\vect{\pt}_{jet}$, $\vect{\pt}_{trk}$ and $\vect{\Delta r}_{IP} = \vect{r}_{IP} = \vect{r}_{PV}$, the three-dimensional impact parameter of the track with respect to the primary vertex:
+%
+\begin{equation}
+sign_{3D} = sign([\vect{\pt}_{trk} \times \vect{\pt}_{jet}]\cdot[\vect{\pt}_{trk} \times \vect{\Delta r}_{IP} ]).
+\end{equation}
+%
+The computation of the lifetime sign assumes that the jet direction reproduces, up to a good approximation, the $b$-hadron direction. Under this assumption and up to resolution effects both on the jet direction and on the impact parameter and momentum of the track, the lifetime sign of tracks originating from $b$-hadron decays is positive.
+
+The lifetime sign can also be defined on the transverse plane $(x-y)$ or on the longitudinal plane $(r\phi-z)$ by considering respectively the transverse and longitudinal impact parameters (the projections of the three-dimensional impact parameter on the respective planes):
+%
+\begin{equation}
+\text{sign}_{r\phi} = \text{sign}(\sin(\phi_{jet} - \phi_{trk})\cdot d_{0,trk}); \; \text{and} \; \text{sign}_{z} = \text{sign}((\eta_{jet} - \eta_{trk})\cdot z_{0,trk}).
+\end{equation}
+%
+%PLOTS
+Distributions for the transverse and longitudinal impact parameter significance are shown in Fig.~\ref{fig:IPsignificance}; the sign of the transverse impact parameter is defined by ``sign$_r\phi$'', while the longitudinal impact parameters significance uses ``sign$_z$''.  %Tracks from the fragmentation in light-jets have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions.
+%%%%Extra info
+% The definition for sign$_r\phi$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, that the longitudinal component of the lifetime sign is diluting the information from the transverse component.
+
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=1\textwidth]{IPsignificancesPlots.png}
+    \caption{Impact parameters of tracks associated to light, $c$- and $b$-jets in the transverse and longitudinal direction.}
+    \label{fig:IPsignificance}
+  \end{center}
+\end{figure}
+
+The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters.
+
+
+
+
+
 
 
 
