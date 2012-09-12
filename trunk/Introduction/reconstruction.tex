@@ -351,7 +351,61 @@ The \textbf{MV1} $b$-tagging algorithm is a combined algorithm based on a neural
 \subsection{$b$-tagging calibration}
 
 
-The measurements of the $b$-tag efficiency and mistag rate are provided in the form of jet-$\pt$ dependent scale factors that correct the $b$-tagging performance in simulation to that observed in data. 
+In order for $b$-tagging to be used in physics analyses, the efficiency with which a jet originating from a $b$-quark is tagged by a $b$-tagging algorithm needs to be measured in data.  Morover, an appropriate description of the $b$-tagging efficiencies based on measurements with data is essential for correctly modelling the measurements in Monte Carlo simulation . A second necessary piece of information is the probability of mistakenly tagging a jet originating from a light-flavour ($u$-, $d$-, $s$-quark or gluon) jet as a $b$-jet, referred to as the mistag rate. The ``calibration'' includes both the measurement of the mis-tag rates and $b$-tagging efficiency.
+
+
+The measurements of the $b$-tag efficiency and mistag rate are provided in the form of jet $\pt$- and $\eta$-dependent scale factors that correct the $b$-tagging performance in simulation to that observed in data.  The scale factors defined as the ratio of the $b$-tag efficiency or mistag rate in data and simulation:
+%
+\begin{equation}
+\kappa_{\epsilon_b}^{data/sim}  = \frac{\epsilon_b^{data}}{\epsilon_b^{sim}}, \; \;   \kappa_{\epsilon_l}^{data/sim}  = \frac{\epsilon_l^{data}}{\epsilon_l^{sim}},
+\end{equation}
+%
+where $\epsilon_b^{sim}$ and $\epsilon_l^{sim}$ are the fractions of $b$- and light-flavour jets which are tagged in an inclusive sample of simulated $t\bar{t}$ events, with the jet flavour defined by matching to generator level partons as defined in the previous section. %The measured $b$-tag efficiencies and mistag rates will depend on the jet transverse momentum $\pt$ and the pseudorapidity $\eta$.  %They also depend on other quantities such as the fraction of jets in the sample originating from gluons. An advantage of providing the calibration results in the form of scale factors is that even though samples with different event topologies can have slightly different $b$-tag efficiencies or mistag rates, the data-to-simulation scale factors are likely to be valid.
+
+In physics analyses, these $\pt$-dependent scale factors are then ap plied as weights to the jets in Monte Carlo simulation, to reproduce the b-tagging performance measured in data.
+
+
+The main b-tagging efficiency calibration methods used so far, the so called \emph{system8} and \emph{p_{rel}} methods are described in detail in ref~\cite{ATLAS-CONF-2011-089}.% based on an integrated luminosity of L = 4.7 fb−1 collected in 2011. 
+These measurements are based on a sample of jets with muons inside, where the muons are serving as a reference $b$-tagging algorithm to obtain a $b$-jet sample on which the calibrations can be performed. 
+At the LHC, the large $t\bar{t}$ production cross section of $\sigma_{t\bar{t}} = 177 ± 3(\text{stat.})+8 (\text{sys.}) ± 7(\text{lum.})$~pb~\cite{ttbarXsection??????} offers an alternative source of events enriched in $b$-jets. % This distinctive topology with high pT leptons, multiple jets, and large missing transverse momentum provides highly selective trigger objects and is relatively easy to reconstruct. With the large integrated luminosity of 4.7 fb−1 collected during 2011, the methods based on tt selections have become competitive for the first time. In addition to providing b-tagging calibration measurements in an inclusive b-jet sample rather than a sample of semileptonic b-jets. In addition to providing b-tagging calibration measurements in an inclusive b-jet sample rather than a sample of semileptonic b-jets, these methods  methods also allow to extend the calibrated pT range. Furthermore, the tt environment of high jet  multiplicity and high pT b-jets is more similar to the final states to which b-tagging is applied than the semileptonic jet sample.
+
+Calibrations using samples of $t\bar{t}$ events have been obtained for SV0, IP3D+SV1, JetFitter and MV1 $b$-tagging algorithms~\cite{?????}. The above b-tagging algorithms all provide an output weight $w$, discriminating between $b$-jets and non-$b$-jets. Lower values of $w$ are assigned to $c$- and light-flavour jets, whereas the purity of $b$-jets increases with $w$. For each $b$-tagging algorithm a set of operating points, corresponding to a certain $w$ cut value, are defined and calibrated:
+• SV0: εsim = 50%
+b
+• IP3D+SV1: εsim = 60%, εsim = 70%, εsim = 80%
+b
+b
+b
+sim
+• JetFitter: εsim = 57%, εsim = 60%, εsim = 70%, εb = 80%
+b
+b
+b
+sim
+• MV1: εsim = 60%, εsim = 70%, εb = 75%, εsim = 85%
+b
+b
+b
+ ̄
+
+
+%http://cdsweb.cern.ch/record/1435194
+The mistag rate is measured in data using two methods, both based on an inclusive sample of jets.
+The two methods, referred to as the negative tag and sv0mass methods, are briefly described in the
+following. More details can be found in [3].
+
+
+
+Currently, there is no explicit measurement of the c-tag efficiency available in ATLAS. As both the
+b- and c-tag efficiencies are dominated by decays of long-lived heavy flavour hadrons, they are expected
+to show a similar behaviour. In the following it is thus assumed that the scale factor defined in Eq. 1
+is the same for b- and c-jets. However, to take into account possible deviations from this assumption,
+the systematic uncertainty for the c-tag efficiency scale factor is inflated by a factor of two, which is
+1
+considered to be a conservative choice based on simulation studies. In the future, the c-tag efficiency
+will be measured in dedicated analyses.
+
+
 
 
 
