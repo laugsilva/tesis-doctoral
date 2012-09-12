@@ -34,12 +34,12 @@ The jet energy is first reconstructed from the constituent cell energies at EM s
 In the simplest case the measured jet energy is corrected, on average, using Monte Carlo simulations, as follows:
 %
 \begin{equation}
-E^{jet}_{calib} = E^{jet}_{meas} /F_{calib}(E^{jet}_{meas}),   \mbox{with  }   E^{jet}_{meas} = E^{jet}_{EM} - O(\mbox{NPV}),
+E^{jet}_{calib} = E^{jet}_{meas} /F_{calib}(E^{jet}_{meas}),\; \; \mbox{with} \;  E^{jet}_{meas} = E^{jet}_{EM} - O(\mbox{NPV}),
 \end{equation}
 %
-where $E^{jet}_{EM}$ is the calorimeter energy measured at the electromagnetic scale, $E^{jet}_{calib}$ is the calibrated energy and $\emph{F}_{calib}$ is the calibration function that depends on the measured jet energy and is evaluated in small jet $\eta$ regions. The variable $ O(NPV)$ denotes the correction for additional energy from multiple proton-proton interactions depending on the number of primary vertices (NPV).
+where $E^{jet}_{EM}$ is the calorimeter energy measured at the electromagnetic scale, $E^{jet}_{calib}$ is the calibrated energy and $\emph{F}_{calib}$ is the calibration function that depends on the measured jet energy and is evaluated in small jet $\eta$ regions. The variable $ O(\mbox{NPV})$ denotes the correction for additional energy from multiple proton-proton interactions depending on the number of primary vertices (NPV).
 
-The simplest calibration scheme and the one used in this thesis is the so called ``EM+JES''. This calibration applies the corrections as a function of the jet energy and pseudorapidity to jets reconstructed at the electromagnetic scale.  The additional energy due to multiple proton-proton collisions within the same bunch crossing (pile-up) is corrected before the hadronic energy scale is restored, such that the derivation of the jet energy scale calibration is factorised and does not depend on the number of additional interactions in the event. The EM+JES calibration scheme consists of three subsequent stops:
+The simplest calibration scheme and the one used in this thesis is the so called ``EM+JES''. This calibration applies the corrections as a function of the jet energy and pseudorapidity to jets reconstructed at the electromagnetic scale.  The additional energy due to multiple proton-proton collisions within the same bunch crossing (pile-up) is corrected before the hadronic energy scale is restored, such that the derivation of the jet energy scale calibration is factorised and does not depend on the number of additional interactions in the event. The EM+JES calibration scheme consists of three subsequent steps:
 
 \begin{itemize}
 \item
@@ -56,7 +56,7 @@ In the final step the calibration is derived in terms of the energy response of 
 R^{jet}_{EM} = E^{jet}_{EM} / E^{jet}_{truth}
 \end{equation}
 %
-To compute this quantity, reconstructed jets must be matched to isolated jets in the Monte Carlo within $\Delta R < 0.3$. The isolation requirement is applied in order to factorize the effects due to close-by jets from those due to purely detector effects such as dead material and non-compensation. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2.5R$, where $R$ is the distance parameter of the jet algorithm. The EM scale energy response is binned in truth jet energy, $E^{jet}_{truth}$ and the calorimeter jet detector $\eta$.  For each $(E^{jet}_{truth}, \eta)$-bin, the averaged jet response is defined as the peak position of a Gaussian fit to the $E^{jet}_{EM} / E^{jet}_{truth}$ distribution.  A function $F_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $F_{calib,k}(E^{jet}_{EM})$ is parameterised as:
+To compute this quantity, reconstructed jets must be matched to isolated jets in the Monte Carlo within $\Delta R < 0.3$. The isolation requirement is applied in order to factorize the effects due to close-by jets from those due to purely detector effects such as dead material and non-compensation. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2.5R$, where $R$ is the distance parameter of the jet algorithm. The EM scale energy response is binned in truth jet energy, $E^{jet}_{truth}$, and the calorimeter jet detector $\eta$.  For each $(E^{jet}_{truth}, \eta)$-bin, the averaged jet response is defined as the peak position of a Gaussian fit to the $E^{jet}_{EM} / E^{jet}_{truth}$ distribution.  A function $F_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $F_{calib,k}(E^{jet}_{EM})$ is parameterised as:
 %
 \begin{equation}
 F_{calib,k}(E^{jet}_{EM}) = \sum_{i=0}^{N_{max}} a_i (\ln E^{jet}_{EM})^i,
@@ -90,7 +90,7 @@ For many physics analyses, the uncertainty on the JES constitutes the dominant s
 
 \begin{figure}[htbp]
   \begin{center}
-      \includegraphics[width=1\textwidth]{JESUncertainty.png}
+   \includegraphics[width=0.45\textwidth]{JESUncertainty.png}
     \caption{Fractional jet energy scale uncertainty as a function of jet $\pt$ for jets in the pseudorapidity region 0.3$ < |\eta| < $0.8 in the calorimeter barrel. The total uncertainty is shown as the solid tight blue area. The individual sources are also shown.}
     \label{fig:JESuncertainty}
   \end{center}
@@ -98,16 +98,16 @@ For many physics analyses, the uncertainty on the JES constitutes the dominant s
 
 In addition to the tests above, \emph{in situ} tests of the JES using direct $\gamma$-jet balance, multi-jet balance, and track-jets indicate that the uncertainties in Fig.~\ref{fig:JESuncertainty} reflect accurately the true uncertainties in the JES.  
 
-In the case of jets induced by bottom quarks ($b$-jets), the calorimeter response uncertainties are also evaluated using single hadron response measurements \emph{in situ}  and in test beams~\cite{ATLAS-CONF-2011-028}. For jets within $|\eta|<0.8$ and $20 \leq \pt < 250$~GeV the expected difference in the calorimeter response uncertainty of identified $b$-jets with respect to the one of inclusive jets is less than 0.5\%. It is assumed that this uncertainty extends up to $\eta < 2.5$.
+In the case of jets induced by bottom quarks ($b$-jets), the calorimeter response uncertainties are also evaluated using single hadron response measurements \emph{in situ}  and in test beams~\cite{ATLAS-CONF-2011-028}. For jets within $|\eta|<0.8$ and $20 \leq \pt < 250$~GeV the expected difference in the calorimeter response uncertainty of identified $b$-jets with respect to the one of inclusive jets is less than 0.5\%. It is assumed that this uncertainty extends up to $|\eta| < 2.5$.
 % Single hadrons with momenta up to 20GeV are selected in minimum bias sample produced in pp collisions at 7TeV taken in 2011 and the calorimeter energy (E) in a narrow cone around an isolated track is compared to the track momentum (p). In this method, jets are treated as a superposition of energy deposits of single particles. For each calorimeter deposition within the jet cone, the type of the particle inside the jet is determined and the expected mean shift and the systematic uncertainty of the calorimeter response between data and monte carlo simulation is evaluated.
 
-The JES uncertainty arising from the modelling of the $b$-quark fragmentation can be determined from systematics variations of the Monte Carlo simulation. The fragmentation function is used to estimate the momentum carried by the $B$-hadron with respect to that of the $b$-quark after quark fragmentation.   The fragmentation function included in {\sc pythia} originates from a detailed study of the $b$-quark fragmentation function in comparison with OPAL~\cite{Abbiendi:2002vt} and SLD~\cite{Abe:2002iq} data. To assess the impact of the $b$-fragmentation, the nominal parameters of the {\sc pythia} fragmentation function are replaced by the values from a tune using the Professor framework~\cite{Professor}. In addition, the nominal fragmentation function is replaced by the modified Bowler-Lund fragmentation function~\cite{BowlerLund}. The $b$-jet response uncertainty is evaluated from the ratio between the response of $b$-jets in the varied Monte Carlo samples to the nominal {\sc pythia}. The response variations are well within 2\%.
+The JES uncertainty arising from the modelling of the $b$-quark fragmentation can be determined from systematics variations of the Monte Carlo simulation. The fragmentation function is used to estimate the momentum carried by the $b$-hadron with respect to that of the $b$-quark after quark fragmentation.   The fragmentation function included in {\sc pythia} originates from a detailed study of the $b$-quark fragmentation function in comparison with OPAL~\cite{Abbiendi:2002vt} and SLD~\cite{Abe:2002iq} data. To assess the impact of the $b$-fragmentation, the nominal parameters of the {\sc pythia} fragmentation function are replaced by the values from a tune using the Professor framework~\cite{Professor}. In addition, the nominal fragmentation function is replaced by the modified Bowler-Lund fragmentation function~\cite{BowlerLund}. The $b$-jet response uncertainty is evaluated from the ratio between the response of $b$-jets in the varied Monte Carlo samples to the nominal {\sc pythia}. The response variations are well within 2\%.
 
 The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertainty and the uncertainties from the systematic Monte Carlo variations in quadrature. The resulting additional JES uncertainty for $b$-jets is shown in Fig.~\ref{fig:bjetJESuncertainty}. It is about 2\% up to $\pt \approx 100$~GeV and below 1\% for higher $\pt$. To obtain the overall $b$-jet uncertainty this uncertainty is added in quadrature to the JES uncertainty for inclusive jets.
 
 \begin{figure}[htbp]
   \begin{center}
-      \includegraphics[width=1\textwidth]{bjetJESUncertainty.png}
+      \includegraphics[width=0.45\textwidth]{bjetJESUncertainty.png}
     \caption{Additional fractional $b$-jet JES uncertainty as a function of the truth jet transverse momentum for anti-$kt$ jets with $R=0.4$ calibrated with EM+JES scheme for $|\eta| < 2.5$. Shown are systematic Monte Carlo variations using different modelling of the $b$-quark fragmentation and physics effects as well as variations in the detector geometry and the uncertainty in the calorimeter response to $b$-jets as evaluated from single hadron response measurements.  Uncertainties in the individual points are statistical only. }
     \label{fig:bjetJESuncertainty}
   \end{center}
@@ -118,7 +118,7 @@ The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertai
 \section{Reconstruction of charged particle tracks}\label{sec:trackreco}
 %------------------------------------------------------------------------
 
-The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{sec:atlasID} of Chapter~\ref{ch:lhc_atlas}. The tracking algorithm is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main steps of the tracking algorithm are the following:
+The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{atlasID} of Chapter~\ref{ch:lhc_atlas}. The tracking algorithm is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main steps of the tracking algorithm are the following:
 
 \begin{itemize}
 \item
@@ -131,7 +131,7 @@ In the track-finding stage, track seeds are found in the first three pixel layer
 
 In a complementary stage, a track search starts from segments reconstructed in the TRT and extends them inwards by adding silicon hits, which is referred to as ``back-tracking''. This recovers tracks for which the first hits in the pixel layers are missing, e.g. because they originate from secondaries, which are produced in the interaction of primaries.
 
-The final reconstructed track trajectory is usually defined at its closest point to the interaction region on the transverse plane by its impact parameters in the transverse plane and in the longitudinal direction, respectively called $d_0$ and $z_0$\footnote{Stricktly speaking the impact parameter is $|z_0|sin\theta$, where $\theta$ is the polar angle of the track.}., and by its momentum, typically expressed in azimuthal angle $\phi$, polar angle $\theta$ and inverse momentum $1/p$. 
+The final reconstructed track trajectory is usually defined at its closest point to the interaction region on the transverse plane by its impact parameters in the transverse plane and in the longitudinal direction, respectively called $d_0$ and $z_0$\footnote{Stricktly speaking the impact parameter is $|z_0|sin\theta$, where $\theta$ is the polar angle of the track.}, and by its momentum, typically expressed in azimuthal angle $\phi$, polar angle $\theta$ and inverse momentum $1/p$. 
 
  The track reconstruction efficiency is defined as the fraction of primary particles with $\pt> 400$~MeV and $|\eta|<2.5$ matched to a reconstructed track. The reconstruction efficiency for primary tracks with transverse momentum above 1~GeV and central $\eta$ is above 80\%, reaching values below 70\% for tracks at the edge of the Inner Detector acceptance. %REFERENCIAS?
 The dense environment of a jet decreases the track reconstruction efficiency and increases the fake rate. This is caused by the ocurrence of shared hits between different tracks, which makes the pattern recognition and track fitting tasks more difficult.
@@ -170,7 +170,7 @@ the primary vertex from a pile-up event may be mistakenly used as the signal ver
 %Jets are classified as $b$-quark candidates by the ATLAS MV1 $b$-tagging algorithm, based on a neural network that combines the information from three high-performance taggers: IP3D, SV1 and JetFitter \cite{ATLAS-CONF-2011-102}.  These three tagging algorithms use a likelihood ratio technique in which input variables are compared to smoothed normalized distributions for both the $b$- and background (light- or in some cases $c$-jet) hypotheses, obtained from Monte Carlo simulation.  The IP3D tagger takes advantage of the signed transverse and longitudinal impact parameter significances. The SV1 tagger reconstructs an inclusive vertex formed by the decay products of the $b$-hadron and relies on the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet and the number of two-track vertices. The JetFitter tagger exploits the topology of the primary, $b$- and $c$-vertices and combines vertex variables with the flight length significance.  The $b$-tagging performance is determined using a simulated $t\bar{t}$ sample and is calibrated using experimental data with jets containing muons and with a sample of $t\bar{t}$ events~\cite{ATLAS-CONF-2011-089}.
 
 
-The ability to identify jets originating from $bottom$-quarks (denoted as $b$-tagging in the following) is important for the high-$\pt$ physics program of a general-purpose experiment at the LHC such as ATLAS since many interesting physics processes contain $b$-quarks in the final, state while the most abundant backgrounds contain mostly up, down and strange quark or gluon jets or, in a smaller fraction of cases, charm quark jets. The aim of $b$-tagging is therefore to identify the $b$-quark jets with high efficiency, while rejecting most of the background contamination from jets originating from the fragmentation of light ($u$, $d$, and $s$) quarks, gluons and $c$-quarks.
+The ability to identify jets originating from $bottom$-quarks (denoted as $b$-tagging in the following) is important for the high-$\pt$ physics program of a general-purpose experiment at the LHC such as ATLAS since many interesting physics processes contain $b$-quarks in the final state, while the most abundant backgrounds contain mostly up, down and strange quark or gluon jets or, in a smaller fraction of cases, charm quark jets. The aim of $b$-tagging is therefore to identify the $b$-quark jets with high efficiency, while rejecting most of the background contamination from jets originating from the fragmentation of light ($u$, $d$, and $s$) quarks, gluons and $c$-quarks.
 
 A $b$-quark, once produced, fragments necessarily into a $b$-flavoured hadron, $b$-hadron in the following. In most of the cases ($\approx$87\%), first an excited $b$-hadron, like a $B^{*}$ or a $B^{**}$, which decays inmediately, strongly or electromagnetically, into a ground state $b$-hadron plus one or more further particles; while in the remaining cases, a ground state $b$-hadron is produced directly.  One is only interested in the transition from a $b$-quark into the final state $b$-hadron, since the typical timescale for electromagnetic or strong interactions is so small that the  $B^{*}$, $B^{**}$ decay vertices are not significantly displaced with respect to the primary vertex.   In most of the cases ($\approx$ 91\%) a $B$-meson is produced out of the fragmentation of an original $b$-quark (40\% $B^+$, 40\% $B^0$ and 11\% $B^0_s$). The rest are $b$-baryons.
 
@@ -218,11 +218,11 @@ For the 2011 data-taking a set of lifetime taggers were commissioned and calibra
 
 The charged particle tracks originating from $b$-hadrons are expected to have significantly higher transverse and longitudinal impact parameters compared to prompt tracks originating directly from fragmentation. If the effect of long lived particles, conversions and hadronic interactions can be reduced, the best discrimination between prompt tracks and displaced tracks from $b$- and $c$-hadron decays can be obtained using the impact parameter significance, both in the transverse and longitudianl plane. Being,
 \begin{equation}
-    IP_{r\phi} = d_0\;\;  \text{and} \;\;  IP_{z} = z_0 \sin \theta,
+    IP_{r\phi} = d_0\;\;  \mbox{and} \;\;  IP_{z} = z_0 \sin \theta,
 \end{equation}
 The transverse and longitudinal impact parameter significances are obtained by dividing $IP_{r\phi}$ and $IP_z$ by their respective errors,
 \begin{equation}
-    IP_{r\phi}/\sigma(IP_{r\phi})\;\; \text{and} \;\;  IP_{z}/\sigma(IP_{z}).
+    IP_{r\phi}/\sigma(IP_{r\phi})\;\; \mbox{and} \;\;  IP_{z}/\sigma(IP_{z}).
 \end{equation}
 %
 
@@ -230,17 +230,17 @@ On the basis that the decay point of the $b$-hadron must lie along its flight pa
 
 \begin{figure}[htbp]
   \begin{center}
-      \includegraphics[width=1\textwidth]{signedFinal.png}
+      \includegraphics[width=0.45\textwidth]{signedFinal.png}
     \caption{Lifetime sign of tracks. A positive and a negative lifetime signed track is shown.}
     \label{fig:signedIP}
   \end{center}
 \end{figure}
 
 %more formal definition of the sign
-The lifetime sign can be defined in three-dimensions, acording to the variables $\vect{\pt}_{jet}$, $\vect{\pt}_{trk}$ and $\vect{\Delta r}_{IP} = \vect{r}_{IP} = \vect{r}_{PV}$, the three-dimensional impact parameter of the track with respect to the primary vertex:
+The lifetime sign can be defined in three-dimensions, acording to the variables $\vec{\pt}_{jet}$, $\vec{\pt}_{trk}$ and $\vec{\Delta r}_{IP} = \vec{r}_{IP} = \vec{r}_{PV}$, the three-dimensional impact parameter of the track with respect to the primary vertex:
 %
 \begin{equation}
-sign_{3D} = sign([\vect{p}_{trk} \times \vect{p}_{jet}]\cdot[\vect{p}_{trk} \times \vect{\Delta r}_{IP} ]).
+sign_{3D} = sign([\vec{p}_{trk} \times \vec{p}_{jet}]\cdot[\vec{p}_{trk} \times \vec{\Delta r}_{IP} ]).
 \end{equation}
 %
 The computation of the lifetime sign assumes that the jet direction reproduces, up to a good approximation, the $b$-hadron direction. Under this assumption and up to resolution effects both on the jet direction and on the impact parameter and momentum of the track, the lifetime sign of tracks originating from $b$-hadron decays is positive.
@@ -248,33 +248,35 @@ The computation of the lifetime sign assumes that the jet direction reproduces, 
 The lifetime sign can also be defined on the transverse plane $(x-y)$ or on the longitudinal plane $(r\phi-z)$ by considering respectively the transverse and longitudinal impact parameters (the projections of the three-dimensional impact parameter on the respective planes):
 %
 \begin{equation}
-\text{sign}_{r\phi} = \text{sign}(\sin(\phi_{jet} - \phi_{trk})\cdot d_{0,trk}); \; \text{and} \; \text{sign}_{z} = \text{sign}((\eta_{jet} - \eta_{trk})\cdot z_{0,trk}).
+\mbox{sign}_{r\phi} = \mbox{sign}(\sin(\phi_{jet} - \phi_{trk})\cdot d_{0,trk}); \; \mbox{and} \; \mbox{sign}_{z} = \mbox{sign}((\eta_{jet} - \eta_{trk})\cdot z_{0,trk}).
 \end{equation}
 %
-%PLOTS
-Distributions for the transverse and longitudinal impact parameter significance are shown in Fig.~\ref{fig:IPsignificance}; the sign of the transverse impact parameter is defined by ``sign$_{r\phi}$'', while the longitudinal impact parameters significance uses ``sign$_z$''.  %Tracks from the fragmentation in light-jets have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions.
+%PLOTS TO DO
+%Distributions for the transverse and longitudinal impact parameter significance are shown in Fig.~\ref{fig:IPsignificance}; the sign of the transverse impact parameter is defined by ``sign$_{r\phi}$'', while the longitudinal impact parameters significance uses ``sign$_z$''.  
+Tracks from the fragmentation in light-jets tend to have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions.
 %%%%Extra info
 % The definition for sign$_r\phi$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, that the longitudinal component of the lifetime sign is diluting the information from the transverse component.
 
 
-\begin{figure}[htbp]
-  \begin{center}
-      \includegraphics[width=1\textwidth]{IPsignificancesPlots.png}
-    \caption{Impact parameters of tracks associated to light, $c$- and $b$-jets in the transverse and longitudinal direction.}
-    \label{fig:IPsignificance}
-  \end{center}
-\end{figure}
+%\begin{figure}[htbp]
+%  \begin{center}
+%    \includegraphics[width=0.49\textwidth]{IPd0significancesPlots.png}
+%    \includegraphics[width=0.49\textwidth]{IPz0significancesPlots.png} 
+%    \caption{Impact parameters of tracks associated to light, $c$- and $b$-jets in the transverse and longitudinal direction.}
+%    \label{fig:IPsignificance}
+%  \end{center}
+%\end{figure}
 
 The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters. Now, the impact parameter significance of all $N$ tracks associated to the jet to tag need to be combined into a single discriminating variable. It is assumed that tracks are uncorrelated, so their probability density functions (PDF), defined based on the transverse and/or longitudinal impact parameter significance distributions for the different hipothesis, are uniquely  defined as a function of the jet flavour. Using a likelihood function defined according to the product of these PDFs, under the hypothesis of uncorrelated tracks, the following likelihood ratio provides the optimal separation, according to Neyman-Person lemma~\cite{1933RSPTA.231..289N}:
 %
 \begin{equation}
-\text{LR}(IP_1,IP_2,...,IP_N) = \frac{\prod_{i=1}^N \text{PDF}_b(IP_i)}{\prod_{i=1}^N \text{PDF}_l(IP_i)}
+\mbox{LR}(IP_1,IP_2,...,IP_N) = \frac{\prod_{i=1}^N \mbox{PDF}_b(IP_i)}{\prod_{i=1}^N \mbox{PDF}_l(IP_i)}
 \end{equation}
 %
 For convention, the discriminant variable used for $b$-tagging is then defined as:
 %
 \begin{equation}
-\text{weight}(IP_1,IP_2,...,IP_N) = \log(\text{LR}(IP_1,IP_2,...,IP_N))
+\mbox{weight}(IP_1,IP_2,...,IP_N) = \log(\mbox{LR}(IP_1,IP_2,...,IP_N))
 \end{equation}
 %
 Using such a formalism, two impact parameter based $b$-tagging algorithms are constructed, based on the definition of PDF($IP_i$):
@@ -283,7 +285,7 @@ Using such a formalism, two impact parameter based $b$-tagging algorithms are co
 \item
 1. IP2D: PDF($IP_i$) = PDF($IP_{i,r\phi}$)
 \item
-2. IP3D:  PDF($IP_i$) = PDF($IP_{i,r\phi}$,$IP_z$)
+2. IP3D:  PDF($IP_i$) = PDF($IP_{i,r\phi}$,$IP_{i,z}$)
 \end{itemize}
 
 In the first case the track PDF is one-dimensional, based on the transverse impact parameter significance. In the second case the PDF is based on a two-dimensional histogram of the transverse and longitudinal impact parameter significance. 
@@ -294,7 +296,7 @@ The \textbf{IP3D} is one of the high-performance tagging algorithms supported fo
 
 The impact parameter based algorithm permits to obtain a very good $b$-tagging performance, as will be shown at the end of this chapter. 
 %One of the reason of the good performance is that the likelihood method contains implicity, as a prior knowledge in the PDF for $b$-jets, the fraction of tracks expected to arise from fragmentation and the fracion expected to arise from $b$ and $c$-hadron decays. This Method has also a few drawbacks. One is that it does not account for the momentum dependence of the PDFs. And the second is that, while the impact parameter as such is nearly invariant under Lorentz boosts of the $b$-hadron, the error decreases with increasing track $\pt$ and smaller $\eta$. The track-based PDF is thus not invariant neither under a boost of the $b$-quark nor under a boost of its emerging charged particle tracks.This can be cured both by making a track-PDF category dependent. This approach was tried out in ATLAS with significant improvement in performance, but has the disadvantage of increasing the number of free parameters of the likelihood model and making an eventual calibration on data more difficult.
-This performance can be improved by using some information from the secondary vertex based vertexing algorithms in two aspects: tracks associated to long lived particle vertices can be removed from the tracks considered for the impact parameter based algorithms; and, the direction between the secondary and the primary vertex positions can be used to improve the reliability of the lifetime sign, subtituting $\vect{p}_{jet}$ with $\vect{r}_{SV} - \vect{r}_{PV} $. The latter improves significantly the estimation of the $b$-hadron direction. Both kinds of information improve the performance of the impact parameter based $b$-tagging algorithms.
+This performance can be improved by using some information from the secondary vertex based vertexing algorithms in two aspects: tracks associated to long lived particle vertices can be removed from the tracks considered for the impact parameter based algorithms; and, the direction between the secondary and the primary vertex positions can be used to improve the reliability of the lifetime sign, subtituting $\vec{p}_{jet}$ with $\vec{r}_{SV} - \vec{r}_{PV} $. The latter improves significantly the estimation of the $b$-hadron direction. Both kinds of information improve the performance of the impact parameter based $b$-tagging algorithms.
 
 
 \subsubsection{Secondary vertex based $b$-tagging algorithms }
@@ -305,7 +307,7 @@ Two strategies to detect a secondary decay vertex in $b$-jets are available in A
 
 The inclusive fit of a single displaced vertex in $b$-jets is based on the VKalVrt~\cite{Kostyukhin:685551} reconstruction package. The main idea of the algorithm implemented in this package is to maximise the $b/c$-hadron vertex detection efficiency, keeping at the same time the probability to find a vertex inside a light jet low. 
 
-The algorithm starts with all tracks associated to the jet and passing a loose cut selection. The vertex search starts with looking for all track pairs and trying to form a two-track vertex. Each track of the pair must have a three-dimensional impact parameter significance with respect to the primary vertex larger than 2$\sigma$ and the sum of these two significances must be larger than 6$\sigma$. To reduce the influence of badly measured tracks, the two-tracks vertices are required to be produced in the direction of flight of the $b$-quark, by requiring the scalar product of $(\vect{r}_{2-track} - \vect{r}_{PV})\cdot \vect{p}_{jet} $ to be positive. Charged particles coming from long lived particles and conversions are not considered for the inclusive $b$-decay vertex fit. All the corresponding to the accepted two-track vertices are used to determined a single secondary vertex.  If the resulting vertex has a very small vertex probability, the track with the highest constribution to the vertex $\chi^2$  is removed from the vertex fit and the vertex fit is repeated until the $\chi^2$ of the vertex fit is good. The result of this procedure is the (eventual) presence of a vertex, its position, and the list of its associated tracks.
+The algorithm starts with all tracks associated to the jet and passing a loose cut selection. The vertex search starts with looking for all track pairs and trying to form a two-track vertex. Each track of the pair must have a three-dimensional impact parameter significance with respect to the primary vertex larger than 2$\sigma$ and the sum of these two significances must be larger than 6$\sigma$. To reduce the influence of badly measured tracks, the two-tracks vertices are required to be produced in the direction of flight of the $b$-quark, by requiring the scalar product of $(\vec{r}_{2-track} - \vec{r}_{PV})\cdot \vec{p}_{jet} $ to be positive. Charged particles coming from long lived particles and conversions are not considered for the inclusive $b$-decay vertex fit. All the tracks corresponding to the accepted two-track vertices are used to determined a single secondary vertex.  If the resulting vertex has a very small vertex probability, the track with the highest constribution to the vertex $\chi^2$  is removed from the vertex fit and the vertex fit is repeated until the $\chi^2$ of the vertex fit is good. The result of this procedure is the (eventual) presence of a vertex, its position, and the list of its associated tracks.
 
 The \textbf{SV1} secondary vertex algorithm uses this procedure to reconstruct inclusive secondary vertices. This advanced tagger takes advantage of three of the reconstructed vertex properties: the invariant mass of all tracks associated to the vertex, the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet, and the number of two-track vertices. These variables are combined using a likelihood ratio technique. SV1 relies on a two-dimensional distribution of the two first variables and a one-dimensional distribution of the number of two-track vertices. In addition the distance $\Delta R$ between the jet axis and the line joining the primary vertex to the secondary one is used. 
 
@@ -331,13 +333,13 @@ is labeled as a light jet. No attempt is made to distinguish light jets originat
 
 \begin{figure}[htbp]
   \begin{center}
-      \includegraphics[width=1\textwidth]{btaggingperformance.png}
+      \includegraphics[width=0.491\textwidth]{btaggingperformance.png}
     \caption{Light-jet rejection as a function of the $b$-jet tagging efficiency for the early tagging algorithms (JetProb and SV0) and for the high-performance algorithms, based on simulated $t\bar{t}$ events. }
     \label{fig:btaggingperformance}
   \end{center}
 \end{figure}
 
-By combining the vertexing techniques and the impact parameter information, the IP3D+SV1 and IP3D+JetFitter algorithms can reach very high tagging efficiencies.
+%By combining the vertexing techniques and the impact parameter information, the IP3D+SV1 and IP3D+JetFitter algorithms can reach very high tagging efficiencies.
 
 
 \subsubsection{The MV1 tagging algorithm}
@@ -351,61 +353,45 @@ The \textbf{MV1} $b$-tagging algorithm is a combined algorithm based on a neural
 \subsection{$b$-tagging calibration}
 
 
-In order for $b$-tagging to be used in physics analyses, the efficiency with which a jet originating from a $b$-quark is tagged by a $b$-tagging algorithm needs to be measured in data.  Morover, an appropriate description of the $b$-tagging efficiencies based on measurements with data is essential for correctly modelling the measurements in Monte Carlo simulation . A second necessary piece of information is the probability of mistakenly tagging a jet originating from a light-flavour ($u$-, $d$-, $s$-quark or gluon) jet as a $b$-jet, referred to as the mistag rate. The ``calibration'' includes both the measurement of the mis-tag rates and $b$-tagging efficiency.
+In order for $b$-tagging to be used in physics analyses, the efficiency with which a jet originating from a $b$-quark is tagged by a $b$-tagging algorithm needs to be measured in data.  Morover, an appropriate description of the $b$-tagging efficiencies based on measurements with data is essential for correctly modelling the measurements in Monte Carlo simulation . A second necessary piece of information is the probability of mistakenly tagging a jet originating from a light-flavour ($u$-, $d$-, $s$-quark or gluon) jet as a $b$-jet, referred to as the mistag rate. The $b$-tagging ``calibration'' includes both the measurement of the mis-tag rates and $b$-tagging efficiency.
 
 
-The measurements of the $b$-tag efficiency and mistag rate are provided in the form of jet $\pt$- and $\eta$-dependent scale factors that correct the $b$-tagging performance in simulation to that observed in data.  The scale factors defined as the ratio of the $b$-tag efficiency or mistag rate in data and simulation:
+The measurements of the $b$-tag efficiency and mistag rate are provided in the form of jet $\pt$- and $\eta$-dependent scale factors that correct the $b$-tagging performance in simulation to that observed in data.  The scale factors are defined as the ratio of the $b$-tag efficiency or mistag rate in data and simulation:
 %
 \begin{equation}
 \kappa_{\epsilon_b}^{data/sim}  = \frac{\epsilon_b^{data}}{\epsilon_b^{sim}}, \; \;   \kappa_{\epsilon_l}^{data/sim}  = \frac{\epsilon_l^{data}}{\epsilon_l^{sim}},
 \end{equation}
 %
-where $\epsilon_b^{sim}$ and $\epsilon_l^{sim}$ are the fractions of $b$- and light-flavour jets which are tagged in an inclusive sample of simulated $t\bar{t}$ events, with the jet flavour defined by matching to generator level partons as defined in the previous section. %The measured $b$-tag efficiencies and mistag rates will depend on the jet transverse momentum $\pt$ and the pseudorapidity $\eta$.  %They also depend on other quantities such as the fraction of jets in the sample originating from gluons. An advantage of providing the calibration results in the form of scale factors is that even though samples with different event topologies can have slightly different $b$-tag efficiencies or mistag rates, the data-to-simulation scale factors are likely to be valid.
+where $\epsilon_b^{sim}$ and $\epsilon_l^{sim}$ are the fractions of $b$- and light-flavour jets which are tagged in simulated events, %an inclusive sample of simulated $t\bar{t}$ events,
+ with the jet flavour defined by matching to generator level partons as defined in the previous section. %The measured $b$-tag efficiencies and mistag rates will depend on the jet transverse momentum $\pt$ and the pseudorapidity $\eta$.  %They also depend on other quantities such as the fraction of jets in the sample originating from gluons. An advantage of providing the calibration results in the form of scale factors is that even though samples with different event topologies can have slightly different $b$-tag efficiencies or mistag rates, the data-to-simulation scale factors are likely to be valid.
 
-In physics analyses, these $\pt$-dependent scale factors are then ap plied as weights to the jets in Monte Carlo simulation, to reproduce the b-tagging performance measured in data.
+In physics analyses, these $\pt$-dependent scale factors are then applied as weights to the jets in Monte Carlo simulation, to reproduce the $b$-tagging performance in data.
 
 
-The main b-tagging efficiency calibration methods used so far, the so called \emph{system8} and \emph{p_{rel}} methods are described in detail in ref~\cite{ATLAS-CONF-2011-089}.% based on an integrated luminosity of L = 4.7 fb−1 collected in 2011. 
+The main $b$-tagging efficiency calibration methods, the so called \emph{system8} and $p_{rel}$ methods are described in detail in ref~\cite{ATLAS-CONF-2011-089}.% based on an integrated luminosity of L = 4.7 fb−1 collected in 2011. 
 These measurements are based on a sample of jets with muons inside, where the muons are serving as a reference $b$-tagging algorithm to obtain a $b$-jet sample on which the calibrations can be performed. 
-At the LHC, the large $t\bar{t}$ production cross section of $\sigma_{t\bar{t}} = 177 ± 3(\text{stat.})+8 (\text{sys.}) ± 7(\text{lum.})$~pb~\cite{ttbarXsection??????} offers an alternative source of events enriched in $b$-jets. % This distinctive topology with high pT leptons, multiple jets, and large missing transverse momentum provides highly selective trigger objects and is relatively easy to reconstruct. With the large integrated luminosity of 4.7 fb−1 collected during 2011, the methods based on tt selections have become competitive for the first time. In addition to providing b-tagging calibration measurements in an inclusive b-jet sample rather than a sample of semileptonic b-jets. In addition to providing b-tagging calibration measurements in an inclusive b-jet sample rather than a sample of semileptonic b-jets, these methods  methods also allow to extend the calibrated pT range. Furthermore, the tt environment of high jet  multiplicity and high pT b-jets is more similar to the final states to which b-tagging is applied than the semileptonic jet sample.
+At the LHC, the large $t\bar{t}$ production cross section of $\sigma_{t\bar{t}} = 177 ± 3(\mbox{stat.})+8 (\mbox{sys.}) ± 7(\mbox{lum.})$~pb~\cite{ATLAS-CONF-2012-024} offers an alternative source of events enriched in $b$-jets. % This distinctive topology with high pT leptons, multiple jets, and large missing transverse momentum provides highly selective trigger objects and is relatively easy to reconstruct. With the large integrated luminosity of 4.7 fb−1 collected during 2011, the methods based on tt selections have become competitive for the first time. In addition to providing b-tagging calibration measurements in an inclusive b-jet sample rather than a sample of semileptonic b-jets. In addition to providing b-tagging calibration measurements in an inclusive b-jet sample rather than a sample of semileptonic b-jets, these methods  methods also allow to extend the calibrated pT range. Furthermore, the tt environment of high jet  multiplicity and high pT b-jets is more similar to the final states to which b-tagging is applied than the semileptonic jet sample.
+Calibrations using samples of $t\bar{t}$ events have been obtained for SV0, IP3D+SV1, JetFitter and MV1 $b$-tagging algorithms~\cite{ATLAS-CONF-2012-097}. All these algorithms provide an output weight $w$, discriminating between $b$-jets and non-$b$-jets. Lower values of $w$ are assigned to $c$- and light-flavour jets, whereas the purity of $b$-jets increases with $w$. For each $b$-tagging algorithm a set of operating points, corresponding to a certain $w$ cut value, are defined and calibrated:
 
-Calibrations using samples of $t\bar{t}$ events have been obtained for SV0, IP3D+SV1, JetFitter and MV1 $b$-tagging algorithms~\cite{?????}. The above b-tagging algorithms all provide an output weight $w$, discriminating between $b$-jets and non-$b$-jets. Lower values of $w$ are assigned to $c$- and light-flavour jets, whereas the purity of $b$-jets increases with $w$. For each $b$-tagging algorithm a set of operating points, corresponding to a certain $w$ cut value, are defined and calibrated:
-• SV0: εsim = 50%
-b
-• IP3D+SV1: εsim = 60%, εsim = 70%, εsim = 80%
-b
-b
-b
-sim
-• JetFitter: εsim = 57%, εsim = 60%, εsim = 70%, εb = 80%
-b
-b
-b
-sim
-• MV1: εsim = 60%, εsim = 70%, εb = 75%, εsim = 85%
-b
-b
-b
- ̄
-
+\begin{itemize}
+\item
+SV0: $\epsilon_b^{sim} =$ 50\%
+\item
+IP3D+SV1: $\epsilon_b^{sim} =$ 60\%, $\epsilon_b^{sim} =$ 70\%, $\epsilon_b^{sim} =$ 80\%
+\item
+JetFitter: $\epsilon_b^{sim} =$ 57\%, $\epsilon_b^{sim} =$ 60\%,  $\epsilon_b^{sim} =$ 70\%, $\epsilon_b^{sim} =$ 80\%
+\item
+MV1: $\epsilon_b^{sim} =$ 60\%, $\epsilon_b^{sim} =$ 70\%, $\epsilon_b^{sim} =$ 75\%, $\epsilon_b^{sim} =$ 85\%
+\end{itemize}
+%
+where  $\epsilon_b^{sim}$ is the nominal $b$-tagging efficiency derived from an inclusive sample of simulated $t\bar{t}$ events.
 
 %http://cdsweb.cern.ch/record/1435194
-The mistag rate is measured in data using two methods, both based on an inclusive sample of jets.
-The two methods, referred to as the negative tag and sv0mass methods, are briefly described in the
-following. More details can be found in [3].
+The mistag rate is measured in data using two methods, both based on an inclusive sample of jets, referred to as the $negative tag$ and $sv0mass$ methods~\cite{ATLAS-CONF-2012-040}. The first method uses the invariant mass spectrum of tracks associated with reconstructed secondary vertices to separate light and heavy-flavour jets, and the other is based on the rate at which secondary vertices with negative decay length, or tracks with negative impact parameter, are present in the data.
 
 
-
-Currently, there is no explicit measurement of the c-tag efficiency available in ATLAS. As both the
-b- and c-tag efficiencies are dominated by decays of long-lived heavy flavour hadrons, they are expected
-to show a similar behaviour. In the following it is thus assumed that the scale factor defined in Eq. 1
-is the same for b- and c-jets. However, to take into account possible deviations from this assumption,
-the systematic uncertainty for the c-tag efficiency scale factor is inflated by a factor of two, which is
-1
-considered to be a conservative choice based on simulation studies. In the future, the c-tag efficiency
-will be measured in dedicated analyses.
-
-
+Currently, there is no explicit measurement of the $c$-tag efficiency available in ATLAS. As both the
+$b$- and $c$-tag efficiencies are dominated by decays of long-lived heavy flavour hadrons, they are expected to show a similar behaviour. In general, for physics analyses, it is thus assumed that the scale factor is the same for $b$- and $c$-jets. However, to take into account possible deviations from this assumption, the systematic uncertainty for the $c$-tag efficiency scale factor is inflated by a factor of two, which is considered to be a conservative choice based on simulation studies. In the future, the $c$-tag efficiency will be measured in dedicated analyses.
 
 
 
