@@ -261,7 +261,6 @@ Eccentricity %(track & calo)
 \end{itemize}
 
 
-%Figures~\ref{fig:ntrksinglemerged} to~\ref{fig:tauratiosinglemerged} show the distributions and correlations of some of these variables in selected bins of $b$-tagged jet $\pt$. 
 
 { \em I. Jet track multiplicity}
 \\[3mm]
@@ -276,12 +275,24 @@ This variable is defined as the number of tracks associated to the jet, it is si
 
 { \em II. Jet width}
 \\[3mm]
- The jet width was computed as the $\pt$ weighted average of the $\Delta R$ distance between the associated constituent (``$const$'') and the jet axis:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The jet width is part of a set of continuous variables that try to distinguish individual particles/subjets within the jet as a smooth funcion of $(\delta \eta, \delta \phi)$ away from the jet axis, in order to form combinations like geometric moments.  This particular combination sums the distances between the jet constituents and its axes, weighted by the constituent $\pt$, and then normalized to the total $\pt$ of the jet. The compact definition is 
+%
 \begin{equation} 
 \mbox{ {\it Jet width}} = \frac{\sum_{i=1}^N \pt^{const_i} \,\Delta R (const_i,jet) }{\sum_{i=1}^N \pt^{const_i} }
 \label{eqn:trackjetwidth}
 \end{equation} 
-where $N$ is the total number of calorimeter or track constituents.
+%
+where $N$ is the total number of calorimeter or track constituents.  This observable is also highly correlated to the mass of the jet.
+
+This linear radial moment is a measure of the width or ``girth''~\cite{PhysRevLett.105.022001} of the jet.  Under the assumption of central jets with massless constituents at small angles, this linear moment is identical to jet broadening~\cite{Catani1992269}, defined as the sum of momenta transverse to the jet axis normalized by the sum of momenta. While jet broadening is natural at an $e^+ e^-$ collider, the linear radial moment is more natural at the LHC.
+
+An alternative approach to measuring the width is to use the angular separation of the two hardest constituents inside jets. This has the advantage of effectively removing any dependence on the shower development within the calorimeter and focuses on the hard component of the jet.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure~\ref{fig:trkwidthsinglemerged} shows the distribution for the Track-jet width. As expected, merged $b$-jets are wider than single $b$-jets. In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the jet track multiplicity is shown for single and merged $b$-jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ jets.
 
@@ -355,6 +366,36 @@ The distribution of the $\Delta R$ between the axes of the two exclusive $k_t$ s
 { \em V. $N$-subjettiness variables}
 \\[3mm]
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As mentioned above, the $N$-subjettiness~\cite{nsubjettiness} is a jet shape that describes the energy flow within a jet. It quantifies the degree to which  radiation is aligned along specified subjet axes. This jet shape was adapted from the event shape $N$-jettiness~\cite{njetti}.
+
+Given candidate subjets directions determined by an external algorithm such as the exclusive $k_t$ procedure~\cite{exclusivekt}, the variables is defined as,
+
+
+\begin{equation} 
+\tau^{(\beta)}_N = \frac{1}{\sum_k {\pt}_k\,(R_0)^{\beta}} \sum_k {\pt}_k (\min \{ \Delta R_{j1,k},\,\Delta R_{j2,k},...,\,\Delta R_{jN,k} \})^{\beta}
+\label{eqn:nsubjet}
+\end{equation} 
+
+The sum runs over the $k$ constituent particles in a given jet where $p_{T,k}$ are their transverse momenta, and $\Delta R_{j1,k}$ is the distance between the candidate subjet $j1$ and a constituent particle $k$.  $R_0$ is the characteristic jet radius used in the original jet clustering algorithm.
+The exponential weight, $\beta$, can optionally be applied to the angular distance computed between the subjets and the jet constituents.  
+
+This jet shape was designed to identify boosted $N$-prong hadronic decays. With $\beta=1$, the definition above indicates that jets with $\tau_N\approx 0$ have all their radiation aligned with the candidate subjet directions and therefore have $N$ (or fewer) subjets. Jets with $\tau_N\gg 0$ have a large fraction of their energy distributed away from the candidate subjet direction and therefore have at least $N+1$ subjets.
+
+To separate boosted hadronic objects from the QCD jet background, one could use the complete set of  $\tau_N$ (with different values of $\beta$) in a multivariate analysis. However, \cite{nsubjettiness} showed that a simple cut on the ratio $\tau_N/\tau_{N-1}$ provides excellent discrimination power for $N$-prong hadronic objects. In particular, $\tau_2/\tau_1$ can identify boosted $W/Z$ and Higgs bosons, with the angular weighting exponent $\beta =1$ providing the best discrimination.
+
+Since eq.~\ref{eqn:nsubjet} is linear in each of the constituent particle momenta, this variable is an infrared- and colliner-safe observable.  In subsequent work~\cite{mininsubjettiness}, Thaler and van Tilburg showed that the initial step of choosing candidate subjet axes is in fact unnecessary. In particular, the quantity in equation~\ref{eqn:nsubjet} can be minimised over the candidate subjet directions, further improving boosted object discrimination.
+
+The definition of $N$-subjettiness is not unique, and different choises can be sued to give different weights to the emissions within a jet. There generalizations of $N$-subjettiness are similar to different ``angularities''~\cite{angularities} used in $e^+e^- \rightarrow$hadrons measurements.
+
+
+%From Nsubjettiness paper
+%use $N$-subjettiness to effectively ``count'' the number of subjets in a jet. Compare to previous jet substructure techniques, $N$-subjettiness  has the advantage of finding jets that contain two or more lobes of energy.
+%Subjet candidates where determined by using the exclusive $k_t$ algorithm, forcing it to return exactly $N$ jets.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 $N$-subjettiness variables, as described in Ref.~\cite{nsubjettiness}, were originally designed to identify boosted objects, like electroweak bosons and top quarks, decaying into collimated shower of hadrons which a standard jet algorithm would reconstruct as single jets. It is defined as:
 \begin{equation} 
 \tau_N = \frac{1}{\sum_k {\pt}_k\,R_0} \sum_k {\pt}_k \min \{ \Delta R_{S_1,k},\,\Delta R_{S_2,k},...,\,\Delta R_{S_N,k} \}
@@ -397,6 +438,12 @@ $\tau_2$. Fig.~\ref{fig:tauratiosinglemerged} thus shows the distributions of $\
 { \em VI. Jet Mass}
 \\[3mm]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The jet mass, like the linear radial moment, also depends on the radiation pattern of the event. It is the most basic observable for disinguishing massive boosted objects from jets originating from quarks or gluons. The latter are expected to be dominated by wide-angle emissions, with increase probability to see high mass jets initiated from gluons as opposed to quarks~\cite{PhysRevD.79.074012}.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 Figure~\ref{fig:masssinglemerged} shows the distribution of the jet mass for single and merged $b$-jets.
 \\[3mm]
 
@@ -408,8 +455,27 @@ Figure~\ref{fig:masssinglemerged} shows the distribution of the jet mass for sin
 \label{fig:masssinglemerged}
 \end{figure}
 
+
+
 { \em VII. Number of $k_t$ subjets}
 \\[3mm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With the development of the $k_t$ algorithm, subjets were first used in the description of the hadronic final state in $e^+e^-$ annihilation, such as the study of the jet multiplicity at different energy scales~\cite{Catani1992445}. By using the sequential recombination algorithms introduced in the previus section, it is straightforward to define a ``subjet algorithm'' in which the structure of the jet's constituents is resolved using either the same jet finder algorithm or a new one with a fixed (smaller) distance parameter.
+
+The subjet multiplicity $-$ the number of subjets within a jet $-$ provides information on the distribution of energy and multiplicity of particles within a jet. For instance, in~\cite{Snihur1999494} the result of meassuring this ``radiation variable'' on quark- and gluon-initiated jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity. This result is consistent with the QCD prediction that gluons radiate more than quarks. In the case of this and different other analyses % see for instance  http://iopscience.iop.org/1126-6708/1999/09/009/
+the $k_t$ algorithm is rerun for subjet finding.
+
+As an alternative to fixed distance parameter subjets, it is also possible to undo the last step in the recombination sequence~\cite{kt2} in order to identify the decay products of an object.  This approach is used in seveal jet grooming procedures\footnote{Jet grooming comprises dedicated techniques to remove uncorrelated radiation within a jet. A review of these procedures can be found in~\cite{Abdesselam:2010pt}. }, see for instance~\cite{pruning}.
+
+%In contrast to the $k_t$ algorithm, it is not useful just to undo the last stage of C/A clustering: The absence of any momentum scale in its distance measure means that the last clustering often involves soft radiation on the edges of the jet and so, is unrelated to the heavy object's decay. 
+%The so-called BDRS method of jet grooming
+%http://prl.aps.org/abstract/PRL/v100/i24/e242001
+% uses the C/A algorithm. Subjets are then defined by de-clustering the C/A algorithm and evaluating the relative mass of the subjets compared to the parent jet. As a final step, the three hardest identified subjets are recombined to define the resulting ``filtered'' jet.
+
+It is also possible to extend the use of individual subjets in conjunction with more traditional jet shape variables. Using these tools, an inclusive jet shape based on the substructure topology of a single jet, ``$N$-subjettiness''~\cite{nsubjettiness} is defined.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 Figure~\ref{fig:nsubjetsinglemerged} shows the distribution of the number of sub-track-jets single and merged $b$-jets.
 \\[3mm]
@@ -440,6 +506,24 @@ Figure~\ref{fig:drtrk12singlemerged} shows the distribution of the number  $\Del
 
 { \em IX. Jet eccentricity}
 \\[3mm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In defining a jet moment there are several ways to weight the momentum and define the center of the jet. We have defined the jet width as the first moment of the transverse energy with respect to the jet axis; another example of useful combination is the jet pull~\cite{PhysRevLett.105.022001}. But it is also natural to look at higher moments, such as those contained in the covariance tensor,
+
+\[ C = \sum_{i\in jet}\frac{p^i_T|r_i|}{p^{jet}_T} \left( \begin{array}{cc}
+ \Delta y^2_i & \Delta y_i \Delta\phi_i \\ 
+ \Delta\phi_i \Deltay_i & \Delta \phi^2_i \end{array} \right). \]
+
+
+Here, $\vect{r}_i = (\Delta y_i, \Delta \phi_i) = \vect{c}_i - \vect{J}$, where $\vect{J} = (y_J,\phi_J)$ is the location of the jet and $\vect{c}_i$ is the position of a cell or particle with transverse momentum $p^i_T$. The eigenvalues $a \geq b$ of this tensor are similar to the semimajor and semiminor axes of an elliptical jet. The jet eccentricity, defined below, is a combination of these eigenvalues, and it is a measure of how elongated is the area of a jet.
+
+\begin{equation} 
+e = \sqrt{\frac{(a^2 - b^2)}{a}}
+\label{eqn:ecc}
+\end{equation}
+
+%No significan difference in eccentricity was found between quark and gluon jets.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet track-eccentricity for single and merged $b$-jets.
 \\[3mm]
