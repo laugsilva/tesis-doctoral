@@ -1,6 +1,21 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
+A level-1 auxiliary file: Introduction/introduction.aux
+A level-1 auxiliary file: Introduction/theory.aux
+White space in argument---line 22 of file Introduction/theory.aux
+ : \citation{Current
+ :                   Algebra}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Introduction/lhc_atlas.aux
+A level-1 auxiliary file: Introduction/reconstruction.aux
 A level-1 auxiliary file: Main/core.aux
+Case mismatch error between cite keys GEANT4 and Geant4
+---line 13 of file Main/core.aux
+ : \citation{GEANT4
+ :                 }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Main/core_mva.aux
+A level-1 auxiliary file: Summary/summary.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 541 of file tesis.bib
@@ -17,10 +32,13 @@ Repeated entry---line 973 of file tesis.bib
  : @article{JESnote
  :                 ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1418 of file tesis.bib
- :       
- :       title        = "{Performance of the ATLAS Secondary Vertex b-tagging Algorithm in 7 TeV Collision Data}",
-(Error may have been on previous line)
+Repeated entry---line 1408 of file tesis.bib
+ : @article{ATLAS-CONF-2010-091
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1416 of file tesis.bib
+ : @article{ATLAS-CONF-2010-042
+ :                             ,
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 1426 of file tesis.bib
  :       
@@ -51,10 +69,17 @@ I was expecting a `,' or a `}'---line 1509 of file tesis.bib
  :        title        = "{ATLAS Calorimeter Response to Single Isolated Hadrons and Estimation of the Calorimeter Jet Scale Uncertainty}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1592 of file tesis.bib
- :        
- :        title        = "Performance of primary vertex reconstruction in
-(Error may have been on previous line)
+Repeated entry---line 1547 of file tesis.bib
+ : @article{Professor
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1590 of file tesis.bib
+ : @article{ATLAS-CONF-2010-069
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1612 of file tesis.bib
+ : @article{ATLAS-CONF-2010-091
+ :                             ,
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 1630 of file tesis.bib
  :       
@@ -65,52 +90,86 @@ Illegal end of database file---line 1654 of file tesis.bib
  : }
  :  
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "GSP"
+Warning--I didn't find a database entry for "Zweig:1964j"
+Warning--I didn't find a database entry for "1126-6708-2008-07-07"
+Warning--I didn't find a database entry for "CamAchen"
+Warning--I didn't find a database entry for "ATLAS-CONF-2012-040"
+Warning--empty journal in Abe:1999vw
+Warning--empty journal in PhysRevLett.74.2626
+Warning--empty year in PhysRevLett.74.2626
+Warning--empty journal in PhysRevLett.74.2422
+Warning--empty year in PhysRevLett.74.2422
+Warning--empty journal in :2012gk
+Warning--empty journal in Zweig2
 Warning--empty author in Pythia_MC11tune
 Warning--empty journal in Perugia
-Warning--empty journal in topoClusters
-Warning--there's a number but no volume in topoClusters
-Warning--empty journal in CSC
 Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
 while executing---line 944 of file unsrt.bst
-You've used 35 entries,
+Warning--empty journal in Abbiendi:2007aa
+Warning--empty journal in Aad:2012np
+Warning--empty journal in ATLAS
+Warning--empty title in Asquith:1311867
+Warning--empty journal in Asquith:1311867
+Warning--empty year in Asquith:1311867
+Warning--empty title in Busato:1271710
+Warning--empty journal in Busato:1271710
+Warning--empty year in Busato:1271710
+Warning--empty journal in topoClusters
+Warning--there's a number but no volume in topoClusters
+Warning--empty title in ATLAS-CONF-2011-028
+Warning--empty journal in ATLAS-CONF-2011-028
+Warning--empty year in ATLAS-CONF-2011-028
+Warning--empty title in ATLAS-CONF-2010-069
+Warning--empty journal in ATLAS-CONF-2010-069
+Warning--empty year in ATLAS-CONF-2010-069
+Warning--empty author in ATLAS-CONF-2012-024
+Warning--empty title in ATLAS-CONF-2012-024
+Warning--empty journal in ATLAS-CONF-2012-024
+Warning--empty year in ATLAS-CONF-2012-024
+Warning--empty title in ATLAS-CONF-2012-097
+Warning--empty journal in ATLAS-CONF-2012-097
+Warning--empty year in ATLAS-CONF-2012-097
+Warning--empty journal in CSC
+You've used 103 entries,
             1791 wiz_defined-function locations,
-            665 strings with 8719 characters,
-and the built_in function-call counts, 6976 in all, are:
-= -- 582
-> -- 336
+            1039 strings with 19150 characters,
+and the built_in function-call counts, 20677 in all, are:
+= -- 1661
+> -- 1069
 < -- 1
-+ -- 126
-- -- 91
-* -- 475
-:= -- 1200
-add.period$ -- 106
-call.type$ -- 35
-change.case$ -- 35
++ -- 402
+- -- 299
+* -- 1450
+:= -- 3545
+add.period$ -- 298
+call.type$ -- 103
+change.case$ -- 96
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 305
-empty$ -- 677
-format.name$ -- 91
-if$ -- 1509
+cite$ -- 137
+duplicate$ -- 892
+empty$ -- 1981
+format.name$ -- 299
+if$ -- 4431
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 34
-newline$ -- 179
-num.names$ -- 34
-pop$ -- 55
+int.to.str$ -- 103
+missing$ -- 103
+newline$ -- 507
+num.names$ -- 101
+pop$ -- 221
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 116
+skip$ -- 345
 stack$ -- 0
-substring$ -- 397
-swap$ -- 32
+substring$ -- 1169
+swap$ -- 86
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 61
-width$ -- 37
-write$ -- 380
-(There were 14 error messages)
+warning$ -- 34
+while$ -- 173
+width$ -- 106
+write$ -- 1063
+(There were 19 error messages)
