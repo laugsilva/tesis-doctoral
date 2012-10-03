@@ -25,47 +25,10 @@ W~Lampl et~al.
   ATLAS detector using 2011 data}.
 \newblock {\em ATLAS-CONF-2012-020}, 2012.
 
-\bibitem{kt1}
-S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
-\newblock {Longitudinally invariant K(t) clustering algorithms for hadron
-  hadron collisions}.
-\newblock {\em Nucl.\ Phys.}, B406:187, 1993.
-
-\bibitem{nsubjettiness}
-Jesse Thaler and Ken Van~Tilburg.
-\newblock {Identifying Boosted Objects with N-subjettiness}.
-\newblock {\em JHEP}, 1103:015:026, 2011.
-
-\bibitem{njetti}
-Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
-\newblock $n$ jettiness: An inclusive event shape to veto jets.
-\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
-
-\bibitem{exclusivekt}
-Stephen~D. Ellis and Davison~E. Soper.
-\newblock Successive combination jet algorithm for hadron collisions.
-\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
-
-\bibitem{mininsubjettiness}
-Jesse Thaler and Ken Van~Tilburg.
-\newblock Maximizing boosted top identification by minimizing n-subjettiness.
-\newblock {\em Journal of High Energy Physics}, 2012:1--33, 2012.
-\newblock 10.1007/JHEP02(2012)093.
-
-\bibitem{angularities}
-Carola~F. Berger, Tibor K\'ucs, and George Sterman.
-\newblock Event shape\char21{}energy flow correlations.
-\newblock {\em Phys. Rev. D}, 68:014012, Jul 2003.
-
 \bibitem{PhysRevD.79.074012}
 Leandro~G. Almeida, Seung~J. Lee, Gilad Perez, Ilmo Sung, and Joseph Virzi.
 \newblock Top quark jets at the lhc.
 \newblock {\em Phys. Rev. D}, 79:074012, Apr 2009.
-
-\bibitem{Catani1992445}
-S.~Catani, Yu.L. Dokshitzer, F.~Fiorani, and B.R. Webber.
-\newblock Average number of jets in e+e− annihilation.
-\newblock {\em Nuclear Physics B}, 377(3):445 -- 460, 1992.
 
 \bibitem{Snihur1999494}
 R.~Snihur.
@@ -91,6 +54,21 @@ Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
 \newblock Techniques for improved heavy particle searches with jet
   substructure.
 \newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
+
+\bibitem{exclusivekt}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock Successive combination jet algorithm for hadron collisions.
+\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
+
+\bibitem{nsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock {Identifying Boosted Objects with N-subjettiness}.
+\newblock {\em JHEP}, 1103:015:026, 2011.
+
+\bibitem{njetti}
+Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
+\newblock $n$ jettiness: An inclusive event shape to veto jets.
+\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
 
 \bibitem{PhysRevLett.105.022001}
 Jason Gallicchio and Matthew~D. Schwartz.
