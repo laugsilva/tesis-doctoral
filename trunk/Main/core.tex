@@ -3,14 +3,14 @@
 \chapter{Double $b$-hadron jet identification}\label{ch:kinematic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this chapter we focus on the understanding of the internal structure of $b$-jets containing two $B$-hadrons by investigating the differences between those and single $b$-quark jets.  These differences %between single and double $b$-hadron or ``merged'' jets 
+In this chapter we focus on the understanding of the internal structure of $b$-jets containing two $b$-hadrons by investigating the differences between these and single $b$-quark jets.  These differences %between single and double $b$-hadron or ``merged'' jets 
 are expected to arise from the two-subjet (two $b$-hadrons) structure of double $b$-hadron or ``merged'' jets, which would tend to be wider and with a larger number of constituents. 
-Based on these envisaged characteristics, simulated QCD samples of $b$-tagged jets were used to explore properties with potential discrimination power.  The Monte Carlo distributions were in turn compared to data from the 2011 run for validation.
+Based on these envisaged characteristics, simulated QCD samples of $b$-tagged jets were used to explore properties with potential discrimination power.  The Monte Carlo distributions were  compared to data from the 2011 run for validation.
 We present results from these studies and discuss the choice of the observables selected to build the multivariable tool presented in Chapter~\ref{ch:mva}.
 
 
 %------------------------------------------------------------------------
-\section{Data samples and event selection}\label{sec:analysis}
+\section{Data Analysis}\label{sec:analysis}
 %------------------------------------------------------------------------
 
 
@@ -26,35 +26,35 @@ gives an accurate description of the pile-up content and detector conditions for
 
 
 %------------------------------------------------------------------------
-%\subsection{Event selection}\label{sec:EventSelection}
+\subsection{Event selection}\label{sec:EventSelection}
 %------------------------------------------------------------------------
-
-%\vspace{5 mm}
 
 The event selection and quality criterion used to extract, from the data and Monte Carlo samples, the final set of jets for the analysis comprises different steps: 
 
-\vspace{5 mm}
-\emph{Trigger}. The event sample was collected  using the ATLAS single jet triggers which select events with at least one jet with transverse energy above a given threshold.  At the hardware Level 1 and local software Level 2 (see Section~\ref{sec:TDAQ}), cluster-based jet triggers are used to select events with high-$pt$ jets. The Event Filter, in turn, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2. The jet triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. 
-
-\vspace{5 mm}
-\emph{Primary vertex}.  The offline event selection requires at least one primary vertex candidate with 5 or more tracks.  No requirements are placed on the longitudinal position (along the beam line) of the vertex as the beam spot is used as a constraint when fitting the vertex. 
-
-\vspace{5 mm}
-\emph{Primary jet algorithm}. The jet algorithm selected for the analysis was the ATLAS default anti-$k_t$ algorithm~\cite{antiktalg}, with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.
-
-\vspace{5 mm}
-\emph{Jet calibration}.  The EM+JES calibration scheme, described in Section\ref{sec:calib}, was used to correct the jet energies for inhomogeneities and for the non-compensating nature of the calorimeter.
-
-\vspace{5 mm}
-\emph{Jet quality}.  Several quality criteria are applied to eliminate ``fake'' jets that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
-
-\vspace{5 mm}
-\emph{Jet tagging}.  Only jets tagged as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point were considered.
-
-\vspace{5 mm}
-\emph{Isolation}.  $b$-tagged jets with close-by jets ($\Delta R < 0.8$) with $\pt$ higher than 7~GeV at electromagnetic scale were not included in the analysis.
-
-\vspace{5 mm}
+\begin{itemize}
+\item
+%\vspace{5 mm}
+\textbf{Trigger}. The event sample was collected  using the ATLAS single jet triggers which select events with at least one jet with transverse energy above a given threshold.  At the hardware Level 1 and local software Level 2 (see Section~\ref{sec:TDAQ}), cluster-based jet triggers are used to select events with high-$pt$ jets. The Event Filter, in turn, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2. The jet triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. 
+\item
+%\vspace{5 mm}
+\textbf{Primary vertex}.  The offline event selection requires at least one primary vertex candidate with 5 or more tracks.  No requirements are placed on the longitudinal position (along the beam line) of the vertex as the beam spot is used as a constraint when fitting the vertex. 
+\item
+%\vspace{5 mm}
+\textbf{Primary jet algorithm}. The jet algorithm selected for the analysis was the ATLAS default anti-$k_t$ algorithm~\cite{antiktalg}, with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.
+\item
+%\vspace{5 mm}
+\textbf{Jet calibration}.  The EM+JES calibration scheme, described in Section\ref{sec:calib}, was used to correct the jet energies for inhomogeneities and for the non-compensating nature of the calorimeter.
+\item
+%\vspace{5 mm}
+\textbf{Jet quality}.  Several quality criteria are applied to eliminate ``fake'' jets that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
+\item
+%\vspace{5 mm}
+\textbf{Jet tagging}.  Only jets tagged as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point were considered.
+\item
+%\vspace{5 mm}
+\textbf{Isolation}.  $b$-tagged jets with close-by jets ($\Delta R < 0.8$) with $\pt$ higher than 7~GeV at electromagnetic scale were not included in the analysis.
+\end{itemize}
+%\vspace{5 mm}
 All jets, with transverse momentum between 40 and 480~GeV,  the selected $\pt$ range for the analysis, were required to be in a region with full tracking coverage, $|\eta_{jet}|<2.1$, and they were classified in eight $\pt$ bins chosen such as to match the jet trigger 99\% efficiency thresholds (in GeV): 40, 60, 80, 110, 150, 200, 270, 360. An event is used if it satisfies the highest threshold trigger that is 99\% efficient for the $\pt$ bin that corresponds to the $\pt$ of its leading jet.
 
 In the case of MC, the reconstructed $b$-tagged jets were further classified into single and merged $b$-jets based on truth Monte Carlo information. A $b$-hadron is considered to be associated to a jet if the $\Delta R$ distance in $\eta-\phi$ space between the direction of the hadron and the jet axis is smaller than 0.4. Jets were labeled as merged (single) $b$-jets if they contain two (only one) $b$-hadron:%\footnote[2]{Another approach is to match particles using the 'active area' of the jet, defined with the concept of ghost-particles but utilizing true particles as ghost constituents\cite{CatchmentArea}. This procedure will be implemented in a future version of this analysis.}.
@@ -71,10 +71,10 @@ where $j$ is a jet in the event and $b_{1/2}$ are the $b$-hadrons in the event. 
 
 
 %------------------------------------------------------------------------
-\subsection{Track selection }\label{sec:TrackSelection}
+\subsection{Track selection}\label{sec:trackselection}
 %------------------------------------------------------------------------
 
-It is important to select genuine tracks belonging to jets. Only tracks located  within a cone of radius $\Delta R(j,\mbox{track}) \leq 0.4$ around the jet axis were considered. %\footnote[2]{In a future version of the study the concept of ghost-particles\cite{CatchmentArea} can be applied in the track-to-jet assignment using tracks as ghost constituents.}.
+ It is important to select genuine tracks belonging to jets. Only tracks located  within a cone of radius $\Delta R(j,\mbox{track}) \leq 0.4$ around the jet axis were considered. %\footnote[2]{In a future version of the study the concept of ghost-particles\cite{CatchmentArea} can be applied in the track-to-jet assignment using tracks as ghost constituents.}.
   Cuts on $\pt^{\mbox{trk}}>1.0$~GeV and the $\chi^2$ of the track fit, $\chi^2/{\it ndf}<3$, are applied. % as a minimum starting point. 
  In addition, tracks are required to have a total of at least seven precision hits (pixel or micro-strip) in order to guarantee at least 3 $z$-measurements. Tracks are also required to fulfill cuts on the transverse and longitudinal impact parameters at the perigee to ensure that they arise from  the primary vertex. As cutting on impact parameter (IP) significance might be detrimental for $b$-jets, where large IP values are expected, relaxed cuts were used, $|IP_{xy}|<2$~mm, and $|IP_{z}\sin\theta|<2$~mm, with $\theta$ being the polar angle measured with respect to the beam axis. The track quality cuts are summarized in table~\ref{tb:tracks}. %This, however, might still be too tight for $b$-jets.
 
@@ -101,16 +101,15 @@ It is important to select genuine tracks belonging to jets. Only tracks located 
 
 
 %------------------------------------------------------------------------
-\section{Kinematic differences between single and double $b$-hadron jets}\label{sec:gbbKine} %$b$- and merged $b\bar{b}$-jets}\label{sec:gbbKine}
-%\section{Full ATLAS Monte Carlo Analysis}\label{sec:gbbKine}
+\section{Kinematic differences between single and double $b$-hadron jets}\label{sec:gbbKine}
 %------------------------------------------------------------------------ 
 
+The differences between genuine $b$-quark jets and double $b$-hadron jets, that in QCD originate mainly from gluon splitting, are expected to arise from the two-subjet structure of merged jets. In this section we present the study of a set of jet shape and substructure variables for the discrimination between single and merged $b$-jets. These variables are  built from jet constituents either at calorimeter level (topological clusters) or tracks associated to the jet.
+\\[3mm]
 
 %------------------------------------------------------------------------
 %PYTHIA STANDALONE
 %------------------------------------------------------------------------
-
-
 %See email from Jesse Thaler
 %Thu, Jun 2, 2011 at 7:43 PM
 %subject:	 Re: N-subjettiness Code
@@ -150,37 +149,16 @@ It is important to select genuine tracks belonging to jets. Only tracks located 
 
 
 
-The differences between genuine $b$-quark jets and $b \bar{b}$ jets are expected to arise from the two-subjet (two $B$-hadrons) substructure of merged jets.  They are thus expected, for the same jet $\pt$, to have higher track-multiplicity and be wider than single $b$-jets. Based on these characteristics %, the following properties were studied in simulated QCD samples of $b$-tagged jets using either calorimeter or track constituents:
-simulated QCD samples of $b$-tagged jets were used to study the following properties, discussed in the next paragraphs, built from jet constituents either at calorimeter level (topological clusters) or tracks associated to the jet:
 
-\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
-\item
-Jet multiplicity (number of constituents)
-\item
-Jet width, $\pt$ weighted %Track jet width ($\pt$ weighted)
-\item 
-Jet Mass
-\item
-Nr.\ of $k_t$ subjets %track-jets
-\item
-Maximum $\Delta R$ between pairs of constituents % (tracks)
-\item
-$\Delta R$ between 2 $k_t$ subjets within the $b$-jet
-\item
-$\tau_2$: 2-subjettiness 
-\item
-$\tau_2/\tau_1$
-\item
-$\Delta R$ of leading constituents %tracks
-\item 
-Eccentricity %(track & calo)
-\end{itemize}
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 { \em I. Jet track multiplicity}
 \\[3mm]
-This variable is defined as the number of tracks associated to the jet, it is simple to calculate and carries important information of the jet inner structure. Figure~\ref{fig:ntrksinglemerged} shows the distribution of the observable for single and merged $b$-jets.  It was observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. The jet track multiplicity corresponds to tracks with $\pt$ above 1 GeV, satisfying the quality cuts described in section~\ref{sec:EventSelection}. The effect of using a minimum track $\pt$ of 0.5 GeV was also examined. This was motivated by the fact that it could lead to an improvement in discrimination if it captured more information about the fragmentation process.  On ther other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.  What it was observed is that reducing the $\pt$ cut only widens the distributions without increasing the separation between single and merged jets. 
+The jet track multiplicity is a variable simple to calculate that carries important information of the jet inner structure. It is defined as the number of tracks with $\pt$ above 1~GeV, satisfying the quality cuts described in section~\ref{sec:trackselection}, and contained within a cone of radius $R=0.4$ around the jet axis.  Figure~\ref{fig:ntrksinglemerged} shows its distribution for two $\pt$ bins, representative of the range covered in this study.  It is observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. 
+The effect of the minimum track $\pt$ requirement was examined by lowering the selection cut to $\pt > 0.5$~GeV. On the one hand this could lead to an improvement in discrimination if it captured more information about the fragmentation process; on the other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.
+It was observed that reducing the $\pt$ cut of the tracks degrades the discrimination because it widens the distributions without increasing the separation between single and merged jets. No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance. %($> 2.5$). See Fig.~\ref{fig:BLABLA}.
+The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of tracks associated.
+\\[3mm]
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk080.pdf}
@@ -189,11 +167,12 @@ This variable is defined as the number of tracks associated to the jet, it is si
 \label{fig:ntrksinglemerged}
 \end{figure}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 { \em II. Jet width}
 \\[3mm]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The jet width is part of a set of continuous variables that try to distinguish individual particles/subjets within the jet as a smooth funcion of $(\delta \eta, \delta \phi)$ away from the jet axis, in order to form combinations like geometric moments.  This particular combination sums the distances between the jet constituents and its axes, weighted by the constituent $\pt$, and then normalized to the total $\pt$ of the jet. The compact definition is 
+The jet width is part of a set of continuous variables that try to distinguish individual particles/subjets within the jet by means of smooth funcion ofs $(\Delta \eta, \Delta \phi)$ away from the jet axis, in order to form combinations like geometric moments.  This particular combination is a linear moment which sums the distances between the jet constituents and its axes, weighted by the constituent $\pt$, and then normalized to the total $\pt$ of the jet.  Its definition is,
 %
 \begin{equation} 
 \mbox{ {\it Jet width}} = \frac{\sum_{i=1}^N \pt^{const_i} \,\Delta R (const_i,jet) }{\sum_{i=1}^N \pt^{const_i} }
@@ -202,20 +181,17 @@ The jet width is part of a set of continuous variables that try to distinguish i
 %
 where $N$ is the total number of calorimeter or track constituents.  This observable is also highly correlated to the mass of the jet.
 
-This linear radial moment is a measure of the width or ``girth''~\cite{PhysRevLett.105.022001} of the jet.  Under the assumption of central jets with massless constituents at small angles, this linear moment is identical to jet broadening~\cite{Catani1992269}, defined as the sum of momenta transverse to the jet axis normalized by the sum of momenta. While jet broadening is natural at an $e^+ e^-$ collider, the linear radial moment is more natural at the LHC.
+%This linear radial moment is a measure of the width or ``girth''~\cite{PhysRevLett.105.022001} of the jet.  Under the assumption of central jets with massless constituents at small angles, this linear moment is identical to jet broadening~\cite{Catani1992269}, defined as the sum of momenta transverse to the jet axis normalized by the sum of momenta. While jet broadening is natural at an $e^+ e^-$ collider, the linear radial moment is more natural at the LHC.
 
-An alternative approach to measuring the width is to use the angular separation of the two hardest constituents inside jets. This has the advantage of effectively removing any dependence on the shower development within the calorimeter and focuses on the hard component of the jet.
+Figure~\ref{fig:trkwidthsinglemerged} shows the distributions for the track-jet width for which the sum in equation~\ref{eqn:trackjetwidth} runs over the $N$ tracks associated to the jet, using the same criteria as for the jet track multiplicity. %There is a small number of jets at low pt that have only one track, because the selection criteria are not identical to those applied at the moment of b-tagging. Shape variables are not calculated for these jets, which are directly classified as single in the tagger presented in section 8. 
+As expected, merged $b$-jets are wider than single $b$-jets. 
+%In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the jet track multiplicity is shown for single and merged $b$-jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ jets.
 
 
+The jet width can also be measured in terms of calorimeter variables, replacing tracks by topological clusters in the sum.  Although it offers good separation, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. This is illustrated in Fig.~\ref{fig:trkwidthpileup}, which shows the distribution of calorimeter width and track-jet width for single $b$-jets in events with low and high number of primary vertices (NPV) in a low $\pt$ region where the effect of pile-up is more important. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Figure~\ref{fig:trkwidthsinglemerged} shows the distribution for the Track-jet width. As expected, merged $b$-jets are wider than single $b$-jets. In Fig.~\ref{fig:ntrktrkwidthsinglemerged} the correlation between the track-jet width and the jet track multiplicity is shown for single and merged $b$-jets. These two variables alone provide a good discrimination for tagging $b \bar{b}$ jets.
-
-The calorimeter jet width ( using topological clusters) gives also good separation. However, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. In Fig.~\ref{fig:calowidthpileup} the distributions of calorimeter width for single and merged $b$-jets  can be seen for events with low and high Number of Primary Vertices (NPV), in a low $\pt$ region where the effect of pile-up is more important. In Fig.~\ref{fig:trkwidthpileup} the same distributions are shown for the track-jet width. Calorimeter jet width varies %significatively
-with NPV and due to this behavior the track-based version is more suitable as a more robust discriminator. For similar reasons, the jet topological cluster multiplicity and the jet mass were discarded as discriminating variables.
+ In general, all the studied calorimeter-based jet variables show similar dependences with NPV. For this reason the track-based versions are preferred as more robust discriminators.
 \\[3mm]
-
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/trkWidth080.pdf}
@@ -223,39 +199,47 @@ with NPV and due to this behavior the track-based version is more suitable as a 
 \caption{Distribution of track-jet width in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:trkwidthsinglemerged}
 \end{figure}
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth200.pdf}
-\caption{Correlation between jet track multiplicity and track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
-\label{fig:ntrktrkwidthsinglemerged}
-\end{figure}
-
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/NtrktrkWidth200.pdf}
+%\caption{Correlation between jet track multiplicity and track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
+%\label{fig:ntrktrkwidthsinglemerged}
+%\end{figure}
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/Widthsingle_060.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/Widthmerged_060.pdf}
+%\caption{Distribution of calorimeter jet width (using topological clusters) for single (left) and merged (right) $b$-jets in two bins of Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
+%\label{fig:calowidthpileup}
+%\end{figure}
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/Widthsingle_060.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/Widthmerged_060.pdf}
-\caption{Distribution of calorimeter jet width (using topological clusters) for single (left) and merged (right) $b$-jets in two bins of Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
-\label{fig:calowidthpileup}
-\end{figure}
-
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/trkWidthsingle_060.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/trkWidthmerged_060.pdf}
-\caption{Distribution of track-jet width for single (left) and merged (right) $b$-jets in two bins of Number of Primary Vertices for jets between 60~GeV to 80~GeV.}
+\caption{Distribution of jet width using topological clusters (left) and tracks (right) for single $b$-jets in two bins of number of primary vertices (NPV) for jets between 60~GeV to 80~GeV.}
 \label{fig:trkwidthpileup}
 \end{figure}
 
 
+{ \em VIII. $\Delta R$ between leading constituents}
+\\[3mm]
+An alternative approach to measuring the width is to use the angular separation of the two hardest constituents inside jets. This has the advantage of effectively removing any dependence on the shower development within the calorimeter and focuses on the hard component of the jet. Figure~\ref{fig:drtrk12singlemerged} shows the distribution of the $\Delta R$ between leading tracks in the jet for single and merged $b$-jets.
+\\[3mm]
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRtrk12080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRtrk12200.pdf}
+\caption{Distribution of $\Delta R$ between leading tracks for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
+\label{fig:drtrk12singlemerged}
+\end{figure}
+
 
 { \em III. Maximum $\Delta R$ between track pairs}
 \\[3mm]
-Figure~\ref{fig:drmaxsinglemerged} shows the distribution of the maximum $\Delta R$ between track pairs in the jets (Max$\{\Delta R(trk,trk)\}$). Merged $b$-jets show significantly higher values for this variable over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, we have looked for alternatives to Max$\{\Delta R(trk,trk)\}$ as it is not an infrared safe observable and is sensitive to soft tracks originating from pile-up. 
+Several other variables were investigated to expose the expected two-subjet substructure of merged $b$-jets.  The distribution for the maximum $\Delta R$ separation between pairs of tracks associated to the jet ($\max\{\Delta R(trk,trk)\}$) is shown in Fig.~\ref{fig:drmaxsinglemerged}, for single and double $b$-hadron jets. The latter show significantly higher values for this variable over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, alternative characterising variables are desirable as $\max\{\Delta R(trk,trk)\}$ is sensitive to soft tracks originating from pile-up. 
 \\[3mm]
-
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax080.pdf}
@@ -349,7 +333,7 @@ $\tau_2$. Fig.~\ref{fig:tauratiosinglemerged} thus shows the distributions of $\
 \end{figure}
 
 
-%Variables such as the $\DeltaR$ between the two leading constituents of the jet (those with highest transverse momentum) and the jet eccentricity (the ratio of the principal axes of the jet area) did not show good discrimination either and were not considered for the multivariate study.
+
 
 { \em VI. Jet Mass}
 \\[3mm]
@@ -405,19 +389,6 @@ Figure~\ref{fig:nsubjetsinglemerged} shows the distribution of the number of sub
 \end{figure}
 
 
-{ \em VIII. $\Delta R$ between leading constituents}
-\\[3mm]
-
-Figure~\ref{fig:drtrk12singlemerged} shows the distribution of the number  $\Delta R$ between leading tracks in the jet for single and merged $b$-jets.
-\\[3mm]
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRtrk12080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRtrk12200.pdf}
-\caption{Distribution of $\Delta R$ between leading tracks for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
-\label{fig:drtrk12singlemerged}
-\end{figure}
 
 
 { \em IX. Jet eccentricity}
