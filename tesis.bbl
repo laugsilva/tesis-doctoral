@@ -25,16 +25,6 @@ W~Lampl et~al.
   ATLAS detector using 2011 data}.
 \newblock {\em ATLAS-CONF-2012-020}, 2012.
 
-\bibitem{PhysRevLett.105.022001}
-Jason Gallicchio and Matthew~D. Schwartz.
-\newblock Seeing in color: Jet superstructure.
-\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
-
-\bibitem{Catani1992269}
-S.~Catani, G.~Turnock, and B.R. Webber.
-\newblock Jet broadening measures in e+e− annihilation.
-\newblock {\em Physics Letters B}, 295(3–4):269 -- 276, 1992.
-
 \bibitem{kt1}
 S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
 \newblock {Longitudinally invariant K(t) clustering algorithms for hadron
@@ -101,5 +91,10 @@ Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
 \newblock Techniques for improved heavy particle searches with jet
   substructure.
 \newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
+
+\bibitem{PhysRevLett.105.022001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Seeing in color: Jet superstructure.
+\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
 
 \end{thebibliography}

@@ -66,45 +66,45 @@ Warning--empty journal in topoClusters
 Warning--there's a number but no volume in topoClusters
 Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
 while executing---line 944 of file unsrt.bst
-You've used 19 entries,
+You've used 18 entries,
             1791 wiz_defined-function locations,
-            572 strings with 6363 characters,
-and the built_in function-call counts, 4096 in all, are:
-= -- 349
-> -- 188
+            564 strings with 6217 characters,
+and the built_in function-call counts, 3835 in all, are:
+= -- 326
+> -- 177
 < -- 1
-+ -- 70
-- -- 51
-* -- 312
-:= -- 690
-add.period$ -- 58
-call.type$ -- 19
-change.case$ -- 19
++ -- 66
+- -- 48
+* -- 289
+:= -- 649
+add.period$ -- 55
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 167
-empty$ -- 396
-format.name$ -- 51
-if$ -- 886
+cite$ -- 21
+duplicate$ -- 158
+empty$ -- 370
+format.name$ -- 48
+if$ -- 828
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 18
-newline$ -- 99
-num.names$ -- 18
-pop$ -- 23
+int.to.str$ -- 18
+missing$ -- 17
+newline$ -- 94
+num.names$ -- 17
+pop$ -- 22
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 60
+skip$ -- 57
 stack$ -- 0
-substring$ -- 289
-swap$ -- 18
+substring$ -- 262
+swap$ -- 17
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 35
-width$ -- 21
-write$ -- 212
+while$ -- 33
+width$ -- 20
+write$ -- 201
 (There were 13 error messages)

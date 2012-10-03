@@ -1,6 +1,7 @@
 \contentsline {chapter}{\numberline {1}Double $b$-hadron jet identification}{2}
-\contentsline {section}{\numberline {1.1}Data samples and event selection}{2}
-\contentsline {subsection}{\numberline {1.1.1}Track selection }{6}
-\contentsline {section}{\numberline {1.2}Kinematic differences between single and double $B$-hadron jets}{7}
+\contentsline {section}{\numberline {1.1}Data Analysis}{2}
+\contentsline {subsection}{\numberline {1.1.1}Event selection}{3}
+\contentsline {subsection}{\numberline {1.1.2}Track selection}{6}
+\contentsline {section}{\numberline {1.2}Kinematic differences between single and double $b$-hadron jets}{7}
 \contentsline {subsection}{\numberline {1.2.1}Further studies using ``ghost-association'' and bigger cone jets}{22}
-\contentsline {section}{\numberline {1.3}Validation of the jet variables in data}{23}
+\contentsline {section}{\numberline {1.3}Validation of the jet variables in data}{24}
