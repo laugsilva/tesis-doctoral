@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  3 OCT 2012 17:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  3 OCT 2012 18:41
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -278,11 +278,11 @@ File: FIGS/VarsSingleMerged/drmax200.pdf Graphic file (type pdf)
 0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/JetMass200.pdf, pag
 e is rotated 90 degrees>]
 
-LaTeX Warning: Reference `sec:jetalgos' on page 12 undefined on input line 263.
+LaTeX Warning: Reference `sec:jetalgos' on page 12 undefined on input line 264.
 
 
 
-Overfull \hbox (4.56325pt too wide) in paragraph at lines 263--265
+Overfull \hbox (4.56325pt too wide) in paragraph at lines 264--266
 []\T1/cmr/m/n/12 By us-ing the se-quen-tial re-com-bi-na-tion al-go-rithms in-t
 ro-duced in Sec-tion [],
  []
@@ -309,7 +309,7 @@ File: FIGS/VarsSingleMerged/DRkt2axes200.pdf Graphic file (type pdf)
 <use FIGS/VarsSingleMerged/DRkt2axes200.pdf> [14 <./FIGS/VarsSingleMerged/Nsubj
 ets080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Nsubjets200.pd
 f, page is rotated 90 degrees>]
-Overfull \hbox (5.87827pt too wide) in paragraph at lines 318--320
+Overfull \hbox (5.87827pt too wide) in paragraph at lines 319--321
 \T1/cmr/m/n/12 elec-troweak bosons and top quarks de-cay-ing into col-li-mated 
 show-ers of hadrons
  []
@@ -347,13 +347,13 @@ ated 90 degrees>]
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.386  \end{bmatrix}
+l.387  \end{bmatrix}
                     
 ? 
 ! Extra \right.
 <to be read again> 
                    $
-l.386  \end{bmatrix}
+l.387  \end{bmatrix}
                     
 ? 
 [18 <./FIGS/VarsSingleMerged/TauRatio080.pdf, page is rotated 90 degrees> <./FI
@@ -460,31 +460,50 @@ File: FIGS/dataMC/FullDataVarDRktaxisPT200.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarDRktaxisPT200.pdf>
 
-LaTeX Warning: Float too large for page by 62.42078pt on input line 507.
+LaTeX Warning: Float too large for page by 62.42078pt on input line 508.
 
-) [23] [24 <./FIGS/dataMC/FullDataVarNtrkPT080.pdf, page is rotated 90 degrees>
- <./FIGS/dataMC/FullDataVarNtrkPT200.pdf, page is rotated 90 degrees> <./FIGS/d
-ataMC/FullDataVarTrkWidthPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/
-FullDataVarTrkWidthPT200.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDa
-taVarDRktaxisPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarD
-RktaxisPT200.pdf, page is rotated 90 degrees>] (./tesis.bbl
+<FIGS/dataMC/FullDataVarDRmaxPT080.pdf, id=1250, 569.12625pt x 549.05125pt>
+File: FIGS/dataMC/FullDataVarDRmaxPT080.pdf Graphic file (type pdf)
+
+<use FIGS/dataMC/FullDataVarDRmaxPT080.pdf>
+<FIGS/dataMC/FullDataVarDRmaxPT200.pdf, id=1251, 569.12625pt x 549.05125pt>
+File: FIGS/dataMC/FullDataVarDRmaxPT200.pdf Graphic file (type pdf)
+
+<use FIGS/dataMC/FullDataVarDRmaxPT200.pdf>
+<FIGS/dataMC/FullDataVarTau2PT080.pdf, id=1252, 569.12625pt x 549.05125pt>
+File: FIGS/dataMC/FullDataVarTau2PT080.pdf Graphic file (type pdf)
+
+<use FIGS/dataMC/FullDataVarTau2PT080.pdf>
+<FIGS/dataMC/FullDataVarTau2PT200.pdf, id=1253, 569.12625pt x 549.05125pt>
+File: FIGS/dataMC/FullDataVarTau2PT200.pdf Graphic file (type pdf)
+
+<use FIGS/dataMC/FullDataVarTau2PT200.pdf>) [23] [24 <./FIGS/dataMC/FullDataVar
+NtrkPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarNtrkPT200.
+pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTrkWidthPT080.pdf, p
+age is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTrkWidthPT200.pdf, page is
+ rotated 90 degrees> <./FIGS/dataMC/FullDataVarDRktaxisPT080.pdf, page is rotat
+ed 90 degrees> <./FIGS/dataMC/FullDataVarDRktaxisPT200.pdf, page is rotated 90 
+degrees>] [25 <./FIGS/dataMC/FullDataVarDRmaxPT080.pdf, page is rotated 90 degr
+ees> <./FIGS/dataMC/FullDataVarDRmaxPT200.pdf, page is rotated 90 degrees> <./F
+IGS/dataMC/FullDataVarTau2PT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC
+/FullDataVarTau2PT200.pdf, page is rotated 90 degrees>] (./tesis.bbl
 Underfull \hbox (badness 1112) in paragraph at lines 18--21
 \T1/cmr/m/n/12 Per-for-mance.  (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-
  []
 
-[25
+[26
 
 
-]) [26] (./tesis.aux (./Main/core.aux))
+]) [27] (./tesis.aux (./Main/core.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2110 strings out of 495061
- 30787 string characters out of 1182621
- 75581 words of memory out of 3000000
- 5226 multiletter control sequences out of 15000+50000
+ 2131 strings out of 495061
+ 31567 string characters out of 1182621
+ 75593 words of memory out of 3000000
+ 5243 multiletter control sequences out of 15000+50000
  29484 words of font info for 71 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,12n,21p,1115b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -509,9 +528,9 @@ ts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.p
 fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesis.pdf (31 pages, 999641 bytes).
+Output written on tesis.pdf (32 pages, 1072529 bytes).
 PDF statistics:
- 2047 PDF objects out of 2073 (max. 8388607)
+ 2227 PDF objects out of 2487 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
