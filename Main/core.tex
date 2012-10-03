@@ -145,8 +145,9 @@ The differences between genuine $b$-quark jets and double $b$-hadron jets, that 
 
 The jet track multiplicity is a variable simple to calculate that carries important information of the jet inner structure. It is defined as the number of tracks with $\pt$ above 1~GeV, satisfying the quality cuts described in section~\ref{sec:trackselection}, and contained within a cone of radius $R=0.4$ around the jet axis.  Figure~\ref{fig:ntrksinglemerged} shows its distribution for two $\pt$ bins, representative of the range covered in this study.  It is observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. 
 The effect of the minimum track $\pt$ requirement was examined by lowering the selection cut to $\pt > 0.5$~GeV. On the one hand this could lead to an improvement in discrimination if it captured more information about the fragmentation process; on the other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.
-It was observed that reducing the $\pt$ cut of the tracks degrades the discrimination because it widens the distributions without increasing the separation between single and merged jets. No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance. %($> 2.5$). See Fig.~\ref{fig:BLABLA}.
-The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of tracks associated.
+It was observed that reducing the $\pt$ cut of the tracks degrades the discrimination because it widens the distributions without increasing the separation between single and merged jets. 
+%No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance. %($> 2.5$). See Fig.~\ref{fig:BLABLA}.
+%The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of tracks associated. 
 \vspace{3 mm}
 \begin{figure}[tp]
 \centering
@@ -374,7 +375,8 @@ The correlation observed suggests to switch from an absolute to a width-normaliz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 { \em IX. Jet eccentricity}
 \vspace{3 mm}
- In defining a jet moment there are several ways to weight the momentum and define the center of the jet. We have defined the jet width as the first moment of the transverse energy with respect to the jet axis; another example of useful combination is the jet pull~\cite{PhysRevLett.105.022001}. But it is also natural to look at higher moments, such as those contained in the $2 \times 2$ matrix,
+ 
+In defining a jet moment there are several ways to weight the momentum and define the center of the jet. We have defined the jet width as the first moment of the transverse energy with respect to the jet axis; another example of useful combination is the jet pull~\cite{PhysRevLett.105.022001}. But it is also natural to look at higher moments, such as those contained in the $2 \times 2$ matrix,
 %\[ C = \sum_{i\in jet}\frac{p^i_T|r_i|}{p^{jet}_T} \left( \begin{array}{cc}
 % \Delta y^2_i & \Delta y_i \Delta\phi_i \\ 
 % \Delta\phi_i \Deltay_i & \Delta \phi^2_i \end{array} \right). \]
@@ -386,7 +388,7 @@ The correlation observed suggests to switch from an absolute to a width-normaliz
  \end{bmatrix}
 \end{equation}
 %
-Here, $(E_i,\eta_i,\phi_i)$ are the jet energy, pseudorapidity and azimuthal angle, respectively. The eigenvalues $\lambda_m \geq \lambda_p $ of this tensor are associated to the semiminor and semimajor axes of an elliptical jet, in the $\eta - \phi$ plane. The jet eccentricity, defined below, is a combination of these eigenvalues, and it is a measure of how elongated is the area of a jet,
+Here, $(E_i,\eta_i,\phi_i)$ are the jet constituent energy, pseudorapidity and azimuthal angle, respectively. The eigenvalues $\lambda_m \geq \lambda_p $ of this tensor are associated to the semiminor and semimajor axes of an elliptical jet, in the $\eta - \phi$ plane. The jet eccentricity, defined below, is a combination of these eigenvalues, and it is a measure of how elongated is the area of a jet,
 %
 \begin{equation} 
 e = \sqrt{1-r^2}
@@ -400,10 +402,9 @@ r = \frac{\lambda_m}{\lambda_p} = \frac{\sum E_i \eta^2_i+\sum E_i \phi^2_i - \s
 \label{ecc2}
 \end{equation}
 %
-For circular jets, $e = 0$. 
+%For circular jets, $e = 0$. 
 %No significan difference in eccentricity was found between quark and gluon jets.
-
-Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet track-eccentricity for single and merged $b$-jets. 
+Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentricity, built using track constituents. No significant difference in eccentricity was found between single and merged $b$-jets. 
 \vspace{3 mm}
 
 \begin{figure}[tp]
@@ -417,8 +418,9 @@ Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet track-ecce
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Displaced tracks
-
+\subsubsection{Use of displaced tracks}
+%No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance. %($> 2.5$). See Fig.~\ref{fig:BLABLA}.
+%The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of tracks associated. 
 We also explored the potential improvement of constructing kinematic variables with only displaced tracks, as these are the ones expected to arise from the decay of B-hadrons. Cuts of 2, 2.5 and 3 on the track transverse impact parameter significance were investigated leading however to no gain in discrimation power.
 
  In Figures~\ref{fig:displacedntrk} and~\ref{fig:displacedtrkwidth} two examples are shown.
@@ -441,7 +443,7 @@ We also explored the potential improvement of constructing kinematic variables w
 \end{figure}
 
 
-\subsubsection{Further studies using ``ghost-association'' and bigger cone jets}
+\subsubsection{Further studies}%``ghost-association'' and bigger cone jets}
 
 In order to better understand the behavior observed for $\tau_2$, $\Delta R$ between the axes of $k_T$ subjets and jet eccentricity in anti-$k_T$ 0.4 jets, these variables were studied for other two different scenarios,
 
@@ -487,11 +489,11 @@ Figures~\ref{fig:tau2GhostAndAntikt6} to~\ref{fig:jeteccGhostAndAntikt6} show di
 \section{Validation of the jet variables in data}\label{sec:gbbValidation}
 %------------------------------------------------------------------------
 
- In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored a set of comparison plots is presented. Fig.~\ref{fig:datamcinputvars} shows the distributions of jet track multiplicity, track-jet width and $\Delta R$ between the axes of the two $k_t$ subjets, in two different jet $\pt$ bins in dijet Monte Carlo and data events collected by ATLAS %until summer 2011 ($\mu \approx 6$) overlaid.
-during 2011. The distributions are normalized to unit area to allow for shape comparisons. There is a good agreement between data and simulation. It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, some level of compensation can take place between these two effects.
+ In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored a set of comparison plots is presented. Figures~\ref{fig:datamcinputvars} and~\ref{fig:datamcinputvars2} show distributions of jet track multiplicity, track-jet width, $\Delta R$ between the axes of the two $k_t$ subjets, $\max\{\Delta R(trk,trk)\}$ and $\tau_2$ in two different $\pt$ bins for $b$-tagged jets in dijet Monte Carlo and data events passing selection described in Section~\ref{sec:EventSelection}.
+The distributions are normalized to unit area to allow for shape comparisons. There is a good agreement between data and simulation. 
 
-% For the sake of evaluating the effect of the increasing amount of pile-up in the last period of data-taking, %affected the agreement between experimental data and Monte Carlo
-%the same distributions were built using data events recorded in the second half of the year ($\mu \approx 12$).  As expected, no significant variation was observed. In Fig.~\ref{fig:datamcinputvarsItoM} the jet track multiplicity is shown for this period, in the same two $\pt$ bins for comparison.  
+It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects, although the agreement evaluated in $b$-jets selected with a looser cut of MV1 tagger as well as with another $b$-tagging algorithm is still ver good, suggesting that this compasation is not likely to occur in samples sufficiently enriched in $b$-jets.
+
 
 \begin{figure}[tp]
 \centering
@@ -506,12 +508,15 @@ during 2011. The distributions are normalized to unit area to allow for shape co
 \label{fig:datamcinputvars}
 \end{figure}
 
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRmaxPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRmaxPT200.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT200.pdf}  
+\caption{ Distribution of two tracking variables in two different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\label{fig:datamcinputvars2}
+\end{figure}
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/dataMCItoM/VarNtrkPT080.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/dataMCItoM/VarNtrkPT200.pdf}
-%\caption{ Distribution of the jet track-multiplicity in 2 different jet $\pt$ bins, for experimental data from the last period of data-taking, with $\mu \approx 12$ (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
-%\label{fig:datamcinputvarsItoM}
-%\end{figure}
+
 
