@@ -1,5 +1,119 @@
 \begin{thebibliography}{10}
 
+\bibitem{Asquith:1311867}
+{ATLAS Collaboration}.
+
+\bibitem{Busato:1271710}
+{ATLAS Collaboration}.
+
+\bibitem{topoClusters}
+W~Lampl et~al.
+\newblock {Calorimeter Clustering Algorithms: Description and Performance}.
+\newblock (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-003), Apr 2008.
+
+\bibitem{Aharrouche2006601}
+M.~Aharrouche et~al.
+\newblock Energy linearity and resolution of the atlas electromagnetic barrel
+  calorimeter in an electron test-beam.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 568(2):601
+  -- 623, 2006.
+
+\bibitem{Cooke:1071187}
+M~Cooke, P~S Mangeard, M~Plamondon, M~Aleksa, M~Delmastro, L~Fayard,
+  S~Henrot-Versill√©, F~Hubaut, R~Lafaye, W~Lampl, J~L√©v√™que, H~Ma,
+  E~Monnier, J~Parsons, P~Pralavorio, Ph~Schwemling, L~Serin, B~Trocm√©,
+  G~Unal, M~Vincter, and H~Wilkens.
+\newblock {In situ commissioning of the ATLAS electromagnetic calorimeter with
+  cosmic muons}.
+\newblock {\em ATL-LARG-PUB-2007-013}, 2007.
+
+\bibitem{Aad:2011mk}
+Georges Aad et~al.
+\newblock {Electron performance measurements with the ATLAS detector using the
+  2010 LHC proton-proton collision data}.
+\newblock {\em Eur.Phys.J.}, C72:1909, 2012.
+
+\bibitem{ATLAS-CONF-2011-028}
+{ATLAS Collaboration}.
+
+\bibitem{Abbiendi:2002vt}
+G.~Abbiendi et~al.
+\newblock {Inclusive analysis of the b quark fragmentation function in Z decays
+  at LEP}.
+\newblock {\em Eur.Phys.J.}, C29:463--478, 2003.
+
+\bibitem{Abe:2002iq}
+Koya Abe et~al.
+\newblock {Measurement of the b quark fragmentation function in Z0 decays}.
+\newblock {\em Phys.Rev.}, D65:092006, 2002.
+
+\bibitem{Professor}
+Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
+  Seggern.
+\newblock {Systematic event generator tuning for the LHC}.
+\newblock {\em Eur. Phys. J. C}, 65:331--357, 2010.
+
+\bibitem{BowlerLund}
+M.~G. Bowler.
+\newblock
+  &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;sup&gt;‚%
+àí&lt;/sup&gt; production of heavy quarks in the string model.
+\newblock {\em Zeitschrift f√ºr Physik C Particles and Fields}, 11:169--174,
+  1981.
+\newblock 10.1007/BF01574001.
+
+\bibitem{Cornelissen:1020106}
+T~Cornelissen, M~Elsing, S~Fleischmann, W~Liebig, E~Moyse, and A~Salzburger.
+\newblock {Concepts, Design and Implementation of the ATLAS New Tracking
+  (NEWT)}.
+\newblock {\em {ATL-SOFT-PUB-2007-007. ATL-COM-SOFT-2007-002}}, 2007.
+
+\bibitem{ATLAS-CONF-2010-069}
+{ATLAS Collaboration}.
+
+\bibitem{1933RSPTA.231..289N}
+J.~{Neyman} and E.~S. {Pearson}.
+\newblock {On the Problem of the Most Efficient Tests of Statistical
+  Hypotheses}.
+\newblock {\em Royal Society of London Philosophical Transactions Series A},
+  231:289--337, 1933.
+
+\bibitem{ATLAS-CONF-2011-102}
+{ATLAS Collaboration}.
+\newblock {Commissioning of the ATLAS high-performance $b$-tagging algorithms
+  in the 7 TeV collision data}.
+\newblock {\em ATLAS-CONF-2011-102}, 2011.
+
+\bibitem{ATLAS-CONF-2010-091}
+{ATLAS Collaboration}.
+\newblock {Performance of Impact Parameter-Based $b$-tagging Algorithms with
+  the ATLAS Detector using Proton-Proton Collisions at $\sqrt{s}$ = 7 TeV}.
+\newblock {\em ATLAS-CONF-2010-091}, 2010.
+
+\bibitem{Kostyukhin:685551}
+V~Kostyukhin.
+\newblock Vkalvrt - package for vertex reconstruction in atlas.
+\newblock {\em ATL-PHYS-2003-031}, Aug 2003.
+
+\bibitem{ATLAS-CONF-2010-042}
+{ATLAS Collaboration}.
+\newblock {Performance of the ATLAS Secondary Vertex $b$-tagging Algorithm in 7
+  TeV Collision Data}.
+\newblock {\em ATLAS-CONF-2010-042}, 2010.
+
+\bibitem{ATLAS-CONF-2011-089}
+{ATLAS Collaboration}.
+\newblock {Calibrating the b-Tag Efficiency and Mistag Rate in 35 pb$^{-1}$ of
+  Data with the ATLAS Detector}.
+\newblock {\em ATLAS-CONF-2011-089}, 2011.
+
+\bibitem{ATLAS-CONF-2012-024}
+
+
+\bibitem{ATLAS-CONF-2012-097}
+{ATLAS Collaboration}.
+
 \bibitem{PYTHIA6}
 Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
 \newblock {PYTHIA 6.4 Physics and Manual}.
@@ -13,11 +127,6 @@ Atlas tunes of pythia 6 and pythia 8 for mc11.
 Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
 \newblock {The anti-$k_t$ jet clustering algorithm}.
 \newblock {\em JHEP}, 04:063, 2008.
-
-\bibitem{topoClusters}
-W~Lampl et~al.
-\newblock {Calorimeter Clustering Algorithms: Description and Performance}.
-\newblock (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-003), Apr 2008.
 
 \bibitem{ATLAS-CONF-2012-020}
 {ATLAS Collaboration}.
