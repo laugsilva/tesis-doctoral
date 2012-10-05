@@ -146,8 +146,7 @@ The differences between genuine $b$-quark jets and double $b$-hadron jets, that 
 The jet track multiplicity is a variable simple to calculate that carries important information of the jet inner structure. It is defined as the number of tracks with $\pt$ above 1~GeV, satisfying the quality cuts described in section~\ref{sec:trackselection}, and contained within a cone of radius $R=0.4$ around the jet axis.  Figure~\ref{fig:ntrksinglemerged} shows its distribution for two $\pt$ bins, representative of the range covered in this study.  It is observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. 
 The effect of the minimum track $\pt$ requirement was examined by lowering the selection cut to $\pt > 0.5$~GeV. On the one hand this could lead to an improvement in discrimination if it captured more information about the fragmentation process; on the other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.
 It was observed that reducing the $\pt$ cut of the tracks degrades the discrimination because it widens the distributions without increasing the separation between single and merged jets. 
-%No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance. %($> 2.5$). See Fig.~\ref{fig:BLABLA}.
-%The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of tracks associated. 
+
 \vspace{3 mm}
 \begin{figure}[tp]
 \centering
@@ -156,6 +155,30 @@ It was observed that reducing the $\pt$ cut of the tracks degrades the discrimin
 \caption{Distribution of the track multiplicity in jets for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:ntrksinglemerged}
 \end{figure}
+
+
+%\subsubsection{Use of displaced tracks}
+%PYTHIA STANDALONE
+%http://slac.stanford.edu/~swiatlow/gbb_plots07_07/ntrk_gbb_b_J3_PT80.png
+%http://slac.stanford.edu/~swiatlow/gbb_plots07_07/ntrkB_gbb_b_J3_PT80.png
+No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance($> 2.5$). The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of associated tracks. A comparison of track multiplicity distributions using all tracks and distributions built with displaced tracks is shown in Fig.~\ref{fig:displacedntrk}.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced200.pdf}
+\caption{Distribution of the jet track multiplicity single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
+\label{fig:displacedntrk}
+\end{figure}
+
+
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/trkWidth_allanddisplaced080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/trkWidth_allanddisplaced200.pdf}
+%\caption{Distribution of the track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
+%\label{fig:displacedtrkwidth}
+%\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,6 +195,12 @@ The jet width is part of a set of continuous variables that try to distinguish i
 where $N$ is the total number of calorimeter or track constituents.  This observable is also highly correlated to the mass of the jet.
 
 %This linear radial moment is a measure of the width or ``girth''~\cite{PhysRevLett.105.022001} of the jet.  Under the assumption of central jets with massless constituents at small angles, this linear moment is identical to jet broadening~\cite{Catani1992269}, defined as the sum of momenta transverse to the jet axis normalized by the sum of momenta. While jet broadening is natural at an $e^+ e^-$ collider, the linear radial moment is more natural at the LHC.
+
+%PYTHIA STANDALONE
+%b-jets resemble gluon jets more closely: known result from LEP (REFERENCIA)
+%this variable was used to separate gluons from quarks...
+%80-120GeV http://slac.stanford.edu/~swiatlow/gbb_plots/trkWidth_J3_PT80.
+
 
 Figure~\ref{fig:trkwidthsinglemerged} shows the distributions for the track-jet width for which the sum in equation~\ref{eqn:trackjetwidth} runs over the $N$ tracks associated to the jet, using the same criteria as for the jet track multiplicity. %There is a small number of jets at low pt that have only one track, because the selection criteria are not identical to those applied at the moment of b-tagging. Shape variables are not calculated for these jets, which are directly classified as single in the tagger presented in section 8. 
 As expected, merged $b$-jets are wider than single $b$-jets. 
@@ -297,6 +326,8 @@ variable provides very good separation, with the advantage of infrared safety an
 \label{fig:drktsinglemerged}
 \end{figure}
 
+% El plot de DeltaRkt para B-trackjets vs. track-jets explica la cola que ustedes veian para b-jets y que no entendiamos. Viene de la gluon radiation! cuando uno calcula DRkt con B-tracks, la cola se reduce significativamente y b se separa mucho mas de bb. Muy interesante!
+%http://slac.stanford.edu/~swiatlow/gbb_plots07_07/drktaxes_B_J3_PT80.png
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 { \em VIII. $N$-subjettiness variables}
@@ -417,35 +448,13 @@ Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentrici
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Use of displaced tracks}
-%No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance. %($> 2.5$). See Fig.~\ref{fig:BLABLA}.
-%The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of tracks associated. 
-We also explored the potential improvement of constructing kinematic variables with only displaced tracks, as these are the ones expected to arise from the decay of B-hadrons. Cuts of 2, 2.5 and 3 on the track transverse impact parameter significance were investigated leading however to no gain in discrimation power.
-
- In Figures~\ref{fig:displacedntrk} and~\ref{fig:displacedtrkwidth} two examples are shown.
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_80-120.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/ntrk_singlemerged_AllandDisplaced_260-310.pdf}
-\caption{Distribution of the jet track multiplicity single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
-\label{fig:displacedntrk}
-\end{figure}
 
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_80-120.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/trkWidth_singlemerged_AllandDisplaced_260-310.pdf}
-\caption{Distribution of the track-jet width for single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
-\label{fig:displacedtrkwidth}
-\end{figure}
 
 
 \subsubsection{Further studies}%``ghost-association'' and bigger cone jets}
 
-In order to better understand the behavior observed for $\tau_2$, $\Delta R$ between the axes of $k_T$ subjets and jet eccentricity in anti-$k_T$ 0.4 jets, these variables were studied for other two different scenarios,
+In order to better understand the behavior observed for $\tau_2$, $\tau_2/tau_1$ and jet eccentricity in anti-$k_T$ 0.4 jets, these variables were studied for other two different scenarios,
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item 
@@ -468,11 +477,19 @@ Figures~\ref{fig:tau2GhostAndAntikt6} to~\ref{fig:jeteccGhostAndAntikt6} show di
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRkt2axes080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf}
-\caption{Distribution of $\Delta R$ between $k_T$ subjets for single and merged $b$-jets between 80~GeV to 110~GeV in anti-$k_T$ 0.6 jets using track constituents (left) and anti-$k_T$ 0.4 jets using the active area of the jet, with calorimeter topoclusters as input.}
-\label{fig:drktaxisGhostAndAntikt6}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tauratio080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/GhostMatchingVarsClus/Tauratio2080.pdf}
+\caption{Distribution of $\tau_2/\tau_1$ for single and merged $b$-jets between 80~GeV to 110~GeV in anti-$k_T$ 0.6 jets using track constituents (left) and anti-$k_T$ 0.4 jets using the active area of the jet, with calorimeter topoclusters as input.}
+\label{fig:tau2GhostAndAntikt6}
 \end{figure}
+
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/Antikt6VarsSingleMerged/DRkt2axes080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/GhostMatchingVarsClus/DRkt2axes080.pdf}
+%\caption{Distribution of $\Delta R$ between $k_T$ subjets for single and merged $b$-jets between 80~GeV to 110~GeV in anti-$k_T$ 0.6 jets using track constituents (left) and anti-$k_T$ 0.4 jets using the active area of the jet, with calorimeter topoclusters as input.}
+%\label{fig:drktaxisGhostAndAntikt6}
+%\end{figure}
 
 \begin{figure}[tp]
 \centering
