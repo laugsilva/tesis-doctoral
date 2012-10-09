@@ -3,6 +3,5 @@
 \contentsline {subsection}{\numberline {1.1.1}Event selection}{3}
 \contentsline {subsection}{\numberline {1.1.2}Track selection}{6}
 \contentsline {section}{\numberline {1.2}Kinematic differences between single and double $b$-hadron jets}{7}
-\contentsline {subsubsection}{Use of displaced tracks}{19}
-\contentsline {subsubsection}{Further studies}{19}
-\contentsline {section}{\numberline {1.3}Validation of the jet variables in data}{21}
+\contentsline {subsubsection}{Further studies}{20}
+\contentsline {section}{\numberline {1.3}Validation of the jet variables in data}{22}
