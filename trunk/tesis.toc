@@ -1,7 +1,20 @@
-\contentsline {chapter}{\numberline {1}Double $b$-hadron jet identification}{2}
-\contentsline {section}{\numberline {1.1}Data Analysis}{2}
-\contentsline {subsection}{\numberline {1.1.1}Event selection}{3}
-\contentsline {subsection}{\numberline {1.1.2}Track selection}{5}
-\contentsline {section}{\numberline {1.2}Kinematic differences between single and double $b$-hadron jets}{7}
-\contentsline {subsubsection}{Further studies}{21}
-\contentsline {section}{\numberline {1.3}Validation of the jet variables in data}{22}
+\contentsline {chapter}{\numberline {1}Event reconstruction and $b$-Tagging }{2}
+\contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{3}
+\contentsline {subsubsection}{Jet calibration}{4}
+\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{9}
+\contentsline {section}{\numberline {1.2}Reconstruction of charged particle tracks}{13}
+\contentsline {section}{\numberline {1.3}Vertex reconstruction}{15}
+\contentsline {section}{\numberline {1.4} ${b}$-jet Tagging}{16}
+\contentsline {subsubsection}{Association of tracks to jets}{18}
+\contentsline {subsection}{\numberline {1.4.1}$b$-tagging algorithms}{19}
+\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{20}
+\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{23}
+\contentsline {subsubsection}{Algorithm combinations and performance}{26}
+\contentsline {subsubsection}{The MV1 tagging algorithm}{28}
+\contentsline {subsection}{\numberline {1.4.2}$b$-tagging calibration}{28}
+\contentsline {chapter}{\numberline {2}Double $b$-hadron jet identification}{31}
+\contentsline {section}{\numberline {2.1}Data Analysis}{31}
+\contentsline {subsection}{\numberline {2.1.1}Event selection}{32}
+\contentsline {subsection}{\numberline {2.1.2}Track selection}{35}
+\contentsline {section}{\numberline {2.2}Kinematic differences between single and double $b$-hadron jets}{36}
+\contentsline {section}{\numberline {2.3}Validation of the jet variables in data}{53}
