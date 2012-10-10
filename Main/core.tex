@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this chapter we focus on the understanding of the internal structure of $b$-jets containing two $b$-hadrons by investigating the differences between these and single $b$-quark jets.  These differences %between single and double $b$-hadron or ``merged'' jets 
-are expected to arise from the two-subjet (two $b$-hadrons) structure of double $b$-hadron or ``merged'' jets, which would tend to be wider and with a larger number of constituents. 
+are expected to arise from the two-subjet structure of double $b$-hadron or ``merged'' jets, which would tend to be wider and with a larger number of constituents. 
 Based on these envisaged characteristics, simulated QCD samples of $b$-tagged jets were used to explore properties with potential discrimination power.  The Monte Carlo distributions were  compared to data from the 2011 run for validation.
 We present results from these studies and discuss the choice of the observables selected to build the multivariable tool presented in Chapter~\ref{ch:mva}.
 
@@ -33,7 +33,7 @@ The event selection and quality criterion used to extract, from the data and Mon
 
 \begin{itemize}
 \item
-\textbf{Trigger}. The event sample was collected  using the ATLAS single jet triggers which select events with at least one jet with transverse energy above a given threshold.  At the hardware Level 1 and local software Level 2 (see Section~\ref{sec:TDAQ}), cluster-based jet triggers are used to select events with high-$pt$ jets. The Event Filter, in turn, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2. The jet triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. 
+\textbf{Trigger}. The event sample was collected  using the ATLAS single jet triggers which select events with at least one jet with transverse energy above a given threshold.  At the hardware Level 1 and local software Level 2 (see Section~\ref{sec:TDAQ}), cluster-based jet triggers are used to select events with high-$pt$ jets. The Event Filter, in turn, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2. The jet triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude. %, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. 
 \item
 \textbf{Primary vertex}.  The offline event selection requires at least one primary vertex candidate with 5 or more tracks.  No requirements are placed on the longitudinal position (along the beam line) of the vertex as the beam spot is used as a constraint when fitting the vertex. 
 \item
@@ -98,7 +98,7 @@ where $j$ is a jet in the event and $b_{1/2}$ are the $b$-hadrons in the event. 
 %------------------------------------------------------------------------ 
 
 The differences between genuine $b$-quark jets and double $b$-hadron jets, that in QCD originate mainly from gluon splitting, are expected to arise from the two-subjet structure of merged jets. In this section we present the study of a set of jet shape and substructure variables for the discrimination between single and merged $b$-jets. These variables are  built from jet constituents either at calorimeter level (topological clusters) or tracks associated to the jet.
-\\[3mm]
+
 
 %------------------------------------------------------------------------
 %PYTHIA STANDALONE
@@ -144,6 +144,7 @@ The differences between genuine $b$-quark jets and double $b$-hadron jets, that 
 \vspace{3 mm}
 
 The jet track multiplicity is a variable simple to calculate that carries important information of the jet inner structure. It is defined as the number of tracks with $\pt$ above 1~GeV, satisfying the quality cuts described in section~\ref{sec:trackselection}, and contained within a cone of radius $R=0.4$ around the jet axis.  Figure~\ref{fig:ntrksinglemerged} shows its distribution for two $\pt$ bins, representative of the range covered in this study.  It is observed that merged $b$-jets contain on average around two more tracks than single $b$-jets at low jet $\pt$, with a larger difference at higher $\pt$ values. 
+
 The effect of the minimum track $\pt$ requirement was examined by lowering the selection cut to $\pt > 0.5$~GeV. On the one hand this could lead to an improvement in discrimination if it captured more information about the fragmentation process; on the other hand, a lower minimum track $\pt$ can make the method more sensitive to pile-up with the addition of soft tracks incorrectly associated to the jets.
 It was observed that reducing the $\pt$ cut of the tracks degrades the discrimination because it widens the distributions without increasing the separation between single and merged jets. 
 
@@ -160,13 +161,23 @@ It was observed that reducing the $\pt$ cut of the tracks degrades the discrimin
 %PYTHIA STANDALONE
 %http://slac.stanford.edu/~swiatlow/gbb_plots07_07/ntrk_gbb_b_J3_PT80.png
 %http://slac.stanford.edu/~swiatlow/gbb_plots07_07/ntrkB_gbb_b_J3_PT80.png
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk200.pdf}
+\caption{Distribution of the track multiplicity in jets for single ($b$) and merged ($bb$) jets between 80~GeV to 120~GeV in a sample of dijet events generated with \sc{Pythia} and no detector simulation. Distributions are shown using all charged particles (left) and using only charged particles coming from $B$-hadron decay (right).}
+\label{fig:ntrksinglemergedPYTHIA}
+\end{figure}
+
+Results in {\sc Pythia} standalone using all and ``$b$-tracks'' in Fig.~\ref{ntrksinglemergedPYTHIA}. COMPLETAR.
 No improvement was obtained either by circumscribing the selection to tracks with large impact parameter significance($> 2.5$). The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of associated tracks. A comparison of track multiplicity distributions using all tracks and distributions built with displaced tracks is shown in Fig.~\ref{fig:displacedntrk}.
 \vspace{3 mm}
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced200.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf}
 \caption{Distribution of the jet track multiplicity single and merged $b$-jets between 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right), for all and displaced tracks only.}
 \label{fig:displacedntrk}
 \end{figure}
