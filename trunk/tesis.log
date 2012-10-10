@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  8 OCT 2012 17:08
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  9 OCT 2012 19:00
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -235,21 +235,23 @@ File: FIGS/VarsSingleMerged/Ntrk080.pdf Graphic file (type pdf)
 File: FIGS/VarsSingleMerged/Ntrk200.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/Ntrk200.pdf> [7]
-<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced080.pdf, id=68, 569.12625pt 
-x 549.05125pt>
-File: FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced080.pdf Graphic file (t
-ype pdf)
- <use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced080.pdf>
-<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced200.pdf, id=69, 569.12625pt 
-x 549.05125pt>
-File: FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced200.pdf Graphic file (t
-ype pdf)
- <use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced200.pdf>
-[8 <./FIGS/VarsSingleMerged/Ntrk080.pdf, page is rotated 90 degrees> <./FIGS/Va
-rsSingleMerged/Ntrk200.pdf, page is rotated 90 degrees>] [9 <./FIGS/TEMPFigs/Di
-splacedTracks/Ntrk_allanddisplaced080.pdf, page is rotated 90 degrees> <./FIGS/
-TEMPFigs/DisplacedTracks/Ntrk_allanddisplaced200.pdf, page is rotated 90 degree
-s>] <FIGS/VarsSingleMerged/trkWidth080.pdf, id=251, 569.12625pt x 546.04pt>
+<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf, id=68, 569.12625pt
+ x 549.05125pt>
+File: FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf Graphic file (
+type pdf)
+
+<use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf>
+<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf, id=69, 569.12625pt
+ x 549.05125pt>
+File: FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf Graphic file (
+type pdf)
+
+<use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf> [8 <./FIGS/Var
+sSingleMerged/Ntrk080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged
+/Ntrk200.pdf, page is rotated 90 degrees>] [9 <./FIGS/TEMPFigs/DisplacedTracks/
+Ntrk_allanddisplacedW080.pdf, page is rotated 90 degrees> <./FIGS/TEMPFigs/Disp
+lacedTracks/Ntrk_allanddisplacedW200.pdf, page is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/trkWidth080.pdf, id=251, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/trkWidth080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/trkWidth080.pdf>
@@ -506,7 +508,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  2153 strings out of 493848
- 31277 string characters out of 1152822
+ 31287 string characters out of 1152822
  77024 words of memory out of 3000000
  5357 multiletter control sequences out of 15000+50000
  29797 words of font info for 72 fonts, out of 3000000 for 9000
@@ -533,7 +535,7 @@ e1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 frm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sftt1200.pfb>
-Output written on tesis.pdf (32 pages, 1107025 bytes).
+Output written on tesis.pdf (32 pages, 1105683 bytes).
 PDF statistics:
  2017 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
