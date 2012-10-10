@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  10 OCT 2012 12:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  10 OCT 2012 17:07
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -129,11 +129,11 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )) (./tesis.aux
-(./Main/core.aux
+(./Introduction/reconstruction.aux
 
-LaTeX Warning: Label `fig:tau2GhostAndAntikt6' multiply defined.
+LaTeX Warning: Label `sec:trackreco' multiply defined.
 
-))
+) (./Main/core.aux))
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -188,342 +188,440 @@ Overfull \hbox (3.0371pt too wide) in paragraph at lines 181--182
  [1
 
 ]
+\openout2 = `Introduction/reconstruction.aux'.
+
+ (./Introduction/reconstruction.tex
+Chapter 1.
+! Undefined control sequence.
+<argument> ...pter }Event reconstruction and $\bm 
+                                                  b$-Tagging }{\thepage }}
+l.7 ...{Event reconstruction and $\bm b$-Tagging }
+                                                  \label{ch:reco}
+? 
+! Undefined control sequence.
+<recently read> \bm 
+                    
+l.7 ...{Event reconstruction and $\bm b$-Tagging }
+                                                  \label{ch:reco}
+? 
+[2
+
+
+] [3] [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+ [6]
+Overfull \hbox (6.41562pt too wide) in paragraph at lines 74--75
+[]\T1/cmr/m/n/12 Other cal-i-bra-tions schemes are the global calorime-ter cell
+ weight-ing (GCW)
+ []
+
+[7] [8] <JESUncertainty.png, id=71, 518.93875pt x 363.3575pt>
+File: JESUncertainty.png Graphic file (type png)
+
+<use JESUncertainty.png> [9] [10 <./JESUncertainty.png (PNG copy)>]
+<bjetsJESUncertainty.png, id=78, 539.01375pt x 359.3425pt>
+File: bjetsJESUncertainty.png Graphic file (type png)
+
+<use bjetsJESUncertainty.png>
+
+LaTeX Warning: Reference `atlasID' on page 11 undefined on input line 121.
+
+
+LaTeX Warning: Reference `ch:lhc_atlas' on page 11 undefined on input line 121.
+
+
+[11] [12 <./bjetsJESUncertainty.png (PNG copy)>] [13] [14] [15]
+! Undefined control sequence.
+<argument>  ${\bm 
+                  b}$-jet Tagging
+l.166 \section{ ${\bm b}$-jet Tagging}
+                                      \label{sec:btagging}
+? 
+! Undefined control sequence.
+<argument> ...me thesection\endcsname }\fi  ${\bm 
+                                                  b}$-jet Tagging}{\thepage }}
+l.166 \section{ ${\bm b}$-jet Tagging}
+                                      \label{sec:btagging}
+? 
+
+Overfull \hbox (0.85825pt too wide) in paragraph at lines 175--176
+[]\T1/cmr/m/n/12 A $\OML/cmm/m/it/12 b$\T1/cmr/m/n/12 -quark, once pro-duced, f
+rag-ments nec-es-sar-ily into a $\OML/cmm/m/it/12 b$\T1/cmr/m/n/12 -flavoured h
+adron,
+ []
+
+[16] [17] [18] [19] <signedFinal.png, id=114, 689.57625pt x 429.605pt>
+File: signedFinal.png Graphic file (type png)
+
+<use signedFinal.png> [20] [21 <./signedFinal.png (PNG copy)>] [22] [23]
+[24] [25] [26] <btaggingperformance.png, id=138, 612.2875pt x 579.16376pt>
+File: btaggingperformance.png Graphic file (type png)
+
+<use btaggingperformance.png> [27 <./btaggingperformance.png (PNG copy)>]
+[28]
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ± in font cmr12!
+
+
+LaTeX Warning: Citation `ATLAS-CONF-2012-040' on page 29 undefined on input lin
+e 390.
+
+[29]) [30]
 \openout2 = `Main/core.aux'.
 
  (./Main/core.tex
-Chapter 1.
+Chapter 2.
 
-LaTeX Warning: Reference `ch:mva' on page 2 undefined on input line 9.
+LaTeX Warning: Reference `ch:mva' on page 31 undefined on input line 9.
 
-[2
+[31
+
 
 
 ]
 
-LaTeX Warning: Reference `sec:MCtools' on page 3 undefined on input line 21.
+LaTeX Warning: Reference `sec:MCtools' on page 32 undefined on input line 21.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+[32]
+
+LaTeX Warning: Reference `sec:TDAQ' on page 33 undefined on input line 36.
 
 
-LaTeX Warning: Reference `sec:TDAQ' on page 3 undefined on input line 36.
-
-[3]
-
-LaTeX Warning: Reference `sec:calib' on page 4 undefined on input line 42.
-
-
-Overfull \hbox (21.67389pt too wide) in paragraph at lines 42--44
+Overfull \hbox (23.93721pt too wide) in paragraph at lines 42--44
 []\T1/cmr/bx/n/12 Jet cal-i-bra-tion\T1/cmr/m/n/12 . The EM+JES cal-i-bra-tion 
-scheme, de-scribed in Section[],
+scheme, de-scribed in Section1.1[],
  []
 
-[4] [5] [6] <FIGS/VarsSingleMerged/Ntrk080.pdf, id=63, 569.12625pt x 546.04pt>
+[33] [34] [35]
+<FIGS/VarsSingleMerged/Ntrk080.pdf, id=168, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Ntrk080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/Ntrk080.pdf>
-<FIGS/VarsSingleMerged/Ntrk200.pdf, id=64, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/Ntrk200.pdf, id=169, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Ntrk200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/Ntrk200.pdf> [7]
-<FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrk_gbb_b_J3_PT80.png, id=68, 698.61p
-t x 674.52pt>
+<use FIGS/VarsSingleMerged/Ntrk200.pdf> [36]
+<FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrk_gbb_b_J3_PT80.png, id=173, 698.61
+pt x 674.52pt>
 File: FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrk_gbb_b_J3_PT80.png Graphic fi
 le (type png)
 
 <use FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrk_gbb_b_J3_PT80.png>
-<FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png, id=69, 698.61
-pt x 674.52pt>
+<FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png, id=174, 698.6
+1pt x 674.52pt>
 File: FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png Graphic f
 ile (type png)
 
-<use FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png> [8 <./FIG
-S/VarsSingleMerged/Ntrk080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleM
-erged/Ntrk200.pdf, page is rotated 90 degrees>]
-<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf, id=160, 569.12625p
+<use FIGS/TEMPFigs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png> [37 <./FI
+GS/VarsSingleMerged/Ntrk080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingle
+Merged/Ntrk200.pdf, page is rotated 90 degrees>]
+<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf, id=264, 569.12625p
 t x 549.05125pt>
 File: FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf Graphic file (
 type pdf)
 
 <use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf>
-<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf, id=161, 569.12625p
+<FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf, id=265, 569.12625p
 t x 549.05125pt>
 File: FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf Graphic file (
 type pdf)
 
-<use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf> [9 <./FIGS/TEM
-PFigs/PythisStandalone/MaxPlots/ntrk_gbb_b_J3_PT80.png (PNG copy)> <./FIGS/TEMP
-Figs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png (PNG copy)>] [10 <./FIGS
-/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf, page is rotated 90 degr
-ees> <./FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf, page is rot
-ated 90 degrees>]
+<use FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf> [38 <./FIGS/TE
+MPFigs/PythisStandalone/MaxPlots/ntrk_gbb_b_J3_PT80.png (PNG copy)> <./FIGS/TEM
+PFigs/PythisStandalone/MaxPlots/ntrkB_gbb_b_J3_PT80.png (PNG copy)>] [39 <./FIG
+S/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW080.pdf, page is rotated 90 deg
+rees> <./FIGS/TEMPFigs/DisplacedTracks/Ntrk_allanddisplacedW200.pdf, page is ro
+tated 90 degrees>]
+<FIGS/TEMPFigs/PythisStandalone/MaxPlots/trkWidth_bb_b_g_J3_PT80.png, id=359, 6
+98.61pt x 674.52pt>
+File: FIGS/TEMPFigs/PythisStandalone/MaxPlots/trkWidth_bb_b_g_J3_PT80.png Graph
+ic file (type png)
 
-LaTeX Warning: File `FIGS/VarsSingleMerged/trkWidth_bb_b_g_J3_PT80.png' not fou
-nd on input line 222.
-
-
-! Package pdftex.def Error: File `FIGS/VarsSingleMerged/trkWidth_bb_b_g_J3_PT80
-.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.222 ...SingleMerged/trkWidth_bb_b_g_J3_PT80.png}
-                                                  
-? 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 222.
-
-(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-<FIGS/VarsSingleMerged/trkWidth080.pdf, id=256, 569.12625pt x 546.04pt>
+<use FIGS/TEMPFigs/PythisStandalone/MaxPlots/trkWidth_bb_b_g_J3_PT80.png>
+<FIGS/VarsSingleMerged/trkWidth080.pdf, id=360, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/trkWidth080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/trkWidth080.pdf>
-<FIGS/VarsSingleMerged/trkWidth200.pdf, id=257, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/trkWidth200.pdf, id=361, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/trkWidth200.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/trkWidth200.pdf>
-<FIGS/systematics/Widthsingle_060.pdf, id=258, 569.12625pt x 549.05125pt>
+<FIGS/systematics/Widthsingle_060.pdf, id=362, 569.12625pt x 549.05125pt>
 File: FIGS/systematics/Widthsingle_060.pdf Graphic file (type pdf)
 
 <use FIGS/systematics/Widthsingle_060.pdf>
-<FIGS/systematics/trkWidthsingle_060.pdf, id=259, 569.12625pt x 549.05125pt>
+<FIGS/systematics/trkWidthsingle_060.pdf, id=363, 569.12625pt x 549.05125pt>
 File: FIGS/systematics/trkWidthsingle_060.pdf Graphic file (type pdf)
 
-<use FIGS/systematics/trkWidthsingle_060.pdf>
-<FIGS/VarsSingleMerged/JetMass080.pdf, id=260, 569.12625pt x 546.04pt>
+<use FIGS/systematics/trkWidthsingle_060.pdf> [40] [41 <./FIGS/TEMPFigs/PythisS
+tandalone/MaxPlots/trkWidth_bb_b_g_J3_PT80.png (PNG copy)> <./FIGS/VarsSingleMe
+rged/trkWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/trkW
+idth200.pdf, page is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/JetMass080.pdf, id=456, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/JetMass080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/JetMass080.pdf>
-<FIGS/VarsSingleMerged/JetMass200.pdf, id=261, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/JetMass200.pdf, id=457, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/JetMass200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/JetMass200.pdf> [11] [12 <./FIGS/VarsSingleMerged/tr
-kWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/trkWidth200
-.pdf, page is rotated 90 degrees>] [13 <./FIGS/systematics/Widthsingle_060.pdf,
- page is rotated 90 degrees> <./FIGS/systematics/trkWidthsingle_060.pdf, page i
-s rotated 90 degrees> <./FIGS/VarsSingleMerged/JetMass080.pdf, page is rotated 
-90 degrees> <./FIGS/VarsSingleMerged/JetMass200.pdf, page is rotated 90 degrees
->] <FIGS/VarsSingleMerged/DRtrk12080.pdf, id=530, 569.12625pt x 546.04pt>
+<use FIGS/VarsSingleMerged/JetMass200.pdf>
+<FIGS/VarsSingleMerged/DRtrk12080.pdf, id=458, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRtrk12080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/DRtrk12080.pdf>
-<FIGS/VarsSingleMerged/DRtrk12200.pdf, id=531, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/DRtrk12200.pdf, id=459, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRtrk12200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/DRtrk12200.pdf>
-<FIGS/VarsSingleMerged/drmax080.pdf, id=532, 569.12625pt x 546.04pt>
+<use FIGS/VarsSingleMerged/DRtrk12200.pdf> [42 <./FIGS/systematics/Widthsingle_
+060.pdf, page is rotated 90 degrees> <./FIGS/systematics/trkWidthsingle_060.pdf
+, page is rotated 90 degrees>] [43 <./FIGS/VarsSingleMerged/JetMass080.pdf, pag
+e is rotated 90 degrees> <./FIGS/VarsSingleMerged/JetMass200.pdf, page is rotat
+ed 90 degrees> <./FIGS/VarsSingleMerged/DRtrk12080.pdf, page is rotated 90 degr
+ees> <./FIGS/VarsSingleMerged/DRtrk12200.pdf, page is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/drmax080.pdf, id=724, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/drmax080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/drmax080.pdf>
-<FIGS/VarsSingleMerged/drmax200.pdf, id=533, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/drmax200.pdf, id=725, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/drmax200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/drmax200.pdf> [14 <./FIGS/VarsSingleMerged/DRtrk1208
-0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRtrk12200.pdf, pag
-e is rotated 90 degrees>]
+<use FIGS/VarsSingleMerged/drmax200.pdf> [44 <./FIGS/VarsSingleMerged/drmax080.
+pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/drmax200.pdf, page is
+ rotated 90 degrees>]
 
-LaTeX Warning: Reference `sec:jetalgos' on page 15 undefined on input line 305.
+LaTeX Warning: Reference `sec:jetalgos' on page 45 undefined on input line 312.
 
 
-
-Overfull \hbox (4.56325pt too wide) in paragraph at lines 305--307
-[]\T1/cmr/m/n/12 By us-ing the se-quen-tial re-com-bi-na-tion al-go-rithms in-t
-ro-duced in Sec-tion [],
- []
-
-[15 <./FIGS/VarsSingleMerged/drmax080.pdf, page is rotated 90 degrees> <./FIGS/
-VarsSingleMerged/drmax200.pdf, page is rotated 90 degrees>]
-<FIGS/VarsSingleMerged/Nsubjets080.pdf, id=713, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/Nsubjets080.pdf, id=816, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Nsubjets080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/Nsubjets080.pdf>
-<FIGS/VarsSingleMerged/Nsubjets200.pdf, id=714, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/Nsubjets200.pdf, id=817, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Nsubjets200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/Nsubjets200.pdf> [16 <./FIGS/VarsSingleMerged/Nsubje
-ts080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Nsubjets200.pdf
-, page is rotated 90 degrees>]
-<FIGS/VarsSingleMerged/DRkt2axes080.pdf, id=806, 569.12625pt x 546.04pt>
+<use FIGS/VarsSingleMerged/Nsubjets200.pdf>
+<FIGS/VarsSingleMerged/DRkt2axes080.pdf, id=818, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRkt2axes080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/DRkt2axes080.pdf>
-<FIGS/VarsSingleMerged/DRkt2axes200.pdf, id=807, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/DRkt2axes200.pdf, id=819, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRkt2axes200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/DRkt2axes200.pdf> [17 <./FIGS/VarsSingleMerged/DRkt2
-axes080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRkt2axes200.
-pdf, page is rotated 90 degrees>]
-Overfull \hbox (5.87827pt too wide) in paragraph at lines 362--364
+<use FIGS/VarsSingleMerged/DRkt2axes200.pdf> [45]
+<FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf, id=823, 569.12625pt x 552.0625pt
+>
+File: FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf Graphic file (type pdf)
+ <use FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf> [46 <./FIGS/VarsSingleMerge
+d/Nsubjets080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Nsubjet
+s200.pdf, page is rotated 90 degrees>]
+Overfull \hbox (5.87827pt too wide) in paragraph at lines 381--383
 \T1/cmr/m/n/12 elec-troweak bosons and top quarks de-cay-ing into col-li-mated 
 show-ers of hadrons
  []
 
-[18] <FIGS/VarsSingleMerged/Tau2080.pdf, id=900, 569.12625pt x 546.04pt>
+[47 <./FIGS/VarsSingleMerged/DRkt2axes080.pdf, page is rotated 90 degrees> <./F
+IGS/VarsSingleMerged/DRkt2axes200.pdf, page is rotated 90 degrees>] [48 <./FIGS
+/TEMPFigs/EventDisplay7023Cluster_Bs.pdf, page is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/Tau2080.pdf, id=1048, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Tau2080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/Tau2080.pdf>
-<FIGS/VarsSingleMerged/Tau2200.pdf, id=901, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/Tau2200.pdf, id=1049, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Tau2200.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/Tau2200.pdf>
-<FIGS/VarsSingleMerged/Tau2trkWidth080.pdf, id=902, 569.12625pt x 549.05125pt>
+<FIGS/VarsSingleMerged/Tau2trkWidth080.pdf, id=1050, 569.12625pt x 549.05125pt>
 File: FIGS/VarsSingleMerged/Tau2trkWidth080.pdf Graphic file (type pdf)
-
 <use FIGS/VarsSingleMerged/Tau2trkWidth080.pdf>
-<FIGS/VarsSingleMerged/NtrktrkWidth080.pdf, id=903, 569.12625pt x 549.05125pt>
+<FIGS/VarsSingleMerged/NtrktrkWidth080.pdf, id=1051, 569.12625pt x 549.05125pt>
 File: FIGS/VarsSingleMerged/NtrktrkWidth080.pdf Graphic file (type pdf)
-
 <use FIGS/VarsSingleMerged/NtrktrkWidth080.pdf>
-<FIGS/VarsSingleMerged/TauRatio080.pdf, id=904, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/TauRatio080.pdf, id=1052, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/TauRatio080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/TauRatio080.pdf>
-<FIGS/VarsSingleMerged/TauRatio200.pdf, id=905, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/TauRatio200.pdf, id=1053, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/TauRatio200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/TauRatio200.pdf> [19 <./FIGS/VarsSingleMerged/Tau208
-0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Tau2200.pdf, page i
-s rotated 90 degrees>] [20 <./FIGS/VarsSingleMerged/Tau2trkWidth080.pdf, page i
+<use FIGS/VarsSingleMerged/TauRatio200.pdf> [49] [50 <./FIGS/VarsSingleMerged/T
+au2080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Tau2200.pdf, p
+age is rotated 90 degrees> <./FIGS/VarsSingleMerged/Tau2trkWidth080.pdf, page i
 s rotated 90 degrees> <./FIGS/VarsSingleMerged/NtrktrkWidth080.pdf, page is rot
-ated 90 degrees> <./FIGS/VarsSingleMerged/TauRatio080.pdf, page is rotated 90 d
-egrees> <./FIGS/VarsSingleMerged/TauRatio200.pdf, page is rotated 90 degrees>]
+ated 90 degrees>]
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.431  \end{bmatrix}
+l.450  \end{bmatrix}
                     
 ? 
 ! Extra \right.
 <to be read again> 
                    $
-l.431  \end{bmatrix}
+l.450  \end{bmatrix}
                     
 ? 
-<FIGS/VarsSingleMerged/JetEcc080.pdf, id=1171, 569.12625pt x 546.04pt>
+[51 <./FIGS/VarsSingleMerged/TauRatio080.pdf, page is rotated 90 degrees> <./FI
+GS/VarsSingleMerged/TauRatio200.pdf, page is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/JetEcc080.pdf, id=1322, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/JetEcc080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/JetEcc080.pdf>
-<FIGS/VarsSingleMerged/JetEcc200.pdf, id=1172, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/JetEcc200.pdf, id=1323, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/JetEcc200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/JetEcc200.pdf>
-<FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf, id=1173, 569.12625pt x 549.
-05125pt>
-File: FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf Graphic file (type pdf)
-
- <use FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tau2080.pdf>
-<FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf, id=1174, 569.12625pt x 549.05
-125pt>
-File: FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf Graphic file (type pdf)
- <use FIGS/TEMPFigs/GhostMatchingVarsClus/Tau2080.pdf> [21]
-<FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tauratio080.pdf, id=1178, 569.12625pt x 
-549.05125pt>
-File: FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tauratio080.pdf Graphic file (type 
-pdf)
- <use FIGS/TEMPFigs/Antikt6VarsSingleMerged/Tauratio080.pdf>
-
-LaTeX Warning: File `FIGS/TEMPFigs/GhostMatchingVarsClus/Tauratio2080.pdf' not 
-found on input line 493.
-
-
-! Package pdftex.def Error: File `FIGS/TEMPFigs/GhostMatchingVarsClus/Tauratio2
-080.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.493 ...s/GhostMatchingVarsClus/Tauratio2080.pdf}
-                                                  
-? 
-
-<FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf, id=1179, 56
-9.12625pt x 549.05125pt>
-File: FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/Antikt6VarsSingleMerged/JetTrackEccentricity080.pdf>
-<FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf, id=1180, 569.1
-2625pt x 549.05125pt>
-File: FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf Graphic fi
-le (type pdf)
-
-<use FIGS/TEMPFigs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf> [22 <./FIG
-S/VarsSingleMerged/JetEcc080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingl
-eMerged/JetEcc200.pdf, page is rotated 90 degrees>] [23 <./FIGS/TEMPFigs/Antikt
-6VarsSingleMerged/Tau2080.pdf, page is rotated 90 degrees> <./FIGS/TEMPFigs/Gho
-stMatchingVarsClus/Tau2080.pdf, page is rotated 90 degrees> <./FIGS/TEMPFigs/An
-tikt6VarsSingleMerged/Tauratio080.pdf, page is rotated 90 degrees>]
-<FIGS/dataMC/FullDataVarNtrkPT080.pdf, id=1402, 569.12625pt x 549.05125pt>
+<use FIGS/VarsSingleMerged/JetEcc200.pdf> [52 <./FIGS/VarsSingleMerged/JetEcc08
+0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/JetEcc200.pdf, page
+ is rotated 90 degrees>]
+<FIGS/dataMC/FullDataVarNtrkPT080.pdf, id=1413, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarNtrkPT080.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarNtrkPT080.pdf>
-<FIGS/dataMC/FullDataVarNtrkPT200.pdf, id=1403, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarNtrkPT200.pdf, id=1414, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarNtrkPT200.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarNtrkPT200.pdf>
-<FIGS/dataMC/FullDataVarTrkWidthPT080.pdf, id=1404, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarTrkWidthPT080.pdf, id=1415, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarTrkWidthPT080.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarTrkWidthPT080.pdf>
-<FIGS/dataMC/FullDataVarTrkWidthPT200.pdf, id=1405, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarTrkWidthPT200.pdf, id=1416, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarTrkWidthPT200.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarTrkWidthPT200.pdf>
-<FIGS/dataMC/FullDataVarDRktaxisPT080.pdf, id=1406, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarDRktaxisPT080.pdf, id=1417, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarDRktaxisPT080.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarDRktaxisPT080.pdf>
-<FIGS/dataMC/FullDataVarDRktaxisPT200.pdf, id=1407, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarDRktaxisPT200.pdf, id=1418, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarDRktaxisPT200.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarDRktaxisPT200.pdf>
 
-LaTeX Warning: Float too large for page by 62.42078pt on input line 538.
+LaTeX Warning: Float too large for page by 62.42078pt on input line 510.
 
-<FIGS/dataMC/FullDataVarDRmaxPT080.pdf, id=1408, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarDRmaxPT080.pdf, id=1419, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarDRmaxPT080.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarDRmaxPT080.pdf>
-<FIGS/dataMC/FullDataVarDRmaxPT200.pdf, id=1409, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarDRmaxPT200.pdf, id=1420, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarDRmaxPT200.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarDRmaxPT200.pdf>
-<FIGS/dataMC/FullDataVarTau2PT080.pdf, id=1410, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarTau2PT080.pdf, id=1421, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarTau2PT080.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarTau2PT080.pdf>
-<FIGS/dataMC/FullDataVarTau2PT200.pdf, id=1411, 569.12625pt x 549.05125pt>
+<FIGS/dataMC/FullDataVarTau2PT200.pdf, id=1422, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarTau2PT200.pdf Graphic file (type pdf)
 
-<use FIGS/dataMC/FullDataVarTau2PT200.pdf>) [24 <./FIGS/TEMPFigs/Antikt6VarsSin
-gleMerged/JetTrackEccentricity080.pdf, page is rotated 90 degrees> <./FIGS/TEMP
-Figs/GhostMatchingVarsClus/JetCaloEccentricity080.pdf, page is rotated 90 degre
-es>] [25 <./FIGS/dataMC/FullDataVarNtrkPT080.pdf, page is rotated 90 degrees> <
-./FIGS/dataMC/FullDataVarNtrkPT200.pdf, page is rotated 90 degrees> <./FIGS/dat
-aMC/FullDataVarTrkWidthPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/Fu
-llDataVarTrkWidthPT200.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullData
-VarDRktaxisPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarDRk
-taxisPT200.pdf, page is rotated 90 degrees>] [26 <./FIGS/dataMC/FullDataVarDRma
-xPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarDRmaxPT200.pd
-f, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTau2PT080.pdf, page is
- rotated 90 degrees> <./FIGS/dataMC/FullDataVarTau2PT200.pdf, page is rotated 9
-0 degrees>] (./tesis.bbl
-Underfull \hbox (badness 1112) in paragraph at lines 18--21
+<use FIGS/dataMC/FullDataVarTau2PT200.pdf>) [53] [54 <./FIGS/dataMC/FullDataVar
+NtrkPT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarNtrkPT200.
+pdf, page is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTrkWidthPT080.pdf, p
+age is rotated 90 degrees> <./FIGS/dataMC/FullDataVarTrkWidthPT200.pdf, page is
+ rotated 90 degrees> <./FIGS/dataMC/FullDataVarDRktaxisPT080.pdf, page is rotat
+ed 90 degrees> <./FIGS/dataMC/FullDataVarDRktaxisPT200.pdf, page is rotated 90 
+degrees>] [55 <./FIGS/dataMC/FullDataVarDRmaxPT080.pdf, page is rotated 90 degr
+ees> <./FIGS/dataMC/FullDataVarDRmaxPT200.pdf, page is rotated 90 degrees> <./F
+IGS/dataMC/FullDataVarTau2PT080.pdf, page is rotated 90 degrees> <./FIGS/dataMC
+/FullDataVarTau2PT200.pdf, page is rotated 90 degrees>] (./tesis.bbl
+Underfull \hbox (badness 1112) in paragraph at lines 10--13
 \T1/cmr/m/n/12 Per-for-mance.  (ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-
  []
 
-[27
+[56
 
 
-] [28]) [29] (./tesis.aux (./Main/core.aux))
+]
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.60   &
+        lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&
+             gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&
+                  lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&
+                        gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&
+                            lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&lt;sup&
+                                   gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&
+                                        lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60   &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&
+                                                gt;&lt;i&gt;e&lt;/i&gt;&lt;s...
+
+? 
+! Misplaced alignment tab character &.
+l.60 ...;i&gt;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&
+                                                  lt;i&gt;e&lt;/i&gt;&lt;sup...
+
+? 
+! Misplaced alignment tab character &.
+l.60 ...;e&lt;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&
+                                                  gt;e&lt;/i&gt;&lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;/i&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&
+                                                  lt;/i&gt;&lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;&lt;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&
+                                                  gt;&lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;sup&gt;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&
+                                                  lt;sup&gt;â%
+? 
+! Misplaced alignment tab character &.
+l.60 ...;+&lt;/sup&gt;&lt;i&gt;e&lt;/i&gt;&lt;sup&
+                                                  gt;â%
+? 
+! Misplaced alignment tab character &.
+l.61 ˆ’&
+        lt;/sup&gt; production of heavy quarks in the string model.
+? 
+! Misplaced alignment tab character &.
+l.61 ˆ’&lt;/sup&
+                gt; production of heavy quarks in the string model.
+? 
+
+Overfull \hbox (52.6266pt too wide) in paragraph at lines 58--65
+[]\T1/cmr/m/n/12 M. G. Bowler.  lt;igt;elt;/igt;lt;supgt;+lt;/supgt;lt;igt;elt;
+/igt;lt;supgt;âˆ’lt;/supgt;
+ []
+
+[57] [58] [59]) [60] (./tesis.aux (./Introduction/reconstruction.aux)
+(./Main/core.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -532,37 +630,40 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2171 strings out of 493848
- 32064 string characters out of 1152823
- 78060 words of memory out of 3000000
- 5370 multiletter control sequences out of 15000+50000
- 29797 words of font info for 72 fonts, out of 3000000 for 9000
+ 2205 strings out of 493848
+ 31962 string characters out of 1152823
+ 78509 words of memory out of 3000000
+ 5396 multiletter control sequences out of 15000+50000
+ 32310 words of font info for 75 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,12n,21p,1243b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,12n,21p,1705b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-frm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type
-1/public/cm-super/sftt1200.pfb>
-Output written on tesis.pdf (34 pages, 1137467 bytes).
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx120
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on tesis.pdf (65 pages, 1494265 bytes).
 PDF statistics:
- 2025 PDF objects out of 2073 (max. 8388607)
+ 1970 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
