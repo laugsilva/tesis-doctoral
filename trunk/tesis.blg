@@ -1,7 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/reconstruction.aux
-A level-1 auxiliary file: Main/core.aux
+A level-1 auxiliary file: Main/core_mva.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 563 of file tesis.bib
@@ -14,13 +13,10 @@ I was expecting a `,' or a `}'---line 578 of file tesis.bib
  :   collaboration = {D0 Collaboration},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1430 of file tesis.bib
- : @article{ATLAS-CONF-2010-091
- :                             ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1438 of file tesis.bib
- : @article{ATLAS-CONF-2010-042
- :                             ,
+I was expecting a `,' or a `}'---line 1440 of file tesis.bib
+ :       
+ :       title        = "{Performance of the ATLAS Secondary Vertex b-tagging Algorithm in 7 TeV Collision Data}",
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 1448 of file tesis.bib
  :       
@@ -51,17 +47,10 @@ I was expecting a `,' or a `}'---line 1531 of file tesis.bib
  :        title        = "{ATLAS Calorimeter Response to Single Isolated Hadrons and Estimation of the Calorimeter Jet Scale Uncertainty}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1569 of file tesis.bib
- : @article{Professor
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1612 of file tesis.bib
- : @article{ATLAS-CONF-2010-069
- :                             ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1634 of file tesis.bib
- : @article{ATLAS-CONF-2010-091
- :                             ,
+I was expecting a `,' or a `}'---line 1614 of file tesis.bib
+ :        
+ :        title        = "Performance of primary vertex reconstruction in
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 1652 of file tesis.bib
  :       
@@ -72,68 +61,45 @@ Illegal end of database file---line 1676 of file tesis.bib
  : }
  :  
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ATLAS-CONF-2012-040"
-Warning--empty title in Asquith:1311867
-Warning--empty journal in Asquith:1311867
-Warning--empty year in Asquith:1311867
-Warning--empty title in Busato:1271710
-Warning--empty journal in Busato:1271710
-Warning--empty year in Busato:1271710
-Warning--empty journal in topoClusters
-Warning--there's a number but no volume in topoClusters
-Warning--empty title in ATLAS-CONF-2011-028
-Warning--empty journal in ATLAS-CONF-2011-028
-Warning--empty year in ATLAS-CONF-2011-028
-Warning--empty title in ATLAS-CONF-2010-069
-Warning--empty journal in ATLAS-CONF-2010-069
-Warning--empty year in ATLAS-CONF-2010-069
-Warning--empty author in ATLAS-CONF-2012-024
-Warning--empty title in ATLAS-CONF-2012-024
-Warning--empty journal in ATLAS-CONF-2012-024
-Warning--empty year in ATLAS-CONF-2012-024
-Warning--empty title in ATLAS-CONF-2012-097
-Warning--empty journal in ATLAS-CONF-2012-097
-Warning--empty year in ATLAS-CONF-2012-097
-Warning--empty author in Pythia_MC11tune
-You've used 38 entries,
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            657 strings with 9073 characters,
-and the built_in function-call counts, 7199 in all, are:
-= -- 572
-> -- 345
-< -- 1
-+ -- 133
-- -- 95
-* -- 504
-:= -- 1225
-add.period$ -- 103
-call.type$ -- 38
-change.case$ -- 32
+            475 strings with 4480 characters,
+and the built_in function-call counts, 931 in all, are:
+= -- 70
+> -- 57
+< -- 0
++ -- 21
+- -- 16
+* -- 54
+:= -- 175
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 324
-empty$ -- 705
-format.name$ -- 95
-if$ -- 1535
+cite$ -- 5
+duplicate$ -- 42
+empty$ -- 84
+format.name$ -- 16
+if$ -- 195
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 37
-newline$ -- 182
-num.names$ -- 36
-pop$ -- 95
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 5
+pop$ -- 11
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 127
+skip$ -- 17
 stack$ -- 0
-substring$ -- 388
-swap$ -- 31
-text.length$ -- 1
+substring$ -- 27
+swap$ -- 5
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 22
-while$ -- 58
-width$ -- 40
-write$ -- 376
-(There were 15 error messages)
+warning$ -- 0
+while$ -- 7
+width$ -- 6
+write$ -- 54
+(There were 12 error messages)
