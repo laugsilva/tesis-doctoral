@@ -24,7 +24,7 @@ Neural Networks (NN)
 \item
 Boosted decision Trees (BDTs)
 \item
-Fisher discriminant
+Fisher discriminants
 \end{itemize}
 
 %From TMVA Users Guide
@@ -64,7 +64,24 @@ Both the training and the application of the likelihood are very fast operations
 
 The method of Fisher discriminants~\cite{Fisher}.
 
-An artificial Neural Network (NN) is a nonlinear discriminant. It can be viewed as mapping from a space of input variables $x_1,...,x_n_{var}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. 
+An artificial Neural Network (NN) is a nonlinear discriminant, it is most generally speaking any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals.
+. It can be viewed as a mapping from a space of input variables $x_1,...,x_n_{var}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function ρ.
+While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with nvar input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_n_{var}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{ANN}$ .
+%The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
+
+
+The NN used were built with only one hidden layer. %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
+
+
+A decision tree (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually classified as signal or background, depending on the majority of training events that end up in the final $leaf$ node. The boosting of a decision tree extends this concept from one tree to several trees which form a $forest$.
+%Decision trees are well known classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
+%Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree. However, the advantage of the straightforward interpretation of the decision tree is lost.
+%Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
+
+
+
+
+
 
 
 
