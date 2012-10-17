@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  15 OCT 2012 11:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  16 OCT 2012 20:02
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -188,308 +188,174 @@ Overfull \hbox (3.0371pt too wide) in paragraph at lines 181--182
 
  (./Main/core_mva.tex
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
+ [2
 
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf, id=42,
- 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf Gr
-aphic file (type pdf)
 
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf, id=43,
- 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf Gr
-aphic file (type pdf)
+]
 
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf, id=44,
- 698.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf Gr
-aphic file (type pdf)
+LaTeX Warning: Citation `Fisher' on page 3 undefined on input line 65.
 
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf, id=45, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf Graphic 
-file (type pdf)
+[3]
 
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf, id=46, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf Graphic 
-file (type pdf)
+LaTeX Warning: Citation `QUINLAN1999497' on page 4 undefined on input line 76.
 
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf, id=47, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf Graphic 
-file (type pdf)
+<FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, id=52, 569.12625pt x 549.05125pt>
+File: FIGS/Likelihood/NNoutput080_LihoodKDE.pdf Graphic file (type pdf)
 
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf, id=48, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf, id=49, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf, id=50, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf, id=51, 698.
-61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf, id=52, 698.
-61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf, id=53, 698.
-61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf, id=54, 698.61pt x
- 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf, id=55, 698.61pt x
+<use FIGS/Likelihood/NNoutput080_LihoodKDE.pdf>
+<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf, id=53, 698.61pt x
  674.52pt>
 File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf Graphic file 
 (type pdf)
  <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf, id=56, 698.61pt x
- 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf, id=57, 698.61pt x
- 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf, id=58, 698.61pt x
+<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf, id=54, 698.61pt x
  674.52pt>
 File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf Graphic file 
 (type pdf)
  <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf, id=59, 698.61pt x
- 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf Graphic file 
-(type pdf)
- <use FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf, id=60, 698.6
-1pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf Graphic 
-file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf, id=61, 698.
-61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf, id=62, 698.61pt x
+<FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf, id=55, 698.61pt x
  674.52pt>
 File: FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf Graphic file 
 (type pdf)
  <use FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf>
-<FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf, id=63, 698.61pt 
+<FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf, id=56, 698.61pt 
 x 674.52pt>
 File: FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf Graphic file
  (type pdf)
  <use FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf>
-
-LaTeX Warning: Reference `fig:difftrainings' on page 2 undefined on input line 
-89.
-
-
-<FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf, id=64, 698.
-61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf>
-<FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf, id=65, 698.
-61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf Graphic
- file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf>
-<FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf, id=66, 698
-.61pt x 674.52pt>
-File: FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf Graphi
-c file (type pdf)
-
-<use FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf>
-[2
-
-
-] [3 <./FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf>
- <./FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf> <./
-FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf> <./FIGS
-/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf> <./FIGS/TEMPFigs/
-MVA_differentMethods/inclusive/NNoutput080_MLP.pdf> <./FIGS/TEMPFigs/MVA_differ
-entMethods/inclusive/NNoutput200_MLP.pdf> <./FIGS/TEMPFigs/MVA_differentMethods
-/inclusive/NNoutput040_BDT.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/inclusive
-/NNoutput080_BDT.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput2
-00_BDT.pdf>] [4 <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKD
-E.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf> <.
-/FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf> <./FIGS/TEM
-PFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf> <./FIGS/TEMPFigs/MVA_diffe
-rentMethods/bins/NNoutput080_MLP.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bin
-s/NNoutput200_MLP.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_B
-DT.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf> <./FIGS
-/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf>] [5 <./FIGS/TEMPFigs/M
-VA_differentMethods/inclusive/MVAs_RejvsEff40.pdf> <./FIGS/TEMPFigs/MVA_differe
-ntMethods/inclusive/MVAs_RejvsEff200.pdf> <./FIGS/TEMPFigs/MVA_differentMethods
-/bins/MVAs_RejvsEff40.pdf> <./FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_Rejv
-sEff200.pdf>]
-! Undefined control sequence.
-<recently read> \bm 
-                    
-l.101 ...b}}$ likelihood training and performance}
-                                                  
-? 
-! Undefined control sequence.
-<argument> ...name thesection\endcsname }\fi $\bm 
-                                                  { g\rightarrow b\bar {b}}$...
-l.101 ...b}}$ likelihood training and performance}
-                                                  
-? 
-[6 <./FIGS/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff40.pdf> <./FIG
-S/TEMPFigs/MVA_differentTrainings/DiffTrainings_RejvsEff80.pdf> <./FIGS/TEMPFig
-s/MVA_differentTrainings/DiffTrainings_RejvsEff200.pdf>]
-<FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, id=235, 569.12625pt x 549.05125pt>
+[4 <./FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, page is rotated 90 degrees> <.
+/FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf> <./FIGS/TEMPFigs/
+MVA_differentMethods/bins/NNoutput080_BDT.pdf>]
+<FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, id=117, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/NNoutput040_LihoodKDE.pdf Graphic file (type pdf)
 
 <use FIGS/Likelihood/NNoutput040_LihoodKDE.pdf>
-<FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, id=236, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/NNoutput080_LihoodKDE.pdf Graphic file (type pdf)
 
 <use FIGS/Likelihood/NNoutput080_LihoodKDE.pdf>
-<FIGS/Likelihood/NNoutput200_LihoodKDE.pdf, id=238, 569.12625pt x 549.05125pt>
+<FIGS/Likelihood/NNoutput200_LihoodKDE.pdf, id=119, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/NNoutput200_LihoodKDE.pdf Graphic file (type pdf)
 
 <use FIGS/Likelihood/NNoutput200_LihoodKDE.pdf>
 
-LaTeX Warning: Reference `sec:EventSelection' on page 7 undefined on input line
- 136.
+LaTeX Warning: Reference `sec:EventSelection' on page 5 undefined on input line
+ 181.
 
-[7 <./FIGS/Likelihood/NNoutput080_LihoodKDE.pdf, page is rotated 90 degrees> <.
-/FIGS/Likelihood/NNoutput200_LihoodKDE.pdf, page is rotated 90 degrees> <./FIGS
-/Likelihood/NNoutput040_LihoodKDE.pdf, page is rotated 90 degrees>]
-<FIGS/Likelihood/KDE_RejvsEff.pdf, id=374, 569.12625pt x 549.05125pt>
+[5 <./FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf> <./FIGS/TEMP
+Figs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf>]
+<FIGS/Likelihood/KDE_RejvsEff.pdf, id=136, 569.12625pt x 549.05125pt>
 File: FIGS/Likelihood/KDE_RejvsEff.pdf Graphic file (type pdf)
 
-<use FIGS/Likelihood/KDE_RejvsEff.pdf> [8 <./FIGS/Likelihood/KDE_RejvsEff.pdf, 
-page is rotated 90 degrees>]
+<use FIGS/Likelihood/KDE_RejvsEff.pdf>
 
-LaTeX Warning: Reference `sec:validation' on page 9 undefined on input line 207
-.
+LaTeX Warning: Reference `sec:gbbValidation' on page 6 undefined on input line 
+249.
 
-[9]
-<FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf, id=425, 569.12625
-pt x 503.8825pt>
-File: FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf Graphic file 
-(type pdf)
-
-<use FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf>
-<FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf, id=426, 569.12625
-pt x 503.8825pt>
-File: FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf Graphic file 
-(type pdf)
-
-<use FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf> [10 <./FIGS/s
-ystematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf, page is rotated 90 degre
-es> <./FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf, page is rot
-ated 90 degrees>]
-<FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf, id=517, 569.12625pt x 549.051
+[6 <./FIGS/Likelihood/NNoutput200_LihoodKDE.pdf, page is rotated 90 degrees> <.
+/FIGS/Likelihood/NNoutput040_LihoodKDE.pdf, page is rotated 90 degrees>]
+[7 <./FIGS/Likelihood/KDE_RejvsEff.pdf, page is rotated 90 degrees>] [8]
+<FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff040.pdf, id=278, 569.12625pt x 5
+03.8825pt>
+File: FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff040.pdf Graphic file (type 
+pdf)
+ <use FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff040.pdf>
+<FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff060.pdf, id=279, 569.12625pt x 5
+03.8825pt>
+File: FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff060.pdf Graphic file (type 
+pdf)
+ <use FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff060.pdf> [9 <./FIGS/systema
+tics/LlhoodKDE_ISO_PileUp_rejvseff040.pdf, page is rotated 90 degrees> <./FIGS/
+systematics/LlhoodKDE_ISO_PileUp_rejvseff060.pdf, page is rotated 90 degrees>]
+<FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf, id=369, 569.12625pt x 549.051
 25pt>
 File: FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf Graphic file (type pdf)
  <use FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf>
-<FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf, id=518, 569.12625pt x 549
+<FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf, id=370, 569.12625pt x 549
 .05125pt>
 File: FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf Graphic file (type pd
 f)
  <use FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf, id=519, 569.1262
+<FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff080.pdf, id=371, 569.1262
 5pt x 503.8825pt>
-File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf Graphic file
+File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff080.pdf Graphic file
  (type pdf)
 
-<use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf, id=520, 569.1262
+<use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff080.pdf>
+<FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf, id=372, 569.1262
 5pt x 503.8825pt>
-File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf Graphic file
+File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf Graphic file
  (type pdf)
 
-<use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf> [11]
-[12 <./FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf, page is rotated 90 degr
+<use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf> [10]
+[11 <./FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf, page is rotated 90 degr
 ees> <./FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf, page is rotated 90
- degrees> <./FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf, page
+ degrees> <./FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff080.pdf, page
  is rotated 90 degrees> <./FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvsef
-f270.pdf, page is rotated 90 degrees>]
-<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf, id=700
+f200.pdf, page is rotated 90 degrees>]
+<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf, id=552
 , 569.12625pt x 503.8825pt>
 File: FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf Gr
 aphic file (type pdf)
 
 <use FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf>
-<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf, id=701
+<FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf, id=553
 , 569.12625pt x 503.8825pt>
 File: FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf Gr
 aphic file (type pdf)
 
 <use FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff200.pdf>
-[13 <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf, 
+[12 <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertaintyTest_rejvseff080.pdf, 
 page is rotated 90 degrees> <./FIGS/systematics/LlhoodKDE_ISO_TrackingUncertain
-tyTest_rejvseff200.pdf, page is rotated 90 degrees>] [14]
-<FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png, id=795, 698.61pt x 674.5
+tyTest_rejvseff200.pdf, page is rotated 90 degrees>]
+<FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff060.pdf, id=643, 569.1
+2625pt x 503.8825pt>
+File: FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff060.pdf Graphic f
+ile (type pdf)
+
+<use FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff060.pdf>
+<FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff270.pdf, id=644, 569.1
+2625pt x 503.8825pt>
+File: FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff270.pdf Graphic f
+ile (type pdf)
+
+<use FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff270.pdf>
+
+LaTeX Warning: Citation `bjetJES' on page 13 undefined on input line 372.
+
+[13 <./FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff060.pdf, page is
+ rotated 90 degrees> <./FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvsef
+f270.pdf, page is rotated 90 degrees>] [14]
+<FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png, id=738, 698.61pt x 674.5
 2pt>
 File: FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png Graphic file (type p
 ng)
  <use FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png>
-<FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png, id=796, 698.61pt x 674.
+<FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png, id=739, 698.61pt x 674.
 52pt>
 File: FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png Graphic file (type 
 png)
  <use FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png> [15 <./FIGS/system
 atics/DiffIsolationCutsKDE_RejvsEff40.png (PNG copy)> <./FIGS/systematics/DiffI
 solationCutsKDE_RejvsEff270.png (PNG copy)>]
-<gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf, id=800, 569.12625pt x 551.05875pt>
+<gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf, id=743, 569.12625pt x 551.05875pt>
 File: gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf Graphic file (type pdf)
 
 <use gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf>
-<FIGS/systematics/DataVarNtrkPT040.pdf, id=801, 569.12625pt x 549.05125pt>
+<FIGS/systematics/DataVarNtrkPT040.pdf, id=744, 569.12625pt x 549.05125pt>
 File: FIGS/systematics/DataVarNtrkPT040.pdf Graphic file (type pdf)
 
 <use FIGS/systematics/DataVarNtrkPT040.pdf>
-<FIGS/systematics/DataVarNtrkPT200.pdf, id=802, 569.12625pt x 549.05125pt>
+<FIGS/systematics/DataVarNtrkPT200.pdf, id=745, 569.12625pt x 549.05125pt>
 File: FIGS/systematics/DataVarNtrkPT200.pdf Graphic file (type pdf)
 
-<use FIGS/systematics/DataVarNtrkPT200.pdf>) [16 <./gbbRejection_vs_PT_3MonteCa
-rlos_50Eff.pdf, page is rotated 90 degrees>] [17 <./FIGS/systematics/DataVarNtr
+<use FIGS/systematics/DataVarNtrkPT200.pdf>) [16] [17 <./gbbRejection_vs_PT_3Mo
+nteCarlos_50Eff.pdf, page is rotated 90 degrees> <./FIGS/systematics/DataVarNtr
 kPT040.pdf, page is rotated 90 degrees> <./FIGS/systematics/DataVarNtrkPT200.pd
 f, page is rotated 90 degrees>] (./tesis.bbl) [18
 
@@ -501,32 +367,34 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2085 strings out of 493848
- 33495 string characters out of 1152823
- 78826 words of memory out of 3000000
- 5311 multiletter control sequences out of 15000+50000
+ 2000 strings out of 493848
+ 27919 string characters out of 1152823
+ 80801 words of memory out of 3000000
+ 5233 multiletter control sequences out of 15000+50000
  24149 words of font info for 57 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,13n,21p,700b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,13n,21p,716b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
-1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1
-200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm14
-40.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (23 pages, 1087577 bytes).
+texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx109
+5.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfti1200.pfb>
+Output written on tesis.pdf (23 pages, 807515 bytes).
 PDF statistics:
- 1001 PDF objects out of 1200 (max. 8388607)
+ 950 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

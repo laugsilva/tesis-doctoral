@@ -57,49 +57,52 @@ I was expecting a `,' or a `}'---line 1652 of file tesis.bib
  :       author = "{ATLAS Collaboration}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Illegal end of database file---line 1676 of file tesis.bib
+Illegal end of database file---line 1705 of file tesis.bib
  : }
  :  
 I'm skipping whatever remains of this entry
-You've used 5 entries,
+Warning--I didn't find a database entry for "Fisher"
+Warning--I didn't find a database entry for "QUINLAN1999497"
+Warning--I didn't find a database entry for "bjetJES"
+You've used 4 entries,
             1791 wiz_defined-function locations,
-            475 strings with 4480 characters,
-and the built_in function-call counts, 931 in all, are:
-= -- 70
-> -- 57
+            476 strings with 4382 characters,
+and the built_in function-call counts, 785 in all, are:
+= -- 58
+> -- 49
 < -- 0
-+ -- 21
-- -- 16
-* -- 54
-:= -- 175
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 5
++ -- 18
+- -- 14
+* -- 50
+:= -- 148
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 42
-empty$ -- 84
-format.name$ -- 16
-if$ -- 195
+cite$ -- 4
+duplicate$ -- 34
+empty$ -- 70
+format.name$ -- 14
+if$ -- 163
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 28
-num.names$ -- 5
-pop$ -- 11
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 4
+pop$ -- 8
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 17
+skip$ -- 13
 stack$ -- 0
 substring$ -- 27
-swap$ -- 5
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 7
-width$ -- 6
-write$ -- 54
+while$ -- 6
+width$ -- 5
+write$ -- 44
 (There were 12 error messages)

@@ -65,8 +65,8 @@ Both the training and the application of the likelihood are very fast operations
 The method of Fisher discriminants~\cite{Fisher}.
 
 An artificial Neural Network (NN) is a nonlinear discriminant, it is most generally speaking any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals.
-. It can be viewed as a mapping from a space of input variables $x_1,...,x_n_{var}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function ρ.
-While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with nvar input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_n_{var}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{ANN}$ .
+. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function ρ.
+While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with nvar input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{ANN}$ .
 %The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
 
 
@@ -80,12 +80,6 @@ A decision tree (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifi
 
 
 
-
-
-
-
-
-
 %And different trainings were tested:
 %\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 %\item
@@ -93,66 +87,69 @@ A decision tree (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifi
 %\item
 %In bins of jet $\pt$
 %\end{itemize}
-Figure~\ref{fig:diffmethodsInclusive} and~\ref{fig:diffmethodsBins} show distributions of the MVA outputs in different bins of jet $\pt$ for the two proposed trainings. In figures~\ref{fig:diffmethodsPerfInclusive} and~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all methods, for inclusive and ``in-bins'', training is illustrated.
 
+
+%Figure~\ref{fig:diffmethodsInclusive} and~\ref{fig:diffmethodsBins} show distributions of the MVA outputs in different bins of jet $\pt$ for the two proposed trainings. In figures~\ref{fig:diffmethodsPerfInclusive} and~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all methods, for inclusive and ``in-bins'', training is illustrated.
+Figure~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all methods.
+
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf}
+%\caption{Distribution of the MVA discriminant outputs, for inclusive training, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
+%\label{fig:diffmethodsInclusive}
+%\end{figure}
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf}
-\caption{Distribution of the MVA discriminant outputs, for inclusive training, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
-\label{fig:diffmethodsInclusive}
-\end{figure}
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf}
 \includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf}
 \includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf}
-\caption{Distribution of the MVA discriminant outputs, for training in bins of jet $\pt$, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
+%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf}
+\caption{Distribution of the MVA discriminant outputs for the Likelihood (a), Neural Network (b) and Boosted Decision Trees (c) classifiers, for single and merged $b$-jets between 80~GeV and 110~GeV.}
 \label{fig:diffmethodsBins}
 \end{figure}
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf}
-\caption{Distribution of the MVA discriminant performance for inclusive training, in single and merged $b$-jets, for low and high jet $\pt$.}
-\label{fig:diffmethodsPerfInclusive}
-\end{figure}
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf}
+%\caption{Distribution of the MVA discriminant performance for inclusive training, in single and merged $b$-jets, for low and high jet $\pt$.}
+%\label{fig:diffmethodsPerfInclusive}
+%\end{figure}
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff40.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf}
-\caption{Distribution of the MVA discriminant performance for training in bins of jet $\pt$, in single and merged $b$-jets, for low and high jet $\pt$.}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for the the different MVA methods evaluated for low and high jet $\pt$.}
 \label{fig:diffmethodsPerfBins}
 \end{figure}
 
 
 
 %------------------------------------------------------------------------
-\section{$\bm{ g\rightarrow b\bar{b}}$ likelihood training and performance}
+%\section{$\bm{ g\rightarrow b\bar{b}}$ likelihood training and performance}
+\section{$g\rightarrow b\bar{b}$ likelihood training and performance}
 %------------------------------------------------------------------------
 
 A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}.
 
 A sub-set of the dijet Monte Carlo sample was used for training. After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). % depending on whether one or two $b$-hadrons were found within a 0.4 cone around the jet axis. %For the evaluation of the method the same procedure was followed.
 The likelihood training was done in bins of calorimeter jet $\pt$. % and only isolated jets were considered. 
-Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower \pt\ jets from high \pt\ events, and thus increase the statistics of merged jets in the low \pt\ bins. For the evaluation of the method the same procedure was followed.
+Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. For the evaluation of the method the same procedure was followed.
 
 
 %Several combinations of the tracking and jet shape variables studied in the previous section were tested as input variables. We found that the following combination of three variables offers the best performance:
@@ -208,7 +205,7 @@ rejection above 30 at 50\% eff.
 \end{figure}
 
 
-The rejection of merged jets attained as a function of \pt\ for the 50\% and 60\% single $b$-jet efficiency working points are summarized in Table~\ref{tb:rejection}, together with their relative statistical error. These are propagated from the Poisson fluctuations of the number of events in the merged and single $b$ distributions. The error is slightly lower for the 60\% efficiency working point because a higher efficiency allows for a greater number of Monte Carlo events to measure the performance. %the higher the efficiency, the larger the number of Monte Carlo events available to measure the performance.
+The rejection of merged jets attained as a function of $\pt$ for the 50\% and 60\% single $b$-jet efficiency working points are summarized in Table~\ref{tb:rejection}, together with their relative statistical error. These are propagated from the Poisson fluctuations of the number of events in the merged and single $b$ distributions. The error is slightly lower for the 60\% efficiency working point because a higher efficiency allows for a greater number of Monte Carlo events to measure the performance. %the higher the efficiency, the larger the number of Monte Carlo events available to measure the performance.
 
 
 
@@ -218,7 +215,7 @@ The rejection of merged jets attained as a function of \pt\ for the 50\% and 60\
 \centering
 \begin{tabular}{ | c || c | c || c | c||}
   \hline
-  Jet \pt & \multicolumn{2}{c||}{single $b$-jet efficiency 50\%} & 
+  Jet $\pt$ & \multicolumn{2}{c||}{single $b$-jet efficiency 50\%} & 
             \multicolumn{2}{c||}{single $b$-jet efficiency 60\%}\\ \cline{2-5}
     (GeV )  & Rejection & ~stat.err.~ & Rejection & ~stat.err.~ \\ \hline
 %   40 - 60 &  ~7.6 &  4\%  &  ~5.4  &  3\%    \\ 
@@ -249,7 +246,7 @@ The rejection of merged jets attained as a function of \pt\ for the 50\% and 60\
 %------------------------------------------------------------------------
 \section{Systematic uncertainties}\label{sec:gbbSystematics}
 %------------------------------------------------------------------------
-The development, training and performance determination of the tagger is based on simulated events. Although the agreement between simulation and data explored in section~\ref{sec:validation} is a necessary validation condition, it is also important to investigate how the tagger performance depends on systematics relevant in the data. In particular we have considered:
+The development, training and performance determination of the tagger is based on simulated events. Although the agreement between simulation and data explored in section~\ref{sec:gbbValidation} is a necessary validation condition, it is also important to investigate how the tagger performance depends on systematics relevant in the data. In particular we have considered:
 %
 %There are uncertainties in the data that, although not spoiling the data/MC agreement, might change the performance of the tagger. This uncertainties would also be present in an eventual future data-driven determination of the performance as  the data are not known better that this.The following systematic effects have been studied and their influence on the tagger performance ascertained:
 %
@@ -275,55 +272,54 @@ uncertainty in the $b$-jet energy scale.
 { \em I. Pile-up}
 \\[3mm]
   The size of this effect was studied by comparing the performance of the likelihood discriminant with $b$-jets in events with small (1-9) and large (9-20) number of primary vertices. 
-%The comparison of the performance in these two sub-samples can be seen in Fig.~\ref{fig:performanceinbinsMu}. 
-As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. %Of the 16 determinations (2 working points with 8 \pt\ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
+A comparison of the performance in these two sub-samples relative to the inclusive sample is shown in Fig.~\ref{fig:performanceinbinsMu}. 
+As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. %Of the 16 determinations (2 working points with 8 $\pt$ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
 Performance differences between high and low number of primary vertices events are $\leq$~0.3\% and therefore negligible compared to other sources of uncertainties. The impact of pile-up might be larger in 2012.
 
-%
-
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff040.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/50BinsLlhoodKDE_ISO_PileUp_rejvseff060.pdf}
-%\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency in bins of $N_{\rm vtx}$ for two low jet $\pt$ bins.}
-%\label{fig:performanceinbinsMu}
-%\end{figure}
+%See Fig.~\ref{fig:performanceinbinsMu}.
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff040.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_PileUp_rejvseff060.pdf}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency in bins of NPV for two low jet $\pt$ bins.}
+\label{fig:performanceinbinsMu}
+\end{figure}
 
 \vspace{3mm}
 {\em II. b-tagging efficiency} %energy scale and 
 \\[3mm]
-The performance of heavy-flavor tagging in Monte Carlo events is calibrated to experimental data by means of the scale factors (SFs). %measured by the $b$-tagging group. 
-These are defined as the ratio of the heavy-flavor tagging efficiency in data over that in Monte Carlo for the different jet flavors. They are measured by the $b$-tagging group,  %, and probably also as a function of jet pT and η 
+The performance of heavy-flavor tagging in Monte Carlo events is calibrated to experimental data by means of the scale factors (SFs). % measured by the ATLAS Flavour Tagging Working group. 
+The SFs are defined as the ratio of the heavy-flavor tagging efficiency in data over that in Monte Carlo for the different jet flavors. They are measured by the ATLAS Flavour Tagging Working group,  %, and probably also as a function of jet pT and η 
 %Such a measurement carries a systematic uncertainty, and in order to estimate its effect a conservative approach is followed: %https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface
 and their measurement carries a systematic uncertainty.  
 
-To estimate the impact of this uncertainty a conservative approach is followed: the SFs are varied in all the $\pt$ bins simultaneously by one standard deviation both in the up and down directions. The MC distributions weighted by the varied SFs show no major deviations from the nominal.  %The result of this procedure for the distribution of two of the tracking variables used in our discriminant is illustrated in Fig.~\ref{fig:btaggingSFs}. 
-In the same manner, the effect of the $b$-tagging calibration uncertainty on the likelihood peformance is $< 1$\%, negligible with respect to the statistical uncertainty.
+To estimate the impact of this uncertainty a conservative approach is followed: the SFs are varied in all the $\pt$ bins simultaneously by one standard deviation both in the up and down directions. The MC distributions weighted by the varied SFs show no major deviations from the nominal, see Fig.~\ref{fig:btaggingSFs}.  %The result of this procedure for the distribution of two of the tracking variables used in our discriminant is illustrated in Fig.~\ref{fig:btaggingSFs}. 
+In the same manner, the effect of the $b$-tagging calibration uncertainty on the likelihood peformance, shown in Fig.~\ref{fig:btaggingSFsPerf}, is $< 1$\%, negligible with respect to the statistical uncertainty.
 % as it can be seen in Fig.~\ref{fig:btaggingSFsPerf}.
-This was indeed expected. The scale factors depend on the true flavor of the jet and on its \pt, but these are basically constant in the performance determination, which is based on single flavor (true $b$-) jets classified in \pt-bins.
+This was indeed expected. The scale factors depend on the true flavor of the jet and on its $\pt$, but these are basically constant in the performance determination, which is based on single flavor (true $b$-) jets classified in $\pt$-bins.
 
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf}
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarNtrkPT080.pdf}
 %%%%%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarNtrkPT200.pdf}
 %%%%%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarTrkWidthPT080.pdf}
 %%%%%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarTrkWidthPT200.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarDRktaxisPT080.pdf}
 %%%%%%\includegraphics[width=0.49\textwidth]{FIGS/systematics/BTagCalib_DataVarDRktaxisPT200.pdf}
-%\caption{The effect of a variation in the $b$-tagging Scale Factors on the tracking variables distributions. Scale Factors were varied up (down) by 1-sigma to evaluate the systematic uncertainty from this source. The ratio data over MC is shown for MC {\sc pythia} with SFs varied up (circles) and down (triangles).}
-%\label{fig:btaggingSFs}
-%\end{figure}
+\caption{The effect of a variation in the $b$-tagging Scale Factors on the tracking variables distributions. Scale Factors were varied up (down) by 1-sigma to evaluate the systematic uncertainty from this source. The ratio data over MC is shown for MC {\sc pythia} with SFs varied up (circles) and down (triangles).}
+\label{fig:btaggingSFs}
+\end{figure}
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff060.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff270.pdf}
-%\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency with and without scale factors.}
-%\label{fig:btaggingSFsPerf}
-%\end{figure}
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency with and without scale factors.}
+\label{fig:btaggingSFsPerf}
+\end{figure}
 
-%
+
 
 \vspace{3mm}
 { \em III. Track reconstruction efficiency}
@@ -335,7 +331,7 @@ The tracking efficiency systematics are given in bins of track $\eta$. For track
 %http://arxiv.org/abs/1012.5104
 
 The tracking variables were re-calculated and the performance of the nominal likelihood was evaluated in the new sample with worse tracking efficiency. The rejection-efficiency curves %plots, shown in Fig.~\ref{fig:trackefficiency},
- show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 \pt\ bin/working points, without a clear \pt\ dependence. We have thus taken the average over \pt, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points. The performance comparison is shown in in Fig.~\ref{fig:trackefficiency} for two \pt\ bins. %Similar plots were produced for all other sources of uncertainties considered but are not shown in this note for brevity.
+ show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 $\pt$ bin/working points, without a clear $\pt$ dependence. We have thus taken the average over $\pt$, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points. The performance comparison is shown in in Fig.~\ref{fig:trackefficiency} for two $\pt$ bins. %Similar plots were produced for all other sources of uncertainties considered but are not shown in this note for brevity.
 
 \begin{figure}[tp]
 \centering
@@ -349,31 +345,33 @@ The tracking variables were re-calculated and the performance of the nominal lik
 {\em IV. Track momentum resolution}
 \\[3mm]
 The knowledge of the track momentum resolution is limited by the precision both in the material description of the Inner Detector and in the mapping of the magnetic field. Its uncertainty propagates to the kinematic variables used in the double $b$-hadron jet tagger. In order to study this effect, track momenta are over-smeared according to the measured resolution uncertainties, before the track selection cuts are applied.  %before computing the rejection. 
-The actual smearing is done in 1/\pt, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible. %with respect to the statistical uncertainty.
+The actual smearing is done in 1/$\pt$, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible. %with respect to the statistical uncertainty.
 
 \vspace{3mm}
 { \em V. Jet transverse momentum resolution}
 \\[3mm]
 The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the {\sc pythia}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins,is typically 10\%.
-The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance is found to globally decrease by 6\%, without a particular \pt\ dependence.
+The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance is found to globally decrease by 6\%, without a particular $\pt$ dependence.
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff060.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff270.pdf}
-%\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency for jets with smeared $\pt$.}
-%\label{fig:jetresolution}
-%\end{figure}
+See Fig.~\ref{fig:jetresolution}.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff060.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPtTest_rejvseff270.pdf}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for jets with smeared $\pt$.}
+\label{fig:jetresolution}
+\end{figure}
 
 
 \vspace{3mm}
 { \em VI. Jet energy scale for heavy flavour jets}
 \\[3mm]
 %The calorimeter jet response uncertainties for $b$-jets was evaluated using single hadron response measurements in MC samples of inclusive dijet and $b \bar{b}$ dijet events. 
-The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_T$ algorithm with distance parameter $R$=0.4 and calibrated to the  EM+JES scale is between $\sim$4\% at low \pt\ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{bjetJES}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
-The resulting fractional additional JES uncertainty for $b$-jets has an upper bound of 2\% for jets with $\pt \leq$100~GeV and it is below 1\% for higher \pt\ jets. To obtain the overall $b$-jet uncertainty this needs to be added in quadrature to the light JES uncertainty. 
+The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{bjetJES}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
+The resulting fractional additional JES uncertainty for $b$-jets has an upper bound of 2\% for jets with $\pt \leq$100~GeV and it is below 1\% for higher $\pt$ jets. To obtain the overall $b$-jet uncertainty this needs to be added in quadrature to the light JES uncertainty. 
 
-The systematic uncertainty originating from the jet energy scale is obtained by scaling the \pt\ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
+The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
 
 
 \vspace{3mm}
@@ -387,8 +385,8 @@ The different contributions to the systematic uncertainty on the merged $b$-jet 
   pile-up          &  neglible     \\ 
   $b$-tagging efficiency     &  neglible     \\ 
   track reconstruction efficiency  &    4\%        \\ 
-  track \pt\ resolution &  neglible     \\
-  jet \pt\ resolution  &    6\%        \\  
+  track $\pt$ resolution &  neglible     \\
+  jet $\pt$ resolution  &    6\%        \\  
   jet energy scale  &    5\%        \\ \hline 
 \end{tabular}
 \caption{Systematic uncertainities in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
@@ -396,7 +394,7 @@ The different contributions to the systematic uncertainty on the merged $b$-jet 
 \end{table}
 
 %------------------------------------------------------------------------
-\section{Isolation studies}
+%\section{Isolation studies}
 %------------------------------------------------------------------------
 Although the tagger was derived with isolated jets it can also be applied to non-isolated jets. Studies were performed to evaluate the likelihood rejection in $b$-jets with close-by jet with $\pt$ between 7 GeV at electromagnetic scale scale and 90$\%$ of the $b$-jet $\pt$. The results can be seen in  Fig.~\ref{fig:testisolation}. The presence of close-by jets with a susbtancial fraction of the $b$-jet pt worsens the performance in more than 50$\%$ at very high $\pt$. 
 
@@ -404,7 +402,7 @@ Although the tagger was derived with isolated jets it can also be applied to non
 \centering
 \includegraphics[width=0.4\textwidth]{FIGS/systematics/DiffIsolationCutsKDE_RejvsEff40.png}
 \includegraphics[width=0.4\textwidth]{FIGS/systematics/DiffIsolationCutsKDE_RejvsEff270.png}
-\caption{Rejection of $g\rightarrow b \bar{b}$ merged b-jets as a function of $b$-jet efficiency for two different isolation cuts.}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for two different isolation cuts.}
 \label{fig:testisolation}
 \end{figure}
 
@@ -414,7 +412,7 @@ Although the tagger was derived with isolated jets it can also be applied to non
 %------------------------------------------------------------------------
 %{\em Uncertainties due to the event modelling in the Monte Carlo generators}
 
-The development, training and performance determination of the tagger has been done using Monte Carlo events generated with the {\sc pythia} event simulator, interfaced to the {\sc geant4} based simulation of the ATLAS detector. An immediate question is what the performance would be if studied with a different simulation. In this section we investigate this question for the Perugia tune of {\sc pythia8} and the {\sc herwig++} event generators.
+The development, training and performance determination of the tagger has been done using Monte Carlo events generated with the {\sc pythia} event simulator, interfaced to the {\sc geant4} based simulation of the ATLAS detector. An immediate question is what the performance would be if studied with a different simulation. In this section we investigate this question for the {\sc pythia} Perugia tune  and the {\sc herwig++} event generators.
 
 Fig.~\ref{fig:performanceotherMC} shows a comparison of the likelihood rejection, at the 50\% efficiency working point,  between nominal {\sc pythia} and the alternative simulations % for four selected $\pt$ bins covering the full kinematic range. 
 as a function of the jet $\pt$ . The larger errors are due to the reduced statistics available, which are even lower for the Perugia case than for {\sc herwig}.
@@ -429,7 +427,7 @@ The reason for the systematic difference observed between the performances of {\
 
 
 
-%the comparion between jet distribution in experimental data and  Herwig++ Monte Carlo events was performed for $b$-tagged jets. The results for the jet track-multiplicity can be seen in Fig.~\ref{fig:herwigdatamc}. We find that Herwig++ does not reproduce data jet distributions correctly at medium and high \pt.
+%the comparion between jet distribution in experimental data and  Herwig++ Monte Carlo events was performed for $b$-tagged jets. The results for the jet track-multiplicity can be seen in Fig.~\ref{fig:herwigdatamc}. We find that Herwig++ does not reproduce data jet distributions correctly at medium and high $\pt$.
 
 
 
