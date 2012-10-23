@@ -1,5 +1,1 @@
-\contentsline {chapter}{\numberline {1}The Multivariate Analysis}{2}
-\contentsline {section}{\numberline {1.1}$g\rightarrow b\mathaccentV {bar}016{b}$ likelihood training and performance}{4}
-\contentsline {section}{\numberline {1.2}Systematic uncertainties}{8}
-\contentsline {section}{\numberline {1.3}Other Monte Carlo generators}{15}
-\contentsline {section}{\numberline {1.4}Validation of the MVA output in data}{16}
+\contentsline {chapter}{\numberline {1}Conclusions}{2}

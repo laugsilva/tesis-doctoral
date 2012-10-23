@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Main/core_mva.aux
+A level-1 auxiliary file: Summary/summary.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 563 of file tesis.bib
@@ -61,48 +61,45 @@ Illegal end of database file---line 1705 of file tesis.bib
  : }
  :  
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Fisher"
-Warning--I didn't find a database entry for "QUINLAN1999497"
-Warning--I didn't find a database entry for "bjetJES"
-You've used 4 entries,
+You've used 1 entry,
             1791 wiz_defined-function locations,
-            476 strings with 4382 characters,
-and the built_in function-call counts, 785 in all, are:
-= -- 58
-> -- 49
+            453 strings with 3636 characters,
+and the built_in function-call counts, 197 in all, are:
+= -- 15
+> -- 8
 < -- 0
-+ -- 18
-- -- 14
-* -- 50
-:= -- 148
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 4
++ -- 3
+- -- 2
+* -- 12
+:= -- 40
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 34
-empty$ -- 70
-format.name$ -- 14
-if$ -- 163
+cite$ -- 1
+duplicate$ -- 9
+empty$ -- 19
+format.name$ -- 2
+if$ -- 40
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 4
-pop$ -- 8
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 1
+pop$ -- 1
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 13
+skip$ -- 4
 stack$ -- 0
-substring$ -- 27
-swap$ -- 4
+substring$ -- 6
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 6
-width$ -- 5
-write$ -- 44
+while$ -- 2
+width$ -- 2
+write$ -- 13
 (There were 12 error messages)

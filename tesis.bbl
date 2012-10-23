@@ -1,27 +1,8 @@
 \begin{thebibliography}{1}
 
-\bibitem{Hocker:2007ht}
-Andreas Hoecker, Peter Speckmayer, Joerg Stelzer, Jan Therhaag, Eckhard von
-  Toerne, and Helge Voss.
-\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
-\newblock {\em PoS}, ACAT:040, 2007.
-
-\bibitem{chargemultiplicity}
-G.~Aad et~al.
-\newblock {Charged-particle multiplicities in pp interactions measured with the
-  ATLAS detector at the LHC}.
-\newblock {\em New J.Phys.}, 13:053033, 2011.
-
-\bibitem{ATLAS-CONF-2010-009}
-{ATLAS Collaboration}.
-\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
-  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
-\newblock {\em ATLAS-CONF-2010-009}, 2010.
-
-\bibitem{JER2011}
-G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
-\newblock Jet energy resolution from in-situ techniques with the atlas detector
-  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
-\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
+\bibitem{CatchmentArea}
+G.P.~Salam M.~Cacciari and Gregory Soyez.
+\newblock {The Catchment Area of Jets}.
+\newblock {\em JHEP}, 0804:42, 2008.
 
 \end{thebibliography}
