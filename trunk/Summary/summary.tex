@@ -5,11 +5,16 @@
 %
 \chapter{Conclusions}\label{ch:conclusions}
 
-A multivariate discriminant to identify isolated $b$-tagged jets containing two $B$-hadrons is presented. These jets are expected to arise when a gluon splits into a close-by $b\bar{b}$-pair. The method exploits the kinematic differences between ``merged'' $b\bar{b}$-jets and ``single'' $b$-jets, combining track-based jet shape and jet substructure variables in a likelihood classifier.
+In the course of the present thesis a new method allowing the identification of $b$-jets containing two $B$-hadrons was developed and implemented in the ATLAS reconstruction software. In QCD, these jets are expected to arise when a gluon splits into a close-by $b\bar{b}$-pair. 
 
-The tagger training and performance results are based on simulated events. Several variables were investigated and those showing the best discrimination power were selected for the multivariate analysis. The Monte Carlo distributions of the explored variables were validated using experimental data corresponding to an integrated luminosity of 4.7~fb$^{-1}$ recorded by the ATLAS experiment during 2011. The agreement between data and simulation is excellent. 
+%This thesis presents a multivariate analysis which aims at identifying isolated $b$-tagged jets containing two $B$-hadrons. These jets are expected to arise when a gluon splits into a close-by $b\bar{b}$-pair. 
 
+The method exploits the expected kinematic differences between double $b$-hadron or ``merged'' jets and single $b$-jets: merged jets tend to have higher multiplicity and larger width.  These differences originate in the two-subjet structure of merged jets.  Several jet shape and substructure variables were investigated in order to obtain the best single/merged discrimination.  Due to the noisy environment of the hadron collisions at the LHC track-based variables were preferred over calorimeter variables.   A good agreement with a data sample of 4.7~fb$^{-1}$ recorded by the ATLAS during 2011 is observed for all the variables explored.
+
+In order to improve the separation obtained individually with each variable a multivariate classifier was trained using simulated QCD events. Based on discrimination power, correlation and pile-up dependence three input variables were selected for the tagger training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet. 
+%The tagger training and performance results are based on simulated events. Several variables were investigated and those showing the best discrimination power were selected for the multivariate analysis. %The Monte Carlo distributions of the explored variables were validated using experimental data corresponding to an integrated luminosity of 4.7~fb$^{-1}$ recorded by the ATLAS experiment during 2011. The agreement between data and simulation is excellent. 
  The peformance of the tagger in Monte Carlo events was studied in bins of the calorimeter jet \pt, achieving a rejection of merged jets of over 95\% (90\%) for a 50\% single $b$-jet efficiency for jets with $\pt>150$ GeV ($\pt>60$ GeV).
+
 
 
 This tool provides a handle to investigate QCD $b\bar{b}$ production and to reduce backgrounds in physics channels involving $b$-quarks in the final state.  Future improvements comprise the study of further discrimant variables, the extension to non-isolated jets using the concept of ghost-particle matching and active area of a jet~\cite{CatchmentArea} for track-to-jet association and labeling, the calibration of the tagger with data, and its application to measure the fraction of gluon-splitting jets in QCD $b$-jet production.
