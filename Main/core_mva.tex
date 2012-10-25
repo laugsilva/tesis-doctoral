@@ -4,15 +4,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
+After the evaluation of the best discriminating variables, %between double $b$-hadron jets and genuine $b$-quark jets, 
+a tagging algorithm, capable of effienciently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches.  
+This analysis exploits a multivariate likelihood approach for the separation of the single $b$-jet signal and its background (the merged $b$-jets). Compare to single variable or 2-dimensional cuts analyses, the sensitivity can be largely improved because several variables are combined to build a likelihood classifier with high separation power.   Variables considered for the likelihood discriminant include the charged particle multiplicity as well as variables that account fot the angular spread of the $b$-jets considered. 
+
+%------------------------------------------------------------------------
+\section{Multivariate methods}
+%------------------------------------------------------------------------
+
 Multivariate technique
 multivariate classification
 learning algorithms
 They make use of training events, for which the desired output is known, to determine the mapping function that discribes a decision boundary (classification)
 
-
-%------------------------------------------------------------------------
-%\section{The multivariate classifiers}
-%------------------------------------------------------------------------
 
 The following multivariate methods were explored:
 
@@ -141,7 +145,8 @@ Figure~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all meth
 
 %------------------------------------------------------------------------
 %\section{$\bm{ g\rightarrow b\bar{b}}$ likelihood training and performance}
-\section{$g\rightarrow b\bar{b}$ likelihood training and performance}
+%\section{$g\rightarrow b\bar{b}$ likelihood training and performance}
+\section{Likelihood training and performance}
 %------------------------------------------------------------------------
 
 A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}.
