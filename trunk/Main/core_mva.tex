@@ -62,7 +62,6 @@ Both the training and the application of the likelihood are very fast operations
 
 %From TMVA Users Guide
 
-The method of Fisher discriminants~\cite{Fisher}.
 
 An artificial Neural Network (NN) is a nonlinear discriminant, it is most generally speaking any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals.
 . It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function ρ.
@@ -78,7 +77,7 @@ A decision tree (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifi
 %Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree. However, the advantage of the straightforward interpretation of the decision tree is lost.
 %Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
 
-
+%The method of Fisher discriminants~\cite{Fisher}.
 
 %And different trainings were tested:
 %\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
@@ -315,7 +314,7 @@ This was indeed expected. The scale factors depend on the true flavor of the jet
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf}
-\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency with and without scale factors.}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency with and without scale factors as weights.}
 \label{fig:btaggingSFsPerf}
 \end{figure}
 
@@ -345,7 +344,7 @@ The tracking variables were re-calculated and the performance of the nominal lik
 {\em IV. Track momentum resolution}
 \\[3mm]
 The knowledge of the track momentum resolution is limited by the precision both in the material description of the Inner Detector and in the mapping of the magnetic field. Its uncertainty propagates to the kinematic variables used in the double $b$-hadron jet tagger. In order to study this effect, track momenta are over-smeared according to the measured resolution uncertainties, before the track selection cuts are applied.  %before computing the rejection. 
-The actual smearing is done in 1/$\pt$, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible (see Fig~\ref{fig:trackmomentum}). %with respect to the statistical uncertainty.
+The actual smearing is done in 1/$\pt$, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible, see Fig~\ref{fig:trackmomentum}. %with respect to the statistical uncertainty.
 
 \begin{figure}[tp]
 \centering
@@ -357,38 +356,43 @@ The actual smearing is done in 1/$\pt$, with an upper bound to the resolution un
 
 
 \vspace{3mm}
-{ \em V. Jet transverse momentum resolution}
+{ \em V. Jet energy scale and momentum resolution}
 \\[3mm]
-The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the {\sc pythia}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins,is typically 10\%.
-The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance, shown in Fig.~\ref{fig:jetresolution}, is found to globally decrease by 6\%, without a particular $\pt$ dependence.
-
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPt_FIXEDBUGTest_rejvseff080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPt_FIXEDBUGTest_rejvseff200.pdf}
-\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for jets with smeared $\pt$ compared to nominal.}
-\label{fig:jetresolution}
-\end{figure}
-
-
-\vspace{3mm}
-{ \em VI. Jet energy scale for heavy flavour jets}
-\\[3mm]
-%The calorimeter jet response uncertainties for $b$-jets was evaluated using single hadron response measurements in MC samples of inclusive dijet and $b \bar{b}$ dijet events. 
 The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{bjetJES}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
 The resulting fractional additional JES uncertainty for $b$-jets has an upper bound of 2\% for jets with $\pt \leq$100~GeV and it is below 1\% for higher $\pt$ jets. To obtain the overall $b$-jet uncertainty this needs to be added in quadrature to the light JES uncertainty. 
 
-The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES.  The result is shown in Fig.~\ref{fig:jesuncertainty}. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
+The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES.  The result is shown in Fig.~\ref{fig:jetresolution}a for a medium $\pt$ bin. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
+
+The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the {\sc pythia}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins,is typically 10\%.
+The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance, shown in Fig.~\ref{fig:jetresolution}b, is found to globally decrease by 6\%, without a particular $\pt$ dependence.
 
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_JESUncertaintyTest_rejvseff080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_JESUncertaintyTest_rejvseff200.pdf}
-\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for jets with varied energy scale compared to nominal.}
-\label{fig:jesuncertainty}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPt_FIXEDBUGTest_rejvseff080.pdf}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for (a) jets with smeared $\pt$ and (b) for jets with varied energy scale compared to nominal.}
+\label{fig:jetresolution}
 \end{figure}
+
+
+%\vspace{3mm}
+%{ \em VI. Jet energy scale for heavy flavour jets}
+%\\[3mm]
+%%%The calorimeter jet response uncertainties for $b$-jets was evaluated using single hadron response measurements in MC samples of inclusive dijet and $b \bar{b}$ dijet events. 
+%The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{bjetJES}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
+%The resulting fractional additional JES uncertainty for $b$-jets has an upper bound of 2\% for jets with $\pt \leq$100~GeV and it is below 1\% for higher $\pt$ jets. To obtain the overall $b$-jet uncertainty this needs to be added in quadrature to the light JES uncertainty. 
+
+%The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES.  The result is shown in Fig.~\ref{fig:jesuncertainty}. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
+
+
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_JESUncertaintyTest_rejvseff080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_JESUncertaintyTest_rejvseff200.pdf}
+%\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for jets with varied energy scale compared to nominal.}
+%\label{fig:jesuncertainty}
+%\end{figure}
 
 
 \vspace{3mm}
@@ -409,6 +413,17 @@ The different contributions to the systematic uncertainty on the merged $b$-jet 
 \caption{Systematic uncertainities in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
 \label{tb:systematics}
 \end{table}
+
+
+Although the likelihood training was peformed in EM+JES calibrated jets, the performance of the tagger was also evaluated in jets calibrated with the LC+JES scheme, described in Section~\ref{sec:calib}.  A small degradation of the performance is observed, comparable with the statistical uncerstainties. A comparison of the performances is shown in Fig.~\ref{fig:LCJES} for two $\pt$ bins, representative of the jet momentum range covered. 
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_LCcalibTest_rejvseff080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_LCcalibTest_rejvseff200.pdf}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for jets calibrated to the EM+JES (LC+JES) scale, between 80~GeV and 110~GeV and 200~GeV and 270~GeV.}
+\label{fig:LCJES}
+\end{figure}
 
 %------------------------------------------------------------------------
 %\section{Isolation studies}
@@ -475,7 +490,7 @@ The reason for the systematic difference observed between the performances of {\
 
 In Section~\ref{gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simluation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcinputvars}. 
 
-The likelihood presented in this chapter, in turn, is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood classfier output for different bins of jet $\pt$. The agreement is very good.
+The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood classfier output for different bins of jet $\pt$. The agreement is very good.
 
 
 \begin{figure}[tp]
