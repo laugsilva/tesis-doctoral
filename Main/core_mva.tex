@@ -12,13 +12,7 @@ This analysis exploits a multivariate likelihood approach for the separation of 
 \section{Multivariate methods}
 %------------------------------------------------------------------------
 
-Multivariate technique
-multivariate classification
-learning algorithms
-They make use of training events, for which the desired output is known, to determine the mapping function that discribes a decision boundary (classification)
-
-
-The following multivariate methods were explored:
+Multivariate data analysis refers to a statistical technique used to analyze data that arises from more than one variable.  Classification is done through learning algorithms that make use of training events,  for which the desired output is known, to determine the mapping function that discribes a decision boundary. The following multivariate methods were explored: % using a simulated sample of dijet events generated with {\sc Pythia}:
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
@@ -27,8 +21,8 @@ Likelihood ratio estimators
 Neural Networks (NN)
 \item
 Boosted decision Trees (BDTs)
-\item
-Fisher discriminants
+%\item
+%Fisher discriminants
 \end{itemize}
 
 %From TMVA Users Guide
@@ -48,67 +42,43 @@ L_{s(B)}(i) = \prod^{n_{var}}_{k=1}  p_{s(B),k}(x_k(i)),
 %
 and where $p_{s(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
 
-The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape from the training data by nonparametric functions  which can be chosen individually for each variable and are either polynomial splines of various degrees fitted to binned histograms or unbinned kernel density estimators (KDE).
-%From wikipedia SPLINES
-%In mathematics, a spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect (which are known as knots).
-%In interpolating problems, spline interpolation is often referred to as polynomial interpolation because it yields similar results,
-%From wikipedia NON-PARAMETRIC METHODS
-%Non-parametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from data. The term non-parametric is not meant to imply that such models completely lack parameters but that the number and nature of the parameters are flexible and not fixed in advance.
-%A histogram is a simple nonparametric estimate of a probability distribution
-% Kernel density estimation provides better estimates of the density than histograms.
-%In statistics, kernel density estimation (KDE) is a non-parametric way to estimate the probability density function of a random variable. Kernel density estimation is a fundamental data smoothing problem where inferences about the population are made, based on a finite data sample.
-%Kernel density estimates are closely related to histograms, but can be endowed with properties such as smoothness or continuity by using a suitable kernel.
-%The smoothness of the kernel density estimate is evident compared to the discreteness of the histogram, as kernel density estimates converge faster to the true underlying density for continuous random variables.
+The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
+by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
+%
+\begin{equation}
+p(x) = \frac{1}{N h} \sum^N_{i=i} K(\frac{x-x_i}{h}) = \frac{1}{N} \sum^N_{i=i} K_h(x-x_i),
+\end{equation}
+%
+where N is the number of training events, $K_h(t) = K(t/h)h$ is the kernel function, and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}. For the present implementation a Gaussian form of $K$ is used.  
 
-
-Both the training and the application of the likelihood are very fast operations that are suitable for very large data sets. %The neglect of correlations between input variables in the model, often leads to a diminution of the discrimination performance. Positive correlations lead to peaks at both yL → 0, 1. Correlations can be reduced by categorising the data samples and building an independent likelihood classifier for each event category. Such categories could be geometrical regions in the detector, kinematic properties, etc.
+The smoothness of the kernel density estimate is evident compared to the discreteness of a histogram, as kernel density estimates converge faster to the true underlying density for continuous random variables.
 
 
 %From TMVA Users Guide
+An artificial Neural Network (NN) is a nonlinear discriminant. It is, most generally speaking, any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function.  % $\rho$.  
+The neuron response function maps the neuron input (in $R^n$) onto the neuron output ($R$); often it can be separated into a synapse function ($R^n \rightarrow R$) and a neuron activation function ($R \rightarrow R$). The neuron activation function can be a either a $linear$, $sigmoid$, $tanh$, or a $radial$ function.
 
-
-An artificial Neural Network (NN) is a nonlinear discriminant, it is most generally speaking any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals.
-. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function ρ.
-While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with nvar input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{ANN}$ .
+While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with $n_{var}$ input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{ANN}$ .
 %The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
 
 
-The NN used were built with only one hidden layer. %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
-
-
-A decision tree (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually classified as signal or background, depending on the majority of training events that end up in the final $leaf$ node. The boosting of a decision tree extends this concept from one tree to several trees which form a $forest$.
-%Decision trees are well known classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
-%Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree. However, the advantage of the straightforward interpretation of the decision tree is lost.
+Decision trees % (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. 
+are well known classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
+% However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
+Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final $leaf$ node. The boosting of a decision tree extends this concept from one tree to several trees which form a $forest$.
+Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree~\cite{QUINLAN1999497}. %However, the advantage of the straightforward interpretation of the decision tree is lost.
 %Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
 
 %The method of Fisher discriminants~\cite{Fisher}.
 
-%And different trainings were tested:
-%\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
-%\item
-%Inclusive, with $\pt$-weighting
-%\item
-%In bins of jet $\pt$
-%\end{itemize}
+\subsubsection{Training and testing the MVA methods}
 
+A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}.  After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). 
 
-%Figure~\ref{fig:diffmethodsInclusive} and~\ref{fig:diffmethodsBins} show distributions of the MVA outputs in different bins of jet $\pt$ for the two proposed trainings. In figures~\ref{fig:diffmethodsPerfInclusive} and~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all methods, for inclusive and ``in-bins'', training is illustrated.
-Figure~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all methods.
+Based on discrimination power, correlation and pile-up dependence three input variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_LihoodKDE.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_LihoodKDE.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_LihoodKDE.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_MLP.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_MLP.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_MLP.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput040_BDT.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput080_BDT.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/NNoutput200_BDT.pdf}
-%\caption{Distribution of the MVA discriminant outputs, for inclusive training, in single and merged $b$-jets, for low, medium and high jet $\pt$.}
-%\label{fig:diffmethodsInclusive}
-%\end{figure}
+The NN used is a Multi-layer perceptron (MLP) with only one hidden layer, using a sigmoidal neuron activation function.  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
+The likelihood estimator uses the KDE approach for PDF estimation of the input variables. The shape of the three classifiers explored is illustrated in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin. 
 
 \begin{figure}[tp]
 \centering
@@ -125,13 +95,6 @@ Figure~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all meth
 \label{fig:diffmethodsBins}
 \end{figure}
 
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff40.pdf}
-%\includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/inclusive/MVAs_RejvsEff200.pdf}
-%\caption{Distribution of the MVA discriminant performance for inclusive training, in single and merged $b$-jets, for low and high jet $\pt$.}
-%\label{fig:diffmethodsPerfInclusive}
-%\end{figure}
 
 \begin{figure}[tp]
 \centering
@@ -149,9 +112,14 @@ Figure~\ref{fig:diffmethodsPerfBins} a comparison of the performance of all meth
 \section{Likelihood training and performance}
 %------------------------------------------------------------------------
 
-A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}.
 
-A sub-set of the dijet Monte Carlo sample was used for training. After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). % depending on whether one or two $b$-hadrons were found within a 0.4 cone around the jet axis. %For the evaluation of the method the same procedure was followed.
+Both the training and the application of the likelihood are very fast operations that are suitable for very large data sets. %The neglect of correlations between input variables in the model, often leads to a diminution of the discrimination performance. Positive correlations lead to peaks at both yL → 0, 1. Correlations can be reduced by categorising the data samples and building an independent likelihood classifier for each event category. Such categories could be geometrical regions in the detector, kinematic properties, etc.
+
+
+
+A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator.
+
+
 The likelihood training was done in bins of calorimeter jet $\pt$. % and only isolated jets were considered. 
 Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. For the evaluation of the method the same procedure was followed.
 
