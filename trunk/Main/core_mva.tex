@@ -5,11 +5,11 @@
 %
 
 After the evaluation of the best discriminating variables, %between double $b$-hadron jets and genuine $b$-quark jets, 
-a tagging algorithm, capable of effienciently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches.  
+a tagging algorithm, capable of efficiently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches.  
 This analysis exploits a multivariate likelihood approach for the separation of the single $b$-jet signal and its background (the merged $b$-jets). Compare to single variable or 2-dimensional cuts analyses, the sensitivity can be largely improved because several variables are combined to build a likelihood classifier with high separation power.   Variables considered for the likelihood discriminant include the charged particle multiplicity as well as variables that account fot the angular spread of the $b$-jets considered. 
 
 %------------------------------------------------------------------------
-\section{Multivariate methods}
+\section{Multivariate methods}\label{sec:mvamethods}
 %------------------------------------------------------------------------
 
 Multivariate data analysis refers to a statistical technique used to analyze data that arises from more than one variable.  Classification is done through learning algorithms that make use of training events,  for which the desired output is known, to determine the mapping function that discribes a decision boundary. The following multivariate methods were explored: % using a simulated sample of dijet events generated with {\sc Pythia}:
@@ -37,7 +37,7 @@ y_{L}(i) = \frac{L_S(i)}{L_S(i)+L_B(i)},
 where
 %
 \begin{equation}
-L_{s(B)}(i) = \prod^{n_{var}}_{k=1}  p_{s(B),k}(x_k(i)),
+L_{S(B)}(i) = \prod^{n_{var}}_{k=1}  p_{S(B),k}(x_k(i)),
 \end{equation}
 %
 and where $p_{s(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
@@ -58,7 +58,7 @@ The smoothness of the kernel density estimate is evident compared to the discret
 An artificial Neural Network (NN) is a nonlinear discriminant. It is, most generally speaking, any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function.  % $\rho$.  
 The neuron response function maps the neuron input (in $R^n$) onto the neuron output ($R$); often it can be separated into a synapse function ($R^n \rightarrow R$) and a neuron activation function ($R \rightarrow R$). The neuron activation function can be a either a $linear$, $sigmoid$, $tanh$, or a $radial$ function.
 
-While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with $n_{var}$ input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{ANN}$ .
+While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with $n_{var}$ input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{NN}$ .
 %The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
 
 
@@ -77,12 +77,12 @@ A sub-set of the dijet Monte Carlo sample was used for training the three method
 
 Based on discrimination power, correlation and pile-up dependence three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Distributions of the these variables for single and merged $b$-jets were given to the multivariate methods as input. Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
 
-Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest (double the TMVA default value).  Distributions of the final output for the three methods, evaluated in a sample of simluated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
+Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest (double the TMVA default value).  Distributions of the final output for the three methods, evaluated in a sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
 
-The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearrange with a suitable variable transformation.  In spite of these features the performance of the methods agrees within statistics. 
+The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearrange with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agrees within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
 
-Both the training and the application of the likelihood are very fast operations that are suitable for very large data sets.
+As opposed to Neural Network discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. Is for these reasons that the likelihood classifier is the selected method for our tagger.
 
 \begin{figure}[tp]
 \centering
@@ -116,20 +116,17 @@ Both the training and the application of the likelihood are very fast operations
 \section{Likelihood training and performance}
 %------------------------------------------------------------------------
 
+%PEAKS AT 0 - 1
+%If a data-mining problem offers a large number of input variables, or variables with excellent separation power, the likelihood response yL is often strongly peaked at 0 (background) and 1 (signal). Such a response is inconvenient for the use in subsequent analysis steps. TMVA therefore allows to transform the likelihood output by an inverse sigmoid function that zooms into the peaks
+%yL (i) −→ yL (i) = −τ −1 ln yL − 1 , (37)
+%where τ = 15 is used. Note that yL (i) is no longer contained within [0, 1] (see Fig. 11). The transformation (37) is enabled (disabled) with the booking option TransformOutput=True(False).
 
- %The neglect of correlations between input variables in the model, often leads to a diminution of the discrimination performance. Positive correlations lead to peaks at both yL → 0, 1. Correlations can be reduced by categorising the data samples and building an independent likelihood classifier for each event category. Such categories could be geometrical regions in the detector, kinematic properties, etc.
-
-
-
-A discriminant between single $b$-jets and merged $b$-jets was built by training a simple likelihood estimator.
-
-
-The likelihood training was done in bins of calorimeter jet $\pt$. % and only isolated jets were considered. 
-Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. For the evaluation of the method the same procedure was followed.
+%The neglect of correlations between input variables in the model, often leads to a diminution of the discrimination performance. Positive correlations lead to peaks at both yL → 0, 1. Correlations can be reduced by categorising the data samples and building an independent likelihood classifier for each event category. Such categories could be geometrical regions in the detector, kinematic properties, etc.
 
 
-%Several combinations of the tracking and jet shape variables studied in the previous section were tested as input variables. We found that the following combination of three variables offers the best performance:
-As mentioned in the previous section, the following combination of three variables was chosen for the multivariate analysis:
+
+A indicated in section~\ref{sec:mvamethods}, a discriminant between single and merged $b$-jets was built by training a simple likelihood estimator, with the following combination of three variables as input, 
+%
 \begin{enumerate}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
 Jet track multiplicity
@@ -139,7 +136,8 @@ Track-jet width
 $\Delta R$ between the axes of 2 $k_t$ subjets within the jet
 \end{enumerate}
 %
-%A requirement of at least two matching tracks was imposed to all $b$-tagged jets in order to build the third variable listed. This cut was applied in both training and testing samples.
+
+Given the correlation of the variables with the jet transverse momentum,  the training sample was categorized in bins of calorimeter jet $\pt$, and independent likelihood classifiers were built for each category.  Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. For the evaluation of the method the same procedure was followed.
 
 The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for low, medium and high transverse momentum jets.
 
@@ -153,7 +151,7 @@ The distribution of the likelihood output for single and merged $b$-jets is show
 \label{fig:outputinbins}
 \end{figure}
 
-The performance of the tagger in the simulation can be  %seen in Fig.~\ref{fig:performanceinbins}. In this plot the rejection ($1/\epsilon_{bkg}$) of merged $b$-jets from gluon splitting is shown as a function of single $b$-jet efficiency for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
+The performance of the tagger in the simulation can be 
 displayed in a plot of rejection ($1/\epsilon_{bkg}$) of merged $b$-jets as a function of single $b$-jet efficiency, where $\epsilon_{bkg}$ is the probability that a double $b$-hadron jet passes the single $b$-jet tagger. This is shown in Fig.~\ref{fig:performanceinbins} for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
 
 
@@ -335,7 +333,7 @@ The actual smearing is done in 1/$\pt$, with an upper bound to the resolution un
 \vspace{3mm}
 { \em V. Jet energy scale and momentum resolution}
 \\[3mm]
-The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{bjetJES}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
+The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{JESUncertainty}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
 The resulting fractional additional JES uncertainty for $b$-jets has an upper bound of 2\% for jets with $\pt \leq$100~GeV and it is below 1\% for higher $\pt$ jets. To obtain the overall $b$-jet uncertainty this needs to be added in quadrature to the light JES uncertainty. 
 
 The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES.  The result is shown in Fig.~\ref{fig:jetresolution}a for a medium $\pt$ bin. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
@@ -447,7 +445,7 @@ The reason for the systematic difference observed between the performances of {\
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf}
-\caption{Rejection of $g\rightarrow b \bar{b}$ merged $b$-jets as a function of jet $\pt$ for different Monte Carlo generators, at the 50\% efficiency working point.}
+\caption{Rejection of merged $b$-jets as a function of jet $\pt$ for different Monte Carlo generators, at the 50\% efficiency working point.}
 \label{fig:performanceotherMC}
 \end{figure}
 
@@ -465,9 +463,9 @@ The reason for the systematic difference observed between the performances of {\
 \section{Validation of the MVA output in data}\label{sec:MVAvalidation}
 %------------------------------------------------------------------------
 
-In Section~\ref{gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simluation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcinputvars}. 
+In Section~\ref{gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simluation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
 
-The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood classfier output for different bins of jet $\pt$. The agreement is very good.
+The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood output for different bins of jet $\pt$. The agreement is excellent.
 
 
 \begin{figure}[tp]
