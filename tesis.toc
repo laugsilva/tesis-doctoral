@@ -1,7 +1,8 @@
 \contentsline {chapter}{\numberline {1}The Multivariate Analysis}{2}
 \contentsline {section}{\numberline {1.1}Multivariate methods}{2}
 \contentsline {subsubsection}{Training and testing the MVA methods}{5}
-\contentsline {section}{\numberline {1.2}Likelihood training and performance}{6}
-\contentsline {section}{\numberline {1.3}Systematic uncertainties}{8}
-\contentsline {section}{\numberline {1.4}Other Monte Carlo generators}{17}
-\contentsline {section}{\numberline {1.5}Validation of the MVA output in data}{18}
+\contentsline {section}{\numberline {1.2}Likelihood training and performance}{7}
+\contentsline {section}{\numberline {1.3}Systematic uncertainties}{10}
+\contentsline {section}{\numberline {1.4}Other Monte Carlo generators}{18}
+\contentsline {section}{\numberline {1.5}Validation of the MVA output in data}{19}
+\contentsline {chapter}{\numberline {2}Summary and conclusions}{23}

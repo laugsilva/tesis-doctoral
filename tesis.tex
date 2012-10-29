@@ -26,10 +26,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Title
-\title{Identification and tagging of double $b$-hadron jets from gluon splitting with the ATLAS Detector}
-\author{Lic. Mar\'ia Laura Gonz\'alez Silva \\ \\ \\ \\Tesis Doctoral en Ciencias F\'isicas\\Facultad de Ciencias Exactas y Naturales\\Universidad de Buenos Aires}
+\title{Identification and tagging of double $b$-hadron jets with the ATLAS Detector}
+%\title{Identification and tagging of double $b$-hadron jets from gluon splitting with the ATLAS Detector}
+\author{Mar\'ia Laura Gonz\'alez Silva \\ \\ \\ \\Doctoral Thesis in Physics\\Physics Department\\University of Buenos Aires}
+%\author{Mar\'ia Laura Gonz\'alez Silva \\ \\ \\ \\Tesis Doctoral en Ciencias F\'isicas\\Facultad de Ciencias Exactas y Naturales\\Universidad de Buenos Aires}
 
-\date{Noviembre 2012}
+\date{November 2012}
 
 %\includeonly{introduccion,atlas,tdaq}
 
@@ -70,7 +72,8 @@
   \vspace{0.5cm}
   Departamento de F\'isica\\
   \vspace{1.5cm}
-         {\large {\bfseries Identification and tagging of double $b$-hadron jets from gluon splitting with the ATLAS Detector}}\\
+         {\large {\bfseries Identificaci\'on y etiquetado de jets con dos hadrones $b$ con el detector ATLAS.}}\\  %en el proceso de ``gluon splitting''
+         %{\large {\bfseries Identification and tagging of double $b$-hadron jets from gluon splitting with the ATLAS Detector}}\\
          \vspace{1.5cm}
          %%%%%%%%%%%%%%%%
          %\textbf{{\LARGE VERSI\'ON PRELIMINAR}}
@@ -84,7 +87,7 @@
 
 {\small \flushleft{
     Director de Tesis: Dr. Ricardo Piegaia\\
-    Consejero de estudios: Dr.  Daniel Deflorian\\
+    Consejero de estudios: Dr.  Daniel de Florian\\
     %\vspace{0.5cm}
     Lugar de Trabajo: Departamento de F\'isica {\scriptsize(CONICET-UBA)}\\
     \vspace{0.5cm}
@@ -127,7 +130,7 @@ $\\$
 \textbf{\begin{small}AGRADECIMIENTOS\end{small}}\\
 \end{center}
 %$\\$ \indent   
-\indent Quiero agradecer a mi director, Ricardo Piegaia, por su ense\~nanza constante, guia y amistad y a todos aquellos que trabajaron junto conmigo en el experimento ATLAS, Gastoncito Romeo (mi compa\~nero de aventuras desde el comienzo), Gustavo Otero y Garz\'on,  Hern\'an Reisin y Sabrina Sacerdotti. Un especial agradecimiento a Ariel Schwartzman y su equipo por las ideas y el soporte t\'ecnico constante. Quiero agradecer al Laboratorio CERN, al Experimento ATLAS, al programa HELEN y al programa e-Planet por permitirme ser parte de un proyecto increible.
+\indent Quiero agradecer a mi director, Ricardo Piegaia, por su ense\~nanza constante, dedicaci\'on y amistad y a todos aquellos que trabajaron junto conmigo en el experimento ATLAS, Gastoncito Romeo (mi compa\~nero de aventuras desde el comienzo), Gustavo Otero y Garz\'on,  Hern\'an Reisin y Sabrina Sacerdotti. Un especial agradecimiento a Ariel Schwartzman y su equipo por las ideas y el soporte t\'ecnico constante. Quiero agradecer al Laboratorio CERN, al Experimento ATLAS, al programa HELEN y al programa e-Planet por permitirme ser parte de un proyecto increible.
 
 Quiero agradecer tambi\'en a mis  compa\~neros de grupo y oficina, Javier Tiffenberg, Yann Guardincerri, Pablo Pieroni y Orel Gueta por estar siempre dispuestos a darme una mano. Quiero agradecer el apoyo de mis compa\~neros de la carrera, especialmente a mis amigos Cecilia Bejarano y Tomas Teitelbaum. Quiero agradecer a los amigos que hice a lo largo de estos a\~nos en mis visitas al Laboratorio CERN, y a mis colegas y amigos de la Universidad de la Plata. Un especial agradecimiento a Fernando Monticelli.
 
@@ -164,12 +167,12 @@ El algoritmo dise\~nado rechaza, en eventos simulados, el 95\% (50\%) de los jet
 
 This thesis describes a method that allows the identification of double $B$-hadron jets
  originating from gluon-splitting. The technique exploits the kinematic
-differences between the so called ``merged'' jets and single $B$-hadron jets using %track information
+differences between the so called ``merged'' jets and single $b$-hadron jets using %track information
 track-based jet shape and jet substructure variables combined in a multivariate likelihood analysis.  The ability to reject $b$-jets
 from gluon splitting is important to reduce and to improve the estimation of
 the $b$-tag background in Standard Model analyses and in new physics searches involving
 $b$-jets in the final state. %The present algorithm, tuned in QCD Monte Carlo samples
-In the simulation, the algorithm rejects 95\% (50\%) of merged $B$-hadron jets while retaining 50\% (90\%) of the tagged $b$-jets, although
+In the simulation, the algorithm rejects 95\% (50\%) of merged $b$-hadron jets while retaining 50\% (90\%) of the tagged $b$-jets, although
 the exact values depend on the jet $\pt$. 
 
 \vspace{1.5cm}
@@ -193,7 +196,7 @@ the exact values depend on the jet $\pt$.
 %\include{Main/core} 
 \include{Main/core_mva} 
 %\include{Main/core_fits} 
-%\include{Summary/summary}
+\include{Summary/summary}
 
 
 
