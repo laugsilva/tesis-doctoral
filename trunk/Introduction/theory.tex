@@ -303,11 +303,11 @@ Heavy flavour quark production in hadronic collisions may be subdivided into thr
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
-Quark pair creation: two heavy quarks are produced in the hard subprocess. Being $Q$ the heavy flavor quark, at leading order this process is described by $gg \rightarrow Q\bar{Q}$ and  $q\bar{q} \rightarrow Q\bar{Q}$.
+Heavy flavor creation (FCR): two heavy quarks are produced in the hard subprocess. Being $Q$ the heavy flavor quark, at leading order this process is described by $gg \rightarrow Q\bar{Q}$ and  $q\bar{q} \rightarrow Q\bar{Q}$.
 \item
-Heavy flavor quark excitation: the heavy flavour quark excitation can be depicted as an initial state gluon splitting into a heavy quark pair, where one of the heavy quarks subsequently enters the hard subprocess.
+Heavy flavor excitation (FEX): the heavy flavour quark excitation can be depicted as an initial state gluon splitting into a heavy quark pair, where one of the heavy quarks subsequently enters the hard subprocess.
 \item
-Gluon splitting: no heavy quarks participate in the hard subprocess in this case, but they are produced in $g \rightarrow Q\bar{Q}$ branchings in the parton shower.
+Gluon splitting (GSP): no heavy quarks participate in the hard subprocess in this case, but they are produced in $g \rightarrow Q\bar{Q}$ branchings in the parton shower.
 \end{itemize}
 
 Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown in Fig.~\ref{fig:qcd_diagrams}.
@@ -321,41 +321,33 @@ The definition above is not strict, but can be used as a basis for the understan
 
 \begin{figure}[tp]
 \centering
-%\includegraphics[height=0.7\textwidth,viewport=20 305 340 590,clip,angle=270]{FIGS/bjets_qcd.eps}
 \includegraphics[height=0.7\textwidth,viewport=300 410 530 690,clip]{FIGS/bjets_qcd.pdf}
-  \caption{Top: $K$-factor for inclusive $b$-jet spectrum taken
-  from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$
-  jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central
-  rapidity region ($|y| <0.7$). Middle: scale dependence obtained by
-  simultaneously varying the renormalisation and factorisation scales by a factor
-  two around $\pt$, the transverse momentum of the hardest jet in the event.
-  Bottom: breakdown of the Herwig \cite{Herwig} inclusive $b$-jet spectrum into
-  the three major underlying channels, flavor creation (FCR) flavor excitation
-  (FEX) and gluon splitting (GSP).}
+  \caption{Top: $K$-factor for inclusive $b$-jet spectrum taken from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$   jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central rapidity region ($|y| <0.7$). Middle: scale dependence obtained by simultaneously varying the renormalisation and factorisation scales by a factor two around $\pt$, the transverse momentum of the hardest jet in the event. Bottom: breakdown of the Herwig \cite{Herwig} inclusive $b$-jet spectrum into the three major underlying channels, flavor creation (FCR) flavor excitation (FEX) and gluon splitting (GSP).}
   \label{fig:bjets_qcd}
 \end{figure}
 
-% We have not followed Marcel's suggestion to substantially shorten the inclusive b-jet spectrum subsection to give true credit to the measurement suggestion that motivated our development: a b-jet xsection that excludes double-B jets. Here is a new version where we try to make it clearer the line of thought that led to this proposal
+The simplest and most fundamental measurement of heavy-quark jet production is
+the inclusive heavy-quark jet spectrum, which is dominated by pure QCD contributions. 
+Studies of QCD bottom production are important in their own right because of the correspondence between parton level production and the observed hadron level, and their potential to provide information on the $b$-quark parton distribution function, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours. The theoretical calculation of the inclusive $b$-jet spectrum presents rather important uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. 
+
+%Paper by Salam, Banfi and Zanderighi
+%The measurement suggestion that motivated our development: a b-jet xsection that excludes double-B jets: 
 %a. Full NLO calculation of the inclusive b-jet spectrum yields a K-factor=6-10.
 %b. Herwig analysis shows that FEX and GSP contributions are much larger than FCR. This is due to strong enhancement from collinear logarithms.
 %Proposal: move to inclusive flavour-kt b-jet xsection where bb-jets are not counted. Theoretical uncertainties are substantially reduced
 %a. Flavour-kt b-jet xsection is free of final-state (GSP) logarithms
 %b. Initial-state (FEX) collinear logarithms can be resummed if one uses a b-quark PDF
+A review of the origin of these uncertainties is presented by Banfi, Salam and Zanderighi in reference~\cite{Salam.AccurateHQ}.  They arise from the poor convergence of the perturbative series, as evidenced by a large value of the $K$-factor, the ratio of the next-to-leading order (NLO) to the leading order (LO) cross section, in the $\pt$ range covered by the LHC.  This is illustrated in Fig.~\ref{fig:bjets_qcd}.  The observed $K$ values (6 to 10) indicate that the NLO result cannot be an accurate approximation to the full result. It is for this reason that the scale dependence (middle panel in Fig.~\ref{fig:bjets_qcd}) is large. 
+
+The fact that the perturbative series is very poorly convergent is related to the different channels for heavy quark production. 
+While at LO only the FCR channel is present, at NLO the FEX and GSP channels open up.  %often referred to as ``flavour excitation'' (FEX) and ``gluon splitting'' (GSP), 
+ In the gluon splitting process, one of the final-state light partons (at NLO always a gluon) splits collinearly into a $b\bar{b}$ pair that a clustering algorithm can classify within the same jet. A jet containing both $b$ and $\bar{b}$ is considered to be just a $b$-jet in standard definitions.
+
+NLO effects are included approximately in LO parton showering models, such as {\sc Herwig} or {\sc Pythia}. The various channels can be approximately separated in a parton shower Monte Carlo generator such as these, where one can determine the underlying hard process from the event record.  Their relative contributions to the total $b$-jet spectrum are shown in the bottom panel of Fig.~\ref{fig:bjets_qcd}. It is found that the LO channel has a much smaller contribution than the FEX and the GSP channels, which
+receive strong enhancement from collinear logarithms~\cite{GSP}, going as $\as^2 (\as \ln(\pt/\Mb))^n$ for flavour excitation~\cite{Altarelli1977298} 
+and $\as^2 \cdot \as^n \ln^{2n-1}(\pt/\Mb)$ for gluon splitting ($n\ge 1$). %~\cite{bmult}
 
 
-
-Studies of QCD bottom production are important because of the correspondence between parton level production and the observed hadron level, and their potential to provide information on the $b$-quark parton distribution function, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours. The theoretical calculation of the inclusive $b$-jet spectrum presents rather important uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. These arise from the poor convergence of the perturbative series, as evidenced by the large value of the $K$-factor (NLO/LO), $K$ = 6 -- 10, in the $\pt$ range covered by the LHC. While at LO only the so-called ``flavour creation'' channel is present, at NLO two new channels open up, often referred to as ``flavour excitation'' (FEX) and ``gluon splitting'' (GSP), see Fig.~\ref{fig:qcd_diagrams}. NLO effects are included approximately in LO parton showering models, such as {\sc Herwig}
-%~\cite{Herwig} 
-or {\sc Pythia}.
-%~\cite{PYTHIA6}. 
-The various channels can be approximately separated in a parton shower Monte Carlo generator such as these, where one can determine the underlying hard process from the event record. It is found that the LO channel has a much smaller contribution than 
-%the two channels that at fixed order enter only at NLO because these 
-the FEX and the GSP channels, which
-receive strong enhancement from collinear logarithms~\cite{GSP}. 
-
-%Fig.~\ref{fig:qcd_diagrams} shows examples of diagrams at LO (``flavor creation''), where the $b$ and $\bar{b}$ quarks fly in opposite directions, and at NLO (``gluon splitting'', GSP), where a gluon splits collinearly into a close-by $b\bar{b}$-pair that the clustering algorithm classifies within the same jet. A jet containing both $b$ and $\bar{b}$ is considered to be a plain $b$-jet in standard definitions.
-%The largest uncertainties are associated to the GSP contribution, that receives a strong enhancement from collinear logarithms. 
-%This channel however does not even correspond to one's physical idea of a $b$-jet, \ie the one induced by a hard $b$-quark, and it seems somehow unnatural to include it at all as part of one's $b$-jet spectrum. 
 
 Ref.~\cite{Salam.AccurateHQ} proposes a new observable to free the heavy-flavour spectrum calculation from collinear logarithms, and improve the accuracy of the theoretical prediction,
 %for improving the accuracy of the prediction of the heavy-flavour spectrum 
