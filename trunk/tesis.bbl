@@ -63,6 +63,11 @@ M.~Gell-Mann.
 \newblock A schematic model of baryons and mesons.
 \newblock {\em Physics Letters}, 8(3):214 -- 215, 1964.
 
+\bibitem{Zweig:1964jf}
+{Zweig, G.}
+\newblock {An SU(3) model for strong interaction symmetry and its breaking.}
+\newblock 1964.
+
 \bibitem{Zweig2}
 G.~Zweig.
 \newblock {AN SU(3) MODEL FOR STRONG INTERACTION SYMMETRY AND ITS BREAKING. 2.}
@@ -242,6 +247,18 @@ E.~Norrbin and T.~Sjostrand.
 \newblock {Production and hadronization of heavy quarks}.
 \newblock {\em Eur.Phys.J.}, C17:137--161, 2000.
 
+\bibitem{Salam.AccurateHQ}
+Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
+\newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
+  lhc.
+\newblock {\em JHEP}, 0707:026, 2007.
+
+\bibitem{Herwig}
+G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
+\newblock {HERWIG 6: An Event generator for hadron emission reactions with
+  interfering gluons (including supersymmetric processes)}.
+\newblock {\em JHEP}, 0101:010, 2001.
+
 \bibitem{Frixione:1996nh}
 S.~Frixione and M.L. Mangano.
 \newblock {Heavy quark jets in hadronic collisions}.
@@ -251,12 +268,6 @@ S.~Frixione and M.L. Mangano.
 G.~Marchesini and E.~Onogfri.
 \newblock {Exact solution of BFKL equation in jet-physics}.
 \newblock {\em JHEP}, 0407:031, 2004.
-
-\bibitem{Salam.AccurateHQ}
-Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
-\newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
-  lhc.
-\newblock {\em JHEP}, 0707:026, 2007.
 
 \bibitem{flavorkt}
 Andrea Banfi, Gavin Salam, and Giulia Zanderighi.

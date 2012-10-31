@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  31 OCT 2012 10:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  31 OCT 2012 15:54
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -129,11 +129,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )) (./tesis.aux
-(./Introduction/theory.aux
-
-LaTeX Warning: Label `fig:qcd_diagrams' multiply defined.
-
-))
+(./Introduction/theory.aux))
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -148,7 +144,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
- (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
 \scratchdimen=\dimen114
@@ -196,68 +193,67 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
- [3]
-
-LaTeX Warning: Citation `Zweig:1964j' on page 4 undefined on input line 57.
-
-[4] [5] <FIGS/bb_diagrams.jpg, id=64, 3014.26125pt x 1660.2025pt>
-File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
-
-<use FIGS/bb_diagrams.jpg>
-File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
- <use FIGS/bb_diagrams.jpg>
-File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
-
-<use FIGS/bb_diagrams.jpg>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6] [7 <./FIGS/bb_diagrams.jpg>]
-Overfull \hbox (3.92038pt too wide) in paragraph at lines 114--117
+ [3] [4] [5] [6]
+[7]
+Overfull \hbox (3.92038pt too wide) in paragraph at lines 116--119
 \T1/cmr/m/n/12 strong cou-pling con-stant grows with in-creas-ing dis-tance be-
 tween color charges,
  []
 
 [8] [9] [10] [11]
-Overfull \hbox (10.78426pt too wide) in paragraph at lines 165--166
+Overfull \hbox (2.78879pt too wide) in paragraph at lines 168--169
 \T1/cmr/m/n/12 from proton-proton col-li-sion pro-cesses were gen-er-ated with 
-P YTHIA 6.423 [[]].
+\T1/cmr/m/sc/12 Pythia \T1/cmr/m/n/12 6.423 [[]].
  []
 
 
 LaTeX Warning: Citation `1126-6708-2008-07-07' on page 12 undefined on input li
-ne 178.
+ne 187.
 
-[12] [13] <Fig2/jetdefinition.png, id=101, 1202.4925pt x 409.53pt>
+[12] <Fig2/jetdefinition.png, id=90, 1202.4925pt x 409.53pt>
 File: Fig2/jetdefinition.png Graphic file (type png)
 
-<use Fig2/jetdefinition.png> [14 <./Fig2/jetdefinition.png (PNG copy)>]
+<use Fig2/jetdefinition.png>
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ’ in font cmr10!
 
-LaTeX Warning: Citation `CamAchen' on page 15 undefined on input line 210.
+
+LaTeX Warning: Reference `sec:ATLASDetector' on page 13 undefined on input line
+ 221.
+
+[13] [14 <./Fig2/jetdefinition.png (PNG copy)>]
+
+LaTeX Warning: Citation `CamAchen' on page 15 undefined on input line 229.
 
 [15] [16] [17] [18]
 
-LaTeX Warning: Reference `ch:kinematic' on page 19 undefined on input line 273.
+LaTeX Warning: Reference `ch:kinematic' on page 19 undefined on input line 288.
 
 
-[19]
+<FIGS/bjets_qcd.pdf, id=113, 614.295pt x 794.97pt>
+File: FIGS/bjets_qcd.pdf Graphic file (type pdf)
+ <use FIGS/bjets_qcd.pdf>
+[19] [20 <./FIGS/bjets_qcd.pdf>]
+<FIGS/bb_diagrams.jpg, id=164, 3014.26125pt x 1660.2025pt>
+File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
+
+<use FIGS/bb_diagrams.jpg>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
  <use FIGS/bb_diagrams.jpg>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
- <use FIGS/bb_diagrams.jpg>
-File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
-<use FIGS/bb_diagrams.jpg> [20]
-Overfull \hbox (11.88531pt too wide) in paragraph at lines 344--345
+<use FIGS/bb_diagrams.jpg> [21]
+Overfull \hbox (11.88531pt too wide) in paragraph at lines 376--377
 []\T1/cmr/m/it/12 Rejection of back-ground in Stan-dard Model anal-y-ses and be
 yond-SM searches 
  []
 
-[21] [22]) [23] (./tesis.bbl [24
+[22 <./FIGS/bb_diagrams.jpg>]) [23] (./tesis.bbl [24
 
 
 ] [25]
-Underfull \hbox (badness 1708) in paragraph at lines 122--126
+Underfull \hbox (badness 1708) in paragraph at lines 127--131
 []\T1/cmr/m/n/12 M Bahr, S. Gieseke, M.A. Gigg, A. Grellscheid, K. Hamil-ton,
  []
 
@@ -269,43 +265,42 @@ Missing character: There is no ’ in font cmr12!
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 1942 strings out of 493848
- 22686 string characters out of 1152823
- 77910 words of memory out of 3000000
- 5191 multiletter control sequences out of 15000+50000
- 25817 words of font info for 59 fonts, out of 3000000 for 9000
+ 1960 strings out of 493848
+ 22939 string characters out of 1152823
+ 78890 words of memory out of 3000000
+ 5203 multiletter control sequences out of 15000+50000
+ 29419 words of font info for 64 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 27i,8n,21p,1798b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,21p,1784b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/pu
 blic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
-are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
-x1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
-0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
-200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (35 pages, 842886 bytes).
+ts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on tesis.pdf (35 pages, 957174 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
+ 281 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 52 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

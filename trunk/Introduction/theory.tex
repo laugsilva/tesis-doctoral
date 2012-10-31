@@ -195,6 +195,14 @@ In order to use events produced by Monte Carlo generators to model events that o
 \subsection{Jet algorithms}\label{sec:jetalgos}
 
 
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{areas_kt.png}
+%\includegraphics[width=0.49\textwidth]{areas-antikt.png}
+%\caption{A sample parton-level event, generated with {\sc Herwig}, clustered with the $k_t$ and anti-$k_t$ algorithms, illustrating the active area of the resulting jets~\cite{CatchmentArea}.}
+%\label{fig:CatchmentAreaFig}
+%\end{figure}
+
 As described above, quarks and gluons cannot be directly observed. % Almost inmediatly after being produced, a 
 Quarks and gluons hadronise, leading to a collimated spray of energetic hadrons, a jet. By measuring the jet energy and direction one can get close to the idea of the original parton. But one parton may form multiple experimentally observed jets, for example due to a hard gluon emission plus soft and collinear showering. Then, in comparing data to theory and MC programs predictions a set of rules for how to group particles into jets is needed. A jet algorithm, together with a set of parameters and a recombination scheme (how to assign a momentum to the combination of two particles) form a jet definition.
 
@@ -213,43 +221,39 @@ Traditionally, jet algorithms have been classified into two categories: cone and
 Cone-like algorithms are based on the collinear nature of gluon radiation and the parton shower described above. The decay products of quarks and gluons and their emissions will tend to form a cone of particles in the $\eta - \phi$ plane\footnote{The azimuthal angle $\phi$ is measured around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = − ln tan(\frac{\theta}{2})$. The transverse momentum $\pt$ is defined in the plane transverse to the beam motion. The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $Delta R = \sqrt{ \Delta \eta^2  + \Delta \phi^2}$ . See section~\ref{sec:ATLASDetector} for more details on the ATLAS Coordinate system.} 
 as they propagate.
 % Then a cone of a suitable radius will capture these decay procuts.
-An cone algorithm will work as follows\footnote{This is how CMS cone algorithm, used for the preparation for the LHC running, works.}: first, it sorts all particles in the event according to their momentum, and identifies the one with largest $\pt$. This is referred to as a seed particle. Then a cone of radius $R$ in  $\eta - \phi$ is drawn around the seed. The direction of the sum of the momenta of those particles is identified and if it doesn't coincide with the seed direction then the sum is used as a new seed direction, and it iterates until the sum of the cone contents coincides withthe previus seed (this type of algorithm is cone ``iterative'' cone since it iterates the cone direction). This is how a stable cone is reached. A difficulty and major drawback in this procedure is the use of the transverse momentum of the particle to select the first seed. This definition is collinear unsafe, i.e. a splitting of the hardest particle into a nearly collinear pair can have the consequence that another, less hard particle, pointing in a different direction suddenly becomes the hardest in the event, leading to a different final set of jets. There are many other variants of cone algorithms, and nearly all suffer from problems of either collinear safety, or infrared safety (an extra soft particle creates a new seed, which can lead to an extra stable cone being found). A fix for these problems came in a algorithm called Seedless Infrared Safe Cone (SISCOne)~\cite{SISCone}.
+An cone algorithm will work as follows\footnote{This is how CMS cone algorithm, used for the preparation for the LHC running, works.}: first, it sorts all particles in the event according to their momentum, and identifies the one with largest $\pt$. This is referred to as a seed particle. Then a cone of radius $R$ in  $\eta - \phi$ is drawn around the seed. The direction of the sum of the momenta of those particles is identified and if it doesn't coincide with the seed direction then the sum is used as a new seed direction, and it iterates until the sum of the cone contents coincides with the previous seed (this type of algorithm is  ``iterative'' cone since it iterates the cone direction). This is how a stable cone is reached. A difficulty and major drawback in this procedure is the use of the transverse momentum of the particle to select the first seed. This definition is collinear unsafe, i.e. a splitting of the hardest particle into a nearly collinear pair can have the consequence that another, less hard particle, pointing in a different direction suddenly becomes the hardest in the event, leading to a different final set of jets. There are many other variants of cone algorithms, and nearly all suffer from problems of either collinear safety, or infrared safety (an extra soft particle creates a new seed, which can lead to an extra stable cone being found). A fix for these problems came in a algorithm called Seedless Infrared Safe Cone (SISCOne)~\cite{SISCone}.
 
 
-Recombination algorithms, on the other hand, are both collinear and infrared safe. And for this reason, they can be used in calculations to any order in perturbation theory. The term recombination is used given that these algorithms work as if they were inverting the sequence of splittings of the parton shower. In general, recombination algorithms operate by successively combining pairs of particles using a distance metric, $d_{ij}$.  At hadron colliders, due to the fact that one of the incoming partons may continue along the beam, for every pair of particles this metric is compared to a so-called ``beam distance'', $d_{iB}$, and only when  $d_{ij}<d_{iB}$ the particle pair is combined and considered for subsequent clustering steps. 
+Recombination algorithms, on the other hand, are both collinear and infrared safe. And for this reason, they can be used in calculations to any order in perturbation theory. The term recombination is appropiate given that these algorithms work as if they were inverting the sequence of splittings of the parton shower. In general, recombination algorithms operate by successively combining pairs of particles using a distance metric, $d_{ij}$.  At hadron colliders, due to the fact that one of the incoming partons may continue along the beam, for every pair of particles this metric is compared to a so-called ``beam distance'', $d_{iB}$, and only when  $d_{ij}<d_{iB}$ the particle pair is combined and considered for subsequent clustering steps. 
 
-ATLAS (and also CMS) has chosen anti-$k_t$~\cite{antiktalg} algorithm as the default jet algorithm for use in physics analysis.  This recombination algorithm as well as the Cambridge-Achen algorithm~\cite{CamAchen}, or C$/$A are extensions of the original $k_t$ algorithm developed for the analysis of multi-jet events at $e^+ e^-$ colliders~\cite{JADE} and subsequently extended for use at hadron colliders~\cite{kt2,kt1}. In this thesis, the $k_t$ algorithm was used for jet substructure studies, see section~\ref{sec:substructure}.
+ATLAS (and also CMS) has chosen the anti-$k_t$~\cite{antiktalg} algorithm as the default jet algorithm for use in physics analysis.  This recombination algorithm as well as the Cambridge-Achen algorithm~\cite{CamAchen} (C$/$A) are extensions 
+ of the original $k_t$ algorithm developed for the analysis of multi-jet events at $e^+ e^-$ colliders~\cite{JADE} and subsequently extended for use at hadron colliders~\cite{kt2,kt1}. In this thesis, the $k_t$ algorithm was used for jet substructure studies, see section~\ref{sec:substructure}.
 
-The orginal $k_t$ algorithm implements the following (\ref{eqn:origkt}) distance metric between particles $i$ and $j$,
-%
+The original $k_t$ algorithm implements the following (\ref{eqn:origkt}) distance metric between particles $i$ and $j$
 \begin{equation} 
-d_{ij} = \frac{2E_i E_j (1-cos\theta_{ij}) }{Q^2}
+d_{ij} = \frac{2E_i E_j (1- \cos \theta_{ij}) }{Q^2},
 \label{eqn:origkt}
 \end{equation}
-%
 where $Q$ is the total energy in the event, $E_i$ is the energy of particle $i$ and $\theta_{ij}$ the angle between particles $i$ and $j$. In the collinear limit, $d_{ij}$ is related to the relative transverse momentum between particles $i$ and $j$ (hence the name $k_t$ algorithm), normalized to the total visible energy.
-The particles are combined if the minimum $d_{ij}$, $d_min$, is below a certain threshold, $y_{cut}$.  The jet multiplicity depends on the value of $y_{cut}$, as a lower value will result in more soft or colliinear emissions surviving as jets. %This is thus the first definition of an ``event shape'', this threshold marks the transition between two-jet events and three-jet events.
-As mentioned above, for hadron colliders, the notion of a beam distance is added. A distance scale, $\Delta R = \sqrt{\Delta y^2 +\Delta \phi^2}$, is introduced to define the typical radius for a jet, effectively replacing $y_{cut}$. In this case for every pair of particles a new distance is define, (\ref{eqn:kt}),
-%
+The particles are combined if the minimum $d_{ij}$, $d_{min}$, is below a certain threshold, $y_{cut}$.  The jet multiplicity depends on the value of $y_{cut}$, as a lower value will result in more soft or collinear emissions surviving as jets. %This is thus the first definition of an ``event shape'', this threshold marks the transition between two-jet events and three-jet events.
+As mentioned above, for hadron colliders, the notion of a beam distance is added. A distance scale, $\Delta R = \sqrt{\Delta y^2 +\Delta \phi^2}$, is introduced to define the typical radius for a jet, effectively replacing $y_{cut}$. In this case for every pair of particles a new distance is defined, (\ref{eqn:kt}),
 \begin{equation} 
-d_{ij} = min(p^2_{ti},p^2_{tj}) \frac{\Delta R^2_{ij}}{R^2}
+d_{ij} = \min(p^2_{ti},p^2_{tj}) \frac{\Delta R^2_{ij}}{R^2}
 \label{eqn:kt}
 \end{equation}
-%
 and the beam distance, $d_{iB}=p^2_{ti}$. %, in the way that when no particle j is found such that $\Delta R_{ij} < R$ then i is promoted to the status of a jet. 
-The algorithm proceeds by searaching for the smallest of the $d_{ij}$ and the $d_{iB}$. If it is a $d_{ij}$ then particles $i$ and $j$ are recombined into a single new particles. If it is a $d_{iB}$ then $i$ is removed from the list of particles, and called a jet. This is repeated until no particles remain.
+The algorithm proceeds by searching for the smallest of the $d_{ij}$ and the $d_{iB}$. If it is a $d_{ij}$ then particles $i$ and $j$ are recombined into a single new particles. If it is a $d_{iB}$ then $i$ is removed from the list of particles, and called a jet. This is repeated until no particles remain.
 
 As opposed to cone algorithms, for the $k_t$ algorithm, the jets have quite irregular shapes, and particles with $\Delta R_{ij} > R$ can still be clustered within the jet. This is a problem when, for example, an irregularly shaped jet happens to extend into poorly instrumented detector regions. Another drawback of this definition is that soft particles are clustered first. This  has the potential to introduce complications when the detector noise of energy density fluctuations are large.
 
-A feature of the $k_t$ algorithm that is attractive is that it not produces jets but also assigns a clustering sequence to the particles within the jet. It is possible then to undo the clustering and look inside the structure of the jet. This has been exploited in a range of QCD studies, and also in searches of hadronic decays of boosted massive particles  and will be used here for the search of two-pronged jets in gluon splitting.
+A feature of the $k_t$ algorithm that is attractive is that it does not produce jets but it also assigns a clustering sequence to the particles within the jet. It is possible then to undo the clustering and to look %inside the structure of the jet. 
+back at the shower development history.  This has been exploited in a range of QCD studies, and also in searches of hadronic decays of boosted massive particles  and it will be used here for the search of two-pronged jets in gluon splitting.
 
 The prescription above may be generalized beyond the $k_t$ algorithm. By inverting the power law in the particle distance metric, $d_{ij}$, the anti-$k_t$ algorithm is obtained. The particle distance metric used by this algorithm is,
-
 \begin{equation} 
-d_{ij} = min(p^{-2}_{ti},p^{-2}_{tj}) \frac{\Delta R^2_{ij}}{R^2}
+d_{ij} = \min(p^{-2}_{ti},p^{-2}_{tj}) \frac{\Delta R^2_{ij}}{R^2}
 \label{eqn:antikt}
 \end{equation}
-
 and the  beam distance, $d_{iB}=p^{-2}_{ti}$. This definition results in the clustering of the hardest emissions first. This has several benefits in the context of high-luminosity hadron collisions.
 
 Note that the anti-$k_t$ algorithm does not provide useful information on jet substructure if a jet contains two hard cores, then the $k_t$ (or C/A) algorithms first reconstruct those hard cores and merge the resulting two subjets. The anti-$k_t$ will often first cluster the harder of the two cores and then gradually aglomerate the contents of the second hard core.
@@ -306,13 +310,30 @@ Heavy flavor quark excitation: the heavy flavour quark excitation can be depicte
 Gluon splitting: no heavy quarks participate in the hard subprocess in this case, but they are produced in $g \rightarrow Q\bar{Q}$ branchings in the parton shower.
 \end{itemize}
 
-Example of Feynman diagrams for QCD $b$-quark production up to NLO were shown intance Fig.~\ref{fig:qcd_diagrams}.
+Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown in Fig.~\ref{fig:qcd_diagrams}.
 
 The definition above is not strict, but can be used as a basis for the understanding of the characteristics of heavy flavour quark production.
 
 
 
 {\em The measurement of the inclusive $b$-jet spectrum}
+
+
+\begin{figure}[tp]
+\centering
+%\includegraphics[height=0.7\textwidth,viewport=20 305 340 590,clip,angle=270]{FIGS/bjets_qcd.eps}
+\includegraphics[height=0.7\textwidth,viewport=300 410 530 690,clip]{FIGS/bjets_qcd.pdf}
+  \caption{Top: $K$-factor for inclusive $b$-jet spectrum taken
+  from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$
+  jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central
+  rapidity region ($|y| <0.7$). Middle: scale dependence obtained by
+  simultaneously varying the renormalisation and factorisation scales by a factor
+  two around $\pt$, the transverse momentum of the hardest jet in the event.
+  Bottom: breakdown of the Herwig \cite{Herwig} inclusive $b$-jet spectrum into
+  the three major underlying channels, flavor creation (FCR) flavor excitation
+  (FEX) and gluon splitting (GSP).}
+  \label{fig:bjets_qcd}
+\end{figure}
 
 % We have not followed Marcel's suggestion to substantially shorten the inclusive b-jet spectrum subsection to give true credit to the measurement suggestion that motivated our development: a b-jet xsection that excludes double-B jets. Here is a new version where we try to make it clearer the line of thought that led to this proposal
 %a. Full NLO calculation of the inclusive b-jet spectrum yields a K-factor=6-10.
