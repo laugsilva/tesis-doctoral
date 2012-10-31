@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  31 OCT 2012 15:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  31 OCT 2012 19:50
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -210,7 +210,7 @@ Overfull \hbox (2.78879pt too wide) in paragraph at lines 168--169
 LaTeX Warning: Citation `1126-6708-2008-07-07' on page 12 undefined on input li
 ne 187.
 
-[12] <Fig2/jetdefinition.png, id=90, 1202.4925pt x 409.53pt>
+[12] <Fig2/jetdefinition.png, id=89, 1202.4925pt x 409.53pt>
 File: Fig2/jetdefinition.png Graphic file (type png)
 
 <use Fig2/jetdefinition.png>
@@ -231,11 +231,45 @@ LaTeX Warning: Citation `CamAchen' on page 15 undefined on input line 229.
 LaTeX Warning: Reference `ch:kinematic' on page 19 undefined on input line 288.
 
 
-<FIGS/bjets_qcd.pdf, id=113, 614.295pt x 794.97pt>
+<FIGS/bjets_qcd.pdf, id=112, 614.295pt x 794.97pt>
 File: FIGS/bjets_qcd.pdf Graphic file (type pdf)
  <use FIGS/bjets_qcd.pdf>
 [19] [20 <./FIGS/bjets_qcd.pdf>]
-<FIGS/bb_diagrams.jpg, id=164, 3014.26125pt x 1660.2025pt>
+! Undefined control sequence.
+<recently read> \as 
+                    
+l.347 ...near logarithms~\cite{GSP}, going as $\as
+                                                  ^2 (\as \ln(\pt/\Mb))^n$ f...
+
+? 
+! Undefined control sequence.
+l.347 ...garithms~\cite{GSP}, going as $\as^2 (\as
+                                                   \ln(\pt/\Mb))^n$ for flav...
+
+? 
+! Undefined control sequence.
+l.347 ...te{GSP}, going as $\as^2 (\as \ln(\pt/\Mb
+                                                  ))^n$ for flavour excitati...
+
+? 
+! Undefined control sequence.
+<recently read> \as 
+                    
+l.348 and $\as
+              ^2 \cdot \as^n \ln^{2n-1}(\pt/\Mb)$ for gluon splitting ($n\ge...
+
+? 
+! Undefined control sequence.
+l.348 and $\as^2 \cdot \as
+                          ^n \ln^{2n-1}(\pt/\Mb)$ for gluon splitting ($n\ge...
+
+? 
+! Undefined control sequence.
+l.348 and $\as^2 \cdot \as^n \ln^{2n-1}(\pt/\Mb
+                                               )$ for gluon splitting ($n\ge...
+
+? 
+[21] <FIGS/bb_diagrams.jpg, id=166, 3014.26125pt x 1660.2025pt>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
 <use FIGS/bb_diagrams.jpg>
@@ -243,35 +277,39 @@ File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
  <use FIGS/bb_diagrams.jpg>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
-<use FIGS/bb_diagrams.jpg> [21]
-Overfull \hbox (11.88531pt too wide) in paragraph at lines 376--377
+<use FIGS/bb_diagrams.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (11.88531pt too wide) in paragraph at lines 368--369
 []\T1/cmr/m/it/12 Rejection of back-ground in Stan-dard Model anal-y-ses and be
 yond-SM searches 
  []
 
-[22 <./FIGS/bb_diagrams.jpg>]) [23] (./tesis.bbl [24
+[22] [23 <./FIGS/bb_diagrams.jpg>]) [24] (./tesis.bbl [25
 
 
-] [25]
+] [26]
 Underfull \hbox (badness 1708) in paragraph at lines 127--131
 []\T1/cmr/m/n/12 M Bahr, S. Gieseke, M.A. Gigg, A. Grellscheid, K. Hamil-ton,
  []
 
-[26]
+[27]
 Missing character: There is no â in font cmr8!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
- [27] [28]) [29] (./tesis.aux (./Introduction/theory.aux))
+ [28] [29]) [30] (./tesis.aux (./Introduction/theory.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1960 strings out of 493848
- 22939 string characters out of 1152823
- 78890 words of memory out of 3000000
+ 1959 strings out of 493848
+ 22918 string characters out of 1152823
+ 77890 words of memory out of 3000000
  5203 multiletter control sequences out of 15000+50000
- 29419 words of font info for 64 fonts, out of 3000000 for 9000
+ 28720 words of font info for 63 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  27i,8n,21p,1784b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-
@@ -285,22 +323,21 @@ xlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (35 pages, 957174 bytes).
+/usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on tesis.pdf (36 pages, 930597 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
+ 280 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
