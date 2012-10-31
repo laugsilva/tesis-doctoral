@@ -1,79 +1,59 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Main/core_mva.aux
-A level-1 auxiliary file: Summary/summary.aux
+A level-1 auxiliary file: Introduction/theory.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
-I was expecting a `,' or a `}'---line 1460 of file tesis.bib
- :       
- :       title        = "{Properties of tracks in jets observed in proton-proton
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1492 of file tesis.bib
- : author = "M. Aharrouche and others"
- :                                    ",
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1528 of file tesis.bib
- :        
- :        title        = "{ATLAS Calorimeter Response to Single Isolated Hadrons and Estimation of the Calorimeter Jet Scale Uncertainty}",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1614 of file tesis.bib
- :        
- :        title        = "Performance of primary vertex reconstruction in
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1652 of file tesis.bib
- :       
- :       author = "{ATLAS Collaboration}",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Illegal end of database file---line 1711 of file tesis.bib
- : }
- :  
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "KDE"
-Warning--I didn't find a database entry for "QUINLAN1999497"
-Warning--I didn't find a database entry for "bjetJES"
-You've used 4 entries,
+Warning--I didn't find a database entry for "Zweig:1964j"
+Warning--I didn't find a database entry for "1126-6708-2008-07-07"
+Warning--I didn't find a database entry for "CamAchen"
+Warning--empty journal in ATLASHiggs
+Warning--empty journal in Zweig2
+Warning--empty author in Pythia_MC11tune
+Warning--empty journal in Perugia
+Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
+while executing---line 944 of file unsrt.bst
+Warning--empty journal in Abbiendi:2007aa
+Warning--empty journal in Aad:2012np
+Warning--empty journal in Abe:1999vw
+You've used 50 entries,
             1791 wiz_defined-function locations,
-            477 strings with 4395 characters,
-and the built_in function-call counts, 785 in all, are:
-= -- 58
-> -- 49
-< -- 0
-+ -- 18
-- -- 14
-* -- 50
-:= -- 148
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 4
+            783 strings with 11473 characters,
+and the built_in function-call counts, 11050 in all, are:
+= -- 911
+> -- 580
+< -- 1
++ -- 214
+- -- 164
+* -- 828
+:= -- 1878
+add.period$ -- 150
+call.type$ -- 50
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 34
-empty$ -- 70
-format.name$ -- 14
-if$ -- 163
+cite$ -- 57
+duplicate$ -- 440
+empty$ -- 1040
+format.name$ -- 164
+if$ -- 2372
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 4
-pop$ -- 8
+int.to.str$ -- 50
+missing$ -- 49
+newline$ -- 253
+num.names$ -- 49
+pop$ -- 78
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 13
+skip$ -- 170
 stack$ -- 0
-substring$ -- 27
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 762
+swap$ -- 44
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 6
-width$ -- 5
-write$ -- 44
-(There were 6 error messages)
+warning$ -- 7
+while$ -- 96
+width$ -- 52
+write$ -- 539
+(There was 1 error message)
