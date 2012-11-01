@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  31 OCT 2012 19:50
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.17)  1 NOV 2012 15:10
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -228,48 +228,10 @@ LaTeX Warning: Citation `CamAchen' on page 15 undefined on input line 229.
 
 [15] [16] [17] [18]
 
-LaTeX Warning: Reference `ch:kinematic' on page 19 undefined on input line 288.
+LaTeX Warning: Reference `ch:kinematic' on page 19 undefined on input line 293.
 
 
-<FIGS/bjets_qcd.pdf, id=112, 614.295pt x 794.97pt>
-File: FIGS/bjets_qcd.pdf Graphic file (type pdf)
- <use FIGS/bjets_qcd.pdf>
-[19] [20 <./FIGS/bjets_qcd.pdf>]
-! Undefined control sequence.
-<recently read> \as 
-                    
-l.347 ...near logarithms~\cite{GSP}, going as $\as
-                                                  ^2 (\as \ln(\pt/\Mb))^n$ f...
-
-? 
-! Undefined control sequence.
-l.347 ...garithms~\cite{GSP}, going as $\as^2 (\as
-                                                   \ln(\pt/\Mb))^n$ for flav...
-
-? 
-! Undefined control sequence.
-l.347 ...te{GSP}, going as $\as^2 (\as \ln(\pt/\Mb
-                                                  ))^n$ for flavour excitati...
-
-? 
-! Undefined control sequence.
-<recently read> \as 
-                    
-l.348 and $\as
-              ^2 \cdot \as^n \ln^{2n-1}(\pt/\Mb)$ for gluon splitting ($n\ge...
-
-? 
-! Undefined control sequence.
-l.348 and $\as^2 \cdot \as
-                          ^n \ln^{2n-1}(\pt/\Mb)$ for gluon splitting ($n\ge...
-
-? 
-! Undefined control sequence.
-l.348 and $\as^2 \cdot \as^n \ln^{2n-1}(\pt/\Mb
-                                               )$ for gluon splitting ($n\ge...
-
-? 
-[21] <FIGS/bb_diagrams.jpg, id=166, 3014.26125pt x 1660.2025pt>
+[19] <FIGS/bb_diagrams.jpg, id=116, 3014.26125pt x 1660.2025pt>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
 <use FIGS/bb_diagrams.jpg>
@@ -277,38 +239,37 @@ File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
  <use FIGS/bb_diagrams.jpg>
 File: FIGS/bb_diagrams.jpg Graphic file (type jpg)
 
-<use FIGS/bb_diagrams.jpg>
+<use FIGS/bb_diagrams.jpg> [20 <./FIGS/bb_diagrams.jpg>]
+<FIGS/bjets_qcd.pdf, id=126, 614.295pt x 794.97pt>
+File: FIGS/bjets_qcd.pdf Graphic file (type pdf)
+ <use FIGS/bjets_qcd.pdf>
+[21] [22 <./FIGS/bjets_qcd.pdf>]
+<FIGS/Wbb_diagram.jpg, id=176, 1934.22626pt x 618.31pt>
+File: FIGS/Wbb_diagram.jpg Graphic file (type jpg)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use FIGS/Wbb_diagram.jpg> [23] [24 <./FIGS/Wbb_diagram.jpg>]) [25]
+(./tesis.bbl [26
 
 
-Overfull \hbox (11.88531pt too wide) in paragraph at lines 368--369
-[]\T1/cmr/m/it/12 Rejection of back-ground in Stan-dard Model anal-y-ses and be
-yond-SM searches 
- []
-
-[22] [23 <./FIGS/bb_diagrams.jpg>]) [24] (./tesis.bbl [25
-
-
-] [26]
+] [27]
 Underfull \hbox (badness 1708) in paragraph at lines 127--131
 []\T1/cmr/m/n/12 M Bahr, S. Gieseke, M.A. Gigg, A. Grellscheid, K. Hamil-ton,
  []
 
-[27]
+[28]
 Missing character: There is no â in font cmr8!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
- [28] [29]) [30] (./tesis.aux (./Introduction/theory.aux))
+ [29] [30] [31]) [32] (./tesis.aux (./Introduction/theory.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1959 strings out of 493848
- 22918 string characters out of 1152823
- 77890 words of memory out of 3000000
- 5203 multiletter control sequences out of 15000+50000
+ 1968 strings out of 493848
+ 23104 string characters out of 1152823
+ 78913 words of memory out of 3000000
+ 5211 multiletter control sequences out of 15000+50000
  28720 words of font info for 63 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  27i,8n,21p,1784b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -335,9 +296,9 @@ er/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (36 pages, 930597 bytes).
+Output written on tesis.pdf (38 pages, 978303 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
+ 290 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 

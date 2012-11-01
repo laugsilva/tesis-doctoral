@@ -213,6 +213,18 @@ Georges Aad et~al.
   ATLAS detector in pp collisions at $\sqrt{s} = 7$~TeV}.
 \newblock 2012.
 
+\bibitem{boost2010}
+A.~Abdesselam et~al.
+\newblock Boosted objects: a probe of beyond the standard model physics.
+\newblock {\em The European Physical Journal C - Particles and Fields},
+  71:1--19, 2011.
+
+\bibitem{boost2010b}
+A.~Altheimer et~al.
+\newblock {Jet Substructure at the Tevatron and LHC: New results, new tools,
+  new benchmarks}.
+\newblock 2012.
+
 \bibitem{ATLASBoostedHbb}
 {ATLAS Collaboration}.
 \newblock Atlas sensitivity to the standard model higgs in the hw and hz
@@ -247,6 +259,11 @@ E.~Norrbin and T.~Sjostrand.
 \newblock {Production and hadronization of heavy quarks}.
 \newblock {\em Eur.Phys.J.}, C17:137--161, 2000.
 
+\bibitem{Frixione:1996nh}
+S.~Frixione and M.L. Mangano.
+\newblock {Heavy quark jets in hadronic collisions}.
+\newblock {\em Nucl.Phys.}, B483:321--338, 1997.
+
 \bibitem{Salam.AccurateHQ}
 Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
 \newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
@@ -259,15 +276,10 @@ G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
   interfering gluons (including supersymmetric processes)}.
 \newblock {\em JHEP}, 0101:010, 2001.
 
-\bibitem{Frixione:1996nh}
-S.~Frixione and M.L. Mangano.
-\newblock {Heavy quark jets in hadronic collisions}.
-\newblock {\em Nucl.Phys.}, B483:321--338, 1997.
-
-\bibitem{GSP}
-G.~Marchesini and E.~Onogfri.
-\newblock {Exact solution of BFKL equation in jet-physics}.
-\newblock {\em JHEP}, 0407:031, 2004.
+\bibitem{Seymour1995163}
+M.H. Seymour.
+\newblock Heavy quark pair multiplicity in e+e− events.
+\newblock {\em Nuclear Physics B}, 436(1–2):163 -- 183, 1995.
 
 \bibitem{flavorkt}
 Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
@@ -278,6 +290,13 @@ Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
 John~M. Campbell, R.Keith Ellis, F.~Maltoni, and S.~Willenbrock.
 \newblock {Production of a $W$ boson and two jets with one $b^-$ quark tag}.
 \newblock {\em Phys.Rev.}, D75:054015, 2007.
+
+\bibitem{ATLAS-CONF-2011-098}
+{ATLAS Collaboration}.
+\newblock {Search for supersymmetry in pp collisions at $\sqrt{s}=7$TeV in
+  final states with missing transverse momentum, $b$-jets and no leptons with
+  the ATLAS detector}.
+\newblock {\em ATLAS-CONF-2011-098}, 2011.
 
 \bibitem{Abreu:1997nf}
 P.~Abreu et~al.

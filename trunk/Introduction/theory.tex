@@ -265,13 +265,18 @@ These algorithms, and more, are implemented in {\sc Fastjet}~\cite{fastjet} soft
 \subsection{Jet substructure}\label{sec:substructure}
 %------------------------------------------------------------------------
 
-The study of a quantity related to the distributions and multiplicity of particles in the event phase space led to the first evidence of jet structure, as pointed out in ref.~\cite{PhysRevLett.35.1609}. In general, all final hadronic states in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the event energy flow by means of the so called ``event shape'' variables. This family of variables attempts to extract information about the global geometry of an event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa}\cite{Aad:2012np}. 
+%The study of a quantity related to the distributions and multiplicity of particles in the event phase space led to the first evidence of jet structure, as pointed out in ref.~\cite{PhysRevLett.35.1609}. 
+The first evidence of jet structure resulted from the study of the spacial distribution and multiplicity of particles in the event phase space in hadron production in $e^+ e^-$ collisions~\cite{PhysRevLett.35.1609}.
+Generally, all final hadronic states in both in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the event energy flow by means of the so called ``event shape'' variables. This family of variables attempts to extract information about the global geometry of an event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa}\cite{Aad:2012np}. 
 
-Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet. In new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. For example, when an unstable massive particle with large $\pt$ decays hadronically, the final state may be composed of a number of nearly collinear jets. These jets may be merged by a jet finder; %The decay products of boosted heavy quarks or bosons might be reconstructed as a single jet, 
-a method for selecting these jets would allow for the study of their properties.
-  This interest led to the development of a wide range of jet substructure techniques in the recent years.
+Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet. In SM and new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. 
+At the LHC, many of the particles considered to be heavy at previous accelerators will be frequently produced with a transverse momentum greatly exceeding their rest mass, like the electro-weak gauge bosons $W^\pm$ and $Z$, the top quark, the Higgs boson (or bosons) and possibly other new particles in the same mass range. These boosted objects, produced either by recoil against other energetic objects or from decays of even heavier BSM particles, upon decay can give rise to a highly collimated topology too close to be resolved by standard jet algorithms. 
+%For example, when an unstable massive particle with large $\pt$ decays hadronically, the final state may be composed of a number of nearly collinear jets. These jets may be merged by a jet finder; %The decay products of boosted heavy quarks or bosons might be reconstructed as a single jet, 
+A method for selecting these jets would allow for the study of their properties.   This interest led to the development of a wide range of %jet substructure techniques in the recent years. 
+%For theses cases, 
+sophisticated tools in the last years~\cite{boost2010,boost2010b} that allow the analysis of the substructure of the ensuing jet and reveal its heavy-particle origin.
 
-  Jet substructure methods probe the internal structure of jets from a detailed study of its constituents. These techniques have been first thought for distinguishing boosted hadronic objects from the background of jets initiated by light quarks and gluons, see for example~\cite{ATLASBoostedHbb},
+  Jet substructure methods probe the internal structure of jets from a detailed study of its constituents. These techniques have been first implemented for distinguishing boosted SM hadronic objects from the background of jets initiated by light quarks and gluons, see for example~\cite{ATLASBoostedHbb},
 %http://cdsweb.cern.ch/record/1201444/
 but they have been also succesfully used in other applications, including separating quark jets from gluon jets~\cite{PhysRevLett.107.172001} and identifying boosted decay producs in new physics searches~\cite{PhysRevD.82.095012}.
 
@@ -298,7 +303,8 @@ In chapter~\ref{ch:kinematic}, several distinguishing characteristics between je
 %------------------------------------------------------------------------
 
 %https://cdsweb.cern.ch/record/1425916/
-Heavy flavour quark production in hadronic collisions may be subdivided into three classes depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
+Heavy flavor quarks enter in many collider searches, notably because they are produced in the decays of various SM particles (top quarks, the $Z$ boson and the Higgs boson, if light), and of numerous particles appearing in proposed extensions of the SM.
+ Heavy flavour quark production in hadronic collisions may be subdivided into three classes depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
 
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
@@ -312,19 +318,23 @@ Gluon splitting (GSP): no heavy quarks participate in the hard subprocess in thi
 
 Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown in Fig.~\ref{fig:qcd_diagrams}.
 
+%
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.32\textwidth,viewport=0 880 1500 1600,clip]{FIGS/bb_diagrams.jpg}
+\includegraphics[width=0.32\textwidth,viewport=1600 0 3100 820,clip]{FIGS/bb_diagrams.jpg}
+\includegraphics[width=0.32\textwidth,viewport=0 0 1500 820,clip]{FIGS/bb_diagrams.jpg}
+\caption{Representative diagrams of the three channels contributing to QCD $b$-quark production up to NLO. The flavour creation channel (left) is the only one present at LO. At NLO, two new channels open up, referred to as gluon splitting (center) and  flavour excitation (right).}
+\label{fig:qcd_diagrams}
+\end{figure}
+%
+
 The definition above is not strict, but can be used as a basis for the understanding of the characteristics of heavy flavour quark production.
 
 
-
-{\em The measurement of the inclusive $b$-jet spectrum}
-
-
-\begin{figure}[tp]
-\centering
-\includegraphics[height=0.7\textwidth,viewport=300 410 530 690,clip]{FIGS/bjets_qcd.pdf}
-  \caption{Top: $K$-factor for inclusive $b$-jet spectrum taken from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$   jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central rapidity region ($|y| <0.7$). Middle: scale dependence obtained by simultaneously varying the renormalisation and factorisation scales by a factor two around $\pt$, the transverse momentum of the hardest jet in the event. Bottom: breakdown of the Herwig \cite{Herwig} inclusive $b$-jet spectrum into the three major underlying channels, flavor creation (FCR) flavor excitation (FEX) and gluon splitting (GSP).}
-  \label{fig:bjets_qcd}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%{\em The measurement of the inclusive $b$-jet spectrum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The simplest and most fundamental measurement of heavy-quark jet production is
 the inclusive heavy-quark jet spectrum, which is dominated by pure QCD contributions. 
@@ -339,80 +349,91 @@ Studies of QCD bottom production are important in their own right because of the
 %b. Initial-state (FEX) collinear logarithms can be resummed if one uses a b-quark PDF
 A review of the origin of these uncertainties is presented by Banfi, Salam and Zanderighi in reference~\cite{Salam.AccurateHQ}.  They arise from the poor convergence of the perturbative series, as evidenced by a large value of the $K$-factor, the ratio of the next-to-leading order (NLO) to the leading order (LO) cross section, in the $\pt$ range covered by the LHC.  This is illustrated in Fig.~\ref{fig:bjets_qcd}.  The observed $K$ values (6 to 10) indicate that the NLO result cannot be an accurate approximation to the full result. It is for this reason that the scale dependence (middle panel in Fig.~\ref{fig:bjets_qcd}) is large. 
 
+\begin{figure}[tp]
+\centering
+\includegraphics[height=0.7\textwidth,viewport=300 410 530 690,clip]{FIGS/bjets_qcd.pdf}
+  \caption{Top: $K$-factor for inclusive $b$-jet spectrum taken from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$   jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central rapidity region ($|y| <0.7$). Middle: scale dependence obtained by simultaneously varying the renormalisation and factorisation scales by a factor two around $\pt$, the transverse momentum of the hardest jet in the event. Bottom: breakdown of the Herwig \cite{Herwig} inclusive $b$-jet spectrum into the three major underlying channels, flavor creation (FCR) flavor excitation (FEX) and gluon splitting (GSP).}
+  \label{fig:bjets_qcd}
+\end{figure}
+
 The fact that the perturbative series is very poorly convergent is related to the different channels for heavy quark production. 
-While at LO only the FCR channel is present, at NLO the FEX and GSP channels open up.  %often referred to as ``flavour excitation'' (FEX) and ``gluon splitting'' (GSP), 
+While at LO only the FCR channel is present, at NLO the FEX and GSP channels open up\footnote{It is sometimes stated that it makes no sense, beyond LO, to separately discuss the different channels, for example because diagrams for separate channels interfere. However, each channel is associated with a different structure of logarithmic enhancements, $\ln^n (\pt / m_b )$, and so there is distinct physical meaning associated with each channel.}.  %often referred to as ``flavour excitation'' (FEX) and ``gluon splitting'' (GSP), 
  In the gluon splitting process, one of the final-state light partons (at NLO always a gluon) splits collinearly into a $b\bar{b}$ pair that a clustering algorithm can classify within the same jet. A jet containing both $b$ and $\bar{b}$ is considered to be just a $b$-jet in standard definitions.
 
-NLO effects are included approximately in LO parton showering models, such as {\sc Herwig} or {\sc Pythia}. The various channels can be approximately separated in a parton shower Monte Carlo generator such as these, where one can determine the underlying hard process from the event record.  Their relative contributions to the total $b$-jet spectrum are shown in the bottom panel of Fig.~\ref{fig:bjets_qcd}. It is found that the LO channel has a much smaller contribution than the FEX and the GSP channels, which
-receive strong enhancement from collinear logarithms~\cite{GSP}, going as $\as^2 (\as \ln(\pt/\Mb))^n$ for flavour excitation~\cite{Altarelli1977298} 
-and $\as^2 \cdot \as^n \ln^{2n-1}(\pt/\Mb)$ for gluon splitting ($n\ge 1$). %~\cite{bmult}
-
-
+The various channels can be approximately separated in a parton shower Monte Carlo generator such as {\sc Herwig} or {\sc Pythia}. These MC generators include NLO effects, and 
+%these,  where 
+one can determine the underlying hard process from the event record.  Their relative contributions to the total $b$-jet spectrum are shown in the bottom panel of Fig.~\ref{fig:bjets_qcd}. It is found that the LO channel has a much smaller contribution than the FEX and the GSP channels, which
+receive strong enhancement from collinear logarithms, %~\cite{GSP} 
+going as $\alpha_s^2 (\alpha_s \ln( \pt / m_b))^n$ for flavour excitation~\cite{Altarelli1977298} 
+and $\alpha_s^2 \cdot \alpha_s^n \ln^{2n-1}(\pt/m_b)$ for gluon splitting ($n\ge 1$)~\cite{Seymour1995163}.
+%Also http://arxiv.org/abs/hep-ph/0308284 and http://arxiv.org/abs/hep-ph/0404242
 
 Ref.~\cite{Salam.AccurateHQ} proposes a new observable to free the heavy-flavour spectrum calculation from collinear logarithms, and improve the accuracy of the theoretical prediction,
 %for improving the accuracy of the prediction of the heavy-flavour spectrum 
-by not including in the production cross-section the contribution from double $b$-hadron jets. Final-state logarithms are removed by employing a recently developed jet reconstruction scheme, the flavour-$k_t$ algorithm~\cite{flavorkt}, which maintains the correspondence between partonic flavour and jet flavour. Specifically, jets containing a $b$-quark and a $b$-antiquark, which in a parton shower MC generator are produced $\sim95\%$ of the time by the GSP channel, are labeled in an IR-safe way as light jets and removed from the $b$-jet spectrum.
+by not including in the production cross-section the contribution from double $b$ jets. Final-state logarithms are removed by employing a recently developed jet reconstruction scheme, the flavour-$k_t$ algorithm~\cite{flavorkt}, which maintains the correspondence between partonic flavour and jet flavour. Specifically, jets containing a $b$-quark and a $b$-antiquark, which in a parton shower MC generator are produced $\sim95\%$ of the time by the GSP channel, are labeled in an IR-safe way as light jets and removed from the $b$-jet spectrum.
 The initial-state (FEX) collinear logarithms can be resummed by using a $b$-quark parton distribution functions.
 With this algorithm the $K$-factor for the differential heavy-jet spectrum cross-section is shown not to exceed a value of $K=1.4$, with a factor of four reduction in the theoretical (scale variation) uncertainties.
-%
-\begin{figure}[h!]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%{\em Rejection of background in Standard Model analyses and beyond-SM searches}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Succesfully identifying jets with two $b$-hadrons, the products of the $b$-quark or $b$-antiquark hadronization, 
+%Efficient tagging of merged $b$-jets 
+can also provide an important handle to understand, estimate and/or reject $b$-tagged backgrounds to SM and new physics searches at the LHC.
+
+%Within the Standard Model (SM) a range of QCD production channels exists for heavy-quark jets, either via pure QCD production or in association with heavy bosons ($W, Z, H$). These channels are expected to produce a mixture of single-$B$ and double $b$-hadron jets. On the other hand, 
+%These are expected to produce essentially single-$B$ jets. The ability to distinguish double- from single-$B$ jets is thus of wide application. 
+SM physics analyses that rely on the presence of single $b$-jets in the final state, such as top quark physics, either in the $t\bar{t}$ or the single top channels, and associated Higgs production: $WH\rightarrow\ell\nu b\bar{b}$ and $ZH\rightarrow\nu\nu b\bar{b}$),  suffer from  %backgrounds that can be in part removed by a merged $b$-jet tagger. 
+the reducible background from QCD, which can produce double $b$-hadron jets as discussed above, and the irreducible background due to $W$ bosons produced in association with $b$-quarks.
+Figure~\ref{fig:Wplusb} shows the two diagramas %leading order processes 
+for $W+b$ production. %that give rise to $W$ bosons with at least one $b$-jet. 
+While at LO only single $b$-jets are present, at NLO jets containing two $b$-hadrons are expected due to the contribution of a diagram containing a $gb\bar{b}$ vertex. The $b$-quark pair is produced at small angles and can be often reconstructed as one merged jet.
+%In the first process, which can be thought of as a higher order correction to $W$ + jets production, the $b$ quark pair is produced at small angles by gluonsplitting and can often be reconstructed as a merged jet.
+\begin{figure}[hp]
 \centering
-\includegraphics[width=0.32\textwidth,viewport=0 880 1500 1600,clip]{FIGS/bb_diagrams.jpg}
-\includegraphics[width=0.32\textwidth,viewport=1600 0 3100 820,clip]{FIGS/bb_diagrams.jpg}
-\includegraphics[width=0.32\textwidth,viewport=0 0 1500 820,clip]{FIGS/bb_diagrams.jpg}
-\caption{Representative diagrams of the three channels contributing to QCD $b$-quark production up to NLO. The flavour creation channel (left) is the only one present at LO. At NLO, two new channels open up, referred to as gluon splitting (center) and  flavour excitation (right).}
-\label{fig:qcd_diagrams}
+\includegraphics[width=0.6\textwidth]{FIGS/Wbb_diagram.jpg}
+\caption{Feynman diagrams for $W$ production in association with $b$ quarks.}
+\label{fig:Wplusb}
 \end{figure}
-%
 
-{\em Rejection of background in Standard Model analyses and beyond-SM searches}
+The relevance of double $b$-hadron jets is supported by NLO calculations of the production of $W$ bosons and two jets with at least one $b$ quark at the LHC for jet $\pt > 25$ GeV, and $|\eta| < 2.5$~\cite{Campbell:2006} indicate that the cross section for $W(b\bar{b})j$ is almost a factor of two higher than $Wb\bar{b}$, and about a third of $Wbj$, where  $W(b\bar{b})j$ denotes the case in which the two $b$ quarks are merged into the same jet. 
 
-Efficient tagging of merged $b$-jets can provide an important handle to understand, estimate and/or reject $b$-tagged backgrounds to SM and new physics searches at the LHC.
-
-
-%Within the Standard Model (SM) a range of QCD production channels exists for heavy-quark jets, either via pure QCD production or in association with heavy bosons ($W, Z, H$). These channels are expected to produce a mixture of single-$B$ and double $b$-hadron jets. On the other hand, $b$-quarks enter in many collider searches, notably because they are produced in the decays of various SM particles, \eg top quarks, the $Z$ boson and the Higgs boson (if light), and of numerous particles appearing in proposed extensions of the SM. These are expected to produce essentially single-$B$ jets. The ability to distinguish double- from single-$B$ jets is thus of wide application. 
-
-SM physics analyses that rely on the presence of single $b$-jets in the final state, such as top quark physics (either in the $t\bar{t}$ or the single top channels) or associated Higgs production ($WH\rightarrow\ell\nu b\bar{b}$ and $ZH\rightarrow\nu\nu b\bar{b}$),  suffer from backgrounds that can be in part removed by a merged $b$-jet tagger. These are the reducible background from QCD, which can produce double $b$-hadron jets as discussed in the previous subsection, and the irreducible background due to $W$ bosons plus $b$-jets. 
-While at LO only single $b$-jets are present in $W+b$ production, at NLO jets containing two $b$-hadrons are expected due to the contribution of diagrams containing a $gb\bar{b}$ vertex.
-%One of the leading order diagrams in $W$ + $b$-jets corresponds to $W+g$ followed by $g\to b\bar{b}$ with the $b$-pair produced at small angles and reconstructed as a merged jet. 
-The relevance of merged $b$-jets in this channel is supported by NLO calculations of the production of $W$ bosons and two jets with at least one $b$-quark at the LHC~\cite{Campbell:2006}. For jets with $\pt > 25$ GeV, and $|\eta| < 2.5$, they indicate that the cross section for $W(b\bar{b})j$ is almost a factor of two higher than $Wb\bar{b}$, where $(b\bar{b})$ denotes the case in which the two $b$-quarks are merged into the same jet. 
-
-Jets containing a single $b$-quark or antiquark
-%Single $b$-jets 
-also enter in many BSM collider searches, notably because $b$-quarks are produced in the decays both of heavy SM particles (top quarks, the $Z$ boson and the Higgs boson), and of particles appearing in proposed extensions of the SM. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to close-by $b\bar{b}$ pairs.
-
+Jets containing a single $b$-quark or antiquark %Single $b$-jets 
+also enter in many BSM collider searches, notably because $b$-quarks are produced in the decays both of heavy SM particles (top quarks, the $Z$ boson and the Higgs boson), and of particles appearing in proposed extensions of the SM.  %The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to close-by $b\bar{b}$ pairs.
 %New physics searches with $b$-quarks in the final state also benefit from rejection of QCD and $W+b$ backgrounds which have $b$-jets arising from gluon splitting. 
-% TOM % An example is the search for supersymmetry in the framework of generic $R$-parity conserving models~\cite{ATLAS-CONF-2011-098}. The superpartners of quarks and gluons could be copiously produced via the strong interaction at the LHC. The partners of the right- and left-handed quarks, \~{q}$_{L}$ and  \~{q}$_{R}$, can mix to form two mass eigenstates and, since mixing is proportional to the corresponding fermion masses, it becomes more important for the third generation producing sbottom and stop significantly lighter than the other squarks. In this model, thus, sbottom and stop production is expected to dominate. As they chain decay to $b$-quarks and the lightest supersymmetric particle, the signature for this channel is \met\ + (single) $b$-jets. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to merged $b$-jets.
-%
-%New physics searches with $b$-quarks in the final state also benefit from rejection of QCD and $W+b$ backgrounds which have $b$-jets arising from gluon splitting. An example is the search for supersymmetry in the \met\ + $b$-jets channel~\cite{ATLAS-CONF-2011-098}. Within the framework of a generic $R$-parity conserving models, the superpartners of quarks and gluons are expected to be copiously produced via the strong interaction at the LHC. The partners of the right- and left-handed quarks can mix to form two mass eigenstates and, since mixing is proportional to the corresponding fermion masses, it becomes most important for the third generation producing sbottom ($b_1$) and stop ($t_1$) with masses significantly lighter than those of the other squarks. In this model, thus, sbottom and stop production is expected to dominate, and they chain decay to $b$-quarks and the lightest supersymmetric particle, with a \met\ + $b$-jets signature.
-%
-% TOM % \\[5mm]
-% TOM % {\em Study of jet substructure and boosted objects}
-% TOM % 
-% TOM % At the LHC, many of the particles considered to be heavy at previous accelerators will be frequently produced with a transverse momentum greatly exceeding their rest mass, like the electro-weak gauge bosons $W^\pm$ and $Z$, the top quark, the Higgs boson (or bosons) and possibly other new particles in the same mass range. These boosted objects, produced either by recoil against other energetic objects or from decays of even heavier BSM particles, upon decay can give rise to a highly collimated topology too close to be resolved by standard jet algorithms. For theses cases, sophisticated tools have been developed in the last years~\cite{boost2010,boost2010b} to analyse the substructure of the ensuing jet and reveal its heavy-particle origin.
-% TOM % 
-% TOM % The analysis of double $b$-hadron jets is an ideal testbed for studying jet substructure in data, as it provides a large supply of boosted, merged jets. Within the framework of a  %LO 
-% TOM % parton-shower Monte Carlo generator, double $b$-hadron jets largely originate from gluon splitting into two $b$-quarks whose angular separation is comparable or smaller than the size parameter of the jet algorithm. For instance, for a dijet QCD sample generated with {\sc Pythia6} (see details in section~\ref{sec:Simulation}), the fraction of merged $b$-jets from gluon splitting is 94\% (97\%) for jets with $\pt=60$~GeV ($\pt=300$~GeV) reconstructed with the anti-$k_t$ algoritm and size parameter $R=0.4$. The understanding of the substructure of these jets is also important as they are themselves the background to boosted object searches, like $Z\rightarrow b\bar{b}$ or $H\rightarrow b \bar{b}$.  
-%In particular, it has recently been suggested~\cite{Butterworth:2008iy} that $WH$ and $ZH$ production can become potential discovery and analysis channels by restricting one's attention to the $\sim5$\% of events in which the vector and Higgs bosons have large transverse momentum, ${\pt}_H\gtrsim200$ GeV. Understanding the much more common QCD events with $b\bar{b}$ jets will be essential before attempting to measure these rare final states.
+ An example is the search for supersymmetry in the framework of generic $R$-parity conserving models~\cite{ATLAS-CONF-2011-098}. The superpartners of quarks and gluons could be copiously produced via the strong interaction at the LHC. The partners of the right- and left-handed quarks, \~{q}$_{L}$ and  \~{q}$_{R}$, can mix to form two mass eigenstates and, since mixing is proportional to the corresponding fermion masses, it becomes more important for the third generation producing sbottom and stop significantly lighter than the other squarks. In this model, thus, sbottom and stop production is expected to dominate. As they chain decay to $b$-quarks and the lightest supersymmetric particle, the signature for this channel is missing transverse energy %\met\ 
+plus (single) $b$-jets. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to  to close-by $b\bar{b}$ pairs. %merged $b$-jets.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% {\em Study of jet substructure and boosted objects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+   The study of $b\bar{b}$ jets from gluon splitting is an ideal testbed for exploring jet substructure in data, as it provides a large supply of boosted, merged jets. Furthermore, understanding $g\rightarrow b \bar{b}$ jets is important as they are themselves the background to boosted object searches, like $Z\rightarrow b\bar{b}$ or $H\rightarrow b \bar{b}$.  %In particular, it has recently been suggested~\cite{Butterworth:2008iy} that $WH$ and $ZH$ production become potential discovery and analysis channels by restricting one’s attention to the $\sim5$\% of events in which the vector and Higgs bosons have large transverse momentum, ${\pt}_H\gtrsim200$ GeV. 
+Understanding the much more common QCD events with double $b$-hadron jets will be essential before attempting to measure more rare final states.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Gluon splitting fraction in hadronic Z decays (SLD, DELPHI)
+\subsubsection{Gluon splitting Measurements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5%
 
 
 The average multiplicity of $b\bar{b}$ pairs from gluons in hadronic $Z^0$ decays was first measured by DELPHI experiment at LEP. The analysis was performed by looking for secondary vertex production in 4-jet events. The average rate was found to be (0.21$\pm$0.11(stat.)$\pm$0.09(syst.))\%~\cite{Abreu:1997nf}.
 
-The rate of gluon splitting into bottom quarks, $g \rightarrow b\bar{b}$, was also measured by the Stanford Linear Collider (SLC) Large Detector (SLD), in hadronic $Z^0$ decays collected from 1996 to 1998~\cite{Abe:1999vw}. Following a similar procedure, the rate per hadronic event was found to be (3.7$\pm$0.71(stat.)$\pm$0.66(syst.))$\times$10$^{-3}$. %In order to improve singal/background ratio, topological information was used. A cut on $cos\theta$ between the two most energetic jets, jets 1 and 2 is performed to remove $b\bar{b}$ background with one $b$-jet splitting into two giving rise to two very collinear vertex axis.  Secondly, the variable $|cos\alpha_{1234}|$, where $alpha_{1234}$ is the angle between the plan formed by jets 1 and 2 and the plane formed by jets 3 and 4, is used to supress the $b\bar{b}$ background. This variable is useful to separate $g\rightarrowb\bar{b}$ events because the radiated virtual gluon in the process $Z^0 \rightarrow q\bar{q}g $ is polarized in the plane of the three-parton event, and this is reflected in the subsequent splitting, by strongly favoring $g\rightarrowb\bar{b}$ emission out of this plane.
+The rate of gluon splitting into bottom quarks, $g \rightarrow b\bar{b}$, was also measured by the Stanford Linear Collider (SLC) Large Detector (SLD), in hadronic $Z^0$ decays collected from 1996 to 1998~\cite{Abe:1999vw}. Following a similar procedure, the rate per hadronic event was found to be (3.7$\pm$0.71(stat.)$\pm$0.66(syst.))$\times$10$^{-3}$. In order to improve singal/background ratio, topological information was used. % A cut on $cos\theta$ between the two most energetic jets, jets 1 and 2 is performed to remove $b\bar{b}$ background with one $b$-jet splitting into two giving rise to two very collinear vertex axis.  Secondly, the variable $|cos\alpha_{1234}|$, where $alpha_{1234}$ is the angle between the plane formed by jets 1 and 2 and the plane formed by jets 3 and 4, is used to supress the $b\bar{b}$ background. This variable is useful to separate $g\rightarrowb\bar{b}$ events because the radiated virtual gluon in the process $Z^0 \rightarrow q\bar{q}g $ is polarized in the plane of the three-parton event, and this is reflected in the subsequent splitting, by strongly favoring $g\rightarrowb\bar{b}$ emission out of this plane.
 
- The probability for secondary production of a bottom quark pair from a gluon per hadronic $Z^0$ decay in $e^+e^-$ annihilation, 
-\begin{equation} 
-g_{b\bar{b}} = \frac{N(Z^0 \rightarrow q\bar{q}g, g \rightarrow b\bar{b} )}{N(Z^0 \rightarrow hadrons)}
-\end{equation} 
-is expected to be very small, since the gluon must have sufficient energy to produce the bottom quark pair. 
+ %The probability for secondary production of a bottom quark pair from a gluon per hadronic $Z^0$ decay in $e^+e^-$ annihilation, 
+%\begin{equation} 
+%g_{b\bar{b}} = \frac{N(Z^0 \rightarrow q\bar{q}g, g \rightarrow b\bar{b} )}{N(Z^0 \rightarrow hadrons)}
+%\end{equation} 
+%is expected to be very small, since the gluon must have sufficient energy to produce the bottom quark pair. 
 
- At the Tevatron, on the other hand, 50\% of the $b$-hadrons are due to the gluon splitting process, and a larger fraction is expected to contribute at the LHC.
+
+
+%%% ATLAS Flavor composition analyses 
+%%% !!!!!!!
+
