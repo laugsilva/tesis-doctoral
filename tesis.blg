@@ -15,46 +15,45 @@ while executing---line 944 of file unsrt.bst
 Warning--empty journal in Abbiendi:2007aa
 Warning--empty journal in Aad:2012np
 Warning--empty journal in boost2010b
-Warning--empty journal in Abe:1999vw
-You've used 55 entries,
+You've used 53 entries,
             1791 wiz_defined-function locations,
-            804 strings with 12265 characters,
-and the built_in function-call counts, 11930 in all, are:
-= -- 983
-> -- 620
+            792 strings with 11953 characters,
+and the built_in function-call counts, 11561 in all, are:
+= -- 951
+> -- 604
 < -- 1
-+ -- 230
-- -- 175
-* -- 875
-:= -- 2031
-add.period$ -- 165
-call.type$ -- 55
-change.case$ -- 55
++ -- 224
+- -- 171
+* -- 857
+:= -- 1969
+add.period$ -- 159
+call.type$ -- 53
+change.case$ -- 53
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 482
-empty$ -- 1128
-format.name$ -- 175
-if$ -- 2563
+cite$ -- 61
+duplicate$ -- 465
+empty$ -- 1091
+format.name$ -- 171
+if$ -- 2481
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 54
-newline$ -- 278
-num.names$ -- 54
-pop$ -- 93
+int.to.str$ -- 53
+missing$ -- 52
+newline$ -- 268
+num.names$ -- 52
+pop$ -- 87
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 186
+skip$ -- 178
 stack$ -- 0
-substring$ -- 801
-swap$ -- 47
+substring$ -- 780
+swap$ -- 46
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 9
-while$ -- 103
-width$ -- 57
-write$ -- 589
+warning$ -- 8
+while$ -- 100
+width$ -- 55
+write$ -- 569
 (There was 1 error message)
