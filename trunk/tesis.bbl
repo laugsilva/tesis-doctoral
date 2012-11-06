@@ -70,7 +70,7 @@ M.~Gell-Mann.
 
 \bibitem{Zweig2}
 G.~Zweig.
-\newblock {AN SU(3) MODEL FOR STRONG INTERACTION SYMMETRY AND ITS BREAKING. 2.}
+\newblock {An SU(3) model for strong interaction symmetry and its breaking}.
 \newblock 1964.
 
 \bibitem{Fritzsch1973365}
@@ -297,17 +297,5 @@ John~M. Campbell, R.Keith Ellis, F.~Maltoni, and S.~Willenbrock.
   final states with missing transverse momentum, $b$-jets and no leptons with
   the ATLAS detector}.
 \newblock {\em ATLAS-CONF-2011-098}, 2011.
-
-\bibitem{Abreu:1997nf}
-P.~Abreu et~al.
-\newblock {Measurement of the multiplicity of gluons splitting to bottom quark
-  pairs in hadronic Z0 decays}.
-\newblock {\em Phys.Lett.}, B405:202--214, 1997.
-
-\bibitem{Abe:1999vw}
-Toshinori Abe et~al.
-\newblock {A Preliminary measurement of the gluon splitting rate into b anti-b
-  pairs in hadronic Z0 decays}.
-\newblock 1999.
 
 \end{thebibliography}
