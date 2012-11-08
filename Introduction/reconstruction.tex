@@ -4,19 +4,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\chapter{Event reconstruction and $\bm b$-Tagging }\label{ch:reco}
+\chapter{Event reconstruction and \emph{\textbf{b}}-Tagging }\label{ch:reco}
 
 
-The event reconstruction software, which in ATLAS is implemented in the software framework ATHENA, process the events starting from the raw data obtained from the various sub-detectors (energy deposits and hits), processing them in many different stages and finally interpreting them as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
+The event reconstruction software, which in ATLAS is implemented in the software framework {\sc athena}~\cite{Calafiura2005zz}, process the events starting from the raw data obtained from the various sub-detectors (energy deposits and hits), processing them in many different stages and finally interpreting them as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
 In this chapter the reconstruction of these objects is briefly described together with the algorithms for the identification of $b$-quark jets.  These algorithms are mainly based on the reconstruction of the primary interaction vertex, on the reconstruction of charged particles in the Inner Detector and on the reconstruction of jets in the calorimeter.   
 
 %------------------------------------------------------------------------
 \section{Jet reconstruction and calibration}\label{sec:ObjSelection}
 %------------------------------------------------------------------------
 
-Hadronic jets used for ATLAS analyses are reconstructed by a jet algorithm, starting from the energy depositions of electromagnetic and hadronic showers in the calorimeters.  Two different size parameters are used: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. The default jet algorithm is the anti-$k_t$ algorithm, described in the previous chapter. Due to the expected level of pile-up in the LHC, the primary factor that influenced the selection of this algorithm was the effect of multiple simultaneous interactions on the reconstruction of jets. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is highly susceptible to this effect. On the contrary, the anti-$kt$ algorithm is the most stable after the introduction of pile-up~\cite{Asquith:1311867}.  
+Hadronic jets used for ATLAS analyses are reconstructed by a jet algorithm, starting from the energy depositions of electromagnetic and hadronic showers in the calorimeters.  Two different size parameters are used: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. The default jet algorithm is the anti-$k_t$ algorithm, described in Chapter~\ref{ch:theory}. Due to the expected level of pile-up in the LHC, the primary factor that influenced the selection of this algorithm was the effect of multiple simultaneous interactions on the reconstruction of jets. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is highly susceptible to this effect. On the contrary, the anti-$k_t$ algorithm is the most stable after the introduction of pile-up~\cite{Asquith:1311867}.  
 
-The input to calorimeter jet reconstruction can be calorimeter towers or topological cell clusters. Charged particle tracks reconstructed in the Inner Detectors are also used to define jets. These constituents have the further advantage of being insensitive to pile-up and they provide a stable reference for systematic studies. The jet inputs are combined as massless four-momentum objects in order to form the final four-momentum of the jet, which allows for a well-defined jet mass~\cite{Busato:1271710}. In the case of track-jets, the track four-momentum is constructed assuming the $\pi$ meson mass for each track.
+The input to calorimeter jet reconstruction can be calorimeter towers or topological cell clusters. Charged particle tracks reconstructed in the Inner Detectors are also used to define jets. The latter have the further advantage of being insensitive to pile-up and they provide a stable reference for systematic studies. The jet inputs are combined as massless four-momentum objects in order to form the final four-momentum of the jet, which allows for a well-defined jet mass~\cite{Busato:1271710}. In the case of track-jets, the track four-momentum is constructed assuming the $\pi$ meson mass for each track.
 
 Calorimeter towers are static, $\Delta \eta \times \Delta \phi = 0.1 \times 0.1$, grid elements built directly from calorimeter cells. There are two types of calorimeter towers: with or without noise supression. The latter are called ``noise-suppressed'' towers and use only the cells with energies above a certain noise threshold.  The noise of a calorimeter cell is measured by recording calorimeter signals in periods where no beam is present in the acelerator.  The standard deviation $\sigma$ around the mean measured energy is interpreted as the noise of the cell, and dependes on the sampling layer in which the cell resides and the position in $\eta$.
 
@@ -133,7 +133,7 @@ In a complementary stage, a track search starts from segments reconstructed in t
 
 The final reconstructed track trajectory is usually defined at its closest point to the interaction region on the transverse plane by its impact parameters in the transverse plane and in the longitudinal direction, respectively called $d_0$ and $z_0$\footnote{Stricktly speaking the impact parameter is $|z_0|sin\theta$, where $\theta$ is the polar angle of the track.}, and by its momentum, typically expressed in azimuthal angle $\phi$, polar angle $\theta$ and inverse momentum $1/p$. 
 
- The track reconstruction efficiency is defined as the fraction of primary particles with $\pt> 400$~MeV and $|\eta|<2.5$ matched to a reconstructed track. The reconstruction efficiency for primary tracks with transverse momentum above 1~GeV and central $\eta$ is above 80\%, reaching values below 70\% for tracks at the edge of the Inner Detector acceptance. %REFERENCIAS?
+ The track reconstruction efficiency is defined as the fraction of primary particles with $\pt> 400$~MeV and $|\eta|<2.5$ matched to a reconstructed track. The reconstruction efficiency for primary tracks with transverse momentum above 1~GeV and central $\eta$ is above 80\%, going down to values below 70\% for tracks at the edge of the Inner Detector acceptance~\cite{chargemultiplicity}. %REFERENCIAS?
 The dense environment of a jet decreases the track reconstruction efficiency and increases the fake rate. This is caused by the ocurrence of shared hits between different tracks, which makes the pattern recognition and track fitting tasks more difficult.
 
 The relative transverse momentum scale and resolution of tracks is defined as the Gaussian mean and width of
@@ -163,7 +163,7 @@ must be reconstructed from at least five tracks. The choice of the primary verte
 the primary vertex from a pile-up event may be mistakenly used as the signal vertex, or a fake primary vertex built from tracks from two different vertices may be reconstructed. The current strategy is to choose the primary vertex candidate that maximizes $\sum_{tracks} \pt^2$.
 
 %-------------------------------------------------------------------
-\section{ ${\bm b}$-jet Tagging}\label{sec:btagging}
+\section{ $b$-jet Tagging}\label{sec:btagging}
 %------------------------------------------------------------------------
 
 %From Gbb note
@@ -172,7 +172,7 @@ the primary vertex from a pile-up event may be mistakenly used as the signal ver
 
 The ability to identify jets originating from $bottom$-quarks (denoted as $b$-tagging in the following) is important for the high-$\pt$ physics program of a general-purpose experiment at the LHC such as ATLAS since many interesting physics processes contain $b$-quarks in the final state, while the most abundant backgrounds contain mostly up, down and strange quark or gluon jets or, in a smaller fraction of cases, charm quark jets. The aim of $b$-tagging is therefore to identify the $b$-quark jets with high efficiency, while rejecting most of the background contamination from jets originating from the fragmentation of light ($u$, $d$, and $s$) quarks, gluons and $c$-quarks.
 
-A $b$-quark, once produced, fragments necessarily into a $b$-flavoured hadron, $b$-hadron in the following. In most of the cases ($\approx$87\%), first an excited $b$-hadron, like a $B^{*}$ or a $B^{**}$, which decays inmediately, strongly or electromagnetically, into a ground state $b$-hadron plus one or more further particles; while in the remaining cases, a ground state $b$-hadron is produced directly.  One is only interested in the transition from a $b$-quark into the final state $b$-hadron, since the typical timescale for electromagnetic or strong interactions is so small that the  $B^{*}$, $B^{**}$ decay vertices are not significantly displaced with respect to the primary vertex.   In most of the cases ($\approx$ 91\%) a $B$-meson is produced out of the fragmentation of an original $b$-quark (40\% $B^+$, 40\% $B^0$ and 11\% $B^0_s$). The rest are $b$-baryons.
+A $b$-quark, once produced, fragments necessarily into a $b$-flavoured hadron, $b$-hadron in the following. In most of the cases ($\approx$87\%), first an excited $b$-hadron, like a $B^{*}$ or a $B^{**}$, which decays inmediately, strongly or electromagnetically, into a ground state $b$-hadron plus one or more further particles; while in the remaining cases, a ground state $b$-hadron is produced directly.  One is only interested in the transition from a $b$-quark into the final state $b$-hadron, since the typical timescale for electromagnetic or strong interactions is so small that the  $B^{*}$, $B^{**}$ decay vertices are not significantly displaced with respect to the primary vertex.   In most of the cases ($\approx$ 91\%) a $b$-meson is produced out of the fragmentation of an original $b$-quark (40\% $B^+$, 40\% $B^0$ and 11\% $B^0_s$). The rest are $b$-baryons.
 
 Due to the $b$-quark fragmentation function being very hard, most of the original $b$-quark energy is transmitted to the final $b$-hadron. This fraction is for example 70\% for $b$-quarks with a momentum of $\approx$45~GeV. This property can be exploited during $b$-tagging, since the fragmentation for light quarks into light hadrons or $c$-quarks into $c$-hadrons is softer.
 
@@ -240,7 +240,7 @@ On the basis that the decay point of the $b$-hadron must lie along its flight pa
 The lifetime sign can be defined in three-dimensions, acording to the variables $\vec{\pt}_{jet}$, $\vec{\pt}_{trk}$ and $\vec{\Delta r}_{IP} = \vec{r}_{IP} = \vec{r}_{PV}$, the three-dimensional impact parameter of the track with respect to the primary vertex:
 %
 \begin{equation}
-sign_{3D} = sign([\vec{p}_{trk} \times \vec{p}_{jet}]\cdot[\vec{p}_{trk} \times \vec{\Delta r}_{IP} ]).
+\mbox{sign}_{3D} = \mbox{sign}([\vec{p}_{trk} \times \vec{p}_{jet}]\cdot[\vec{p}_{trk} \times \vec{\Delta r}_{IP} ]).
 \end{equation}
 %
 The computation of the lifetime sign assumes that the jet direction reproduces, up to a good approximation, the $b$-hadron direction. Under this assumption and up to resolution effects both on the jet direction and on the impact parameter and momentum of the track, the lifetime sign of tracks originating from $b$-hadron decays is positive.
@@ -328,7 +328,9 @@ The combination of the JetFitter and the IP3D algorithms can be performed using 
 Figure~\ref{fig:btaggingperformance} compares the performance for the various ATLAS $b$-tagging algorithms described in a simulated sample of $t\bar{t}$ events.
 It can be seen that by combining the vertexing techniques and the impact parameter information, the IP3D+SV1 and IP3D+JetFitter algorithms can reach very high tagging efficiencies.
 
- The performance of a $b$-tagging algorithm is usally  measured in terms of the \emph{light-jet rejection} obtained for a given \emph{$b$-jet tagging efficiency}.  Curves are obtained by varying continuously the \emph{operating point} of each tagger, i.e. the cut on its output discriminating variable (weight).  The $b$-jet tagging efficiency,  $\epsilon_b$,  is the fraction of jets labeled as $b$-jets that are properly tagged while the light-jet rejection, defined as $1/\epsilon_{light}$, is the reciprocal of the fraction of jets that are labeled as light jets and are actually tagged incorrectly by the algorithm. The labeling procedure used for $b$-tagging is based on the flavor of true quarks: a jet is labeled as a $b$-quark jet if a $b$-quark is found in a cone of size $\Delta R = 0.3$ around the jet direction.  The various labeling hypotheses are tried in this order: $b$ quark, $c$ quark and $\tau$ lepton. When none of these hypotheses are satisfied, the jet
+ The performance of a $b$-tagging algorithm is usally  measured in terms of the \emph{light-jet rejection} obtained for a given \emph{$b$-jet tagging efficiency}.  Curves are obtained by varying continuously the \emph{operating point} of each tagger, i.e. the cut on its output discriminating variable (weight).  The $b$-jet tagging efficiency,  $\epsilon_b$,  is the fraction of jets labeled as $b$-jets that are properly tagged while the light-jet rejection, defined as $1/\epsilon_{light}$, is the reciprocal of the fraction of jets that are labeled as light jets and are actually tagged incorrectly by the algorithm. 
+
+The labeling procedure used for $b$-tagging is based on the flavor of true quarks: a jet is labeled as a $b$-quark jet if a $b$-quark is found in a cone of size $\Delta R = 0.3$ around the jet direction.  The various labeling hypotheses are tried in this order: $b$ quark, $c$ quark and $\tau$ lepton. When none of these hypotheses are satisfied, the jet
 is labeled as a light jet. No attempt is made to distinguish light jets originating from gluons from those originating from quarks at this stage.
 
 \begin{figure}[htbp]
@@ -345,7 +347,7 @@ is labeled as a light jet. No attempt is made to distinguish light jets originat
 \subsubsection{The MV1 tagging algorithm}
 
 
-The \textbf{MV1} $b$-tagging algorithm is a combined algorithm based on a neural network using the output weights of the JetFitter+IP3D combination, IP3D and SV1 algorithms as input.  For being the best performing algorithm (better light rejection for the same signal efficiency) it is the recomended tagger for 2011 and 2012 analyses. This is the $b$-tagging algorithm used in this thesis.
+The \textbf{MV1} $b$-tagging algorithm is a combined algorithm based on a neural network using the output weights of the IP3D and SV1 algorithms and the JetFitter+IP3D combination as input.  For being the best performing algorithm (better light rejection for the same signal efficiency) it is the recomended tagger for 2011 and 2012 analyses. This is the $b$-tagging algorithm used in this thesis.
 
 %%PLOT OF THE MV1 WEIGHT???????????????
 %%TABLA DE LOS SUPPORTED OPERATING POINTS????????
