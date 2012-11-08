@@ -6,7 +6,7 @@
 
 After the evaluation of the best discriminating variables, %between double $b$-hadron jets and genuine $b$-quark jets, 
 a tagging algorithm, capable of efficiently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches.  
-This analysis exploits a multivariate likelihood approach for the separation of the single $b$-jet signal and its background (the merged $b$-jets). Compare to single variable or 2-dimensional cuts analyses, the sensitivity can be largely improved because several variables are combined to build a likelihood classifier with high separation power.   Variables considered for the likelihood discriminant include the charged particle multiplicity as well as variables that account fot the angular spread of the $b$-jets considered. 
+This analysis exploits a multivariate likelihood approach for the separation of the single $b$-jet signal and its background (the merged $b$-jets). Compare to single variable or 2-dimensional cuts analyses, the sensitivity can be largely improved because several variables are combined to build a likelihood classifier with high separation power.   Variables considered for the likelihood discriminant include the charged particle multiplicity as well as variables that account for the angular spread of the $b$-jets considered. 
 
 %------------------------------------------------------------------------
 \section{Multivariate methods}\label{sec:mvamethods}
@@ -40,7 +40,7 @@ where
 L_{S(B)}(i) = \prod^{n_{var}}_{k=1}  p_{S(B),k}(x_k(i)),
 \end{equation}
 %
-and where $p_{s(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
+and where $p_{S(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
 
 The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
 by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
@@ -390,7 +390,7 @@ The different contributions to the systematic uncertainty on the merged $b$-jet 
 \end{table}
 
 
-Although the likelihood training was peformed in EM+JES calibrated jets, the performance of the tagger was also evaluated in jets calibrated with the LC+JES scheme, described in Section~\ref{sec:calib}.  A small degradation of the performance is observed, comparable with the statistical uncerstainties. A comparison of the performances is shown in Fig.~\ref{fig:LCJES} for two $\pt$ bins, representative of the jet momentum range covered. 
+Although the likelihood training was peformed in EM+JES calibrated jets, the performance of the tagger was also evaluated in jets calibrated with the LC+JES scheme, described in Section~\ref{sec:calib}.  A small degradation of the performance is observed, but comparable with the statistical uncerstainties. A comparison of the performances is shown in Fig.~\ref{fig:LCJES} for two $\pt$ bins, representative of the jet momentum range covered. 
 
 \begin{figure}[tp]
 \centering
@@ -463,7 +463,7 @@ The reason for the systematic difference observed between the performances of {\
 \section{Validation of the MVA output in data}\label{sec:MVAvalidation}
 %------------------------------------------------------------------------
 
-In Section~\ref{gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simluation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
+In Section~\ref{sec:gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simluation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
 
 The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood output for different bins of jet $\pt$. The agreement is excellent.
 

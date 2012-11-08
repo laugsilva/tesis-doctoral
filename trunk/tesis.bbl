@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{Frixione:1996nh}
 S.~Frixione and M.L. Mangano.
@@ -46,7 +46,7 @@ F.~J. Dyson.
 M~Banner et~al.
 \newblock Observation of single isolated electrons of high transverse momentum
   in events with missing transverse energy at the cern pp collider.
-\newblock {\em Physics Letters B}, 122(5–6):476 -- 485, 1983.
+\newblock {\em Physics Letters B}, 122(5-6):476--485, 1983.
 
 \bibitem{Arnison1983398}
 G.~Arnison et~al.
@@ -143,7 +143,7 @@ M~Bahr, S.~Gieseke, M.A. Gigg, A.~Grellscheid, K.~Hamilton, O.~Latunde-Dada,
 \bibitem{LUNDMODEL}
 B.~Andersson, G.~Gustafson, G.~Ingelman, and T.~Sjostrand.
 \newblock Parton fragmentation and string dynamics.
-\newblock {\em Physics Reports}, 97(2–3):31 -- 145, 1983.
+\newblock {\em Physics Reports}, 97(2-3):31--145, 1983.
 
 \bibitem{Pythia_partonshowers}
 R.~Corke and T.~Sj\"ostrand.
@@ -284,8 +284,8 @@ G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.
 
 \bibitem{Seymour1995163}
 M.H. Seymour.
-\newblock Heavy quark pair multiplicity in e+e− events.
-\newblock {\em Nuclear Physics B}, 436(1–2):163 -- 183, 1995.
+\newblock Heavy quark pair multiplicity in e$^+$e$^−$ events.
+\newblock {\em Nuclear Physics B}, 436(1-2):163--183, 1995.
 
 \bibitem{flavorkt}
 Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
@@ -305,14 +305,14 @@ John~M. Campbell, R.Keith Ellis, F.~Maltoni, and S.~Willenbrock.
 \newblock {\em ATLAS-CONF-2011-098}, 2011.
 
 \bibitem{Breskin:1244506}
-Amos Breskin and Rüdiger Voss.
+Amos Breskin and Rudiger Voss.
 \newblock {\em The CERN Large Hadron Collider: Accelerator and Experiments}.
 \newblock CERN, Geneva, 2009.
 
 \bibitem{ATLAS-CONF-2011-116}
 {ATLAS Collaboration}.
-\newblock {Luminosity Determination in pp Collisions at sqrt(s) = 7 TeV using
-  the ATLAS Detector in 2011}.
+\newblock {Luminosity Determination in pp Collisions at $\sqrt(s) =$~7 TeV
+  using the ATLAS Detector in 2011}.
 \newblock {\em ATLAS-CONF-2011-116}, Aug 2011.
 
 \bibitem{vanderMeer:296752}
@@ -485,5 +485,106 @@ V~Kostyukhin.
 \newblock {Measurement of the Mistag Rate with 5 fb$^{−1}$ of Data Collected
   by the ATLAS Detector}.
 \newblock {\em ATLAS-CONF-2012-040}, 2012.
+
+\bibitem{ATLAS-CONF-2012-020}
+{ATLAS Collaboration}.
+\newblock {Selection of jets produced in proton-proton collisions with the
+  ATLAS detector using 2011 data}.
+\newblock {\em ATLAS-CONF-2012-020}, 2012.
+
+\bibitem{ATLAS-CONF-2011-053}
+{ATLAS Collaboration}.
+\newblock Light-quark and gluon jets in atlas.
+\newblock {\em ATLAS-CONF-2011-053}, 2011.
+
+\bibitem{Buskulic1996353}
+D.~Buskulic et~al.
+\newblock Quark and gluon jet properties in symmetric three-jet events.
+\newblock {\em Physics Letters B}, 384(1-4):353--364, 1996.
+
+\bibitem{PhysRevD.79.074012}
+Leandro~G. Almeida, Seung~J. Lee, Gilad Perez, Ilmo Sung, and Joseph Virzi.
+\newblock Top quark jets at the lhc.
+\newblock {\em Phys. Rev. D}, 79:074012, Apr 2009.
+
+\bibitem{ATLAS-CONF-2011-073}
+{ATLAS Collaboration}.
+\newblock {Measurement of Jet Mass and Substructure for Inclusive Jetsin
+  $\sqrt{s} =$ 7~TeV pp Collisions with the ATLAS Experiment}.
+\newblock {\em ATLAS-CONF-2011-073}, May 2011.
+
+\bibitem{Snihur1999494}
+R.~Snihur.
+\newblock Subjet multiplicity in quark and gluon jets at d0.
+\newblock {\em Nuclear Physics B - Proceedings Supplements}, 79(1–3):494 --
+  496, 1999.
+\newblock Proceedings of the 7th International Workshop on Deep Inelastic
+  Scattering and QCD.
+
+\bibitem{Abdesselam:2010pt}
+A.~Abdesselam, E.~Bergeaas Kuutmann, U.~Bitenc, G.~Brooijmans, J.~Butterworth,
+  et~al.
+\newblock {Boosted objects: A Probe of beyond the Standard Model physics}.
+\newblock {\em Eur.Phys.J.}, C71:1661, 2011.
+
+\bibitem{pruning}
+Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
+\newblock Techniques for improved heavy particle searches with jet
+  substructure.
+\newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
+
+\bibitem{exclusivekt}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock Successive combination jet algorithm for hadron collisions.
+\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
+
+\bibitem{CatchmentArea}
+G.P.~Salam M.~Cacciari and Gregory Soyez.
+\newblock {The Catchment Area of Jets}.
+\newblock {\em JHEP}, 0804:42, 2008.
+
+\bibitem{nsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock {Identifying Boosted Objects with N-subjettiness}.
+\newblock {\em JHEP}, 1103:015:026, 2011.
+
+\bibitem{njetti}
+Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
+\newblock $n$ jettiness: An inclusive event shape to veto jets.
+\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
+
+\bibitem{PhysRevLett.105.022001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Seeing in color: Jet superstructure.
+\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
+
+\bibitem{KDE}
+{Scott, D.W.}
+\newblock {Multivariate Density Estimation: Theory, Practice, and
+  Visualization}.
+\newblock {\em {John Wiley and Sons, Inc. United States}}, 1992.
+
+\bibitem{QUINLAN1999497}
+{Quinlan, J.R.}
+\newblock Simplifying decision trees.
+\newblock {\em International Journal of Human-Computer Studies}, 51(2):{497 --
+  510}, 1999.
+
+\bibitem{Hocker:2007ht}
+A.~Hoecker, P.~Speckmayer, J.~Stelzer, J.~Therhaag, E.~Von~Toerne, and H.~Voss.
+\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
+\newblock {\em PoS}, ACAT:040, 2007.
+
+\bibitem{JESUncertainty}
+Georges Aad et~al.
+\newblock {Jet energy measurement with the ATLAS detector in proton-proton
+  collisions at $\sqrt{s} = 7$~TeV}.
+\newblock 2011.
+
+\bibitem{JER2011}
+G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
+\newblock Jet energy resolution from in-situ techniques with the atlas detector
+  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
+\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
 
 \end{thebibliography}

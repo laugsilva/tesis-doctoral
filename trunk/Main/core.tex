@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\chapter{Kinematic differences between single and double $B$-hadron jets}
-\chapter{Double $b$-hadron jet identification}\label{ch:kinematic}
+\chapter{Double \emph{\textbf{b}}-hadron jet identification}\label{ch:kinematic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this chapter we focus on the understanding of the internal structure of $b$-jets containing two $b$-hadrons by investigating the differences between these and single $b$-quark jets.  These differences %between single and double $b$-hadron or ``merged'' jets 
@@ -39,7 +39,7 @@ The event selection and quality criterion used to extract, from the data and Mon
 \item
 \textbf{Primary jet algorithm}. The jet algorithm selected for the analysis was the ATLAS default anti-$k_t$ algorithm~\cite{antiktalg}, with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.
 \item
-\textbf{Jet calibration}.  The EM+JES calibration scheme, described in Section\ref{sec:calib}, was used to correct the jet energies for inhomogeneities and for the non-compensating nature of the calorimeter.
+\textbf{Jet calibration}.  The EM+JES calibration scheme, described in Section~\ref{sec:calib}, was used to correct the jet energies for inhomogeneities and for the non-compensating nature of the calorimeter.
 \item
 \textbf{Jet quality}.  Several quality criteria are applied to eliminate ``fake'' jets that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
 \item
@@ -94,7 +94,7 @@ where $j$ is a jet in the event and $b_{1/2}$ are the $b$-hadrons in the event. 
 
 
 %------------------------------------------------------------------------
-\section{Kinematic differences between single and double $b$-hadron jets}\label{sec:gbbKine}
+\section{Kinematic differences between single and double \emph{\textbf{b}}-hadron jets}\label{sec:gbbKine}
 %------------------------------------------------------------------------ 
 
 The differences between genuine $b$-quark jets and double $b$-hadron jets, that in QCD originate mainly from gluon splitting, are expected to arise from the two-subjet structure of merged jets. In this section we present the study of a set of jet shape and substructure variables for the discrimination between single and merged $b$-jets. These variables are  built from jet constituents either at calorimeter level (topological clusters) or tracks associated to the jet.
@@ -156,7 +156,7 @@ It was observed that reducing the $\pt$ cut of the tracks degrades the discrimin
 \end{figure}
 
 
-In order to evaluate the effect of using displaced tracks originating from the $b$-hadrons decays a preliminary study was done using a sample of dijet events generated with {\sc Pythia} and with no detector simulation. For this study jets were reconstructed using all stable particles in the event, clustered with the anti-$k_t$ algorithm. The association of charged particles was done in the same way as with the full ATLAS simulation. Distributions of the track multiplicity built using all charged particles and using only charged particles coming from the $b$-hadron decay (``$b$-tracks'') are illustrated in  in Fig.~\ref{fig:ntrksinglemergedPYTHIA}. A better discrimination between single and merged $b$-jets is observed when using $b$-tracks only. The result obtained with {\sc Pythia} suggests that a potential improvement in single-merged separation can be achieved by circumscribing the track selection, in the full simluation, to tracks with large impact parameter significance. % ($> 2.5$).
+In order to evaluate the effect of using displaced tracks originating from the $b$-hadrons decays a preliminary study was done using a sample of dijet events generated with {\sc Pythia} and with no detector simulation (standalone). For this study jets were reconstructed using all stable particles in the event, clustered with the anti-$k_t$ algorithm. The association of charged particles was done in the same way as with the full ATLAS simulation. Distributions of the track multiplicity built using all charged particles and using only charged particles coming from the $b$-hadron decay (``$b$-tracks'') are illustrated in  in Fig.~\ref{fig:ntrksinglemergedPYTHIA}. A better discrimination between single and merged $b$-jets is observed when using $b$-tracks only. The result obtained with {\sc Pythia} standalone suggests that a potential improvement in single-merged separation can be achieved by circumscribing the track selection, in the full simluation, to tracks with large impact parameter significance. % ($> 2.5$).
  A comparison of track multiplicity distributions using all tracks and distributions built with displaced tracks is shown in Fig.~\ref{fig:displacedntrk}. No improvement is obtained by using displaced tracks ($|d_0|/\sigma(d_0)> 2.5$). The potential sensitivity achieved by enriching the sample in tracks associated to the $b$-hadron is counterbalanced by the lower number of associated tracks.
 %\vspace{3 mm}
 
@@ -207,12 +207,14 @@ In order to evaluate the effect of using displaced tracks originating from the $
 %
 where $N$ is the total number of calorimeter, track or particle constituents.  %This observable is also highly correlated to the mass of the jet.
 
-This observable has been extensively used to discriminate between gluon initiated and light quark initiated jets, see for instance~\cite{PhysRevLett.107.172001} and~\cite{ATLAS-CONF-2011-053}. Gluon jets are seen to be broader than quark jets. In the case of jets originating from $b$-quarks, these resemble gluon jets more closely than quarks jets~\cite{Buskulic1996353}: due to the longer decay chain of $b$-hadrons the angular spread is larger for a $b$-jet than a light-quark jet. In order to explore how merged jets, originating from a gluon splitting into a $b\bar{b}$ pair, compare to single $b$-quark jets and pure gluon jets,  a standalone {\sc Pythia} analysis was performed.  Figure~\ref{fig:trkwidthsinglemergedPYTHIAgluon} illustrates the result; $b$-jets containing two $b$-hadrons present a greater angular width relative to single $b$-jets and gluon initiated jets. The latter, in turn, look broader than single for medium $\pt$ jets. This behavior is somehow expected in the LHC's higher $\pt$ jets because the QCD shower produces more particles resulting in broader gluon jets,  whereas the particle multiplicity is relatively fixed in the $b$-hadron decay.
+This observable has been extensively used to discriminate between gluon initiated and light quark initiated jets, see for instance~\cite{PhysRevLett.107.172001} and~\cite{ATLAS-CONF-2011-053}. Gluon jets are seen to be broader than quark jets. In the case of jets originating from $b$-quarks, these resemble gluon jets more closely than quarks jets~\cite{Buskulic1996353}: due to the longer decay chain of $b$-hadrons the angular spread is larger for a $b$-jet than a light-quark jet. 
+
+In order to explore how merged jets, originating from a gluon splitting into a $b\bar{b}$ pair, compare to single $b$-quark jets and pure gluon jets,  a standalone {\sc Pythia} analysis was performed.  Figure~\ref{fig:trkwidthsinglemergedPYTHIAgluon} illustrates the result; $b$-jets containing two $b$-hadrons present a greater angular width relative to single $b$-jets and gluon initiated jets. The latter, in turn, look broader than single for medium $\pt$ jets. This behavior is somehow expected in the LHC's higher $\pt$ jets because the QCD shower produces more particles resulting in broader gluon jets,  whereas the particle multiplicity is relatively fixed in the $b$-hadron decay.
 
 Distributions for the track-jet width with full ATLAS simulation are shown in Fig.~\ref{fig:trkwidthsinglemerged}. In this case % for which 
 the sum in equation~\ref{eqn:trackjetwidth} runs over the $N$ tracks associated to the jet, using the same criteria as for the jet track multiplicity. As expected, merged $b$-jets are wider than single $b$-jets. 
 
-{\sc Pythia} standalone samples were also to used evaluate the potential gain in discrimination obtained by utilising all stable particles in the event to build the observable, as opposed to using the charged particles only.  A 10\% %HACER CALCULO!!!!
+{\sc Pythia} standalone samples were also used to evaluate the potential gain in discrimination obtained by utilising all stable particles in the event to build the observable, as opposed to using the charged particles only.  A 10\% %HACER CALCULO!!!!
  improvement in merged $b$-jet rejection (for a 50\% efficiency in selecting single $b$-jets) was achieved.
 
 In full simulation, the jet width can be measured in terms of calorimeter variables by replacing tracks by topological clusters in the sum.  Although it offers good separation, this variable is more sensitive to the amount of pile-up in the event than its track-based counterpart. This is illustrated in Fig.~\ref{fig:trkwidthpileup}, which shows the distribution of calorimeter width and track-jet width for single $b$-jets in events with low and high number of primary vertices (NPV) in a low $\pt$ region where the effect of pile-up is more important. 
@@ -497,7 +499,7 @@ In order to better understand the behavior observed for this variable, further s
  In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored a set of comparison plots is presented. Figures~\ref{fig:datamcinputvars} and~\ref{fig:datamcinputvars2} show distributions of jet track multiplicity, track-jet width, $\Delta R$ between the axes of the two $k_t$ subjets, $\max\{\Delta R(trk,trk)\}$ and $\tau_2$ in two different $\pt$ bins for $b$-tagged jets in dijet Monte Carlo and data events passing selection described in Section~\ref{sec:EventSelection}.
 The distributions are normalized to unit area to allow for shape comparisons. There is a good agreement between data and simulation. 
 
-It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects, although the agreement evaluated in $b$-jets selected with a looser cut of MV1 tagger as well as with another $b$-tagging algorithm is still ver good, suggesting that this compasation is not likely to occur in samples sufficiently enriched in $b$-jets.
+It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects, although the agreement evaluated in $b$-jets selected with a looser cut of MV1 tagger as well as with another $b$-tagging algorithm is still very good, suggesting that this compasation is not likely to occur in samples sufficiently enriched in $b$-jets.
 
 
 \begin{figure}[tp]
