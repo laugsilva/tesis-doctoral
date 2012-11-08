@@ -1,6 +1,9 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
+A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Introduction/theory.aux
+A level-1 auxiliary file: Introduction/lhc_atlas.aux
+A level-1 auxiliary file: Introduction/reconstruction.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 Warning--I didn't find a database entry for "1126-6708-2008-07-07"
@@ -15,45 +18,47 @@ while executing---line 944 of file unsrt.bst
 Warning--empty journal in Abbiendi:2007aa
 Warning--empty journal in Aad:2012np
 Warning--empty journal in boost2010b
-You've used 53 entries,
+Warning--empty journal in ATLAS
+Warning--empty journal in Calafiura2005zz
+You've used 84 entries,
             1791 wiz_defined-function locations,
-            792 strings with 11953 characters,
-and the built_in function-call counts, 11561 in all, are:
-= -- 951
-> -- 604
-< -- 1
-+ -- 224
-- -- 171
-* -- 857
-:= -- 1969
-add.period$ -- 159
-call.type$ -- 53
-change.case$ -- 53
+            939 strings with 17249 characters,
+and the built_in function-call counts, 16907 in all, are:
+= -- 1395
+> -- 842
+< -- 2
++ -- 321
+- -- 237
+* -- 1125
+:= -- 2908
+add.period$ -- 253
+call.type$ -- 84
+change.case$ -- 83
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 465
-empty$ -- 1091
-format.name$ -- 171
-if$ -- 2481
+cite$ -- 94
+duplicate$ -- 734
+empty$ -- 1621
+format.name$ -- 237
+if$ -- 3646
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 52
-newline$ -- 268
-num.names$ -- 52
-pop$ -- 87
+int.to.str$ -- 84
+missing$ -- 84
+newline$ -- 424
+num.names$ -- 83
+pop$ -- 168
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 178
+skip$ -- 288
 stack$ -- 0
-substring$ -- 780
-swap$ -- 46
-text.length$ -- 1
+substring$ -- 979
+swap$ -- 84
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 8
-while$ -- 100
-width$ -- 55
-write$ -- 569
+warning$ -- 10
+while$ -- 142
+width$ -- 86
+write$ -- 890
 (There was 1 error message)
