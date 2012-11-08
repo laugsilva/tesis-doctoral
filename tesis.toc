@@ -38,3 +38,17 @@
 \contentsline {subsubsection}{Algorithm combinations and performance}{82}
 \contentsline {subsubsection}{The MV1 tagging algorithm}{84}
 \contentsline {subsection}{\numberline {4.4.2}$b$-tagging calibration}{84}
+\contentsline {chapter}{\numberline {5}Double \emph {\textbf {b}}-hadron jet identification}{87}
+\contentsline {section}{\numberline {5.1}Data Analysis}{87}
+\contentsline {subsection}{\numberline {5.1.1}Event selection}{88}
+\contentsline {subsection}{\numberline {5.1.2}Track selection}{91}
+\contentsline {section}{\numberline {5.2}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{92}
+\contentsline {section}{\numberline {5.3}Validation of the jet variables in data}{109}
+\contentsline {chapter}{\numberline {6}The Multivariate Analysis}{112}
+\contentsline {section}{\numberline {6.1}Multivariate methods}{112}
+\contentsline {subsubsection}{Training and testing the MVA methods}{115}
+\contentsline {section}{\numberline {6.2}Likelihood training and performance}{117}
+\contentsline {section}{\numberline {6.3}Systematic uncertainties}{120}
+\contentsline {section}{\numberline {6.4}Other Monte Carlo generators}{128}
+\contentsline {section}{\numberline {6.5}Validation of the MVA output in data}{129}
+\contentsline {chapter}{\numberline {7}Summary and conclusions}{133}
