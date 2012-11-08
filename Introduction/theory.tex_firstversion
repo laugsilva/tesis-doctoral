@@ -15,9 +15,7 @@ In this chapter a short overview of the theory of elementary particles and funda
 
 The Standard Model (SM) is a quantum field theory that describes the behavior of all experimentally-observed particles under the influence of the electromagnetic, weak and strong forces\footnote{In principle gravitational forces should also be included in the list of fundamental interactions but their impact is  fortunately negligible at the distance and energy scales usually considered in particle physics experiments.}. In this model, all forces of nature are the result of particle exchange. The force mediators interact on the particles of matter, and, in some cases, due to the non-Abelian character of the theory\footnote{The transformations of the symmetry group do not commute in the case of the QCD and weak groups.}, with each other.
 
-Elementary particles are categorized into two classes of particles: \emph{bosons} and \emph{fermions}. Bosons have integer spin and obey the Bose-Einstein statistics, whereas fermions have half-integer spin and follow Fermi-Dirac statistics.  Each elementary particle has a corresponding anti-particle, whose quantum numbers are opposite in sign.
-
-The fundamental building blocks of matter predicted by the SM are fermions with spin $1/2$:
+The fundamental building blocks of matter predicted by the theory are fermions with spin $1/2$:
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
@@ -33,7 +31,7 @@ and six quarks (and their antiparticles), organized in three families,
 
 \end{itemize}
 
-These particles are considered point-like, as there is no evidence of any internal structure of leptons or quarks to date. The six types of quarks are also known as the six quark flavors. Collectively, the $u$ (up), $d$ (down), and $s$ (strange) quarks are frequently referred to as the light quarks. The heaviest quark of the Standard Model, the quark $t$ (top), was the last to be found~\cite{PhysRevLett.74.2626,PhysRevLett.74.2422}.  The electric charge\footnote{The electric charge is given in units of the elementary charge, $e$, which is the charge carried by the positron.} $Q$ of quarks adopts fractional values, i.e. $+2/3$ for \emph{up-type} quarks and $-1/3$ for \emph{down-type} quarks, yet they are only observed as the integer charge combinations of three quarks (baryons) or a quark and an antiquark (mesons).
+The six types of quarks are also known as the six quark flavors. Collectively, the $u$ (up), $d$ (down), and $s$ (strange) quarks are frequently referred to as the light quarks. The heaviest quark of the Standard Model, the quark $t$ (top), was the last to be found~\cite{PhysRevLett.74.2626,PhysRevLett.74.2422}. These particles are considered point-like, as there is no evidence of any internal structure of leptons or quarks to date.
 
 In addition, the model contains the vector bosons which are the carriers of the the fundamental forces:
 
@@ -47,13 +45,14 @@ eight gauge bosons for the strong interactions, called gluons.
 \end{itemize}
 
 
-The Standard Model is based on a symmetry group of the kind $SU(3)_C \times SU(2)_I \times U(1)_Y$, where $SU(3)_C$ describes de $colour$ symmetry of strong interactions, $SU(2)_I$ describes the $weak isospin I$ for the unified electroweak interactions and $U(1)_Y$, the invariance under $hypercharge Y$ transformations. The twelve gaube bosons are associated with the generators of the symmetry group. The exact symmetry of the SM predicts massless particles.  One possible mechanism for breaking this symmetry is the existence of a massive scalar Higgs field that has non-zero vacuum expectation value~\cite{Higgs1964132}. Very recently, a Higgs-like particle was discovered by ATLAS and CMS experiments at the LHC~\cite{ATLASHiggs}. This scalar boson completes the table of Standard Model particles. %http://cms.web.cern.ch/news/observation-new-particle-mass-125-gev
-%Gauge invariance, defined as the invariance of the theory under local transformations, is a fundamental property of the SM.  In the theory, electromagnetism (Quantum electrodynamics), the weak interaction, and the strong nuclear force (Quantum Chromodynamics) are all derived from imposing Lorentz invariant symmetries onto the interacting fields. 
+The exact symmetry of the SM predicts massless particles.  One possible mechanism for breaking this symmetry is the existence of a massive scalar Higgs field that has non-zero vacuum expectation value~\cite{Higgs1964132}. Very recently, a Higgs-like particle was discovered by ATLAS and CMS experiments at the LHC~\cite{ATLASHiggs}. This scalar boson completes the table of Standard Model particles. %http://cms.web.cern.ch/news/observation-new-particle-mass-125-gev
 
 
-Quantum electrodynamics (QED) is the relativistic quantum field theory based on the symmetry group $U(1)$ that describes the interaction of charged particles via the exchange of one (or more) photon. %It is formulated by imposing a $U(1)$ or ``rotational symmetry'' onto the simplest field lagrangian that obeys the correct equation of motion. 
 
-The full theory of QED was developed by Feynman, Schwinger and Tomonaga throughout the 1940s~\cite{PhysRev.75.486}.  The structure of the SM is, in a sense, a generalisation of this theory, extending the gauge invariance of electrodynamics to a larger set of conserved currents and charges. 
+
+Gauge invariance, defined as the invariance of the theory under local transformations, is a fundamental property of the SM.  In the theory, electromagnetism (Quantum electrodynamics), the weak interaction, and the strong nuclear force (Quantum Chromodynamics) are all derived from imposing Lorentz invariant symmetries onto the interacting fields. 
+
+The theory of Quantum electrodynamics (QED) describes the interaction of charged particles via the exchange of one (or more) photon. It is formulated by imposing a $U(1)$ or rotational symmetry onto the simplest field lagrangian that obeys the correct equation of motion. The full theory of QED was developed by Richard Feynman and others throughout the 1940s~\cite{PhysRev.75.486}.  The structure of the SM is in a sense a generalisation of this theory, extending the gauge invariance of electrodynamics to a larger set of conserved currents and charges. 
 
 The symmetry associated to the weak interaction is the $SU(2)$ symmetry, which corresponds to rotations of 2-dimensional vectors. The latter combines with the $U(1)$ symmetry from QED to produce additional gauge fields. The gauge fields merge with the gauge field from QED to form $W^+$, $W^-$ and $Z^0$ bosons that are the carriers of the weak force.  Unlike the photon, which is massless, the  $W^{\pm}$ and $Z^0$ bosons have masses close to 80 and 90 GeV, respectively~\cite{Banner1983476,Arnison1983398}. Due to these large masses, the weak force has a short range and is feeble at low energies.  At masses higher than the $Z$ mass, the electromagnetic and weak forces unify into a single force, known as the electroweak force~\cite{Glashow1961579,Salam1964168,PhysRevLett.19.1264}.
 
