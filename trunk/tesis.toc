@@ -1,54 +1,54 @@
 \contentsline {chapter}{\numberline {1}Introduction}{3}
 \contentsline {chapter}{\numberline {2}Theoretical framework}{7}
 \contentsline {section}{\numberline {2.1}The Standard Model}{7}
-\contentsline {section}{\numberline {2.2}Perturbative QCD}{10}
-\contentsline {section}{\numberline {2.3}Jet physics}{13}
-\contentsline {subsection}{\numberline {2.3.1}Monte Carlo tools}{14}
-\contentsline {subsubsection}{Pythia}{16}
-\contentsline {subsubsection}{Herwig$++$}{17}
-\contentsline {subsection}{\numberline {2.3.2}Jet algorithms}{18}
-\contentsline {subsection}{\numberline {2.3.3}Jet substructure}{22}
-\contentsline {section}{\numberline {2.4}Heavy flavor jet production}{24}
-\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{31}
-\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{31}
-\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{35}
-\contentsline {section}{\numberline {3.2}The ATLAS Detector}{38}
-\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{41}
-\contentsline {subsubsection}{The Pixel detector}{41}
-\contentsline {subsubsection}{The SCT}{43}
-\contentsline {subsubsection}{The TRT}{43}
-\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{44}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{46}
-\contentsline {subsubsection}{The hadronic calorimeter}{48}
-\contentsline {subsection}{\numberline {3.2.3}The Muon System}{51}
-\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{53}
-\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{53}
-\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{55}
-\contentsline {chapter}{\numberline {4}Event reconstruction and \emph {\textbf {b}}-Tagging }{58}
-\contentsline {section}{\numberline {4.1}Jet reconstruction and calibration}{59}
-\contentsline {subsubsection}{Jet calibration}{60}
-\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{65}
-\contentsline {section}{\numberline {4.2}Reconstruction of charged particle tracks}{69}
-\contentsline {section}{\numberline {4.3}Vertex reconstruction}{71}
-\contentsline {section}{\numberline {4.4} $b$-jet Tagging}{72}
-\contentsline {subsubsection}{Association of tracks to jets}{74}
-\contentsline {subsection}{\numberline {4.4.1}$b$-tagging algorithms}{75}
-\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{76}
-\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{79}
-\contentsline {subsubsection}{Algorithm combinations and performance}{82}
-\contentsline {subsubsection}{The MV1 tagging algorithm}{84}
-\contentsline {subsection}{\numberline {4.4.2}$b$-tagging calibration}{84}
-\contentsline {chapter}{\numberline {5}Double \emph {\textbf {b}}-hadron jet identification}{87}
-\contentsline {section}{\numberline {5.1}Data Analysis}{87}
-\contentsline {subsection}{\numberline {5.1.1}Event selection}{88}
-\contentsline {subsection}{\numberline {5.1.2}Track selection}{91}
-\contentsline {section}{\numberline {5.2}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{92}
-\contentsline {section}{\numberline {5.3}Validation of the jet variables in data}{109}
-\contentsline {chapter}{\numberline {6}The Multivariate Analysis}{112}
-\contentsline {section}{\numberline {6.1}Multivariate methods}{112}
-\contentsline {subsubsection}{Training and testing the MVA methods}{115}
-\contentsline {section}{\numberline {6.2}Likelihood training and performance}{117}
-\contentsline {section}{\numberline {6.3}Systematic uncertainties}{120}
-\contentsline {section}{\numberline {6.4}Other Monte Carlo generators}{128}
-\contentsline {section}{\numberline {6.5}Validation of the MVA output in data}{129}
-\contentsline {chapter}{\numberline {7}Summary and conclusions}{133}
+\contentsline {section}{\numberline {2.2}Perturbative QCD}{13}
+\contentsline {section}{\numberline {2.3}Jet physics}{15}
+\contentsline {subsection}{\numberline {2.3.1}Monte Carlo tools}{16}
+\contentsline {subsubsection}{Pythia}{18}
+\contentsline {subsubsection}{Herwig$++$}{19}
+\contentsline {subsection}{\numberline {2.3.2}Jet algorithms}{20}
+\contentsline {subsection}{\numberline {2.3.3}Jet substructure}{25}
+\contentsline {section}{\numberline {2.4}Heavy flavor jet production}{26}
+\contentsline {chapter}{\numberline {3}The ATLAS detector at the LHC}{33}
+\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{33}
+\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{37}
+\contentsline {section}{\numberline {3.2}The ATLAS Detector}{40}
+\contentsline {subsection}{\numberline {3.2.1}Inner tracking system}{43}
+\contentsline {subsubsection}{The Pixel detector}{43}
+\contentsline {subsubsection}{The SCT}{45}
+\contentsline {subsubsection}{The TRT}{45}
+\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{46}
+\contentsline {subsubsection}{Liquid argon EM calorimeter}{48}
+\contentsline {subsubsection}{The hadronic calorimeter}{50}
+\contentsline {subsection}{\numberline {3.2.3}The Muon System}{53}
+\contentsline {subsection}{\numberline {3.2.4}Forward detectors}{55}
+\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition}{55}
+\contentsline {subsection}{\numberline {3.2.6}ATLAS Performance and Data quality}{57}
+\contentsline {chapter}{\numberline {4}Event reconstruction and \emph {\textbf {b}}-Tagging }{60}
+\contentsline {section}{\numberline {4.1}Jet reconstruction and calibration}{61}
+\contentsline {subsubsection}{Jet calibration}{62}
+\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{67}
+\contentsline {section}{\numberline {4.2}Reconstruction of charged particle tracks}{71}
+\contentsline {section}{\numberline {4.3}Vertex reconstruction}{73}
+\contentsline {section}{\numberline {4.4} $b$-jet Tagging}{74}
+\contentsline {subsubsection}{Association of tracks to jets}{76}
+\contentsline {subsection}{\numberline {4.4.1}$b$-tagging algorithms}{77}
+\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{78}
+\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{81}
+\contentsline {subsubsection}{Algorithm combinations and performance}{84}
+\contentsline {subsubsection}{The MV1 tagging algorithm}{86}
+\contentsline {subsection}{\numberline {4.4.2}$b$-tagging calibration}{86}
+\contentsline {chapter}{\numberline {5}Double \emph {\textbf {b}}-hadron jet identification}{89}
+\contentsline {section}{\numberline {5.1}Data Analysis}{89}
+\contentsline {subsection}{\numberline {5.1.1}Event selection}{90}
+\contentsline {subsection}{\numberline {5.1.2}Track selection}{93}
+\contentsline {section}{\numberline {5.2}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{94}
+\contentsline {section}{\numberline {5.3}Validation of the jet variables in data}{111}
+\contentsline {chapter}{\numberline {6}The Multivariate Analysis}{114}
+\contentsline {section}{\numberline {6.1}Multivariate methods}{114}
+\contentsline {subsubsection}{Training and testing the MVA methods}{117}
+\contentsline {section}{\numberline {6.2}Likelihood training and performance}{119}
+\contentsline {section}{\numberline {6.3}Systematic uncertainties}{122}
+\contentsline {section}{\numberline {6.4}Other Monte Carlo generators}{130}
+\contentsline {section}{\numberline {6.5}Validation of the MVA output in data}{131}
+\contentsline {chapter}{\numberline {7}Summary and conclusions}{135}

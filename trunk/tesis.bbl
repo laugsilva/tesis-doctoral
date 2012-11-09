@@ -42,17 +42,11 @@ F.~J. Dyson.
 \newblock The radiation theories of tomonaga, schwinger, and feynman.
 \newblock {\em Phys. Rev.}, 75:486--502, Feb 1949.
 
-\bibitem{Banner1983476}
-M~Banner et~al.
-\newblock Observation of single isolated electrons of high transverse momentum
-  in events with missing transverse energy at the cern pp collider.
-\newblock {\em Physics Letters B}, 122(5-6):476--485, 1983.
-
-\bibitem{Arnison1983398}
-G.~Arnison et~al.
-\newblock Experimental observation of lepton pairs of invariant mass around 95
-  gev/c2 at the cern sps collider.
-\newblock {\em Physics Letters B}, 126(5):398 -- 410, 1983.
+\bibitem{CKM}
+{Makoto Kobayashi and Toshihide Maskawa}.
+\newblock {$CP$-Violation in the Renormalizable Theory of Weak Interaction}.
+\newblock {\em {Progress of Theoretical Physics}}, {49}({2}):{652--657},
+  {1973}.
 
 \bibitem{Glashow1961579}
 Sheldon~L. Glashow.
@@ -68,6 +62,18 @@ A.~Salam and J.C. Ward.
 Steven Weinberg.
 \newblock A model of leptons.
 \newblock {\em Phys. Rev. Lett.}, 19:1264--1266, Nov 1967.
+
+\bibitem{Banner1983476}
+M~Banner et~al.
+\newblock Observation of single isolated electrons of high transverse momentum
+  in events with missing transverse energy at the cern pp collider.
+\newblock {\em Physics Letters B}, 122(5-6):476--485, 1983.
+
+\bibitem{Arnison1983398}
+G.~Arnison et~al.
+\newblock Experimental observation of lepton pairs of invariant mass around 95
+  gev/c2 at the cern sps collider.
+\newblock {\em Physics Letters B}, 126(5):398 -- 410, 1983.
 
 \bibitem{GellMann1964214}
 M.~Gell-Mann.
@@ -88,11 +94,6 @@ G.~Zweig.
 H.~Fritzsch, M.~Gell-Mann, and H.~Leutwyler.
 \newblock Advantages of the color octet gluon picture.
 \newblock {\em Physics Letters B}, 47(4):365 -- 368, 1973.
-
-\bibitem{PhysRevLett.23.1415}
-Richard~P. Feynman.
-\newblock Very high-energy collisions of hadrons.
-\newblock {\em Phys. Rev. Lett.}, 23:1415--1417, Dec 1969.
 
 \bibitem{Collins:1989gx}
 John~C. Collins, Davison~E. Soper, and George~F. Sterman.
@@ -189,6 +190,11 @@ G.P. Salam and G.~Soyez.
 Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
 \newblock {The anti-$k_t$ jet clustering algorithm}.
 \newblock {\em JHEP}, 04:063, 2008.
+
+\bibitem{CamAchem}
+{Yu.L. Dokshitzer and G.D. Leder and S. Moretti and B.R. Webber}.
+\newblock {Better jet clustering algorithms}.
+\newblock {\em {Journal of High Energy Physics}}, {1997}({08}):{001}, {1997}.
 
 \bibitem{JADE}
 W.~Bartel, L.~Becker, R.~Felst, D.~Haidt, G.~Knies, H.~Krehbiel,
