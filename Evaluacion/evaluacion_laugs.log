@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.17)  11 NOV 2012 16:44
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.17)  12 NOV 2012 00:22
 entering extended mode
  %&-line parsing enabled.
 **evaluacion_laugs.tex
@@ -72,115 +72,47 @@ LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 375.
 LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 377.
 LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 379.
 )
-
-! LaTeX Error: File `dfletter.cls' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cls)
-
-Enter file name: 
-! Undefined control sequence.
-l.10 \Email
-           {aia@df.uba.ar}
-? 
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 \Email{a
-             ia@df.uba.ar}
-? 
-(./evaluacion_laugs.aux)
-\openout1 = `evaluacion_laugs.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \begin{document}
-                     
-? 
-
-! LaTeX Error: Environment letter undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \begin{letter}
-                   {\ }
-? 
-! Undefined control sequence.
-l.23 \opening
-             {Sres. Miembros de la \\
-? 
-! Undefined control sequence.
-l.30 {\large
-             \bf Evaluaci\'on Acad\'emica - Lic.\ Mar\'ia Laura Gonz\'alez S...
-
-? 
+Compatibility mode: loading dfletter.sty rather than dfletter.cls.
+ (./dfletter.sty
+Document Style `dfletter' <29 Sep 97>. (Modified by J.P. Garrahan from `tanlett
+er' by R. De Luca.)
+\longindentation=\dimen105
+\indentedwidth=\dimen106
+\labelcount=\count83
+ en espaniol!
+) (/usr/share/texmf-texlive/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.3 <23 July 2005>
+\epsffilein=\read1
+\epsfframemargin=\dimen107
+\epsfframethickness=\dimen108
+\epsfrsize=\dimen109
+\epsftmp=\dimen110
+\epsftsize=\dimen111
+\epsfxsize=\dimen112
+\epsfysize=\dimen113
+\pspoints=\dimen114
+)
+(uba.ps
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 61.
+(Font)              <12> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 61.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 61.
+(Font)              <8> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 26.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Overfull \hbox (6.4213pt too wide) in paragraph at lines 86--87
-[]\OT1/cmr/m/n/10 ``Commissioning of the AT-LAS Muon Spec-trom-e-ter with Cos-m
-ic Rays'', AT-LAS Col-lab-o-ra-tion, Eur.Phys.J.
- []
+) [1
 
-
-! LaTeX Error: \begin{document} ended by \end{letter}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 \end{letter}
-                  
-? 
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 \end{document}
-                    
-? 
-[1] (./evaluacion_laugs.aux) ) 
+] [2] ) 
 Here is how much of TeX's memory you used:
- 191 strings out of 493849
- 2303 string characters out of 1152846
- 53808 words of memory out of 3000000
- 3532 multiletter control sequences out of 15000+50000
- 9298 words of font info for 35 fonts, out of 3000000 for 9000
+ 383 strings out of 493849
+ 4293 string characters out of 1152846
+ 53826 words of memory out of 3000000
+ 3709 multiletter control sequences out of 15000+50000
+ 14147 words of font info for 51 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 19i,4n,19p,239b,100s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,8n,21p,223b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on evaluacion_laugs.dvi (1 page, 5992 bytes).
+Output written on evaluacion_laugs.dvi (2 pages, 6976 bytes).
