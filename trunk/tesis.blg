@@ -9,10 +9,19 @@ A level-1 auxiliary file: Main/core_mva.aux
 A level-1 auxiliary file: Summary/summary.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
-Warning--I didn't find a database entry for "1126-6708-2008-07-07"
+I was expecting a `,' or a `}'---line 18 of file tesis.bib
+ :   pages = "
+ :            {3497-3509}",
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 47 of file tesis.bib
+ :   year = "
+ :           {1973}",
+I'm skipping whatever remains of this entry
 Warning--empty journal in ATLASHiggs
 Warning--empty journal in Zweig:1964jf
 Warning--empty journal in Zweig2
+Warning--empty year in PhysRevLett.30.1346
+Warning--empty year in PhysRevD.8.3497
 Warning--empty author in Pythia_MC11tune
 Warning--empty journal in Perugia
 Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
@@ -23,45 +32,45 @@ Warning--empty journal in boost2010b
 Warning--empty journal in ATLAS
 Warning--empty journal in Calafiura2005zz
 Warning--empty journal in JESUncertainty
-You've used 103 entries,
+You've used 111 entries,
             1791 wiz_defined-function locations,
-            1045 strings with 20064 characters,
-and the built_in function-call counts, 20631 in all, are:
-= -- 1705
-> -- 1014
+            1095 strings with 21162 characters,
+and the built_in function-call counts, 22338 in all, are:
+= -- 1864
+> -- 1053
 < -- 2
-+ -- 387
-- -- 284
-* -- 1376
-:= -- 3548
-add.period$ -- 311
-call.type$ -- 103
-change.case$ -- 102
++ -- 405
+- -- 294
+* -- 1499
+:= -- 3814
+add.period$ -- 335
+call.type$ -- 111
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 114
-duplicate$ -- 899
-empty$ -- 1989
-format.name$ -- 284
-if$ -- 4453
+cite$ -- 124
+duplicate$ -- 971
+empty$ -- 2177
+format.name$ -- 294
+if$ -- 4831
 int.to.chr$ -- 0
-int.to.str$ -- 103
-missing$ -- 103
-newline$ -- 520
-num.names$ -- 102
-pop$ -- 200
+int.to.str$ -- 111
+missing$ -- 112
+newline$ -- 560
+num.names$ -- 110
+pop$ -- 215
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 350
+skip$ -- 374
 stack$ -- 0
-substring$ -- 1192
-swap$ -- 102
+substring$ -- 1364
+swap$ -- 110
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 11
-while$ -- 174
-width$ -- 106
-write$ -- 1094
-(There was 1 error message)
+warning$ -- 13
+while$ -- 189
+width$ -- 114
+write$ -- 1180
+(There were 3 error messages)

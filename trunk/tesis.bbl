@@ -95,10 +95,47 @@ H.~Fritzsch, M.~Gell-Mann, and H.~Leutwyler.
 \newblock Advantages of the color octet gluon picture.
 \newblock {\em Physics Letters B}, 47(4):365 -- 368, 1973.
 
+\bibitem{PhysRevLett.23.1415}
+Richard~P. Feynman.
+\newblock Very high-energy collisions of hadrons.
+\newblock {\em Phys. Rev. Lett.}, 23:1415--1417, Dec 1969.
+
+\bibitem{PhysRevLett.30.1346}
+{Politzer, H. David}.
+\newblock {Reliable Perturbative Results for Strong Interactions?}
+\newblock {\em {Phys. Rev. Lett.}}, {30}:{1346--1349}, year =.
+
+\bibitem{PhysRevLett.30.1343}
+{Gross, David J. and Wilczek, Frank}.
+\newblock {Ultraviolet Behavior of Non-Abelian Gauge Theories}.
+\newblock {\em {Phys. Rev. Lett.}}, {30}:{1343--1346}, {Jun} {1973}.
+
 \bibitem{Collins:1989gx}
 John~C. Collins, Davison~E. Soper, and George~F. Sterman.
 \newblock {Factorization of Hard Processes in QCD}.
 \newblock {\em Adv.Ser.Direct.High Energy Phys.}, 5:1--91, 1988.
+
+\bibitem{tHooft1973455}
+G.~'t~Hooft.
+\newblock Dimensional regularization and the renormalization group.
+\newblock {\em Nuclear Physics B}, 61(0):455-- 468, 1973.
+
+\bibitem{PhysRevD.8.3497}
+{Weinberg, Steven}.
+\newblock {New Approach to the Renormalization Group}.
+\newblock {\em {Phys. Rev. D}}, {8}.
+
+\bibitem{LambdaQCD}
+{Ellis, R. K. and Stirling, W. J. and Webber, B. R.}
+\newblock {\em QCD and Collider Physics}.
+\newblock {Cambridge University Press}, Cambridge, 1996.
+
+\bibitem{0954-3899-30-5-R01}
+{Mrinal Dasgupta and Gavin P Salam}.
+\newblock {Event shapes in e + e − annihilation and deep inelastic
+  scattering}.
+\newblock {\em {Journal of Physics G: Nuclear and Particle Physics}},
+  {30}({5}):{R143}, {2004}.
 
 \bibitem{Altarelli1977298}
 G.~Altarelli and G.~Parisi.
@@ -171,6 +208,11 @@ Peter~Zeiler Skands.
 \newblock {Tuning Monte Carlo Generators: The Perugia Tunes}.
 \newblock {\em Phys. Rev. D}, 82:074018, 2010.
 
+\bibitem{1126-6708-2008-07-076}
+Manuel Bahr, Stefan Gieseke, and Michael~H. Seymour.
+\newblock Simulation of multiple partonic interactions in herwig++.
+\newblock {\em Journal of High Energy Physics}, 2008(07):076, 2008.
+
 \bibitem{Geant4}
 S.~Agostinelli et~al.
 \newblock Geant4 a simulation toolkit.
@@ -185,16 +227,6 @@ S.~Agostinelli et~al.
 G.P. Salam and G.~Soyez.
 \newblock A practical seedless infrared-safe cone jet algorithm.
 \newblock {\em Journal of High Energy Physics}, 2007(05):086, 2007.
-
-\bibitem{antiktalg}
-Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
-\newblock {The anti-$k_t$ jet clustering algorithm}.
-\newblock {\em JHEP}, 04:063, 2008.
-
-\bibitem{CamAchem}
-{Yu.L. Dokshitzer and G.D. Leder and S. Moretti and B.R. Webber}.
-\newblock {Better jet clustering algorithms}.
-\newblock {\em {Journal of High Energy Physics}}, {1997}({08}):{001}, {1997}.
 
 \bibitem{JADE}
 W.~Bartel, L.~Becker, R.~Felst, D.~Haidt, G.~Knies, H.~Krehbiel,
@@ -213,6 +245,21 @@ S.~Catani, Y.L. Dokshitzer, H.~Seymour, and B.R. Webber.
 \newblock {Longitudinally invariant K(t) clustering algorithms for hadron
   hadron collisions}.
 \newblock {\em Nucl.\ Phys.}, B406:187, 1993.
+
+\bibitem{CamAchem}
+{Yu.L. Dokshitzer and G.D. Leder and S. Moretti and B.R. Webber}.
+\newblock {Better jet clustering algorithms}.
+\newblock {\em {Journal of High Energy Physics}}, {1997}({08}):{001}, {1997}.
+
+\bibitem{antiktalg}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The anti-$k_t$ jet clustering algorithm}.
+\newblock {\em JHEP}, 04:063, 2008.
+
+\bibitem{CatchmentArea}
+G.P.~Salam M.~Cacciari and Gregory Soyez.
+\newblock {The Catchment Area of Jets}.
+\newblock {\em JHEP}, 0804:42, 2008.
 
 \bibitem{fastjet}
 M~Cacciari and G.P. Salam.
@@ -543,11 +590,6 @@ Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
 Stephen~D. Ellis and Davison~E. Soper.
 \newblock Successive combination jet algorithm for hadron collisions.
 \newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
-
-\bibitem{CatchmentArea}
-G.P.~Salam M.~Cacciari and Gregory Soyez.
-\newblock {The Catchment Area of Jets}.
-\newblock {\em JHEP}, 0804:42, 2008.
 
 \bibitem{nsubjettiness}
 Jesse Thaler and Ken Van~Tilburg.
