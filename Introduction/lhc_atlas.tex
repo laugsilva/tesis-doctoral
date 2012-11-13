@@ -84,7 +84,7 @@ The total integrated luminosities provided by the LHC and recorded by ATLAS in 2
 \begin{figure}[htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{Fig2/sumLumiByDay.pdf}
-    \caption{Total luminosity delivered by the LHC and recorded by ATLAS during the 2011 $sqrt{s}$ = 7~TeV proton-proton run}
+    \caption{Total luminosity delivered by the LHC and recorded by ATLAS during the 2011 $\sqrt{s}$ = 7~TeV proton-proton run.}
     \label{fig:integratedlumi}
   \end{center}
 \end{figure}
@@ -108,7 +108,8 @@ The fraction of events with pile-up increased significatively since the data tak
 
 The ATLAS detector~\cite{ATLAS} is one of the two general purpose particle detectors built for probing $pp$ collisions at the LHC. As it was described in the previous section, inside the LHC, bunches of up to 10$^{11}$ protons will collide 40 million times per second to provide 14~TeV proton-proton collisions at a nominal luminosity of 10$^{34}$cm$^{-2}$s$^{-1}$. These high interaction rates and energies, as well as the requirements for high precision physics measurements set the standars for the design of the detector. At even 7 TeV center-of-mass energy, the LHC interactions result in high particle multiplicity, requiring fine detector granularity, and particle production at forward rapidity, requiring large detector angular coverage.
 
-To achieve these performance goals, a design consisting of multiple detector sub-systems with cylindrical symmetry around the incoming beams is used as shown in Fig.~\ref{fig:ATLAS}. Closest to the interaction point the inner tracking detector is placed, providing charged particle reconstruction. The magnet configuration comprises a thin superconducting solenoid surrounding the inner detector cavity, and three large superconducting toroids (one barrel and two end-caps) arranged with an eight-fold azimuthal symmetry around the calorimeters. This fundamental choice has driven the design and size (44~m in length and 25~m in height) of the rest of the detector. Outside the solenoid, a calorimeter system performs electron, photon, tau, and jet energy measurements\footnote{}. Finally, the calorimeter is surrounded by the muon spectrometer where an array of muon drift chambers perform muon identification and momentum measurements.
+To achieve these performance goals, a design consisting of multiple detector sub-systems with cylindrical symmetry around the incoming beams is used as shown in Fig.~\ref{fig:ATLAS}. Closest to the interaction point the inner tracking detector is placed, providing charged particle reconstruction. The magnet configuration comprises a thin superconducting solenoid surrounding the inner detector cavity, and three large superconducting toroids (one barrel and two end-caps) arranged with an eight-fold azimuthal symmetry around the calorimeters. This fundamental choice has driven the design and size (44~m in length and 25~m in height) of the rest of the detector. Outside the solenoid, a calorimeter system performs electron, photon, tau, and jet energy measurements. %\footnote{}. 
+Finally, the calorimeter is surrounded by the muon spectrometer where an array of muon drift chambers perform muon identification and momentum measurements.
 
 The ATLAS detector coordinate system is used to describe the position of particles as they traverse these subdetectors. It is a right-handed coordinate system, with $z$ pointing along the beam direction, positive $x$ pointing toward the center of the LHC ring, and positive y pointing up. The $x-y$ plane is referred to as the transverse plane, and the $z$ direction as the longitudinal
 direction. The azimuthal angle $\phi$ is measured as usual around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = − \ln (\tan (\frac{\theta}{2}))$, regions of low $\eta$ are referred to as ``central'', and regions of high $\eta$ are referred to as ``forward''. % (in the case of massive objects such as jets, the rapidity y = 1/2ln[(E + pz )/(E − pz )] is used). 
@@ -117,7 +118,7 @@ The transverse momentum $\pt$ is defined in the $x-y$ plane unless stated otherw
 \begin{figure}[htbp]
   \begin{center}
       \includegraphics[width=0.9\textwidth]{Fig2/ATLASDetector.pdf}
-    \caption{El detector de ATLAS}
+    \caption{The ATLAS Detector.}
     \label{fig:ATLAS}
   \end{center}
 \end{figure}
@@ -134,7 +135,7 @@ subset of the total detector information to make a decision on whether or not to
 The inner tracking system or Inner Detector (ID) is composed of three subdetectors: the pixel detector, the semiconductor tracker (SCT) and the transition radiation tracker (TRT). The goal of these three is to provide charged particle trajectory reconstruction and momentum measurements with an overall acceptance in pseudorapidity of $|\eta| < 2.5$ and full $\phi$ coverage. 
 
 The sensors which built this system register signals, referred to as ``hits'', in response to the passage of charged particles. The ID is inmersed in a 2~T magnetic field, generated by the central solenoid. The positions of the registered hits are combined to form tracks, with the radius of curvature  of the tracks (caused by the presence of the magnetic field) providing a measurement of the particle's transverse momentum. 
-The track reconstruction efficiency ranges from 78\% at $p^{track}_{T} = 500$~MeV to more than 85\% above 10~GeV, averaged across the full $\eta$ coverage~\cite{chargemultiplicity}. The transverse momentum resolution of $\sigma_{p_T}$/$\pt$ = 0.05~\cite{ATLAS-CONF-2010-009} (upper bound) and a transverse impact parameter resolution of $\sim$20~$\mu$m for high momentum resolution particles in the central $\eta$ region\cite{ATLAS-CONF-2010-070} are primarily achieved through the use of high precision subsystems within the ID.
+The track reconstruction efficiency ranges from 78\% at $p^{track}_{T} = 500$~MeV to more than 85\% above 10~GeV, averaged across the full $\eta$ coverage~\cite{chargemultiplicity}. The transverse momentum resolution of $\sigma_{p_T}$/$\pt$ = 0.05~\cite{ATLAS-CONF-2010-009} (upper bound) and a transverse impact parameter resolution of $\sim$20~$\mu$m for high momentum resolution particles in the central $\eta$ region~\cite{ATLAS-CONF-2010-070} are primarily achieved through the use of high precision subsystems within the ID.
 
 The pixel detector, SCT, and TRT sensors are arranged on concentric cylinders around the beam axis, known as barrel layers, and on disks perpindicular to the beam at either end of the barrel, known as end-caps. A more complete description of these systems is given below. The overall layout of the inner detector is shown in Fig.~\ref{fig:figinner}. 
 
@@ -150,7 +151,7 @@ The pixel detector, SCT, and TRT sensors are arranged on concentric cylinders ar
 
 \subsubsection{The Pixel detector}
 
-The pixel detector consists of three concentric barrel layers. The innermost one, the so called ``$b$-layer'' due to its role in identifying $b$-quarks initiated jets, is located at 5~cm from the interaction region. Three additional disks are located at each end-cap, producing typically three pixel position measurements per charged particle track.  Each layer or disk is instrumented with modules that form the basic unit of data acquisition, each with 47,232 pixels.  All pixel sensors are identical and have a minimum pixel size in $r$ - $\phi \times z$ of 50 $\times$ 400~$\mu m^2$. The intrinsic accuracies in the barrel are 10 $\mu m$ in $r$ - $\phi$ and 115 $\mu m$ along $z$, or along $r$ in the end-caps. The pixel detector has approximately 80.4 million readout channels, an order of magnitude more readout channels than the rest of ATLAS combined, and it extends to a total length of $z \sim \pm$650~mm and radius of $r \sim$150~mm, providing good reconstruction efficiency for tracks up to $|\eta| <$2.5.
+The pixel detector consists of three concentric barrel layers. The innermost one, the so called ``$b$-layer'' due to its role in identifying $b$-quarks initiated jets, is located at 5~cm from the interaction region. Three additional disks are located at each end-cap, producing typically three pixel position measurements per charged particle track.  Each layer or disk is instrumented with modules that form the basic unit of data acquisition, each with 47,232 pixels.  All pixel sensors are identical and have a minimum pixel size in $r$ - $\phi \times z$ of 50 $\times$ 400~$\mu m^2$. The intrinsic accuracies in the barrel are 10 $\mu$m in $r$ - $\phi$ and 115 $\mu$m along $z$, or along $r$ in the end-caps. The pixel detector has approximately 80.4 million readout channels, an order of magnitude more readout channels than the rest of ATLAS combined, and it extends to a total length of $z \sim \pm$650~mm and radius of $r \sim$150~mm, providing good reconstruction efficiency for tracks up to $|\eta| <$2.5.
 
  
 \subsubsection{The SCT}
@@ -158,7 +159,7 @@ The pixel detector consists of three concentric barrel layers. The innermost one
 
 The SCT consists of four barrel layers and nine end-cap layers surrounding the pixel detector, resulting in at least four hits along every charged particle track.  The SCT barrel reaches to $z\sim \pm$750~mm and $r \sim $515~mm, while the end-cap covers out to $z\sim \pm$2720~mm and $r =$560~mm.  There are 15,912 SCT module sensors, each 12.8~cm long and approximately 285~$\mu $m thick. 
 
-In the barrel region, these modules use small-angle (40~mrad) stereo strips to measure both coordinates, with one set of strips in each layer parallel to the beam direction, measuring the $\phi$ coordinate directly . In the end-cap region, the detectors have a set of strips running radially and a set of stereo strips at an angle of 40~mrad. The mean pitch of the strips is 80~$\mu m$. The intrinsic accuracies per module in the barrel are 17~$\mu m$ in $r$ - $\phi $ and 580~$\mu m$ in $z$ (or $r$ in the end-caps). The total number of readout channels in the SCT is approximately 6.3 million.  A hit is registered only if the pulse height in a channel exceeds a preset threshold ($\sim $ 1~fC). The charged measured in the strip is then recorded into a memory buffer that is only read out and used for tracking if a trigger is received signaling that the event should be considered in more detail.
+In the barrel region, these modules use small-angle (40~mrad) stereo strips to measure both coordinates, with one set of strips in each layer parallel to the beam direction, measuring the $\phi$ coordinate directly . In the end-cap region, the detectors have a set of strips running radially and a set of stereo strips at an angle of 40~mrad. The mean pitch of the strips is 80~$\mu$m. The intrinsic accuracies per module in the barrel are 17~$\mu$m in $r$ - $\phi $ and 580~$\mu$m in $z$ (or $r$ in the end-caps). The total number of readout channels in the SCT is approximately 6.3 million.  A hit is registered only if the pulse height in a channel exceeds a preset threshold ($\sim $ 1~fC). The charged measured in the strip is then recorded into a memory buffer that is only read out and used for tracking if a trigger is received signaling that the event should be considered in more detail.
 
 
   
@@ -275,7 +276,7 @@ Four  primary subsystems comprise the integrated muon spectrometer: monitored dr
 \begin{figure}[htbp]
   \begin{center}
       \includegraphics[width=0.8\textwidth]{Fig2/MuonChamber.pdf}
-    \caption{Muon Chamber}
+    \caption{The Muon Chamber.}
     \label{fig:MUON1}
   \end{center}
 \end{figure}

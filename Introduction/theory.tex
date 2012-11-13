@@ -107,13 +107,16 @@ Q = Y + I_3
 \end{equation}
 %
 Glashow, Weinberg and Salam proposed the unified description of the electromagnetic and weak interactions by introducing $SU(2)_I \times U(1)_Y$ electroweak theory~\cite{Glashow1961579,Salam1964168,PhysRevLett.19.1264}.  Initially, the proposal failed because it predicts massless gauge fields associated to the generators of the $SU(2)_I$ symmetry group, analogous to the photon in QED, which were not observed. Instead there was evidence for the massive charged $W^{\pm}$ and neutral $Z^0$ bosons, which have masses close to 80 and 90 GeV, respectively~\cite{Banner1983476,Arnison1983398}. A mechanism was required for the weak bosons to acquire mass. The proposed solution involves spontaneous symmetry breaking through Higgs mechanism.
-% the electroweak force~\cite{Glashow1961579,Salam1964168,PhysRevLett.19.1264}.
 
 The current theoretical theory of the strong interactions began with the identification of the elementary fermions that make up the hadrons (baryons and mesons). In 1963, Gell-Mann and Zweig proposed the quark model~\cite{GellMann1964214,Zweig:1964jf,Zweig2}, which asserts that these particles are in fact composites of smaller constituents.  
 %The constituents of the proton and neutron were later referred to as partons by Richard Feynman~\cite{PhysRevLett.23.1415}. 
 The quark model was formalized into the theory of Quantum Chromodynamics (QCD) by Harold Fritzsch and Murray Gell-Mann~\cite{Fritzsch1973365} in 1973, who proposed that quarks carried an additional quantum number called color.  Whitout color charge, it would seem that the quarks inside some hadrons exist in identical quantum states, in violation of the Pauli exclusion principle (this was indeed the problem of the quark model as proposed by Gell-Mann and Zweig). The color theory extends the electroweak Lagrangian to be symmetric under $SU(3)$ transformations, which introduces eight new physical gauge fields, the gluons. 
 %PARTON MODEL!!!
 %Due toRichard Feynman's parton model nomenclature~\cite{PhysRevLett.23.1415}, both quarks and gluons are commonly referred to as partons.
+
+In this new picture a hadron is actually a complex composite object. A ``core'' set of \emph{valence} quarks, as well as a \emph{sea} of virtual quarks and gluons that are constantly being emitted and absorbed comprise each hadron.  %The reality, however, is much more complex. In the proton there are gluons constantly being emitted and absorbed, causing quark/antiquark pairs of many flavors to be briefly produced and destroyed. The up and down quarks of the standard hadron model are called valence quarks, while the virtual quark/antiquark pairs are known as sea quarks. 
+Both valence quarks and sea quarks, along with the gluons, share the total momentum of the hadron.
+
 
 The Quantum Chromodynamics (QCD) Lagrangian density is given by
 %
@@ -142,41 +145,58 @@ where $\mathcal{A}^A_{\mu}$ are the gluon fields with index $A$ running from 1 t
 %------------------------------------------------------------------------
 
 
-As described above, the fundamental actors of the theory of the strong interactions are quarks and gluons or, collectively, partons. Partons are confined in  %hadron like particles, like the proton, 
-hadrons, but, act free at sufficiently small scales. This behaviour is called asymptotic freedom. The essence of asymptotic freedom is that the strong force couples particles together more strongly as the distance between them increases. The experimental consequence of asymptotic freedom is that quarks and gluons require interactions with high energy probes to be ejected from nucleons, and they cannot be observed directly. 
+As described in section~\ref{sec:qcdintro}, the fundamental actors of the theory of the strong interactions are quarks and gluons or, collectively, partons~\cite{PhysRevLett.23.1415}. Partons are confined in  %hadron like particles, like the proton, 
+hadrons, but, act free at sufficiently small scales. This behaviour is called asymptotic freedom. The essence of asymptotic freedom is that the strong force couples particles together more strongly as the distance between them increases. This explains why quarks and gluons are only observed, at low energies, trapped together into color-neutral hadrons, in an effect known as confinement\footnote{In very-high energy environments, such as the universe shortly after the big bang, quarks and gluons are only weakly linked by the strong force, forming what is called a quark-gluon plasma.}.  A quantitative representation of the decreasing power of the strong force with increasing energy is given by the negative $\beta$-function of QCD~\cite{PhysRevLett.30.1346,PhysRevLett.30.1343}, 
+%http://dx.doi.org/10.1103/PhysRevLett.30.1346
+%http://dx.doi.org/10.1103/PhysRevLett.30.1343
+which describes how the coupling constant of the force changes with energy. The variation of the strength of the coupling with the energy is referred to as the ``running'' of the coupling constant.
 
-First indications of the presence of quarks resulted from the measurement of deep inelastic lepton-hadron scattering. The momentum transfer, $Q^2$, between the probe particles (leptons) and the target hadron is analogous to the distance scale within the hadron being measured. The variation of the strength of the coupling with the energy is referred to as the ``running'' of coupling constant.
-
-
-The low value of the strong coupling constant at high-energies permits the use of perturbative techniques to calculate physical processes. As one goes higher in the perturbative expansion, each term contains an additional factor of the coupling constant, $\alpha_s$.  Since  $\alpha_s$ depends on the energy, it must be evaluated at some energy scale, close to the energy scale involved in the process.  For instance, at an energy of 15~GeV, the strong coupling constant takes on an approximate value of 0.1, thus, from an expansion of an infinite number of terms, only a few need to be computed.  The complexity of the process determines the precision of the calculation that can be performed.  For example, predictions for the cross section for events with three partons in the final state are only available up to leading-order (LO).  For inclusive parton production, calculations are typically performed at next-to-leading order (NLO).  Feynman diagrams are used in the computation of the multiple terms in the expansion, they are graphical representations of each term. % Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown intance Fig.~\ref{fig:qcd_diagrams}.
-
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[width=0.32\textwidth,viewport=0 880 1500 1600,clip]{FIGS/bb_diagrams.jpg}
-%\includegraphics[width=0.32\textwidth,viewport=1600 0 3100 820,clip]{FIGS/bb_diagrams.jpg}
-%\includegraphics[width=0.32\textwidth,viewport=0 0 1500 820,clip]{FIGS/bb_diagrams.jpg}
-%\caption{Representative diagrams of the three channels contributing to QCD $b$-quark production up to NLO.} %The flavour creation channel (left) is the only one present at LO. At NLO, two new channels open up, referred to as gluon splitting (center) and  flavour excitation (right).}
-%\label{fig:qcd_diagrams}
-%\end{figure}
-
-
-With this formalism, the cross-section for the interaction of partons can be computed up to fixed-order in perturbation theory. In the case of hadron colliders, such as the LHC, the factorization theorem~\cite{Collins:1989gx} allows the perturbative calculations for parton interactions to be extended to proton-proton collisions.
-
-
-In the simplest picture, a proton is a combination of three quarks: two up quarks and one down quark. The reality, however, is much more complex. In the proton there are gluons constantly being emitted and absorbed, causing quark/antiquark pairs of many flavors to be briefly produced and destroyed. The up and down quarks of the standard hadron model are called valence quarks, while the virtual quark/antiquark pairs are known as sea quarks. Both valence quarks and sea quarks, along with the gluons, share the total momentum of the hadron.
- The distribution of the momentum fraction, $x$, carried by each parton is expressed as a probability to find a particular parton with a given $x$. The latter is known as the Parton Distribution Function (PDF).
+The experimental consequence of asymptotic freedom is that quarks and gluons require interactions with high energy probes to be ejected from nucleons, and they cannot be observed directly. 
+%First indications of the presence of quarks resulted from the 
+Measurements of deep inelastic lepton-hadron scattering provided some of the first indications of the presence of quarks. The momentum transfer, $Q^2$, between the probe particles (leptons) and the target hadron is analogous to the distance scale within the hadron being measured. 
 %Those measurements also became one of the primary methods by which to measure the PDF of protons~\cite{springerlink:10.1140/epjc/s10052-009-1072-5}~\cite{springerlink:10.1007/JHEP01(2010)109}. 
 %Tevatron measurements where combined with this measurements to refine the accuracy of the result through the use of additional $Q^2$ mesurement points~\cite{1126-6708-2003-10-046}.
 %The dramatic scaling of the gluon PDF as a function of $Q^2$, as well as the choise to use $pp$ instead of $p\bar{p}$ collisions at the LHC, is the source of the of the phrase ``the Tevatron is a quark collider and the LHC is a gluon collider''.
 
 
-%For a cross-section calculation $\alpha_s$ is evaluated at some renormalization scale, $\mu_r$. 
-For cross-section calculations, the PDFs are evaluated at a factorization scale, $\mu_f$, which can be thought of as the scale that separates short-distance, perturbative physics from long-distance, non perturbative physics.
-Any variation in the computed cross sections due to different choices of the energy scales can be interpreted as an uncertainty due to the unknown higher-order corrections in the cross-section  calculation.
+The low value of the strong coupling constant at high-energies permits the use of perturbative techniques to calculate physical processes. Each higher order of the perturbative expansion contains an additional factor of the coupling constant, $\alpha_s$.  Since the value of $\alpha_s$ varies with the energy, it must be evaluated at some energy scale, close to the energy scale of the interaction. At energies of 15~GeV, $\alpha_s$ is $\sim 0.1$, and the higher order terms can be ignored to yield an approximate solution. Thus from an expansion of an infinite number of terms, only a few need to be computed.
+ The complexity of the process determines the precision of the calculation that can be performed.  For example, predictions for the cross section for events with three partons in the final state are only available up to leading-order (LO).  For inclusive parton production, calculations are typically performed at next-to-leading order (NLO).  %Feynman diagrams are used in the computation of the multiple terms in the expansion, they are graphical representations of each term. % Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown intance Fig.~\ref{fig:qcd_diagrams}.
+To help organize the computation of the multitude of terms in perturbative calculations, the tool of Feynman diagrams is frequently used. Feynman diagrams are graphical representations of the terms of the perturbative expansion. The outer lines of the diagram correspond to incoming and outgoing particles, the inner lines correspond to virtual particles, and the vertices correspond to particle interactions. To each of these components of the diagram, a mathematical expression or operation is assigned. Each vertex corresponds to some power of $\alpha_s$, so each increasing order in $\alpha_s$ of the perturbative expansion simply corresponds to a set of diagrams with the correct combination of vertices.  By drawing all possible Feynman diagrams for a given order of perturbation theory, all the terms in the calculation can be read off. In this context, leading-order diagrams are also known as ``tree-level'' diagrams. 
 
 
-The evolution of the PDF on $Q$ is given by the DGLAP equations, published separately in the 1970s by Yuri Dokshitzer, Vladimir Gribov and Lev Lipatov, and Guido Altarelli and Giorgo Parisi~\cite{Altarelli1977298}. The DGLAP equations are derived by noting that the %PDFs 
-cross-section of a process should be independent of the factorization scale $\mu_f$ . This gives a precise mathematical form to the dependence.  The dependence on $x$, however, must be obtained by fitting possible cross section predictions to data from hard scattering experiments.
+Using this formalism, the cross section for two partons to interact can be computed up to some fixed-order in perturbation theory, but there is a further complication. Colliders such as the LHC do not produce simple parton-parton interactions, but instead collisions of hadrons that consist of multiple partons. 
+%In the simplest picture, a proton is a combination of three quarks: two up quarks and one down quark. The reality, however, is much more complex. In the proton there are gluons constantly being emitted and absorbed, causing quark/antiquark pairs of many flavors to be briefly produced and destroyed. The up and down quarks of the standard hadron model are called valence quarks, while the virtual quark/antiquark pairs are known as sea quarks. Both valence quarks and sea quarks, along with the gluons, share the total momentum of the hadron.
+
+The factorization theorem~\cite{Collins:1989gx} allows the perturbative calculations for parton interactions to be extended to proton-proton collisions. This theorem states that the total cross section for two hadrons to interact can be obtained by weighting and combining the cross sections for two particular partons to interact. This weighting is done using parton distribution functions (PDFs), which state the probability for a certain parton to carry a momentum fraction $x$ of the total hadron momentum. Thus the total cross section, at some momentum $Q$ that characterizes the interaction, can be written as:
+%
+\begin{equation}
+\sigma(P_1,P_2) = \sum_{i,j} \int dx_1 dx_2 f_i(x_1,\mu^2_f) f_j(x_2,\mu^2_f) \hat{\sigma}_{ij}(p_1,p_2,\alpha_s(\mu^2_r),Q^2/\mu^2_r,Q^2/\mu^2_f).
+\end{equation}
+%
+Here, $P_1$ and $P_2$ are the momenta of the two incoming hadrons, $x_1$ and $x_2$ are the momentum fractions carried by the two interacting partons, and $p_1 = x_1P_1$ and $p_2 = x_2P_2$ are the momenta of the two interacting partons. The cross section $\hat{\sigma}_{ij}$, frequently referred to as the matrix element, is the cross section for two partons, $i$ and $j$, to interact.  This cross section is calculated to a fixed order in $\alpha_s$, which is evaluated at some renormalization scale, $\mu_r$.  The renormalization scale is the scale at which the natural divergences in the cross sections are canceled by counter-terms in the Lagrangian~\cite{tHooft1973455,PhysRevD.8.3497}.  
+%http://dx.doi.org/10.1016/0550-3213(73)90376-3
+%http://dx.doi.org/10.1103/PhysRevD.8.3497
+The total cross section is obtained by summing over all possible parton flavors and integrating over all possible momentum fractions. 
+
+The parton distribution functions, $f_i$ and $f_j$, are evaluated at a factorization scale, $\mu_f$, which can be thought of as the scale that separates short-distance, perturbative physics from long-distance, non-perturbative physics.  Any parton emitted with a momentum less than $\mu_f$ is considered part of the structure of the hadron, and thus absorbed into the parton distribution function.  
+
+Often $\mu_f$ and $\mu_r$ are identified with one another and written $\mu_f = \mu_r = \mu$. Both scales will appear in ratios within the cross section integral and thus as logarithms when expanded order-by-order in perturbation theory. The presence of logarithms due to multiple scales is most apparent in the example of the dependence of $\alpha_s$ on $\mu_r$ and $\Lambda_{QCD}$, the ultraviolet cutoff scale used in QCD~\cite{LambdaQCD},
+%R. K. Ellis, W. J. Stirling, and B. R. Webber. QCD and Collider Physics. Cambridge University Press, Cambridge, 1996.
+\begin{equation}
+\alpha_s(\mu^2) \sim  \frac{1}{\ln(\mu^2/\Lambda^2_{QCD})}.
+ \label{eq:running}
+\end{equation}
+%
+Equation~\ref{eq:running} reveals the order of magnitude of the scale at which $\alpha_s$ becomes large enough to destroy the assumption that perturbative expansion is valid: $\Lambda_{QCD} \approx 200$~MeV for  $\mu \approx M_Z$, the mass of the $Z$ boson.  Fundamentally this equation represents an ultraviolet divergence that results in a scaling logarithm in the process of renormalization. Infrared divergences like those due to soft gluon emission result in similar $collinear$ logarithms of the form $\alpha^n_s \ln^{2n}(\pt / m)$ and $\alpha^n_s \ln^{2n-1}(\pt / m)$.  One convention~\cite{0954-3899-30-5-R01} 
+%http://dx.doi.org/10.1088/0954-3899/30/5/R01
+is to refer to these terms as ``leading logarithmic'' (LL) and ``next-to-leading logarithmic'' (NLL), respectively. These terms may be exponentiated, leading to a sum of ratios of the relevant scales (here, $\pt / m$) to all orders.
+
+The renormalization and factorization scales choices are somewhat arbitrary, but need to be chosen at an appropiately high scale in order that the fixed-order calculations converge. As such, they should have no bearing on the physical cross section. Any differences in the calculated cross  sections due to different choices of these scales can therefore be interpreted as an uncertainty due to the unknown higher-order corrections in the cross section calculation.
+
+
+The fact that the cross-section of a process should be independent of the factorization scale $\mu_f$  led to the  DGLAP equations, published separately in the 1970s by Yuri Dokshitzer, Vladimir Gribov and Lev Lipatov, and Guido Altarelli and Giorgo Parisi~\cite{Altarelli1977298}. These equations determine the evolution of the PDFs with $Q$. %This gives a precise mathematical form to the dependence.  
+The dependence on $x$, on the other hand, must be obtained by fitting possible cross section predictions to data from hard scattering experiments.
+%This inconvenience is in fact to be expected, since the structure inside the proton is a region of strong coupling constant $\alpha_s$, and hence is not accessible with analytic non-perturbative calculations.
 
 %------------------------------------------------------------------------
 \section{Jet physics}\label{sec:jets}
@@ -231,7 +251,7 @@ The two Monte Carlo generators used in this analysis are summarized below, indic
 
 \subsubsection{Pythia}
 
-{\sc Pythia} event generator has been used extensively for $e^+ e^-$, $ep$, $pp/p\bar{p}$ at LEP, HERA, and Tevatron, and during the last 20 years has probably been the most used generators for LHC physics studies.  {\sc Pythia} contains an extensive list of hardcoded subprocesses, over 200, that can be switched on individually. These are mainly 2$\rightarrow$1 and  2$\rightarrow$2, some  2$\rightarrow$3, but no multiplicities higher than that. Consecutive resonance decays may of course lead to more final-state particles, as will parton showers.
+{\sc Pythia} event generator has been used extensively for $e^+ e^-$, $ep$, $pp/p\bar{p}$ at LEP, HERA, and Tevatron, and during the last 20 years has probably been the most used generator for LHC physics studies.  {\sc Pythia} contains an extensive list of hardcoded subprocesses, over 200, that can be switched on individually. These are mainly 2$\rightarrow$1 and  2$\rightarrow$2, some  2$\rightarrow$3, but no multiplicities higher than that. Consecutive resonance decays may of course lead to more final-state particles, as will parton showers.
 
 As mentioned above, in this MC generator, showers are ordered in transverse momentum~\cite{Pythia_partonshowers} both for ISR and for FSR. Also MPIs are ordered in $\pt$~\cite{Pythia_mpi}. Hadronization is based solely on the Lund string fragmentation framework.
 %the Field–Feynman model http://www.sciencedirect.com/science/article/pii/0550321378900159 (sent pdf by email, only accesible from cern)
@@ -258,24 +278,22 @@ Some distinctive features of Herwig$++$ are: Angular ordered parton showers and 
 %The cluster model of hadronization is based on the so-called preconfinement property of parton showers, discovered by Amati and Veneziano http://www.sciencedirect.com/science/article/pii/0370269379908967
 %They showed that the colour structure of the shower at any evolution scale Q0 is such that colour singlet combinations of partons (clusters) can be formed with an asymptotically universal invariant mass distribution. Here ‘universal’ means dependent only on Q0 and the QCD scale Λ, and not on the scale Q or nature of the hard process initiating the shower, while ‘asymptotically’ means Q Q0 . If in addition Q0 Λ, then the mass distribution of these colour singlet clusters, together with their (Q-dependent) momentum and multiplicity distributions, can be computed perturbatively.
 %Once these clusters have been formed, how should they decay into the observed hadrons? The typical cluster masses are low enough for them to be treated as a smoothed-out spectrum of excited mesons, in which case quasi two-body decay into less excited states seems to be preferred by Nature.
-hard and soft multiple partonic interactions to model the underlying event and soft inclusive interactions~\cite{1126-6708-2008-07-07}.
+hard and soft multiple partonic interactions to model the underlying event and soft inclusive interactions~\cite{1126-6708-2008-07-076}.
 
 This MC generator was used for systematic uncertainties studies. The version utilized was version 2.4.2 released in 2009. 
 
+\vspace{1cm}
+In order to use events produced by Monte Carlo generators to model events that one might observe with the detector, the output of these generators is passed through a detector simulation model.  ATLAS uses the {\sc Geant}4~\cite{Geant4} toolkit. {\sc Geant}4  is an extensive particle simulation toolkit that governs all aspects of the propagation of particles through detectors, based on a description of the geometry of the detector components and the magnetic field. The physics processes include ionization, Bremsstrahlung, photon conversions, multiple scattering, scintillation, absorption and transition radiation.
+%to simulate the passage of particles through the detector material. This includes models for the production of additional particles caused by inelastic scattering off of electrons and nuclei, as well as ionization and absorption by active detector elements.
 
-In order to use events produced by Monte Carlo generators to model events that one might observe with the detector, the output of these generators is passed through a detector simulation model.  ATLAS uses the GEANT4~\cite{Geant4} toolkit to simulate the passage of particles through the detector material. This includes models for the production of additional particles caused by inelastic scattering off of electrons and nuclei, as well as ionization and absorption by active detector elements.
+The detector is described in terms of almost 30 millon volumes with properties, which in case of the ATLAS detector are constructed based on two databases: the geometry database and the conditions database. The former contains all basic constants, e.g. dimensions, positions and material properties of each volume. The latter is updated according to the circumstances at a given time and contains for instance dead channels, temperatures and misalignments. As a result, several layouts of the detector are available. Test beam data taken with components of the ATLAS detector before completion have aided the validation and further improvement of the detector simulation.
+
+Due to the detailed and complicated geometry of ATLAS and the diversity and complexity of the physics processes involved, the consumed computing time per event is large ($\mathcal{O}(1\mbox{hour})$).  This has been a motivation for the development of fast simulation alternatives. The standard {\sc Geant}4 simulation that exploits the full potential is referred to as \emph{full simulation}.  The majority of the events studied in this thesis are produced with full simulation.
+
 
 
 \subsection{Jet algorithms}\label{sec:jetalgos}
 
-
-%\begin{figure}[tp]
-%\centering
-%\includegraphics[width=0.49\textwidth]{areas_kt.png}
-%\includegraphics[width=0.49\textwidth]{areas-antikt.png}
-%\caption{A sample parton-level event, generated with {\sc Herwig}, clustered with the $k_t$ and anti-$k_t$ algorithms, illustrating the active area of the resulting jets~\cite{CatchmentArea}.}
-%\label{fig:CatchmentAreaFig}
-%\end{figure}
 
 As described above, quarks and gluons cannot be directly observed. % Almost inmediatly after being produced, a 
 Quarks and gluons hadronise, leading to a collimated spray of energetic hadrons, a jet. By measuring the jet energy and direction one can get close to the idea of the original parton. But one parton may form multiple experimentally observed jets, for example due to a hard gluon emission plus soft and collinear showering. Then, in comparing data to theory and MC programs predictions a set of rules for how to group particles into jets is needed. A jet algorithm, together with a set of parameters and a recombination scheme (how to assign a momentum to the combination of two particles) form a jet definition.
@@ -292,43 +310,106 @@ By using a jet definition a computer can take a list of particle momenta for an 
 
 Traditionally, jet algorithms have been classified into two categories: cone and sequential recombination algorithms. 
 
-Cone-like algorithms are based on the collinear nature of gluon radiation and the parton shower described above. The decay products of quarks and gluons and their emissions will tend to form a cone of particles in the $\eta - \phi$ plane\footnote{The azimuthal angle $\phi$ is measured around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = − \ln( \tan(\frac{\theta}{2}))$. The transverse momentum $\pt$ is defined in the plane transverse to the beam motion. The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{ \Delta \eta^2  + \Delta \phi^2}$ . See section~\ref{sec:ATLASDetector} for more details on the ATLAS Coordinate system.} 
-as they propagate.
-% Then a cone of a suitable radius will capture these decay procuts.
-An cone algorithm will work as follows\footnote{This is how CMS cone algorithm, used for the preparation for the LHC running, works.}: first, it sorts all particles in the event according to their momentum, and identifies the one with largest $\pt$. This is referred to as a seed particle. Then a cone of radius $R$ in  $\eta - \phi$ is drawn around the seed. The direction of the sum of the momenta of those particles is identified and if it doesn't coincide with the seed direction then the sum is used as a new seed direction, and it iterates until the sum of the cone contents coincides with the previous seed (this type of algorithm is  ``iterative'' cone since it iterates the cone direction). This is how a stable cone is reached. A difficulty and major drawback in this procedure is the use of the transverse momentum of the particle to select the first seed. This definition is collinear unsafe, i.e. a splitting of the hardest particle into a nearly collinear pair can have the consequence that another, less hard particle, pointing in a different direction suddenly becomes the hardest in the event, leading to a different final set of jets. There are many other variants of cone algorithms, and nearly all suffer from problems of either collinear safety, or infrared safety (an extra soft particle creates a new seed, which can lead to an extra stable cone being found). A fix for these problems came in a algorithm called Seedless Infrared Safe Cone (SISCone)~\cite{SISCone}.
+\subsubsection{Fixed cone jet finder in ATLAS}
 
 
-Recombination algorithms, on the other hand, are both collinear and infrared safe. And for this reason, they can be used in calculations to any order in perturbation theory. The term recombination is appropiate given that these algorithms work as if they were inverting the sequence of splittings of the parton shower. In general, recombination algorithms operate by successively combining pairs of particles using a distance metric, $d_{ij}$.  At hadron colliders, due to the fact that one of the incoming partons may continue along the beam, for every pair of particles this metric is compared to a so-called ``beam distance'', $d_{iB}$, and only when  $d_{ij}<d_{iB}$ the particle pair is combined and considered for subsequent clustering steps. 
+ Cone-like algorithms are based on the collinear nature of gluon radiation and the parton shower described above. The decay products of quarks and gluons and their emissions will tend to form a cone of particles in the $\eta - \phi$ plane\footnote{In the ATLAS Coordinate System the azimuthal angle $\phi$ is measured around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = − \ln( \tan(\frac{\theta}{2}))$. The transverse momentum $\pt$ is defined in the plane transverse to the beam motion. The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{ \Delta \eta^2  + \Delta \phi^2}$ . See section~\ref{sec:ATLASDetector}.} as they propagate outwards. 
+The design of cone-like algorithms attempts to maximize the amount of energy present in a stable cone of fixed radius. 
 
-ATLAS (and also CMS) has chosen the anti-$k_t$~\cite{antiktalg} algorithm as the default jet algorithm for use in physics analysis.  This recombination algorithm as well as the Cambridge-Achen (C$/$A) algorithm\footnote{C/A algorithm relies on angular ordering of emissions in order to reconstruct the shower by omitting the transverse momentum scales from $d_{ij}$ altogether.}~\cite{CamAchem} are extensions 
- of the original $k_t$ algorithm developed for the analysis of multi-jet events at $e^+ e^-$ colliders~\cite{JADE} and subsequently extended for use at hadron colliders~\cite{kt2,kt1}. In this thesis, the $k_t$ algorithm was used for jet substructure studies, see section~\ref{sec:substructure}.
+In ATLAS the standard jet algorithm  for a long time was an iterative fixed-cone jet finder. 
+First, it sorts all particles in the event according to their momentum, and identifies the one with largest $\pt$.  This is referred to as a seed particle.  Then a cone of radius $R_{cone}$ in  $\eta - \phi$ is drawn around the seed and all objects within a cone of $\Delta R < R_{cone}$ are combined with it. The direction of the sum of the momenta of those particles is identified and if it doesn't coincide with the seed direction then the sum is used as a new seed direction, and it iterates until the direction of the cone is stable (i.e, the direction of the sum of the cone contents coincides with the previous seed) and the resulting cone is called a jet . This type of algorithm is called  ``iterative'' since it iterates the cone direction. The jets found in this way can share part of their constituents. Jets with common constituents are merged if their shared $\pt$ is larger than 50\% of the $\pt$ of the softer jet.  Otherwise, the overlapping part is assigned to the harder jet (split).
 
-The original $k_t$ algorithm implements the following (\ref{eqn:origkt}) distance metric between particles $i$ and $j$
+A difficulty and major drawback in this procedure is the use of the transverse momentum of the particle to select the first seed. This definition is collinear unsafe, i.e. a splitting of the hardest particle into a nearly collinear pair can have the consequence that another, less hard particle, pointing in a different direction suddenly becomes the hardest in the event, leading to a different final set of jets\footnote{From the theoretical point of view, the splitting and merging procedures make this algorithm partially infrared safe, but the algorithm remains well defined only up to leading order of perturbation theory.}. There are many other variants of cone algorithms, and nearly all suffer from problems of either collinear safety, or infrared safety (an extra soft particle creates a new seed, which can lead to an extra stable cone being found). A fix for these problems came in a algorithm called Seedless Infrared Safe Cone (SISCone)~\cite{SISCone}.
+
+
+\subsubsection{Sequential recombination algorithms}
+
+Recombination algorithms are both collinear and infrared safe. For this reason, they can be used in calculations to any order in perturbation theory. %The term recombination is appropiate given that these algorithms work as if they were inverting the sequence of splittings of the parton shower. 
+The term recombination is used since they attempt to follow the parton shower branchings which become progressively softer as the shower evolves. The resulting jet can be thought of as the final stage of this process and the algorithm is the device used to retrace the tree of sequential branchings.
+In general, recombination algorithms operate by successively combining pairs of particles using a distance metric, $d_{ij}$.  At hadron colliders, due to the fact that one of the incoming partons may continue along the beam, for every pair of particles this metric is compared to a so-called ``beam distance'', $d_{iB}$, and only when  $d_{ij}<d_{iB}$ the particle pair is combined and considered for subsequent clustering steps. 
+
+%ATLAS (and also CMS) has chosen the anti-$k_t$~\cite{antiktalg} algorithm as the default jet algorithm for use in physics analyses.  This recombination algorithm  %as well as the Cambridge-Achen (C$/$A) algorithm\footnote{C/A algorithm relies on angular ordering of emissions in order to reconstruct the shower by omitting the transverse momentum scales from $d_{ij}$ altogether.}~\cite{CamAchem} are extensions 
+%is an extension of the original $k_t$ algorithm developed for the analysis of multi-jet events at $e^+ e^-$ colliders~\cite{JADE} and subsequently extended for use at hadron colliders~\cite{kt2,kt1}. In this thesis, the $k_t$ algorithm was used for jet substructure studies, see section~\ref{sec:substructure}.
+
+\vspace{0.5cm}
+\textbf{The $k_t$ algorithm}. The most common sequential recombination algorithm is the inclusive $k_t$ algorithm.  If was first implemented in the analysis of multi-jet events at $e^+ e^-$ colliders~\cite{JADE} and subsequently extended for use at hadron colliders~\cite{kt2,kt1}. 
+It is instructive to compare both the original algorithm as well as the ultimate definition of the modern $k_t$ algorithm in order to identify relevant features of this algorithm.
+The distance measure in the original  version is defined as: % \ref{eqn:origkt}
 \begin{equation} 
 d_{ij} = \frac{2E_i E_j (1- \cos \theta_{ij}) }{Q^2},
 \label{eqn:origkt}
 \end{equation}
 where $Q$ is the total energy in the event, $E_i$ is the energy of particle $i$ and $\theta_{ij}$ the angle between particles $i$ and $j$. In the collinear limit, $d_{ij}$ is related to the relative transverse momentum between particles $i$ and $j$ (hence the name $k_t$ algorithm), normalized to the total visible energy.
-The particles are combined if the minimum $d_{ij}$, $d_{min}$, is below a certain threshold, $y_{cut}$.  The jet multiplicity depends on the value of $y_{cut}$, as a lower value will result in more soft or collinear emissions surviving as jets. %This is thus the first definition of an ``event shape'', this threshold marks the transition between two-jet events and three-jet events.
-As mentioned above, for hadron colliders, the notion of a beam distance is added. A distance scale, $\Delta R = \sqrt{\Delta y^2 +\Delta \phi^2}$, is introduced to define the typical radius for a jet, effectively replacing $y_{cut}$. In this case for every pair of particles a new distance is defined, (\ref{eqn:kt}),
+The particles are combined if the minimum $d_{ij}$, $d_{min}$, is below a certain threshold, $y_{cut}$.  The jet multiplicity depends on the value of $y_{cut}$, as a lower value will result in more soft or collinear emissions surviving as jets. This is thus the first definition of an ``event shape'', this threshold marks the transition between two-jet events and three-jet events.
+
+For a jet algorithm at a hadron collider, the notion of a beam distance is added. %the definition of $d_{ij}$ must account for the fact that partons scatter in a rest frame other than that of the center-of-mass of the colliding protons, unlike at an $e^+ e^-$ collider.  In particular, the notion of the beam distance is added in order to render the algorithm frame-independent. 
+A distance scale, $\Delta R = \sqrt{\Delta y^2 +\Delta \phi^2}$, is introduced to define the typical radius for a jet, effectively replacing $y_{cut}$. In this case the particle distance metric becomes, % (\ref{eqn:kt})
+%
 \begin{equation} 
 d_{ij} = \min(p^2_{ti},p^2_{tj}) \frac{\Delta R^2_{ij}}{R^2}
 \label{eqn:kt}
 \end{equation}
-and the beam distance, $d_{iB}=p^2_{ti}$. %, in the way that when no particle j is found such that $\Delta R_{ij} < R$ then i is promoted to the status of a jet. 
-The algorithm proceeds by searching for the smallest of the $d_{ij}$ and the $d_{iB}$. If it is a $d_{ij}$ then particles $i$ and $j$ are recombined into a single new particles. If it is a $d_{iB}$ then $i$ is removed from the list of particles, and called a jet. This is repeated until no particles remain.
+%
+and the beam distance, 
+%
+\begin{equation}
+d_{iB}=p^2_{ti}. 
+\end{equation}
+%
+such that when no particle $j$ is found such that $\Delta R_{ij} < R$ then $i$ is promoted to the status of a jet.  
 
-As opposed to cone algorithms, for the $k_t$ algorithm, the jets have quite irregular shapes, and particles with $\Delta R_{ij} > R$ can still be clustered within the jet. This is a problem when, for example, an irregularly shaped jet happens to extend into poorly instrumented detector regions. Another drawback of this definition is that soft particles are clustered first. This  has the potential to introduce complications when the detector noise of energy density fluctuations are large.
+The formulation of the modern inclusive $k_t$ algorithm is formulated as follows:
 
-A feature of the $k_t$ algorithm that is attractive is that it does not produce jets but it also assigns a clustering sequence to the particles within the jet. It is possible then to undo the clustering and to look %inside the structure of the jet. 
+\begin{enumerate}\addtolength{\itemsep}{-0.4\baselineskip}
+\item  
+Utilize the particle distance metric $d_{ij}$ defined in Eq.~\ref{eqn:kt}.
+\item
+Compute the minimum $d_{ij}$, $d_{min} = \min(d_{ij})$, among all particles.
+\item
+If  $d_{min} < d_{iB},d_{jB}$, then combine particles $i$ and $j$ and repeat from step 1.
+\item
+If $d_{ij} > d_{iB}$, then identify $i$ as a jet and remove it from the list.
+\item
+Continue until all particles are considered jets or have been clustered with other particles.
+\end{enumerate}
+
+ Jets built with this algorithm have quite irregular shapes, and particles with $\Delta R_{ij} > R$ can still be clustered within the jet. This is a problem when, for example, an irregularly shaped jet happens to extend into poorly instrumented detector regions. 
+
+As defined, the $k_t$ algorithm clusters first objects that are either very close in angle or have very low transverse momentum. The fact that soft particles are clustered first is a another drawback of this definition since it  has the potential to introduce complications when the detector noise of energy density fluctuations are large.
+
+A feature of the $k_t$ algorithm that is attractive is that it does not only produce jets but it also assigns a clustering sequence to the particles within the jet. It is possible then to undo the clustering and to look %inside the structure of the jet. 
 back at the shower development history.  This has been exploited in a range of QCD studies, and also in searches of hadronic decays of boosted massive particles  and it will be used here for the search of two-pronged jets in gluon splitting.
 
-The prescription above may be generalized beyond the $k_t$ algorithm. By inverting the power law in the particle distance metric, $d_{ij}$, the anti-$k_t$ algorithm is obtained. The particle distance metric used by this algorithm is,
+The $k_t$ algorithm can be generalized by introducing the following particle-particle and particle-beam distance measures:
+%
 \begin{equation} 
-d_{ij} = \min(p^{-2}_{ti},p^{-2}_{tj}) \frac{\Delta R^2_{ij}}{R^2}
-\label{eqn:antikt}
+d_{ij} = \min(p^{2n}_{ti},p^{2n}_{tj}) \frac{\Delta R^2_{ij}}{R^2}
+ \label{eqn:generickt}
 \end{equation}
-and the  beam distance, $d_{iB}=p^{-2}_{ti}$. This definition results in the clustering of the hardest emissions first. This has several benefits in the context of high-luminosity hadron collisions.
+%
+\begin{equation}
+d_{iB}=p^{2p}_{ti}. 
+ \label{eqn:generickt2}
+\end{equation}
+%
+where $p$ is a parameter which is 1 for the $k_t$ algorithm. Two different algorithms can be obtained from this: The Cambridge-Aachen (C$/$A) algorithm~\cite{CamAchem}, with $p=0$, and the anti-$k_t$ algorithm~\cite{antiktalg}, with $p=-1$. 
+
+\textbf{The Cambridge-Aachen algorithm}. The C$/$A algorithm is obtained by choosing a value $p=0$ in Equations~\ref{eqn:generickt} and~\ref{eqn:generickt2}. This algorithm recombines objects close in $\Delta R$ iteratively and reflects the angular ordering of the QCD radiation.  It is ideally suited to reconstruct and decompose the various decay components of heavy objects like Higgs bossons or top quarks using subjet structure.
+
+
+\textbf{The anti-$k_t$ algorithm}. Contrary to the $k_t$ algorithm, the anti-$k_t$ algorithm, so named because of the inverted power law in the particle and beam distance metrics in Equations~\ref{eqn:generickt} and~\ref{eqn:generickt2}, first clusters hard objects together %  This has several benefits in the context of high-luminosity hadron collisions.
+which results in more regular jets with respect to the $k_t$ and C$/$A algorithms. This characteristic is illustrated for the $k_t$ and anti-$k_t$ algorithms in Fig.~\ref{fig:CatchmentAreaFig}.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{areas_kt.png}
+\includegraphics[width=0.49\textwidth]{areas-antikt.png}
+\caption{A sample parton-level event, generated with {\sc Herwig}, clustered with the $k_t$ and anti-$k_t$ algorithms, illustrating the active area of the resulting jets~\cite{CatchmentArea}.}
+\label{fig:CatchmentAreaFig}
+\end{figure}
+
+
+For this reason and the fact that this algorithm is less sensitive to soft emissions (see Chapter~\ref{ch:reco}) the anti-$k_t$ algorithm was chosen as the default jet algorithm for ATLAS analyses.
 
 Note that the anti-$k_t$ algorithm does not provide useful information on jet substructure if a jet contains two hard cores, then the $k_t$ (or C/A) algorithms first reconstruct those hard cores and merge the resulting two subjets. The anti-$k_t$ will often first cluster the harder of the two cores and then gradually aglomerate the contents of the second hard core.
 
@@ -341,7 +422,7 @@ These algorithms, and more, are implemented in {\sc Fastjet}~\cite{fastjet} soft
 
 %The study of a quantity related to the distributions and multiplicity of particles in the event phase space led to the first evidence of jet structure, as pointed out in ref.~\cite{PhysRevLett.35.1609}. 
 The first evidence of jet structure resulted from the study of the spacial distribution and multiplicity of particles in the event phase space in hadron production in $e^+ e^-$ collisions~\cite{PhysRevLett.35.1609}.
-Generally, all final hadronic states in both in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the event energy flow by means of the so called ``event shape'' variables. This family of variables attempts to extract information about the global geometry of an event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa}\cite{Aad:2012np}. 
+Generally, all final hadronic states in $pp/p\bar{p}/e^+e^-$ collisions can be explored in terms of the structure and shape of the event energy flow by means of the so called ``event shape'' variables. This family of variables attempts to extract information about the global geometry of an event, usually distinguishing between di-jet events and multijet final states. Such variables have been successfully utilized in many SM measurements and BSM searches, see for example~\cite{Abbiendi:2007aa,Aad:2012np}. 
 
 Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet. In SM and new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. 
 At the LHC, many of the particles considered to be heavy at previous accelerators will be frequently produced with a transverse momentum greatly exceeding their rest mass, like the electro-weak gauge bosons $W^\pm$ and $Z$, the top quark, the Higgs boson (or bosons) and possibly other new particles in the same mass range. These boosted objects, produced either by recoil against other energetic objects or from decays of even heavier BSM particles, upon decay can give rise to a highly collimated topology too close to be resolved by standard jet algorithms. 
@@ -378,7 +459,7 @@ In chapter~\ref{ch:kinematic}, several distinguishing characteristics between je
 
 %https://cdsweb.cern.ch/record/1425916/
 Heavy flavor quarks enter in many collider searches, notably because they are produced in the decays of various SM particles (top quarks, the $Z$ boson and the Higgs boson, if light), and of numerous particles appearing in proposed extensions of the SM.
- Heavy flavour quark production in hadronic collisions may be subdivided into three classes depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
+ In hadronic collisions, heavy flavour quark production may be subdivided into three classes depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
 
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
@@ -464,14 +545,20 @@ SM physics analyses that rely on the presence of single $b$-jets in the final st
 the reducible background from QCD, which can produce double $b$-hadron jets as discussed above, and the irreducible background due to $W$ bosons produced in association with $b$-quarks.
 Figure~\ref{fig:Wplusb} shows the two diagramas %leading order processes 
 for $W+b$ production. %that give rise to $W$ bosons with at least one $b$-jet. 
+
+\begin{figure}[htbp]
+  \begin{center}
+      \includegraphics[width=0.6\textwidth]{FIGS/Wbb_diagram.jpg}
+    \caption{Feynman diagrams for $W$ production in association with $b$ quarks.}
+    \label{fig:Wplusb}
+  \end{center}
+\end{figure}
+
 While at LO only single $b$-jets are present, at NLO jets containing two $b$-hadrons are expected due to the contribution of a diagram containing a $gb\bar{b}$ vertex. The $b$-quark pair is produced at small angles and can be often reconstructed as one merged jet.
 %In the first process, which can be thought of as a higher order correction to $W$ + jets production, the $b$ quark pair is produced at small angles by gluonsplitting and can often be reconstructed as a merged jet.
-\begin{figure}[hp]
-\centering
-\includegraphics[width=0.6\textwidth]{FIGS/Wbb_diagram.jpg}
-\caption{Feynman diagrams for $W$ production in association with $b$ quarks.}
-\label{fig:Wplusb}
-\end{figure}
+
+
+
 
 The relevance of double $b$-hadron jets is supported by NLO calculations of the production of $W$ bosons and two jets with at least one $b$ quark at the LHC for jet $\pt > 25$ GeV, and $|\eta| < 2.5$~\cite{Campbell:2006} indicate that the cross section for $W(b\bar{b})j$ is almost a factor of two higher than $Wb\bar{b}$, and about a third of $Wbj$, where  $W(b\bar{b})j$ denotes the case in which the two $b$ quarks are merged into the same jet. 
 

@@ -155,7 +155,7 @@ Primary vertices are reconstructed using an iterative vertex finding algorithm~\
 The parameters of the beam spot are used both during the finding to preselect compatible tracks and during the fitting step to constrain the vertex fit.
 
 
-The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-quark jets identification since it defines the reference point with respect to which impact parameters and vertex displacements are measured.  The typical vertexing resolution in $z$ is $O$($100 \mu$m).
+The knowledge of the position of the primary interaction point (primary vertex) of the proton-proton collision is important for $b$-quark jets identification since it defines the reference point with respect to which impact parameters and vertex displacements are measured.  The typical vertexing resolution in $z$ is $\mathcal{O}$($100 \mu$m).
 
 
 To ensure a good resolution on the vertex position, the primary vertex
@@ -281,12 +281,13 @@ For convention, the discriminant variable used for $b$-tagging is then defined a
 %
 Using such a formalism, two impact parameter based $b$-tagging algorithms are constructed, based on the definition of PDF($IP_i$):
 
-\begin{itemize}
+%\begin{itemize}
+\begin{enumerate}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
-1. IP2D: PDF($IP_i$) = PDF($IP_{i,r\phi}$)
+IP2D: PDF($IP_i$) = PDF($IP_{i,r\phi}$)
 \item
-2. IP3D:  PDF($IP_i$) = PDF($IP_{i,r\phi}$,$IP_{i,z}$)
-\end{itemize}
+IP3D:  PDF($IP_i$) = PDF($IP_{i,r\phi}$,$IP_{i,z}$)
+\end{enumerate}
 
 In the first case the track PDF is one-dimensional, based on the transverse impact parameter significance. In the second case the PDF is based on a two-dimensional histogram of the transverse and longitudinal impact parameter significance. 
 %PLOTS OF THE WEIGHTS?
