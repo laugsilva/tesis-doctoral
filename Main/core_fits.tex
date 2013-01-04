@@ -3,11 +3,37 @@
 % Fractio of gluon splitting in data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\chapter{??Fraction of gluon-splitting jets in data??}\label{ch:gbbfraction}
+\chapter{Fraction of double $b$-hadron jets in data}\label{ch:gbbfraction}
 
 %------------------------------------------------------------------------
-\section{??Template fits??}\label{sec:FractionSystematics}
+\section{Maximum likelihood fits}%\label{sec:FractionSystematics}
 %------------------------------------------------------------------------
+
+Maximum likelihood (ML) information only parametrizes the shape of a 
+distribution (i.e. one can determine fraction of signal events from 
+MC fits but no number of signal events).
+
+The extended version of the maximum likelihood approach adds an extra term
+allowing the estimation of the absolute number of signal/background events.
+
+%Adding pdfs
+For N p.d.f.s, there are N-1 fraction coefficients that should sum to less 1. The remainder is by construction 1 minus the sum of all other coefficients.
+
+
+%Binned or unbinned MF fit?
+%Roofit presentation page 112
+%In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
+%WEIGHTS ARE SUPPORTED IN UNBINNED DATASETS!! But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
+
+
+
+\subsubsection{Fitting and likelihood minimization}
+What happens when you do pdf->fitTo(*data)?
+
+- Construct object representing -log of (extended) likelihood
+
+- Minimize likelihood w.r.t floating parameters using MINUIT [REFERENCIAS].
+
 
 %------------------------------------------------------------------------
 %\section{Systematic uncertainties}\label{sec:FractionSystematics}
