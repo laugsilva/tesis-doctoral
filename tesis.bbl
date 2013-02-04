@@ -149,4 +149,95 @@ V~Kostyukhin.
   by the ATLAS Detector}.
 \newblock {\em ATLAS-CONF-2012-040}, 2012.
 
+\bibitem{PYTHIA6}
+Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
+\newblock {PYTHIA 6.4 Physics and Manual}.
+\newblock {\em JHEP}, 05:026, 2006.
+
+\bibitem{Pythia_MC11tune}
+Atlas tunes of pythia 6 and pythia 8 for mc11.
+\newblock Technical Report ATL-PHYS-PUB-2011-009, CERN, Geneva, Jul 2011.
+
+\bibitem{ATLAS-CONF-2012-020}
+{ATLAS Collaboration}.
+\newblock {Selection of jets produced in proton-proton collisions with the
+  ATLAS detector using 2011 data}.
+\newblock {\em ATLAS-CONF-2012-020}, 2012.
+
+\bibitem{PhysRevLett.107.172001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Quark and gluon tagging at the lhc.
+\newblock {\em Phys. Rev. Lett.}, 107:172001, Oct 2011.
+
+\bibitem{ATLAS-CONF-2011-053}
+{ATLAS Collaboration}.
+\newblock Light-quark and gluon jets in atlas.
+\newblock {\em ATLAS-CONF-2011-053}, 2011.
+
+\bibitem{Buskulic1996353}
+D.~Buskulic et~al.
+\newblock Quark and gluon jet properties in symmetric three-jet events.
+\newblock {\em Physics Letters B}, 384(1-4):353--364, 1996.
+
+\bibitem{PhysRevD.79.074012}
+Leandro~G. Almeida, Seung~J. Lee, Gilad Perez, Ilmo Sung, and Joseph Virzi.
+\newblock Top quark jets at the lhc.
+\newblock {\em Phys. Rev. D}, 79:074012, Apr 2009.
+
+\bibitem{ATLAS-CONF-2011-073}
+{ATLAS Collaboration}.
+\newblock {Measurement of Jet Mass and Substructure for Inclusive Jetsin
+  $\sqrt{s} =$ 7~TeV pp Collisions with the ATLAS Experiment}.
+\newblock {\em ATLAS-CONF-2011-073}, May 2011.
+
+\bibitem{Snihur1999494}
+R.~Snihur.
+\newblock Subjet multiplicity in quark and gluon jets at d0.
+\newblock {\em Nuclear Physics B - Proceedings Supplements}, 79(1–3):494 --
+  496, 1999.
+\newblock Proceedings of the 7th International Workshop on Deep Inelastic
+  Scattering and QCD.
+
+\bibitem{kt2}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock {Successive combination jet algorithm for hadron collisions}.
+\newblock {\em Phys.\ Rev.}, D48:3160--3166, 1993.
+
+\bibitem{Abdesselam:2010pt}
+A.~Abdesselam, E.~Bergeaas Kuutmann, U.~Bitenc, G.~Brooijmans, J.~Butterworth,
+  et~al.
+\newblock {Boosted objects: A Probe of beyond the Standard Model physics}.
+\newblock {\em Eur.Phys.J.}, C71:1661, 2011.
+
+\bibitem{pruning}
+Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
+\newblock Techniques for improved heavy particle searches with jet
+  substructure.
+\newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
+
+\bibitem{exclusivekt}
+Stephen~D. Ellis and Davison~E. Soper.
+\newblock Successive combination jet algorithm for hadron collisions.
+\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
+
+\bibitem{CatchmentArea}
+G.P.~Salam M.~Cacciari and Gregory Soyez.
+\newblock {The Catchment Area of Jets}.
+\newblock {\em JHEP}, 0804:42, 2008.
+
+\bibitem{nsubjettiness}
+Jesse Thaler and Ken Van~Tilburg.
+\newblock {Identifying Boosted Objects with N-subjettiness}.
+\newblock {\em JHEP}, 1103:015:026, 2011.
+
+\bibitem{njetti}
+Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
+\newblock $n$ jettiness: An inclusive event shape to veto jets.
+\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
+
+\bibitem{PhysRevLett.105.022001}
+Jason Gallicchio and Matthew~D. Schwartz.
+\newblock Seeing in color: Jet superstructure.
+\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
+
 \end{thebibliography}
