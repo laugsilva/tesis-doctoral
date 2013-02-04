@@ -12,6 +12,22 @@
 \contentsline {subsubsection}{Algorithm combinations and performance}{26}
 \contentsline {subsubsection}{The MV1 tagging algorithm}{28}
 \contentsline {subsection}{\numberline {1.4.2}$b$-tagging calibration}{28}
-\contentsline {chapter}{\numberline {2}Fraction of double $b$-hadron jets in data}{31}
-\contentsline {section}{\numberline {2.1}Maximum likelihood fits}{31}
-\contentsline {subsubsection}{Fitting and likelihood minimization}{31}
+\contentsline {chapter}{\numberline {2}Double \emph {\textbf {b}}-hadron jet identification}{31}
+\contentsline {section}{\numberline {2.1}Data sample}{31}
+\contentsline {section}{\numberline {2.2}Monte Carlo sample}{32}
+\contentsline {subsection}{\numberline {2.2.1}Event and jet selection}{33}
+\contentsline {subsection}{\numberline {2.2.2}Track selection}{35}
+\contentsline {section}{\numberline {2.3}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{35}
+\contentsline {subsubsection}{Jet track multiplicity}{36}
+\contentsline {subsubsection}{Jet width}{39}
+\contentsline {subsubsection}{Jet Mass}{41}
+\contentsline {subsubsection}{$\Delta R$ between leading tracks}{43}
+\contentsline {subsubsection}{Maximum $\Delta R$ between track pairs}{44}
+\contentsline {subsubsection}{Subjet multiplicity}{45}
+\contentsline {subsubsection}{$\Delta R$ between the axes of two $k_t$ subjets}{46}
+\contentsline {subsubsection}{$N$-subjettiness variables}{49}
+\contentsline {subsubsection}{Jet eccentricity}{50}
+\contentsline {section}{\numberline {2.4}Validation of the jet variables in data}{53}
+\contentsline {chapter}{\numberline {3}Fraction of double $b$-hadron jets in data}{57}
+\contentsline {section}{\numberline {3.1}Maximum likelihood fits}{57}
+\contentsline {subsubsection}{Fitting and likelihood minimization}{57}
