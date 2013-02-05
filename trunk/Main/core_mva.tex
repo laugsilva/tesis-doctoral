@@ -16,7 +16,7 @@ Multivariate data analysis refers to a statistical technique used to analyze dat
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
-Likelihood ratio estimators 
+Likelihood ratio estimators (LLR)
 \item
 Neural Networks (NN)
 \item
@@ -26,7 +26,7 @@ Boosted decision Trees (BDTs)
 \end{itemize}
 
 %From TMVA Users Guide
-The method of maximum likelihood consists of building a model out of probability density functions (PDF) that reproduces the input variables for signal and background. For a given event, the likelihood for being of signal type is obtained by multiplying the signal probability densities of all input variables %, which are assumed to be independent, 
+The method of maximum likelihood consists of building a model out of probability density functions (PDF) that reproduces the distributions of the input variables for signal and background. For a given event, the likelihood for being of signal type is obtained by multiplying the signal probability densities of all input variables %, which are assumed to be independent, 
 and normalising this by the sum of the signal and background likelihoods. %Because correlations among the variables are ignored, this PDE approach is also called “naive Bayes estimator”.
 The likelihood ratio $y_{L}(i)$ for event $i$ is defined by:
 %
@@ -43,29 +43,29 @@ L_{S(B)}(i) = \prod^{n_{var}}_{k=1}  p_{S(B),k}(x_k(i)),
 and where $p_{S(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
 
 The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
-by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
+by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from the data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
 %
 \begin{equation}
 p(x) = \frac{1}{N h} \sum^N_{i=i} K(\frac{x-x_i}{h}) = \frac{1}{N} \sum^N_{i=i} K_h(x-x_i),
 \end{equation}
 %
-where N is the number of training events, $K_h(t) = K(t/h)h$ is the kernel function, and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}). For the present implementation a Gaussian form of $K$ is used.  
+where $N$ is the number of training events, $K_h(t) = K(t/h)h$ is the kernel function, and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}). For the present implementation a Gaussian form of $K$ is used.  
 
 The smoothness of the kernel density estimate is evident compared to the discreteness of a histogram; kernel density estimates converge faster to the true underlying density for continuous random variables.
 
 
 %From TMVA Users Guide
-An artificial Neural Network (NN) is a nonlinear discriminant. It is, most generally speaking, any simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function.  % $\rho$.  
+An artificial Neural Network (NN) is a nonlinear discriminant. It is, most generally speaking, a simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function.  % $\rho$.  
 The neuron response function maps the neuron input (in $R^n$) onto the neuron output ($R$); often it can be separated into a synapse function ($R^n \rightarrow R$) and a neuron activation function ($R \rightarrow R$). The neuron activation function can be a either a $linear$, $sigmoid$, $tanh$, or a $radial$ function.
 
-While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following layer. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with $n_{var}$ input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{NN}$ .
+While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following one. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with $n_{var}$ input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{NN}$ .
 %The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
 
 
 Decision trees % (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. 
-are well known classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
+are classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
 % However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
-Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final $leaf$ node. The boosting of a decision tree extends this concept from one tree to several trees which form a $forest$.
+Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final \emph{leaf} node. The boosting of a decision tree extends this concept from one tree to several trees which form a \emph{forest}.
 Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree~\cite{QUINLAN1999497}. %However, the advantage of the straightforward interpretation of the decision tree is lost.
 %Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
 
@@ -80,9 +80,9 @@ Based on discrimination power, correlation and pile-up dependence three variable
 Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest (double the TMVA default value).  Distributions of the final output for the three methods, evaluated in a sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
 
-The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearrange with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agrees within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
+The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agrees within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
 
-As opposed to Neural Network discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. Is for these reasons that the likelihood classifier is the selected method for our tagger.
+As opposed to Neural Network discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. It is for these reasons that the likelihood classifier is the selected method for our tagger.
 
 \begin{figure}[tp]
 \centering
@@ -125,7 +125,7 @@ As opposed to Neural Network discriminants with large number of training cycles,
 
 
 
-A indicated in section~\ref{sec:mvamethods}, a discriminant between single and merged $b$-jets was built by training a simple likelihood estimator, with the following combination of three variables as input, 
+As indicated in section~\ref{sec:mvamethods}, a discriminant between single and merged $b$-jets was built by training a simple likelihood estimator, with the following three variables as input, 
 %
 \begin{enumerate}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
@@ -152,7 +152,7 @@ The distribution of the likelihood output for single and merged $b$-jets is show
 \end{figure}
 
 The performance of the tagger in the simulation can be 
-displayed in a plot of rejection ($1/\epsilon_{bkg}$) of merged $b$-jets as a function of single $b$-jet efficiency, where $\epsilon_{bkg}$ is the probability that a double $b$-hadron jet passes the single $b$-jet tagger. This is shown in Fig.~\ref{fig:performanceinbins} for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
+displayed in a plot of rejection of merged $b$-jets, ($1/\epsilon_{bkg}$), as a function of single $b$-jet efficiency, $\epsilon_{sig}$; where $\epsilon_{bkg}$ ($\epsilon_{sig}$) is the probability that a double (single) $b$-hadron jet passes the single $b$-jet tagger. This is shown in Fig.~\ref{fig:performanceinbins} for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
 
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
@@ -191,7 +191,7 @@ The rejection of merged jets attained as a function of $\pt$ for the 50\% and 60
   \hline
   Jet $\pt$ & \multicolumn{2}{c||}{single $b$-jet efficiency 50\%} & 
             \multicolumn{2}{c||}{single $b$-jet efficiency 60\%}\\ \cline{2-5}
-    (GeV )  & Rejection & ~stat.err.~ & Rejection & ~stat.err.~ \\ \hline
+    (GeV )  & Rejection & stat.err. & Rejection & stat.err. \\ \hline
 %   40 - 60 &  ~7.6 &  4\%  &  ~5.4  &  3\%    \\ 
 %   60 - 80 &  10.4 &  4\%  &  ~7.3  &  4\%    \\ 
 %   80 - 110&  13.9 &  5\%  &  ~9.4  &  4\%    \\ 
@@ -237,7 +237,7 @@ uncertainty in the track transverse momentum resolution;
 \item
 uncertainty in the jet transverse momentum resolution;
 \item
-uncertainty in the $b$-jet energy scale.
+uncertainty in the jet energy scale.
 %the effect of jet isolation
 %\item
 %other $\Delta R$ cuts for B-labeling and matching
@@ -248,7 +248,7 @@ uncertainty in the $b$-jet energy scale.
   The size of this effect was studied by comparing the performance of the likelihood discriminant with $b$-jets in events with small (1-9) and large (9-20) number of primary vertices. 
 A comparison of the performance in these two sub-samples relative to the inclusive sample is shown in Fig.~\ref{fig:performanceinbinsMu}. 
 As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. %Of the 16 determinations (2 working points with 8 $\pt$ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
-Performance differences between high and low number of primary vertices events are $\leq$~0.3\% and therefore negligible compared to other sources of uncertainties. The impact of pile-up might be larger in 2012.
+Performance differences between high and low number of primary vertices events are $\leq$~0.3\% and therefore negligible compared to other sources of uncertainties. The impact of pile-up might be larger in 2012 data.
 
 %See Fig.~\ref{fig:performanceinbinsMu}.
 \begin{figure}[tp]
@@ -305,7 +305,7 @@ The tracking efficiency systematics are given in bins of track $\eta$. For track
 %http://arxiv.org/abs/1012.5104
 
 The tracking variables were re-calculated and the performance of the nominal likelihood was evaluated in the new sample with worse tracking efficiency. The rejection-efficiency curves %plots, shown in Fig.~\ref{fig:trackefficiency},
- show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 $\pt$ bin/working points, without a clear $\pt$ dependence. We have thus taken the average over $\pt$, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points. The performance comparison is shown in in Fig.~\ref{fig:trackefficiency} for two $\pt$ bins. %Similar plots were produced for all other sources of uncertainties considered but are not shown in this note for brevity.
+ show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 $\pt$ bin/working points, without a clear $\pt$ dependence. We have thus taken the average over $\pt$, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points. The performance comparison is shown in Fig.~\ref{fig:trackefficiency} for two $\pt$ bins. %Similar plots were produced for all other sources of uncertainties considered but are not shown in this note for brevity.
 
 \begin{figure}[tp]
 \centering
@@ -338,8 +338,9 @@ The resulting fractional additional JES uncertainty for $b$-jets has an upper bo
 
 The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES.  The result is shown in Fig.~\ref{fig:jetresolution}a for a medium $\pt$ bin. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
 
-The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the {\sc pythia}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins,is typically 10\%.
-The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance, shown in Fig.~\ref{fig:jetresolution}b, is found to globally decrease by 6\%, without a particular $\pt$ dependence.
+The jet momentum resolution was measured for 2011 data and found to be in agreement with the predictions from the {\sc pythia}-based simulation~\cite{JER2011}. The precision of this measurement, determined in $\pt$ and $\eta$ bins, is typically 10\%.
+The systematic uncertainty due to the calorimeter jet $\pt$ resolution was estimated by over-smearing the jet $4$-momentum in the simulated data, without changing jet $\eta$ or $\phi$ angles. The performance, shown in Fig.~\ref{fig:jetresolution}b, is found to globally decrease by  % 6\%, 
+5\%, without a particular $\pt$ dependence.
 
 
 \begin{figure}[tp]
@@ -382,15 +383,15 @@ The different contributions to the systematic uncertainty on the merged $b$-jet 
   $b$-tagging efficiency     &  neglible     \\ 
   track reconstruction efficiency  &    4\%        \\ 
   track $\pt$ resolution &  neglible     \\
-  jet $\pt$ resolution  &    6\%        \\  
+  jet $\pt$ resolution  &    5\%        \\  
   jet energy scale  &    5\%        \\ \hline 
 \end{tabular}
-\caption{Systematic uncertainities in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
+\caption{Systematic uncertainties in the merged $b$-jet rejection (common to both the 50\% and the 60\% efficiency working points).}
 \label{tb:systematics}
 \end{table}
 
 
-Although the likelihood training was peformed in EM+JES calibrated jets, the performance of the tagger was also evaluated in jets calibrated with the LC+JES scheme, described in Section~\ref{sec:calib}.  A small degradation of the performance is observed, but comparable with the statistical uncerstainties. A comparison of the performances is shown in Fig.~\ref{fig:LCJES} for two $\pt$ bins, representative of the jet momentum range covered. 
+Although the likelihood training was peformed in EM+JES calibrated jets, the performance of the tagger was also evaluated in jets calibrated with the LC+JES scheme, described in Section~\ref{sec:calib}.  A small degradation of the performance is observed, but comparable with the statistical uncertanties. A comparison of the performances is shown in Fig.~\ref{fig:LCJES} for two $\pt$ bins, representative of the jet momentum range covered. 
 
 \begin{figure}[tp]
 \centering
@@ -419,7 +420,7 @@ Although the likelihood training was peformed in EM+JES calibrated jets, the per
 %------------------------------------------------------------------------
 %{\em Uncertainties due to the event modelling in the Monte Carlo generators}
 
-The development, training and performance determination of the tagger has been done using Monte Carlo events generated with the {\sc pythia} event simulator, interfaced to the {\sc geant4} based simulation of the ATLAS detector. An immediate question is what the performance would be if studied with a different simulation. In this section we investigate this question for the {\sc pythia} Perugia tune  and the {\sc herwig++} event generators.
+The development, training and performance determination of the tagger has been done using Monte Carlo events generated with the {\sc pythia} event simulator, interfaced to the {\sc geant4} based simulation of the ATLAS detector. An immediate question is what the performance would be if studied with a different simulation. In this section we investigate this question for the {\sc pythia} Perugia tune  and the {\sc herwig++} event generators (Section~\ref{sec:MCtools}).
 
 Fig.~\ref{fig:performanceotherMC} shows a comparison of the likelihood rejection, at the 50\% efficiency working point,  between nominal {\sc pythia} and the alternative simulations % for four selected $\pt$ bins covering the full kinematic range. 
 as a function of the jet $\pt$ . The larger errors are due to the reduced statistics available, which are even lower for the Perugia case than for {\sc herwig}.
@@ -428,7 +429,7 @@ as a function of the jet $\pt$ . The larger errors are due to the reduced statis
 
 %In order to account for the dependence on different generator models and tunes the likelihood performance was tested using other Monte Carlo simulations. Results with nominal Pythia were compared to the performance derived with dijet samples generated with Herwig++ and with the Perugia tune of Pythia. The comparison can be seen in Fig.~\ref{fig:performanceotherMC}. 
 
-The performance in {\sc herwig} shows a systematic trend, with agreement at low $\pt$ and increasingly poor performances compared to {\sc pythia} as $\pt$ grows. For the Perugia tune, on the other hand, there is no definite behavior, with the performance fluctuating above or below the nominal simulation for different $\pt$ bins consistently with the statistical uncertainties.
+The performance in {\sc herwig} shows a systematic trend, with agreement at low $\pt$ and increasingly poorer performances compared to {\sc pythia} as $\pt$ grows. For the Perugia tune, on the other hand, there is no definite behavior, with the performance fluctuating above or below the nominal simulation for different $\pt$ bins consistently with the statistical uncertainties.
 
 The reason for the systematic difference observed between the performances of {\sc pythia} and {\sc herwig} can be traced to the extent with which jets are accurately modelled. Fig.~\ref{fig:herwigdatamc} compares the measured jet track multiplicity distributions in $b$-tagged jets and the prediction from both simulations, for low and high $\pt$ jets. It is observed that indeed {\sc herwig++} does not correctly reproduce the data, particularly at high $\pt$. The level of agreement is found to be better for track-jet width and the $\Delta R$ between the axes of the two $k_t$ subjets in the jet, the two other variables used for discrimination.
 
@@ -463,7 +464,7 @@ The reason for the systematic difference observed between the performances of {\
 \section{Validation of the MVA output in data}\label{sec:MVAvalidation}
 %------------------------------------------------------------------------
 
-In Section~\ref{sec:gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simluation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
+In Section~\ref{sec:gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simulation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
 
 The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood output for different bins of jet $\pt$. The agreement is excellent.
 
