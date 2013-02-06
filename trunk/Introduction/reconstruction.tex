@@ -7,15 +7,22 @@
 \chapter{Event reconstruction and \emph{\textbf{b}}-Tagging }\label{ch:reco}
 
 
-The event reconstruction packages, which in ATLAS is implemented in the software framework {\sc athena}~\cite{Calafiura2005zz}, process the events, starting from the raw data obtained from the various sub-detectors (energy deposits and hits),  %processing them in many 
-through different stages and finally interpreting them as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
+The event reconstruction packages, which in ATLAS are implemented in the software framework {\sc athena}~\cite{Calafiura2005zz}, process the events, starting from the raw data obtained from the various sub-detectors (energy deposits and hits),  %processing them in many 
+through different stages to finally interpreting them as a set of charged tracks, electrons, photons, jets, muons and, in general, of possible kinds of final state objects with related four momenta.  
 In this chapter the reconstruction of these objects is briefly described together with the algorithms for the identification of $b$-quark jets.  These algorithms are mainly based on the reconstruction of the primary interaction vertex, on the reconstruction of charged particles in the Inner Detector and on the reconstruction of jets in the calorimeter.   
 
 %------------------------------------------------------------------------
 \section{Jet reconstruction and calibration}\label{sec:ObjSelection}
 %------------------------------------------------------------------------
 
-Hadronic jets used for ATLAS analyses are reconstructed by a jet algorithm, starting from the energy depositions of electromagnetic and hadronic showers in the calorimeters.  Two different size parameters are used: $R = 0.4$, for narrow jets, and $R = 0.6$, for wider jets. The default jet algorithm is the anti-$k_t$ algorithm, described in Chapter~\ref{ch:theory}. Due to the expected level of pile-up in the LHC, the primary factor that influenced the selection of this algorithm was the effect of multiple simultaneous interactions on the reconstruction of jets. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is highly susceptible to this effect. On the contrary, the anti-$k_t$ algorithm is the most stable after the introduction of pile-up~\cite{Asquith:1311867}.  
+Hadronic jets used for ATLAS analyses are reconstructed by a jet algorithm, starting from the energy depositions of electromagnetic and hadronic showers in the calorimeters. 
+%The default jet algorithm is the anti-$k_t$ algorithm, described in Chapter~\ref{ch:theory}. 
+The ATLAS performance group, addressing the calibration of jets and the missing transverse energy (Jet/Etmiss), has made the decision to adopt the anti-$k_t$ algorithm (Chapter~\ref{ch:theory}) as its default jet algorithm. This choice was driven by multiple requirements ranging from physics performance to those intimately involved with the computing, trigger and detector.
+The anti-$k_t$ algorithm is fast and its memory consumption is low. It is well adapted to algorithms used in the trigger and has the best jet reconstruction efficiency at low $\pt$. It exhibits the smallest fluctuations of the jet area (it is the most cone-like) showing good stability under pile-up~\cite{Asquith:1311867}.
+%Due to the expected level of pile-up in the LHC, the primary factor that influenced the selection of this algorithm was the effect of multiple simultaneous interactions on the reconstruction of jets. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is highly susceptible to this effect. On the contrary, the anti-$k_t$ algorithm is the most stable after the introduction of pile-up~\cite{Asquith:1311867}.  
+
+ Two different size parameters are used: $R = 0.4$, for narrow jets, more adecuate to describe the event substructure and associate matrix element partons to jets in multiparton final states; %($t\bar{t}, susy, $W$+jets, etc.)$
+and $R = 0.6$, for wider jets, with very little out of cone radiation, more suitable for QCD studies.
 
 The input to calorimeter jet reconstruction can be calorimeter towers or topological cell clusters. Charged particle tracks reconstructed in the Inner Detectors are also used to define jets. The latter have the further advantage of being insensitive to pile-up and they provide a stable reference for systematic studies. The jet inputs are combined as massless four-momentum objects in order to form the final four-momentum of the jet, which allows for a well-defined jet mass~\cite{Busato:1271710}. In the case of track-jets, the track four-momentum is constructed assuming the $\pi$ meson mass for each track.  In Monte Carlo simulation, reference jets (``truth jets'') are formed from simulated stable particles using the same jet algorithm as for the calorimeter jets. 
 
