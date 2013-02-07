@@ -42,33 +42,40 @@ The purpose of the jet energy calibration, or jet energy scale (JES), is to corr
 Due to the varying calorimeter coverage, detector technology, and amount of upstream inactive material, the calibration that must be applied to each jet to bring it to the hadronic scale varies with its $\eta$ position within the detector. 
 %The jet energy is first reconstructed from the constituent cell energies at EM scale. These cells have been calibrated to return the energy corresponding to electromagnetic showers in the calorimeter, based on test-beam injection of electrons and pions~\cite{Aharrouche2006601},  measurements of cosmic muons~\cite{Cooke:1071187} and the reconstruction of the $Z$ mass peak in $Z \rightarrow ee$ decays~\cite{Aad:2011mk}. The correction for the lower response to hadrons is based on the topology of the energy depositions observed in the calorimeter. 
 
+A number of complex calibration schemes, taking into account these effects, have been developed in ATLAS. The simplest procedure used for 2011 data, referred to as ``EM+JES'' calibration, utilizes an energy and $\eta$-dependent calibration scheme that is primarily based on Monte Carlo simulation with some direct in-situ measurements. This is the calibration used in this thesis. It consists of three subsequent steps:
 
-In the simplest case the measured jet energy is corrected, on average, using Monte Carlo simulations, as follows:
+%In the simplest case the measured jet energy is corrected, on average, using Monte Carlo simulations, as follows:
 %
-\begin{equation}
-E^{jet}_{calib} = E^{jet}_{meas} /\mathcal{F}_{calib}(E^{jet}_{meas}),\; \; \mbox{with} \;  E^{jet}_{meas} = E^{jet}_{EM} - \mathcal{O}(\mbox{NPV}),
-\end{equation}
+%\begin{equation}
+%E^{jet}_{calib} = E^{jet}_{meas} /\mathcal{F}_{calib}(E^{jet}_{meas}),\; \; \mbox{with} \;  E^{jet}_{meas} = E^{jet}_{EM} - \mathcal{O}(\mbox{NPV}),
+%\end{equation}
 %
-where $E^{jet}_{EM}$ is the calorimeter energy measured at the electromagnetic scale, $E^{jet}_{calib}$ is the calibrated energy and $\mathcal{F}_{calib}$ is the calibration function that depends on the measured jet energy and is evaluated in small jet $\eta$ regions. The variable $ \mathcal{O}(\mbox{NPV})$ denotes the correction for additional energy from multiple proton-proton interactions depending on the number of primary vertices (NPV).
+%where $E^{jet}_{EM}$ is the calorimeter energy measured at the electromagnetic scale, $E^{jet}_{calib}$ is the calibrated energy and $\mathcal{F}_{calib}$ is the calibration function that depends on the measured jet energy and is evaluated in small jet $\eta$ regions. The variable $ \mathcal{O}(\mbox{NPV})$ denotes the correction for additional energy from multiple proton-proton interactions depending on the number of primary vertices (NPV).
 
-The simplest calibration scheme and the one used in this thesis is the so called ``EM+JES''. This calibration applies the corrections as a function of the jet energy and pseudorapidity to jets reconstructed at the electromagnetic scale.  The additional energy due to multiple proton-proton collisions within the same bunch crossing (pile-up) is corrected before the hadronic energy scale is restored, such that the derivation of the jet energy scale calibration is factorised and does not depend on the number of additional interactions in the event. The EM+JES calibration scheme consists of three subsequent steps:
+ 
 
 \begin{itemize}
 \item
-Pile-up correction: An offset correction is applied in order to substract the additional average energy measured in the calorimeter due to multiple proton-proton interactions. This correction is derived from minimum bias data as a function of NPV, the jet pseudorapidity and the bunch spacing.
+Pile-up correction: An offset correction is applied in order to substract the additional average energy measured in the calorimeter due to multiple proton-proton interactions. This correction is derived from minimum bias data %using events from a trigger stream containing triggers for all calorimeter objects
+ as a function of NPV, the jet pseudorapidity and the bunch spacing. This additional energy is substracted before the hadronic energy scale is restored such that the derivation of the jet energy scale calibration is factorized and does not depend on the number of interactions in the event.
 \item
 Vertex correction: The jet four momentum is corrected such that the jet originates from the primary vertex of the interaction instead of the geometrical centre of the detector. 
 \item
 Jet energy and direction correction: The jet energy and direction are corrected using constants derived from the comparison of the kinematic observables of reconstructed jets and those from truth jets in the simulation.
 \end{itemize}
 
-In the final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet.  The EM scale response is written as,
+In the final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet.  The EM scale jet response is written as,
 %
 \begin{equation}
 R^{jet}_{EM} = E^{jet}_{EM} / E^{jet}_{truth}
 \end{equation}
 %
-To compute this quantity, reconstructed jets must be matched to isolated jets in the Monte Carlo within $\Delta R < 0.3$. The isolation requirement is applied in order to factorize the effects due to close-by jets from those due to purely detector effects such as dead material and non-compensation. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2.5R$, where $R$ is the distance parameter of the jet algorithm. The EM scale energy response is binned in truth jet energy, $E^{jet}_{truth}$, and the calorimeter jet detector $\eta$.  For each $(E^{jet}_{truth}, \eta)$-bin, the averaged jet response is defined as the peak position of a Gaussian fit to the $E^{jet}_{EM} / E^{jet}_{truth}$ distribution.  A function $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is parameterised as:
+where $E^{jet}_{truth}$ is the energy of the closest isolated truth jet, built of all truth stable interacting particles, within $\Delta R < 0.3$. This value was chosen because it results in a reconstructed-to-truth jet match more than 99\% of the times.
+The isolation requirement is applied in order to factorize the effects due to close-by jets from those due to purely detector effects such as dead material and non-compensation. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2.5R$, where $R$ is the distance parameter of the jet algorithm.
+
+ The EM scale energy response is binned in truth jet energy, $E^{jet}_{truth}$, in order to remove the impact of the underlying $\pt$ spectrum, and the calorimeter jet detector $\eta$.  For each $(E^{jet}_{truth}, \eta)$-bin, the averaged jet response is defined as the peak position of a Gaussian fit to the $E^{jet}_{EM} / E^{jet}_{truth}$ distribution.  
+%HASTA ACA!
+A function $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is parameterised as:
 %
 \begin{equation}
 \mathcal{F}_{calib,k}(E^{jet}_{EM}) = \sum_{i=0}^{N_{max}} a_{i,k} (\ln E^{jet}_{EM})^i,
