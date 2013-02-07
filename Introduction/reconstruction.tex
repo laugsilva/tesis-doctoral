@@ -64,30 +64,37 @@ Vertex correction: The jet four momentum is corrected such that the jet originat
 Jet energy and direction correction: The jet energy and direction are corrected using constants derived from the comparison of the kinematic observables of reconstructed jets and those from truth jets in the simulation.
 \end{itemize}
 
-In the final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a truth jet.  The EM scale jet response is written as,
+In the final step the calibration is derived in terms of the energy response of the jet, or the ratio of the reconstructed jet energy to that of a ``truth'' jet built of all truth stable interacting particles in the Monte Carlo. This response, written as
 %
 \begin{equation}
-R^{jet}_{EM} = E^{jet}_{EM} / E^{jet}_{truth}
+\mathcal{R} = E_{reco} / E_{truth}
+ \label{eqn:response}
 \end{equation}
 %
-where $E^{jet}_{truth}$ is the energy of the closest isolated truth jet, built of all truth stable interacting particles, within $\Delta R < 0.3$. This value was chosen because it results in a reconstructed-to-truth jet match more than 99\% of the times.
+may be defined at any energy scale. In Equation~\ref{eqn:response}, $E_{truth}$ is the energy of the closest isolated truth jet, within $\Delta R < 0.3$. This value was chosen because it results in a reconstructed-to-truth jet match more than 99\% of the times.
 The isolation requirement is applied in order to factorize the effects due to close-by jets from those due to purely detector effects such as dead material and non-compensation. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2.5R$, where $R$ is the distance parameter of the jet algorithm.
 
- The EM scale energy response is binned in truth jet energy, $E^{jet}_{truth}$, in order to remove the impact of the underlying $\pt$ spectrum, and the calorimeter jet detector $\eta$.  For each $(E^{jet}_{truth}, \eta)$-bin, the averaged jet response is defined as the peak position of a Gaussian fit to the $E^{jet}_{EM} / E^{jet}_{truth}$ distribution.  
-%HASTA ACA!
-A function $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is parameterised as:
+ The jet energy response is binned in truth jet energy and the calorimeter jet $\eta$.  For each $(E_{truth}, \eta)$-bin, the averaged jet energy ($\pt$) response is defined as the peak position of a Gaussian fit to the $E_{reco} / E_{truth}$ ($\pt^{reco} / \pt^{truth}$) distribution.  
+
+
+The EM+JES calibration constants consist in the inverse of the response: $\mathcal{C}(\pt^{EM})=\mathcal{R}^{-1}_{reco}(\pt^{EM})$, where $\mathcal{C}$ is the calibration constant and $\mathcal{R}_{reco}$ is the response calculated as a function of reconstructed jet $\pt$. They are derived as a function of $\pt^{truth}$, to remove the impact of the underlying $\pt$ spectrum on the response.  The response determined as a function of $\pt^{truth}$, $\mathcal{R}_{truth}$, is used to apply the constants as a function of $\pt^{EM}$, that is $\mathcal{R}_{reco}(\pt^{EM})=\mathcal{R}_{truth}(\mathcal{R}_{truth}\cdot \pt^{truth})$. This relationship is valid in ATLAS due to the linearity of the jet response as a function of $\pt$.
+
+%A function $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is parameterised as:
+%%
+%\begin{equation}
+%\mathcal{F}_{calib,k}(E^{jet}_{EM}) = \sum_{i=0}^{N_{max}} a_{i,k} (\ln E^{jet}_{EM})^i,
+%\end{equation}
+%%
+%where $a_i$ are free parameters, and $N_{max}$ is chosen between 1 and 6 depending on the goodness of the fit. 
+
+The final jet energy scale correction that relates the jet energy measured at EM scale to the hadronic scale is then  % defined as $1/\mathcal{F}_{calib,k}(E^{jet}_{EM})$ in the following:
 %
 \begin{equation}
-\mathcal{F}_{calib,k}(E^{jet}_{EM}) = \sum_{i=0}^{N_{max}} a_{i,k} (\ln E^{jet}_{EM})^i,
+%E^{jet}_{EM+JES} = \frac{E^{jet}_{EM}}{\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}},
+E^{EM+JES} = \mathcal{C}E^{EM}.
 \end{equation}
 %
-where $a_i$ are free parameters, and $N_{max}$ is chosen between 1 and 6 depending on the goodness of the fit. The final jet energy scale correction that relates the measured calorimeter jet energy scale to the hadronic scale is then defined as $1/\mathcal{F}_{calib,k}(E^{jet}_{EM})$ in the following:
-%
-\begin{equation}
-E^{jet}_{EM+JES} = \frac{E^{jet}_{EM}}{\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}},
-\end{equation}
-%
-where $\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}$  is $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ for the relevant $\eta$-bin $k$.
+%where $\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}$  is $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ for the relevant $\eta$-bin $k$.
 
 
 Other calibrations schemes are the global calorimeter cell weighting (GCW) calibration and the local cluster weighting (LCW) calibration.  The GCW scheme exploits the observation that electromagnetic showers in the calorimeter leave more compact energy depositions than hadronic showers with the same energy.  Energy corrections are derived for each cell within a jet.  The cell corrections account for all energy losses of a jet in the detector. Since these corrections are only applicable to jets and not to energy depositions, they are called ``global'' corrections.

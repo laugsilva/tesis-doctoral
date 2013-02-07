@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  7 FEB 2013 12:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  7 FEB 2013 20:07
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -241,16 +241,16 @@ LaTeX Warning: Reference `ch:theory' on page 29 undefined on input line 20.
 
 
 
-] [30] [31] [32]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
+] [30] [31]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 59.
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
+ [32]
 [33]
-Overfull \hbox (6.41562pt too wide) in paragraph at lines 86--87
+Overfull \hbox (6.41562pt too wide) in paragraph at lines 97--98
 []\T1/cmr/m/n/12 Other cal-i-bra-tions schemes are the global calorime-ter cell
  weight-ing (GCW)
  []
@@ -264,7 +264,7 @@ File: bjetsJESUncertainty.png Graphic file (type png)
 
 <use bjetsJESUncertainty.png> [38] [39 <./bjetsJESUncertainty.png (PNG copy)>]
 [40] [41] [42]
-Overfull \hbox (0.85825pt too wide) in paragraph at lines 187--188
+Overfull \hbox (0.85825pt too wide) in paragraph at lines 198--199
 []\T1/cmr/m/n/12 A $\OML/cmm/m/it/12 b$\T1/cmr/m/n/12 -quark, once pro-duced, f
 rag-ments nec-es-sar-ily into a $\OML/cmm/m/it/12 b$\T1/cmr/m/n/12 -flavoured h
 adron,
@@ -281,13 +281,8 @@ File: btaggingperformance.png Graphic file (type png)
 [55] [56]) [57] (./tesis.bbl [58
 
 
-]
-Underfull \hbox (badness 6842) in paragraph at lines 49--64
-[]\T1/cmr/m/n/12 M. Ahar-rouche, C. Adam-Bourdarios, M. Aleksa, D. Banfi,
- []
-
-[59]
-Underfull \hbox (badness 1694) in paragraph at lines 128--133
+] [59]
+Underfull \hbox (badness 1694) in paragraph at lines 135--140
 \T1/cmr/m/it/12 Zeitschrift fur Physik C Par-ti-cles and Fields\T1/cmr/m/n/12 ,
  11:169--174, 1981.
  []
@@ -306,10 +301,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1997 strings out of 495061
- 24249 string characters out of 1182621
- 77069 words of memory out of 3000000
- 5131 multiletter control sequences out of 15000+50000
+ 2000 strings out of 495061
+ 24296 string characters out of 1182621
+ 77088 words of memory out of 3000000
+ 5134 multiletter control sequences out of 15000+50000
  29352 words of font info for 65 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,9n,21p,1706b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -338,7 +333,7 @@ ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/pub
 lic/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on tesis.pdf (67 pages, 10513205 bytes).
+Output written on tesis.pdf (67 pages, 10513643 bytes).
 PDF statistics:
  867 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

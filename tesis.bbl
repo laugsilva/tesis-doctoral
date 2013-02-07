@@ -46,16 +46,7 @@ G.~Aad et~al.
 \newblock {\em {Journal of Instrumentation}}, {5}({11}):{P11006}, {2010}.
 
 \bibitem{Aharrouche2010400}
-M.~Aharrouche, C.~Adam-Bourdarios, M.~Aleksa, D.~Banfi, D.~Benchekroun,
-  K.~Benslama, M.~Boonekamp, T.~Carli, L.~Carminati, H.~Chen, M.~Citterio,
-  D.~Dannheim, M.~Delmastro, F.~Derue, B.~Di Girolamo, M.~El Kacimi, M.~Fanti,
-  R.~Froeschl, D.~Fournier, K.-J. Grahn, M.~Kado, N.~Kerschen, R.~Lafaye,
-  B.~Laforge, W.~Lampl, S.~Laplace, M.~Lechowski, D.~Lelas, Z.~Liang,
-  K.~Loureiro, B.~Lund-Jensen, H.~Ma, L.~Mandelli, M.~Mazzanti, R.~McPherson,
-  Z.~Meng, S.~Paganis, D.~Prieur, P.~Puzo, M.~Ridel, I.~Riu, D.~Rousseau,
-  G.~Sauvage, P.~Schwemling, S.~Simion, F.~Spano, A.~Straessner, F.~Tarrade,
-  F.~Tartarelli, M.~Thioye, G.~Unal, H.~Wilkens, I.~Wingerter-Seez, and
-  H.~Zhang.
+M.~Aharrouche et~al.
 \newblock Measurement of the response of the atlas liquid argon barrel
   calorimeter to electrons at the 2004 combined test-beam.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
@@ -77,6 +68,22 @@ M.~Aharrouche et~al.
 \newblock {\em {Nuclear Instruments and Methods in Physics Research Section A:
   Accelerators, Spectrometers, Detectors and Associated Equipment}}, 568(2):601
   -- 623, 2006.
+
+\bibitem{Cojocaru2004481}
+M.~Cojocaru et~al.
+\newblock Hadronic calibration of the atlas liquid argon end-cap calorimeter in
+  the pseudorapidity region in beam tests.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 531(3):481
+  -- 514, 2004.
+
+\bibitem{Pinfold2008324}
+J.~Pinfold et~al.
+\newblock Performance of the atlas liquid argon endcap calorimeter in the
+  pseudorapidity region in beam tests.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 593(3):324
+  -- 342, 2008.
 
 \bibitem{Calafiura2005zz}
 {Calafiura, P. and Lavrijsen, W. and Leggett, C. and Marino, M. and Quarrie,
