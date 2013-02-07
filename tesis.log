@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  6 FEB 2013 19:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  7 FEB 2013 12:52
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -122,7 +122,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )) (./tesis.aux
-(./Introduction/reconstruction.aux
+(./Introduction/lhc_atlas.aux) (./Introduction/reconstruction.aux
 
 LaTeX Warning: Label `sec:trackreco' multiply defined.
 
@@ -179,73 +179,125 @@ Missing character: There is no ’ in font cmr8!
  [1
 
 ]
+\openout2 = `Introduction/lhc_atlas.aux'.
+
+ (./Introduction/lhc_atlas.tex
+Chapter 1.
+<Fig2/CERNacceleratorcomplexCut.pdf, id=43, 912.40875pt x 747.79375pt>
+File: Fig2/CERNacceleratorcomplexCut.pdf Graphic file (type pdf)
+
+<use Fig2/CERNacceleratorcomplexCut.pdf> [2
+
+
+] [3 <./Fig2/CERNacceleratorcomplexCut.pdf>] [4] [5] <Fig2/peakAvgMuByDay.pdf, 
+id=62, 569.12625pt x 408.52625pt>
+File: Fig2/peakAvgMuByDay.pdf Graphic file (type pdf)
+
+<use Fig2/peakAvgMuByDay.pdf> [6] [7 <./Fig2/peakAvgMuByDay.pdf>]
+<Fig2/sumLumiByDay.pdf, id=76, 569.12625pt x 408.52625pt>
+File: Fig2/sumLumiByDay.pdf Graphic file (type pdf)
+
+<use Fig2/sumLumiByDay.pdf> [8 <./Fig2/sumLumiByDay.pdf>] [9]
+Missing character: There is no â in font cmr12!
+Missing character: There is no ˆ in font cmr12!
+Missing character: There is no ’ in font cmr12!
+
+<Fig2/ATLASDetector.pdf, id=90, 810.52812pt x 520.94624pt>
+File: Fig2/ATLASDetector.pdf Graphic file (type pdf)
+
+<use Fig2/ATLASDetector.pdf> [10] [11 <./Fig2/ATLASDetector.pdf>]
+<Fig2/InnerDetector.pdf, id=101, 3614.00188pt x 2409.34137pt>
+File: Fig2/InnerDetector.pdf Graphic file (type pdf)
+
+<use Fig2/InnerDetector.pdf> [12] [13 <./Fig2/InnerDetector.pdf>] [14] [15]
+<Fig2/Calorimeters.pdf, id=120, 810.52812pt x 545.53813pt>
+File: Fig2/Calorimeters.pdf Graphic file (type pdf)
+
+<use Fig2/Calorimeters.pdf> [16] [17 <./Fig2/Calorimeters.pdf>]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [18]
+<Fig2/EM_acordionstructure.pdf, id=134, 710.655pt x 627.34375pt>
+File: Fig2/EM_acordionstructure.pdf Graphic file (type pdf)
+
+<use Fig2/EM_acordionstructure.pdf> [19] [20 <./Fig2/EM_acordionstructure.pdf>]
+[21] [22] <Fig2/MuonChamber.pdf, id=158, 3012.42432pt x 2259.50154pt>
+File: Fig2/MuonChamber.pdf Graphic file (type pdf)
+
+<use Fig2/MuonChamber.pdf> [23 <./Fig2/MuonChamber.pdf>] [24] [25] [26])
+[27] [28]
 \openout2 = `Introduction/reconstruction.aux'.
 
  (./Introduction/reconstruction.tex
-Chapter 1.
+Chapter 2.
 
-LaTeX Warning: Reference `ch:theory' on page 2 undefined on input line 20.
+LaTeX Warning: Reference `ch:theory' on page 29 undefined on input line 20.
 
-[2
+[29
 
 
-] [3] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
+
+] [30] [31] [32]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
- [6]
-Overfull \hbox (6.41562pt too wide) in paragraph at lines 85--86
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+
+[33]
+Overfull \hbox (6.41562pt too wide) in paragraph at lines 86--87
 []\T1/cmr/m/n/12 Other cal-i-bra-tions schemes are the global calorime-ter cell
  weight-ing (GCW)
  []
 
-[7] [8] <JESUncertainty.png, id=74, 518.93875pt x 363.3575pt>
+[34] [35] <JESUncertainty.png, id=206, 518.93875pt x 363.3575pt>
 File: JESUncertainty.png Graphic file (type png)
 
-<use JESUncertainty.png> [9] [10 <./JESUncertainty.png (PNG copy)>]
-<bjetsJESUncertainty.png, id=81, 539.01375pt x 359.3425pt>
+<use JESUncertainty.png> [36] [37 <./JESUncertainty.png (PNG copy)>]
+<bjetsJESUncertainty.png, id=213, 539.01375pt x 359.3425pt>
 File: bjetsJESUncertainty.png Graphic file (type png)
 
-<use bjetsJESUncertainty.png>
-
-LaTeX Warning: Reference `atlasID' on page 11 undefined on input line 132.
-
-
-LaTeX Warning: Reference `ch:lhc_atlas' on page 11 undefined on input line 132.
-
-
-[11] [12 <./bjetsJESUncertainty.png (PNG copy)>] [13] [14] [15]
-Overfull \hbox (0.85825pt too wide) in paragraph at lines 186--187
+<use bjetsJESUncertainty.png> [38] [39 <./bjetsJESUncertainty.png (PNG copy)>]
+[40] [41] [42]
+Overfull \hbox (0.85825pt too wide) in paragraph at lines 187--188
 []\T1/cmr/m/n/12 A $\OML/cmm/m/it/12 b$\T1/cmr/m/n/12 -quark, once pro-duced, f
 rag-ments nec-es-sar-ily into a $\OML/cmm/m/it/12 b$\T1/cmr/m/n/12 -flavoured h
 adron,
  []
 
-[16] [17] [18] [19] <signedFinal.png, id=115, 689.57625pt x 429.605pt>
+[43] [44] [45] [46] <signedFinal.png, id=245, 689.57625pt x 429.605pt>
 File: signedFinal.png Graphic file (type png)
 
-<use signedFinal.png> [20] [21 <./signedFinal.png (PNG copy)>] [22] [23]
-[24] [25] [26] <btaggingperformance.png, id=139, 612.2875pt x 579.16376pt>
+<use signedFinal.png> [47] [48 <./signedFinal.png (PNG copy)>] [49] [50]
+[51] [52] [53] <btaggingperformance.png, id=268, 612.2875pt x 579.16376pt>
 File: btaggingperformance.png Graphic file (type png)
 
-<use btaggingperformance.png> [27 <./btaggingperformance.png (PNG copy)>]
-[28] [29]) [30] (./tesis.bbl [31
+<use btaggingperformance.png> [54 <./btaggingperformance.png (PNG copy)>]
+[55] [56]) [57] (./tesis.bbl [58
 
 
 ]
-Underfull \hbox (badness 1694) in paragraph at lines 73--78
+Underfull \hbox (badness 6842) in paragraph at lines 49--64
+[]\T1/cmr/m/n/12 M. Ahar-rouche, C. Adam-Bourdarios, M. Aleksa, D. Banfi,
+ []
+
+[59]
+Underfull \hbox (badness 1694) in paragraph at lines 128--133
 \T1/cmr/m/it/12 Zeitschrift fur Physik C Par-ti-cles and Fields\T1/cmr/m/n/12 ,
  11:169--174, 1981.
  []
 
-[32] [33]
+[60] [61]
 Missing character: There is no â in font cmr8!
 Missing character: There is no ˆ in font cmr8!
 Missing character: There is no ’ in font cmr8!
-) [34] (./tesis.aux (./Introduction/reconstruction.aux))
+) [62] (./tesis.aux (./Introduction/lhc_atlas.aux)
+(./Introduction/reconstruction.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -254,19 +306,19 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1922 strings out of 495061
- 22581 string characters out of 1182621
- 75530 words of memory out of 3000000
- 5072 multiletter control sequences out of 15000+50000
+ 1997 strings out of 495061
+ 24249 string characters out of 1182621
+ 77069 words of memory out of 3000000
+ 5131 multiletter control sequences out of 15000+50000
  29352 words of font info for 65 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,8n,21p,1706b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,21p,1706b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/l
-augs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/laugs/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/laugs/.texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecbx1728.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-eccc1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi2488.60
+augs/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/laugs/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecbi2488.600pk> </home/laugs/.texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrm0700.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecrm0800.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.60
 0pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home
 /laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/laugs/.tex
 mf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home/laugs/.texmf-var/font
@@ -286,9 +338,9 @@ ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/pub
 lic/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on tesis.pdf (39 pages, 652018 bytes).
+Output written on tesis.pdf (67 pages, 10513205 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
+ 867 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
