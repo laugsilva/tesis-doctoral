@@ -1,6 +1,5 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/lhc_atlas.aux
 A level-1 auxiliary file: Introduction/reconstruction.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
@@ -12,51 +11,46 @@ I was expecting a `,' or a `}'---line 47 of file tesis.bib
  :   year = "
  :           {1973}",
 I'm skipping whatever remains of this entry
-Repeated entry---line 1825 of file tesis.bib
- : @article{Aharrouche2006601
- :                           ,
-I'm skipping whatever remains of this entry
-Warning--empty journal in ATLAS
 Warning--empty journal in Calafiura2005zz
-You've used 33 entries,
+You've used 21 entries,
             1791 wiz_defined-function locations,
-            626 strings with 9088 characters,
-and the built_in function-call counts, 5844 in all, are:
-= -- 514
-> -- 201
+            559 strings with 7008 characters,
+and the built_in function-call counts, 3594 in all, are:
+= -- 312
+> -- 133
 < -- 1
-+ -- 85
-- -- 52
-* -- 301
-:= -- 994
-add.period$ -- 100
-call.type$ -- 33
-change.case$ -- 32
++ -- 56
+- -- 35
+* -- 167
+:= -- 627
+add.period$ -- 64
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 288
-empty$ -- 608
-format.name$ -- 52
-if$ -- 1294
+cite$ -- 22
+duplicate$ -- 184
+empty$ -- 364
+format.name$ -- 35
+if$ -- 791
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 34
-newline$ -- 169
-num.names$ -- 33
-pop$ -- 81
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 109
+num.names$ -- 21
+pop$ -- 52
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 119
+skip$ -- 79
 stack$ -- 0
-substring$ -- 313
-swap$ -- 40
+substring$ -- 154
+swap$ -- 29
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 47
-width$ -- 35
-write$ -- 346
-(There were 3 error messages)
+warning$ -- 1
+while$ -- 29
+width$ -- 23
+write$ -- 220
+(There were 2 error messages)

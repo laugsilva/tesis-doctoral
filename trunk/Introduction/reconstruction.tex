@@ -17,8 +17,7 @@ In this chapter the reconstruction of these objects is briefly described togethe
 
 Hadronic jets used for ATLAS analyses are reconstructed by a jet algorithm, starting from the energy depositions of electromagnetic and hadronic showers in the calorimeters. 
 %The default jet algorithm is the anti-$k_t$ algorithm, described in Chapter~\ref{ch:theory}. 
-The ATLAS performance group, addressing the calibration of jets and the missing transverse energy (Jet/Etmiss), has made the decision to adopt the anti-$k_t$ algorithm (Chapter~\ref{ch:theory}) as its default jet algorithm. This choice was driven by multiple requirements ranging from physics performance to those intimately involved with the computing, trigger and detector.
-The anti-$k_t$ algorithm is fast and its memory consumption is low. It is well adapted to algorithms used in the trigger and has the best jet reconstruction efficiency at low $\pt$. It exhibits the smallest fluctuations of the jet area (it is the most cone-like) showing good stability under pile-up~\cite{Asquith:1311867}.
+The ATLAS performance group, addressing the calibration of jets and the missing transverse energy (Jet/Etmiss), has made the decision to adopt the anti-$k_t$ algorithm (Chapter~\ref{ch:theory}) as its default jet algorithm. This choice was driven by multiple requirements ranging from physics performance to those intimately involved with the computing, trigger and detector: the anti-$k_t$ algorithm is fast and its memory consumption is low, it is well adapted to algorithms used in the trigger, and it has the best jet reconstruction efficiency at low $\pt$. Moreover, this algorithm exhibits the smallest fluctuations of the jet area showing good stability under pile-up~\cite{Asquith:1311867}.
 %Due to the expected level of pile-up in the LHC, the primary factor that influenced the selection of this algorithm was the effect of multiple simultaneous interactions on the reconstruction of jets. The original ATLAS cone algorithm, known to contain infrared and collinear sensitivity, is highly susceptible to this effect. On the contrary, the anti-$k_t$ algorithm is the most stable after the introduction of pile-up~\cite{Asquith:1311867}.  
 
  Two different size parameters are used: $R = 0.4$, for narrow jets, more adecuate to describe the event substructure and associate matrix element partons to jets in multiparton final states; %($t\bar{t}, susy, $W$+jets, etc.)$
@@ -77,7 +76,14 @@ The isolation requirement is applied in order to factorize the effects due to cl
  The jet energy response is binned in truth jet energy and the calorimeter jet $\eta$.  For each $(E_{truth}, \eta)$-bin, the averaged jet energy ($\pt$) response is defined as the peak position of a Gaussian fit to the $E_{reco} / E_{truth}$ ($\pt^{reco} / \pt^{truth}$) distribution.  
 
 
-The EM+JES calibration constants consist in the inverse of the response: $\mathcal{C}(\pt^{EM})=\mathcal{R}^{-1}_{reco}(\pt^{EM})$, where $\mathcal{C}$ is the calibration constant and $\mathcal{R}_{reco}$ is the response calculated as a function of reconstructed jet $\pt$. They are derived as a function of $\pt^{truth}$, to remove the impact of the underlying $\pt$ spectrum on the response.  The response determined as a function of $\pt^{truth}$, $\mathcal{R}_{truth}$, is used to apply the constants as a function of $\pt^{EM}$, that is $\mathcal{R}_{reco}(\pt^{EM})=\mathcal{R}_{truth}(\mathcal{R}_{truth}\cdot \pt^{truth})$. This relationship is valid in ATLAS due to the linearity of the jet response as a function of $\pt$.
+The EM+JES calibration constants consist in the inverse of the response: $\mathcal{C}(\pt^{EM})=\mathcal{R}^{-1}_{reco}(\pt^{EM})$, where $\mathcal{C}$ is the calibration constant and $\mathcal{R}_{reco}$ is the response calculated as a function of reconstructed jet $\pt$. They are derived as a function of $\pt^{truth}$, to remove the impact of the underlying $\pt$ spectrum on the response.  The jet response determined as a function of $\pt^{truth}$, $\mathcal{R}_{truth}$, is used to apply the constants as a function of $\pt^{EM}$, that is $\mathcal{R}_{reco}(\pt^{EM})=\mathcal{R}_{truth}(\mathcal{R}_{truth}\cdot \pt^{truth})$. This relationship is valid in ATLAS due to the linearity of the jet response as a function of $\pt$.
+The correct energy scale is obtained by multiplying the EM scale energy of a jet by  the calibration constant 
+%
+\begin{equation}
+%E^{jet}_{EM+JES} = \frac{E^{jet}_{EM}}{\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}},
+E^{EM+JES} = \mathcal{C}E^{EM}.
+\end{equation}
+%
 
 %A function $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is then defined for each $\eta$-bin $k$ that describes the response as a function of the uncalibrated jet energy. $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ is parameterised as:
 %%
@@ -86,13 +92,12 @@ The EM+JES calibration constants consist in the inverse of the response: $\mathc
 %\end{equation}
 %%
 %where $a_i$ are free parameters, and $N_{max}$ is chosen between 1 and 6 depending on the goodness of the fit. 
-
-The final jet energy scale correction that relates the jet energy measured at EM scale to the hadronic scale is then  % defined as $1/\mathcal{F}_{calib,k}(E^{jet}_{EM})$ in the following:
+%The final jet energy scale correction that relates the jet energy measured at EM scale to the hadronic scale is then  % defined as $1/\mathcal{F}_{calib,k}(E^{jet}_{EM})$ in the following:
 %
-\begin{equation}
+%\begin{equation}
 %E^{jet}_{EM+JES} = \frac{E^{jet}_{EM}}{\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}},
-E^{EM+JES} = \mathcal{C}E^{EM}.
-\end{equation}
+%E^{EM+JES} = \mathcal{C}E^{EM}.
+%\end{equation}
 %
 %where $\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}$  is $\mathcal{F}_{calib,k}(E^{jet}_{EM})$ for the relevant $\eta$-bin $k$.
 
