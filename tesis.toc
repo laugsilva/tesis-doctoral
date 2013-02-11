@@ -1,29 +1,14 @@
-\contentsline {chapter}{\numberline {1}The ATLAS Detector at the LHC}{2}
-\contentsline {section}{\numberline {1.1}The Large Hadron Collider}{2}
-\contentsline {subsection}{\numberline {1.1.1}Luminosity and pile-up}{6}
-\contentsline {section}{\numberline {1.2}The ATLAS Detector}{9}
-\contentsline {subsection}{\numberline {1.2.1}Inner Tracking System}{12}
-\contentsline {subsubsection}{The Pixel detector}{12}
-\contentsline {subsubsection}{The SCT}{14}
-\contentsline {subsubsection}{The TRT}{14}
-\contentsline {subsection}{\numberline {1.2.2}The Calorimeter System}{15}
-\contentsline {subsubsection}{Liquid argon EM calorimeter}{17}
-\contentsline {subsubsection}{The hadronic calorimeter}{19}
-\contentsline {subsection}{\numberline {1.2.3}The Muon System}{22}
-\contentsline {subsection}{\numberline {1.2.4}Forward Detectors}{24}
-\contentsline {subsection}{\numberline {1.2.5}Trigger and Data Adquisition System}{24}
-\contentsline {subsection}{\numberline {1.2.6}ATLAS performance and data quality}{26}
-\contentsline {chapter}{\numberline {2}Event reconstruction and \emph {\textbf {b}}-Tagging }{29}
-\contentsline {section}{\numberline {2.1}Jet reconstruction and calibration}{29}
-\contentsline {subsubsection}{Jet calibration}{31}
-\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{36}
-\contentsline {section}{\numberline {2.2}Reconstruction of charged particle tracks}{40}
-\contentsline {section}{\numberline {2.3}Vertex reconstruction}{42}
-\contentsline {section}{\numberline {2.4} $b$-jet Tagging}{43}
-\contentsline {subsubsection}{Association of tracks to jets}{45}
-\contentsline {subsection}{\numberline {2.4.1}$b$-tagging algorithms}{47}
-\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{47}
-\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{50}
-\contentsline {subsubsection}{Algorithm combinations and performance}{53}
-\contentsline {subsubsection}{The MV1 tagging algorithm}{55}
-\contentsline {subsection}{\numberline {2.4.2}$b$-tagging calibration}{55}
+\contentsline {chapter}{\numberline {1}Event reconstruction and \emph {\textbf {b}}-Tagging }{2}
+\contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{2}
+\contentsline {subsubsection}{Jet calibration}{4}
+\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{8}
+\contentsline {section}{\numberline {1.2}Reconstruction of charged particle tracks}{11}
+\contentsline {section}{\numberline {1.3}Vertex reconstruction}{15}
+\contentsline {section}{\numberline {1.4} $b$-jet Tagging}{16}
+\contentsline {subsubsection}{Association of tracks to jets}{18}
+\contentsline {subsection}{\numberline {1.4.1}$b$-tagging algorithms}{19}
+\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{19}
+\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{23}
+\contentsline {subsubsection}{Algorithm combinations and performance}{26}
+\contentsline {subsubsection}{The MV1 tagging algorithm}{27}
+\contentsline {subsection}{\numberline {1.4.2}$b$-tagging calibration}{28}
