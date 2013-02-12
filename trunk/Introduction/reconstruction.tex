@@ -285,20 +285,22 @@ The lifetime sign can also be defined on the transverse plane $(x-y)$ or on the 
 \end{equation}
 %
 %PLOTS TO DO
-%Distributions for the transverse and longitudinal impact parameter significance are shown in Fig.~\ref{fig:IPsignificance}; the sign of the transverse impact parameter is defined by ``sign$_{r\phi}$'', while the longitudinal impact parameters significance uses ``sign$_z$''.  
-Tracks from the fragmentation in light-jets tend to have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions.
 %%%%Extra info
-% The definition for sign$_r\phi$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, that the longitudinal component of the lifetime sign is diluting the information from the transverse component.
+The definition for sign$_{r\phi}$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, the longitudinal component of the lifetime sign is diluting the information from the transverse component.
+Distributions of the signed transverse impact parameter and signed transverse impact parameter significance for light, $c$-, and $b$-jets, are shown in Fig.~\ref{fig:IPsignificance} for experimental data and for simulation; the sign %of the transverse impact parameter 
+ is defined by ``sign$_{r\phi}$''. %, while the longitudinal impact parameters significance uses ``sign$_z$''.  
+Tracks from the fragmentation in light-jets tend to have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions. 
 
 
-%\begin{figure}[htbp]
-%  \begin{center}
-%    \includegraphics[width=0.49\textwidth]{IPd0significancesPlots.png}
-%    \includegraphics[width=0.49\textwidth]{IPz0significancesPlots.png} 
-%    \caption{Impact parameters of tracks associated to light, $c$- and $b$-jets in the transverse and longitudinal direction.}
-%    \label{fig:IPsignificance}
-%  \end{center}
-%\end{figure}
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{IP.png}
+    \includegraphics[width=0.49\textwidth]{IPsignificance.png} 
+    \caption{Distribution of the signed transverse impact parameter (left) and signed transverse impact parameter significance with respect to primary vertex for tracks associated to jets, for experimental data (solid black points) and for simulated data (filled histograms for the various flavors). The ratio data over simulation is shown at the bottom of the plot.}
+    \label{fig:IPsignificance}
+  \end{center}
+\end{figure}
 
 The significance, which gives more weight to tracks measured precisely, is the main ingredient of the tagging algorithms based on impact parameters. Now, the impact parameter significance of all $N$ tracks associated to the jet to tag need to be combined into a single discriminating variable. It is assumed that tracks are uncorrelated, so their probability density functions (PDF), defined based on the transverse and/or longitudinal impact parameter significance distributions for the different hipothesis, are uniquely  defined as a function of the jet flavour. Using a likelihood function defined according to the product of these PDFs, under the hypothesis of uncorrelated tracks, the following likelihood ratio provides the optimal separation, according to Neyman-Person lemma~\cite{1933RSPTA.231..289N}:
 %
