@@ -8,7 +8,7 @@
 \contentsline {subsubsection}{Association of tracks to jets}{18}
 \contentsline {subsection}{\numberline {1.4.1}$b$-tagging algorithms}{19}
 \contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{19}
-\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{23}
+\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{24}
 \contentsline {subsubsection}{Algorithm combinations and performance}{26}
 \contentsline {subsubsection}{The MV1 tagging algorithm}{27}
-\contentsline {subsection}{\numberline {1.4.2}$b$-tagging calibration}{28}
+\contentsline {subsection}{\numberline {1.4.2}$b$-tagging calibration}{29}
