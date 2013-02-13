@@ -18,13 +18,43 @@ The tagging technique presented in this thesis relies on Monte Carlo predictions
 
 The data samples employed correspond to proton-proton collisions at $\sqrt{s}=7$ TeV delivered by the LHC and recorded by ATLAS between May and November 2011, with the LHC running with 50~ns bunch spacing, and bunches organized in bunch trains. Only data collected during stable beam periods in which all sub-detectors were fully operational are used. After the application of the data quality selection, the  surviving data corresponds to an integrated luminosity of 4.7~fb$^{-1}$. The LHC instantaneous luminosity steadily increased during 2011. As a result, the average number of minimum-bias pile-up events, originating from collisions of additional protons in the same bunch as the signal collision, grew from from 3 to 20 (see Fig.\ref{fig:peakAvgMu}). This fact will be of importance when discussing the selection of discriminating variables.  
 
+The events were collected  using the ATLAS single jet triggers which select events with at least one jet with transverse energy above a given threshold.  At the hardware Level 1 and local software Level 2 (see Section~\ref{sec:TDAQ}), cluster-based jet triggers are used to select events with high-$\pt$ jets. The Event Filter, in turn, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2, see Fig.~\ref{fig:turnon}.
+ The jet triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude. %, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. 
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{02_TurnOns_LeadingJet.png}
+%\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk200.pdf}
+\caption{The efficiency for anti-$k_T$ jets to satisfy Level 1 (L1) jet triggers with 5, 15, 30, 55 and 75~GeV thresholds as a function of the calibrated offline leading jet $\pt$. }
+\label{fig:turnon}
+\end{figure}
+
+
 
 %------------------------------------------------------------------------
 \section{Monte Carlo sample}\label{sec:analysis}
 %------------------------------------------------------------------------
 
-The Monte Carlo event generators discussed in Section~\ref{sec:MCtools} are used here. Samples of dijet events from proton-proton collision processes were simulated with {\sc Pythia} version 6.423~\cite{PYTHIA6}, used both for the simulation of the hard $2\rightarrow 2$ process as well as for the parton shower, underlying event, and hadronization models. The ATLAS AMBT2 tune of the soft model parameters was used~\cite{Pythia_MC11tune}.
-In order to have sufficient statistics over the entire $\pt$ spectrum, eight samples were generated with different thresholds of the hard-scattering partonic transverse momentum $\hat{p}_T$. Events from different samples were mixed taking into account their respective production cross sections.
+The Monte Carlo samples employed were produced with the event generators discussed in Section~\ref{sec:MCtools}. Samples of dijet events from proton-proton collision processes were simulated with {\sc Pythia} version 6.423~\cite{PYTHIA6}, used both for the simulation of the hard $2\rightarrow 2$ process as well as for the parton shower, underlying event, and hadronization models. The ATLAS AMBT2 tune of the soft model parameters was used~\cite{Pythia_MC11tune}.
+
+In order to have sufficient statistics over the entire $\pt$ spectrum, samples were generated with seven different thresholds of the hard-scattering partonic transverse momentum $\hat{p}_T$: 8-17~GeV, 17-35~GeV, 35-70~GeV, 70-140~GeV, 140-280~GeV, 280-560~GeV and 560-1120~GeV.
+%J1         17-35 GeV
+%J2         35-70 GeV
+%J3        70-140 GeV
+%J4       140-280 GeV
+%J5       280-560 GeV
+%J6      560-1120 GeV
+%The $\pt$ distribution for these samples is shown in Fig.~\ref{fig:JXpt}a. 
+ For the Monte Carlo $\pt$ distribution, or the distribution of any other observable,  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. The $\pt$ pectrum obtained after performing this procedure is displayed in Fig.~\ref{fig:JXpt}.
+
+\begin{figure}[tp]
+\centering
+%\includegraphics[width=0.49\textwidth]{JXpt_noweight.pdf}
+\includegraphics[width=0.49\textwidth]{JXpt_weighted.pdf}
+\caption{Calibrated jet $\pt$ distribution for anti-$k_t$ jets in a dijet Monte Carlo sample composed of seven sub-samples generated with different thresholds of the hard-scattering partonic transverse momentum. In order to obtain the falling $\pt$ spectrum observed in data, the different samples were weighted by their respective production cross sections.}
+\label{fig:JXpt}
+\end{figure}
+
 The simulated data sample used for the analysis %(MC11b)
 gives an accurate description of the pile-up content and detector conditions for the full 2011 data-taking period. 
 
