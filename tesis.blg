@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/reconstruction.aux
+A level-1 auxiliary file: Main/core.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 18 of file tesis.bib
@@ -11,46 +11,46 @@ I was expecting a `,' or a `}'---line 47 of file tesis.bib
  :   year = "
  :           {1973}",
 I'm skipping whatever remains of this entry
-Warning--empty journal in Calafiura2005zz
-You've used 21 entries,
+Warning--empty author in Pythia_MC11tune
+You've used 18 entries,
             1791 wiz_defined-function locations,
-            559 strings with 7008 characters,
-and the built_in function-call counts, 3594 in all, are:
-= -- 312
-> -- 133
+            559 strings with 6033 characters,
+and the built_in function-call counts, 3586 in all, are:
+= -- 309
+> -- 151
 < -- 1
-+ -- 56
-- -- 35
-* -- 167
-:= -- 627
-add.period$ -- 64
-call.type$ -- 21
-change.case$ -- 21
++ -- 58
+- -- 40
+* -- 249
+:= -- 609
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 184
-empty$ -- 364
-format.name$ -- 35
-if$ -- 791
+cite$ -- 19
+duplicate$ -- 156
+empty$ -- 355
+format.name$ -- 40
+if$ -- 777
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 21
-newline$ -- 109
-num.names$ -- 21
-pop$ -- 52
+int.to.str$ -- 18
+missing$ -- 17
+newline$ -- 93
+num.names$ -- 17
+pop$ -- 26
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 79
+skip$ -- 60
 stack$ -- 0
-substring$ -- 154
-swap$ -- 29
+substring$ -- 232
+swap$ -- 18
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 29
-width$ -- 23
-write$ -- 220
+while$ -- 31
+width$ -- 20
+write$ -- 197
 (There were 2 error messages)
