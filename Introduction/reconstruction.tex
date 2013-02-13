@@ -70,10 +70,10 @@ In the final step the calibration is derived in terms of the energy response of 
  \label{eqn:response}
 \end{equation}
 %
-may be defined at any energy scale. In Equation~\ref{eqn:response}, $E_{truth}$ is the energy of the closest isolated truth jet, within $\Delta R < 0.3$. This value was chosen because it results in a reconstructed-to-truth jet match more than 99\% of the times.
+may be defined at any energy scale. In Equation~\ref{eqn:response}, $E_{truth}$ is the energy of the closest isolated truth jet, within $\Delta R < 0.3$\footnote{This value was chosen because it results in a reconstructed-to-truth jet match more than 99\% of the times.}.
 The isolation requirement is applied in order to factorize the effects due to close-by jets from those due to purely detector effects such as dead material and non-compensation. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2.5R$, where $R$ is the distance parameter of the jet algorithm.
 
- The jet energy response is binned in truth jet energy and the calorimeter jet $\eta$.  For each $(E_{truth}, \eta)$-bin, the averaged jet energy ($\pt$) response is defined as the peak position of a Gaussian fit to the $E_{reco} / E_{truth}$ ($\pt^{reco} / \pt^{truth}$) distribution.  
+ The jet energy response is binned in truth jet energy and the calorimeter jet $\eta$.  For each $(E_{truth}, \eta)$-bin, the averaged jet energy response is defined as the peak position of a Gaussian fit to the $E_{reco} / E_{truth}$ distribution. The jet $\pt$ response, which will be used later, uses the $\pt^{reco} / \pt^{truth}$ distribution.
 
 
 The EM+JES calibration constants consist in the inverse of the response: $\mathcal{C}(\pt^{EM})=\mathcal{R}^{-1}_{reco}(\pt^{EM})$, where $\mathcal{C}$ is the calibration constant and $\mathcal{R}_{reco}$ is the response calculated as a function of reconstructed jet $\pt$. They are derived as a function of $\pt^{truth}$, to remove the impact of the underlying $\pt$ spectrum on the response.  The jet response determined as a function of $\pt^{truth}$, $\mathcal{R}_{truth}$, is used to apply the constants as a function of $\pt^{EM}$, that is $\mathcal{R}_{reco}(\pt^{EM})=\mathcal{R}_{truth}(\mathcal{R}_{truth}\cdot \pt^{truth})$. This relationship is valid in ATLAS due to the linearity of the jet response as a function of $\pt$.
@@ -81,7 +81,7 @@ The correct energy scale is obtained by multiplying the EM scale energy of a jet
 %
 \begin{equation}
 %E^{jet}_{EM+JES} = \frac{E^{jet}_{EM}}{\mathcal{F}_{calib}(E^{jet}_{EM})|_{\eta}},
-E^{EM+JES} = \mathcal{C}E^{EM}.
+E^{EM+JES} = \mathcal{C} \cdot E^{EM}.
 \end{equation}
 %
 
@@ -106,12 +106,12 @@ Other calibrations schemes are the global calorimeter cell weighting (GCW) calib
 
 The LCW calibration method first classifies topo-clusters as either electromagnetic of hadronic, based on the measured energy density. Energy corrections are derived according to this classification from single charged and neutral pion Monte Carlo simulations. Dedicated corrections are derived for the effects of non-compensation, signal losses due to noise threshold effects, and energy lost in non-instrumented regions. Since the energy corrections are applied without reference to a jet definition they are called ``local'' corrections. Jets are then built from these calibrated clusters using a jet algorithm.  
 
-The final jet energy calibration can be applied to EM scale jets, with the resulting calibrated jets referred to as EM+JES, or to LCW (GCW) calibrated jets, with the resulting jets referred to as LCW+JES (GCW+JES) jets.
+%The final jet energy calibration can be applied to EM scale jets, with the resulting calibrated jets referred to as EM+JES, or to LCW (GCW) calibrated jets, with the resulting jets referred to as LCW+JES (GCW+JES) jets.
 
-A further jet calibration scheme called global sequential (GS) calibration, starts from jets calibrated with the EM+JES calibration and corrects the energy jet-by-jet, without changing the average response. This scheme exploits the topology of the energy deposits in the calorimeter to characterise fluctuations in the jet particle content of the hadronic shower development.  Correcting for such fluctuations can improve the jet energy resolution. The correction uses several jet properties, and each correction is applied sequentially.
+A further jet calibration scheme called global sequential (GS) calibration, starts from jets calibrated with the EM+JES calibration and corrects the energy jet-by-jet, without changing the average response. This scheme exploits the topology of the energy deposits in the calorimeter to characterize fluctuations in the jet particle content of the hadronic shower development.  Correcting for such fluctuations can improve the jet energy resolution. The correction uses several jet properties, and each correction is applied sequentially.
 
 
-For the 2011 data the recomended calibration schemes were the EM+JES and the LCW calibrations. The simple EM+JES calibration does not provide the best resolution performance, but allows in the central detector region the most direct evaluation of the systematic uncertainties from the calorimeter response to single isolated hadrons measured \emph{in situ}  and in test-beams and from systematic variations in the Monte Carlo simulation.  For the LCW+JES calibration scheme the JES uncertainty is determined from \emph{in situ}  techniques. For all calibration schemes, the JES uncertainty in the forward regions is derived from the uncertainty in the central region using the transverse momentum balance in events where only two jets are produced. 
+For the 2011 data the recomended calibration schemes were the EM+JES and the LCW calibrations. The simple EM+JES calibration does not provide the best resolution performance, but allows in the central detector region the most direct evaluation of the systematic uncertainties from the calorimeter response to single isolated hadrons measured \emph{in situ}  and in test-beams and from systematic variations in the Monte Carlo simulation.  For the LCW calibration scheme the JES uncertainty is determined from \emph{in situ}  techniques. For all calibration schemes, the JES uncertainty in the forward regions is derived from the uncertainty in the central region using the transverse momentum balance in events where only two jets are produced. 
 
 
 
@@ -149,7 +149,7 @@ The $b$-jet JES uncertainty is obtained adding the calorimeter response uncertai
 \section{Reconstruction of charged particle tracks}\label{sec:trackreco}
 %------------------------------------------------------------------------
 
-The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{atlasID} of Chapter~\ref{ch:lhc_atlas}. The tracking algorithm is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main steps of the tracking algorithm are the following:
+The Inner Detector layout and the characteristics of its main sub-detectors were presented in Section~\ref{atlasID} of Chapter~\ref{ch:lhc_atlas}. The algorithm used for track reconstruction is based on a modular software framework, which is described in more detail in Ref.~\cite{Cornelissen:1020106}. The main steps are the following:
 
 \begin{itemize}
 \item
@@ -247,7 +247,7 @@ For the 2011 data-taking a set of lifetime taggers were commissioned and calibra
 
 % AQUI PLOTS OF TRACK PROPERTIES IN JETS???????????
 
-The charged particle tracks originating from $b$-hadrons are expected to have significantly higher transverse and longitudinal impact parameters compared to prompt tracks originating directly from fragmentation. If the effect of long lived particles, conversions and hadronic interactions can be reduced, the best discrimination between prompt tracks and displaced tracks from $b$- and $c$-hadron decays can be obtained using the impact parameter significance, both in the transverse and longitudinal plane, with
+The charged particle tracks originating from $b$-hadrons are expected to have significantly higher transverse and longitudinal impact parameters compared to prompt tracks originating directly from fragmentation. If the effect of long lived particles, conversions and hadronic interactions can be reduced, the best discrimination between prompt tracks and displaced tracks from $b$- and $c$-hadron decays can be obtained using the impact parameter significance, both in the transverse and longitudinal plane. With
 %
 \begin{equation}
     IP_{r\phi} = d_0\;\;  \mbox{and} \;\;  IP_{z} = z_0 \sin \theta,
@@ -286,7 +286,7 @@ The lifetime sign can also be defined on the transverse plane $(x-y)$ or on the 
 %
 %PLOTS TO DO
 %%%%Extra info
-The definition for sign$_{r\phi}$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, the longitudinal component of the lifetime sign is diluting the information from the transverse component.
+%The definition for sign$_{r\phi}$ compared to sign$_{3D}$ shields to a more positive shifted distribution for tracks from $b$-hadron decays, and thus potentially a better performance. This result is a bit surprising and seems to indicate that, since the lifetime sign is not taking into account the different errors on the longitudinal and transverse impact parameters, the longitudinal component of the lifetime sign is diluting the information from the transverse component.
 Distributions of the signed transverse impact parameter and signed transverse impact parameter significance for light, $c$-, and $b$-jets, are shown in Fig.~\ref{fig:IPsignificance} for experimental data and for simulation; the sign %of the transverse impact parameter 
  is defined by ``sign$_{r\phi}$''. %, while the longitudinal impact parameters significance uses ``sign$_z$''.  
 Tracks from the fragmentation in light-jets tend to have a signed impact parameter distribution which is symmetric around 0, since they have no correlation with the jet direction. Tracks from $b$- and $c$-hadron decays, as expected, have an asymmetric distribution, with the most significant contribution at positive significances; however a negative tail extending beyond the pure fragmentation contribution is also seen, corresponding to resolution effects and to an eventual mismatch between the $b$-jet and the $b$-hadron directions. 
@@ -393,7 +393,7 @@ The \textbf{MV1} $b$-tagging algorithm is a combined algorithm based on a neural
 \subsection{$b$-tagging calibration}
 
 
-In order for $b$-tagging to be used in physics analyses, the efficiency with which a jet originating from a $b$-quark is tagged needs to be measured in data.  Moreover, an appropriate description of the $b$-tagging efficiencies based on measurements with data is essential for correctly modelling the measurements in Monte Carlo simulation . A second necessary piece of information is the probability of mistakenly tagging a jet originating from a light-flavour ($u$-, $d$-, $s$-quark or gluon) jet as a $b$-jet, referred to as the mistag rate. The $b$-tagging ``calibration'' includes both the measurement of the mis-tag rates and $b$-tagging efficiency.
+In order for $b$-tagging to be used in physics analyses, the efficiency with which a jet originating from a $b$-quark is tagged needs to be measured in data.  Moreover, an appropriate description of the $b$-tagging efficiencies based on measurements with data is essential for correctly modelling the measurements in Monte Carlo simulation . A second necessary piece of information is the probability of mistakenly tagging a jet originating from a light-flavour ($u$-, $d$-, $s$-quark or gluon) jet as a $b$-jet, referred to as the mistag rate. The $b$-tagging ``calibration'' includes both the measurement of the mistag rates and $b$-tagging efficiency.
 
 
 The measurements of the $b$-tag efficiency and mistag rate are provided in the form of jet $\pt$- and $\eta$-dependent scale factors that correct the $b$-tagging performance in simulation to that observed in data.  The scale factors are defined as the ratio of the $b$-tag efficiency or mistag rate in data and simulation:
