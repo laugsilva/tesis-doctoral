@@ -9,10 +9,10 @@ Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
 Atlas tunes of pythia 6 and pythia 8 for mc11.
 \newblock Technical Report ATL-PHYS-PUB-2011-009, CERN, Geneva, Jul 2011.
 
-\bibitem{topoClusters}
-W.~Lampl et~al.
-\newblock {Calorimeter Clustering Algorithms: Description and Performance}.
-\newblock {\em ATL-LARG-PUB-2008-002. ATL-COM-LARG-2008-003}, Apr 2008.
+\bibitem{ATLASTriggerSimulation}
+G.~Aad et~al.
+\newblock The atlas simulation infrastructure.
+\newblock {\em The European Physical Journal C}, 70:823--874, 2010.
 
 \bibitem{ATLAS-CONF-2012-020}
 {ATLAS Collaboration}.

@@ -64,21 +64,27 @@ gives an accurate description of the pile-up content and detector conditions for
 \subsection{Event and jet selection}\label{sec:EventSelection}
 %------------------------------------------------------------------------
 
-The data sample was collected using the ATLAS single jet triggers, as described in Section~\ref{sec:dataanalysis}. In the case of the Monte Carlo sample, a trigger simulation is implemented.   The offline event selection requires at least one primary vertex candidate with 5 or more tracks.  No requirements are placed on the longitudinal position (along the beam line) of the vertex as the beam spot is used as a constraint when fitting the vertex. 
+The data sample in the analysis is selected online using a set of single jet triggers as described in Section~\ref{sec:dataanalysis}. In the case of the Monte Carlo, a trigger simulator is used. In this way both the simulated and real data from the detector can then be run through the same ATLAS trigger packages~\cite{ATLASTriggerSimulation}.
+
+The offline event selection comprises an additional set of cuts on the reconstructed objects, including jet kinematic and jet-specific data quality cuts. A vertex cut is also included, requiring at least one primary vertex with five or more associated tracks in the event.  This cut serves as a first rejection for events originating from cosmic rays and particles produced in interactions of the beam with particles in the beam tunnel (``beam halo'' and ``beam gas'').
+No requirements are placed on the longitudinal position (along the beam line) of the vertex as the beam spot is used as a constraint when fitting the vertex. 
+
 
 The jet algorithm selected for the analysis was the ATLAS default anti-$k_t$ algorithm (Section \ref{sec:jetalgos}), with a distance parameter $R = 0.4$, using calorimeter topological clusters as input (Section~\ref{sec:jetcalib}). All jets were calibrated using the EM+JES scheme (Section~\ref{sec:calib}).
+A high cut on the minimum jet $\pt$ is implemented to select jets in the region where the triggers used in the analysis are most efficient. Jets are required to have a minimum $\pt$ of 40~GeV.  Jets with transverse momentum above this threshold were also required to be in a region with full tracking coverage, $|\eta_{jet}|< 2.1$. Although the Pixel and SCT detectors cover up to $|\eta|<2.5$, a lower pseudorapidity cut is used in order to account for the size of the calorimeter jets, $R=0.4$.  Jets passing this selection were classified in eight $\pt$ bins chosen such as to match the jet trigger 99\% efficiency thresholds (in GeV): 40, 60, 80, 110, 150, 200, 270, 360. An event is used if it satisfies the highest threshold trigger that is 99\% efficient for the $\pt$ bin that corresponds to the $\pt$ of its leading jet. The upper limit of our highest $\pt$ bin was set to 480~GeV; beyond this energy the $b$-tagging efficiency becomes very poor.
 
+Several quality criteria are applied to jets to eliminate ``fakes'' that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing. A detailed description of these quality cuts can be found in reference~\cite{ATLAS-CONF-2012-020}.
 
-All jets %, with transverse momentum between 40 and 480~GeV,  the selected $\pt$ range for the analysis, 
-were required to be in a region with full tracking coverage, taking into account the size parameter chosen for the reconstructed jets, $|\eta_{jet}|< 2.5 - R $, and they were classified in eight $\pt$ bins chosen such as to match the jet trigger 99\% efficiency thresholds (in GeV): 40, 60, 80, 110, 150, 200, 270, 360. An event is used if it satisfies the highest threshold trigger that is 99\% efficient for the $\pt$ bin that corresponds to the $\pt$ of its leading jet. The upper limit of our highest $\pt$ bin was set to 480~GeV; beyond this energy the $b$-tagging efficiency becomes very poor.
+In addition to these kinematic and quality cuts, two more cuts are imposed to jets:
 
- Several quality criteria are applied to jets to eliminate ``fakes'' that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing. A detailed description of these quality cuts can be found in reference~\cite{ATLAS-CONF-2012-020}.
+\begin{itemize}
+\item
+\textbf{$b$-tagging}. Jets are only accepted if they are tagged as $b$-jets using the MV1 $b$-tagging algorithm, at its 60\% efficiency working point.
+\item
+\textbf{Isolation}. Jets are only accepted if they are isolated. The isolation criterion requires that no other jet with a $\pt > 7$~GeV be within $\Delta R < 2R$, where $R$ is the distance parameter of the jet algorithm.
+\end{itemize}
 
- Only jets tagged as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point were considered.
-$b$-tagged jets with close-by jets ($\Delta R < 2\cdot R$) with $\pt$ higher than 7~GeV at the electromagnetic scale were not included in the analysis.
-
-
-In the case of MC, the reconstructed $b$-tagged jets were further classified into single and merged $b$-jets based on truth Monte Carlo information. A $b$-hadron is considered to be associated to a jet if the $\Delta R$ distance in $\eta-\phi$ space between the direction of the hadron and the jet axis is smaller than 0.4. Jets were labeled as merged (single) $b$-jets if they contained two (only one) $b$-hadron:%\footnote[2]{Another approach is to match particles using the 'active area' of the jet, defined with the concept of ghost-particles but utilizing true particles as ghost constituents\cite{CatchmentArea}. This procedure will be implemented in a future version of this analysis.}.
+Finally, in the case of MC, the reconstructed $b$-tagged jets were further classified into single and merged $b$-jets based on truth Monte Carlo information. A $b$-hadron is considered to be associated to a jet if the $\Delta R$ distance in $\eta-\phi$ space between the direction of the hadron and the jet axis is smaller than 0.4. Jets were labeled as merged (single) $b$-jets if they contained two (only one) $b$-hadron:%\footnote[2]{Another approach is to match particles using the 'active area' of the jet, defined with the concept of ghost-particles but utilizing true particles as ghost constituents\cite{CatchmentArea}. This procedure will be implemented in a future version of this analysis.}.
 \begin{equation}
 \mbox{single $b$-jets:} \; \; \Delta R(j,B_i) < 0.4 \; \& \;  \Delta R(j,B_j) > 0.4 \; \; for \; i \neq j
 \label{eqn:single}
@@ -94,9 +100,15 @@ where $j$ is a jet in the event and $B_{i(j)}$ are the $b$-hadrons in the event.
 %------------------------------------------------------------------------
 \subsection{Track selection}\label{sec:trackselection}
 %------------------------------------------------------------------------
+ internal structure of $b$-jets containing two $b$-hadrons
+The results presented in this chapter concern the properties of jets containing $b$-hadrons. Therefore, it is of great importance to select genuine tracks belonging to $b$-jets. 
 
- It is important to select genuine tracks belonging to jets. Only tracks located  within a cone of radius $\Delta R(j,\mbox{track}) \leq 0.4$ around the jet axis were considered. %\footnote[2]{In a future version of the study the concept of ghost-particles\cite{CatchmentArea} can be applied in the track-to-jet assignment using tracks as ghost constituents.}.
-  Cuts on $\pt^{\mbox{trk}}>1.0$~GeV and the $\chi^2$ of the track fit, $\chi^2/{\it ndf}<3$, are applied. % as a minimum starting point. 
+The $b$-tagging performance relies critically on the accurate reconstruction of the charged tracks in the ATLAS Inner Detector.  The actual tagging is performed on the sub-set of tracks in the event that are associated to jets.
+The jet direction is used to associate the charged particles reconstructed as tracks in the inner detector to the jet.  
+
+
+
+Cuts on $\pt^{\mbox{trk}}>1.0$~GeV and the $\chi^2$ of the track fit, $\chi^2/{\it ndf}<3$, are applied. % as a minimum starting point. 
  In addition, tracks are required to have a total of at least seven precision hits (pixel or micro-strip) in order to guarantee at least 3 $z$-measurements. Tracks are also required to fulfill cuts on the transverse and longitudinal impact parameters %at the perigee to ensure that they arise from  the primary vertex. 
 defined at the point of closest approach to the PV.
 As cutting on impact parameter (IP) significance might be detrimental for $b$-jets, where large IP values are expected, relaxed cuts were used, $|d_{0}|<2$~mm, and $|z_{0}\sin\theta|<2$~mm, with $\theta$ being the polar angle measured with respect to the beam axis. The track quality cuts are summarized in table~\ref{tb:tracks}. %This, however, might still be too tight for $b$-jets.
