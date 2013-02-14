@@ -249,7 +249,9 @@ is observed  when using $b$-tracks only: $s=5.9 \cdot 10^{-1}$ compared to $s=4.
 %{ \em Jet width} 
 \subsubsection{Jet width} 
 
-The jet width is part of a set of continuous variables that attempt to distinguish individual particles/subjets within the jet by means of smooth funcion of $(\Delta \eta, \Delta \phi)$ away from the jet axis, in order to form combinations like geometric moments.  This particular combination is a linear moment which sums the distances between the jet constituents and its axes, weighted by the constituent $\pt$, and normalized to the total $\pt$ of the jet.  Its definition is,
+The jet width is part of a set of continuous variables, like geometric moments, that are sensitive to the distribution of the constituents within a jet.
+% that attempt to distinguish individual particles/subjets within the jet by means of smooth funcion of $(\Delta \eta, \Delta \phi)$ away from the jet axis, in order to form combinations like geometric moments.  
+This particular combination is a linear moment which sums the distances between the jet constituents and its axis, weighted by the constituents $\pt$.  Its definition is,
 %
 \begin{equation} 
 \mbox{ {\it Jet width}} = \frac{\sum_{i=1}^N \pt^{const_i} \,\Delta R (const_i,jet) }{\sum_{i=1}^N \pt^{const_i} }
@@ -258,9 +260,10 @@ The jet width is part of a set of continuous variables that attempt to distingui
 %
 where $N$ is the total number of calorimeter, track or particle constituents.  %This observable is also highly correlated to the mass of the jet.
 
-This observable also found use in the discrimination between gluon initiated and light quark initiated jets, see for instance~\cite{PhysRevLett.107.172001} and~\cite{ATLAS-CONF-2011-053}. Gluon jets are seen to be broader than quark jets. In the case of jets originating from $b$-quarks, these resemble gluon jets more closely than quarks jets~\cite{Buskulic1996353}: due to the longer decay chain of $b$-hadrons the angular spread is larger for a $b$-jet than a light-quark jet. 
+This observable has also found use in the discrimination between gluon initiated and light quark initiated jets, see for instance~\cite{PhysRevLett.107.172001} and~\cite{ATLAS-CONF-2011-053}. Gluon jets are seen to be broader than quark jets. In the case of jets originating from $b$-quarks, these resemble gluon jets more closely than quarks jets~\cite{Buskulic1996353}: due to the %longer decay chain of $b$-hadrons the angular spread is larger for a $b$-jet than a light-quark jet. 
+mass diference between $b$-hadrons and light-quark hadrons the angular spread is larger for a $b$-jet than a light-quark jet. 
 
-In order to explore how merged jets, originating from a gluon splitting into a $b\bar{b}$ pair, compare to single $b$-quark jets and pure gluon jets,  a standalone {\sc Pythia} analysis was performed.  Figure~\ref{fig:trkwidthsinglemergedPYTHIAgluon} illustrates the result; $b$-jets containing two $b$-hadrons present a greater angular width relative to single $b$-jets and gluon initiated jets. The latter, in turn, look broader than single $b$ for medium $\pt$ jets. This behavior is somehow expected in the LHC's higher $\pt$ jets because the QCD shower produces more particles resulting in broader gluon jets,  whereas the particle multiplicity is relatively fixed in the $b$-hadron decay.
+In order to explore how merged jets, originating from a gluon splitting into a $b\bar{b}$ pair, compare to single $b$-quark jets and pure gluon jets,  a standalone {\sc Pythia} analysis was performed.  Figure~\ref{fig:trkwidthsinglemergedPYTHIAgluon} illustrates the result; $b$-jets containing two $b$-hadrons present a greater angular width relative to single $b$-jets and gluon initiated jets. The latter, in turn, look broader than single $b$-jets. This behavior is somehow expected in the LHC's higher $\pt$ jets because the QCD shower produces more particles resulting in broader gluon jets, with more jet-to-jet fluctuations, while the particle multiplicity is relatively fixed in the $b$-hadron decay.
 
 The distribution of the track-jet width for the full ATLAS simulation is shown in Fig.~\ref{fig:trkwidthsinglemerged}. In this case % for which 
 the sum in equation~\ref{eqn:trackjetwidth} runs over the $N$ tracks associated to the jet, using the same criteria as for the jet track multiplicity. As expected, merged $b$-jets are wider than single $b$-jets. 
