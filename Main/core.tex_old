@@ -69,14 +69,28 @@ The data sample was collected using the ATLAS single jet triggers, as described 
 The jet algorithm selected for the analysis was the ATLAS default anti-$k_t$ algorithm (Section \ref{sec:jetalgos}), with a distance parameter $R = 0.4$, using calorimeter topological clusters as input (Section~\ref{sec:jetcalib}). All jets were calibrated using the EM+JES scheme (Section~\ref{sec:calib}).
 
 
-All jets %, with transverse momentum between 40 and 480~GeV,  the selected $\pt$ range for the analysis, 
-were required to be in a region with full tracking coverage, taking into account the size parameter chosen for the reconstructed jets, $|\eta_{jet}|< 2.5 - R $, and they were classified in eight $\pt$ bins chosen such as to match the jet trigger 99\% efficiency thresholds (in GeV): 40, 60, 80, 110, 150, 200, 270, 360. An event is used if it satisfies the highest threshold trigger that is 99\% efficient for the $\pt$ bin that corresponds to the $\pt$ of its leading jet. The upper limit of our highest $\pt$ bin was set to 480~GeV; beyond this energy the $b$-tagging efficiency becomes very poor.
 
- Several quality criteria are applied to jets to eliminate ``fakes'' that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing. A detailed description of these quality cuts can be found in reference~\cite{ATLAS-CONF-2012-020}.
 
- Only jets tagged as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point were considered.
-$b$-tagged jets with close-by jets ($\Delta R < 2\cdot R$) with $\pt$ higher than 7~GeV at the electromagnetic scale were not included in the analysis.
+The event selection and quality criterion used to extract, from the data and Monte Carlo samples, the final set of jets for the analysis comprise different steps: 
 
+\begin{itemize}
+\item
+\textbf{Trigger}. The event sample was collected  using the ATLAS single jet triggers which select events with at least one jet with transverse energy above a given threshold.  At the hardware Level 1 and local software Level 2 (see Section~\ref{sec:TDAQ}), cluster-based jet triggers are used to select events with high-$\pt$ jets. The Event Filter, in turn, runs  the offline anti-$k_t$ jet finding algorithm with $R = 0.4$ on topological clusters over the complete calorimeter.  At this stage, the transverse energy thresholds, expressed in GeV, are: 20, 30, 40, 55, 75, 100, 135, 180. These triggers reach an efficiency of 99\% for events having the leading jet with an offline energy higher than the corresponding trigger thresholds by a factor ranging between 1.5 and 2. The jet triggers with the lowest $\pt$ thresholds were prescaled by up to five orders of magnitude. %, and typically the same jet trigger is prescaled ten times more in the later data taking periods compared to the early ones. 
+\item
+\textbf{Primary vertex}.  The offline event selection requires at least one primary vertex candidate with 5 or more tracks.  No requirements are placed on the longitudinal position (along the beam line) of the vertex as the beam spot is used as a constraint when fitting the vertex. 
+\item
+\textbf{Primary jet algorithm}. The jet algorithm selected for the analysis was the ATLAS default anti-$k_t$ algorithm (Section \ref{sec:jetalgos}), with a distance parameter $R = 0.4$, using calorimeter topological clusters~\cite{topoClusters} as input.
+\item
+\textbf{Jet calibration}.  The EM+JES calibration scheme (Section~\ref{sec:calib}) was used to correct the jet energies for inhomogeneities and for the non-compensating nature of the calorimeter.
+\item
+\textbf{Jet quality}.  Several quality criteria are applied to eliminate ``fake'' jets that are caused by noise bursts in the calorimeters and energy depositions belonging to a previous bunch crossing~\cite{ATLAS-CONF-2012-020}.
+\item
+\textbf{Jet tagging}.  Only jets tagged as $b$-jets using the MV1 $b$-tagging algorithm at the 60\% efficiency working point were considered.
+\item
+\textbf{Isolation}.  $b$-tagged jets with close-by jets ($\Delta R < 0.8$) with $\pt$ higher than 7~GeV at the electromagnetic scale were not included in the analysis.
+\end{itemize}
+
+All jets, with transverse momentum between 40 and 480~GeV,  the selected $\pt$ range for the analysis, were required to be in a region with full tracking coverage, $|\eta_{jet}|<2.1$, and they were classified in eight $\pt$ bins chosen such as to match the jet trigger 99\% efficiency thresholds (in GeV): 40, 60, 80, 110, 150, 200, 270, 360. An event is used if it satisfies the highest threshold trigger that is 99\% efficient for the $\pt$ bin that corresponds to the $\pt$ of its leading jet.
 
 In the case of MC, the reconstructed $b$-tagged jets were further classified into single and merged $b$-jets based on truth Monte Carlo information. A $b$-hadron is considered to be associated to a jet if the $\Delta R$ distance in $\eta-\phi$ space between the direction of the hadron and the jet axis is smaller than 0.4. Jets were labeled as merged (single) $b$-jets if they contained two (only one) $b$-hadron:%\footnote[2]{Another approach is to match particles using the 'active area' of the jet, defined with the concept of ghost-particles but utilizing true particles as ghost constituents\cite{CatchmentArea}. This procedure will be implemented in a future version of this analysis.}.
 \begin{equation}
