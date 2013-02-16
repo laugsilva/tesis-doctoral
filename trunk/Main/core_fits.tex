@@ -6,7 +6,7 @@
 \chapter{Fraction of double $b$-hadron jets in data}\label{ch:gbbfraction}
 
 %------------------------------------------------------------------------
-\section{Maximum likelihood fits}%\label{sec:FractionSystematics}
+\section{Maximum likelihood fits}\label{sec:LLFits}
 %------------------------------------------------------------------------
 
 Maximum likelihood (ML) information only parametrizes the shape of a 
@@ -25,6 +25,7 @@ For N p.d.f.s, there are N-1 fraction coefficients that should sum to less 1. Th
 %In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
 %WEIGHTS ARE SUPPORTED IN UNBINNED DATASETS!! But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
 
+\subsubsection{Unbinned fits}
 
 
 \subsubsection{Fitting and likelihood minimization}
@@ -35,6 +36,36 @@ What happens when you do pdf->fitTo(*data)?
 - Minimize likelihood w.r.t floating parameters using MINUIT [REFERENCIAS].
 
 
+
+
 %------------------------------------------------------------------------
-%\section{Systematic uncertainties}\label{sec:FractionSystematics}
+\section{Fitting MC templates to data}\label{sec:FitsResults}
 %------------------------------------------------------------------------
+
+-TODO: TRUE FRACTIONS IN PYTHIA
+
+DECIR QUE HICIMOS LOS FITS PARA 5 Y 3 PARAMETROS. MOSTRAR LOS RESULTADOS Y EXPLICAR QUE ES DIFICIL DISTINGUIR ENTRE LOS TEMPLATES DE SINGLE-B Y SINGLE-C Y QUE POR ESO VAMOS A HACER TODO FIJANDO LAS FRACCIONES DE SINGLE-C Y MERGED-C A SINGLE-B Y MERGED-B RESPECTIVAMENTE.
+
+COMO RESULTADO PRESENTAREMOS ENTONCES LAS FRACCIONES DE SINGLE, MERGED Y LIGHT.
+
+
+%------------------------------------------------------------------------
+\section{Systematic uncertainties}\label{sec:FractionSystematics}
+%------------------------------------------------------------------------
+
+-JES
+
+-TRACK PT EFFICIENCY
+
+-TO DO: HACER LOS TEMPLATES CON HERWIG
+
+- TO DO: HACER JER SI PUEDO
+
+- CAMBIAR LAS FRACCIONES C/B EN 20\% Y VER CUANTO CAMBIAN LOS RESULTADOS. LA FRACCION DE C+B NO DEBERIA CAMBIAR.
+
+%------------------------------------------------------------------------
+\section{Enriched samples in single and merged $b$-jets}\label{sec:Enriched}
+%------------------------------------------------------------------------
+
+MOSTRAMOS QUE LOS MISMOS TEMPLATES USADOS EN OTRA MUESTRA FUNCIONAN BIEN Y QUE EL RESULTADO ESTA EN ACUERDO CON LA PREDICCION DE PYTHIA (ESTO NO ES OBVIO PARA NADA).
+(PODRIAMOS DECIR QUE LA FRACCION DE FLAVOR CREATION ESTA BIEN SIMULADA POR PYTHIA)
