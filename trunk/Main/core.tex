@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\chapter{Kinematic differences between single and double $B$-hadron jets}
 \chapter{Double \emph{\textbf{b}}-hadron jet identification}\label{ch:kinematic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -315,12 +315,27 @@ In full simulation, the jet width can be measured in terms of calorimeter variab
 
 \subsubsection{Jet Mass} 
 
-The jet mass, like the linear radial moment, depends on the radiation pattern of the event. It is the most basic observable for distinguishing massive boosted objects from jets originating from quarks or gluons. The latter are expected to be dominated by wide-angle emissions, with increased probability to see high mass jets initiated from gluons as opposed to quarks~\cite{PhysRevD.79.074012}.  
+
+%clusters are massless 4-vectors -> no artificial mass due to showering
+%mass of calorimeter jets is affected by shower spread
+
+ The reconstructed jets, built from massless topological clusters, obtain mass in the recombination process. The single-jet mass is defined as 
+%
+\begin{equation}
+\mbox{ {\it Jet mass}} = E^2_{jet} - \mbox{ \emph{{\bf p}}}^2 = (\sum_i E_i)^2 - (\sum_i \mbox{\emph{{\bf p}}}_i)^2
+\end{equation}
+%
+with  $E_i$ and \emph{\bf{p}}$_i$, the energy and momentum of the jet constituent $i$.
+
+The jet mass, like the linear radial moment, depends on the radiation pattern of the event. It is the most basic observable for distinguishing massive boosted objects from jets originating from quarks or gluons~\cite{PhysRevD.79.074012}. %The latter are expected to be dominated by wide-angle emissions, with increased probability to see high mass jets initiated from gluons as opposed to quarks~\cite{PhysRevD.79.074012}.  
+
 
 Detector level jet mass distributions for jets selected to have $80 < \pt < 110$~GeV and $200 < \pt < 270$~GeV are shown in Fig.~\ref{fig:masssinglemerged}, both for single and merged $b$-jets. Merged jets tend to have higher masses than single $b$-jets for the same $\pt$ bin.  
 Although it shows good separation, this calorimeter based variable %is susceptible to the amount of pile-up in the event and for this it is not a robust discriminator.
-can be significantly affected by the amount of pile-up in the event as even a single soft wide angle deposition will have an effect on the jet mass, shifting the distribution to higher values\footnote{In the ATLAS analysis of 35~pb$^{-1}$ of 2010 data, the sensitivity of individual jet mass to pile-up is directly tested (for jets with at least 300~GeV). The mean jet mass is observed to increase linearly with NPV~\cite{ATLAS-CONF-2011-073}.}. %The filtering procedure significantly reduces the effect of pile-up on jet mass.}.  
-%\vspace{3 mm}
+
+
+can be significantly affected by the amount of pile-up in the event as even a single soft wide angle deposition will have an effect on the jet mass, shifting the distribution to higher values\footnote{In the ATLAS analysis of 35~pb$^{-1}$ of 2010 data, the sensitivity of individual jet mass to pile-up is directly tested (for jets with at least 300~GeV). The mean jet mass is observed to increase linearly with NPV~\cite{ATLAS-CONF-2011-073}.}. %The filtering procedure significantly reduces the effect of pile-up on jet mass.}. 
+In addition, the jet mass is highly correlated with the jet width.
 
 \begin{figure}[tp]
 \centering
@@ -358,7 +373,7 @@ Figure~\ref{fig:drtrk12singlemerged} shows the distribution of the $\Delta R$ be
 \subsubsection{Maximum $\Delta R$ between track pairs}  
 
 Several other variables, besides the jet width, were investigated to expose the expected two-subjet substructure of merged $b$-jets.  The maximum $\Delta R$ separation between pairs of tracks associated to the jet ($\max\{\Delta R(trk,trk)\}$) is one example. %was also evaluated as a discrimating variable. 
-Its distribution is shown in Fig.~\ref{fig:drmaxsinglemerged}, for single and double $b$-hadron jets. The latter show significantly higher values over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, alternative characterising variables are desirable as $\max\{\Delta R(trk,trk)\}$ is sensitive to soft tracks originating from pile-up. 
+Its distribution is shown in Fig.~\ref{fig:drmaxsinglemerged}, for single and double $b$-hadron jets. The latter show significantly higher values over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, alternative characterising variables are desirable as $\max\{\Delta R(trk,trk)\}$ is not infrared safe as it is affected by soft radiation. Furthermore it is  sensitive to soft tracks originating from pile-up. 
 %\vspace{3 mm}
 
 \begin{figure}[tp]

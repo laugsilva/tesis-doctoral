@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  15 FEB 2013 19:32
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  16 FEB 2013 11:48
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -311,19 +311,19 @@ File: FIGS/VarsSingleMerged/DRtrk12080.pdf Graphic file (type pdf)
 <FIGS/VarsSingleMerged/DRtrk12200.pdf, id=594, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRtrk12200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/DRtrk12200.pdf>
-<FIGS/VarsSingleMerged/drmax080.pdf, id=595, 569.12625pt x 546.04pt>
+<use FIGS/VarsSingleMerged/DRtrk12200.pdf> [18 <./FIGS/VarsSingleMerged/DRtrk12
+080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRtrk12200.pdf, p
+age is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/drmax080.pdf, id=684, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/drmax080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/drmax080.pdf>
-<FIGS/VarsSingleMerged/drmax200.pdf, id=596, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/drmax200.pdf, id=685, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/drmax200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/drmax200.pdf> [18 <./FIGS/VarsSingleMerged/DRtrk1208
-0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRtrk12200.pdf, pag
-e is rotated 90 degrees>]
+<use FIGS/VarsSingleMerged/drmax200.pdf>
 
-LaTeX Warning: Reference `sec:jetalgos' on page 19 undefined on input line 383.
+LaTeX Warning: Reference `sec:jetalgos' on page 19 undefined on input line 396.
 
 
 [19 <./FIGS/VarsSingleMerged/drmax080.pdf, page is rotated 90 degrees> <./FIGS/
@@ -345,20 +345,20 @@ File: FIGS/VarsSingleMerged/DRkt2axes080.pdf Graphic file (type pdf)
 <FIGS/VarsSingleMerged/DRkt2axes200.pdf, id=868, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRkt2axes200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/DRkt2axes200.pdf>
-<FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf, id=869, 569.12625pt x 552.0625pt
+<use FIGS/VarsSingleMerged/DRkt2axes200.pdf> [21 <./FIGS/VarsSingleMerged/DRkt2
+axes080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRkt2axes200.
+pdf, page is rotated 90 degrees>]
+<FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf, id=958, 569.12625pt x 552.0625pt
 >
 File: FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf Graphic file (type pdf)
- <use FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf> [21 <./FIGS/VarsSingleMerge
-d/DRkt2axes080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRkt2a
-xes200.pdf, page is rotated 90 degrees>] [22 <./FIGS/TEMPFigs/EventDisplay7023C
-luster_Bs.pdf, page is rotated 90 degrees>]
-Overfull \hbox (5.87827pt too wide) in paragraph at lines 456--458
+ <use FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf>
+Overfull \hbox (5.87827pt too wide) in paragraph at lines 469--471
 \T1/cmr/m/n/12 elec-troweak bosons and top quarks de-cay-ing into col-li-mated 
 show-ers of hadrons
  []
 
-[23] <FIGS/VarsSingleMerged/Tau2080.pdf, id=1008, 569.12625pt x 546.04pt>
+[22] [23 <./FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf, page is rotated 90 de
+grees>] <FIGS/VarsSingleMerged/Tau2080.pdf, id=1008, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Tau2080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/Tau2080.pdf>
@@ -379,35 +379,35 @@ File: FIGS/VarsSingleMerged/TauRatio080.pdf Graphic file (type pdf)
 <FIGS/VarsSingleMerged/TauRatio200.pdf, id=1013, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/TauRatio200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/TauRatio200.pdf>
+<use FIGS/VarsSingleMerged/TauRatio200.pdf> [24] [25 <./FIGS/VarsSingleMerged/T
+au2080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Tau2200.pdf, p
+age is rotated 90 degrees> <./FIGS/VarsSingleMerged/Tau2trkWidth080.pdf, page i
+s rotated 90 degrees> <./FIGS/VarsSingleMerged/NtrktrkWidth080.pdf, page is rot
+ated 90 degrees>]
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.528  \end{bmatrix}
+l.541  \end{bmatrix}
                     
 ? 
 ! Extra \right.
 <to be read again> 
                    $
-l.528  \end{bmatrix}
+l.541  \end{bmatrix}
                     
 ? 
-[24] [25 <./FIGS/VarsSingleMerged/Tau2080.pdf, page is rotated 90 degrees> <./F
-IGS/VarsSingleMerged/Tau2200.pdf, page is rotated 90 degrees> <./FIGS/VarsSingl
-eMerged/Tau2trkWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerg
-ed/NtrktrkWidth080.pdf, page is rotated 90 degrees>]
-<FIGS/VarsSingleMerged/JetEcc080.pdf, id=1192, 569.12625pt x 546.04pt>
+[26 <./FIGS/VarsSingleMerged/TauRatio080.pdf, page is rotated 90 degrees> <./FI
+GS/VarsSingleMerged/TauRatio200.pdf, page is rotated 90 degrees>]
+<FIGS/VarsSingleMerged/JetEcc080.pdf, id=1282, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/JetEcc080.pdf Graphic file (type pdf)
 
 <use FIGS/VarsSingleMerged/JetEcc080.pdf>
-<FIGS/VarsSingleMerged/JetEcc200.pdf, id=1193, 569.12625pt x 546.04pt>
+<FIGS/VarsSingleMerged/JetEcc200.pdf, id=1283, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/JetEcc200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/JetEcc200.pdf> [26 <./FIGS/VarsSingleMerged/TauRatio
-080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/TauRatio200.pdf, 
-page is rotated 90 degrees>] [27 <./FIGS/VarsSingleMerged/JetEcc080.pdf, page i
-s rotated 90 degrees> <./FIGS/VarsSingleMerged/JetEcc200.pdf, page is rotated 9
-0 degrees>]
+<use FIGS/VarsSingleMerged/JetEcc200.pdf> [27 <./FIGS/VarsSingleMerged/JetEcc08
+0.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/JetEcc200.pdf, page
+ is rotated 90 degrees>]
 <FIGS/dataMC/FullDataVarNtrkPT080.pdf, id=1373, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarNtrkPT080.pdf Graphic file (type pdf)
 
@@ -433,7 +433,7 @@ File: FIGS/dataMC/FullDataVarDRktaxisPT200.pdf Graphic file (type pdf)
 
 <use FIGS/dataMC/FullDataVarDRktaxisPT200.pdf>
 
-LaTeX Warning: Float too large for page by 62.42078pt on input line 588.
+LaTeX Warning: Float too large for page by 62.42078pt on input line 601.
 
 <FIGS/dataMC/FullDataVarDRmaxPT080.pdf, id=1379, 569.12625pt x 549.05125pt>
 File: FIGS/dataMC/FullDataVarDRmaxPT080.pdf Graphic file (type pdf)
@@ -499,7 +499,7 @@ blic/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm10
 exmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm207
 4.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (38 pages, 1092838 bytes).
+Output written on tesis.pdf (38 pages, 1093495 bytes).
 PDF statistics:
  1921 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
