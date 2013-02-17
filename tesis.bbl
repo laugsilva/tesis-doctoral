@@ -54,11 +54,6 @@ R.~Snihur.
 \newblock Proceedings of the 7th International Workshop on Deep Inelastic
   Scattering and QCD.
 
-\bibitem{kt2}
-Stephen~D. Ellis and Davison~E. Soper.
-\newblock {Successive combination jet algorithm for hadron collisions}.
-\newblock {\em Phys.\ Rev.}, D48:3160--3166, 1993.
-
 \bibitem{Abdesselam:2010pt}
 A.~Abdesselam, E.~Bergeaas Kuutmann, U.~Bitenc, G.~Brooijmans, J.~Butterworth,
   et~al.
@@ -70,11 +65,6 @@ Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
 \newblock Techniques for improved heavy particle searches with jet
   substructure.
 \newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
-
-\bibitem{exclusivekt}
-Stephen~D. Ellis and Davison~E. Soper.
-\newblock Successive combination jet algorithm for hadron collisions.
-\newblock {\em Phys. Rev. D}, 48:3160--3166, Oct 1993.
 
 \bibitem{CatchmentArea}
 G.P.~Salam M.~Cacciari and Gregory Soyez.
@@ -90,10 +80,5 @@ Jesse Thaler and Ken Van~Tilburg.
 Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
 \newblock $n$ jettiness: An inclusive event shape to veto jets.
 \newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
-
-\bibitem{PhysRevLett.105.022001}
-Jason Gallicchio and Matthew~D. Schwartz.
-\newblock Seeing in color: Jet superstructure.
-\newblock {\em Phys. Rev. Lett.}, 105:022001, Jul 2010.
 
 \end{thebibliography}

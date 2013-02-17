@@ -325,17 +325,18 @@ In full simulation, the jet width can be measured in terms of calorimeter variab
 \mbox{ {\it Jet mass}} = E^2_{jet} - \mbox{ \emph{{\bf p}}}^2 = (\sum_i E_i)^2 - (\sum_i \mbox{\emph{{\bf p}}}_i)^2
 \end{equation}
 %
-with  $E_i$ and \emph{\bf{p}}$_i$, the energy and momentum of the jet constituent $i$.
+with  $E_i$ and \emph{\bf{p}}$_i$, the energy and momentum of the jet constituent $i$.This observable is highly correlated to the jet width.
+
 
 The jet mass, like the linear radial moment, depends on the radiation pattern of the event. It is the most basic observable for distinguishing massive boosted objects from jets originating from quarks or gluons~\cite{PhysRevD.79.074012}. %The latter are expected to be dominated by wide-angle emissions, with increased probability to see high mass jets initiated from gluons as opposed to quarks~\cite{PhysRevD.79.074012}.  
 
 
 Detector level jet mass distributions for jets selected to have $80 < \pt < 110$~GeV and $200 < \pt < 270$~GeV are shown in Fig.~\ref{fig:masssinglemerged}, both for single and merged $b$-jets. Merged jets tend to have higher masses than single $b$-jets for the same $\pt$ bin.  
 Although it shows good separation, this calorimeter based variable %is susceptible to the amount of pile-up in the event and for this it is not a robust discriminator.
-
-
 can be significantly affected by the amount of pile-up in the event as even a single soft wide angle deposition will have an effect on the jet mass, shifting the distribution to higher values\footnote{In the ATLAS analysis of 35~pb$^{-1}$ of 2010 data, the sensitivity of individual jet mass to pile-up is directly tested (for jets with at least 300~GeV). The mean jet mass is observed to increase linearly with NPV~\cite{ATLAS-CONF-2011-073}.}. %The filtering procedure significantly reduces the effect of pile-up on jet mass.}. 
-In addition, the jet mass is highly correlated with the jet width.
+
+
+
 
 \begin{figure}[tp]
 \centering
@@ -391,12 +392,14 @@ Its distribution is shown in Fig.~\ref{fig:drmaxsinglemerged}, for single and do
 %With the development of the $k_t$ algorithm, subjets were first used in the description of the hadronic final state in $e^+e^-$ annihilation, such as the study of the jet multiplicity at different energy scales~\cite{Catani1992445}. 
 \subsubsection{Subjet multiplicity} 
 
-The subjet multiplicity $-$ the number of subjets within a jet $-$ provides information on the distribution of energy and multiplicity of particles within a jet.  For instance, a measurement of this observable for quark and gluon jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity~\cite{Snihur1999494}. % the result of measuring this variable on quark- and gluon-initiated jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity. 
-This result is consistent with the QCD prediction that gluons radiate more than quarks. In this case %and different other analyses % see for instance  http://iopscience.iop.org/1126-6708/1999/09/009/
-the $k_t$ algorithm is rerun for subjet finding.
 
-In general, by using the inclusive $k_t$ or  other sequential recombination algorithms, introduced in Section~\ref{sec:jetalgos}, it is straightforward to define a ``subjet algorithm'' in which the structure of the jet constituents is resolved using either the same jet finder algorithm as used for jet reconstruction or a new one with a fixed (smaller) distance parameter. 
-As an alternative to fixed distance parameter subjets, it is also possible to undo the last step in the recombination sequence~\cite{kt2} in order to identify the decay products of an object.  This approach is used in several jet grooming procedures\footnote{Jet grooming comprises dedicated techniques to remove uncorrelated radiation within a jet. A review of these procedures can be found in~\cite{Abdesselam:2010pt}. }, see for instance~\cite{pruning}.
+Subjet reconstruction has a similar approach as jet reconstruction but, rather than looking at all clusters (for topocluster jets) in an event, the subjet analysis is limited to objects only within a jet.  The subjet multiplicity is the number of the reconstructed subjets within a jet and it provides information on the distribution of energy and multiplicity of particles within a jet.  A measurement of this observable for quark and gluon jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity~\cite{Snihur1999494}. % the result of measuring this variable on quark- and gluon-initiated jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity. 
+This result is consistent with the QCD prediction that gluons radiate more than quarks.  %and different other analyses % see for instance  http://iopscience.iop.org/1126-6708/1999/09/009/
+%In this case the $k_t$ algorithm is rerun for subjet finding.
+
+The subjets were resolved by use of the inclusive $k_t$ clustering jet algorithm on the jet constituents with a fixed distance parameter. The $k_t$ algorithm is the only jet algorithm that correctly identifies the resulting substructure as physical objects and therefore is the algorithm used for substructure analysis.
+%By using the inclusive $k_t$ algorithm, introduced in Section~\ref{sec:jetalgos}, It is straightforward to define a ``subjet algorithm'' in which the structure of the jet constituents is resolved using either the same jet finder algorithm as used for jet reconstruction or a new one with a fixed (smaller) distance parameter. 
+As an alternative to fixed distance parameter subjets, it is also possible to undo the last step in the recombination sequence in order to identify the decay products of an object. This corresponds conceptually to undoing the first step in the fragmentation process that leads from interacting partons to jets.  This approach is used in several jet grooming procedures\footnote{Jet grooming comprises dedicated techniques to remove uncorrelated radiation within a jet. A review of these procedures can be found in~\cite{Abdesselam:2010pt}. }, see for instance~\cite{pruning}.
 
 %In contrast to the $k_t$ algorithm, it is not useful just to undo the last stage of C/A clustering: The absence of any momentum scale in its distance measure means that the last clustering often involves soft radiation on the edges of the jet and so, is unrelated to the heavy object's decay. 
 %The so-called BDRS method of jet grooming
@@ -422,7 +425,9 @@ Figure~\ref{fig:nsubjetsinglemerged} shows the distribution of the number of sub
 
 \subsubsection{$\Delta R$ between the axes of two $k_t$ subjets}  
 
-The $\Delta R$ between $k_t$ subjets is obtained by applying the exclusive $k_t$ algorithm~\cite{exclusivekt} to the tracks associated to the jet using a large $k_t$ distance parameter to ensure that all tracks get combined. The clustering is stopped once it reaches exactly two jets. The $\Delta R$ between the axes of the two exclusive subjets is shown in Fig.~\ref{fig:drktsinglemerged}.  As expected, it is larger for merged than for single jets. We observe that this
+The $\Delta R$ between $k_t$ subjets is obtained by applying the $k_t$ algorithm to the tracks associated to the jet using a large $k_t$ distance parameter in order to ensure that all tracks get combined. The clustering is stopped once it reaches exactly two jets. This is done in Fastjet (see Section~\ref{sec:jetalgos}) by the so called ``exclusive'' $k_t$ algorithm. The exclusive $k_t$ subjets correspond to reversing one step the process of clusterization, obtaining thus the two objects that, upon merging, give rise to the final jet. This cannot be done with anti-$k_t$.
+
+ The $\Delta R$ between the axes of the two exclusive subjets is shown in Fig.~\ref{fig:drktsinglemerged}.  As expected, it is larger for merged than for single jets. We observe that this
 variable provides very good separation, with the advantage of infrared safety and insensitivity to pile-up as opposed to $\max\{\Delta R(trk,trk)\}$.
 %\vspace{3 mm}
 
@@ -435,13 +440,17 @@ variable provides very good separation, with the advantage of infrared safety an
 \end{figure}
 
 In order to illustrate what this variable represents, an event display of a merged $b$-jet with a large  ($>0.3$) $\Delta R$  %between two $k_t$ subjets 
-value is shown in Fig.~\ref{fig:ED}.  For this case, the jet active area~\cite{CatchmentArea} was reconstructed following a procedure called ``ghost association'', in which the event topoclusters plus a grid of $0.1 \times 0.1$ cells  with nearly zero energy get associated to the jet through jet clustering. In the case of Figure~\ref{fig:ED} the anti-$k_t$ algorithm was used.  The event display indicates how the high energy cells in the jet with two $b$-hadorns are grouped around the $b$-hadrons directions, leading to the two-subjet substructure of merged jets.
+value is shown in Fig.~\ref{fig:ED}.  
+The plot illustrates in a $0.1 \times 0.1$ grid the area covered by the jet (in blue) and the position of the clusters associated to each jet, with the color indicating the value of their energy. The area of the jet (the section of the $\eta - \phi$  space belonging to it) is obtained by means of the ``jet active area'' concept, proposed in Ref.~\cite{CatchmentArea}.
+%For this case, the jet active area~\cite{CatchmentArea} was reconstructed following a procedure called ``ghost association'', in which the event topoclusters plus a grid of $0.1 \times 0.1$ cells  with nearly zero energy get associated to the jet through jet clustering. In the case of Figure~\ref{fig:ED} the anti-$k_t$ algorithm was used. 
+ The event display indicates how the high energy cells in the jet with two $b$-hadorns are grouped around the $b$-hadrons directions, leading to the two-subjet substructure of merged jets.
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=1\textwidth]{FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf}
+%\includegraphics[width=1\textwidth]{FIGS/TEMPFigs/EventDisplay7023Cluster_Bs.pdf}
+\includegraphics[width=1\textwidth]{FIGS/TEMPFigs/TESTEventDisplay2Cluster.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/DRkt2axes200.pdf}
-\caption{Event display of a merged $b$-jet in $(\eta,\phi)=(0.46,1.41)$ and $\pt = 110$~GeV. The two $b$-hadrons are indicated as two red squares. The active area of the jet is shown in blue and the topoclusters belonging to the jet are shown in different colors, from green to orange, depending on their transverse momentum. The $\Delta R$ between the axes of the two $k_t$ subjets in the jet is larger than 0.3. The two-subjet structure of the merged jet is displayed.}
+\caption{Event display of a merged $b$-jet in $(\eta,\phi)=(0.46,1.41)$ and $\pt = 110$~GeV. The two $b$-hadrons are indicated as two red squares. The area of the jet is shown in blue and the topoclusters belonging to the jet are shown in different colors, from green to orange, depending on their transverse momentum. The $\Delta R$ between the axes of the two $k_t$ subjets in the jet is larger than 0.3. The two-subjet structure of the merged jet is displayed.}
 \label{fig:ED}
 \end{figure}
 
@@ -486,8 +495,8 @@ To avoid dependence on pile-up we consider track-based $N$-subjettiness, where t
 This behavior can be traced to the level of correlation between $\tau_2$ and track-jet width, displayed in Fig.~\ref{fig:tau2trkwidthsinglemerged}a, to be compared to the much lower correlation presented, for instance, between track-jet width and jet track multiplicity, shown in  Fig.~\ref{fig:tau2trkwidthsinglemerged}b. 
 
 The correlation observed suggests to switch from an absolute to a width-normalized $\tau_2$, and evaluate the ratio $\tau_2/\tau_1$, as shown in  Fig.~\ref{fig:tauratiosinglemerged}. % thus shows the distributions for this observable. 
-Somewhat larger values are obtained for single than for merged $b$-jets, specially at high $\pt$, however we decided not to use this variable as it offers only marginal discrimination. 
-
+Somewhat larger values are obtained for single than for merged $b$-jets, specially at high $\pt$, %however we decided not to use this variable as it offers only marginal discrimination. 
+as expected. However, the difference is small, producing only a marginal discrimination, indicating that gluon splitting jets do not present a marked 2-subjet structure as boosted $Z$ or $H$ fat jets.
 %In spite of its expected 2-prong substructure, merged $b$-jets have higher values of $ \tau_2$ than single $b$-jets.  The explanation of this behavior can be found in Fig.~\ref{fig:tau2trkwidthsinglemerged}, where its correlation with  track-jet width ($\sim \tau_1$) is shown for single and merged $b$-jets. The two variables are highly correlated and for this reason wider jets  have a larger $ \tau_2$. This suggests to switch from an absolute to a width-normalized$\tau_2$. Fig.~\ref{fig:tauratiosinglemerged} thus shows the distributions of $\tau_2/\tau_1$. This ratio is often used but, although as expected somewhat larger values are obtained for single than for merged $b$-jets, specially at high $\pt$, we decided not to use this variable as it offers only marginal discrimination. 
 %\vspace{3 mm}
 
@@ -531,19 +540,20 @@ Somewhat larger values are obtained for single than for merged $b$-jets, special
  
 \subsubsection{Jet eccentricity} 
 
-In defining a jet moment there are several ways to weight the momentum and define the center of the jet. We have defined the jet width as the first moment of the transverse energy with respect to the jet axis; another example of useful combination is the jet pull~\cite{PhysRevLett.105.022001}. But it is also natural to look at higher moments, such as those contained in the $2 \times 2$ matrix,
+In defining a jet moment there are several ways to weight the momentum and define the center of the jet. We have described the jet width as the first moment of the transverse energy with respect to the jet axis. %; another example of useful combination is the jet pull~\cite{PhysRevLett.105.022001}. 
+But it is also natural to look at higher moments, such as those contained in the $2 \times 2$ matrix,
 %\[ C = \sum_{i\in jet}\frac{p^i_T|r_i|}{p^{jet}_T} \left( \begin{array}{cc}
 % \Delta y^2_i & \Delta y_i \Delta\phi_i \\ 
 % \Delta\phi_i \Deltay_i & \Delta \phi^2_i \end{array} \right). \]
 %
 \begin{equation}
  \begin{bmatrix}
- \sum E_i \eta^2_i       &  -\sum E_i \eta_i \phi_i \\ 
--\sum E_i \eta_i \phi_i &  \sum E_i \phi^2_i \right
+ \sum \pt_i \delta\eta^2_i       &  -\sum \pt_i \delta\eta_i \delta\phi_i \\ 
+-\sum \pt_i \delta\eta_i \delta\phi_i &  \sum \pt_i \delta\phi^2_i \right
  \end{bmatrix}
 \end{equation}
 %
-Here, $(E_i,\eta_i,\phi_i)$ are the jet constituent energy, pseudorapidity and azimuthal angle, respectively. The eigenvalues $\lambda_m \leq \lambda_p $ of this tensor are associated to the semiminor and semimajor axes of an elliptical approximation to the jet shape in the $\eta - \phi$ plane. The jet eccentricity, defined below, is a combination of these eigenvalues, and it is a measure of how elongated the area of a jet is,
+Here, $(\pt_i,\delta\eta_i,\delta\phi_i)$ are the jet constituent transverse momentum and its pseudorapidity and azimuthal angle measured with respect to the jet axis, respectively. The eigenvalues $\lambda_m \leq \lambda_p $ of this tensor are associated to the semiminor and semimajor axes of an elliptical approximation to the jet shape in the $\eta - \phi$ plane. The jet eccentricity, defined below, is a combination of these eigenvalues, and it is a measure of how elongated the area of a jet is,
 %
 \begin{equation} 
 e = \sqrt{1-r^2}
@@ -553,13 +563,15 @@ e = \sqrt{1-r^2}
 where the parameter $r$ is defined as the ratio of the eigenvalues,
 %
 \begin{equation} 
-r = \frac{\lambda_m}{\lambda_p} = \frac{\sum E_i \eta^2_i+\sum E_i \phi^2_i - \sqrt{(\sum E_i \eta^2-\sum E_i \phi^2_i)^2+4(\sum E_i \eta_i \phi_i)^2}}{\sum E_i \eta^2_i+\sum E_i \phi^2_i + \sqrt{(\sum E_i \eta^2-\sum E_i \phi^2_i)^2+4(\sum E_i \eta_i \phi_i)^2}}.
+r = \frac{\lambda_m}{\lambda_p} = \frac{\sum E_i \delta\eta^2_i+\sum E_i \delta\phi^2_i - \sqrt{(\sum E_i \delta\eta^2-\sum E_i \delta\phi^2_i)^2+4(\sum E_i \delta\eta_i \delta\phi_i)^2}}{\sum E_i \delta\eta^2_i+\sum E_i \delta\phi^2_i + \sqrt{(\sum E_i \delta\eta^2-\sum E_i \delta\phi^2_i)^2+4(\sum E_i \delta\eta_i \delta\phi_i)^2}}.
 \label{ecc2}
 \end{equation}
 %
 %For circular jets, $e = 0$. 
 %No significan difference in eccentricity was found between quark and gluon jets.
-Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentricity, built using track constituents. No significant difference in eccentricity was found between single and merged $b$-jets. 
+Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentricity, built using track constituents. %No significant difference in eccentricity was found between single and merged $b$-jets. 
+Although merged jets tend to be less spherical than single jets, for jets with $80$~GeV $< \pt < 110$~GeV, the difference is only marginal and essentially nonexistent for high $\pt$ jets.
+
 %\vspace{3 mm}
 
 \begin{figure}[tp]
@@ -571,7 +583,8 @@ Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentrici
 \end{figure}
 
 
-In order to better understand the behavior observed for this variable, further studies were performed using bigger cone jets to enhance the efficiency to capture the decay products in gluon to $b \bar{b}$-jets, in particular the anti-$k_t$ 0.6 algorithm was used; and the ghost association procedure for cluster matching, for a calorimeter-based eccentricity. None of the above resulted in better single-merged separation.
+In order to better understand the behavior observed for this variable, further studies were performed using bigger cone jets to enhance the efficiency to capture the decay products in gluon to $b \bar{b}$-jets, in particular the anti-$k_t$ 0.6 algorithm was used; and %the ghost association procedure for cluster matching, for a calorimeter-based eccentricity. None of the above resulted in better single-merged separation.
+tracks were replaced by clusters, for a cluster-based eccentricity.  None of the above resulted in better single-merged separation.
 
 
 %Aqui el resultado de sabrina.
@@ -583,34 +596,84 @@ In order to better understand the behavior observed for this variable, further s
 \section{Validation of the jet variables in data}\label{sec:gbbValidation}
 %------------------------------------------------------------------------
 
- In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored a set of comparison plots is presented. Figures~\ref{fig:datamcinputvars} and~\ref{fig:datamcinputvars2} show distributions of jet track multiplicity, track-jet width, $\Delta R$ between the axes of the two $k_t$ subjets, $\max\{\Delta R(trk,trk)\}$ and $\tau_2$ in two different $\pt$ bins for $b$-tagged jets in dijet Monte Carlo and data events passing the selection described in Section~\ref{sec:EventSelection}.
+ In order to study the extent to which the simulation reproduces the distributions observed in data for the different variables explored %a set of comparison plots is presented. 
+a comprehensive programme of data and MC comparisons was carried on. A few examples are presented in this section.
+Figures~\ref{fig:datamcinputvarsNTRK} to~\ref{fig:datamcinputvars2TAU2} show distributions of jet track multiplicity, track-jet width, $\Delta R$ between the axes of the two $k_t$ subjets, $\max\{\Delta R(trk,trk)\}$ and $\tau_2$ in two different $\pt$ bins for $b$-tagged jets in dijet Monte Carlo and data events passing the selection described in Section~\ref{sec:EventSelection}.
 The distributions are normalized to unit area to allow for shape comparisons. There is a very good agreement between data and simulation in all cases.
 
-It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects, although the agreement evaluated in $b$-jets selected with a looser cut of MV1 tagger as well as with another $b$-tagging algorithm is still very good, suggesting that this compensation is not likely to occur in samples sufficiently enriched in $b$-jets.
+It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects. To study this posibility, the agreement between data and simulation was evaluated in $b$-jets selected with a looser cut of MV1 tagger (70\% efficiency working point) as well as with another $b$-tagging algorithm, the JetFitter. The result is shown for the jet track multiplicity in Figures~\ref{fig:datamcinputvarsNTRKMV170} and~\ref{fig:datamcinputvarsNTRKJETFIT}.The agreement is still very good, suggesting that this compensation is not likely to occur in samples sufficiently enriched in $b$-jets.
 
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarNtrkPT080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarNtrkPT200.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT200.pdf}  
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT200.pdf}  
+\caption{ Distribution of the jet track multiplicity in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\label{fig:datamcinputvarsNTRK}
+\end{figure}
+
+
+\begin{figure}[tp]
+\centering
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT200.pdf}  
+\caption{ Distribution of the track-jet width in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\label{fig:datamcinputvarsTRKWIDTH}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT200.pdf}  
-%\caption{ Distribution of three tracking variables in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS until summer 2011, with $\mu \approx 6$ (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
-\caption{ Distribution of three tracking variables in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
-\label{fig:datamcinputvars}
+\caption{ Distribution of the $\Delta R$ between the axes of the two $k_t$ subjets in the jet in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\label{fig:datamcinputvarsDRKT}
 \end{figure}
+
+
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRmaxPT080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRmaxPT200.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT200.pdf}  
-\caption{ Distribution of two tracking variables in two different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
-\label{fig:datamcinputvars2}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT200.pdf}  
+\caption{ Distribution of maximum $\Delta R$ between pairs of tracks in two different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\label{fig:datamcinputvars2DRMAX}
 \end{figure}
 
 
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTau2PT200.pdf}  
+\caption{ Distribution of $\tau_2$ in two different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+\label{fig:datamcinputvars2TAU2}
+\end{figure}
 
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/dataMCMV170/FullDataVarNtrkPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMCMV170/FullDataVarNtrkPT200.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT200.pdf}  
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT200.pdf}  
+\caption{ Distribution of the jet track multiplicity in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). Jets were selected using MV1 tagger at its 70\% $b$-jet efficiency working point. The ratio data over simulation is shown at the bottom of each plot.The agreement is very good.}
+\label{fig:datamcinputvarsNTRKMV170}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.49\textwidth]{FIGS/dataMCJETFIT/FullDataVarNtrkPT080.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/dataMCJETFIT/FullDataVarNtrkPT200.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarTrkWidthPT200.pdf}  
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT200.pdf}  
+\caption{ Distribution of the jet track multiplicity in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). Jets were selected using JetFitter tagger at its 60\% $b$-jet efficiency working point. The ratio data over simulation is shown at the bottom of each plot.The agreement is very good.}
+\label{fig:datamcinputvarsNTRKMV170}
+\end{figure}
