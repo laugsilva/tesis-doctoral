@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Main/core.aux
+A level-1 auxiliary file: Introduction/theory.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 18 of file tesis.bib
@@ -11,46 +11,57 @@ I was expecting a `,' or a `}'---line 47 of file tesis.bib
  :   year = "
  :           {1973}",
 I'm skipping whatever remains of this entry
+Warning--empty journal in ATLASHiggs
+Warning--empty journal in Zweig:1964jf
+Warning--empty journal in Zweig2
+Warning--empty year in PhysRevLett.30.1346
+Warning--empty year in PhysRevD.8.3497
 Warning--empty author in Pythia_MC11tune
-You've used 15 entries,
+Warning--empty journal in Perugia
+Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
+while executing---line 944 of file unsrt.bst
+Warning--empty journal in Abbiendi:2007aa
+Warning--empty journal in Aad:2012np
+Warning--empty journal in boost2010b
+You've used 62 entries,
             1791 wiz_defined-function locations,
-            547 strings with 5738 characters,
-and the built_in function-call counts, 2949 in all, are:
-= -- 250
-> -- 127
+            852 strings with 13224 characters,
+and the built_in function-call counts, 13314 in all, are:
+= -- 1110
+> -- 644
 < -- 1
-+ -- 49
-- -- 34
-* -- 204
-:= -- 506
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 15
++ -- 243
+- -- 181
+* -- 975
+:= -- 2249
+add.period$ -- 186
+call.type$ -- 62
+change.case$ -- 61
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 130
-empty$ -- 292
-format.name$ -- 34
-if$ -- 639
+cite$ -- 72
+duplicate$ -- 546
+empty$ -- 1288
+format.name$ -- 181
+if$ -- 2871
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 14
-newline$ -- 78
-num.names$ -- 14
-pop$ -- 21
+int.to.str$ -- 62
+missing$ -- 62
+newline$ -- 313
+num.names$ -- 61
+pop$ -- 103
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 48
+skip$ -- 206
 stack$ -- 0
-substring$ -- 177
-swap$ -- 15
+substring$ -- 924
+swap$ -- 55
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 25
-width$ -- 17
-write$ -- 165
-(There were 2 error messages)
+warning$ -- 10
+while$ -- 116
+width$ -- 64
+write$ -- 666
+(There were 3 error messages)
