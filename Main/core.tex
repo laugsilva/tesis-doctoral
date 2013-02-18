@@ -45,7 +45,7 @@ In order to have sufficient statistics over the entire $\pt$ spectrum, seven sam
 %J5       280-560 GeV
 %J6      560-1120 GeV
 %The $\pt$ distribution for these samples is shown in Fig.~\ref{fig:JXpt}a. 
- For the Monte Carlo $\pt$ distribution, or the distribution of any other observable,  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. The $\pt$ pectrum obtained after performing this procedure is displayed in Fig.~\ref{fig:JXpt}.
+ For the Monte Carlo $\pt$ distribution (or the distribution of any other observable),  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. The $\pt$ spectrum obtained after performing this procedure is displayed in Fig.~\ref{fig:JXpt}.
 
 \begin{figure}[tp]
 \centering
@@ -102,11 +102,11 @@ where $j$ is a jet in the event and $B_{i(j)}$ are the $b$-hadrons in the event.
 %------------------------------------------------------------------------
 The tracking system provides a very precise tool for understanding the structure of jets and for mitigating the pile-up background.  Charged particle jet constituents that leave tracks in the inner detector provide 3-dimensional information on the jet origin and direction as a result of the vertexing provided by the tracks. The combination of tracking and calorimetry therefore greatly enhance the identification and selection of hadronic jets from primary interactions that do typically have associated charged tracks. 
 
-In the study of the internal structure of jets containing $b$-hadrons, the tracking information will be used to define jet variables with potential discriminating power between single and merged $b$-jets.  For this reason the selection of genuine tracks belonging to jets is one of the most important steps of the analysis.
+In the study of the internal structure of jets containing $b$-hadrons, the tracking information will be used to define jet variables with potential discriminating power between single and merged $b$-jets.  For this reason the selection of genuine tracks belonging to jets is of great importance. %one of the most important steps of the analysis.
 
 The jet direction is used to associate the charged particles reconstructed as tracks in the inner detector to the jet.   A simple $\Delta R < 0.4$ matching criterion is used, where the matching is performed using the track coordinates at the point of closest approach to the primary vertex.
 
-Tracks are required to fulfill cuts on their transverse momentum, number of hits and transverse and longitudinal impact parameters, similar to those applied by $b$-tagging algorithms (see Section~\ref{sec:btagging}).  Cuts on $\pt^{trk}>1.0$~GeV and the $\chi^2$ of the track fit, $\chi^2/{\it ndf}<3$, are applied. The effect of a lower cut on the track transverse momentum, $\pt^{trk}>1.0$~GeV, is discussed in the next section.  In addition, tracks are required to have a total of at least seven precision hits (pixel or micro-strip) in order to guarantee at least 3 $z$-measurements.  As cutting on impact parameter (IP) might be detrimental for $b$-jets, where large IP values are expected, relaxed cuts were used, $|d_{0}|<2$~mm, and $|z_{0}\sin\theta|<2$~mm, with $\theta$ being the polar angle measured with respect to the beam axis. The track quality cuts are summarized in table~\ref{tb:tracks}. %This, however, might still be too tight for $b$-jets.
+Tracks are required to fulfill cuts on their transverse momentum, number of hits and transverse and longitudinal impact parameters, similar to those applied by $b$-tagging algorithms (see Section~\ref{sec:btagging}).  Cuts on $\pt^{trk}>1.0$~GeV and the $\chi^2$ of the track fit, $\chi^2/{\it ndf}<3$, are applied. The effect of a lower cut on the track transverse momentum, $\pt^{trk}>0.5$~GeV, is discussed in the next section.  In addition, tracks are required to have a total of at least seven precision hits (pixel or micro-strip) in order to guarantee at least 3 $z$-measurements.  As cutting on impact parameter (IP) might be detrimental for $b$-jets, where large IP values are expected, relaxed cuts were used, $|d_{0}|<2$~mm, and $|z_{0}\sin\theta|<2$~mm, with $\theta$ being the polar angle measured with respect to the beam axis. The track quality cuts are summarized in table~\ref{tb:tracks}. %This, however, might still be too tight for $b$-jets.
 
 
 \begin{table}[!hbt] %[h]
@@ -191,7 +191,7 @@ It was observed that reducing the $\pt$ cut of the tracks degrades the discrimin
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/Ntrk200.pdf}
-\caption{Distribution of the track multiplicity in jets for single and merged $b$-jets from 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
+\caption{Distribution of the track multiplicity for single and merged $b$-jets from 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:ntrksinglemerged}
 \end{figure}
 
@@ -263,7 +263,7 @@ where $N$ is the total number of calorimeter, track or particle constituents.  %
 This observable has also found use in the discrimination between gluon initiated and light quark initiated jets, see for instance~\cite{PhysRevLett.107.172001} and~\cite{ATLAS-CONF-2011-053}. Gluon jets are seen to be broader than quark jets. In the case of jets originating from $b$-quarks, these resemble gluon jets more closely than quarks jets~\cite{Buskulic1996353}: due to the %longer decay chain of $b$-hadrons the angular spread is larger for a $b$-jet than a light-quark jet. 
 mass diference between $b$-hadrons and light-quark hadrons the angular spread is larger for a $b$-jet than a light-quark jet. 
 
-In order to explore how merged jets, originating from a gluon splitting into a $b\bar{b}$ pair, compare to single $b$-quark jets and pure gluon jets,  a standalone {\sc Pythia} analysis was performed.  Figure~\ref{fig:trkwidthsinglemergedPYTHIAgluon} illustrates the result; $b$-jets containing two $b$-hadrons present a greater angular width relative to single $b$-jets and gluon initiated jets. The latter, in turn, look broader than single $b$-jets. This behavior is somehow expected in the LHC's higher $\pt$ jets because the QCD shower produces more particles resulting in broader gluon jets, with more jet-to-jet fluctuations, while the particle multiplicity is relatively fixed in the $b$-hadron decay.
+In order to explore how merged jets, originating from a gluon splitting into a $b\bar{b}$ pair, compare to single $b$-quark jets and pure gluon jets,  a standalone {\sc Pythia} analysis was performed.  Figure~\ref{fig:trkwidthsinglemergedPYTHIAgluon} illustrates the result. $b$-jets containing two $b$-hadrons present a greater angular width relative to single $b$-jets and gluon initiated jets. The latter, in turn, look broader than single $b$-jets. This behavior is somehow expected in the LHC's higher $\pt$ jets because the QCD shower produces more particles resulting in broader gluon jets, with more jet-to-jet fluctuations, while the particle multiplicity is relatively fixed in the $b$-hadron decay.
 
 The distribution of the track-jet width for the full ATLAS simulation is shown in Fig.~\ref{fig:trkwidthsinglemerged}. In this case % for which 
 the sum in equation~\ref{eqn:trackjetwidth} runs over the $N$ tracks associated to the jet, using the same criteria as for the jet track multiplicity. As expected, merged $b$-jets are wider than single $b$-jets. 
@@ -281,7 +281,7 @@ In full simulation, the jet width can be measured in terms of calorimeter variab
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/PythisStandalone/MaxPlots/trkWidth_bb_b_g_J3_PT80.png}
 %\includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/trkWidth200.pdf}
-\caption{Distribution of track-jet width in jets for gluon-initiated ($g$), single ($b$) and merged ($bb$) jets from 80~GeV to 120~GeV in a sample of dijet events generated with {\sc Pythia} and no detector simulation.}
+\caption{Distribution of track-jet width for gluon-initiated ($g$), single ($b$) and merged ($bb$) jets from 80~GeV to 120~GeV in a sample of dijet events generated with {\sc Pythia} and no detector simulation.}
 \label{fig:trkwidthsinglemergedPYTHIAgluon}
 \end{figure}
 
@@ -374,14 +374,16 @@ Figure~\ref{fig:drtrk12singlemerged} shows the distribution of the $\Delta R$ be
 \subsubsection{Maximum $\Delta R$ between track pairs}  
 
 Several other variables, besides the jet width, were investigated to expose the expected two-subjet substructure of merged $b$-jets.  The maximum $\Delta R$ separation between pairs of tracks associated to the jet ($\max\{\Delta R(trk,trk)\}$) is one example. %was also evaluated as a discrimating variable. 
-Its distribution is shown in Fig.~\ref{fig:drmaxsinglemerged}, for single and double $b$-hadron jets. The latter show significantly higher values over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. In spite of its good discrimination power, alternative characterising variables are desirable as $\max\{\Delta R(trk,trk)\}$ is not infrared safe as it is affected by soft radiation. Furthermore it is  sensitive to soft tracks originating from pile-up. 
+Its distribution is shown in Fig.~\ref{fig:drmaxsinglemerged}, for single and double $b$-hadron jets. The latter show significantly higher values over a broad range of jet $\pt$. The distinct characteristic of this variable is that the separation between single $b$-jets and merged does not depend on jet $\pt$. 
+
+In spite of its good discrimination power, alternative characterising variables are desirable as $\max\{\Delta R(trk,trk)\}$ is not infrared safe as it is affected by soft radiation. Furthermore it is  sensitive to soft tracks originating from pile-up. 
 %\vspace{3 mm}
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax080.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/VarsSingleMerged/drmax200.pdf}
-\caption{Distribution of the maximum $\Delta R$ between pairs of tracks in jets for single and merged $b$-jets from 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
+\caption{Distribution of the maximum $\Delta R$ between pairs of tracks for single and merged $b$-jets from 80~GeV to 110~GeV (left) and 200~GeV to 270~GeV (right).}
 \label{fig:drmaxsinglemerged}
 \end{figure}
 
@@ -570,7 +572,8 @@ r = \frac{\lambda_m}{\lambda_p} = \frac{\sum E_i \delta\eta^2_i+\sum E_i \delta\
 %For circular jets, $e = 0$. 
 %No significan difference in eccentricity was found between quark and gluon jets.
 Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentricity, built using track constituents. %No significant difference in eccentricity was found between single and merged $b$-jets. 
-Although merged jets tend to be less spherical than single jets, for jets with $80$~GeV $< \pt < 110$~GeV, the difference is only marginal and essentially nonexistent for high $\pt$ jets.
+Although merged jets tend to be less spherical than single jets %, for jets with $80$~GeV $< \pt < 110$~GeV, 
+the difference is only marginal and essentially nonexistent for high $\pt$ jets.
 
 %\vspace{3 mm}
 
