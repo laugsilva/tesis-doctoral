@@ -1,16 +1,12 @@
-\contentsline {chapter}{\numberline {1}Double \emph {\textbf {b}}-hadron jet identification}{2}
-\contentsline {section}{\numberline {1.1}Data sample}{2}
-\contentsline {section}{\numberline {1.2}Monte Carlo sample}{4}
-\contentsline {subsection}{\numberline {1.2.1}Event and jet selection}{4}
-\contentsline {subsection}{\numberline {1.2.2}Track selection}{7}
-\contentsline {section}{\numberline {1.3}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{9}
-\contentsline {subsubsection}{Jet track multiplicity}{10}
-\contentsline {subsubsection}{Jet width}{13}
-\contentsline {subsubsection}{Jet Mass}{15}
-\contentsline {subsubsection}{$\Delta R$ between leading tracks}{17}
-\contentsline {subsubsection}{Maximum $\Delta R$ between track pairs}{18}
-\contentsline {subsubsection}{Subjet multiplicity}{19}
-\contentsline {subsubsection}{$\Delta R$ between the axes of two $k_t$ subjets}{20}
-\contentsline {subsubsection}{$N$-subjettiness variables}{22}
-\contentsline {subsubsection}{Jet eccentricity}{25}
-\contentsline {section}{\numberline {1.4}Validation of the jet variables in data}{28}
+\contentsline {chapter}{\numberline {1}Theoretical framework}{2}
+\contentsline {section}{\numberline {1.1}The Standard Model}{2}
+\contentsline {section}{\numberline {1.2}Perturbative QCD}{8}
+\contentsline {section}{\numberline {1.3}Jet physics}{12}
+\contentsline {subsection}{\numberline {1.3.1}Monte Carlo tools}{13}
+\contentsline {subsubsection}{Pythia}{16}
+\contentsline {subsubsection}{Herwig$++$}{17}
+\contentsline {subsection}{\numberline {1.3.2}Jet algorithms}{18}
+\contentsline {subsubsection}{Fixed cone jet finder in ATLAS}{19}
+\contentsline {subsubsection}{Sequential recombination algorithms}{21}
+\contentsline {subsection}{\numberline {1.3.3}Jet substructure}{25}
+\contentsline {section}{\numberline {1.4}Heavy flavor jet production}{26}
