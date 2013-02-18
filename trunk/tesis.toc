@@ -13,4 +13,4 @@
 \contentsline {subsubsection}{$\Delta R$ between the axes of two $k_t$ subjets}{20}
 \contentsline {subsubsection}{$N$-subjettiness variables}{22}
 \contentsline {subsubsection}{Jet eccentricity}{25}
-\contentsline {section}{\numberline {1.4}Validation of the jet variables in data}{28}
+\contentsline {section}{\numberline {1.4}Validation of the jet variables in data}{27}
