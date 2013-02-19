@@ -6,7 +6,7 @@
 %\chapter{Quantum Chromodynamics}
 \chapter{Theoretical framework}\label{ch:theory}
 
-In this chapter a short overview of the theory of elementary particles and fundamental interactions is presented, with emphasis on the strong interactions and the description of the hadronic final state in hadron collisions.
+{\it In this chapter a short overview of the theory of elementary particles and fundamental interactions is presented, with emphasis on the strong interactions and the description of the hadronic final state in hadron collisions.}
 
 %------------------------------------------------------------------------
 %\section{The theory of the strong interactions}\label{sec:qcdintro}
@@ -210,27 +210,17 @@ The fact that the cross-section of a process should be independent of the factor
 The dependence on $x$, on the other hand, must be obtained by fitting possible cross section predictions to data from hard scattering experiments.
 %This inconvenience is in fact to be expected, since the structure inside the proton is a region of strong coupling constant $\alpha_s$, and hence is not accessible with analytic non-perturbative calculations.
 
-%------------------------------------------------------------------------
-\section{Jet physics}\label{sec:jets}
-%------------------------------------------------------------------------
-
-Due to confinement the experimental signature of quarks and gluons are the final state ``coloreless'' hadrons\footnote{We use "colorless" to mean a singlet representation of the color group.}.  The packet of particles produced tends to travel collinearly with the direction of the initiator quark or gluon. The result is a collimated ``spray'' of hadrons (also photons and leptons) entering the detector in place of the original parton; these clusters of objects are what we define as jets.
-The first evidence for jet production was observed in $e^+e^-$ collisions at the SPEAR storage ring at SLAC in 1975~\cite{PhysRevLett.35.1609}. 
-%In order to determine how jetlike an event was, they calculated the sphericity, a quantity between 0 and 1, with values approaching to 1 meaning an isotropic phase-space with high multiplicity; and  0, for events with bounded transverse momenta. The data agreed with the jet model predicted by the Monte Carlo simulation.
 
 
-The evolution from a single parton to an ensemble of hadrons occurs through the processes of parton showering and hadronization. Since the strong coupling constant grows with increasing distance between color charges, a strong color potential forms as the parton from the ``hard'' (high $Q^2$) scattering process separates from the original hadron. This large potential causes quark$/$antiquark pairs ($q\bar{q}$) to be created, each carrying some of the energy and momentum of the original partons. As these new partons move away from one another, yet more color potentials are formed, and the process repeats. Thus from one parton a shower of partons appears, traveling along the same direction as the original.  This process continues until there is no longer enough energy to create additional $q\bar{q}$ pairs, and instead the remaining partons combine to form stable hadrons. Since this progression involves successively lower energies and lower momentum transfers, perturbative QCD cannot describe the full process.  The full parton shower and hadronization process then cannot be calculated from first principles, but has to be modelled.
-%In real life (data), fluctuations arise from the quantum mechanics of the underlying theory.  In generators, Monte Carlo (MC) techniques are used to select all relevant variables according to the desired probability distributions, and consecuently ensure (quasi-)randomness in the final state. This is the subject of the next section.
-%From Pythia's manual http://arxiv.org/abs/hep-ph/0603175
 
-
-\subsection{Monte Carlo tools}\label{sec:MCtools}
+\section{Monte Carlo tools}\label{sec:MCtools}
 
 
 %From Gavins's http://arxiv.org/abs/1011.5131
 Knowing QCD predictions is crucial in the design of methods to search for new physics, as well as for extracting meaning from data. Different techniques can be used to make QCD predictions at hadron colliders, and in particular at the LHC. The so called Matrix Element Monte Carlos use direct perturbative calculations of the cross-section matrix elements  %in powers of the strong coupling constant, $\alpha_s$,
 for each relevant partonic subprocesses. LO and NLO calculations are available for many processes.   These ``fixed-order predictions'' include the first terms in the QCD perturbative expansion for a given cross-section; as more terms are involved in the expanstion, an improvement in the accuracy of the prediction is expected.  The complexity of the calculations increases significantly with the number of outgoing legs. %, limiting available results to those with at most three outgoing partons. 
-Matrix element MC programs include {\sc Alpgen}~\cite{ALPGEN}, {\sc Madgraph}~\cite{MADGRAPH} and others.
+%Matrix element MC programs include {\sc Alpgen}~\cite{ALPGEN}, {\sc Madgraph}~\cite{MADGRAPH} and others.
+
 %Are these characteristics representative of the ‘typical’ situation for collider observables? We only have predictions up to NNLO in a handful of cases (see below) and in those it is. In cases where wejust have NLO predictions, the features of large ‘K-factors’ (NLO/LO enhancements) with a reduced NLO uncertainty band are not uncommon, suggesting that beyond NLO corrections should be small. Exceptions are known to arise in two types of case: those where new enhanced partonic scattering channels open up at NLO (or beyond); and that involve two disparate physical scales.
 %Technically, one main consideration has so far limited the range of processes for which NLO results exist: the availability of the loop amplitude. Until recently loop amplitudes were usually calculated semi-manually for each process. The complexity of the calculations increased significantly with the number of outgoing legs, limiting available results to those with at most three outgoing partons. Many NLO results for 2 → 2 and 2 → 3 processes are incorporated into programs such as NLOJ ET++ for jet production [65], MCFM for processes with heavy quarks and/or heavy electroweak bosons [66]
 
@@ -243,7 +233,7 @@ An alternative approach is applied by the so called Monte Carlo parton shower pr
 %The above shower descriptions hold for final-state branching. With initial-state hadrons, one also needs to be careful with the treatment of the PDFs, since the collinear splitting that is accounted for in the parton shower is also connected with the way the PDF is built up at the scale of the hard scattering.
 
 
-The Monte Carlo generators must account for and correctly model the showering of partons. To approximate the energy-evolution of the shower, the DGLP equations that describe the evolution of the PDFs with changing energy scale can be used. The separation of radiation into initial- (before the hard scattering process takes place) and final-state showers is arbitrary, but sometimes convenient.  In both initial- and final-state showers, the structure is given in terms of branchings $a \rightarrow bc$: $q \rightarrow qg$, $q \rightarrow q\gamma$, $g \rightarrow gg$ and $g \rightarrow q\bar{q}$. Parton $b$ carries a fraction $z$ of the energy of the mother energy and parton $c$ carries the remaining $1-z$ (the term ``partons'' includes the radiated photons).  In turn, daughters $b$ and $c$ may also branch, and so on. Each parton is characterized by some evolution scale, which gives an approximate sense of time ordering to the cascade. In the initial-state shower,  the evolution scale values are gradually increasing as the hard scattering is approached, while  these values decrease in the final-state showers. The evolution variable of the cascade in the case of {\sc Pythia}, $Q^2$, has traditionally been associated with the $m^2$ of the branching partons\footnote{The final-state partons have $m^2>0$. For initial-state showers the evolution variable is $Q^2=-m^2$, which is required to be strictly increasing along the shower.}. In the recent version of {\sc Pythia} a $p_{\perp}$-ordered shower algorithm, with $Q^2=p_{\perp}^2$ is available, and the shower evolution is cut off at some lower scale  $Q_0$ typically arond 1 GeV for QCD branchings. {\sc Herwig}$++$ provides a shower model which is angular-ordered.
+The Monte Carlo generators must account for and correctly model the showering of partons. To approximate the energy-evolution of the shower, the DGLAP equations that describe the evolution of the PDFs with changing energy scale can be used. The separation of radiation into initial- (before the hard scattering process takes place) and final-state showers is arbitrary, but sometimes convenient.  In both initial- and final-state showers, the structure is given in terms of branchings $a \rightarrow bc$: $q \rightarrow qg$, $q \rightarrow q\gamma$, $g \rightarrow gg$ and $g \rightarrow q\bar{q}$. Parton $b$ carries a fraction $z$ of the energy of the mother energy and parton $c$ carries the remaining $1-z$ (the term ``partons'' includes the radiated photons).  In turn, daughters $b$ and $c$ may also branch, and so on. Each parton is characterized by some evolution scale, which gives an approximate sense of time ordering to the cascade. In the initial-state shower,  the evolution scale values are gradually increasing as the hard scattering is approached, while  these values decrease in the final-state showers. The evolution variable of the cascade in the case of {\sc Pythia}, $Q^2$, has traditionally been associated with the $m^2$ of the branching partons\footnote{The final-state partons have $m^2>0$. For initial-state showers the evolution variable is $Q^2=-m^2$, which is required to be strictly increasing along the shower.}. In the recent version of {\sc Pythia} a $p_{\perp}$-ordered shower algorithm, with $Q^2=p_{\perp}^2$ is available, and the shower evolution is cut off at some lower scale  $Q_0$ typically around 1 GeV for QCD branchings. {\sc Herwig}$++$ provides a shower model which is angular-ordered.
 
 There are two leading models for the description of the non-perturbative process of hadronization, after parton showering. {\sc Pythia} uses the Lund string model of hadronization to form particles~\cite{LUNDMODEL}.  This model involves stretching a colour ``string'' across quarks and gluons and breaking it up into hadrons. % In this model, the color force felt between partons is described as a string connecting them. When the potential is large enough, the string snaps into two, each broken end links a new parton to the one of the original partons.
 {\sc Herwig}$++$ utilizes the cluster model of hadronization. In this model each gluon is split into a $q\bar{q}$ pair and then quarks and anti-quarks are grouped into colourless ``clusters'', which then give the hadrons.
@@ -254,26 +244,28 @@ Hadronization models involve a number of ``non-perturbative'' parameters. The pa
 In addition to the hard interaction that is generated by the Monte Carlo
 simulation, it is also necessary to account for the interactions between the incoming proton  remnants. This is usually modelled through multiple extra $2\rightarrow 2$ scattering, occurring at a scale of a few GeV. This effect is known as multiple parton interactions (MPIs). In addition, these partons may radiate some of their energy, either before or after the hard interaction.  All the additional parton interactions, which are not involved in the hard scattering process, are grouped together in the term underlying event. The modelling of the underlying event is crucial in order to give an accurate reproduction of the (quite noisy) energy flow that accompanies hard scatterings in hadron-collider events.
 
-It should be stressed that these multiple parton interactions are a separate effect from the multiple proton interactions that may occur in each collision event in the LHC. These multiple proton collisions are referred to as pileup, and are not included in the definition of the underlying event. 
+It should be stressed that these multiple parton interactions are a completely separate effect from the multiple proton interactions that may occur in each bunch collision event in the LHC. These multiple proton collisions are referred to as pileup, and are not included in the definition of the underlying event. 
 
-No precise model exists to reproduce the underlying event activity. This activity is instead also adjusted to reproduce available experimental data. A specific set of chosen parameters for a generator is referred to as a ``tune''.  
+No precise model exists to reproduce the underlying event activity. %This activity is instead also adjusted to reproduce available experimental data. 
+These are tuned to Tevatron and early LHC data.
+A specific set of chosen parameters for a generator is referred to as a ``tune''.  
 
 The two Monte Carlo generators used in this analysis are summarized below, indicating the particular versions and tunes that were implemented.
 
 
 \subsubsection{Pythia}
 
-{\sc Pythia} event generator has been used extensively for $e^+ e^-$, $ep$, $pp/p\bar{p}$ at LEP, HERA, and Tevatron, and during the last 20 years has probably been the most used generator for LHC physics studies.  {\sc Pythia} contains an extensive list of hardcoded subprocesses, over 200, that can be switched on individually. These are mainly 2$\rightarrow$1 and  2$\rightarrow$2, some  2$\rightarrow$3, but no multiplicities higher than that. Consecutive resonance decays may of course lead to more final-state particles, as will parton showers.
+The {\sc Pythia} event generator has been used extensively for $e^+ e^-$, $ep$, $pp/p\bar{p}$ at LEP, HERA, and Tevatron, and during the last 20 years has probably been the most used generator for LHC physics studies.  {\sc Pythia} contains an extensive list of hardcoded subprocesses, over 200, that can be switched on individually. These are mainly 2$\rightarrow$1 and  2$\rightarrow$2, some  2$\rightarrow$3, but no multiplicities higher than that. Consecutive resonance decays may of course lead to more final-state particles, as will parton showers.
 
-As mentioned above, in this MC generator, showers are ordered in transverse momentum~\cite{Pythia_partonshowers} both for ISR and for FSR. Also MPIs are ordered in $\pt$~\cite{Pythia_mpi}. Hadronization is based solely on the Lund string fragmentation framework.
+As mentioned above, in this MC generator showers are ordered in transverse momentum~\cite{Pythia_partonshowers} both for ISR and for FSR. Also MPIs are ordered in $\pt$~\cite{Pythia_mpi}. Hadronization is based solely on the Lund string fragmentation framework.
 %the Field–Feynman model http://www.sciencedirect.com/science/article/pii/0550321378900159 (sent pdf by email, only accesible from cern)
 % a few years later kickstarted the whole field of hadronization studies by Monte Carlo simulation
 %On the Lund's String model
 %Now consider a simple qqbar two-parton event further. As thea q and qbar move apart from the creation vertex, say along the ±z axis, the potential energy stored in the string increases, and the string may break by the production of a new qprima qbarprima pair, so that the system splits into two colour-singlet systems qqbarprima and qprima qbar. These two systems move apart, and a widening no-field region opens up in between, Fig. 13b. For simplicity the quarks are shown as massless, so they move with the speed of light. If the invariant mass of either of these systems is large enough, further breaks may occur, and so on until only ordinary hadrons remain. Typically, a break occurs when the q and the qbar ends of a colour singlet system are 1–5 fm apart in the qqbar rest frame, but note that the higher-momentum particles at the outskirts of the system are appreciably Lorentz contracted.
 
-For the results presented in this thesis simulated samples of dijet events from proton-proton collision processes were generated  with {\sc Pythia} 6.423~\cite{PYTHIA6}. The ATLAS AMBT2 tune of the soft model parameters was used~\cite{Pythia_MC11tune}. This tune attemps to reproduce the ATLAS minimum bias charged particle multiplicity and angular distribution measurements and the ATLAS measurements of charge particle and $\pt$ density observed collinear and transverse to the high-energy activity.
+For the results presented in this thesis simulated samples of dijet (see Section~\ref{sec:jets}) events from proton-proton collision processes were generated  with {\sc Pythia} 6.423~\cite{PYTHIA6}. The ATLAS AMBT2 tune of the soft model parameters was used~\cite{Pythia_MC11tune}. This tune attemps to reproduce the ATLAS minimum bias charged particle multiplicity and angular distribution measurements and the ATLAS measurements of charged particle and $\pt$ density observed collinear and transverse to the high-energy activity.
 
-For systematic comparisons, a set of additional tunes, called the Perugia tunes~\cite{Perugia} were also used. These tunes utilize the minimum bias and $\pt$ density measurements of CDF to model the underlying event, hadronic $Z^0$ decays from LEP to model the hadronization and final state radiation, and Drell Yann measurements from CDF and $D0$ to model the initial state radiation.  In particular, the Perugia 2011, which is a retune of Perugia 2010~\cite{Perugia2010} includes 7~TeV data from 2011 data taking.
+For systematic comparisons, a set of additional tunes, called the Perugia tunes~\cite{Perugia} were also used. These utilize the minimum bias and $\pt$ density measurements of CDF to model the underlying event, hadronic $Z^0$ decays from LEP to model the hadronization and final state radiation, and Drell Yann measurements from CDF and $D0$ to model the initial state radiation.  In particular, the Perugia 2011, which is a retune of Perugia 2010~\cite{Perugia2010} includes 7~TeV data from 2011 data taking.
 %http://arxiv.org/abs/0905.3418
 %We have tuned the Monte Carlo in four consecutive steps:
 %1. Final-State Radiation (FSR) and Hadronisation (HAD): using LEP data, tuned by Professor [1,18].
@@ -286,15 +278,17 @@ For systematic comparisons, a set of additional tunes, called the Perugia tunes~
 \subsubsection{Herwig$++$}
 
 {\sc Herwig}$++$~\cite{HerwigPP} is based on the event generator {\sc Herwig} (Hadron Emission Reactions With Interfering Gluons), which was first published in 1986 and was developed throughout the LEP era.  {\sc Herwig} was written in Fortran, and the new generator, Herwig$++$ developped in C$++$. 
-Some distinctive features of Herwig$++$ are: Angular ordered parton showers and cluster hadronization, and 
+Some distinctive features of Herwig$++$ are: angular ordered parton showers and cluster hadronization, and 
 %The cluster model of hadronization is based on the so-called preconfinement property of parton showers, discovered by Amati and Veneziano http://www.sciencedirect.com/science/article/pii/0370269379908967
 %They showed that the colour structure of the shower at any evolution scale Q0 is such that colour singlet combinations of partons (clusters) can be formed with an asymptotically universal invariant mass distribution. Here ‘universal’ means dependent only on Q0 and the QCD scale Λ, and not on the scale Q or nature of the hard process initiating the shower, while ‘asymptotically’ means Q Q0 . If in addition Q0 Λ, then the mass distribution of these colour singlet clusters, together with their (Q-dependent) momentum and multiplicity distributions, can be computed perturbatively.
 %Once these clusters have been formed, how should they decay into the observed hadrons? The typical cluster masses are low enough for them to be treated as a smoothed-out spectrum of excited mesons, in which case quasi two-body decay into less excited states seems to be preferred by Nature.
 hard and soft multiple partonic interactions to model the underlying event and soft inclusive interactions~\cite{1126-6708-2008-07-076}.
 
-This MC generator was used for systematic uncertainties studies. The version utilized was version 2.4.2 released in 2009. 
+This MC generator was used for systematic uncertainties studies. The version utilized was 2.4.2 released in 2009. 
 
-\vspace{1cm}
+
+\subsubsection{Detector simulation}
+
 In order to use events produced by Monte Carlo generators to model events that one might observe with the detector, the output of these generators is passed through a detector simulation model.  ATLAS uses the {\sc Geant}4~\cite{Geant4} toolkit. {\sc Geant}4  is an extensive particle simulation toolkit that governs all aspects of the propagation of particles through detectors, based on a description of the geometry of the detector components and the magnetic field. The physics processes include ionization, Bremsstrahlung, photon conversions, multiple scattering, scintillation, absorption and transition radiation.
 %to simulate the passage of particles through the detector material. This includes models for the production of additional particles caused by inelastic scattering off of electrons and nuclei, as well as ionization and absorption by active detector elements.
 
@@ -303,14 +297,34 @@ The detector is described in terms of almost 30 millon volumes with properties, 
 Due to the detailed and complicated geometry of ATLAS and the diversity and complexity of the physics processes involved, the consumed computing time per event is large ($\mathcal{O}(1\mbox{hour})$).  This has been a motivation for the development of fast simulation alternatives. The standard {\sc Geant}4 simulation that exploits the full potential is referred to as \emph{full simulation}.  The majority of the events studied in this thesis are produced with full simulation.
 
 
+%------------------------------------------------------------------------
+\section{Jet physics}\label{sec:jets}
+%------------------------------------------------------------------------
+
+Due to confinement  %the experimental signature of quarks and gluons are the final state ``coloreless'' hadrons\footnote{We use "colorless" to mean a singlet representation of the color group.}.  
+quarks and gluons emerge from the interaction as constituents of final state ``coloreless'' hadrons\footnote{We use "colorless" to mean a singlet representation of the color group.}.
+This packet of particles produced tends to travel collinearly with the direction of the initiator quark or gluon. The result is a collimated ``spray'' of hadrons (also photons and leptons) entering the detector in place of the original parton; these clusters of objects are what we define as jets and are the experimental signature of the partons produced in the high energy interaction.
+The first evidence for jet production was observed in $e^+e^-$ collisions at the SPEAR storage ring at SLAC in 1975~\cite{PhysRevLett.35.1609}. 
+%In order to determine how jetlike an event was, they calculated the sphericity, a quantity between 0 and 1, with values approaching to 1 meaning an isotropic phase-space with high multiplicity; and  0, for events with bounded transverse momenta. The data agreed with the jet model predicted by the Monte Carlo simulation.
+
+
+The evolution from a single parton to an ensemble of hadrons occurs through the processes of parton showering and hadronization. Since the strong coupling constant grows with increasing distance between color charges, a strong color potential forms as the parton from the ``hard'' (high $Q^2$) scattering process separates from the original hadron. 
+This large potential causes quark$/$antiquark pairs ($q\bar{q}$) to be created, each carrying some of the energy and momentum of the original partons. As these new partons move away from one another, yet more color potentials are formed, and the process repeats. This process is perturbatively described as a parton shower, where quarks radiate gluons which in turn give rise, via pair production to $q\bar{q}$, in a process similar to the electromagnetic shower produced by a high energy electron or photon.
+ The shower of partons travels basically along the same direction as the original.  This process continues until there is no longer enough energy  %to create additional $q\bar{q}$ pairs, 
+for the shower to develop.
+and instead the remaining partons combine to form stable hadrons. Since this progression involves successively lower energies and lower momentum transfers, perturbative QCD cannot describe the full process.  The full parton shower and hadronization process then cannot be calculated from first principles, but has to be modelled.
+%In real life (data), fluctuations arise from the quantum mechanics of the underlying theory.  In generators, Monte Carlo (MC) techniques are used to select all relevant variables according to the desired probability distributions, and consecuently ensure (quasi-)randomness in the final state. This is the subject of the next section.
+%From Pythia's manual http://arxiv.org/abs/hep-ph/0603175
+
+
 
 \subsection{Jet algorithms}\label{sec:jetalgos}
 
 
 As described above, quarks and gluons cannot be directly observed. % Almost inmediatly after being produced, a 
-Quarks and gluons hadronise, leading to a collimated spray of energetic hadrons, a jet. By measuring the jet energy and direction one can get close to the idea of the original parton. But one parton may form multiple experimentally observed jets, for example due to a hard gluon emission plus soft and collinear showering. Then, in comparing data to theory and MC programs predictions a set of rules for how to group particles into jets is needed. A jet algorithm, together with a set of parameters and a recombination scheme (how to assign a momentum to the combination of two particles) form a jet definition.
+Quarks and gluons hadronise, leading to a collimated spray of energetic hadrons, a jet. By measuring the jet energy and direction one can get close to the idea of the original parton. But one parton may form multiple experimentally observed jets, for example due to a hard gluon emission plus soft and collinear showering. Then, in comparing data to theory and MC programs predictions a set of rules for how to group particles into jets is needed. A jet algorithm, together with a set of parameters and a recombination scheme (how to assign a momentum to the combination of two particles) forms a jet definition.
 
-By using a jet definition a computer can take a list of particle momenta for an event (be they quarks and gluons, or hadrons, or calorimeter depositions), and return a list of jets. One important point to remark is that the result of applying a jet definition should be insensitive to the most common effects of showering and hadronization, namely soft and collinear emissions. This is illustrated in Fig.~\ref{fig:jetdefinition}.
+By using a jet definition a computer can take a list of particle momenta for an event, be they quarks and gluons, or hadrons, or calorimeter depositions, and return a list of parton, particle or calorimeter jets, respectively. One important point to remark is that the result of applying a jet definition should be insensitive to the most common effects of showering and hadronization, namely soft and collinear emissions. This is illustrated in Fig.~\ref{fig:jetdefinition}.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -325,13 +339,14 @@ Traditionally, jet algorithms have been classified into two categories: cone and
 \subsubsection{Fixed cone jet finder in ATLAS}
 
 
- Cone-like algorithms are based on the collinear nature of gluon radiation and the parton shower described above. The decay products of quarks and gluons and their emissions will tend to form a cone of particles in the $\eta - \phi$ plane\footnote{In the ATLAS Coordinate System the azimuthal angle $\phi$ is measured around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = − \ln( \tan(\frac{\theta}{2}))$. The transverse momentum $\pt$ is defined in the plane transverse to the beam motion. The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{ \Delta \eta^2  + \Delta \phi^2}$ . See section~\ref{sec:ATLASDetector}.} as they propagate outwards. 
+ Cone-like algorithms are based on the collinear nature of gluon radiation and the parton shower described above. The decay products of quarks and gluons and their emissions will tend to form a cone of particles in the $\eta - \phi$ plane\footnote{In the ATLAS Coordinate System the azimuthal angle $\phi$ is measured around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = − \ln( \tan(\frac{\theta}{2}))$. The transverse momentum $\pt$ is defined in the plane transverse to the beam motion. See section~\ref{sec:ATLASDetector}.  The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{ \Delta \eta^2  + \Delta \phi^2}$ . In collider physics $\pt$, $\eta$ and $\phi$ are used instead of $p_i$, $\theta$, and $\phi$, since the former set is $z$-boost invariant and each partonic collision has a random boost in the $pp$ center-of-mass frame.} as they propagate outwards. 
 The design of cone-like algorithms attempts to maximize the amount of energy present in a stable cone of fixed radius. 
 
 In ATLAS the standard jet algorithm  for a long time was an iterative fixed-cone jet finder. 
-First, it sorts all particles in the event according to their momentum, and identifies the one with largest $\pt$.  This is referred to as a seed particle.  Then a cone of radius $R_{cone}$ in  $\eta - \phi$ is drawn around the seed and all objects within a cone of $\Delta R < R_{cone}$ are combined with it. The direction of the sum of the momenta of those particles is identified and if it doesn't coincide with the seed direction then the sum is used as a new seed direction, and it iterates until the direction of the cone is stable (i.e, the direction of the sum of the cone contents coincides with the previous seed) and the resulting cone is called a jet . This type of algorithm is called  ``iterative'' since it iterates the cone direction. The jets found in this way can share part of their constituents. Jets with common constituents are merged if their shared $\pt$ is larger than 50\% of the $\pt$ of the softer jet.  Otherwise, the overlapping part is assigned to the harder jet (split).
+First, it sorts all particles in the event according to their momentum, and identifies the one with largest $\pt$.  This is referred to as a seed particle.  Then a cone of radius $R_{cone}$ in  $\eta - \phi$ is drawn around the seed and all objects within a cone of $\Delta R < R_{cone}$ are combined with it. The direction of the sum of the momenta of those particles is identified and if it doesn't coincide with the seed direction then the sum is used as a new seed direction, and it iterates until the direction of the cone is stable (i.e, the direction of the sum of the cone contents coincides with the previous seed). The resulting cone is called a jet.  The process is restarted with the highest $\pt$ particle not yet associated to a cone.  This type of algorithm is called  ``iterative'' since it iterates the cone direction. The jets found in this way can share part of their constituents. Jets with common constituents are merged if their shared $\pt$ is larger than 50\% of the $\pt$ of the softer jet.  Otherwise, the overlapping part  %is assigned to the harder jet (split).
+divided according to some algorithm between the two overlapping jets.
 
-A difficulty and major drawback in this procedure is the use of the transverse momentum of the particle to select the first seed. This definition is collinear unsafe, i.e. a splitting of the hardest particle into a nearly collinear pair can have the consequence that another, less hard particle, pointing in a different direction suddenly becomes the hardest in the event, leading to a different final set of jets\footnote{From the theoretical point of view, the splitting and merging procedures make this algorithm partially infrared safe, but the algorithm remains well defined only up to leading order of perturbation theory.}. There are many other variants of cone algorithms, and nearly all suffer from problems of either collinear safety, or infrared safety (an extra soft particle creates a new seed, which can lead to an extra stable cone being found). A fix for these problems came in a algorithm called Seedless Infrared Safe Cone (SISCone)~\cite{SISCone}.
+A difficulty and major drawback of this procedure is the use of the transverse momentum of the particle to select the first seed. This definition is collinear unsafe, i.e. a splitting of the hardest particle into a nearly collinear pair can have the consequence that another, less hard particle, pointing in a different direction suddenly becomes the hardest in the event, leading to a different final set of jets\footnote{From the theoretical point of view, the splitting and merging procedures make this algorithm partially infrared safe, but the algorithm remains well defined only up to leading order of perturbation theory.}. There are many other variants of cone algorithms, and nearly all suffer from problems of either collinear safety, or infrared safety (an extra soft particle creates a new seed, which can lead to an extra stable cone being found). %A fix for these problems came in a algorithm called Seedless Infrared Safe Cone (SISCone)~\cite{SISCone}.
 %Infrared unsafety is a serious issue, not just because it makes it impossible to carry out meaningful (finite) perturbative calculations, but also because it breaks the whole relation between the (Born or low-order) partonic structure of the event and the  jets that one observes, and it is precisely this relation that a jet algorithm is supposed to codify: it makes no sense for the structure of multi-hundred GeV jets to change radically just because hadronisation, the underlying event or pileup threw a 1 GeV particle in between them.
 With a seedless algorithm, the addition of one or more soft particles does not lead to new hard stable cones being found, % because all hard stable cones have already been (provably) found. 
 therefore the algorithm is infrared safe at all orders.
@@ -473,8 +488,9 @@ In chapter~\ref{ch:kinematic}, several distinguishing characteristics between je
 %------------------------------------------------------------------------
 
 %https://cdsweb.cern.ch/record/1425916/
-Heavy flavor quarks enter in many collider searches, notably because they are produced in the decays of various SM particles (top quarks, the $Z$ boson and the Higgs boson, if light), and of numerous particles appearing in proposed extensions of the SM.
- In hadronic collisions, heavy flavour quark production may be subdivided into three classes depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
+Heavy flavor  (HF) quarks enter in many collider searches, notably because they are produced in the decays of various SM particles (top quarks, the $Z$ boson and the Higgs boson, if light), and of numerous particles appearing in proposed extensions of the SM. However, the most common process of HF production is QCD. Heavy Flavor QCD production can be classified into three processes 
+%In hadronic collisions, heavy flavour quark production may be subdivided into three classes 
+depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
 %Ariel Thesis
 %The $b$-quarks in $pp$ collisions are produced predominatly in pairs, as the result of the strong interaction between one parton from the proton and another parton from the antiproton.  The cross section for producing a $b$-quark in a $pp$ collision is calculated convoluting the perturbative parton cross section with the proton distribution functions:
 %equation 1.3 Ariel's thesis
@@ -485,11 +501,11 @@ Heavy flavor quarks enter in many collider searches, notably because they are pr
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
-Heavy flavor creation (FCR): two heavy quarks are produced in the hard subprocess. Being $Q$ the heavy flavor quark, at leading order this process is described by $gg \rightarrow Q\bar{Q}$ and  $q\bar{q} \rightarrow Q\bar{Q}$.
+{\bf Heavy flavor creation (FCR)}: two heavy quarks are produced in the hard scatter. Being $b$ the heavy flavor quark, at leading order this process is described by $gg \rightarrow b\bar{b}$ and  $q\bar{q} \rightarrow b\bar{b}$, with no $b$-quarks in the initial state (IS).
 \item
-Heavy flavor excitation (FEX): the heavy flavour quark excitation can be depicted as an initial state gluon splitting into a heavy quark pair, where one of the heavy quarks subsequently enters the hard subprocess.
+{\bf Heavy flavor excitation (FEX)}: the heavy flavour quark excitation can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one the $b$-quarks subsequently enters the hard scatter, i.e., there is one $b$-quark in the IS and another one in the final state (FS).
 \item
-Gluon splitting (GSP): no heavy quarks participate in the hard subprocess in this case, but they are produced in $g \rightarrow Q\bar{Q}$ branchings in the parton shower.
+{\bf Gluon splitting (GSP)}: no heavy quarks participate in the hard scatter in this case, but they are produced via subsequent $g \rightarrow Q\bar{Q}$ branchings. % in the parton shower.
 \end{itemize}
 
 Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown in Fig.~\ref{fig:qcd_diagrams}.
@@ -518,8 +534,9 @@ Final state $b$-quarks hadronize into $b$-hadrons. During the fragmentation proc
 
 The simplest and most fundamental measurement of heavy-quark jet production is
 the inclusive heavy-quark jet spectrum, which is dominated by pure QCD contributions. 
-Studies of QCD bottom production are important in their own right because of the correspondence between parton level production and the observed hadron level, and their potential to provide information on the $b$-quark parton distribution function, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours. The theoretical calculation of the inclusive $b$-jet spectrum presents rather important uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. 
+Studies of QCD bottom production are important in their own right because of the correspondence between parton level production and the observed hadron level: $b$-quarks give rise to observable $b$-hadrons, there is no such an association between light quarks ($u$, $d$ and $s$) or gluons, and observed final state hadrons. In addition, the study of $b$-quark production have the potential to provide information on the $b$-quark parton distribution function, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours. 
 
+The theoretical calculation of the inclusive $b$-jet spectrum presents rather important uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. 
 %Paper by Salam, Banfi and Zanderighi
 %The measurement suggestion that motivated our development: a b-jet xsection that excludes double-B jets: 
 %a. Full NLO calculation of the inclusive b-jet spectrum yields a K-factor=6-10.
@@ -527,7 +544,8 @@ Studies of QCD bottom production are important in their own right because of the
 %Proposal: move to inclusive flavour-kt b-jet xsection where bb-jets are not counted. Theoretical uncertainties are substantially reduced
 %a. Flavour-kt b-jet xsection is free of final-state (GSP) logarithms
 %b. Initial-state (FEX) collinear logarithms can be resummed if one uses a b-quark PDF
-A review of the origin of these uncertainties is presented by Banfi, Salam and Zanderighi in reference~\cite{Salam.AccurateHQ}.  They arise from the poor convergence of the perturbative series, as evidenced by a large value of the $K$-factor, the ratio of the next-to-leading order (NLO) to the leading order (LO) cross section, in the $\pt$ range covered by the LHC.  This is illustrated in Fig.~\ref{fig:bjets_qcd}.  The observed $K$ values (6 to 10) indicate that the NLO result cannot be an accurate approximation to the full result. It is for this reason that the scale dependence (middle panel in Fig.~\ref{fig:bjets_qcd}) is large. 
+A review of the origin of these uncertainties is presented by Banfi, Salam and Zanderighi in reference~\cite{Salam.AccurateHQ}.  They arise from the poor convergence of the perturbative series, as evidenced by a large value of the $K$-factor, the ratio of the next-to-leading order (NLO) to the leading order (LO) cross section. %, in the $\pt$ range covered by the LHC.  
+This is illustrated in Fig.~\ref{fig:bjets_qcd} for the $\pt$ range covered by the LHC.   The observed $K$ values (6 to 10) indicate that the NLO result cannot be an accurate approximation to the full result. It is for this reason that the scale dependence (middle panel in Fig.~\ref{fig:bjets_qcd}) is large. 
 
 \begin{figure}[tp]
 \centering
@@ -555,6 +573,9 @@ The initial-state (FEX) collinear logarithms can be resummed by using a $b$-quar
 With this algorithm the $K$-factor for the differential heavy-jet spectrum cross-section is shown not to exceed a value of $K=1.4$, with a factor of four reduction in the theoretical (scale variation) uncertainties.
 
 
+
+
+\section{Other application of $g \rightarrow b\bar{b}$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\em Rejection of background in Standard Model analyses and beyond-SM searches}
