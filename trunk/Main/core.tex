@@ -336,7 +336,7 @@ In full simulation, the jet width can be measured in terms of calorimeter variab
 \mbox{ {\it Jet mass}} = E^2_{jet} - \mbox{ \emph{{\bf p}}}^2 = (\sum_i E_i)^2 - (\sum_i \mbox{\emph{{\bf p}}}_i)^2
 \end{equation}
 %
-with  $E_i$ and \emph{\bf{p}}$_i$, the energy and momentum of the jet constituent $i$.This observable is highly correlated to the jet width.
+with  $E_i$ and \emph{\bf{p}}$_i$, the energy and momentum of the jet constituent $i$. This observable is highly correlated to the jet width.
 
 
 The jet mass, like the linear radial moment, depends on the radiation pattern of the event. It is the most basic observable for distinguishing massive boosted objects from jets originating from quarks or gluons~\cite{PhysRevD.79.074012}. %The latter are expected to be dominated by wide-angle emissions, with increased probability to see high mass jets initiated from gluons as opposed to quarks~\cite{PhysRevD.79.074012}.  
@@ -410,7 +410,7 @@ Subjet reconstruction has a similar approach as jet reconstruction but, rather t
 This result is consistent with the QCD prediction that gluons radiate more than quarks.  %and different other analyses % see for instance  http://iopscience.iop.org/1126-6708/1999/09/009/
 %In this case the $k_t$ algorithm is rerun for subjet finding.
 
-The subjets were resolved by use of the inclusive $k_t$ clustering jet algorithm on the jet constituents with a fixed distance parameter. The $k_t$ algorithm is the only jet algorithm that correctly identifies the resulting substructure as physical objects and therefore is the algorithm used for substructure analysis.
+The subjets were resolved by use of the inclusive $k_t$ jet algorithm on the jet constituents with a fixed distance parameter. The $k_t$ algorithm is the only jet algorithm that correctly identifies the resulting substructure as physical objects and therefore is the algorithm used for substructure analysis.
 %By using the inclusive $k_t$ algorithm, introduced in Section~\ref{sec:jetalgos}, It is straightforward to define a ``subjet algorithm'' in which the structure of the jet constituents is resolved using either the same jet finder algorithm as used for jet reconstruction or a new one with a fixed (smaller) distance parameter. 
 As an alternative to fixed distance parameter subjets, it is also possible to undo the last step in the recombination sequence in order to identify the decay products of an object. This corresponds conceptually to undoing the first step in the fragmentation process that leads from interacting partons to jets.  This approach is used in several jet grooming procedures\footnote{Jet grooming comprises dedicated techniques to remove uncorrelated radiation within a jet. A review of these procedures can be found in~\cite{Abdesselam:2010pt}. }, see for instance~\cite{pruning}.
 
@@ -419,7 +419,7 @@ As an alternative to fixed distance parameter subjets, it is also possible to un
 %http://prl.aps.org/abstract/PRL/v100/i24/e242001
 % uses the C/A algorithm. Subjets are then defined by de-clustering the C/A algorithm and evaluating the relative mass of the subjets compared to the parent jet. As a final step, the three hardest identified subjets are recombined to define the resulting ``filtered'' jet.
 
-Figure~\ref{fig:nsubjetsinglemerged} shows the distribution of the number of subjets for single and merged $b$-jets. The subjets in this case were built using the associated tracks as constituents, clustered by the inclusive $k_t$ algorithm with distance parameter $R=0.2$.  Merged jets tend to have on average one more subjet than single $b$-jets. The discrimination power of this variable is %therefore %, as it is defined, 
+Figure~\ref{fig:nsubjetsinglemerged} shows the distribution of the number of subjets for single and merged $b$-jets. The subjets in this case were built using the associated tracks as constituents, clustered by the inclusive $k_t$ algorithm with a fixed distance parameter of $R=0.2$.  Merged jets tend to have on average one more subjet than single $b$-jets. The discrimination power of this variable is %therefore %, as it is defined, 
  very poor and has the problem of being discrete with small numbers.
 %\vspace{3 mm}
 
@@ -456,7 +456,7 @@ In order to illustrate what this variable represents, an event display of a merg
 value is shown in Fig.~\ref{fig:ED}.  
 The plot illustrates in a $0.1 \times 0.1$ grid the area covered by the jet (in blue) and the position of the clusters associated to each jet, with the color indicating the value of their energy. The area of the jet (the section of the $\eta - \phi$  space belonging to it) is obtained by means of the ``jet active area'' concept, proposed in Ref.~\cite{CatchmentArea}.
 %For this case, the jet active area~\cite{CatchmentArea} was reconstructed following a procedure called ``ghost association'', in which the event topoclusters plus a grid of $0.1 \times 0.1$ cells  with nearly zero energy get associated to the jet through jet clustering. In the case of Figure~\ref{fig:ED} the anti-$k_t$ algorithm was used. 
- The event display indicates how the high energy cells in the jet with two $b$-hadorns are grouped around the $b$-hadrons directions, leading to the two-subjet substructure of merged jets.
+ The event display indicates how the high energy cells in the jet with two $b$-hadrons (in red) are grouped around the $b$-hadrons directions, leading to the two-subjet substructure of merged jets.
 
 \begin{figure}[tp]
 \centering
@@ -690,5 +690,5 @@ It should be remarked that the observed agreement is actually not a direct valid
 %\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT080.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/dataMC/FullDataVarDRktaxisPT200.pdf}  
 \caption{ Distribution of the jet track multiplicity in 2 different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). Jets were selected using JetFitter tagger at its 60\% $b$-jet efficiency working point. The ratio data over simulation is shown at the bottom of each plot.The agreement is very good.}
-\label{fig:datamcinputvarsNTRKMV170}
+\label{fig:datamcinputvarsNTRKJETFIT}
 \end{figure}
