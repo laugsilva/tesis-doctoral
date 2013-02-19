@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
 A level-1 auxiliary file: Introduction/theory.aux
+A level-1 auxiliary file: Main/core.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 18 of file tesis.bib
@@ -23,45 +24,45 @@ while executing---line 944 of file unsrt.bst
 Warning--empty journal in Abbiendi:2007aa
 Warning--empty journal in Aad:2012np
 Warning--empty journal in boost2010b
-You've used 59 entries,
+You've used 70 entries,
             1791 wiz_defined-function locations,
-            836 strings with 12709 characters,
-and the built_in function-call counts, 12611 in all, are:
-= -- 1062
-> -- 590
+            896 strings with 14332 characters,
+and the built_in function-call counts, 14834 in all, are:
+= -- 1251
+> -- 689
 < -- 1
-+ -- 224
-- -- 165
-* -- 911
-:= -- 2123
-add.period$ -- 177
-call.type$ -- 59
-change.case$ -- 58
++ -- 262
+- -- 192
+* -- 1063
+:= -- 2501
+add.period$ -- 211
+call.type$ -- 70
+change.case$ -- 69
 chr.to.int$ -- 0
-cite$ -- 69
-duplicate$ -- 519
-empty$ -- 1228
-format.name$ -- 165
-if$ -- 2725
+cite$ -- 80
+duplicate$ -- 615
+empty$ -- 1448
+format.name$ -- 192
+if$ -- 3209
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 59
-newline$ -- 298
-num.names$ -- 58
-pop$ -- 100
+int.to.str$ -- 70
+missing$ -- 70
+newline$ -- 354
+num.names$ -- 69
+pop$ -- 116
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 196
+skip$ -- 232
 stack$ -- 0
-substring$ -- 897
-swap$ -- 52
+substring$ -- 1041
+swap$ -- 63
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 10
-while$ -- 110
-width$ -- 61
-write$ -- 633
+while$ -- 129
+width$ -- 72
+write$ -- 753
 (There were 3 error messages)
