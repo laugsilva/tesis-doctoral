@@ -126,31 +126,6 @@ G.~Altarelli and G.~Parisi.
 \newblock Asymptotic freedom in parton language.
 \newblock {\em Nuclear Physics B}, 126(2):298 -- 318, 1977.
 
-\bibitem{PhysRevLett.35.1609}
-G.~Hanson, G.~S. Abrams, A.~M. Boyarski, M.~Breidenbach, F.~Bulos,
-  W.~Chinowsky, G.~J. Feldman, C.~E. Friedberg, D.~Fryberger, G.~Goldhaber,
-  D.~L. Hartill, B.~Jean-Marie, J.~A. Kadyk, R.~R. Larsen, A.~M. Litke,
-  D.~L\"uke, B.~A. Lulu, V.~L\"uth, H.~L. Lynch, C.~C. Morehouse, J.~M.
-  Paterson, M.~L. Perl, F.~M. Pierre, T.~P. Pun, P.~A. Rapidis, B.~Richter,
-  B.~Sadoulet, R.~F. Schwitters, W.~Tanenbaum, G.~H. Trilling, F.~Vannucci,
-  J.~S. Whitaker, F.~C. Winkelmann, and J.~E. Wiss.
-\newblock Evidence for jet structure in hadron production by ${e}^{+}{e}^{-}$
-  annihilation.
-\newblock {\em Phys. Rev. Lett.}, 35:1609--1612, Dec 1975.
-
-\bibitem{ALPGEN}
-Michelangelo~L. Mangano, Fulvio Piccinini, Antonio~D. Polosa, Mauro Moretti,
-  and Roberto Pittau.
-\newblock Alpgen, a generator for hard multiparton processes in hadronic
-  collisions.
-\newblock {\em Journal of High Energy Physics}, 2003(07):001, 2003.
-
-\bibitem{MADGRAPH}
-Johan Alwall, Pavel Demin, Simon de~Visscher, Rikkert Frederix, Michel Herquet,
-  Fabio Maltoni, Tilman Plehn, David~L. Rainwater, and Tim Stelzer.
-\newblock Madgraph/madevent v4: the new web generation.
-\newblock {\em Journal of High Energy Physics}, 2007(09):028, 2007.
-
 \bibitem{PYTHIA6}
 Torbjorn Sjostrand, Stephen Mrenna, and Peter Skands.
 \newblock {PYTHIA 6.4 Physics and Manual}.
@@ -202,15 +177,22 @@ S.~Agostinelli et~al.
 \newblock Geant4 a simulation toolkit.
 \newblock {\em {Nucl.\ Inst.\ Meth.\ Section A}}, 506(3):250 -- 303, 2003.
 
+\bibitem{PhysRevLett.35.1609}
+G.~Hanson, G.~S. Abrams, A.~M. Boyarski, M.~Breidenbach, F.~Bulos,
+  W.~Chinowsky, G.~J. Feldman, C.~E. Friedberg, D.~Fryberger, G.~Goldhaber,
+  D.~L. Hartill, B.~Jean-Marie, J.~A. Kadyk, R.~R. Larsen, A.~M. Litke,
+  D.~L\"uke, B.~A. Lulu, V.~L\"uth, H.~L. Lynch, C.~C. Morehouse, J.~M.
+  Paterson, M.~L. Perl, F.~M. Pierre, T.~P. Pun, P.~A. Rapidis, B.~Richter,
+  B.~Sadoulet, R.~F. Schwitters, W.~Tanenbaum, G.~H. Trilling, F.~Vannucci,
+  J.~S. Whitaker, F.~C. Winkelmann, and J.~E. Wiss.
+\newblock Evidence for jet structure in hadron production by ${e}^{+}{e}^{-}$
+  annihilation.
+\newblock {\em Phys. Rev. Lett.}, 35:1609--1612, Dec 1975.
+
 \bibitem{GavinLectures}
 {Salam, G.P.}
 \newblock {Ellements of QCD for hadron colliders}.
 \newblock {\em CERN-2010-002}, Jan 2011.
-
-\bibitem{SISCone}
-G.P. Salam and G.~Soyez.
-\newblock A practical seedless infrared-safe cone jet algorithm.
-\newblock {\em Journal of High Energy Physics}, 2007(05):086, 2007.
 
 \bibitem{JADE}
 W.~Bartel, L.~Becker, R.~Felst, D.~Haidt, G.~Knies, H.~Krehbiel,
