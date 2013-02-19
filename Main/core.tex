@@ -45,15 +45,26 @@ In order to have sufficient statistics over the entire $\pt$ spectrum, seven sam
 %J5       280-560 GeV
 %J6      560-1120 GeV
 %The $\pt$ distribution for these samples is shown in Fig.~\ref{fig:JXpt}a. 
- For the Monte Carlo $\pt$ distribution (or the distribution of any other observable),  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. The $\pt$ spectrum obtained after performing this procedure is displayed in Fig.~\ref{fig:JXpt}.
+ For the Monte Carlo $\pt$ distribution (or the distribution of any other observable),  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. The unweighted distribution is shown in Fig.~\ref{fig:JXptNW}. The $\pt$ spectrum obtained after performing this procedure is displayed in Fig.~\ref{fig:JXpt}.
 
 \begin{figure}[tp]
 \centering
-%\includegraphics[width=0.49\textwidth]{JXpt_noweight.pdf}
+\includegraphics[width=0.9\textwidth]{JXspectrum_NoWeights.pdf}
+%\includegraphics[width=0.49\textwidth]{JXspectrum.pdf}
+\caption{Calibrated jet $\pt$ distribution for anti-$k_t$ jets in a dijet Monte Carlo sample composed of different sub-samples generated with increasing thresholds of the hard-scattering partonic transverse momentum, $\hat{p}_T$. }
+\label{fig:JXptNW}
+\end{figure}
+
+\begin{figure}[tp]
+\centering
+%\includegraphics[width=0.49\textwidth]{JXspectrum_NoWeights.pdf}
 \includegraphics[width=0.9\textwidth]{JXspectrum.pdf}
-\caption{Calibrated jet $\pt$ distribution for anti-$k_t$ jets in a dijet Monte Carlo sample composed of seven sub-samples generated with different thresholds of the hard-scattering partonic transverse momentum, $\hat{p}_T$. In order to obtain the falling $\pt$ spectrum observed in data, the different samples were weighted by their respective production cross sections.}
+\caption{Calibrated jet $\pt$ distribution for anti-$k_t$ jets in a dijet Monte Carlo sample composed of different sub-samples generated with increasing thresholds of the hard-scattering partonic transverse momentum, $\hat{p}_T$. In order to obtain the falling $\pt$ spectrum observed in data, the different samples were weighted by their respective production cross sections.}
 \label{fig:JXpt}
 \end{figure}
+
+
+
 
 The simulated data sample used for the analysis %(MC11b)
 gives an accurate description of the pile-up content and detector conditions for the full 2011 data-taking period. 
@@ -559,13 +570,13 @@ Here, $(\pt_i,\delta\eta_i,\delta\phi_i)$ are the jet constituent transverse mom
 %
 \begin{equation} 
 e = \sqrt{1-r^2}
-\label{ecc}
+\label{eq:ecc}
 \end{equation}
 %
 where the parameter $r$ is defined as the ratio of the eigenvalues,
 %
 \begin{equation} 
-r = \frac{\lambda_m}{\lambda_p} = \frac{\sum E_i \delta\eta^2_i+\sum E_i \delta\phi^2_i - \sqrt{(\sum E_i \delta\eta^2-\sum E_i \delta\phi^2_i)^2+4(\sum E_i \delta\eta_i \delta\phi_i)^2}}{\sum E_i \delta\eta^2_i+\sum E_i \delta\phi^2_i + \sqrt{(\sum E_i \delta\eta^2-\sum E_i \delta\phi^2_i)^2+4(\sum E_i \delta\eta_i \delta\phi_i)^2}}.
+r = \frac{\lambda_m}{\lambda_p} = \frac{\sum \pt_i \delta\eta^2_i+\sum \pt_i \delta\phi^2_i - \sqrt{(\sum \pt_i \delta\eta^2-\sum \pt_i \delta\phi^2_i)^2+4(\sum \pt_i \delta\eta_i \delta\phi_i)^2}}{\sum \pt_i \delta\eta^2_i+\sum \pt_i \delta\phi^2_i + \sqrt{(\sum \pt_i \delta\eta^2-\sum \pt_i \delta\phi^2_i)^2+4(\sum \pt_i \delta\eta_i \delta\phi_i)^2}}.
 \label{ecc2}
 \end{equation}
 %
@@ -573,7 +584,8 @@ r = \frac{\lambda_m}{\lambda_p} = \frac{\sum E_i \delta\eta^2_i+\sum E_i \delta\
 %No significan difference in eccentricity was found between quark and gluon jets.
 Figure~\ref{fig:jeteccsinglemerged} shows the distribution of the jet eccentricity, built using track constituents. %No significant difference in eccentricity was found between single and merged $b$-jets. 
 Although merged jets tend to be less spherical than single jets %, for jets with $80$~GeV $< \pt < 110$~GeV, 
-the difference is only marginal and essentially nonexistent for high $\pt$ jets.
+the difference is only marginal and essentially nonexistent for high $\pt$ jets.  
+The definition of the track-eccentricity, in Equation~\ref{eq:ecc}, weights the angular distances by the associated tracks $\pt$. Therefore, any pair of tracks with transverse momentum much higher than the rest will lead to a jet eccecntricity $\sim$1. 
 
 %\vspace{3 mm}
 
@@ -586,8 +598,8 @@ the difference is only marginal and essentially nonexistent for high $\pt$ jets.
 \end{figure}
 
 
-In order to better understand the behavior observed for this variable, further studies were performed using bigger cone jets to enhance the efficiency to capture the decay products in gluon to $b \bar{b}$-jets, in particular the anti-$k_t$ 0.6 algorithm was used; and %the ghost association procedure for cluster matching, for a calorimeter-based eccentricity. None of the above resulted in better single-merged separation.
-tracks were replaced by clusters, for a cluster-based eccentricity.  None of the above resulted in better single-merged separation.
+%In order to better understand the behavior observed for this variable, further studies were performed using bigger cone jets to enhance the efficiency to capture the decay products in gluon to $b \bar{b}$-jets, in particular the anti-$k_t$ 0.6 algorithm was used; and %the ghost association procedure for cluster matching, for a calorimeter-based eccentricity. None of the above resulted in better single-merged separation.
+%tracks were replaced by clusters, for a cluster-based eccentricity.  None of the above resulted in better single-merged separation.
 
 
 %Aqui el resultado de sabrina.
