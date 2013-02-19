@@ -328,66 +328,45 @@ John~M. Campbell, R.Keith Ellis, F.~Maltoni, and S.~Willenbrock.
   the ATLAS detector}.
 \newblock {\em ATLAS-CONF-2011-098}, 2011.
 
-\bibitem{ATLASTriggerSimulation}
+\bibitem{KDE}
+{Scott, D.W.}
+\newblock {Multivariate Density Estimation: Theory, Practice, and
+  Visualization}.
+\newblock {\em {John Wiley and Sons, Inc. United States}}, 1992.
+
+\bibitem{QUINLAN1999497}
+{Quinlan, J.R.}
+\newblock Simplifying decision trees.
+\newblock {\em International Journal of Human-Computer Studies}, 51(2):{497 --
+  510}, 1999.
+
+\bibitem{Hocker:2007ht}
+A.~Hoecker, P.~Speckmayer, J.~Stelzer, J.~Therhaag, E.~Von~Toerne, and H.~Voss.
+\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
+\newblock {\em PoS}, ACAT:040, 2007.
+
+\bibitem{chargemultiplicity}
 G.~Aad et~al.
-\newblock The atlas simulation infrastructure.
-\newblock {\em The European Physical Journal C}, 70:823--874, 2010.
+\newblock {Charged-particle multiplicities in pp interactions measured with the
+  ATLAS detector at the LHC}.
+\newblock {\em New J.Phys.}, 13:053033, 2011.
 
-\bibitem{ATLAS-CONF-2012-020}
+\bibitem{ATLAS-CONF-2010-009}
 {ATLAS Collaboration}.
-\newblock {Selection of jets produced in proton-proton collisions with the
-  ATLAS detector using 2011 data}.
-\newblock {\em ATLAS-CONF-2012-020}, 2012.
+\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
+  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
+\newblock {\em ATLAS-CONF-2010-009}, 2010.
 
-\bibitem{ATLAS-CONF-2011-053}
-{ATLAS Collaboration}.
-\newblock Light-quark and gluon jets in atlas.
-\newblock {\em ATLAS-CONF-2011-053}, 2011.
+\bibitem{JESUncertainty}
+{Aad, G. and others}.
+\newblock {Jet energy measurement with the ATLAS detector in proton-proton
+  collisions at $\sqrt{s} = 7$~TeV}.
+\newblock 2011.
 
-\bibitem{Buskulic1996353}
-D.~Buskulic et~al.
-\newblock Quark and gluon jet properties in symmetric three-jet events.
-\newblock {\em Physics Letters B}, 384(1-4):353--364, 1996.
-
-\bibitem{PhysRevD.79.074012}
-Leandro~G. Almeida, Seung~J. Lee, Gilad Perez, Ilmo Sung, and Joseph Virzi.
-\newblock Top quark jets at the lhc.
-\newblock {\em Phys. Rev. D}, 79:074012, Apr 2009.
-
-\bibitem{ATLAS-CONF-2011-073}
-{ATLAS Collaboration}.
-\newblock {Measurement of Jet Mass and Substructure for Inclusive Jetsin
-  $\sqrt{s} =$ 7~TeV pp Collisions with the ATLAS Experiment}.
-\newblock {\em ATLAS-CONF-2011-073}, May 2011.
-
-\bibitem{Snihur1999494}
-R.~Snihur.
-\newblock Subjet multiplicity in quark and gluon jets at d0.
-\newblock {\em Nuclear Physics B - Proceedings Supplements}, 79(1–3):494 --
-  496, 1999.
-\newblock Proceedings of the 7th International Workshop on Deep Inelastic
-  Scattering and QCD.
-
-\bibitem{Abdesselam:2010pt}
-A.~Abdesselam, E.~Bergeaas Kuutmann, U.~Bitenc, G.~Brooijmans, J.~Butterworth,
-  et~al.
-\newblock {Boosted objects: A Probe of beyond the Standard Model physics}.
-\newblock {\em Eur.Phys.J.}, C71:1661, 2011.
-
-\bibitem{pruning}
-Stephen~D. Ellis, Christopher~K. Vermilion, and Jonathan~R. Walsh.
-\newblock Techniques for improved heavy particle searches with jet
-  substructure.
-\newblock {\em Phys. Rev. D}, 80:051501, Sep 2009.
-
-\bibitem{nsubjettiness}
-Jesse Thaler and Ken Van~Tilburg.
-\newblock {Identifying Boosted Objects with N-subjettiness}.
-\newblock {\em JHEP}, 1103:015:026, 2011.
-
-\bibitem{njetti}
-Iain~W. Stewart, Frank~J. Tackmann, and Wouter~J. Waalewijn.
-\newblock $n$ jettiness: An inclusive event shape to veto jets.
-\newblock {\em Phys. Rev. Lett.}, 105:092002, Aug 2010.
+\bibitem{JER2011}
+G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
+\newblock Jet energy resolution from in-situ techniques with the atlas detector
+  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
+\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
 
 \end{thebibliography}
