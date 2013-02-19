@@ -12,19 +12,9 @@
 \contentsline {subsection}{\numberline {1.4.2}Jet substructure}{25}
 \contentsline {section}{\numberline {1.5}Heavy flavor jet production}{26}
 \contentsline {section}{\numberline {1.6}Other application of $g \rightarrow b\mathaccentV {bar}016{b}$}{31}
-\contentsline {chapter}{\numberline {2}Double \emph {\textbf {b}}-hadron jet identification}{34}
-\contentsline {section}{\numberline {2.1}Data sample}{34}
-\contentsline {section}{\numberline {2.2}Monte Carlo sample}{36}
-\contentsline {subsection}{\numberline {2.2.1}Event and jet selection}{36}
-\contentsline {subsection}{\numberline {2.2.2}Track selection}{40}
-\contentsline {section}{\numberline {2.3}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{42}
-\contentsline {subsubsection}{Jet track multiplicity}{43}
-\contentsline {subsubsection}{Jet width}{46}
-\contentsline {subsubsection}{Jet Mass}{48}
-\contentsline {subsubsection}{$\Delta R$ between leading tracks}{50}
-\contentsline {subsubsection}{Maximum $\Delta R$ between track pairs}{51}
-\contentsline {subsubsection}{Subjet multiplicity}{52}
-\contentsline {subsubsection}{$\Delta R$ between the axes of two $k_t$ subjets}{53}
-\contentsline {subsubsection}{$N$-subjettiness variables}{55}
-\contentsline {subsubsection}{Jet eccentricity}{58}
-\contentsline {section}{\numberline {2.4}Validation of the jet variables in data}{60}
+\contentsline {chapter}{\numberline {2}The Multivariate Analysis}{34}
+\contentsline {section}{\numberline {2.1}Multivariate methods}{34}
+\contentsline {subsubsection}{Training and testing the MVA methods}{37}
+\contentsline {section}{\numberline {2.2}Likelihood training and performance}{40}
+\contentsline {section}{\numberline {2.3}Systematic uncertainties}{43}
+\contentsline {section}{\numberline {2.4}Other Monte Carlo generators}{51}

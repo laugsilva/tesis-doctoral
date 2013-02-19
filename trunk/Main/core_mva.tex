@@ -6,13 +6,14 @@
 
 After the evaluation of the best discriminating variables, %between double $b$-hadron jets and genuine $b$-quark jets, 
 a tagging algorithm, capable of efficiently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches.  
-This analysis exploits a multivariate likelihood approach for the separation of the single $b$-jet signal and its background (the merged $b$-jets). Compare to single variable or 2-dimensional cuts analyses, the sensitivity can be largely improved because several variables are combined to build a likelihood classifier with high separation power.   Variables considered for the likelihood discriminant include the charged particle multiplicity as well as variables that account for the angular spread of the $b$-jets considered. 
+In this chapter we present the results of a multivariate likelihood method. Compared to single variable or 2-dimensional cuts analyses, with this technique the sensitivity is largely improved because several variables are combined to achieve the maximum separation power.  
 
 %------------------------------------------------------------------------
 \section{Multivariate methods}\label{sec:mvamethods}
 %------------------------------------------------------------------------
 
-Multivariate data analysis refers to a statistical technique used to analyze data that arises from more than one variable.  Classification is done through learning algorithms that make use of training events,  for which the desired output is known, to determine the mapping function that discribes a decision boundary. The following multivariate methods were explored: % using a simulated sample of dijet events generated with {\sc Pythia}:
+Multivariate data analysis refers to a statistical technique used to analyze data that %arises from 
+ is composed of more than one variable.  Classification is done through learning algorithms that make use of training events,  for which the desired output is known, to determine the mapping function that discribes a decision boundary. The following multivariate methods were explored: % using a simulated sample of dijet events generated with {\sc Pythia}:
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
@@ -26,20 +27,20 @@ Boosted decision Trees (BDTs)
 \end{itemize}
 
 %From TMVA Users Guide
-The method of maximum likelihood consists of building a model out of probability density functions (PDF) that reproduces the distributions of the input variables for signal and background. For a given event, the likelihood for being of signal type is obtained by multiplying the signal probability densities of all input variables %, which are assumed to be independent, 
-and normalising this by the sum of the signal and background likelihoods. %Because correlations among the variables are ignored, this PDE approach is also called “naive Bayes estimator”.
+The method of LLR consists of building a model out of probability density functions (PDF) that reproduces the distributions of the input variables for signal and background. 
 The likelihood ratio $y_{L}(i)$ for event $i$ is defined by:
 %
 \begin{equation}
 y_{L}(i) = \frac{L_S(i)}{L_S(i)+L_B(i)},
 \end{equation}
 %
-where
+In the case of poorly correlated variables, the likelihood for being of signal type is obtained by multiplying the signal probability densities of all input variables and normalising this by the sum of the signal and background likelihoods, %, which are assumed to be independent, 
 %
 \begin{equation}
 L_{S(B)}(i) = \prod^{n_{var}}_{k=1}  p_{S(B),k}(x_k(i)),
 \end{equation}
 %
+Because correlations among the variables are ignored, this PDE approach is also called “naive Bayes estimator”.
 and where $p_{S(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
 
 The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
@@ -62,22 +63,33 @@ While in principle a neural network with $n$ neurons can have $n^2$ directional 
 %The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
 
 
-Decision trees % (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. 
-are classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
+%Decision trees % (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. 
+%are classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
 % However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
+A decision tree (BDT) is a binary tree structured classifier similar to the one sketched in Fig.~\ref{fig:BDTsketch}. 
 Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final \emph{leaf} node. The boosting of a decision tree extends this concept from one tree to several trees which form a \emph{forest}.
 Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree~\cite{QUINLAN1999497}. %However, the advantage of the straightforward interpretation of the decision tree is lost.
 %Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
 
-%The method of Fisher discriminants~\cite{Fisher}.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.7\textwidth]{BDT.png}
+\caption{Schematic view of a decision tree. Starting from the \emph{root node}, a sequence  of binary splits using the discriminating variable $x_i$ is applied to the data. The leaf nodes at the bottom end of the tree are labeled ``S'' for signal and ``B'' for background depending on the majority of events that end up in the respective nodes. Image taken from Reference~\cite{Hocker:2007ht}.}
+\label{fig:BDTsketch}
+\end{figure}
+
+
+
+
 
 \subsubsection{Training and testing the MVA methods}
 
-A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA~\cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). 
+A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). 
 
 Based on discrimination power, correlation and pile-up dependence three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Distributions of the these variables for single and merged $b$-jets were given to the multivariate methods as input. Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
 
-Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest (double the TMVA default value).  Distributions of the final output for the three methods, evaluated in a sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
+Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest.  Distributions of the final output for the three methods, evaluated in an orthogonal sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
 
 The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agrees within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
@@ -86,15 +98,9 @@ As opposed to Neural Network discriminants with large number of training cycles,
 
 \begin{figure}[tp]
 \centering
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_LihoodKDE.pdf}
 \includegraphics[width=0.32\textwidth]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_LihoodKDE.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_MLP.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_MLP.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_MLP.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput040_BDT.pdf}
-\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput080_BDT.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/NNoutput200_BDT.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/Likelihood/NNoutput080_MLP.pdf}
+\includegraphics[width=0.32\textwidth]{FIGS/Likelihood/NNoutput080_BDT.pdf}
 \caption{Distribution of the MVA discriminant outputs for the Likelihood (a), Neural Network (b) and Boosted Decision Trees (c) classifiers, for single and merged $b$-jets between 80~GeV and 110~GeV.}
 \label{fig:diffmethodsBins}
 \end{figure}
@@ -143,11 +149,10 @@ The distribution of the likelihood output for single and merged $b$-jets is show
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.32\textwidth,viewport=40 0 540 550]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
-%\includegraphics[width=0.32\textwidth]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth,viewport=40 0 540 550,clip]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
-\includegraphics[width=0.32\textwidth,viewport=40 0 540 550,clip]{FIGS/Likelihood/NNoutput200_LihoodKDE.pdf}  
-\caption{Distribution of the likelihood output for single and merged $b$-jets for low, medium and high $\pt$ jets.}
+%\includegraphics[width=0.32\textwidth,viewport=40 0 540 550]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/Likelihood/NNoutput200_LihoodKDE.pdf}  
+\caption{Distribution of the likelihood output for single and merged $b$-jets for medium and high $\pt$ jets.}
 \label{fig:outputinbins}
 \end{figure}
 
@@ -220,7 +225,8 @@ The rejection of merged jets attained as a function of $\pt$ for the 50\% and 60
 %------------------------------------------------------------------------
 \section{Systematic uncertainties}\label{sec:gbbSystematics}
 %------------------------------------------------------------------------
-The development, training and performance determination of the tagger is based on simulated events. Although the agreement between simulation and data explored in section~\ref{sec:gbbValidation} is a necessary validation condition, it is also important to investigate how the tagger performance depends on systematics relevant in the data. In particular we have considered:
+The development, training and performance determination of the tagger is based on simulated events. Although the agreement between simulation and data explored in section~\ref{sec:gbbValidation} is a necessary validation condition, it is also important to investigate how the tagger performance depends % on systematics relevant in the data. In particular we have considered:
+ on the systematic precision with which the MC simulates the data. In particular we have considered:
 %
 %There are uncertainties in the data that, although not spoiling the data/MC agreement, might change the performance of the tagger. This uncertainties would also be present in an eventual future data-driven determination of the performance as  the data are not known better that this.The following systematic effects have been studied and their influence on the tagger performance ascertained:
 %
@@ -246,9 +252,10 @@ uncertainty in the jet energy scale.
 { \em I. Pile-up}
 \\[3mm]
   The size of this effect was studied by comparing the performance of the likelihood discriminant with $b$-jets in events with small (1-9) and large (9-20) number of primary vertices. 
-A comparison of the performance in these two sub-samples relative to the inclusive sample is shown in Fig.~\ref{fig:performanceinbinsMu}. 
-As expected from the use of tracking (as opposed to calorimeter) variables no significant dependence with pile-up is observed within statistics. %Of the 16 determinations (2 working points with 8 $\pt$ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
-Performance differences between high and low number of primary vertices events are $\leq$~0.3\% and therefore negligible compared to other sources of uncertainties. The impact of pile-up might be larger in 2012 data.
+A comparison of the performance in these two sub-samples relative to the inclusive sample is shown in Fig.~\ref{fig:performanceinbinsMu} for the two lowest $\pt$ bins, where the effect of pile-up is more important.
+As expected from the use of tracking (as opposed to calorimeter) variables, no significant dependence with pile-up is observed. % within statistics. %Of the 16 determinations (2 working points with 8 $\pt$ bins each) of performance differences between high and low number of primary vertices events, it is observed that 6 of them are positive and 10 negative, with a global mean of 0.3\%. We conclude that the effect is negligible compared to other source of uncertainties.
+Performance differences between high and low number of primary vertices events are $\leq$~2\%. % and therefore negligible compared to other sources of uncertainties. 
+The impact of pile-up might be larger in 2012 data.
 
 %See Fig.~\ref{fig:performanceinbinsMu}.
 \begin{figure}[tp]
@@ -298,12 +305,22 @@ This was indeed expected. The scale factors depend on the true flavor of the jet
 \vspace{3mm}
 { \em III. Track reconstruction efficiency}
 \\[3mm]
-This uncertainty arises from the limit in the understanding of the material layout of the Inner Detector. To test its impact a fraction of tracks determined from the track efficiency uncertainty was randomly removed.  % following the method in Ref.~\cite{JetMassNote}.%https://cdsweb.cern.ch/record/1344082?ln=en
+
+The track reconstruction efficiency, $\epsilon_{trk}$, parametrised in bins of $\pt$ and $\eta$, is defined as:
+%
+\begin{equation}
+\epsilon_{trk} = \frac{N^{matched}_{rec}(\pt,\eta)}{N_{gen}(\pt,\eta)}
+\end{equation}
+%
+where $N^{matched}_{rec}$ is the number of reconstructed tracks matched to a generated charged particle, and $N_{gen}(\pt,\eta)$ is the number of generated charged particles in that bin\footnote{The matching between a generated particle and a reconstructed track uses a cone-matching algorithm, associating the particle to the track with the smallest $\Delta R$ within a cone of radius 0.15.}.  As the track reconstruction efficiency is determined from MC, the main systematic uncertainty results from the level of agreement between data and MC.  Since charged hadrons are known to suffer from hadronic interactions with the material in the detector, a good description of the material in MC is needed to get a good description of the track reconstruction efficiency.  
+The uncertain knowledge of the material in the inner detector is the main source of systematic uncertainties in the tracking efficiency~\cite{chargemultiplicity}. An increase (decrease) in material leads to an increase (decrease) in the number of hadronic interactions, hence to a decrease (increase) in the reconstruction efficiency. 
+%This uncertainty arises from the limit in the understanding of the material layout of the Inner Detector. 
 
 The tracking efficiency systematics are given in bins of track $\eta$. For tracks with $p_{\rm{T}}^{\rm{track}} > 500$~MeV the uncertainties are independent of $\pt$:  2\% for $|\eta^{\rm{track}}|<1.3$, 3\% for $1.3<|\eta^{\rm{track}}|<1.9$, 4\% for $1.9<|\eta^{\rm{track}}|<2.1$, 4\% for $2.1<|\eta^{\rm{track}}|<2.3$ and 7\% for $2.3<|\eta^{\rm{track}}|<2.5$~\cite{chargemultiplicity}. All numbers are relative to the corresponding tracking efficiencies.  
+
+To test the impact of these uncertainties, a fraction of tracks determined from the track efficiency uncertainty was randomly removed.  % following the method in Ref.~\cite{JetMassNote}.%https://cdsweb.cern.ch/record/1344082?ln=en
 %https://cdsweb.cern.ch/record/1286839
 %http://arxiv.org/abs/1012.5104
-
 The tracking variables were re-calculated and the performance of the nominal likelihood was evaluated in the new sample with worse tracking efficiency. The rejection-efficiency curves %plots, shown in Fig.~\ref{fig:trackefficiency},
  show a small degradation of the performance which is comparable to the statistical uncertainty. The effect is however systematically present over all 16 $\pt$ bin/working points, without a clear $\pt$ dependence. We have thus taken the average over $\pt$, and obtained a global systematic uncertainty of 4\% both for the 50\% and 60\% efficiency working points. The performance comparison is shown in Fig.~\ref{fig:trackefficiency} for two $\pt$ bins. %Similar plots were produced for all other sources of uncertainties considered but are not shown in this note for brevity.
 
@@ -379,7 +396,7 @@ The different contributions to the systematic uncertainty on the merged $b$-jet 
 \begin{tabular}{ | c | c |}
 \hline
   ~~~~~~~Systematic source~~~~~~~ &~~Uncertainty~~\\ \hline
-  pile-up          &  neglible     \\ 
+  pile-up          &  2\%     \\ 
   $b$-tagging efficiency     &  neglible     \\ 
   track reconstruction efficiency  &    4\%        \\ 
   track $\pt$ resolution &  neglible     \\
@@ -441,7 +458,7 @@ The reason for the systematic difference observed between the performances of {\
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.49\textwidth]{gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf}
+\includegraphics[width=0.7\textwidth]{gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf}
@@ -461,20 +478,20 @@ The reason for the systematic difference observed between the performances of {\
 
 
 %------------------------------------------------------------------------
-\section{Validation of the MVA output in data}\label{sec:MVAvalidation}
+%\section{Validation of the MVA output in data}\label{sec:MVAvalidation}
 %------------------------------------------------------------------------
 
-In Section~\ref{sec:gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simulation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
+%In Section~\ref{sec:gbbValidation} the validation of the tracking variables in data from 2011 runs was presented,  showing an excellent agreement between experimental data and the Monte Carlo simulation. In particular, the agreement obtained for the track multiplicity, the track-jet width and the $\Delta R$ between $k_t$ axes - the three input variables -  is shown in Fig.~\ref{fig:datamcmva}. 
 
-The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood output for different bins of jet $\pt$. The agreement is excellent.
+%The likelihood presented in this chapter is an observable built out of the three selected variables and, for this reason, a similar level of agreement is expected for the output distributions in bins of the jet transverse momentum.  Figures~\ref{fig:datamcmva} shows the distribution of the likelihood output for different bins of jet $\pt$. The agreement is excellent.
 
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT040.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT200.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT360.pdf}  
-\caption{ Distribution of likelihood output in different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
-\label{fig:datamcmva}
-\end{figure}
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT040.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT200.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/dataMC/likelihood/FullMVAoutput_PT360.pdf}  
+%\caption{ Distribution of likelihood output in different jet $\pt$ bins, for experimental data  collected by ATLAS during 2011 (solid black points), and simulated data (filled histograms). The ratio data over simulation is shown at the bottom of each plot.}
+%\label{fig:datamcmva}
+%\end{figure}
