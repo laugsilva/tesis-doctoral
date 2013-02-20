@@ -39,8 +39,11 @@ What happens when you do pdf->fitTo(*data)?
 
 
 %------------------------------------------------------------------------
-\section{Fitting MC templates to data}\label{sec:FitsResults}
+\section{Results}\label{sec:FitsResults}
 %------------------------------------------------------------------------
+
+
+
 
 -TODO: TRUE FRACTIONS IN PYTHIA
 
@@ -53,17 +56,74 @@ PARA JUSTIFICAR QUE HACEMOS LOS FITS CON 3 PARAMETROS PODEMOS MOSTRAR LOS HISTOS
 COMO RESULTADO PRESENTAREMOS ENTONCES LAS FRACCIONES DE SINGLE, MERGED Y LIGHT.
 
 
+
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c || c | c || c | c || c | c ||}
+  \hline
+  Jet $\pt$ & \multicolumn{2}{c||}{single $b$-jet} & \multicolumn{2}{c||}{merged $b$-jet} & \multicolumn{2}{c||}{~light jet~}\\ \cline{2-7}
+    (GeV ) & fit result & ~stat.err. & fit result & ~stat.err. & fit result & ~stat.err.\\ \hline
+   40 - 60 &  62\% &  3\%  &  ~~3\%  &  ~~1\% &  ~4\%  &  4\%   \\ 
+   60 - 80 &  62\% &  1\%  &  5.2\%  &  0.4\% &  ~2\%  &  2\%   \\ 
+   80 - 110&  57\% &  1\%  &  8.5\%  &  0.4\% &  ~3\%  &  2\%   \\ 
+  110 - 150&  55\% &  2\%  &  ~13\%  &  ~~1\% &  ~1\%  &  4\%   \\ 
+  150 - 200&  53\% &  3\%  &  ~15\%  &  ~~1\% &  ~0\%  &  4\%   \\ 
+  200 - 270&  53\% &  5\%  &  ~17\%  &  ~~1\% &  -1\%  &  7\%   \\ 
+  270 - 360&  48\% &  3\%  &  ~19\%  &  ~~1\% &  ~4\%  &  4\%   \\ 
+  360 - 480&  39\% &  5\%  &  ~21\%  &  ~~1\% &  15\%  &  6\%   \\ \hline
+\end{tabular}
+\caption{Measured fractions of single, merged and light $b$-tagged jets in experimental data from 2011 run.}
+\label{tb:fitfractions}
+\end{table}
+
+
+
+
+
+
+
 %------------------------------------------------------------------------
 \section{Systematic uncertainties}\label{sec:FractionSystematics}
 %------------------------------------------------------------------------
 
--JES
-
--TRACK PT EFFICIENCY
-
--TO DO: HACER LOS TEMPLATES CON HERWIG
-
 - TO DO: HACER JER SI PUEDO
+
+
+In order to study the systematic uncertainties in the results the following contributions were evaluated:
+
+\begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
+\item
+uncertainty in the track reconstruction efficiency;
+\item
+uncertainty in the jet transverse momentum resolution;
+\item
+uncertainty in the jet energy scale.
+%the effect of jet isolation
+%\item
+%other $\Delta R$ cuts for B-labeling and matching
+\end{itemize}
+
+
+\vspace{3mm}
+The different contributions to the systematic uncertainty are summarized in Table~\ref{tb:systematicsfits}.
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c | c |}
+\hline
+  ~~~~~~~Systematic source~~~~~~~ &~~Uncertainty~~\\ \hline
+  track reconstruction efficiency  &    negligible\%        \\ 
+  jet $\pt$ resolution  &    2\%        \\  
+  jet energy scale  &    2\%        \\ \hline 
+\end{tabular}
+\caption{Systematic uncertainties.}
+\label{tb:systematicsfits}
+\end{table}
+
+
+
+
 
 - CAMBIAR LAS FRACCIONES C/B EN 20\% Y VER CUANTO CAMBIAN LOS RESULTADOS. LA FRACCION DE C+B NO DEBERIA CAMBIAR:  EL NUMERO TOTAL DE MERGED-C+MERGED-B NO CAMBIA POR VARIAR LA FRACCION DE C/B. EN REALIDAD ESTAMOS MIDIENDO LA FRACCION DE SINGLE B+C Y LA FRACCION DE MERGED-C + B.
 
@@ -73,3 +133,63 @@ COMO RESULTADO PRESENTAREMOS ENTONCES LAS FRACCIONES DE SINGLE, MERGED Y LIGHT.
 
 MOSTRAMOS QUE LOS MISMOS TEMPLATES USADOS EN OTRA MUESTRA FUNCIONAN BIEN Y QUE EL RESULTADO ESTA EN ACUERDO CON LA PREDICCION DE PYTHIA (ESTO NO ES OBVIO PARA NADA).
 (PODRIAMOS DECIR QUE LA FRACCION DE FLAVOR CREATION ESTA BIEN SIMULADA POR PYTHIA)
+
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c || c | c | c ||}
+  \hline
+  Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jet}\\ \cline{2-4}
+    (GeV ) & ~~~~fit result~~~ & ~~~~stat.err.~~~~ & pythia prediction \\ \hline
+   40 - 60 &  99\%  &  11\%  &  84\% \\  
+   60 - 80 &  82\%  &  ~5\%  &  87\% \\ 
+   80 - 110&  84\%  &  ~5\%  &  88\% \\ 
+  110 - 150&  86\%  &  ~8\%  &  85\% \\ 
+  150 - 200&  89\%  &  ~9\%  &  83\% \\ 
+  200 - 270&  95\%  &  15\%  &  80\% \\ 
+  270 - 360&  67\%  &  11\%  &  81\% \\ 
+  360 - 480&  73\%  &  16\%  &  73\% \\ \hline
+\end{tabular}
+\caption{Measured fractions of single $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
+\label{tb:fitfractions2btagS}
+\end{table}
+
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c || c | c | c ||}
+  \hline
+  Jet $\pt$ & \multicolumn{3}{c||}{merged $b$-jet}\\ \cline{2-4}
+    (GeV ) & ~~~~fit result~~~ & ~~~~stat.err.~~~~ & pythia prediction \\ \hline
+   40 - 60 &  -1\%  &  1\%  &  1\% \\  
+   60 - 80 &  -3\%  &  1\%  &  1\% \\ 
+   80 - 110&  ~2\%  &  1\%  &  1\% \\ 
+  110 - 150&  ~4\%  &  2\%  &  3\% \\ 
+  150 - 200&  ~4\%  &  2\%  &  3\% \\ 
+  200 - 270&  ~7\%  &  2\%  &  5\% \\ 
+  270 - 360&  12\%  &  2\%  &  6\% \\ 
+  360 - 480&  10\%  &  1\%  &  8\% \\ \hline
+\end{tabular}
+\caption{Measured fractions of merged $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
+\label{tb:fitfractions2btagM}
+\end{table}
+
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c || c | c | c ||}
+  \hline
+  Jet $\pt$ & \multicolumn{3}{c||}{light $b$-jet}\\ \cline{2-4}
+    (GeV ) & ~~~~fit result~~~ & ~~~~stat.err.~~~~ & pythia prediction \\ \hline
+   40 - 60 &  ~-7\%  &  11\%  &  5\% \\  
+   60 - 80 &  ~17\%  &  ~6\%  &  2\% \\ 
+   80 - 110&  ~~4\%  &  ~6\%  &  1\% \\ 
+  110 - 150&  ~-1\%  &  ~9\%  &  1\% \\ 
+  150 - 200&  ~-6\%  &  10\%  &  2\% \\ 
+  200 - 270&  -17\%  &  17\%  &  3\% \\ 
+  270 - 360&  ~~9\%  &  11\%  &  4\% \\ 
+  360 - 480&  ~~4\%  &  16\%  &  8\% \\ \hline
+\end{tabular}
+\caption{Measured fractions of light $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
+\label{tb:fitfractions2btagL}
+\end{table}
