@@ -1,7 +1,9 @@
 \contentsline {chapter}{\numberline {1}Fraction of double $b$-hadron jets in data}{2}
 \contentsline {section}{\numberline {1.1}Maximum likelihood fits}{2}
-\contentsline {subsubsection}{Unbinned fits}{2}
-\contentsline {subsubsection}{Fitting and likelihood minimization}{2}
+\contentsline {subsubsection}{Unbinned fits}{3}
+\contentsline {subsubsection}{Fitting and likelihood minimization}{3}
 \contentsline {section}{\numberline {1.2}Results}{3}
 \contentsline {section}{\numberline {1.3}Systematic uncertainties}{3}
-\contentsline {section}{\numberline {1.4}Enriched samples in single and merged $b$-jets}{5}
+\contentsline {section}{\numberline {1.4}Enriched samples in single and merged $b$-jets}{8}
+\contentsline {subsubsection}{Enriched sample in merged $b$-jets}{8}
+\contentsline {subsubsection}{Enriched sample in single $b$-jets}{8}

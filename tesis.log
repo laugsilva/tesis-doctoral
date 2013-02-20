@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  20 FEB 2013 15:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  20 FEB 2013 18:05
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -183,67 +183,113 @@ Chapter 1.
 [2
 
 
-]
-Overfull \hbox (22.68443pt too wide) in paragraph at lines 50--51
-[]\T1/cmr/m/n/12 DECIR QUE HICI-MOS LOS FITS PARA 5 Y 3 PARAMET-ROS. MOSTRAR
- []
+] <TrueFractions_NominalPythia.pdf, id=48, 569.12625pt x 549.05125pt>
+File: TrueFractions_NominalPythia.pdf Graphic file (type pdf)
 
-
-Overfull \hbox (13.69041pt too wide) in paragraph at lines 63--76
+<use TrueFractions_NominalPythia.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf, id=49, 569.12625pt x 480.7962
+5pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf Graphic file (type pdf)
+ <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf, id=50, 569.12625pt x 480.7962
+5pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf Graphic file (type pdf)
+ <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf, id=51, 569.12625pt x 480.7962
+5pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf Graphic file (type pdf)
+ <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf, id=52, 569.12625pt x 480.7962
+5pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf Graphic file (type pdf)
+ <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf>
+Overfull \hbox (13.69041pt too wide) in paragraph at lines 90--103
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 97.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
+
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
- [3] [4]
-Overfull \hbox (27.38638pt too wide) in paragraph at lines 134--136
-\T1/cmr/m/n/12 MUES-TRA FUN-CIO-NAN BIEN Y QUE EL RE-SUL-TADO ESTA EN ACUERDO
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
+ [3] [4 <./TrueFractions_NominalPythia.pdf, page is rotated 90 degrees>] [5 <./
+FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf, page is rotated 90 degrees> <.
+/FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf, page is rotated 90 degrees>] 
+[6 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf, page is rotated 90 degre
+es> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf, page is rotated 90 degr
+ees>]
+Overfull \hbox (11.75606pt too wide) in paragraph at lines 153--154
+[]\T1/cmr/m/n/12 Changing the frac-tions merged-c/merged-b in 20% only pro-duce
+d a marginal
  []
 
+[7]
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf, id=284, 569
+.12625pt x 480.79625pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf Graphic
+ file (type pdf)
 
-Overfull \hbox (4.72115pt too wide) in paragraph at lines 134--136
-\T1/cmr/m/n/12 CON LA PREDIC-CION DE PYTHIA (ESTO NO ES OB-VIO PARA NADA).
- []
+<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf, id=285, 569
+.12625pt x 480.79625pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf Graphic
+ file (type pdf)
 
-) [5] [6] [7] [8] (./tesis.bbl
+<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf, id=286, 569
+.12625pt x 480.79625pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf Graphic
+ file (type pdf)
+
+<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, id=287, 569
+.12625pt x 480.79625pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf Graphic
+ file (type pdf)
+
+<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf>)
+[8] [9 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf, pa
+ge is rotated 90 degrees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriche
+d2btag_Bin2.pdf, page is rotated 90 degrees>] [10 <./FIGS/Fits/LikelihoodFit_3p
+aram_ETAFull_DataEnriched2btag_Bin5.pdf, page is rotated 90 degrees> <./FIGS/Fi
+ts/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, page is rotated 90 
+degrees>] [11] [12] [13] (./tesis.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [9
+) [14
 
 
 ] (./tesis.aux (./Main/core_fits.aux)) ) 
 Here is how much of TeX's memory you used:
- 1862 strings out of 495061
- 21460 string characters out of 1182621
- 83406 words of memory out of 3000000
- 5025 multiletter control sequences out of 15000+50000
- 24530 words of font info for 60 fonts, out of 3000000 for 9000
+ 1915 strings out of 495061
+ 24081 string characters out of 1182621
+ 84461 words of memory out of 3000000
+ 5067 multiletter control sequences out of 15000+50000
+ 25205 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,13n,20p,1494b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/laugs/.texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecbx1728.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecbx2488.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200
-.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </h
-ome/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/laugs/.
-texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1440.600pk> </home/laugs/.texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/laugs/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecrm1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecbx1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm14
-40.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb>
-Output written on tesis.pdf (14 pages, 211353 bytes).
+r/jknappen/ec/eccc1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecbx1728.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488
+.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </h
+ome/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home/laugs/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/laugs/.texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbi1440.600pk> </home/laugs/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecbx1440.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecrm1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx12
+00.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> <
+/home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on tesis.pdf (19 pages, 391460 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
+ 878 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
