@@ -20,20 +20,22 @@ allowing the estimation of the absolute number of signal/background events.
 For N p.d.f.s, there are N-1 fraction coefficients that should sum to less 1. The remainder is by construction 1 minus the sum of all other coefficients.
 
 
-%Binned or unbinned MF fit?
-%Roofit presentation page 112
-%In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
-%WEIGHTS ARE SUPPORTED IN UNBINNED DATASETS!! But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
+Binned or unbinned MF fit. %Roofit presentation page 112
+
+In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
+
+Weights are supported in unbinned datasets. But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
 
 \subsubsection{Unbinned fits}
 
 
 \subsubsection{Fitting and likelihood minimization}
+
 What happens when you do pdf->fitTo(*data)?
 
 - Construct object representing -log of (extended) likelihood
 
-- Minimize likelihood w.r.t floating parameters using MINUIT [REFERENCIAS].
+- Minimize likelihood w.r.t floating parameters using {\sc MINUIT}. % [REFERENCIAS].
 
 
 
@@ -42,18 +44,24 @@ What happens when you do pdf->fitTo(*data)?
 \section{Results}\label{sec:FitsResults}
 %------------------------------------------------------------------------
 
+True fractions predicted by {\sc Pythia} Monte Carlo generator in Fig.~\ref{fig:truefractions}
+
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.9\textwidth]{TrueFractions_NominalPythia.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPt_FIXEDBUGTest_rejvseff080.pdf}
+\caption{Pythia predictions of the fractions of tagged single-b, merged-b, single-c, merged-c-jets and light jets in a Monte Carlo dijet sample.}
+\label{fig:truefractions}
+\end{figure}
+
+
+5 and 3 free parameter fits were performed. Given that single-b (mereged-b) and single-c (merged-d) templates are hard to distinguish, we fixed single-c (merged-c) fractions to single-b (merged-b) ones.
+%PARA JUSTIFICAR QUE HACEMOS LOS FITS CON 3 PARAMETROS PODEMOS MOSTRAR LOS HISTOS Y DECIR QUE LAS CORRELACIONES SON MUY GRANDES (PONER NUMEROS). EN ALGUN MOMENTO TENDRA QUE HABER UN C-TAGGER.  EN DIJET TENEMOS SINGLE-C'S, EN TTbar NO HAY C'S, SI HAY MERGED-C PERO ES ALGO QUE QUEREMOS REMOVER DE TODAS MANERAS.
 
 
 
--TODO: TRUE FRACTIONS IN PYTHIA
-
-DECIR QUE HICIMOS LOS FITS PARA 5 Y 3 PARAMETROS. MOSTRAR LOS RESULTADOS Y EXPLICAR QUE ES DIFICIL DISTINGUIR ENTRE LOS TEMPLATES DE SINGLE-B Y SINGLE-C Y QUE POR ESO VAMOS A HACER TODO FIJANDO LAS FRACCIONES DE SINGLE-C Y MERGED-C A SINGLE-B Y MERGED-B RESPECTIVAMENTE.
-
-PARA JUSTIFICAR QUE HACEMOS LOS FITS CON 3 PARAMETROS PODEMOS MOSTRAR LOS HISTOS Y DECIR QUE LAS CORRELACIONES SON MUY GRANDES (PONER NUMEROS). EN ALGUN MOMENTO TENDRA QUE HABER UN C-TAGGER.  EN DIJET TENEMOS SINGLE-C'S, EN TTbar NO HAY C'S, SI HAY MERGED-C PERO ES ALGO QUE QUEREMOS REMOVER DE TODAS MANERAS.
-
-
-
-COMO RESULTADO PRESENTAREMOS ENTONCES LAS FRACCIONES DE SINGLE, MERGED Y LIGHT.
+The results of the 3-parameter fits for all bins of $\pt$ are shown in table~\ref{tb:fitfractions}.
 
 
 
@@ -123,16 +131,26 @@ The different contributions to the systematic uncertainty are summarized in Tabl
 
 
 
+Changing the fractions merged-c/merged-b in 20\% only produced a marginal effect on the fit results. The total number of merged-c plus merged-b did not changed showing that in reality we are measuring the fraction of merged b+c together. The same result is expected if changing the single-c/single-b fraction.
 
-
-- CAMBIAR LAS FRACCIONES C/B EN 20\% Y VER CUANTO CAMBIAN LOS RESULTADOS. LA FRACCION DE C+B NO DEBERIA CAMBIAR:  EL NUMERO TOTAL DE MERGED-C+MERGED-B NO CAMBIA POR VARIAR LA FRACCION DE C/B. EN REALIDAD ESTAMOS MIDIENDO LA FRACCION DE SINGLE B+C Y LA FRACCION DE MERGED-C + B.
 
 %------------------------------------------------------------------------
 \section{Enriched samples in single and merged $b$-jets}\label{sec:Enriched}
 %------------------------------------------------------------------------
 
-MOSTRAMOS QUE LOS MISMOS TEMPLATES USADOS EN OTRA MUESTRA FUNCIONAN BIEN Y QUE EL RESULTADO ESTA EN ACUERDO CON LA PREDICCION DE PYTHIA (ESTO NO ES OBVIO PARA NADA).
-(PODRIAMOS DECIR QUE LA FRACCION DE FLAVOR CREATION ESTA BIEN SIMULADA POR PYTHIA)
+
+\subsubsection{Enriched sample in single $b$-jets}
+
+The results of performing the fits on an data sample enriched in single $b$-jets is shown in tables~\ref{tb:fitfractions2btagS} to ~\ref{tb:fitfractions2btagL}. The model fitted to the data agrees well within statistics %THE TEMPLATES WORK WELL!
+and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level o of enrichedment.  % (PODRIAMOS DECIR QUE LA FRACCION DE FLAVOR CREATION ESTA BIEN SIMULADA POR PYTHIA)
+
+
+\subsubsection{Enriched sample in merged $b$-jets}
+
+
+
+
+
 
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
