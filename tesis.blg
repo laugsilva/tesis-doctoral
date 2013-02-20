@@ -1,8 +1,8 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/reconstruction.aux
-A level-1 auxiliary file: Main/core.aux
+A level-1 auxiliary file: Main/core_fits.aux
 The style file: unsrt.bst
+I found no \citation commands---while reading file tesis.aux
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 18 of file tesis.bib
  :   pages = "
@@ -12,47 +12,45 @@ I was expecting a `,' or a `}'---line 47 of file tesis.bib
  :   year = "
  :           {1973}",
 I'm skipping whatever remains of this entry
-Warning--empty journal in Calafiura2005zz
-Warning--empty author in Pythia_MC11tune
-You've used 35 entries,
+You've used 0 entries,
             1791 wiz_defined-function locations,
-            647 strings with 8961 characters,
-and the built_in function-call counts, 6392 in all, are:
-= -- 551
-> -- 256
-< -- 2
-+ -- 103
-- -- 68
-* -- 366
-:= -- 1098
-add.period$ -- 106
-call.type$ -- 35
-change.case$ -- 35
+            445 strings with 3526 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 306
-empty$ -- 641
-format.name$ -- 68
-if$ -- 1401
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 34
-newline$ -- 179
-num.names$ -- 34
-pop$ -- 70
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 125
+skip$ -- 1
 stack$ -- 0
-substring$ -- 331
-swap$ -- 43
-text.length$ -- 2
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 53
-width$ -- 37
-write$ -- 373
-(There were 2 error messages)
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 3 error messages)

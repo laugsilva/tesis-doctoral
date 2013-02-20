@@ -1,30 +1,7 @@
-\contentsline {chapter}{\numberline {1}Event reconstruction and \emph {\textbf {b}}-Tagging }{2}
-\contentsline {section}{\numberline {1.1}Jet reconstruction and calibration}{2}
-\contentsline {subsubsection}{Jet calibration}{4}
-\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{8}
-\contentsline {section}{\numberline {1.2}Reconstruction of charged particle tracks}{11}
-\contentsline {section}{\numberline {1.3}Vertex reconstruction}{15}
-\contentsline {section}{\numberline {1.4} $b$-jet Tagging}{16}
-\contentsline {subsubsection}{Association of tracks to jets}{18}
-\contentsline {subsection}{\numberline {1.4.1}$b$-tagging algorithms}{19}
-\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{19}
-\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{24}
-\contentsline {subsubsection}{Algorithm combinations and performance}{27}
-\contentsline {subsubsection}{The MV1 tagging algorithm}{28}
-\contentsline {subsection}{\numberline {1.4.2}$b$-tagging calibration}{29}
-\contentsline {chapter}{\numberline {2}Double \emph {\textbf {b}}-hadron jet identification}{32}
-\contentsline {section}{\numberline {2.1}Data sample}{32}
-\contentsline {section}{\numberline {2.2}Monte Carlo sample}{34}
-\contentsline {subsection}{\numberline {2.2.1}Event and jet selection}{34}
-\contentsline {subsection}{\numberline {2.2.2}Track selection}{38}
-\contentsline {section}{\numberline {2.3}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{40}
-\contentsline {subsubsection}{Jet track multiplicity}{41}
-\contentsline {subsubsection}{Jet width}{44}
-\contentsline {subsubsection}{Jet Mass}{46}
-\contentsline {subsubsection}{$\Delta R$ between leading tracks}{48}
-\contentsline {subsubsection}{Maximum $\Delta R$ between track pairs}{49}
-\contentsline {subsubsection}{Subjet multiplicity}{50}
-\contentsline {subsubsection}{$\Delta R$ between the axes of two $k_t$ subjets}{51}
-\contentsline {subsubsection}{$N$-subjettiness variables}{53}
-\contentsline {subsubsection}{Jet eccentricity}{56}
-\contentsline {section}{\numberline {2.4}Validation of the jet variables in data}{58}
+\contentsline {chapter}{\numberline {1}Fraction of double $b$-hadron jets in data}{2}
+\contentsline {section}{\numberline {1.1}Maximum likelihood fits}{2}
+\contentsline {subsubsection}{Unbinned fits}{2}
+\contentsline {subsubsection}{Fitting and likelihood minimization}{2}
+\contentsline {section}{\numberline {1.2}Results}{3}
+\contentsline {section}{\numberline {1.3}Systematic uncertainties}{3}
+\contentsline {section}{\numberline {1.4}Enriched samples in single and merged $b$-jets}{5}
