@@ -87,7 +87,7 @@ Boosting increases the statistical stability of the classifier and typically als
 
 A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). 
 
-Based on discrimination power, correlation and pile-up dependence three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Distributions of the these variables for single and merged $b$-jets were given to the multivariate methods as input. Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
+Based on discrimination power, correlation and pile-up dependence three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Event samples of single and merged $b$-jets, with the information of the value of the selected variables plus their correlations were given to the multivariate methods as input. Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
 
 Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest.  Distributions of the final output for the three methods, evaluated in an orthogonal sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
@@ -143,7 +143,12 @@ $\Delta R$ between the axes of 2 $k_t$ subjets within the jet
 \end{enumerate}
 %
 
-Given the correlation of the variables with the jet transverse momentum,  the training sample was categorized in bins of calorimeter jet $\pt$, and independent likelihood classifiers were built for each category.  Signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events, and thus increase the statistics of merged jets in the low $\pt$ bins. For the evaluation of the method the same procedure was followed.
+Given the correlation of the variables with the jet transverse momentum,  the training sample was categorized in bins of calorimeter jet $\pt$, and independent likelihood classifiers were built for each category.  
+
+Due to the lack of statistics 
+%In order to increase the statistics 
+of merged jets in the low $\pt$ bins, signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events. The gain in statistics in the first $\pt$ bin was of more than 500\%.   It is important to stress that, although essential for data to MC comparisons (see Section~\ref{sec:analysis}), the weighting of the dijet Monte Carlo samples by their respective cross-sections is not necessary for studies performed at simulation level only.
+For the evaluation of the method the same procedure was followed.
 
 The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for low, medium and high transverse momentum jets.
 
