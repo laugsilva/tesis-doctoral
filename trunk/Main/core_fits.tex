@@ -6,36 +6,63 @@
 \chapter{Fraction of double $b$-hadron jets in data}\label{ch:gbbfraction}
 
 %------------------------------------------------------------------------
-\section{Maximum likelihood fits}\label{sec:LLFits}
+\section{Unbinned maximum likelihood fits}\label{sec:LLFits}
 %------------------------------------------------------------------------
+
+Weights are supported in unbinned datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
+
+
+%Binned or unbinned MF fit. %Roofit presentation page 112
+%In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
 
 Maximum likelihood (ML) information only parametrizes the shape of a 
 distribution (i.e. one can determine fraction of signal events from 
 MC fits but no number of signal events).
 
+%\subsubsection{Extended maximum likelihood fits}
+
 The extended version of the maximum likelihood approach adds an extra term
 allowing the estimation of the absolute number of signal/background events.
 
-%Adding pdfs
-For N p.d.f.s, there are N-1 fraction coefficients that should sum to less 1. The remainder is by construction 1 minus the sum of all other coefficients.
+
+If we want to  determine a parameter corresponding to the expected number of
+events, $\eta$, we should add a factor to the likelihood which describes the probability of observing the actual number of events, $N$, given this parameter. This probability is described by the Poisson distribution
+%
+\begin{equation}
+P(N,\eta) = \frac{1}{N!} \cdot \eta^N exp(-\eta),
+\end{equation}
+%
+and we refer to the likelihood including this factor as the ``extended likelihood''
+%
+\begin{equation}
+\grave{\mathcal{L}}(\vec{x},N;\vec{p},\eta) \equiv P(N,\eta) \cdot \grave{\mathcal{L}}(\vec{x};\vec{p})
+\end{equation}
+%
+
+The aim of the maximum-likelihood method is to find the number of signal and background events in a given data sample that maximises the likelihood function, $\mathcal{L}$:
+%
+\begin{equation}
+\mathcal{L}} =  \frac{e^{-\sum n_j}}{N!} \prod^N_{i=1}\sum^m_{j=1} n_j  \matchcal{P}_j
+\end{equation}
+%
+where $\matchcal{P}_j$ is the total probability for each of the $m$ hypothesis, $n_j$ is the number of events for the $j^{th}$ hypothesis, and $N$ is the total number of input data points. Note that the above expression represents the extended likelihood function, since it contains the relevant Poisson term.  The probabilities $\matchcal{P}_j$ are just the total PDFs that represent the probability of observing an event of type $j$, based on a set of discriminating variables. 
+
+Before doing any fitting, a set of cuts is imposed to the sample.  After the relevant PDFs have been found, they are use to form the likelihood function.  The fit then finds the values of $n_j$, the number of events for each hypothesis $j$.
 
 
-Binned or unbinned MF fit. %Roofit presentation page 112
 
-In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
+%\subsubsection{Fitting and likelihood minimization}
 
-Weights are supported in unbinned datasets. But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
+Performing a fit consists of minimizing the negative log-likelihood of a PDF calculated over a data set
+%
+\begin{equation}
+-\log \mathcal{L} (\vec{p}) = \sum_k F(\vec{x}_k;\vec{p})
+\end{equation}
+%
+with respect to the model's parameters.  The RooFitTools package uses the MINUIT\cite{MINUIT} algorithms to find the minimum of this function and estimate the errors in each parameter.  %fitTo() method returns an interger status code which is non-zero if the fit fails to converge normally.
+%In order to assess the goodness of a fit one can compare the minimum value of the negative log-likelihood function with the expected distribution of values for samples generated according to the fit model (using the Monte Carlo study methods).
 
-\subsubsection{Unbinned fits}
 
-
-\subsubsection{Fitting and likelihood minimization}
-
-What happens when you do pdf->fitTo(*data)?
-
-- Construct object representing -log of (extended) likelihood
-
-- Minimize likelihood w.r.t floating parameters using {\sc MINUIT}. % [REFERENCIAS].
 
 
 
@@ -63,7 +90,7 @@ True fractions derived in {\sc Pythia} simulation as a functin of the jet $\pt$ 
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.9\textwidth]{TrueFractions_NominalPythia.pdf}
+\includegraphics[width=0.7\textwidth]{TrueFractions_NominalPythia.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPt_FIXEDBUGTest_rejvseff080.pdf}
 \caption{Pythia predictions of the fractions of MV1 tagged $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets in a Monte Carlo dijet sample.}
 \label{fig:truefractions}

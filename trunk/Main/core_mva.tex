@@ -44,13 +44,17 @@ Because correlations among the variables are ignored, this PDE approach is also 
 and where $p_{S(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
 
 The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
-by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from the data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
+by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from the data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). 
+The basic idea in the KDE approach is to model the distribution of a sample of events as the sum of individual equal-area Gaussian kernels, $G$, for each event.
+%The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. 
+For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
 %
 \begin{equation}
-p(x) = \frac{1}{N h} \sum^N_{i=i} K(\frac{x-x_i}{h}) = \frac{1}{N} \sum^N_{i=i} K_h(x-x_i),
+p(x) = \frac{1}{N h} \sum^N_{i=i} G(\frac{x-x_i}{h}) = \frac{1}{N} \sum^N_{i=i} G_h(x-x_i),
 \end{equation}
 %
-where $N$ is the number of training events, $K_h(t) = K(t/h)h$ is the kernel function, and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}). For the present implementation a Gaussian form of $K$ is used.  
+where $N$ is the number of training events, $G_h(t) = G(t/h)h$ is the kernel function,  %and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}). %For the present implementation a Gaussian form of $K$ is used.  
+and the extent of each event's contribution, $h$, can be calculated adaptively as a function of the local densitiy of events. $h$ is the bandwidth of the kernel, also termed the \emph{smoothing parameter}.
 
 The smoothness of the kernel density estimate is evident compared to the discreteness of a histogram; kernel density estimates converge faster to the true underlying density for continuous random variables.
 

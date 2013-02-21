@@ -1,3 +1,44 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{KDE}
+{Scott, D.W.}
+\newblock {Multivariate Density Estimation: Theory, Practice, and
+  Visualization}.
+\newblock {\em {John Wiley and Sons, Inc. United States}}, 1992.
+
+\bibitem{QUINLAN1999497}
+{Quinlan, J.R.}
+\newblock Simplifying decision trees.
+\newblock {\em International Journal of Human-Computer Studies}, 51(2):{497 --
+  510}, 1999.
+
+\bibitem{Hocker:2007ht}
+A.~Hoecker, P.~Speckmayer, J.~Stelzer, J.~Therhaag, E.~Von~Toerne, and H.~Voss.
+\newblock {TMVA: Toolkit for Multivariate Data Analysis}.
+\newblock {\em PoS}, ACAT:040, 2007.
+
+\bibitem{chargemultiplicity}
+G.~Aad et~al.
+\newblock {Charged-particle multiplicities in pp interactions measured with the
+  ATLAS detector at the LHC}.
+\newblock {\em New J.Phys.}, 13:053033, 2011.
+
+\bibitem{ATLAS-CONF-2010-009}
+{ATLAS Collaboration}.
+\newblock {Estimating Track Momentum Resolution in Minimum Bias Events using
+  Simulation and $K_s$ in $\sqrt{s}$ = 900 GeV collision data}.
+\newblock {\em ATLAS-CONF-2010-009}, 2010.
+
+\bibitem{JESUncertainty}
+{Aad, G. and others}.
+\newblock {Jet energy measurement with the ATLAS detector in proton-proton
+  collisions at $\sqrt{s} = 7$~TeV}.
+\newblock 2011.
+
+\bibitem{JER2011}
+G.~Romeo, A.~Schwartzman, R.~Piegaia, T.~Carli, and R.~Teuscher.
+\newblock Jet energy resolution from in-situ techniques with the atlas detector
+  using proton-proton collisions at a center of mass energy $\sqrt{s}$ = 7 tev.
+\newblock {\em ATL-COM-PHYS-2011-240}, 2011.
 
 \end{thebibliography}
