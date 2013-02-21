@@ -9,6 +9,22 @@
 \section{Unbinned maximum likelihood fits}\label{sec:LLFits}
 %------------------------------------------------------------------------
 
+
+We measure in our experiments a number of observables $x_i$ and we want to determine one or more parameters $p_i$ from the data, such as the number of signal and background events, for instance. We describe the distribution of our observables by a probability density function (PDF), which is a function of both the observables and the parameters, $F(\vec{x},\vec{p})$. We choose the PDF based on some guess about what function would match the data.
+We vary the parameters to make the PDF match the actual distribution of the observables as well as possible. This is called a ``fitting''.
+
+
+We are familiar with the least-squares fit:
+%
+\begin{itemize}
+\item
+Bin data into a histogram, minimize $\chi^2 = \sum_i (y_i - y_{expected})^2 / \sigma^2_i$
+\item
+For a histogram, $y_i = N_i$, and $\sigma_i=\sqrt{N_i}$ (Poisson statistics in each bin)
+\end{itemize}
+%
+We will use a different technique for fitting, an ``unbinned maximum likelihood fit''.  A least-squares fit mimics a maximum-likelihood fit if the bins are narrow and all bins have many events.  
+
 Weights are supported in unbinned datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
 
 
@@ -22,30 +38,28 @@ MC fits but no number of signal events).
 %\subsubsection{Extended maximum likelihood fits}
 
 The extended version of the maximum likelihood approach adds an extra term
-allowing the estimation of the absolute number of signal/background events.
-
-
-If we want to  determine a parameter corresponding to the expected number of
-events, $\eta$, we should add a factor to the likelihood which describes the probability of observing the actual number of events, $N$, given this parameter. This probability is described by the Poisson distribution
+allowing the estimation of %the absolute number of signal/background events.
+a parameter that represents the number of events in the sample, $N_{exp}$.
+The extra term describes the probability of observing the actual number of events, $N_{obs}$, given this parameter. This probability is described by the Poisson distribution
 %
 \begin{equation}
-P(N,\eta) = \frac{1}{N!} \cdot \eta^N exp(-\eta),
+P(N_{obs},N_{exp}) = \frac{1}{N!} \cdot N_{exp}^{N_{obs}} \cdot exp(-N_{exp}),
 \end{equation}
 %
 and we refer to the likelihood including this factor as the ``extended likelihood''
 %
 \begin{equation}
-\grave{\mathcal{L}}(\vec{x},N;\vec{p},\eta) \equiv P(N,\eta) \cdot \grave{\mathcal{L}}(\vec{x};\vec{p})
+\tilde{\mathcal{L}}(\vec{x},N_{obs};\vec{p},N_{exp}) \equiv P(N_{obs},N_{exp}) \cdot \mathcal{L}(\vec{x};\vec{p})
 \end{equation}
 %
 
 The aim of the maximum-likelihood method is to find the number of signal and background events in a given data sample that maximises the likelihood function, $\mathcal{L}$:
 %
 \begin{equation}
-\mathcal{L}} =  \frac{e^{-\sum n_j}}{N!} \prod^N_{i=1}\sum^m_{j=1} n_j  \matchcal{P}_j
+\mathcal{L} =  \frac{e^{-\sum n_j}}{N!} \prod^N_{i=1}\sum^m_{j=1} n_j  \mathcal{P}_j
 \end{equation}
 %
-where $\matchcal{P}_j$ is the total probability for each of the $m$ hypothesis, $n_j$ is the number of events for the $j^{th}$ hypothesis, and $N$ is the total number of input data points. Note that the above expression represents the extended likelihood function, since it contains the relevant Poisson term.  The probabilities $\matchcal{P}_j$ are just the total PDFs that represent the probability of observing an event of type $j$, based on a set of discriminating variables. 
+where $\mathcal{P}_j$ is the total probability for each of the $m$ hypothesis, $n_j$ is the number of events for the $j^{th}$ hypothesis, and $N$ is the total number of input data points. Note that the above expression represents the extended likelihood function, since it contains the relevant Poisson term.  The probabilities $\mathcal{P}_j$ are just the total PDFs that represent the probability of observing an event of type $j$, based on a set of discriminating variables. 
 
 Before doing any fitting, a set of cuts is imposed to the sample.  After the relevant PDFs have been found, they are use to form the likelihood function.  The fit then finds the values of $n_j$, the number of events for each hypothesis $j$.
 
@@ -63,10 +77,39 @@ with respect to the model's parameters.  The RooFitTools package uses the MINUIT
 %In order to assess the goodness of a fit one can compare the minimum value of the negative log-likelihood function with the expected distribution of values for samples generated according to the fit model (using the Monte Carlo study methods).
 
 
+To increse the chances of proper convergence, it is important to provide reasonable initial estimates for the parameters to be fitted.
 
+%\subsubsection{Model}
 
+Most realistic data description models are sum of multiple components, e.g. signal and background. Mathematically, the sum of two probability density functions is  also a normalized probability density function as  long as the coefficients add up to 1, % (or to the total number of events for an extended maximum likelihood fit),
+%
+\begin{equation}
+M(x) = f_{sig} \cdot S(x) + (1-f_{sig}) \cdot B(x),
+\end{equation}
+%
+or generically for N components:
+%
+\begin{equation}
+S(x) = c_0 \cdot F_0(x) + c_1 \cdot F_1(x)+...+c_{n-1}F_{n-1}(x)+ (1-\sum^{n-1}_{i=1}c_i) F_n(x)
+\end{equation}
+%
+If the sum of these coefficients becomes larger than one, the remainder coefficient will be assigned a negative fraction. As long as the summed p.d.f is greater than zero everywhere, this is not ill-defined. %but may pose some problems in the interpretation
 
+For the extended fit, 
+%
+\begin{equation}
+N_{sig} = f_{sig} \cdot N_{exp}
+\end{equation}
+%
+\begin{equation}
+N_{bkg} = (1-f_{sig}) \cdot N_{exp}
+\end{equation}
+%
+so that the extended ML procedure estimates the number of singal and background events rather than a signal fraction and a total number of events.
+%The uncertainties in the yields reported by the fit will include the statistical (      )                  N                    uncertainty.
 
+Estimated Distance to Minimum
+should be small O(10-6)
 %------------------------------------------------------------------------
 \section{Results}\label{sec:FitsResults}
 %------------------------------------------------------------------------
