@@ -134,9 +134,11 @@ The systematic uncertainties affecting the method are mainly those that change t
 \item
 uncertainty in the track reconstruction efficiency;
 \item
-uncertainty in the jet transverse momentum resolution \bf{TO DO};
+uncertainty in the jet transverse momentum resolution {\bf TO DO};
 \item
 uncertainty in the jet energy scale.
+\item
+heavy flavor fraction.
 %the effect of jet isolation
 %\item
 %other $\Delta R$ cuts for B-labeling and matching
@@ -148,6 +150,9 @@ The systematic uncertainty originating from the jet energy scale is obtained by 
 
 The systematic uncertainty originating from the jet  $\pt$ resolution is obtained by smearing the calorimeter jet $\pt$ in the simulation. The likelihood templates were rederived from this ``smeared'' sample, and the likelihood distribution in data was fit using these altered samples. The difference between the unsmeared and the smeared scenarios is taken as a systematic uncertainty. 
 
+Changing the ratio of merged $c$ to merged $b$ fraction in 20\% only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing that in reality we are measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ ratio.
+
+
 The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. The largest ones arise from the jet energy scale and jet transverse momentum resolution. 
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
@@ -158,6 +163,7 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
   track reconstruction efficiency  &    negligible\%        \\ 
   jet $\pt$ resolution  &    2\%        \\  
   jet energy scale  &    2\%        \\ \hline 
+  flavour fractions  &    negligible        \\ \hline 
 \end{tabular}
 \caption{Systematic uncertainties.}
 \label{tb:systematicsfits}
@@ -165,7 +171,6 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 
 
 
-Changing the fractions merged $c$/merged $b$ in 20\% only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing that in reality we are measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ fraction.
 
 
 %------------------------------------------------------------------------
