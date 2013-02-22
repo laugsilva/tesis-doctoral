@@ -108,27 +108,25 @@ N_{bkg} = (1-f_{sig}) \cdot N_{exp}
 so that the extended ML procedure estimates the number of singal and background events rather than a signal fraction and a total number of events.
 %The uncertainties in the yields reported by the fit will include the statistical (      )                  N                    uncertainty.
 
-Estimated Distance to Minimum
-should be small O(10-6)
+%Estimated Distance to Minimum should be small O(10-6)
+
+
+
 %------------------------------------------------------------------------
 \section{Results}\label{sec:FitsResults}
 %------------------------------------------------------------------------
 
-The likelihood template fits are performed using an unbinned maximum likelihood technique.
-
-The likelihood Monte Carlo templates were derived from the simulated dijet sample described in Section~\ref{sec:analysis}.
-
-Templates of likelihood were constructed for $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light MV1 tagged jets separately, and these were fit to the likelihood distribution in data to obtain the fraction of single $b$, merged $b$, single $c$, merged $c$ and light jets in the data sample.  The fit is done by adjusting the relative constributions of the different templates such that the sum of them best describes the likelihood shape in data. A separate fit was performed for each $\pt$-bin.  The templates were derived from all jets passing the selection criteria defined in Section~\ref{sec:EventSelection}.
 
 
-Different combinations of templates were used to fit the likelihood distribution in data. 
-The sensitivity of the fit to fixing the ratio of the $c$- to $b$-flavour fractions to the value extracted from the simulation was investigated by carrying out separate fits with 5 and 3 free parameters. This was motivated by the fact that templates for single $c$- (merged $c$-)  and single $b$-jets (merged $b$-jets) look very similar leading to inestabilities in the fitted $b$- and $c$-flavour fractions.
-%PARA JUSTIFICAR QUE HACEMOS LOS FITS CON 3 PARAMETROS PODEMOS MOSTRAR LOS HISTOS Y DECIR QUE LAS CORRELACIONES SON MUY GRANDES (PONER NUMEROS). EN ALGUN MOMENTO TENDRA QUE HABER UN C-TAGGER.  EN DIJET TENEMOS SINGLE-C'S, EN TTbar NO HAY C'S, SI HAY MERGED-C PERO ES ALGO QUE QUEREMOS REMOVER DE TODAS MANERAS.
+The likelihood Monte Carlo templates were derived from the simulated dijet sample described in Section~\ref{sec:analysis}, from all jets passing the selection criteria defined in Section~\ref{sec:EventSelection}. Templates of likelihood were constructed for $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light flavoured MV1 tagged jets separately, and these were fit to the likelihood distribution in data in order to obtain the fractions of single $b$, merged $b$, single $c$, merged $c$ and light jets in the data sample. Merged $c$-jets (single $c$-jets) are defined as those jets matching exactly two (only one) ``$D$'' hadrons, the products of the fragmentation of $c$-quarks. A jet is classified as light when it has no $B$ nor $D$ hadron within a cone of 0.4 around its axis.
 
-
-
-
-True fractions derived in {\sc Pythia} simulation as a functin of the jet $\pt$ is shown in Fig.~\ref{fig:truefractions}.
+The likelihood template fits are performed using the unbinned maximum likelihood technique, in its extended version (see Section~\ref{sec:LLFits}). A separate fit is carried out for each $\pt$ bin. Different combinations of templates (``models'' in the following) were used to fit the likelihood distribution in data. The first implemented model uses all five templates,
+%
+\begin{equation}
+F(x) = n_s \cdot S(x) + n_m \cdot M(x) + n_l \cdot L(x) + n_{sc} \cdot S_c(x) + n_{mc} \cdot M_c(x)
+\end{equation}
+%
+with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ the likelihood PDFs for the different hypothesis; and $n_s$, $n_m$, $n_l$, $n_{sc}$ and $n_{mc}$ the free parameters representing the number of expected events for all components: single $b$, merged $b$, light, single $c$ and merged $c$-jets, respectively.  The initial estimates for the parameters were obtained from the {\Pythia} Monte Carlo sample. The fractions derived in {\Pythia}  as a functin of the jet $\pt$ are shown in Fig.~\ref{fig:truefractions}.
 
 
 \begin{figure}[tp]
@@ -140,30 +138,11 @@ True fractions derived in {\sc Pythia} simulation as a functin of the jet $\pt$ 
 \end{figure}
 
 
+The sensitivity of the fit result to fixing the ratio of the single $c$ (merged $c$) fraction, for each $\pt$ bin, and the single $b$ (merged $b$)  one to the value extracted from the simulation was investigated by carrying out separate fits with a model with three free parameters only. This was motivated by the fact that templates for single $c$- (merged $c$-)  and single $b$-jets (merged $b$-jets) look very similar leading to inestabilities in the fitted $b$- and $c$-flavour fractions, caused by the high correlations between these components. 
 
 
-The results of the 3-parameter fits for all bins of $\pt$ are shown in table~\ref{tb:fitfractions}.
+The results of the template fits to the likelihood distribution in data, using the three-parameter model, are shown in table~\ref{tb:fitfractions}. Examples of this set of fits are displayed in Figures~\ref{fig:fittemplates1} and~\ref{fig:fittemplates2}.
 
-The fit results are shown in Figures~\ref{fig:fittemplates1} and~\ref{fig:fittemplates2}.
-
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf}
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf}
-\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.  }
-\label{fig:fittemplates1}
-\end{figure}
-
-
-
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf}
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf}
-\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.}
-\label{fig:fittemplates2}
-\end{figure}
 
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
@@ -184,6 +163,27 @@ The fit results are shown in Figures~\ref{fig:fittemplates1} and~\ref{fig:fittem
 \caption{Measured fractions of single, merged and light $b$-tagged jets in experimental data from 2011 run.}
 \label{tb:fitfractions}
 \end{table}
+
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf}
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf}
+\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.  }
+\label{fig:fittemplates1}
+\end{figure}
+
+
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf}
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf}
+\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.}
+\label{fig:fittemplates2}
+\end{figure}
+
+
 
 
 
