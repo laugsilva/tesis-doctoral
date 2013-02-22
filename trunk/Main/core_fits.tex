@@ -144,7 +144,7 @@ with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ the likelihood PDFs for the d
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.7\textwidth]{TrueFractions_NominalPythia.pdf}
+\includegraphics[width=0.50\textwidth]{TrueFractions_NominalPythia.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_SmearedJetPt_FIXEDBUGTest_rejvseff080.pdf}
 \caption{Pythia predictions of the fractions of MV1 tagged $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets in a Monte Carlo dijet sample.}
 \label{fig:truefractions}
@@ -252,15 +252,34 @@ In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets 
 
 \subsubsection{Purified sample in single $b$-jets}
 
-To help purifying the sample in single $b$-jets we can then use the $b$-tagging information. Jets in data events with exactly two $b$-tags, selected with MV1 tagging algorithm at its 70\% working point, and satisfying the event and jet selection described in Section~\ref{sec:EventSelection} compose the purified data set.  
+To help purifying the sample in single $b$-jets we can then use the $b$-tagging information. Jets in data events with exactly two $b$-tags, selected with MV1 tagging algorithm at its 60\% working point, and satisfying the event and jet selection described in Section~\ref{sec:EventSelection} compose the purified data set.  In order to increase the statistics no requirement on the $\pt$ of the $b$-tagged jets was initially imposed for the event selection. 
 
 Once the enriched sample is obtained, new likelihood fits are performed, for all $\pt$ bin, utilizing the same MC templates as for the nominal data sample in order to evaluate their performance.  
 The fractions of single $b$, merged $b$ and light in recovered, together with their statistical errors and the {\sc Pythia} MC predictions for each $\pt$ bin are displayed in tables~\ref{tb:fitfractions2btagS} to \ref{tb:fitfractions2btagL}.   And, examples of these fits are shown  in  Figures~\ref{fig:fitenriched2btag1} and Figures~\ref{fig:fitenriched2btag2}.  The model fitted to the data agrees well within statistics and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
 
 \subsubsection{Purified sample in merged $b$-jets}
 
+Events with only one $b$-tagged jet were selected for the purification of the data sample in double $b$-hadron jets.  In order to reinforce this selection, a tight anti-b-tagging on any non-tagged jet in the event was implemented.  The anti-b-tagging was performed by imposing, simultaneously, strict cuts on the $b$-tagging weights of the three supported (calibrated) taggers available:
+%
+\begin{itemize}
+\item
+MV1:  $w < 0.07$  
+\item
+JetFitter:  $w < -2$
+\item
+IP3D+SV1:  $w < -2$
+\end{itemize}
+%
+These weight values correspond to a MV1 tagging efficiency of more than 85\%, and an efficiency for $b$-tagging of more than 80\% for the JetFitter and IP3D+SV1 algorithms. 
 
-In order to enrich our data sample in merged $b$-jets (reduce the amount of single $b$- and $c$-jets)
+The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, ver little enrichment was achieved with this kind of selection. 
+
+In order to understand this behavior an additional selection was applied: $b$-tagged jets were required to be back-to-back.   %DeltaPhi and DeltaR distributions peak at $\sim \pi$.  
+\emph{Most of the $b$-tagged jets are back-to-back. Three topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light.  In 90\% of the cases the second jet is a light jet; consecuently, $b$-jets arising from FEX process constitute the irreducible background for selecting merged $b$-jets. Very little enrichment can be attained.}
+
+ 
+ 
+
 
 
 

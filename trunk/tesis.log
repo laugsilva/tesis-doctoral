@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  22 FEB 2013 18:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  22 FEB 2013 20:04
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -204,28 +204,28 @@ LaTeX Warning: Reference `sec:EventSelection' on page 6 undefined on input line
 <TrueFractions_NominalPythia.pdf, id=64, 569.12625pt x 549.05125pt>
 File: TrueFractions_NominalPythia.pdf Graphic file (type pdf)
 
-<use TrueFractions_NominalPythia.pdf> [6] [7 <./TrueFractions_NominalPythia.pdf
-, page is rotated 90 degrees>]
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf, id=115, 569.12625pt x 480.796
-25pt>
+<use TrueFractions_NominalPythia.pdf> [6]
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf, id=69, 569.12625pt x 480.7962
+5pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf Graphic file (type pdf)
  <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf, id=116, 569.12625pt x 480.796
-25pt>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf, id=70, 569.12625pt x 480.7962
+5pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf Graphic file (type pdf)
  <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf, id=117, 569.12625pt x 480.796
-25pt>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf, id=71, 569.12625pt x 480.7962
+5pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf Graphic file (type pdf)
  <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf, id=118, 569.12625pt x 480.796
-25pt>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf, id=72, 569.12625pt x 480.7962
+5pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf Graphic file (type pdf)
- <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf> [8] [9 <./FIGS/Fits/Like
-lihoodFit_3param_ETAFull_Bin1.pdf, page is rotated 90 degrees> <./FIGS/Fits/Lik
-elihoodFit_3param_ETAFull_Bin2.pdf, page is rotated 90 degrees>] [10 <./FIGS/Fi
-ts/LikelihoodFit_3param_ETAFull_Bin5.pdf, page is rotated 90 degrees> <./FIGS/F
-its/LikelihoodFit_3param_ETAFull_Bin6.pdf, page is rotated 90 degrees>]
+ <use FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf> [7 <./TrueFractions_Nomi
+nalPythia.pdf, page is rotated 90 degrees>] [8 <./FIGS/Fits/LikelihoodFit_3para
+m_ETAFull_Bin1.pdf, page is rotated 90 degrees> <./FIGS/Fits/LikelihoodFit_3par
+am_ETAFull_Bin2.pdf, page is rotated 90 degrees>] [9 <./FIGS/Fits/LikelihoodFit
+_3param_ETAFull_Bin5.pdf, page is rotated 90 degrees> <./FIGS/Fits/LikelihoodFi
+t_3param_ETAFull_Bin6.pdf, page is rotated 90 degrees>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 208.
 
 
@@ -236,60 +236,60 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 208.
 
 
-LaTeX Warning: Reference `sec:gbbSystematics' on page 11 undefined on input lin
+LaTeX Warning: Reference `sec:gbbSystematics' on page 10 undefined on input lin
 e 218.
 
+[10]
 
 LaTeX Warning: Reference `sec:gbbSystematics' on page 11 undefined on input lin
 e 222.
 
-[11] [12]
+[11]
 
-LaTeX Warning: Reference `sec:EventSelection' on page 13 undefined on input lin
+LaTeX Warning: Reference `sec:EventSelection' on page 12 undefined on input lin
 e 255.
 
-
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf, id=307, 569
+[12] [13]
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf, id=310, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf, id=308, 569
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf, id=311, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf>
 
-LaTeX Warning: Float too large for page by 13.11313pt on input line 276.
+LaTeX Warning: Float too large for page by 13.11313pt on input line 295.
 
 
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf, id=309, 569
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf, id=312, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, id=310, 569
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, id=313, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf>
 
-LaTeX Warning: Float too large for page by 13.11313pt on input line 286.
+LaTeX Warning: Float too large for page by 13.11313pt on input line 305.
 
-) [13] [14 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf
+) [14] [15 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf
 , page is rotated 90 degrees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnr
-iched2btag_Bin2.pdf, page is rotated 90 degrees>] [15 <./FIGS/Fits/LikelihoodFi
+iched2btag_Bin2.pdf, page is rotated 90 degrees>] [16 <./FIGS/Fits/LikelihoodFi
 t_3param_ETAFull_DataEnriched2btag_Bin5.pdf, page is rotated 90 degrees> <./FIG
 S/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, page is rotated
- 90 degrees>] [16] [17] [18] (./tesis.bbl) [19
+ 90 degrees>] [17] [18] (./tesis.bbl) [19
 
 
-] (./tesis.aux
-(./Main/core_fits.aux))
+] (./tesis.aux (./Main/core_fits.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -297,7 +297,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  1927 strings out of 495061
  24230 string characters out of 1182621
- 87483 words of memory out of 3000000
+ 85482 words of memory out of 3000000
  5077 multiletter control sequences out of 15000+50000
  26963 words of font info for 64 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -324,9 +324,9 @@ nts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on tesis.pdf (24 pages, 468989 bytes).
+Output written on tesis.pdf (24 pages, 479797 bytes).
 PDF statistics:
- 963 PDF objects out of 1000 (max. 8388607)
+ 986 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
