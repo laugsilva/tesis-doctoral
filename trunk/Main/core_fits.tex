@@ -9,41 +9,67 @@
 \section{Unbinned maximum likelihood fits}\label{sec:LLFits}
 %------------------------------------------------------------------------
 
-
-We measure in our experiments a number of observables $x_i$ and we want to determine one or more parameters $p_i$ from the data, such as the number of signal and background events, for instance. We describe the distribution of our observables by a probability density function (PDF), which is a function of both the observables and the parameters, $F(\vec{x},\vec{p})$. We choose the PDF based on some guess about what function would match the data.
-We vary the parameters to make the PDF match the actual distribution of the observables as well as possible. This is called a ``fitting''.
+The analysis of experimental data often involves the estimation of the composition of a sample, based on Monte Carlo simulations of the various sources.We measure a number of observables $x_i$ and we want to determine one or more parameters $p_i$ from the data, such as the number of signal and background events. The distribution  of the observables is described by a probability density function (PDF), which is a function of both the observables and the parameters, $F(\vec{x},\vec{p})$.  We choose the PDF based on some guess about what function would match the data, and vary the parameters in order to make the PDF match the distribution of the observables as well as possible. 
 
 
-We are familiar with the least-squares fit:
+In the case of binned data into a histogram, one approch is to use a least-squares fitting technique to estimate the parameters. They are adjust to minimize
 %
-\begin{itemize}
-\item
-Bin data into a histogram, minimize $\chi^2 = \sum_i (y_i - y_{expected})^2 / \sigma^2_i$
-\item
-For a histogram, $y_i = N_i$, and $\sigma_i=\sqrt{N_i}$ (Poisson statistics in each bin)
-\end{itemize}
+\begin{equation}
+\chi^2 = \sum_i \frac{(d_i - f_i)^2}{d_i}
+ \label{eq:chi2}
+\end{equation}
 %
-We will use a different technique for fitting, an ``unbinned maximum likelihood fit''.  A least-squares fit mimics a maximum-likelihood fit if the bins are narrow and all bins have many events.  
+where $d_i$ is the number of events in the real data that fall into bin $i$, and $f_i$ the predicted number of events in bin $i$, defined by
+%
+\begin{equation}
+f_i = \sum^m_{j=1} p_j \cdot a_{ji}
+\end{equation}
+%
+with $p_j$ the proportions of the different $m$ sources, normalized to the total number of events in the data and $a_{ij}$ the number of Monte Carlo events from source $j$ in bin $i$, with $i=1,2,...,n$.
 
-Weights are supported in unbinned datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
+This $\chi^2$ assumes that the distribution for $d_i$ is Gaussian; it is of course Poisson, but the Gaussian is a good approximation to the Poisson for large numbers. Unfortunately it often happens that many of the $d_i$ are small, making the $\chi^2$ value given in Equation~\ref{eq:chi2} inappropiate to describe the problem.  Instead one can go back to the original Poisson distribution, and write down the probability for observing a particular $d_i$ as
+%
+\begin{equation}
+e^{f_i} \frac{f_i^{d_i}}{d_i!} 
+\end{equation}
+%
+and the estimates of the proportions $p_j$ are found by maximizing the total likelihood, 
+%
+\begin{equation}
+\mathcal{L} = \prod^n_{i=1} e^{f_i} \frac{f_i^{d_i}}{d_i!}.
+\end{equation}
+%
+This accounts correctly for the small numbers of data events in the bins.  It is often referred to as a ``binned maximum likelihood'' fit\footnote{This formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exist, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. }.
 
 
+The binned maximum likelihood fits is a technique in general use. Unfortunately  this method does not behave well in problems where it is necessary to apply weights to the Monte Carlo, such as in our composite dijet sample. We will use instead a different technique for fitting, an ``unbinned maximum likelihood fit'', which does support weighted datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
 %Binned or unbinned MF fit. %Roofit presentation page 112
 %In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
 
-Maximum likelihood (ML) information only parametrizes the shape of a 
-distribution (i.e. one can determine fraction of signal events from 
-MC fits but no number of signal events).
+The likelihood to be maximize in an unbinned dataset of events $\{x_k\}^N_{k=1}$ is
+%
+\begin{equation}
+\tilde{\mathcal{L}}(\vec{x};\vec{p}) =\prod^N_{k=1} F(\vec{x};\vec{p})
+\end{equation}
+%
+which, can be rewritten in terms of the probability of observing an event from source $j$ in the sample,
+%
+\begin{equation}
+\mathcal{L} =  \prod^N_{k=1} \sum^m_{j=1} n_j  \mathcal{P}_j
+\end{equation}
+%
+where $\mathcal{P}_j$ are the PDFs that represent the total probability for each of the $m$ hypothesis, $n_j$ is the number of events for the $j^{th}$ hypothesis, and $N$ is the total number of input data points.
 
 %\subsubsection{Extended maximum likelihood fits}
 
+Maximum likelihood information only parametrizes the shape of a distribution; that is, one can determine fraction of signal events from MC fits but no number of signal events.
 The extended version of the maximum likelihood approach adds an extra term
 allowing the estimation of %the absolute number of signal/background events.
 a parameter that represents the number of events in the sample, $N_{exp}$.
 The extra term describes the probability of observing the actual number of events, $N_{obs}$, given this parameter. This probability is described by the Poisson distribution
 %
 \begin{equation}
-P(N_{obs},N_{exp}) = \frac{1}{N!} \cdot N_{exp}^{N_{obs}} \cdot exp(-N_{exp}),
+P(N_{obs},N_{exp}) \sim  N_{exp}^{N_{obs}} \cdot e^{-N_{exp}},
 \end{equation}
 %
 and we refer to the likelihood including this factor as the ``extended likelihood''
@@ -52,22 +78,10 @@ and we refer to the likelihood including this factor as the ``extended likelihoo
 \tilde{\mathcal{L}}(\vec{x},N_{obs};\vec{p},N_{exp}) \equiv P(N_{obs},N_{exp}) \cdot \mathcal{L}(\vec{x};\vec{p})
 \end{equation}
 %
-
-The aim of the maximum-likelihood method is to find the number of signal and background events in a given data sample that maximises the likelihood function, $\mathcal{L}$:
-%
-\begin{equation}
-\mathcal{L} =  \frac{e^{-\sum n_j}}{N!} \prod^N_{i=1}\sum^m_{j=1} n_j  \mathcal{P}_j
-\end{equation}
-%
-where $\mathcal{P}_j$ is the total probability for each of the $m$ hypothesis, $n_j$ is the number of events for the $j^{th}$ hypothesis, and $N$ is the total number of input data points. Note that the above expression represents the extended likelihood function, since it contains the relevant Poisson term.  The probabilities $\mathcal{P}_j$ are just the total PDFs that represent the probability of observing an event of type $j$, based on a set of discriminating variables. 
-
-Before doing any fitting, a set of cuts is imposed to the sample.  After the relevant PDFs have been found, they are use to form the likelihood function.  The fit then finds the values of $n_j$, the number of events for each hypothesis $j$.
+The fit then finds the values of $n_j$, the number of events for each hypothesis $j$. 
 
 
-
-%\subsubsection{Fitting and likelihood minimization}
-
-Performing a fit consists of minimizing the negative log-likelihood of a PDF calculated over a data set
+The fits were performed in this thesis by means of the RooFit Toolkit for data modelling~\cite{RooFit}. Performing a fit consists of minimizing the negative log-likelihood of a PDF calculated over the data set  (for simplicity we drop for a moment the extra term)
 %
 \begin{equation}
 -\log \mathcal{L} (\vec{p}) = \sum_k F(\vec{x}_k;\vec{p})
@@ -75,13 +89,12 @@ Performing a fit consists of minimizing the negative log-likelihood of a PDF cal
 %
 with respect to the model's parameters.  The RooFitTools package uses the MINUIT\cite{MINUIT} algorithms to find the minimum of this function and estimate the errors in each parameter.  %fitTo() method returns an interger status code which is non-zero if the fit fails to converge normally.
 %In order to assess the goodness of a fit one can compare the minimum value of the negative log-likelihood function with the expected distribution of values for samples generated according to the fit model (using the Monte Carlo study methods).
-
-
 To increse the chances of proper convergence, it is important to provide reasonable initial estimates for the parameters to be fitted.
+
 
 %\subsubsection{Model}
 
-Most realistic data description models are sum of multiple components, e.g. signal and background. Mathematically, the sum of two probability density functions is  also a normalized probability density function as  long as the coefficients add up to 1, % (or to the total number of events for an extended maximum likelihood fit),
+Most realistic data description models are sum of multiple components. Mathematically, the sum of two probability density functions is  also a normalized probability density function as  long as the coefficients add up to 1, % (or to the total number of events for an extended maximum likelihood fit),
 %
 \begin{equation}
 M(x) = f_{sig} \cdot S(x) + (1-f_{sig}) \cdot B(x),
@@ -95,7 +108,7 @@ S(x) = c_0 \cdot F_0(x) + c_1 \cdot F_1(x)+...+c_{n-1}F_{n-1}(x)+ (1-\sum^{n-1}_
 %
 If the sum of these coefficients becomes larger than one, the remainder coefficient will be assigned a negative fraction. As long as the summed p.d.f is greater than zero everywhere, this is not ill-defined. %but may pose some problems in the interpretation
 
-For the extended fit, 
+For the extended fit (for simplicity we take the example of signal and backgrond PDFs), 
 %
 \begin{equation}
 N_{sig} = f_{sig} \cdot N_{exp}
@@ -113,7 +126,7 @@ so that the extended ML procedure estimates the number of singal and background 
 
 
 %------------------------------------------------------------------------
-\section{Results}\label{sec:FitsResults}
+\section{Fitting MC templates to data}\label{sec:FitsResults}
 %------------------------------------------------------------------------
 
 
