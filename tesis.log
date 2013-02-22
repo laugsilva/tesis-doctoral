@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  22 FEB 2013 10:16
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  22 FEB 2013 18:09
 entering extended mode
  %&-line parsing enabled.
 **tesis
 (./tesis.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size12.clo
@@ -49,7 +43,7 @@ File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
@@ -249,44 +243,49 @@ e 218.
 LaTeX Warning: Reference `sec:gbbSystematics' on page 11 undefined on input lin
 e 222.
 
-[11]
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf, id=304, 569
+[11] [12]
+
+LaTeX Warning: Reference `sec:EventSelection' on page 13 undefined on input lin
+e 255.
+
+
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf, id=307, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf, id=305, 569
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf, id=308, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf>
 
-LaTeX Warning: Float too large for page by 13.11313pt on input line 268.
+LaTeX Warning: Float too large for page by 13.11313pt on input line 276.
 
 
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf, id=306, 569
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf, id=309, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, id=307, 569
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, id=310, 569
 .12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf Graphic
  file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf>
 
-LaTeX Warning: Float too large for page by 13.11313pt on input line 278.
+LaTeX Warning: Float too large for page by 13.11313pt on input line 286.
 
-) [12] [13 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf
+) [13] [14 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf
 , page is rotated 90 degrees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnr
-iched2btag_Bin2.pdf, page is rotated 90 degrees>] [14 <./FIGS/Fits/LikelihoodFi
+iched2btag_Bin2.pdf, page is rotated 90 degrees>] [15 <./FIGS/Fits/LikelihoodFi
 t_3param_ETAFull_DataEnriched2btag_Bin5.pdf, page is rotated 90 degrees> <./FIG
 S/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf, page is rotated
- 90 degrees>] [15] [16] [17] (./tesis.bbl) [18
+ 90 degrees>] [16] [17] [18] (./tesis.bbl) [19
 
 
 ] (./tesis.aux
@@ -296,37 +295,38 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1930 strings out of 493848
- 24283 string characters out of 1152822
- 88732 words of memory out of 3000000
- 5179 multiletter control sequences out of 15000+50000
+ 1927 strings out of 495061
+ 24230 string characters out of 1182621
+ 87483 words of memory out of 3000000
+ 5077 multiletter control sequences out of 15000+50000
  26963 words of font info for 64 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 28 hyphenation exceptions out of 8191
  27i,13n,21p,1494b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
-are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1440.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesis.pdf (23 pages, 539499 bytes).
+ </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/l
+augs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/laugs/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/laugs/.texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecbx1728.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecbx2488.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.60
+0pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home
+/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/laugs/.tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbi1440.600pk> </home/laugs/.texmf-var/font
+s/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecrm1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx1200.600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.
+600pk> </home/laugs/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on tesis.pdf (24 pages, 468989 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
+ 963 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
