@@ -126,7 +126,7 @@ The likelihood template fits are performed using the unbinned maximum likelihood
 F(x) = n_s \cdot S(x) + n_m \cdot M(x) + n_l \cdot L(x) + n_{sc} \cdot S_c(x) + n_{mc} \cdot M_c(x)
 \end{equation}
 %
-with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ the likelihood PDFs for the different hypothesis; and $n_s$, $n_m$, $n_l$, $n_{sc}$ and $n_{mc}$ the free parameters representing the number of expected events for all components: single $b$, merged $b$, light, single $c$ and merged $c$-jets, respectively.  The initial estimates for the parameters were obtained from the {\Pythia} Monte Carlo sample. The fractions derived in {\Pythia}  as a functin of the jet $\pt$ are shown in Fig.~\ref{fig:truefractions}.
+with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ the likelihood PDFs for the different hypothesis; and $n_s$, $n_m$, $n_l$, $n_{sc}$ and $n_{mc}$ the free parameters representing the number of expected events for all components: single $b$, merged $b$, light, single $c$ and merged $c$-jets, respectively.  The initial estimates for the parameters were obtained from the {\sc Pythia} Monte Carlo sample. The fractions derived in {\sc Pythia}  as a function of the jet $\pt$ are shown in Fig.~\ref{fig:truefractions}.
 
 
 \begin{figure}[tp]
@@ -150,7 +150,7 @@ The results of the template fits to the likelihood distribution in data, using t
 \begin{tabular}{ | c || c | c || c | c || c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{2}{c||}{single $b$-jet} & \multicolumn{2}{c||}{merged $b$-jet} & \multicolumn{2}{c||}{~light jet~}\\ \cline{2-7}
-    (GeV ) & fit result & ~stat.err. & fit result & ~stat.err. & fit result & ~stat.err.\\ \hline
+    (GeV ) & ~~~$n_s$~~~~ & stat.err. & ~~~$n_m$~~~~ & stat.err.& ~~~$n_l$~~~~ & stat.err.\\ \hline
    40 - 60 &  62\% &  3\%  &  ~~3\%  &  ~~1\% &  ~4\%  &  4\%   \\ 
    60 - 80 &  62\% &  1\%  &  5.2\%  &  0.4\% &  ~2\%  &  2\%   \\ 
    80 - 110&  57\% &  1\%  &  8.5\%  &  0.4\% &  ~3\%  &  2\%   \\ 
@@ -184,19 +184,9 @@ The results of the template fits to the likelihood distribution in data, using t
 \end{figure}
 
 
-
-
-
-
-
-
-
 %------------------------------------------------------------------------
 \section{Systematic uncertainties}\label{sec:FractionSystematics}
 %------------------------------------------------------------------------
-
-
-
 
 The systematic uncertainties affecting the method are mainly those that change the shape of the likelihood tamplates used to fit the sample composition. The following contributions were evaluated:
 
@@ -204,26 +194,23 @@ The systematic uncertainties affecting the method are mainly those that change t
 \item
 uncertainty in the track reconstruction efficiency;
 \item
-uncertainty in the jet transverse momentum resolution {\bf TO DO};
+uncertainty in the jet transverse momentum resolution 
 \item
 uncertainty in the jet energy scale.
 \item
-heavy flavor fraction.
-%the effect of jet isolation
-%\item
-%other $\Delta R$ cuts for B-labeling and matching
+uncertainty in the heavy flavor fraction
 \end{itemize}
 
 
-The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation, according to the uncertainty of the jet energy scale (see Section~\ref{sec:gbbSystematics}), and redoing the likelihood fits on data with the modified $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light templates.
-
+In order to calculate the contribution to the total systematic uncertainty from the the uncertainty in the track reconstruction efficiency the procedure described in Section~\ref{sec:gbbSystematics} was followed. New likelihood tamplates were produced and new fits performed. 
 
 The systematic uncertainty originating from the jet  $\pt$ resolution is obtained by smearing the calorimeter jet $\pt$ in the simulation. The likelihood templates were rederived from this ``smeared'' sample, and the likelihood distribution in data was fit using these altered samples. The difference between the unsmeared and the smeared scenarios is taken as a systematic uncertainty. 
 
-Changing the ratio of merged $c$ to merged $b$ fraction in 20\% only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing that in reality we are measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ ratio.
+The uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation, according to the uncertainty of the jet energy scale (see Section~\ref{sec:gbbSystematics}), and redoing the likelihood fits on data with the modified $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light templates.
 
+The impact of the uncertainty in the knowledge of the flavour fractions in the simulation was evaluated by changing the ratio of merged $c$ to merged $b$ fraction 20\%. This variation only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing, that, although a separate value for the $b$- and $c$-flavoured components can be obtained, we are,  in reality, measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ ratio.
 
-The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. The largest ones arise from the jet energy scale and jet transverse momentum resolution. 
+The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. The largest ones arise from the jet energy scale and jet transverse momentum resolution.
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
 \centering
@@ -232,13 +219,12 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
   ~~~~~~~Systematic source~~~~~~~ &~~Uncertainty~~\\ \hline
   track reconstruction efficiency  &    negligible\%        \\ 
   jet $\pt$ resolution  &    2\%        \\  
-  jet energy scale  &    2\%        \\ \hline 
-  flavour fractions  &    negligible        \\ \hline 
+  jet energy scale  &    2\%        \\ 
+  heavy flavour fraction  &    negligible        \\ \hline 
 \end{tabular}
 \caption{Systematic uncertainties.}
 \label{tb:systematicsfits}
 \end{table}
-
 
 
 
