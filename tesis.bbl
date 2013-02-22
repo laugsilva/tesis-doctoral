@@ -1,3 +1,13 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Barlow1993219}
+Roger Barlow and Christine Beeston.
+\newblock Fitting using finite monte carlo samples.
+\newblock {\em Computer Physics Communications}, 77(2):219 -- 228, 1993.
+
+\bibitem{RooFit}
+W~Verkerke and D.~Kirby.
+\newblock Roofit users manual v2.07.
+\newblock 2006.
 
 \end{thebibliography}
