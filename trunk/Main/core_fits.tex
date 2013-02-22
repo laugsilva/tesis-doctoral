@@ -12,7 +12,7 @@
 The analysis of experimental data often involves the estimation of the composition of a sample, based on Monte Carlo simulations of the various sources.We measure a number of observables $x_i$ and we want to determine one or more parameters $p_i$ from the data, such as the number of signal and background events. The distribution  of the observables is described by a probability density function (PDF), which is a function of both the observables and the parameters, $F(\vec{x},\vec{p})$.  We choose the PDF based on some guess about what function would match the data, and vary the parameters in order to make the PDF match the distribution of the observables as well as possible. 
 
 
-In the case of binned data into a histogram, one approch is to use a least-squares fitting technique to estimate the parameters. They are adjust to minimize
+In the case of binned data into a histogram, one approach is to use a least-squares fitting technique to estimate the parameters. They are adjust to minimize
 %
 \begin{equation}
 \chi^2 = \sum_i \frac{(d_i - f_i)^2}{d_i}
@@ -39,7 +39,7 @@ and the estimates of the proportions $p_j$ are found by maximizing the total lik
 \mathcal{L} = \prod^n_{i=1} e^{f_i} \frac{f_i^{d_i}}{d_i!}.
 \end{equation}
 %
-This accounts correctly for the small numbers of data events in the bins.  It is often referred to as a ``binned maximum likelihood'' fit\footnote{This formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exist, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. }.
+This accounts correctly for the small numbers of data events in the bins.  It is often referred to as a ``binned maximum likelihood'' fit\footnote{This formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exists, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. }.
 
 
 The binned maximum likelihood fits is a technique in general use. Unfortunately  this method does not behave well in problems where it is necessary to apply weights to the Monte Carlo, such as in our composite dijet sample. We will use instead a different technique for fitting, an ``unbinned maximum likelihood fit'', which does support weighted datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
@@ -230,7 +230,7 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 \begin{tabular}{ | c | c |}
 \hline
   ~~~~~~~Systematic source~~~~~~~ &~~Uncertainty~~\\ \hline
-  track reconstruction efficiency  &    negligible\%        \\ 
+  track reconstruction efficiency  &    negligible        \\ 
   jet $\pt$ resolution  &    2\%        \\  
   jet energy scale  &    2\%        \\ 
   heavy flavour fraction  &    negligible        \\ \hline 
@@ -246,17 +246,25 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 \section{Enriched samples in single and merged $b$-jets}\label{sec:Enriched}
 %------------------------------------------------------------------------
 
-\subsubsection{Enriched sample in merged $b$-jets}
+The data sample employed in the analysis is $\sim$50\% pured sample in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
+
+In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets are produced mainly via the FCR and FEX processes, while merged $b$-jets are produced 95\% of the time by a gluon splitting into a $b\bar{b}$ pair. In the FCR process two single $b$-quarks are produced in the hard scatter, which lead to two back-to-back $b$-jets. Succesfully tagging these events is a way to construct a sample enriched in single $b$-jets.  On the other hand, events with only one $b$-jet can be produced either in the FEX process, with only one $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. These two scenarios are more difficult to disentangle and will require further selection cuts to be applied.
+
+\subsubsection{Purified sample in single $b$-jets}
+
+To help purifying the sample in single $b$-jets we can then use the $b$-tagging information. Jets in data events with exactly two $b$-tags, selected with MV1 tagging algorithm at its 70\% working point, and satisfying the event and jet selection described in Section~\ref{sec:EventSelection} compose the purified data set.  
+
+Once the enriched sample is obtained, new likelihood fits are performed, for all $\pt$ bin, utilizing the same MC templates as for the nominal data sample in order to evaluate their performance.  
+The fractions of single $b$, merged $b$ and light in recovered, together with their statistical errors and the {\sc Pythia} MC predictions for each $\pt$ bin are displayed in tables~\ref{tb:fitfractions2btagS} to \ref{tb:fitfractions2btagL}.   And, examples of these fits are shown  in  Figures~\ref{fig:fitenriched2btag1} and Figures~\ref{fig:fitenriched2btag2}.  The model fitted to the data agrees well within statistics and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
+
+\subsubsection{Purified sample in merged $b$-jets}
+
+
+In order to enrich our data sample in merged $b$-jets (reduce the amount of single $b$- and $c$-jets)
 
 
 
-\subsubsection{Enriched sample in single $b$-jets}
 
-The results of performing the fits on an data sample enriched in single $b$-jets is shown in tables~\ref{tb:fitfractions2btagS} to ~\ref{tb:fitfractions2btagL}. The model fitted to the data agrees well within statistics %THE TEMPLATES WORK WELL!
-and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level o of enrichment.  % (PODRIAMOS DECIR QUE LA FRACCION DE FLAVOR CREATION ESTA BIEN SIMULADA POR PYTHIA)
-
-
-The fit results are shown in Figures~\ref{fig:fitenriched2btag1} and Figures~\ref{fig:fitenriched2btag2}.
 
 
 \begin{figure}[tp]

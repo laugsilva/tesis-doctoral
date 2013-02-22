@@ -3,5 +3,5 @@
 \contentsline {section}{\numberline {1.2}Fitting MC templates to data}{6}
 \contentsline {section}{\numberline {1.3}Systematic uncertainties}{11}
 \contentsline {section}{\numberline {1.4}Enriched samples in single and merged $b$-jets}{12}
-\contentsline {subsubsection}{Enriched sample in merged $b$-jets}{12}
-\contentsline {subsubsection}{Enriched sample in single $b$-jets}{12}
+\contentsline {subsubsection}{Purified sample in single $b$-jets}{13}
+\contentsline {subsubsection}{Purified sample in merged $b$-jets}{13}
