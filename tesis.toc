@@ -1,7 +1,6 @@
-\contentsline {chapter}{\numberline {1}Fraction of double $b$-hadron jets in data}{2}
-\contentsline {section}{\numberline {1.1}Unbinned maximum likelihood fits}{2}
-\contentsline {section}{\numberline {1.2}Fitting MC templates to data}{6}
-\contentsline {section}{\numberline {1.3}Systematic uncertainties}{7}
-\contentsline {section}{\numberline {1.4}Enriched samples in single and merged $b$-jets}{12}
-\contentsline {subsubsection}{Purified sample in single $b$-jets}{12}
-\contentsline {subsubsection}{Purified sample in merged $b$-jets}{13}
+\contentsline {chapter}{\numberline {1}The Multivariate Analysis}{2}
+\contentsline {section}{\numberline {1.1}Multivariate methods}{2}
+\contentsline {subsubsection}{Training and testing the MVA methods}{7}
+\contentsline {section}{\numberline {1.2}Likelihood training and performance}{9}
+\contentsline {section}{\numberline {1.3}Systematic uncertainties}{13}
+\contentsline {section}{\numberline {1.4}Other Monte Carlo generators}{21}

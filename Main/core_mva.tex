@@ -40,24 +40,52 @@ In the case of poorly correlated variables, the likelihood for being of signal t
 L_{S(B)}(i) = \prod^{n_{var}}_{k=1}  p_{S(B),k}(x_k(i)),
 \end{equation}
 %
-Because correlations among the variables are ignored, this PDE approach is also called “naive Bayes estimator”.
+%Because correlations among the variables are ignored, this PDE approach is also called “naive Bayes estimator”.
 and where $p_{S(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th input variable $x_k$. All the PDFs are normalized to one. 
 
 The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
 by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from the data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). 
 The basic idea in the KDE approach is to model the distribution of a sample of events as the sum of individual equal-area Gaussian kernels, $G$, for each event.
 %The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. 
-For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE}. 
+For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE},
 %
 \begin{equation}
 p(x) = \frac{1}{N h} \sum^N_{i=i} G(\frac{x-x_i}{h}) = \frac{1}{N} \sum^N_{i=i} G_h(x-x_i),
 \end{equation}
 %
 where $N$ is the number of training events, $G_h(t) = G(t/h)h$ is the kernel function,  %and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}). %For the present implementation a Gaussian form of $K$ is used.  
-and the extent of each event's contribution, $h$, can be calculated adaptively as a function of the local densitiy of events. $h$ is the bandwidth of the kernel, also termed the \emph{smoothing parameter}.
+and the extent of each event's contribution, $h$, can be kept constant for the entire training sample or be calculated adaptively as a function of the local densitiy of events. $h$ is termed the ``bandwidth'' of the kernel or, also, the ``smoothing parameter''.  The non-adaptive (NA) bandwidth, for a Gaussian kernel function, takes the form of
+%
+\begin{equation}
+h_{\mbox{\small{NA}}} = (\frac{4}{3})^{1/5} \sigma_x N^{-1/5}
+\end{equation}
+%
+where $\sigma_x$ is the RMS of the variable $x$. The adaptive (A) approach uses as input the result of the non-adaptive KDE, but also takes into account the local event density.  The adaptive bandwidth $h_{\mbox{A}}$ then becomes a function of $p(x)$
+%
+\begin{equation}
+h_{\mbox{\small{A}}} = \frac{h_{\mbox{\small{NA}}}}{\sqrt{p(x)}}.
+\end{equation}
+%
+The adaptive approach improves the shape estimation in regions with low event density.
+
+Instead of unbinned training data, the KDE approach we implemented uses a finely-binned histogram as input, which allows to significantly speed up the algorithm. The calculation of the optimal bandwidth is the first step. Subsequently, the smothed high-binned histogram estimating the PDF shape is created by looping over the bins of the input histogram and summing up the corresponding kernel functions using $h_{\mbox{\small{A}}}$ ($h_{\mbox{\small{NA}}}$) in de case of the non-adaptive (adaptive) mode. This output is the final estimate for the PDF. 
 
 The smoothness of the kernel density estimate is evident compared to the discreteness of a histogram; kernel density estimates converge faster to the true underlying density for continuous random variables.
 
+
+A generalization of the LLR estimator to $n_{var}$ dimensions, where $n_{var}$ is the number of input variables, exist in the theory today.  If the multidimensional PDF for a signal and background were known, this classfier would exploit the full information contained in the input variables, and would hence be optimal. In practice however, huge training samples are necessary to sufficiently populate the phase space\footnote{Due to correlations between the input variables, only a sub-space of the full phase space may be populated.}. Kernel estimation methods may be used to approximate the shape of the PDF for finite training samples. 
+
+A simple probability density estimator denoted as Projective likelihood estimator \emph{range search}, or PDE-RS, has been suggested in Ref.~\cite{Carli:2002jp}. The PDE for a given test event is obtained by counting the number of training events that occur in the ``vecinity'' of the test event. The classification of the test event as being either signal or background type can be conducted %on the basis of the majority of the nearest training events. 
+by a local estimate of the probability density of it belonging to either class.
+The $n_{var}$-dimensional volume that encloses the ``vecinity'' is user-defined and  %can be 
+adaptive: the volume is defined in each dimension with respect to the RMS of that dimension, estimated from the training sample. Although the adaptive volume adjustment is flexible and should perform better, it significantly increases the computing time of the PDE-RS discriminant.
+
+One of the shortcomings of the original PDE-RS implementation is its sensitivity to the exact
+location of the sampling volume boundaries: an infinitesimal change in the boundary placement
+can include or exclude a training event. Kernel functions mitigate these problems by weighting each event within the volume as a function of its distance to the test event. 
+
+PDE-RS can yield competitive performance if the number of input variables is
+not too large and the statistics of the training sample is ample; on the other hand, it is a slowly responding classifier.
 
 %From TMVA Users Guide
 An artificial Neural Network (NN) is a nonlinear discriminant. It is, most generally speaking, a simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function.  % $\rho$.  
@@ -70,7 +98,7 @@ While in principle a neural network with $n$ neurons can have $n^2$ directional 
 %Decision trees % (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. 
 %are classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
 % However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
-A decision tree (BDT) is a binary tree structured classifier similar to the one sketched in Fig.~\ref{fig:BDTsketch}. 
+A decision tree  is a binary tree structured classifier similar to the one sketched in Fig.~\ref{fig:BDTsketch}. 
 Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final \emph{leaf} node. The boosting of a decision tree extends this concept from one tree to several trees which form a \emph{forest}.
 Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree~\cite{QUINLAN1999497}. %However, the advantage of the straightforward interpretation of the decision tree is lost.
 %Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
@@ -88,6 +116,7 @@ Boosting increases the statistical stability of the classifier and typically als
 
 
 \subsubsection{Training and testing the MVA methods}
+%IN FAVOR OF A FAST EXECUTION OF THE TRAINING STEP
 
 A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). 
 
@@ -95,8 +124,12 @@ Based on discrimination power, correlation and pile-up dependence three variable
 
 Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest.  Distributions of the final output for the three methods, evaluated in an orthogonal sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
-
-The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agrees within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
+%
+%
+%
+%
+%
+The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agree within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
 
 As opposed to Neural Network discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. It is for these reasons that the likelihood classifier is the selected method for our tagger.
 
