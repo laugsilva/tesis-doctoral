@@ -99,7 +99,14 @@ While in principle a neural network with $n$ neurons can have $n^2$ directional 
 %are classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
 % However, whereas a cut-based analysis is able to select only one hypercube as region of phase space, the decision tree is able to split the phase space into a large number of hypercubes, each of which is identified as either ``signal-like'' or ``background-like''.
 A decision tree  is a binary tree structured classifier similar to the one sketched in Fig.~\ref{fig:BDTsketch}. 
-Repeated yes/no decisions are taken on one single variable at a time until a stop criterion is fulfilled.  The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final \emph{leaf} node. The boosting of a decision tree extends this concept from one tree to several trees which form a \emph{forest}.
+The training, building or growing of a decision tree is the process that defines the splitting criteria
+for each node. The training starts with the root node, where an initial splitting criterion for the
+full training sample is determined. The split results in two subsets of training events that each go
+through the same algorithm of determining the next splitting iteration. This procedure is repeated
+until the whole tree is built. At each node, the split is determined by finding the variable and
+corresponding cut value that provides the best separation between signal and background.
+%The process continues until a stop criterion is fulfilled.  
+The phase space is split this way into many regions that are eventually identified as ``signal-like'' or ``background-like'', depending on the majority of training events that end up in the final \emph{leaf} node. The boosting of a decision tree extends this concept from one tree to several trees which form a \emph{forest}.
 Boosting increases the statistical stability of the classifier and typically also improves the separation performance compared to a single decision tree~\cite{QUINLAN1999497}. %However, the advantage of the straightforward interpretation of the decision tree is lost.
 %Decision trees are also insensitive to the inclusion of poorly discriminating input variables. While for artificial neural networks it is typically more difficult to deal with such additional variables, the decision tree training algorithm will basically ignore non-discriminating variables as for each node splitting only the best discriminating variable is used. 
 
@@ -116,21 +123,24 @@ Boosting increases the statistical stability of the classifier and typically als
 
 
 \subsubsection{Training and testing the MVA methods}
-%IN FAVOR OF A FAST EXECUTION OF THE TRAINING STEP
 
-A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections were performed, the $b$-tagged jets with $|\eta| < 2.1$ were classified as signal (single $b$-jets) or background (merged $b$). 
+A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections, described in Section~\ref{sec:EventSelection}, were performed, the $b$-tagged jets were classified as signal (single $b$-jets) or background (merged $b$). 
 
-Based on discrimination power, correlation and pile-up dependence three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Event samples of single and merged $b$-jets, with the information of the value of the selected variables plus their correlations were given to the multivariate methods as input. Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
+Based on discrimination power, correlation and pile-up dependence, three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Signal and background datasets were given to the multivariate methods as input, containing a list of the $b$-tagged jets with the information of their $\pt$ and values for the chosen tracking variables.
+%Event samples of single and merged $b$-jets, with the information of the value of the selected variables plus their correlations  
+ Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
 
-Different training options were evaluated for the likelihood and Neural Network classifiers. The final configuration for the likelihood estimator uses the KDE approach for PDF estimation of the input variables. The NN trained is a Multi-layer perceptron (MLP) with two hidden layer of $n_{var}$ and $n_{var}-1$ neurons respectively, using a sigmoidal neuron activation function. The Boosted Decision Tree approach was implemented with 400 trees in the BDT forest.  Distributions of the final output for the three methods, evaluated in an orthogonal sample of simulated dijet events, are shown in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  The testing sample satisfies the same selection used for the training sample.
+%Different training options were evaluated for the likelihood and Neural Network classifiers. 
+Two different likelihood configurations were evaluated: the simple likelihood ratio estimator,  using an adaptive Gaussian KDE strategy for the estimation of the PDFs of the input variables; and the more sophisticated PDE-RS approach, adopting an adaptive mode for the volume search.  The multidimentional PDE-RS classifier offers no gain in discrimination with respect to the more simpler likelihood method, with the further disadvange of being more time consuming.  The likelihood method shows good performance, and, given the low correlation of the input variables accross $\pt$, constitutes an adequate method for single-merged discrimination with a fast training step.
+
+An Multi-layer perceptron (MLP) neural net, with two hidden layers of $n_{var}$ and $n_{var}-1$ neurons respectively, was also trained ($n_{var}=3$).  Two different neuron activation functions were tested, $tanh$ and $sigmoid$, with the latter showing better performance.  The initial NN training was carried out in 600 cycles, also termed ``epochs'', for a fast implementation of the method. Although, faster, this configuration led to an irregularly shaped output. This was only fixed with a 3000-epoch training.  
+
+The Boosted Decision Tree (BDT) approach was implemented with 400 trees in the BDT forest. Due to the simplicity of the method where each training step (node splitting) involves only a one-dimensional cut optimisation, little tuning was required in order to obtain reasonably good results.
+
+Examples of the distributions of the final output for these methods, evaluated in an orthogonal sample of simulated dijet events, are displayed in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  %The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
-%
-%
-%
-%
-%
-The outputs of the MVA discriminants explored are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see next section), agree within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
 
+The outputs of the explored MVA discriminants are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see Section~\ref{sec:btaggingalgos}), agree within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
 As opposed to Neural Network discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. It is for these reasons that the likelihood classifier is the selected method for our tagger.
 
 \begin{figure}[tp]
