@@ -19,15 +19,15 @@ Multivariate data analysis refers to a statistical technique used to analyze dat
 \item
 Likelihood ratio estimators (LLR)
 \item
-Neural Networks (NN)
+Neural networks (NN)
 \item
-Boosted decision Trees (BDTs)
+Boosted decision trees (BDTs)
 %\item
 %Fisher discriminants
 \end{itemize}
 
 %From TMVA Users Guide
-The method of LLR consists of building a model out of probability density functions (PDF) that reproduces the distributions of the input variables for signal and background. 
+The method of LLR consists of building a model out of probability density functions (PDF) that reproduce the distributions of the input variables for signal and background. 
 The likelihood ratio $y_{L}(i)$ for event $i$ is defined by:
 %
 \begin{equation}
@@ -73,7 +73,7 @@ Instead of unbinned training data, the KDE approach we implemented uses a finely
 The smoothness of the kernel density estimate is evident compared to the discreteness of a histogram; kernel density estimates converge faster to the true underlying density for continuous random variables.
 
 
-A generalization of the LLR estimator to $n_{var}$ dimensions, where $n_{var}$ is the number of input variables, exist in the theory today.  If the multidimensional PDF for a signal and background were known, this classfier would exploit the full information contained in the input variables, and would hence be optimal. In practice however, huge training samples are necessary to sufficiently populate the phase space\footnote{Due to correlations between the input variables, only a sub-space of the full phase space may be populated.}. Kernel estimation methods may be used to approximate the shape of the PDF for finite training samples. 
+A generalization of the LLR estimator to $n_{var}$ dimensions, where $n_{var}$ is the number of input variables, exist in the theory today.  If the multidimensional PDF for a signal and background were known, this classifier would exploit the full information contained in the input variables, and would hence be optimal. In practice however, huge training samples are necessary to sufficiently populate the phase space\footnote{Due to correlations between the input variables, only a sub-space of the full phase space may be populated.}. Kernel estimation methods may be used to approximate the shape of the PDF for finite training samples. 
 
 A simple probability density estimator denoted as Projective likelihood estimator \emph{range search}, or PDE-RS, has been suggested in Ref.~\cite{Carli:2002jp}. The PDE for a given test event is obtained by counting the number of training events that occur in the ``vecinity'' of the test event. The classification of the test event as being either signal or background type can be conducted %on the basis of the majority of the nearest training events. 
 by a local estimate of the probability density of it belonging to either class.
@@ -114,7 +114,7 @@ Boosting increases the statistical stability of the classifier and typically als
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.7\textwidth]{BDT.png}
-\caption{Schematic view of a decision tree. Starting from the \emph{root node}, a sequence  of binary splits using the discriminating variable $x_i$ is applied to the data. The leaf nodes at the bottom end of the tree are labeled ``S'' for signal and ``B'' for background depending on the majority of events that end up in the respective nodes. Image taken from Reference~\cite{Hocker:2007ht}.}
+\caption{Schematic view of a decision tree. Starting from the \emph{root node}, a sequence  of binary splits using the discriminating variable $x_i$ is applied to the data. The leaf nodes at the bottom end of the tree are labeled ``S'' for signal and ``B'' for background depending on the majority of events that end up in the respective nodes~\cite{Hocker:2007ht}.} % Image taken from Reference~\cite{Hocker:2007ht}.}
 \label{fig:BDTsketch}
 \end{figure}
 
@@ -141,7 +141,7 @@ Examples of the distributions of the final output for these methods, evaluated i
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
 
 The outputs of the explored MVA discriminants are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see Section~\ref{sec:btaggingalgos}), agree within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
-As opposed to Neural Network discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. It is for these reasons that the likelihood classifier is the selected method for our tagger.
+As opposed to NN discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. It is for these reasons that the likelihood classifier is the selected method for our tagger.
 
 \begin{figure}[tp]
 \centering
@@ -157,7 +157,7 @@ As opposed to Neural Network discriminants with large number of training cycles,
 \centering
 \includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff80.pdf}
 \includegraphics[width=0.49\textwidth]{FIGS/TEMPFigs/MVA_differentMethods/bins/MVAs_RejvsEff200.pdf}
-\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for the the different MVA methods evaluated for low and high jet $\pt$.}
+\caption{Rejection of merged $b$-jets as a function of single $b$-jet efficiency for the the different MVA methods evaluated for medium and high jet $\pt$.}
 \label{fig:diffmethodsPerfBins}
 \end{figure}
 
@@ -197,7 +197,7 @@ Due to the lack of statistics
 of merged jets in the low $\pt$ bins, signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events. The gain in statistics in the first $\pt$ bin was of more than 500\%.   It is important to stress that, although essential for data to MC comparisons (see Section~\ref{sec:analysis}), the weighting of the dijet Monte Carlo samples by their respective cross-sections is not necessary for studies performed at simulation level only.
 For the evaluation of the method the same procedure was followed.
 
-The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for low, medium and high transverse momentum jets.
+The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for medium and high transverse momentum jets.
 
 \begin{figure}[tp]
 \centering
