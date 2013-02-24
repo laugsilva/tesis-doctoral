@@ -1,4 +1,4 @@
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fractio of gluon splitting in data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,7 +49,7 @@ The binned maximum likelihood fits is a technique in general use. Unfortunately 
 The likelihood to be maximize in an unbinned dataset of events $\{x_k\}^N_{k=1}$ is
 %
 \begin{equation}
-\tilde{\mathcal{L}}(\vec{x};\vec{p}) =\prod^N_{k=1} F(\vec{x};\vec{p})
+\mathcal{L}(\vec{x};\vec{p}) =\prod^N_{k=1} F(\vec{x};\vec{p})
 \end{equation}
 %
 which, can be rewritten in terms of the probability of observing an event from source $j$ in the sample,
@@ -131,9 +131,9 @@ so that the extended ML procedure estimates the number of singal and background 
 
 
 
-The likelihood Monte Carlo templates were derived from the simulated dijet sample described in Section~\ref{sec:analysis}, from all jets passing the selection criteria defined in Section~\ref{sec:EventSelection}. Templates of likelihood were constructed for $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light flavoured MV1 tagged jets separately, and these were fit to the likelihood distribution in data in order to obtain the fractions of single $b$, merged $b$, single $c$, merged $c$ and light jets in the data sample. Merged $c$-jets (single $c$-jets) are defined as those jets matching exactly two (only one) ``$D$'' hadrons, the products of the fragmentation of $c$-quarks. A jet is classified as light when it has no $B$ nor $D$ hadron within a cone of 0.4 around its axis.
+Likelihood Monte Carlo templates were derived from the simulated dijet sample described in Section~\ref{sec:analysis}, from all jets passing the selection criteria defined in Section~\ref{sec:EventSelection}. Templates of likelihood were constructed for $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light flavoured MV1 tagged jets separately, and these were fitted to the likelihood distribution in data in order to obtain the fractions of single $b$, merged $b$, single $c$, merged $c$ and light jets in the data sample. Merged $c$-jets (single $c$-jets) are defined as those jets matching exactly two (only one) ``$D$'' hadrons, the products of the fragmentation of $c$-quarks. A jet is classified as light when it has no $B$ nor $D$ hadron within a cone of 0.4 around its axis.
 
-The likelihood template fits are performed using the unbinned maximum likelihood technique, in its extended version (see Section~\ref{sec:LLFits}). A separate fit is carried out for each $\pt$ bin. Different combinations of templates (``models'' in the following) were used to fit the likelihood distribution in data. The first implemented model uses all five templates,
+The likelihood template fits are performed using the unbinned maximum likelihood technique, in its extended version (see Section~\ref{sec:LLFits}). A separated fit is carried out for each $\pt$ bin. Different combinations of templates (``models'' in the following) were used to fit the likelihood distribution in data. The first implemented model uses all five templates,
 %
 \begin{equation}
 F(x) = n_s \cdot S(x) + n_m \cdot M(x) + n_l \cdot L(x) + n_{sc} \cdot S_c(x) + n_{mc} \cdot M_c(x)
@@ -215,13 +215,13 @@ uncertainty in the heavy flavor fraction
 \end{itemize}
 
 
-In order to calculate the contribution to the total systematic uncertainty from the the uncertainty in the track reconstruction efficiency the procedure described in Section~\ref{sec:gbbSystematics} was followed. New likelihood tamplates were produced and new fits performed. 
+In order to calculate the contribution to the total systematic uncertainty from the uncertainty in the track reconstruction efficiency the procedure described in Section~\ref{sec:gbbSystematics} was followed. New likelihood templates were produced and new fits performed. 
 
 The systematic uncertainty originating from the jet  $\pt$ resolution is obtained by smearing the calorimeter jet $\pt$ in the simulation. The likelihood templates were rederived from this ``smeared'' sample, and the likelihood distribution in data was fit using these altered samples. The difference between the unsmeared and the smeared scenarios is taken as a systematic uncertainty. 
 
 The uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation, according to the uncertainty of the jet energy scale (see Section~\ref{sec:gbbSystematics}), and redoing the likelihood fits on data with the modified $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light templates.
 
-The impact of the uncertainty in the knowledge of the flavour fractions in the simulation was evaluated by changing the ratio of merged $c$ to merged $b$ fraction 20\%. This variation only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing, that, although a separate value for the $b$- and $c$-flavoured components can be obtained, we are,  in reality, measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ ratio.
+The impact of the uncertainty in the knowledge of the flavour fractions in the simulation was evaluated by increasing the ratio of merged $c$ to merged $b$ fraction in 20\%. This variation only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing that, although a separate value for the $b$- and $c$-flavoured components can be obtained, we are,  in reality, measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ ratio.
 
 The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. The largest ones arise from the jet energy scale and jet transverse momentum resolution.
 \begin{table}[!hbt] %[h]
@@ -235,7 +235,7 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
   jet energy scale  &    2\%        \\ 
   heavy flavour fraction  &    negligible        \\ \hline 
 \end{tabular}
-\caption{Systematic uncertainties.}
+\caption{Systematic uncertainties affecting the template fitting to experimental data.}
 \label{tb:systematicsfits}
 \end{table}
 
@@ -246,7 +246,7 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 \section{Enriched samples in single and merged $b$-jets}\label{sec:Enriched}
 %------------------------------------------------------------------------
 
-The data sample employed in the analysis is $\sim$50\% pured sample in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
+The data sample employed in the analysis is $\sim$50\% pured in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
 
 In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets are produced mainly via the FCR and FEX processes, while merged $b$-jets are produced 95\% of the time by a gluon splitting into a $b\bar{b}$ pair. In the FCR process two single $b$-quarks are produced in the hard scatter, which lead to two back-to-back $b$-jets. Succesfully tagging these events is a way to construct a sample enriched in single $b$-jets.  On the other hand, events with only one $b$-jet can be produced either in the FEX process, with only one $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. These two scenarios are more difficult to disentangle and will require further selection cuts to be applied.
 
@@ -255,7 +255,7 @@ In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets 
 To help purifying the sample in single $b$-jets we can then use the $b$-tagging information. Jets in data events with exactly two $b$-tags, selected with MV1 tagging algorithm at its 60\% working point, and satisfying the event and jet selection described in Section~\ref{sec:EventSelection} compose the purified data set.  In order to increase the statistics no requirement on the $\pt$ of the $b$-tagged jets was initially imposed for the event selection. 
 
 Once the enriched sample is obtained, new likelihood fits are performed, for all $\pt$ bin, utilizing the same MC templates as for the nominal data sample in order to evaluate their performance.  
-The fractions of single $b$, merged $b$ and light in recovered, together with their statistical errors and the {\sc Pythia} MC predictions for each $\pt$ bin are displayed in tables~\ref{tb:fitfractions2btagS} to \ref{tb:fitfractions2btagL}.   And, examples of these fits are shown  in  Figures~\ref{fig:fitenriched2btag1} and Figures~\ref{fig:fitenriched2btag2}.  The model fitted to the data agrees well within statistics and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
+The fractions of single $b$, merged $b$ and light in data recovered, together with their statistical errors and the {\sc Pythia} MC predictions for each $\pt$ bin are displayed in tables~\ref{tb:fitfractions2btagS} to \ref{tb:fitfractions2btagL}.   Examples of these fits are shown  in  Figures~\ref{fig:fitenriched2btag1} and Figures~\ref{fig:fitenriched2btag2}.  The model fitted to the data agrees well within statistics and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
 
 \subsubsection{Purified sample in merged $b$-jets}
 
