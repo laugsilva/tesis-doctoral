@@ -1,5 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{Frixione:1996nh}
+S.~Frixione and M.L. Mangano.
+\newblock {Heavy quark jets in hadronic collisions}.
+\newblock {\em Nucl.Phys.}, B483:321--338, 1997.
+
+\bibitem{CDFAzimutalCorrelation}
+{CDF Collaboration}.
+\newblock {Measurements of Bottom Anti-Bottom Azimuthal Production Correlations
+  in Proton-Antiproton Collisions at $\sqrt{s}= 1.8$ TeV}.
+\newblock {\em Phys.Rev.D}, 71:38, 2005.
+
 \bibitem{Barlow1993219}
 Roger Barlow and Christine Beeston.
 \newblock Fitting using finite monte carlo samples.

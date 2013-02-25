@@ -11,20 +11,25 @@ The chapter is organized as follows. Section~\ref{sec:FitIntro} introduces the c
 BLABLABLABLABLA
 
 %------------------------------------------------------------------------
-\section{Introduction}
+\section{Introduction}\label{sec:FitIntro}
 %------------------------------------------------------------------------
 
-The $g\rigtharrow b\bar{b}$ tagger developed and described in the previous chapters produces for every $b$-tagged jet a number between 0 and 1, the double $b$-hadron likelihood (LL). The closer this number if to 1 (0), the more likely the $b$-tagged jet is single (merged). When used as a tagger, a working point (Wp) is chosen so that if LL$\geq$Wp the jet is flagged as single. The value of the Wp is chosen as a compromise between good efficiency (the lower the Wp, the higher the probability that an actual single $b$-jet will not be missed by the tagger), and rejection power (the higher the Wp the higher the probability that a non-single $b$-jet will not be incorrectly flagged as single). Depending on the necessities of the particular analysis, an appropriate Wp is to be chosen form the plot in Figure~\ref{fig:performanceinbins}, and in particular the performance results presented in Chapter~\ref{ch:mva} correspond to 50\% and 60\% efficiency working points, a reasonable choice.
+The $g\rightarrow b\bar{b}$ tagger developed and described in the previous chapters produces for every $b$-tagged jet a number between 0 and 1, the double $b$-hadron likelihood (LL). The closer this number if to 1 (0), the more likely the $b$-tagged jet is single (merged). When used as a tagger, a working point (Wp) is chosen so that if LL$\geq$Wp the jet is flagged as single. The value of the Wp is chosen as a compromise between good efficiency (the lower the Wp, the higher the probability that an actual single $b$-jet will not be missed by the tagger), and rejection power (the higher the Wp the higher the probability that a non-single $b$-jet will not be incorrectly flagged as single). Depending on the necessities of the particular analysis, an appropriate Wp is to be chosen form the plot in Figure~\ref{fig:performanceinbins}, and in particular the performance results presented in Chapter~\ref{ch:mva} correspond to 50\% and 60\% efficiency working points, a reasonable choice.
 
 However, the values of LL in a given sample offer more information than just a jet-by-jet tagger: the distribution of LL allows to measure the composition of the particular sample. In effect, a $b$-tagged jet has a certain probability to actually originate from the hadronization of a:
 
-\begin{description}
-\item[$\bm b$]: $b$-quark
-\item[$\bm bb$]: gluon splitting into a $b\bar{b}$ pair
-\item[$\bm c$]: $c$-quark
-\item[$\bm cc$]: gluon splitting into a $c\bar{c}$ pair
-\item[$\bm \ell$]: light parton ($u$, $d$, $s$ quarks, or a $g$ not splitting into heavy flavor pair).
-\end{description}
+\begin{itemize}
+\item
+$b$: $b$-quark
+\item
+$b\bar{b}$: gluon splitting into a $b\bar{b}$ pair
+\item
+$c$: $c$-quark
+\item
+$c\bar{c}$: gluon splitting into a $c\bar{c}$ pair
+\item
+$\ell$: light parton ($u$, $d$, $s$ quarks, or a $g$ not splitting into heavy flavor pair).
+\end{itemize}
 
 \emph{The expected distribution of LL is different for each of the five cases. This is illustrated in Figure~\ref{templates}, which plots LL for each hypothesis for jets in two $\pt$ ranges ($40<\pt\leq60$~GeV and $200<\pt\leq270$~GeV). These distributions are henceforth called ``templates''}. One can determine the composition of a given sample by measuring the values of LL of the $b$-tagged jets and estimating the fractions needed from each of the templates to accurately describe the experimental LL distribution. This process is known as ``template fitting''.
 
@@ -192,18 +197,18 @@ The results of the template fits to the likelihood distribution in data, using t
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
 \centering
-\begin{tabular}{ | c || c | c || c | c || c | c ||}
+\begin{tabular}{ | c || c | c | c || c | c | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jet} & \multicolumn{3}{c||}{merged $b$-jet} & \multicolumn{3}{c||}{~light jet~}\\ \cline{2-10}
-    (GeV ) & ~~~$n_s$~~~~ & stat.err. & ~~~$n_m$~~~~ & stat.err.& ~~~$n_l$~~~~ & stat.err.\\ \hline
-   40 - 60 &  62\% &  3\%  &  ~~3\%  &  ~~1\% &  ~4\%  &  4\%   \\ 
-   60 - 80 &  62\% &  1\%  &  5.2\%  &  0.4\% &  ~2\%  &  2\%   \\ 
-   80 - 110&  57\% &  1\%  &  8.5\%  &  0.4\% &  ~3\%  &  2\%   \\ 
-  110 - 150&  55\% &  2\%  &  ~13\%  &  ~~1\% &  ~1\%  &  4\%   \\ 
-  150 - 200&  53\% &  3\%  &  ~15\%  &  ~~1\% &  ~0\%  &  4\%   \\ 
-  200 - 270&  53\% &  5\%  &  ~17\%  &  ~~1\% &  -1\%  &  7\%   \\ 
-  270 - 360&  48\% &  3\%  &  ~19\%  &  ~~1\% &  ~4\%  &  4\%   \\ 
-  360 - 480&  39\% &  5\%  &  ~21\%  &  ~~1\% &  15\%  &  6\%   \\ \hline
+    (GeV ) & $n_s$ & pred.& pull & $n_s$ & pred.& pull & $n_s$ & pred.& pull \\ \hline
+   40 - 60 &  62$\pm$3 & 0 & 0 &  ~~3$\pm$1   & 0 & 0 &  ~4$\pm$4  & 0 & 0\\ 
+   60 - 80 &  62$\pm$1 & 0 & 0 &  5.2$\pm$0.4 & 0 & 0 &  ~2$\pm$2  & 0 & 0\\ 
+   80 - 110&  57$\pm$1 & 0 & 0 &  8.5$\pm$0.4 & 0 & 0 &  ~3$\pm$2  & 0 & 0\\ 
+  110 - 150&  55$\pm$2 & 0 & 0 &  ~13$\pm$1   & 0 & 0 &  ~1$\pm$4  & 0 & 0\\ 
+  150 - 200&  53$\pm$3 & 0 & 0 &  ~15$\pm$1   & 0 & 0 &  ~0$\pm$4  & 0 & 0\\ 
+  200 - 270&  53$\pm$5 & 0 & 0 &  ~17$\pm$1   & 0 & 0 &  -1$\pm$7  & 0 & 0\\ 
+  270 - 360&  48$\pm$3 & 0 & 0 &  ~19$\pm$1   & 0 & 0 &  ~4$\pm$4  & 0 & 0\\ 
+  360 - 480&  39$\pm$5 & 0 & 0 &  ~21$\pm$1   & 0 & 0 &  15$\pm$6  & 0 & 0\\ \hline
 \end{tabular}
 \caption{Measured proportions (in percentage) of single, merged and light $b$-tagged jets in experimental data from 2011 run.}
 \label{tb:fitfractions}

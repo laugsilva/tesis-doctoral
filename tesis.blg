@@ -1,5 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
+A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Main/core_fits.aux
 A level-1 auxiliary file: Summary/summary.aux
 The style file: unsrt.bst
@@ -13,45 +14,45 @@ I was expecting a `,' or a `}'---line 47 of file tesis.bib
  :           {1973}",
 I'm skipping whatever remains of this entry
 Warning--empty journal in RooFit
-You've used 3 entries,
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            466 strings with 3884 characters,
-and the built_in function-call counts, 547 in all, are:
-= -- 46
-> -- 20
+            483 strings with 4245 characters,
+and the built_in function-call counts, 931 in all, are:
+= -- 81
+> -- 32
 < -- 0
-+ -- 8
-- -- 5
-* -- 31
-:= -- 98
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 3
++ -- 13
+- -- 8
+* -- 54
+:= -- 162
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 25
-empty$ -- 55
-format.name$ -- 5
-if$ -- 117
+cite$ -- 6
+duplicate$ -- 43
+empty$ -- 96
+format.name$ -- 8
+if$ -- 203
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 3
-pop$ -- 7
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 5
+pop$ -- 9
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 12
+skip$ -- 19
 stack$ -- 0
-substring$ -- 27
-swap$ -- 2
+substring$ -- 54
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 4
-width$ -- 4
-write$ -- 33
+while$ -- 8
+width$ -- 6
+write$ -- 55
 (There were 2 error messages)
