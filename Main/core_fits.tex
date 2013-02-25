@@ -194,21 +194,22 @@ The sensitivity of the fit result to fixing the ratio of the single $c$ (merged 
 The results of the template fits to the likelihood distribution in data, using the three-parameter model, are shown in table~\ref{tb:fitfractions}. Examples of this set of fits are displayed in Figures~\ref{fig:fittemplates1} and~\ref{fig:fittemplates2}.
 
 
+
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
 \centering
 \begin{tabular}{ | c || c | c | c || c | c | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jet} & \multicolumn{3}{c||}{merged $b$-jet} & \multicolumn{3}{c||}{~light jet~}\\ \cline{2-10}
-    (GeV ) & $n_s$ & pred.& pull & $n_s$ & pred.& pull & $n_s$ & pred.& pull \\ \hline
-   40 - 60 &  62$\pm$3 & 0 & 0 &  ~~3$\pm$1   & 0 & 0 &  ~4$\pm$4  & 0 & 0\\ 
-   60 - 80 &  62$\pm$1 & 0 & 0 &  5.2$\pm$0.4 & 0 & 0 &  ~2$\pm$2  & 0 & 0\\ 
-   80 - 110&  57$\pm$1 & 0 & 0 &  8.5$\pm$0.4 & 0 & 0 &  ~3$\pm$2  & 0 & 0\\ 
-  110 - 150&  55$\pm$2 & 0 & 0 &  ~13$\pm$1   & 0 & 0 &  ~1$\pm$4  & 0 & 0\\ 
-  150 - 200&  53$\pm$3 & 0 & 0 &  ~15$\pm$1   & 0 & 0 &  ~0$\pm$4  & 0 & 0\\ 
-  200 - 270&  53$\pm$5 & 0 & 0 &  ~17$\pm$1   & 0 & 0 &  -1$\pm$7  & 0 & 0\\ 
-  270 - 360&  48$\pm$3 & 0 & 0 &  ~19$\pm$1   & 0 & 0 &  ~4$\pm$4  & 0 & 0\\ 
-  360 - 480&  39$\pm$5 & 0 & 0 &  ~21$\pm$1   & 0 & 0 &  15$\pm$6  & 0 & 0\\ \hline
+    (GeV ) & $n_s$ & pred.& pull & $n_m$ & pred.& pull & $n_l$ & pred.& pull \\ \hline
+   40 - 60 &  62$\pm$3 & 56 & 0 &  ~~3$\pm$1   & ~3 & 0 &  ~4$\pm$4  & 12 & 0\\ 
+   60 - 80 &  62$\pm$1 & 60 & 0 &  5.2$\pm$0.4 & ~5 & 0 &  ~2$\pm$2  & ~5 & 0\\ 
+   80 - 110&  57$\pm$1 & 58 & 0 &  8.5$\pm$0.4 & ~7 & 0 &  ~3$\pm$2  & ~5 & 0\\ 
+  110 - 150&  55$\pm$2 & 56 & 0 &  ~13$\pm$1   & 10 & 0 &  ~1$\pm$4  & ~5 & 0\\ 
+  150 - 200&  53$\pm$3 & 52 & 0 &  ~15$\pm$1   & 12 & 0 &  ~0$\pm$4  & ~6 & 0\\ 
+  200 - 270&  53$\pm$5 & 49 & 0 &  ~17$\pm$1   & 16 & 0 &  -1$\pm$7  & ~8 & 0\\ 
+  270 - 360&  48$\pm$3 & 44 & 0 &  ~19$\pm$1   & 18 & 0 &  ~4$\pm$4  & 11 & 0\\
+  360 - 480&  39$\pm$5 & 36 & 0 &  ~21$\pm$1   & 21 & 0 &  15$\pm$6  & 19 & 0\\ \hline
 \end{tabular}
 \caption{Measured proportions (in percentage) of single, merged and light $b$-tagged jets in experimental data from 2011 run.}
 \label{tb:fitfractions}
@@ -217,19 +218,17 @@ The results of the template fits to the likelihood distribution in data, using t
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf}
-\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.  }
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf}
+\caption{Example result of a template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fittemplates1}
 \end{figure}
-
-
 
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf}
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf}
-\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.}
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin5.pdf}
+\caption{Example result of a template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  200~GeV and 270~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fittemplates2}
 \end{figure}
 
@@ -329,9 +328,9 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf}
-\caption{The results of template fits to the likelihood distribution in data enriched in single $b$-jets. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.}
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin2.pdf}
+\caption{Example result of a template fit to the likelihood distribution in data enriched in single $b$-jets. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fitenriched2btag1}
 \end{figure}
 
@@ -340,8 +339,8 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf}
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf}
-\caption{The results of template fits to the likelihood distribution in data enriched in single $b$-jets. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.}
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin5.pdf}
+\caption{Example result of a template fit to the likelihood distribution in data enriched in single $b$-jets. The fit is shown for jets with $\pt$ between  200~GeV and 270~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fitenriched2btag2}
 \end{figure}
 
@@ -354,19 +353,39 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 \begin{tabular}{ | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jet}\\ \cline{2-4}
-    (GeV ) & ~~~~fit result~~~ & ~~~~stat.err.~~~~ & pythia prediction \\ \hline
-   40 - 60 &  99\%  &  11\%  &  84\% \\  
-   60 - 80 &  82\%  &  ~5\%  &  87\% \\ 
-   80 - 110&  84\%  &  ~5\%  &  88\% \\ 
-  110 - 150&  86\%  &  ~8\%  &  85\% \\ 
-  150 - 200&  89\%  &  ~9\%  &  83\% \\ 
-  200 - 270&  95\%  &  15\%  &  80\% \\ 
-  270 - 360&  67\%  &  11\%  &  81\% \\ 
-  360 - 480&  73\%  &  16\%  &  73\% \\ \hline
+    (Ge ) & ~~~~~~~$n_s$~~~~~~ & pythia prediction & ~~~~~~pull~~~~~~\\ \hline
+   40 - 60 &  99$\pm$11 & 84   & 0 \\  
+   60 - 80 &  82$\pm$5  &  87  & 0\\ 
+   80 - 110&  84$\pm$5  &  88 & 0\\ 
+  110 - 150&  86$\pm$8  &  85 & 0\\ 
+  150 - 200&  89$\pm$9  &  83 & 0 \\ 
+  200 - 270&  95$\pm$5  &  80 & 0 \\ 
+  270 - 360&  67$\pm$11  &  81 & 0 \\ 
+  360 - 480&  73$\pm$16  &  73 & 0 \\ \hline
 \end{tabular}
 \caption{Measured proportions (in percentage) of single $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
 \label{tb:fitfractions2btagS}
 \end{table}
+
+%\begin{table}[!hbt] %[h]
+%\renewcommand{\arraystretch}{1.2}
+%\centering
+%\begin{tabular}{ | c || c | c | c ||}
+%  \hline
+%  Jet $\pt$ & \multicolumn{3}{c||}{merged $b$-jet}\\ \cline{2-4}
+%    (GeV ) & ~~~~fit result~~~ & ~~~~stat.err.~~~~ & pythia prediction \\ \hline
+%   40 - 60 &  -1\%  &  1\%  &  1\% \\  
+%   60 - 80 &  -3\%  &  1\%  &  1\% \\ 
+%   80 - 110&  ~2\%  &  1\%  &  1\% \\ 
+%  110 - 150&  ~4\%  &  2\%  &  3\% \\ 
+%  150 - 200&  ~4\%  &  2\%  &  3\% \\ 
+%  200 - 270&  ~7\%  &  2\%  &  5\% \\ 
+%  270 - 360&  12\%  &  2\%  &  6\% \\ 
+%  360 - 480&  10\%  &  1\%  &  8\% \\ \hline
+%\end{tabular}
+%\caption{Measured proportions of merged $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
+%\label{tb:fitfractions2btagM}
+%\end{table}
 
 \begin{table}[!hbt] %[h]
 \renewcommand{\arraystretch}{1.2}
@@ -374,15 +393,15 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 \begin{tabular}{ | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{merged $b$-jet}\\ \cline{2-4}
-    (GeV ) & ~~~~fit result~~~ & ~~~~stat.err.~~~~ & pythia prediction \\ \hline
-   40 - 60 &  -1\%  &  1\%  &  1\% \\  
-   60 - 80 &  -3\%  &  1\%  &  1\% \\ 
-   80 - 110&  ~2\%  &  1\%  &  1\% \\ 
-  110 - 150&  ~4\%  &  2\%  &  3\% \\ 
-  150 - 200&  ~4\%  &  2\%  &  3\% \\ 
-  200 - 270&  ~7\%  &  2\%  &  5\% \\ 
-  270 - 360&  12\%  &  2\%  &  6\% \\ 
-  360 - 480&  10\%  &  1\%  &  8\% \\ \hline
+    (GeV ) & ~~~~~~~$n_m$~~~~~~ & pythia prediction & ~~~~~~pull~~~~~~~~~~\\ \hline
+   40 - 60 &  3.3$\pm$0.5  &  3.1  &  0  \\  
+   60 - 80 &  6.1$\pm$0.5  &  5.9  &  0  \\ 
+   80 - 110&  9.2$\pm$0.5  &  8.2  &  0  \\ 
+  110 - 150&  ~14$\pm$1    &  ~12  &  0  \\ 
+  150 - 200&  ~16$\pm$1    &  ~15  &  0  \\ 
+  200 - 270&  ~19$\pm$1    &  ~19  &  0  \\ 
+  270 - 360&  ~20$\pm$1    &  ~22  &  0  \\ 
+  360 - 480&  ~23$\pm$1    &  ~23  &  0  \\ \hline
 \end{tabular}
 \caption{Measured proportions of merged $b$-jets in experimental data from 2011 run, enriched in merged $b$-jets.}
 \label{tb:fitfractions2btagM}
