@@ -211,7 +211,7 @@ The results of the template fits to the likelihood distribution in data, using t
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin1.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf}
-\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.  }
+\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.  }
 \label{fig:fittemplates1}
 \end{figure}
 
@@ -221,7 +221,7 @@ The results of the template fits to the likelihood distribution in data, using t
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin6.pdf}
-\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.}
+\caption{The results of template fits to the likelihood distribution in data. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.}
 \label{fig:fittemplates2}
 \end{figure}
 
@@ -248,9 +248,10 @@ In order to calculate the contribution to the total systematic uncertainty from 
 
 The systematic uncertainty originating from the jet  $\pt$ resolution is obtained by smearing the calorimeter jet $\pt$ in the simulation. The likelihood templates were rederived from this ``smeared'' sample, and the likelihood distribution in data was fit using these altered samples. The difference between the unsmeared and the smeared scenarios is taken as a systematic uncertainty. 
 
-The uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation, according to the uncertainty of the jet energy scale (see Section~\ref{sec:gbbSystematics}), and redoing the likelihood fits on data with the modified $b$, $c$, $b\bar{b}$, $c\bar{c}$ and light templates.
+The uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation, according to the uncertainty of the jet energy scale (see Section~\ref{sec:gbbSystematics}), and redoing the likelihood fits on data with the modified  %$b$, $c$, $b\bar{b}$, $c\bar{c}$ and light 
+templates.
 
-The impact of the uncertainty in the knowledge of the flavour fractions in the simulation was evaluated by increasing the ratio of merged $c$ to merged $b$ fraction in 20\%. This variation only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing that, although a separate value for the $b$- and $c$-flavoured components can be obtained, we are,  in reality, measuring the fraction of merged $b+c$ together. The same result is expected if changing the single $c$/single $b$ ratio.
+The impact of the uncertainty in the knowledge of the flavour relative $c/b$ and $c\bar{c}/b\bar{b}$ fractions in the simulation was evaluated by separately changing these ratios by 20\%. The variation in ratio $c\bar{c}/b\bar{b}$ only produced a marginal effect on the fit results. The total number of merged $c$ plus merged $b$ did not change showing that, although a separate value for the $b\bar{b}$- and $c\bar{c}$-flavoured components can be obtained, we are,  in reality, measuring the fraction of merged $b\bar{b}+c\bar{c}$ together. The same result is observed if changing the single $c/b$ ratio.
 
 The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. The largest ones arise from the jet energy scale and jet transverse momentum resolution.
 \begin{table}[!hbt] %[h]
@@ -264,7 +265,7 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
   jet energy scale  &    2\%        \\ 
   heavy flavour fraction  &    negligible        \\ \hline 
 \end{tabular}
-\caption{Systematic uncertainties affecting the template fitting to experimental data.}
+\caption{Contributions to the systematic uncertainties affecting the template fitting to experimental data.}
 \label{tb:systematicsfits}
 \end{table}
 
@@ -275,9 +276,12 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 \section{Enriched samples in single and merged $b$-jets}\label{sec:Enriched}
 %------------------------------------------------------------------------
 
-The data sample employed in the analysis is $\sim$50\% pured in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
+The data sample employed in the analysis is $\sim$50\% pure in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
 
-In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets are produced mainly via the FCR and FEX processes, while merged $b$-jets are produced 95\% of the time by a gluon splitting into a $b\bar{b}$ pair. In the FCR process two single $b$-quarks are produced in the hard scatter, which lead to two back-to-back $b$-jets. Succesfully tagging these events is a way to construct a sample enriched in single $b$-jets.  On the other hand, events with only one $b$-jet can be produced either in the FEX process, with only one $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. These two scenarios are more difficult to disentangle and will require further selection cuts to be applied.
+In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets are produced mainly via the Flavour Creation (FCR) and Flavour Excitation (FEX) processes.  In the former two heavy quarks are produced in the hard scatter. The FEX one can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one of the $b$-quarks subsequently enters the hard scatter, i.e., there is one $b$-quark in the final state.
+Merged $b$-jets are produced 95\% of the time by Gluon Splitting (GSP). In this process no heavy quarks participate in the hard scatter, but they are produced via subsequent $g \rightarrow Q\bar{Q}$ branchings (see Section~\ref{sec:bproduction}).
+
+In the FCR process two single $b$-quarks are produced, which lead to two back-to-back $b$-jets. Succesfully tagging these events is a way to build a sample enriched in single $b$-jets.  On the other hand, events with only one $b$-jet can be produced either in the FEX process, with only one central $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. These two scenarios are more difficult to disentangle. %and will require further selection cuts to be applied.
 
 \subsubsection{Purified sample in single $b$-jets}
 
@@ -301,7 +305,7 @@ IP3D+SV1:  $w < -2$
 %
 These weight values correspond to a MV1 tagging efficiency of more than 85\%, and an efficiency for $b$-tagging of more than 80\% for the JetFitter and IP3D+SV1 algorithms. 
 
-The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, ver little enrichment was achieved with this kind of selection. 
+The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, very little enrichment was achieved with this kind of selection. 
 
 In order to understand this behavior an additional selection was applied: $b$-tagged jets were required to be back-to-back.   %DeltaPhi and DeltaR distributions peak at $\sim \pi$.  
 \emph{Most of the $b$-tagged jets are back-to-back. Three topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light.  In 90\% of the cases the second jet is a light jet; consecuently, $b$-jets arising from FEX process constitute the irreducible background for selecting merged $b$-jets. Very little enrichment can be attained.}
@@ -319,7 +323,7 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin1.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf}
-\caption{The results of template fits to the likelihood distribution in data enriched in single $b$-jets. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.}
+\caption{The results of template fits to the likelihood distribution in data enriched in single $b$-jets. The fits shown here were performed on jets with $\pt$ between  60~GeV and 80~GeV, and 80~GeV and 110~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.}
 \label{fig:fitenriched2btag1}
 \end{figure}
 
@@ -329,7 +333,7 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin5.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin6.pdf}
-\caption{The results of template fits to the likelihood distribution in data enriched in single $b$-jets. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are for data statistics only.}
+\caption{The results of template fits to the likelihood distribution in data enriched in single $b$-jets. The fits shown here were performed on jets with $\pt$ between  200~GeV and 270~GeV, and 270~GeV and 360~GeV, using five templates of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$, and light jets.  The ratio of the $c$- to $b$-flavour fractions was fixed to the values observed in the simulation.  Uncertainties shown are statistical only.}
 \label{fig:fitenriched2btag2}
 \end{figure}
 
@@ -352,7 +356,7 @@ In order to understand this behavior an additional selection was applied: $b$-ta
   270 - 360&  67\%  &  11\%  &  81\% \\ 
   360 - 480&  73\%  &  16\%  &  73\% \\ \hline
 \end{tabular}
-\caption{Measured fractions of single $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
+\caption{Measured proportions (in percentage) of single $b$-jets in experimental data from 2011 run, enriched in single $b$-jets.}
 \label{tb:fitfractions2btagS}
 \end{table}
 
