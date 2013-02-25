@@ -70,7 +70,10 @@ and the estimates of the proportions $p_j$ are found by maximizing the total lik
 This accounts correctly for the small numbers of data events in the bins.  It is often referred to as a ``binned maximum likelihood'' fit. Actually this formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exists, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. 
 
 
-The binned maximum likelihood fits is a technique in general use. Unfortunately  this method does not behave well in problems where it is necessary to apply weights to the Monte Carlo, such as in our composite dijet sample. We will use instead a different technique for fitting, an ``unbinned maximum likelihood fit'', which does support weighted datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
+The technique of binned maximum likelihood fit is fast and analytical. Unfortunately this method only works satisfactory with weighted events if the weights do not differ very much~\cite{Barlow1993219}.
+We observed that the obtained uncertainties were unnaturally large.  This was traced to the use of events with rather different weights.
+We had thus to move to a different, more general, technique, an ``unbinned maximum likelihood fit'',  which allows arbitrary weights and has the further advantage of using all the information contained in the data sample; although it is not analytical but numerical and iterative. 
+%The binned maximum likelihood fits is a technique in general use. Unfortunately  this method does not behave well in problems where it is necessary to apply weights to the Monte Carlo, such as in our composite dijet sample. We will use instead a different technique for fitting, an ``unbinned maximum likelihood fit'', which does support weighted datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
 %Binned or unbinned MF fit. %Roofit presentation page 112
 %In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
 
