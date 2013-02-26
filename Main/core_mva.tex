@@ -5,9 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-After the evaluation of the best discriminating variables, %between double $b$-hadron jets and genuine $b$-quark jets, 
-a tagging algorithm, capable of efficiently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches.  
-In this chapter we present the results of a multivariate likelihood method. Compared to single variable or 2-dimensional cuts analyses, with this technique the sensitivity is largely improved because several variables are combined to achieve the maximum separation power.  
+%After the evaluation of the best discriminating variables, a tagging algorithm, capable of efficiently identifying single $b$-jets while rejecting merged $b$-jets, can be constructed using several different approaches. In this chapter we present the results of a multivariate likelihood method. Compared to single variable or 2-dimensional cuts analyses, with this technique the sensitivity is largely improved because several variables are combined to achieve the maximum separation power.  
 
 %------------------------------------------------------------------------
 \section{Multivariate methods}\label{sec:mvamethods}
@@ -377,10 +375,13 @@ The track reconstruction efficiency, $\epsilon_{trk}$, parametrised in bins of $
 \end{equation}
 %
 where $N^{matched}_{rec}$ is the number of reconstructed tracks matched to a generated charged particle, and $N_{gen}(\pt,\eta)$ is the number of generated charged particles in that bin\footnote{The matching between a generated particle and a reconstructed track uses a cone-matching algorithm, associating the particle to the track with the smallest $\Delta R$ within a cone of radius 0.15.}.  As the track reconstruction efficiency is determined from MC, the main systematic uncertainty results from the level of agreement between data and MC.  Since charged hadrons are known to suffer from hadronic interactions with the material in the detector, a good description of the material in MC is needed to get a good description of the track reconstruction efficiency.  
-The uncertain knowledge of the material in the inner detector is the main source of systematic uncertainties in the tracking efficiency~\cite{chargemultiplicity}. An increase (decrease) in material leads to an increase (decrease) in the number of hadronic interactions, hence to a decrease (increase) in the reconstruction efficiency. 
+%The uncertain knowledge of the material in the inner detector is the main source of systematic uncertainties in the tracking efficiency~\cite{chargemultiplicity}. 
+An increase (decrease) in material leads to an increase (decrease) in the number of hadronic interactions, hence to a decrease (increase) in the reconstruction efficiency. 
 %This uncertainty arises from the limit in the understanding of the material layout of the Inner Detector. 
 
-The tracking efficiency systematics are given in bins of track $\eta$. For tracks with $p_{\rm{T}}^{\rm{track}} > 500$~MeV the uncertainties are independent of $\pt$:  2\% for $|\eta^{\rm{track}}|<1.3$, 3\% for $1.3<|\eta^{\rm{track}}|<1.9$, 4\% for $1.9<|\eta^{\rm{track}}|<2.1$, 4\% for $2.1<|\eta^{\rm{track}}|<2.3$ and 7\% for $2.3<|\eta^{\rm{track}}|<2.5$~\cite{chargemultiplicity}. All numbers are relative to the corresponding tracking efficiencies.  
+
+The contribution to the tracking reconstruction efficiency systematics of the imperfect description of the detector, in particular the knowledge of the material in the inner tracker, was measured with a data-driven method~\cite{chargemultiplicity}.
+The results are given in bins of track $\eta$. For tracks with $p_{\rm{T}}^{\rm{track}} > 500$~MeV the uncertainties are independent of $\pt$:  2\% for $|\eta^{\rm{track}}|<1.3$, 3\% for $1.3<|\eta^{\rm{track}}|<1.9$, 4\% for $1.9<|\eta^{\rm{track}}|<2.1$, 4\% for $2.1<|\eta^{\rm{track}}|<2.3$ and 7\% for $2.3<|\eta^{\rm{track}}|<2.5$. All numbers are relative to the corresponding tracking efficiencies.  
 
 To test the impact of these uncertainties, a fraction of tracks determined from the track efficiency uncertainty was randomly removed.  % following the method in Ref.~\cite{JetMassNote}.%https://cdsweb.cern.ch/record/1344082?ln=en
 %https://cdsweb.cern.ch/record/1286839
@@ -400,21 +401,21 @@ The tracking variables were re-calculated and the performance of the nominal lik
 {\em IV. Track momentum resolution}
 \\[3mm]
 The knowledge of the track momentum resolution is limited by the precision both in the material description of the Inner Detector and in the mapping of the magnetic field. Its uncertainty propagates to the kinematic variables used in the double $b$-hadron jet tagger. In order to study this effect, track momenta are over-smeared according to the measured resolution uncertainties, before the track selection cuts are applied.  %before computing the rejection. 
-The actual smearing is done in 1/$\pt$, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible, see Fig~\ref{fig:trackmomentum}. %with respect to the statistical uncertainty.
+The actual smearing is done in 1/$\pt$, which has a gaussian distribution, with an upper bound to the resolution uncertainty given by $\sigma(1/\pt)=0.02/\pt$~\cite{ATLAS-CONF-2010-009}. The effect is found to be negligible. %, see Fig~\ref{fig:trackmomentum}. %with respect to the statistical uncertainty.
 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackMomentumResolution_FIX2Test_rejvseff080.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackMomentumResolution_FIX2Test_rejvseff200.pdf}
-\caption{Rejection of merged $b$-jets as a function of the single $b$-jet efficiency showing the effect of the track momentum resolution uncertainty. It is found to be negligible with respect to the statistical uncertainty. }
-\label{fig:trackmomentum}
-\end{figure}
+%\begin{figure}[tp]
+%\centering
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackMomentumResolution_FIX2Test_rejvseff080.pdf}
+%\includegraphics[width=0.49\textwidth]{FIGS/systematics/LlhoodKDE_ISO_TrackMomentumResolution_FIX2Test_rejvseff200.pdf}
+%\caption{Rejection of merged $b$-jets as a function of the single $b$-jet efficiency showing the effect of the track momentum resolution uncertainty. It is found to be negligible with respect to the statistical uncertainty. }
+%\label{fig:trackmomentum}
+%\end{figure}
 
 
 \vspace{3mm}
 { \em V. Jet energy scale and momentum resolution}
 \\[3mm]
-The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{JESUncertainty}. In the case of $b$-jets, and additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
+The jet energy scale (JES) uncertainty for light jets reconstructed with the anti-$k_t$ algorithm with distance parameter $R=0.4$ and calibrated to the  EM+JES scale is between $\sim$4\% at low $\pt$ and $\sim$2.5\% for jets with  $\pt > $60~GeV in the central region~\cite{JESUncertainty}. In the case of $b$-jets, an additional uncertainty arising from the modelling of the $b$-quark production mechanism and the $b$-quark fragmentation was determined from systematic variations of the Monte Carlo simulation. % and validated up to $\sim$3\% in 2011 data and MC. 
 The resulting fractional additional JES uncertainty for $b$-jets has an upper bound of 2\% for jets with $\pt \leq$100~GeV and it is below 1\% for higher $\pt$ jets. To obtain the overall $b$-jet uncertainty this needs to be added in quadrature to the light JES uncertainty. 
 
 The systematic uncertainty originating from the jet energy scale is obtained by scaling the $\pt$ of each jet in the simulation up and down by one standard deviation according to the uncertainty of the JES.  The result is shown in Fig.~\ref{fig:jetresolution}a for a medium $\pt$ bin. The effect on the likelihood performance is an average variation of 5\% for the 50\% and 60\% efficiency working points. 
@@ -515,6 +516,10 @@ The performance in {\sc herwig} shows a systematic trend, with agreement at low 
 The reason for the systematic difference observed between the performances of {\sc pythia} and {\sc herwig} can be traced to the extent with which jets are accurately modelled. Fig.~\ref{fig:herwigdatamc} compares the measured jet track multiplicity distributions in $b$-tagged jets and the prediction from both simulations, for low and high $\pt$ jets. It is observed that indeed {\sc herwig++} does not correctly reproduce the data, particularly at high $\pt$. The level of agreement is found to be better for track-jet width and the $\Delta R$ between the axes of the two $k_t$ subjets in the jet, the two other variables used for discrimination.
 
 
+The more accurate description of $b$-jet substructure in {\sc pythia} than in {\sc herwig++} had been previously observed in ATLAS. It is due to the inclusion in {\sc pythia} of a detailed study of the $b$-quark fragmentation function based on LEP and SLD data~\cite{JESUncertainty}.
+
+
+
 
 %the comparion between jet distribution in experimental data and  Herwig++ Monte Carlo events was performed for $b$-tagged jets. The results for the jet track-multiplicity can be seen in Fig.~\ref{fig:herwigdatamc}. We find that Herwig++ does not reproduce data jet distributions correctly at medium and high $\pt$.
 
@@ -527,7 +532,7 @@ The reason for the systematic difference observed between the performances of {\
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff360.pdf}
-\caption{Rejection of merged $b$-jets as a function of jet $\pt$ for different Monte Carlo generators, at the 50\% efficiency working point.}
+\caption{Rejection of merged $b$-jets as a function of jet $\pt$ for different Monte Carlo generators, at the 50\% efficiency working point. The Perugia points are shifted by $+$5~GeV for display purposes.}
 \label{fig:performanceotherMC}
 \end{figure}
 
