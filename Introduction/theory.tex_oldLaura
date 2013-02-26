@@ -6,8 +6,10 @@
 %\chapter{Quantum Chromodynamics}
 \chapter{Theoretical introduction}\label{ch:theory}
 
+
 This chapter presents an introduction to the theoretical aspects involved in this thesis. After a 
 brief overview of the Standard Model and perturbative Quantum Chromodynamics, Sections~\ref{sec:qcdintro} and~\ref{sec:qcd}, the Monte Carlo tools to simulate QCD processes and the subjetc of jets and jet algorithms are discussed in some detail in Sections~\ref{sec:MCtools} and~\ref{sec:jets}. Finally, the concepts specific to this thesis, the QCD production of heavy-flavor (HF) jets, and the motivation for studying HF jets originating from gluon splitting, are the subject of Sections~\ref{sec:bjet-production} and~\ref{sec:gluonsplitting}, respectively.
+
 
 %------------------------------------------------------------------------
 \section{The Standard Model}\label{sec:qcdintro}
@@ -147,71 +149,67 @@ where $\mathcal{A}^A_{\mu}$ are the gluon fields with index $A, B, C$ running fr
 
 
 As described in section~\ref{sec:qcdintro}, the fundamental actors of the theory of the strong interactions are quarks and gluons or, collectively, partons~\cite{PhysRevLett.23.1415}. Partons are confined in  %hadron like particles, like the proton, 
-hadrons, but act quasi-free at sufficiently small scales. This behaviour is called asymptotic freedom. On the contrary, partons are coupled together more strongly as the distance between them increases. This effect, known as confinement, explains why quarks and gluons are only observed, at low energies, trapped together into color-neutral hadrons\footnote{In very-high energy environments, such as the universe shortly after the Big Bang, quarks and gluons are only weakly linked by the strong force, forming what is called a quark-gluon plasma.}.  A quantitative representation of the decreasing power of the strong force with increasing energy is given by the negative $\beta$-function of QCD~\cite{PhysRevLett.30.1346,PhysRevLett.30.1343}, 
+hadrons, but, act free at sufficiently small scales. This behaviour is called asymptotic freedom. The essence of asymptotic freedom is that the strong force couples particles together more strongly as the distance between them increases. This explains why quarks and gluons are only observed, at low energies, trapped together into color-neutral hadrons, in an effect known as confinement\footnote{In very-high energy environments, such as the universe shortly after the Big Bang, quarks and gluons are only weakly linked by the strong force, forming what is called a quark-gluon plasma.}.  A quantitative representation of the decreasing power of the strong force with increasing energy is given by the negative $\beta$-function of QCD~\cite{PhysRevLett.30.1346,PhysRevLett.30.1343}, 
 %http://dx.doi.org/10.1103/PhysRevLett.30.1346
 %http://dx.doi.org/10.1103/PhysRevLett.30.1343
-which describes how $\alpha_s(\mu^2)$ decreases with energy, the so called ``running'' of the coupling constant.
+which describes how the coupling constant of the force changes with energy. The variation of the strength of the coupling with the energy is referred to as the ``running'' of the coupling constant.
 
-The experimental consequence of asymptotic freedom is that the hard interactions of quarks and gluons at the energy scale probed by hadron colliders can be described by perturbative QCD, although its presence in the final state can only be inferred indirectly, as the appear confined in colorless hadrons.
-%The low value of the strong coupling constant at high-energies permits the use of perturbative techniques to calculate physical processes.
-Each order of the perturbative expansion corresponds to an additional power in the coupling constant. This power is related to the number of vertices in the matrix element QCD Feynman diagrams, %corresponds to some power of $\alpha_s$, so each increasing order in $\alpha_s$ of the perturbative expansion simply corresponds to a set of diagrams with the correct combination of vertices. 
-with $\sqrt{\alpha_s}$ per vertex, with the exception of the 4-gluon vertex wich contributes with $\alpha_s$. Each increasing order in $\alpha_s$ of the perturbative expansion simply corresponds to a set of diagrams with the correct combination of vertices.  By drawing all possible Feynman diagrams for a given order of perturbation theory, all the terms in the calculation can be read off. In this context, leading-order diagrams are also known as ``tree-level'' diagrams (with no internal loops). 
- Since the value of $\alpha_s$ varies with energy, it must be evaluated at the energy scale of the interaction. In particular, at the electroweak scale, $\alpha_s(M_Z)\sim 0.117$, and the perturbative expansion converges relatively fast, allowing all except the lower order terms to be ignored.
-%
-% to yield an approximate solution. 
-%Thus from an expansion of an infinite number of terms, only a few need to be computed.
-% require interactions with high energy probes to be ejected from nucleons, and
- %they cannot be observed directly. 
+The experimental consequence of asymptotic freedom is that quarks and gluons require interactions with high energy probes to be ejected from nucleons, and %they cannot be observed directly. 
+that its presence can only be inferred indirectly.
 %First indications of the presence of quarks resulted from the 
-%Measurements of deep inelastic lepton-hadron scattering provided some of the first indications of the presence of quarks. The momentum transfer, $Q^2$, between the probe particles (leptons) and the target hadron is related to the distance scale within the hadron being measured. 
+Measurements of deep inelastic lepton-hadron scattering provided some of the first indications of the presence of quarks. The momentum transfer, $Q^2$, between the probe particles (leptons) and the target hadron is related to the distance scale within the hadron being measured. 
 %Those measurements also became one of the primary methods by which to measure the PDF of protons~\cite{springerlink:10.1140/epjc/s10052-009-1072-5}~\cite{springerlink:10.1007/JHEP01(2010)109}. 
 %Tevatron measurements where combined with this measurements to refine the accuracy of the result through the use of additional $Q^2$ mesurement points~\cite{1126-6708-2003-10-046}.
 %The dramatic scaling of the gluon PDF as a function of $Q^2$, as well as the choise to use $pp$ instead of $p\bar{p}$ collisions at the LHC, is the source of the of the phrase ``the Tevatron is a quark collider and the LHC is a gluon collider''.
-%
-The complexity of the process determines the precision of the calculation that has to be performed.  %For example, predictions for the cross section for events with three partons in the final state are only available up to leading-order (LO).  
-For inclusive parton production, calculations are typically performed at next-to-leading order (NLO),  only recently some processes have been extended up to third order, that is NNLO, like QCD $\gamma\gamma$ background to $H\rightarrow\gamma\gamma$~\cite{Catani2011qz}, or top QCD production~\cite{Baernreuther2012ws}.  %Feynman diagrams are used in the computation of the multiple terms in the expansion, they are graphical representations of each term. % Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown intance Fig.~\ref{fig:qcd_diagrams}.
-%To help organize the computation of the multitude of terms in perturbative calculations, the tool of Feynman diagrams is frequently used. Feynman diagrams are graphical representations of the terms of the perturbative expansion. The outer lines of the diagram correspond to incoming and outgoing particles, the inner lines correspond to virtual particles, and the vertices correspond to particle interactions. To each of these components of the diagram, a mathematical expression or operation is assigned. 
 
-Using this formalism, the two parton hard interaction cross section can be computed at some fixed-order in perturbation theory. 
-However, hadron colliders such as the LHC do not produce simple parton-parton interactions, but instead collisions of hadrons that consist of multiple partons. 
+
+The low value of the strong coupling constant at high-energies permits the use of perturbative techniques to calculate physical processes. Each higher order of the perturbative expansion contains an additional factor of the coupling constant, $\alpha_s$.  Since the value of $\alpha_s$ varies with energy, it must be evaluated at some energy scale, close to the energy scale of the interaction. At energies of $\sim M_Z$, $\alpha_s$ is $\sim 0.117$, and the higher order terms can be ignored to yield an approximate solution. Thus from an expansion of an infinite number of terms, only a few need to be computed.
+ The complexity of the process determines the precision of the calculation that can be performed.  %For example, predictions for the cross section for events with three partons in the final state are only available up to leading-order (LO).  
+For inclusive parton production, calculations are typically performed at next-to-leading order (NLO).  %Feynman diagrams are used in the computation of the multiple terms in the expansion, they are graphical representations of each term. % Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown intance Fig.~\ref{fig:qcd_diagrams}.
+To help organize the computation of the multitude of terms in perturbative calculations, the tool of Feynman diagrams is frequently used. Feynman diagrams are graphical representations of the terms of the perturbative expansion. The outer lines of the diagram correspond to incoming and outgoing particles, the inner lines correspond to virtual particles, and the vertices correspond to particle interactions. To each of these components of the diagram, a mathematical expression or operation is assigned. Each vertex  %corresponds to some power of $\alpha_s$, so each increasing order in $\alpha_s$ of the perturbative expansion simply corresponds to a set of diagrams with the correct combination of vertices. 
+contributes with $\sqrt{\alpha_s}$ to the matrix element, with the exception of the 4-gluon vertex wich contributes with $\alpha_s$. Each increasing order in $\alpha_s$ of the perturbative expansion simply corresponds to a set of diagrams with the correct combination of vertices.  By drawing all possible Feynman diagrams for a given order of perturbation theory, all the terms in the calculation can be read off. In this context, leading-order diagrams are also known as ``tree-level'' diagrams (with no internal loops). 
+
+
+Using this formalism, the cross section for two partons to interact can be computed up to some fixed-order in perturbation theory, but there is a further complication. Colliders such as the LHC do not produce simple parton-parton interactions, but instead collisions of hadrons that consist of multiple partons. 
 %In the simplest picture, a proton is a combination of three quarks: two up quarks and one down quark. The reality, however, is much more complex. In the proton there are gluons constantly being emitted and absorbed, causing quark/antiquark pairs of many flavors to be briefly produced and destroyed. The up and down quarks of the standard hadron model are called valence quarks, while the virtual quark/antiquark pairs are known as sea quarks. Both valence quarks and sea quarks, along with the gluons, share the total momentum of the hadron.
-The factorization theorem~\cite{Collins:1989gx} allows the perturbative calculations for parton interactions to be extended to proton-proton collisions. This theorem states that the total cross section for two hadrons to interact can be obtained by weighting and combining the cross sections for two particular partons to interact. This weighting is done using $f_i(x)$, the parton distribution functions (PDFs), where $f_i(x)dx$ gives the number of partons of type $i$ that carry a fraction of the total hadron momentum between $x$ and $x+dx$. Thus the total cross section, at some energy $Q^2$ that characterizes the interaction, can be written as:
+
+The factorization theorem~\cite{Collins:1989gx} allows the perturbative calculations for parton interactions to be extended to proton-proton collisions. This theorem states that the total cross section for two hadrons to interact can be obtained by weighting and combining the cross sections for two particular partons to interact. This weighting is done using parton distribution functions (PDFs), which state the probability for a certain parton to carry a momentum fraction $x$ of the total hadron momentum. Thus the total cross section, at some momentum $Q$ that characterizes the interaction, can be written as:
 %
 \begin{equation}
 \sigma(P_1,P_2) = \sum_{i,j} \int dx_1 dx_2 f_i(x_1,\mu^2_f) f_j(x_2,\mu^2_f) \hat{\sigma}_{ij}(p_1,p_2,\alpha_s(\mu^2_r),Q^2/\mu^2_r,Q^2/\mu^2_f).
  \label{eq:sigmaP1P2}
 \end{equation}
 %
-Here, $P_1$ and $P_2$ are the momenta of the two incoming hadrons, $x_1$ and $x_2$ are the momentum fractions carried by the interacting partons, and $p_1 = x_1P_1$ and $p_2 = x_2P_2$ are the interacting parton momenta. 
+Here, $P_1$ and $P_2$ are the momenta of the two incoming hadrons, $x_1$ and $x_2$ are the momentum fractions carried by the two interacting partons, and $p_1 = x_1P_1$ and $p_2 = x_2P_2$ are the momenta of the two interacting partons. 
 %The cross section $\hat{\sigma}_{ij}$, frequently referred to as the matrix element, is the cross section for two partons, $i$ and $j$, to interact.  This cross section 
 The partonic cross section $\hat{\sigma}_{ij}$, corresponding to the interaction of partons $i$ and $j$, is calculated at a fixed order in $\alpha_s$, which is evaluated at some renormalization scale, $\mu_r$.  The renormalization scale is the scale at which the natural divergences in the cross sections are canceled by counter-terms in the Lagrangian~\cite{tHooft1973455,PhysRevD.8.3497}.  
 %http://dx.doi.org/10.1016/0550-3213(73)90376-3
 %http://dx.doi.org/10.1103/PhysRevD.8.3497
 The total cross section is obtained by summing over all possible parton flavors and integrating over all possible momentum fractions. 
+
 The parton distribution functions, $f_i$ and $f_j$, are evaluated at a factorization scale, $\mu_f$, which can be thought of as the scale that separates short-distance, perturbative physics, from long-distance, non-perturbative physics.  %Any parton emitted with a momentum less than $\mu_f$ is considered part of the structure of the hadron, and thus absorbed into the parton distribution function.  
 
-If the perturbative expansion were carried to all orders, the cross section $\sigma(P_1,P_2)$ in Equation~\ref{eq:sigmaP1P2} would be independent of $\mu_F$ and $\mu_R$. In actual finite order calculations this is not true. They are usually both taken to be equal, $\mu_F=\mu_R=\mu$, chosen at the typical scale $Q^2$ of the process, in order to minimize the contribution of (uncalculated) higher order terms which appear as logarithmic terms of the form $\log(Q^2/\mu^2_R)$ and $\log(Q^2/\mu^2_F)$. The dependence of the prediction on $\mu_F$ and $\mu_R$ is assigned as a theoretical uncertainty.
+In a perturbative expansion carried at all orders, the cross section $\sigma(P_1,P_2)$ in Equation~\ref{eq:sigmaP1P2} would be independent of $\mu_F$ and $\mu_R$. In actual finite order calculations this is not true. They are chosen at a typical scale of the process, in order to minimize the contribution of (uncalculated) higher order terms.
 
-The fact that the cross-section of a process should be independent of the factorization scale $\mu_f$  led to the  DGLAP equations, published separately in the 1970s by Yuri Dokshitzer, Vladimir Gribov and Lev Lipatov, and Guido Altarelli and Giorgio Parisi~\cite{Altarelli1977298}. These equations determine the evolution of the PDFs with $Q$. The dependence on $x$, on the other hand, must be obtained by fitting possible cross section predictions to data from hard scattering experiments.
-
-When the process studied contains two or more natural scales, it is not possible to cancel the logarithms in the higher order terms with an adequate choice of the $\mu$ scale. This happens for instance when there both are natural mass and momentum scales, like $(\pt,M_H)$ in the prediction of the Higgs transverse momentum distribution in $H+X$ production or $(\pt,m_b)$ in the differential cross-section for QCD $b$ production. These contain respectively $\log^n(\pt^2/M_H^2)$ and $\log^n(\pt^2/m_b^2)$ terms which cannot be cancelled by a scale choice and cannot be guaranteed to be small. Resummation techniques have been developed for this cases, which incorporate the leading (subleading) logarithmic terms at all orders, in the so called  ``leading logarithmic'', LL, (``next-to-leading logarithmic'', NLL) approximation.
-
-
-%{\it Often $\mu_f$ and $\mu_r$ are identified with one another and written $\mu_f = \mu_r = \mu$. Both scales will appear in ratios within the cross section integral and thus as logarithms when expanded order-by-order in perturbation theory. The presence of logarithms due to multiple scales is most apparent in the example of the dependence of $\alpha_s$ on $\mu_r$ and $\Lambda_{QCD}$, the ultraviolet cutoff scale used in QCD~\cite{LambdaQCD},} %HERE END OF \it
-%%
-%%R. K. Ellis, W. J. Stirling, and B. R. Webber. QCD and Collider Physics. Cambridge University Press, Cambridge, 1996.
-%%
-%\begin{equation}
-%\alpha_s(\mu^2) \sim  \frac{1}{\ln(\mu^2/\Lambda^2_{QCD})}.
-% \label{eq:running}
-%\end{equation}
-%%
-%{\it Equation~\ref{eq:running} reveals the order of magnitude of the scale at which $\alpha_s$ becomes large enough to destroy the assumption that perturbative expansion is valid ($\Lambda_{QCD} \approx 200$~MeV).  Fundamentally this equation represents an ultraviolet divergence that results in a scaling logarithm in the process of renormalization. Infrared divergences like those due to soft gluon emission result in similar $collinear$ logarithms of the form $\alpha^n_s \ln^{2n}(\pt / m)$ and $\alpha^n_s \ln^{2n-1}(\pt / m)$.  One convention~\cite{0954-3899-30-5-R01} is to refer to these terms as ``leading logarithmic'' (LL) and ``next-to-leading logarithmic'' (NLL), respectively. These terms may be exponentiated, leading to a sum of ratios of the relevant scales (here, $\pt / m$) to all orders.} %HERE END OF \it
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\it Often $\mu_f$ and $\mu_r$ are identified with one another and written $\mu_f = \mu_r = \mu$. Both scales will appear in ratios within the cross section integral and thus as logarithms when expanded order-by-order in perturbation theory. The presence of logarithms due to multiple scales is most apparent in the example of the dependence of $\alpha_s$ on $\mu_r$ and $\Lambda_{QCD}$, the ultraviolet cutoff scale used in QCD~\cite{LambdaQCD},} %HERE END OF \it
+%
+%R. K. Ellis, W. J. Stirling, and B. R. Webber. QCD and Collider Physics. Cambridge University Press, Cambridge, 1996.
+%
+\begin{equation}
+\alpha_s(\mu^2) \sim  \frac{1}{\ln(\mu^2/\Lambda^2_{QCD})}.
+ \label{eq:running}
+\end{equation}
+%
+{\it Equation~\ref{eq:running} reveals the order of magnitude of the scale at which $\alpha_s$ becomes large enough to destroy the assumption that perturbative expansion is valid ($\Lambda_{QCD} \approx 200$~MeV).  Fundamentally this equation represents an ultraviolet divergence that results in a scaling logarithm in the process of renormalization. Infrared divergences like those due to soft gluon emission result in similar $collinear$ logarithms of the form $\alpha^n_s \ln^{2n}(\pt / m)$ and $\alpha^n_s \ln^{2n-1}(\pt / m)$.  One convention~\cite{0954-3899-30-5-R01} is to refer to these terms as ``leading logarithmic'' (LL) and ``next-to-leading logarithmic'' (NLL), respectively. These terms may be exponentiated, leading to a sum of ratios of the relevant scales (here, $\pt / m$) to all orders.} %HERE END OF \it
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %The renormalization and factorization scales choices are somewhat arbitrary, but need to be chosen at an appropiately high scale in order that the fixed-order calculations converge. As such, they should have no bearing on the physical cross section. 
-%Any differences in the calculated cross  sections due to different choices of these scales can therefore be interpreted as an uncertainty due to the unknown higher-order corrections in the cross section calculation.
+Any differences in the calculated cross  sections due to different choices of these scales can therefore be interpreted as an uncertainty due to the unknown higher-order corrections in the cross section calculation.
 
+The fact that the cross-section of a process should be independent of the factorization scale $\mu_f$  led to the  DGLAP equations, published separately in the 1970s by Yuri Dokshitzer, Vladimir Gribov and Lev Lipatov, and Guido Altarelli and Giorgo Parisi~\cite{Altarelli1977298}. These equations determine the evolution of the PDFs with $Q$. %This gives a precise mathematical form to the dependence.  
+The dependence on $x$, on the other hand, must be obtained by fitting possible cross section predictions to data from hard scattering experiments.
 %This inconvenience is in fact to be expected, since the structure inside the proton is a region of strong coupling constant $\alpha_s$, and hence is not accessible with analytic non-perturbative calculations.
 
 
@@ -226,7 +224,7 @@ for each relevant partonic subprocesses. LO and NLO calculations are available f
 %Matrix element MC programs include {\sc Alpgen}~\cite{ALPGEN}, {\sc Madgraph}~\cite{MADGRAPH} and others.
 
 %Are these characteristics representative of the ‘typical’ situation for collider observables? We only have predictions up to NNLO in a handful of cases (see below) and in those it is. In cases where wejust have NLO predictions, the features of large ‘K-factors’ (NLO/LO enhancements) with a reduced NLO uncertainty band are not uncommon, suggesting that beyond NLO corrections should be small. Exceptions are known to arise in two types of case: those where new enhanced partonic scattering channels open up at NLO (or beyond); and that involve two disparate physical scales.
-%Technically, one main consideration has so far limited the range of processes for which NLO results exist: the availability of the loop amplitude. Until recently loop amplitudes were usually calculated semi-manually for each process. The complexity of the calculations increased significantly with the number of outgoing legs, limiting available results to those with at most three outgoing partons. Many NLO results for 2 → 2 and 2 → 3 processes are incorporated into programs such as NLOJ ET++ for jet production [65], MCFM for processes with heavy-quarks and/or heavy electroweak bosons [66]
+%Technically, one main consideration has so far limited the range of processes for which NLO results exist: the availability of the loop amplitude. Until recently loop amplitudes were usually calculated semi-manually for each process. The complexity of the calculations increased significantly with the number of outgoing legs, limiting available results to those with at most three outgoing partons. Many NLO results for 2 → 2 and 2 → 3 processes are incorporated into programs such as NLOJ ET++ for jet production [65], MCFM for processes with heavy quarks and/or heavy electroweak bosons [66]
 
 
 An alternative approach is applied by the so called Monte Carlo parton shower programs. These simulation programs use LO perturbative calculations of matrix elements for $2 \rightarrow 2$ processes, relying on the parton shower to produce the equivalent of multi-parton final state.  {\sc Pythia}~\cite{PYTHIA6} and {\sc Herwig}$++$~\cite{HerwigPP} are the most commonly used parton shower Monte Carlos. % together with {\sc SHERPA}. --> ME MC  % and others.  
@@ -460,7 +458,7 @@ Generally, all final hadronic states in $pp/p\bar{p}/e^+e^-$ collisions can be e
 
 Although very useful, event shape variables are not sensitive to the detailed structure and distribution of energy inside a particular jet. In SM and new physics searches, tools for the identification of individual objects that might be signature of new particles are desired. 
 At the LHC, many of the particles considered to be heavy at previous accelerators will be frequently produced with a transverse momentum greatly exceeding their rest mass, like the electro-weak gauge bosons $W^\pm$ and $Z$, the top quark, the Higgs boson (or bosons) and possibly other new particles in the same mass range. These boosted objects, produced either by recoil against other energetic objects or from decays of even heavier BSM particles, upon decay can give rise to a highly collimated topology too close to be resolved by standard jet algorithms. 
-%For example, when an unstable massive particle with large $\pt$ decays hadronically, the final state may be composed of a number of nearly collinear jets. These jets may be merged by a jet finder; %The decay products of boosted heavy-quarks or bosons might be reconstructed as a single jet, 
+%For example, when an unstable massive particle with large $\pt$ decays hadronically, the final state may be composed of a number of nearly collinear jets. These jets may be merged by a jet finder; %The decay products of boosted heavy quarks or bosons might be reconstructed as a single jet, 
 A method for selecting these jets would allow for the study of their properties.   This interest led to the development of a wide range of %jet substructure techniques in the recent years. 
 %For theses cases, 
 sophisticated tools in the last years~\cite{boost2010,boost2010b} that allow the analysis of the substructure of the ensuing jet and reveal its heavy-particle origin.
@@ -488,13 +486,13 @@ In chapter~\ref{ch:kinematic}, several distinguishing characteristics between je
 
 
 %------------------------------------------------------------------------
-\section{Production of {\em b\hspace{0.5mm}}-jets}\label{sec:bjet-production}
+\section{Heavy flavor jet production}\label{sec:bproduction}
 %------------------------------------------------------------------------
 
 %https://cdsweb.cern.ch/record/1425916/
-Jets produced by the fragmentation of $b$-quarks. or $b$-jets, enter in many collider searches, notably because they are produced in the decays of various SM massive particles (top quarks, the $Z$ boson and the Higgs boson, if light), and of numerous particles appearing in proposed extensions of the SM. However, the most common mechanism of heavy-flavor production is Quantum Chromdynamics. Heavy-flavor QCD processes can be classified into three categories 
-%In hadronic collisions, heavy-flavour quark production may be subdivided into three classes 
-depending on the number of $b$-quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
+Heavy flavor  (HF) quarks enter in many collider searches, notably because they are produced in the decays of various SM particles (top quarks, the $Z$ boson and the Higgs boson, if light), and of numerous particles appearing in proposed extensions of the SM. However, the most common process of HF production is QCD. Heavy Flavor QCD production can be classified into three processes 
+%In hadronic collisions, heavy flavour quark production may be subdivided into three classes 
+depending on the number of heavy quarks participating in the hard scattering. The hard scatter is defined as the $2 \rightarrow 2$ subprocess with the largest virtuality (or shortest distance) in the hadron-hadron interaction~\cite{Norrbin:2000zc}.
 %Ariel Thesis
 %The $b$-quarks in $pp$ collisions are produced predominatly in pairs, as the result of the strong interaction between one parton from the proton and another parton from the antiproton.  The cross section for producing a $b$-quark in a $pp$ collision is calculated convoluting the perturbative parton cross section with the proton distribution functions:
 %equation 1.3 Ariel's thesis
@@ -505,27 +503,30 @@ depending on the number of $b$-quarks participating in the hard scattering. The 
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
-{\bf Heavy-flavor creation (FCR)}: two $b$-quarks in the hard scatter final state (FS), and no $b$-quarks in the initial state (IS). At leading order this process is described by $gg \rightarrow b\bar{b}$ and  $q\bar{q} \rightarrow b\bar{b}$. It is called flavor creation because a $b\bar{b}$ pair is produced out of a light parton initial state. See Fig.~\ref{fig:qcd_diagrams}a.
+{\bf Heavy flavor creation (FCR)}: two heavy quarks are produced in the hard scatter. Being $b$ the heavy flavor quark, at leading order this process is described by $gg \rightarrow b\bar{b}$ and  $q\bar{q} \rightarrow b\bar{b}$, with no $b$-quarks in the initial state (IS).
 \item
-{\bf Heavy-flavor excitation (FEX)}: one $b$-quark in the IS and one $b$-quark in the FS.  The process can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one the $b$-quarks subsequently enters the hard scatter. Alternatively, if using a $b$-quark PDF, it can be described by a $t$-channel $b$ -- light-parton scattering.  See Fig.~\ref{fig:qcd_diagrams}b.
+{\bf Heavy flavor excitation (FEX)}: the heavy flavour quark excitation can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one the $b$-quarks subsequently enters the hard scatter, i.e., there is one $b$-quark in the IS and another one in the final state (FS).
 \item
-{\bf Gluon splitting (GSP)}: no heavy-quarks participate in the hard scatter, but a final state gluon produces a $b\bar{b}$ pair via a subsequent $g \rightarrow b\bar{b}$ branching. See Fig.~\ref{fig:qcd_diagrams}c. The notation GSP can be extended to any QCD process (or any SM process) in which a gluon in the ensuing parton shower splits into a $b\bar{b}$ pair.
+{\bf Gluon splitting (GSP)}: no heavy quarks participate in the hard scatter in this case, but they are produced via subsequent $g \rightarrow Q\bar{Q}$ branchings. % in the parton shower.
 \end{itemize}
-%Examples of Feynman diagrams for QCD $b$-quark production contributing up to NLO are shown in Fig.~\ref{fig:qcd_diagrams}.
+
+Example of Feynman diagrams for QCD $b$-quark production up to NLO are shown in Fig.~\ref{fig:qcd_diagrams}.
+
 %
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth,viewport=0 880 1500 1600,clip]{FIGS/bb_diagrams.jpg}
-\includegraphics[width=0.32\textwidth,viewport=0 0 1500 820,clip]{FIGS/bb_diagrams.jpg}
 \includegraphics[width=0.32\textwidth,viewport=1600 0 3100 820,clip]{FIGS/bb_diagrams.jpg}
-\caption{Representative diagrams of the three channels contributing to QCD $b$-quark production up to NLO. (a) {\em Left}: The flavour creation channel is the only one present at LO. At NLO, two new channels open up, referred to as (b) {\em Center}: flavour excitation (center) and (c) {\em Right}: gluon splitting.}
+\includegraphics[width=0.32\textwidth,viewport=0 0 1500 820,clip]{FIGS/bb_diagrams.jpg}
+\caption{Representative diagrams of the three channels contributing to QCD $b$-quark production up to NLO. The flavour creation channel (left) is the only one present at LO. At NLO, two new channels open up, referred to as gluon splitting (center) and  flavour excitation (right).}
 \label{fig:qcd_diagrams}
 \end{figure}
 %
-%The definition above is not strict, but can be used as a basis for the understanding of the characteristics of heavy-flavour quark production.
+
+The definition above is not strict, but can be used as a basis for the understanding of the characteristics of heavy flavour quark production.
 
 %From  Ariel's thesis
-Final state $b$-quarks hadronize into $b$-hadrons, either $B$ mesons ($B^+$, $B^0$, $B^0_s$, $B^+_c$) or $b$-baryons. During the fragmentation process, other particles will also be produced along with the $b$-hadron, giving rise to $b$-jets. In the flavor creation case, $b$-jets are $\pt$ balanced and back-to-back in the azimuthal angle $\phi$. However they are not 3-D balanced because $b$-jets may be boosted in the $z$ direction due to the different proton momentum fractions carried by the initial partons.  In the flavor excitation process, the $b$-quark which does not participate in the hard scatter belongs to the underlying event, resulting in a forward (large $\eta$) $b$-jet.  The angular $\Delta \phi$ separation between the two $b$-jets is therefore expected to be flat.  Gluon splitting is expected to give rise to close-by $b$-hadrons. Depending on how the separation between them compares to the jet size $R$ parameter, they will clusterized within the same hadronic jet or identified as neighbor jets. The azimuthal separation between the two gluon splitted $b$-jets thus peaks at small angles.
+Final state $b$-quarks hadronize into $b$-hadrons. During the fragmentation process, other particles will also be produced along with the $b$-hadron, giving rise to $b$-jets. Directly produced $b$-jets are $\pt$ balanced and back-to-back in the azimuthal angle $\phi$. However they are not 3-D balanced because $b$-jets may be boosted in the $z$ direction due to the different proton momentum fractions carried by the initial partons.  In the flavor excitation process, the $b$-quark which does not participate in the hard scatter belongs to the underlying event, resulting in a forward (large $\eta$) $b$-jet.  The angular $\Delta \phi$ separation between the two $b$-jets is therefore expected to be flat.  Gluon splitted $b$-jets are expected to be collinear since they originate from the splitting of a gluon and will tend to be identified as a same hadronic jet. The azimuthal separation between the two gluon splitted $b$-jets thus peaks at small angles.
 
 
 
@@ -535,9 +536,9 @@ Final state $b$-quarks hadronize into $b$-hadrons, either $B$ mesons ($B^+$, $B^
 
 The simplest and most fundamental measurement of heavy-quark jet production is
 the inclusive heavy-quark jet spectrum, which is dominated by pure QCD contributions. 
-Studies of QCD bottom production are important in their own right because of the correspondence between parton level production and the observed hadron level: $b$-quarks give rise to observable $b$-hadrons, while there is no such an association between light partons ($u$, $d$, $s$, $g$) and observed final state hadrons. In addition, the study of $b$-quark production has the potential to provide information on the $b$-quark parton distribution function, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours. 
+Studies of QCD bottom production are important in their own right because of the correspondence between parton level production and the observed hadron level: $b$-quarks give rise to observable $b$-hadrons, there is no such an association between light quarks ($u$, $d$ and $s$) or gluons, and observed final state hadrons. In addition, the study of $b$-quark production have the potential to provide information on the $b$-quark parton distribution function, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours. 
 
-The theoretical calculation of the inclusive $b$-jet spectrum presents however rather important uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. These uncertainties are quantified by the renormalization and factorization scale dependence of the calculation. In varying $\mu_R$ and $\mu_F$ between $\pt$/2 and 2$\pt$, $\pt$ being the transverse momentum of the hardest jet in the event, the heavy flavor cross section varies by up to 50\%, as shown in middle panel of Fig.~\ref{fig:bjets_qcd}. 
+The theoretical calculation of the inclusive $b$-jet spectrum presents rather important uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. 
 %Paper by Salam, Banfi and Zanderighi
 %The measurement suggestion that motivated our development: a b-jet xsection that excludes double-B jets: 
 %a. Full NLO calculation of the inclusive b-jet spectrum yields a K-factor=6-10.
@@ -545,68 +546,42 @@ The theoretical calculation of the inclusive $b$-jet spectrum presents however r
 %Proposal: move to inclusive flavour-kt b-jet xsection where bb-jets are not counted. Theoretical uncertainties are substantially reduced
 %a. Flavour-kt b-jet xsection is free of final-state (GSP) logarithms
 %b. Initial-state (FEX) collinear logarithms can be resummed if one uses a b-quark PDF
+A review of the origin of these uncertainties is presented by Banfi, Salam and Zanderighi in reference~\cite{Salam.AccurateHQ}.  They arise from the poor convergence of the perturbative series, as evidenced by a large value of the $K$-factor, the ratio of the next-to-leading order (NLO) to the leading order (LO) cross section. %, in the $\pt$ range covered by the LHC.  
+This is illustrated in Fig.~\ref{fig:bjets_qcd} for the $\pt$ range covered by the LHC.   The observed $K$ values (6 to 10) indicate that the NLO result cannot be an accurate approximation to the full result. It is for this reason that the scale dependence (middle panel in Fig.~\ref{fig:bjets_qcd}) is large. 
+
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.85\textwidth,viewport=300 410 530 690,clip]{FIGS/bjets_qcd.pdf}
-  \caption{{\em Top}: $K$-factor for the inclusive $b$-jet spectrum taken from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$   jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central rapidity region ($|y| <0.7$). {\em Middle}: scale dependence obtained by simultaneously varying the renormalisation and factorisation scales by a factor two around $\pt$, the transverse momentum of the hardest jet in the event. {\em Bottom}: breakdown of spectrum into the three major underlying channels, flavor creation (FCR) flavor excitation (FEX) and gluon splitting (GSP) as predicted by a parton shower MC, Herwig~\cite{Herwig}.}
+\includegraphics[height=0.7\textwidth,viewport=300 410 530 690,clip]{FIGS/bjets_qcd.pdf}
+  \caption{Top: $K$-factor for inclusive $b$-jet spectrum taken from~\cite{Salam.AccurateHQ}, clustering particles into jets using the $k_t$   jet-algorithm~\cite{kt1}  with $R$=0.7, and selecting jets in the central rapidity region ($|y| <0.7$). Middle: scale dependence obtained by simultaneously varying the renormalisation and factorisation scales by a factor two around $\pt$, the transverse momentum of the hardest jet in the event. Bottom: breakdown of the Herwig \cite{Herwig} inclusive $b$-jet spectrum into the three major underlying channels, flavor creation (FCR) flavor excitation (FEX) and gluon splitting (GSP).}
   \label{fig:bjets_qcd}
 \end{figure}
-A review of the origin of these uncertainties is presented by Banfi, Salam and Zanderighi in reference~\cite{Salam.AccurateHQ}.  They show that they arise from the poor convergence of the perturbative series, as evidenced by a rather large value of the $K$-factor, the ratio of the next-to-leading order (NLO) to the leading order (LO) cross section. %, in the $\pt$ range covered by the LHC.  
-This is illustrated in the upper panel of Fig.~\ref{fig:bjets_qcd} for the $\pt$ range covered by the LHC.   The observed $K$ values (6 to 10) indicate that the NLO result cannot be an accurate approximation to the full result.
 
-The fact that the perturbative series is very poorly convergent can be explained in terms of the different channels for heavy quark production. 
-While at LO only the FCR channel is present, at NLO the FEX and GSP channels open up\footnote{It is sometimes stated that it makes no sense, beyond LO, to separately discuss the different channels, for example because diagrams from separate channels interfere. However, each channel is associated with a different structure of logarithmic enhancements, $\ln^n (\pt / m_b )$, and so there is distinct physical meaning associated with each channel.}. 
-%Thus, the NLO (3-vertices) HF QCD production is actually leading order in two of the three contributing processes.
-% In the gluon splitting process, one of the final-state light partons (at NLO always a gluon) splits collinearly into a $b\bar{b}$ pair that a clustering algorithm can classify within the same jet. A jet containing both $b$ and $\bar{b}$ is considered to be just a $b$-jet in standard definitions.
-The various channels can be approximately separated with a parton shower Monte Carlo generator such as {\sc Herwig} or {\sc Pythia}, where one can determine the underlying hard process from the event record. These MC generators effectively include NLO effects via parton showers.
-The relative importance of each channel in the $b$-jet spectrum is shown in the bottom panel of Fig.~\ref{fig:bjets_qcd}. It is found that the supposedly LO channel (FCR) channel has a much smaller contribution than the two channels that at fixed order enter only at NLO (FEX
-and GSP). This is because both NLO channels receive strong enhancement from collinear logarithms, %~\cite{GSP} 
+The fact that the perturbative series is very poorly convergent is related to the different channels for heavy quark production. 
+While at LO only the FCR channel is present, at NLO the FEX and GSP channels open up\footnote{It is sometimes stated that it makes no sense, beyond LO, to separately discuss the different channels, for example because diagrams for separate channels interfere. However, each channel is associated with a different structure of logarithmic enhancements, $\ln^n (\pt / m_b )$, and so there is distinct physical meaning associated with each channel.}.  %often referred to as ``flavour excitation'' (FEX) and ``gluon splitting'' (GSP), 
+ In the gluon splitting process, one of the final-state light partons (at NLO always a gluon) splits collinearly into a $b\bar{b}$ pair that a clustering algorithm can classify within the same jet. A jet containing both $b$ and $\bar{b}$ is considered to be just a $b$-jet in standard definitions.
+
+The various channels can be approximately separated in a parton shower Monte Carlo generator such as {\sc Herwig} or {\sc Pythia}. These MC generators include NLO effects, and 
+%these,  where 
+one can determine the underlying hard process from the event record.  Their relative contributions to the total $b$-jet spectrum are shown in the bottom panel of Fig.~\ref{fig:bjets_qcd}. It is found that the LO channel has a much smaller contribution than the FEX and the GSP channels, which
+receive strong enhancement from collinear logarithms, %~\cite{GSP} 
 going as $\alpha_s^2 (\alpha_s \ln( \pt / m_b))^n$ for flavour excitation~\cite{Altarelli1977298} 
 and $\alpha_s^2 \cdot \alpha_s^n \ln^{2n-1}(\pt/m_b)$ for gluon splitting ($n\ge 1$)~\cite{Seymour1995163}.
 %Also http://arxiv.org/abs/hep-ph/0308284 and http://arxiv.org/abs/hep-ph/0404242
 
-As such, this problem is not solved yet. The obvious approach of carrying out the full massive next-to-next-to-leading order calculation is beyond the limit of today's technology. A second approach would be to carry out the
-explicit resummation of both the incoming and outgoing collinear logarithms. Although the technology for each resummation on its own is well-known at NLL accuracy, significant effort would be necessary to assemble them together effectively. 
-
-In both approaches, the largest residual uncertainties are
-likely to be associated with the channel with the most logarithms, gluon splitting, and the presence of 
-$g\rightarrow b\bar{b}$ jets. 
-
-
-\section{Identification of {\em b\hspace{0.5mm}}-jets from gluon splitting}\label{sec:gluonsplitting}
-
-As discussed in the previous Section, jets stemming from the hadronization of $b$-quarks, {\em i.e}.\  $b$-jets, can have two possible origins: the fragmentation of a single $b$-quark or the fragmentation of a gluon via a $b\bar{b}$ pair, $g\rightarrow b\bar{b}$, producing respectively jets containing a single $b$-hadron or a pair of $b$-hadrons. The main subject of this Thesis is precisely the design, development ad tuning of an algorithm to distinguish between these to cases. In this section we present the theoretical motivation and applications of a tool with the ability to separate genuine $b$-quark $b$-jets from those produced via gluon splitting. 
-
-
-%The identification of jets stemming from the fragmentation of $b$-quarks, $b$-tagging, does not separate however between the two processes that give rise to $b$-jets.
-%The development, tuning and application of an algorithm to distinguish genuine $b$-quark $b$-jets from those produced via gluon splitting is the subject of this Thesis. 
-%This section discusses the motivation and applications of such a tool:  the measurement of QCD $b$ quark production, the reduction of background in SM and BSM analyses with $b$ quarks in the final state, and studies of jet substructure.%
-
-%The ability to distinguish genuine $b$-quark $b$-jets from those produced via gluon splitting is thus of wide application. Here we briefly discuss three cases, the measurement of QCD $b$ quark production, the reduction of background in SM and BSM analyses with $b$ quarks in the final state, and studies of jet substructure.%
-%
-\subsection{The measurement of the inclusive $b$-jet spectrum}
-
-The large theoretical uncertainties in the predicion of the QCD inclusive $b$-jet spectrum, Section~\ref{sec:bjet-production}, arise from the strong enhancement from collinear logarithms in the flavor excitation ($\sim\ln^n(\pt/m_b)$) and in particular in the gluon splitting ($\sim\ln^{2n-1}(\pt/m_b)$) processes. This last channel however does not even correspond to one's physical idea of a $b$-jet, i.e. one induced by a hard $b$-quark, and it seems somehow unnatural to include it at all as part of one's $b$-jet spectrum.
-Ref.~\cite{Salam.AccurateHQ} proposes a new observable to free the heavy-flavor spectrum calculation from collinear logarithms, and improve the accuracy of the theoretical prediction.
+Ref.~\cite{Salam.AccurateHQ} proposes a new observable to free the heavy-flavour spectrum calculation from collinear logarithms, and improve the accuracy of the theoretical prediction,
 %for improving the accuracy of the prediction of the heavy-flavour spectrum 
-At a theoretical level this is accomplished by introducing a new jet clustering procedure,
-the ``\hspace{.3mm}flavour-$k_t$'' jet algorithm~\cite{flavorkt}, which maintains in an infrared-safe way the correspondence between partonic flavour and jet flavour: a jet containing equal number of $b$ quarks and $b$ antiquarks is considered to be a light jet. In this way,
-jets that contain a $b$ and $\bar{b}$, which in a parton shower MC generator are produced $\sim95\%$ of the time from the gluon splitting channel, do not contribute to the
-$b$-jet spectrum. %are removed from the $b$-jet spectrum.
-From an experimental side, this requires the separation of single and merged $b$-jets.
+by not including in the production cross-section the contribution from double $b$ jets. Final-state logarithms are removed by employing a recently developed jet reconstruction scheme, the flavour-$k_t$ algorithm~\cite{flavorkt}, which maintains the correspondence between partonic flavour and jet flavour. Specifically, jets containing a $b$-quark and a $b$-antiquark, which in a parton shower MC generator are produced $\sim95\%$ of the time by the GSP channel, are labeled in an IR-safe way as light jets and removed from the $b$-jet spectrum.
+The initial-state (FEX) collinear logarithms can be resummed by using a $b$-quark parton distribution functions.
+With this algorithm the $K$-factor for the differential heavy-jet spectrum cross-section is shown not to exceed a value of $K=1.4$, with a factor of four reduction in the theoretical (scale variation) uncertainties.
 
-Further improvement can be obtained by exploiting the fact that the logarithms
-of $\pt/m_b$ that remain are those associated with flavour excitation, which coincide with
-those resummed in the $b$-quark parton distribution function (PDF) at scale $\pt$. If one uses
-a $b$-quark PDF to resum these logarithms, no other logarithms $\ln(\pt/m_b)$ appear in the
-rest of the calculation
 
-With this procedure, the $K$-factor for the differential heavy-jet spectrum cross-section can be shown not to exceed a value of $K=1.4$, with a factor of four reduction in the theoretical (scale variation) uncertainties, allowing a much stricter comparison between theory and experiment.
-%
-\subsection{Rejection of background in Standard Model analyses and beyond-SM searches}
-%\\[5mm]
+
+
+\section{Other application of $g \rightarrow b\bar{b}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{\em Rejection of background in Standard Model analyses and beyond-SM searches}
-%\\[5mm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Succesfully identifying jets with two $b$-hadrons, the products of the $b$-quark or $b$-antiquark hadronization, 
 %Efficient tagging of merged $b$-jets 
@@ -640,34 +615,14 @@ also enter in many BSM collider searches, notably because $b$-quarks are produce
 %New physics searches with $b$-quarks in the final state also benefit from rejection of QCD and $W+b$ backgrounds which have $b$-jets arising from gluon splitting. 
  An example is the search for supersymmetry in the framework of generic $R$-parity conserving models~\cite{ATLAS-CONF-2011-098}. The superpartners of quarks and gluons could be copiously produced via the strong interaction at the LHC. The partners of the right- and left-handed quarks, \~{q}$_{L}$ and  \~{q}$_{R}$, can mix to form two mass eigenstates and, since mixing is proportional to the corresponding fermion masses, it becomes more important for the third generation producing sbottom and stop significantly lighter than the other squarks. In this model, thus, sbottom and stop production is expected to dominate. As they chain decay to $b$-quarks and the lightest supersymmetric particle, the signature for this channel is missing transverse energy %\met\ 
 plus (single) $b$-jets. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to close-by $b\bar{b}$ pairs. %merged $b$-jets.
-%
-\subsection{Jet substructure and boosted objects}
-%\\[5mm]
-%{\em Jet substructure and boosted objects}
-%\\[5mm]
-At the LHC, many of the particles considered to be heavy at previous accelerators are frequently produced with a transverse momentum greatly exceeding their rest mass. Good examples are the electro-weak gauge bosons $W^\pm$ and $Z^0$, the top quark, the Higgs boson or bosons and possibly other new particles in the same mass range. These boosted objects, produced either because they recoil against other energetic objects or because they arise from decays of even heavier BSM particles, can form upon decay a highly collimated topology too close to be resolved by a jet algorithm. For theses cases, sophisticated tools have been developed in the last years~\cite{jet_substruct} to analyse the substructure of the ensuing jet and reveal its heavy-particle origin.
 
-The study of $b\bar{b}$ jets from gluon splitting is an ideal testbed for studying jet substructure in data, as it provides a large supply of boosted, merged jets. Furthermore, understanding $g\rightarrow b \bar{b}$ jets is important as they are themselves the background to boosted object searches, like $Z\rightarrow b\bar{b}$ or $H\rightarrow b \bar{b}$.  Boosted object techniques have been already applied in ATLAS analyses like the $ZZ$ resonance search in the $\ell\ell bb$ channel or gluino pair production in the fully hadronic channel~\cite{boosted_search}, and it is investigated as a potential analysis channel for $WH$ and $ZH$ production restricting to events in which the vector and Higgs bosons have a high transverse momentum, $\pt^{H}\sim 200$~GeV or larger~\cite{Butterworth:2008iy}. Understanding the much more common QCD events with merged $b\bar{b}$ jets will be essential before attempting to measure these rare final states.
 
-% Agregar a .bib:
-% @techreport{jet_substruct,
-%       author       = "Miller, David W",
-%       title        = "Jet substructure in ATLAS",
-%       institution  = "CERN",
-%       address      = "Geneva",
-%       number       = "ATL-PHYS-PROC-2011-142",
-%       month        = "Oct",
-%       year         = "2011",
-% }
-% 
-% @MISC{boosted_search,
-% author       = "ATLAS Collavoration", 
-% title        = "ATLAS searches for New Physics with Boosted Objects", 
-% howpublished = "CERN-LHC Seminar",
-% key          = "https://indico.cern.ch/conferenceDisplay.py?confId=235287", 
-% month        = "February", 
-% year         = "2013", 
-% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% {\em Study of jet substructure and boosted objects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   The study of $b\bar{b}$ jets from gluon splitting is an ideal testbed for exploring jet substructure in data, as it provides a large supply of boosted, merged jets. Furthermore, understanding $g\rightarrow b \bar{b}$ jets is important as they are themselves the background to boosted object searches, like $Z\rightarrow b\bar{b}$ or $H\rightarrow b \bar{b}$.  %In particular, it has recently been suggested~\cite{Butterworth:2008iy} that $WH$ and $ZH$ production become potential discovery and analysis channels by restricting one’s attention to the $\sim5$\% of events in which the vector and Higgs bosons have large transverse momentum, ${\pt}_H\gtrsim200$ GeV. 
+Understanding the much more common QCD events with double $b$-hadron jets will be essential before attempting to measure more rare final states.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

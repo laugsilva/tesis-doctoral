@@ -1,8 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: Introduction/introduction.aux
-A level-1 auxiliary file: Main/core_fits.aux
-A level-1 auxiliary file: Summary/summary.aux
+A level-1 auxiliary file: Introduction/theory.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
 I was expecting a `,' or a `}'---line 18 of file tesis.bib
@@ -13,46 +11,57 @@ I was expecting a `,' or a `}'---line 47 of file tesis.bib
  :   year = "
  :           {1973}",
 I'm skipping whatever remains of this entry
-Warning--empty journal in RooFit
-You've used 5 entries,
+Warning--empty journal in ATLASHiggs
+Warning--empty journal in Zweig:1964jf
+Warning--empty journal in Zweig2
+Warning--empty year in PhysRevLett.30.1346
+Warning--empty year in PhysRevD.8.3497
+Warning--empty author in Pythia_MC11tune
+Warning--empty journal in Perugia
+Name 2 in "S. Catani and Y.L. Dokshitzer, and H. Seymour and B.R. Webber" has a comma at the end for entry kt1
+while executing---line 944 of file unsrt.bst
+Warning--empty journal in Abbiendi:2007aa
+Warning--empty journal in Aad:2012np
+Warning--empty journal in boost2010b
+You've used 62 entries,
             1791 wiz_defined-function locations,
-            483 strings with 4245 characters,
-and the built_in function-call counts, 931 in all, are:
-= -- 81
-> -- 32
-< -- 0
-+ -- 13
-- -- 8
-* -- 54
-:= -- 162
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 5
+            850 strings with 13251 characters,
+and the built_in function-call counts, 13238 in all, are:
+= -- 1110
+> -- 632
+< -- 1
++ -- 239
+- -- 177
+* -- 955
+:= -- 2234
+add.period$ -- 186
+call.type$ -- 62
+change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 43
-empty$ -- 96
-format.name$ -- 8
-if$ -- 203
+cite$ -- 72
+duplicate$ -- 540
+empty$ -- 1284
+format.name$ -- 177
+if$ -- 2857
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 28
-num.names$ -- 5
-pop$ -- 9
+int.to.str$ -- 62
+missing$ -- 60
+newline$ -- 313
+num.names$ -- 61
+pop$ -- 105
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 19
+skip$ -- 206
 stack$ -- 0
-substring$ -- 54
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 933
+swap$ -- 55
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 8
-width$ -- 6
-write$ -- 55
-(There were 2 error messages)
+warning$ -- 10
+while$ -- 115
+width$ -- 64
+write$ -- 664
+(There were 3 error messages)
