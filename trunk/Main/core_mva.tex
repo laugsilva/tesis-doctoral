@@ -1,6 +1,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{The Multivariate Analysis}\label{ch:mva}
+%\chapter{The Multivariate Analysis}\label{ch:mva}
+\chapter{Identification of double \emph{\textbf{b}}-hadron jets}\label{ch:mva}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
@@ -13,7 +14,7 @@ In this chapter we present the results of a multivariate likelihood method. Comp
 %------------------------------------------------------------------------
 
 Multivariate data analysis refers to a statistical technique used to analyze data that %arises from 
- is composed of more than one variable.  Classification is done through learning algorithms that make use of training events,  for which the desired output is known, to determine the mapping function that discribes a decision boundary. The following multivariate methods were explored: % using a simulated sample of dijet events generated with {\sc Pythia}:
+ is composed of more than one variable.  Classification is done through learning algorithms that make use of training events,  for which the desired output is known, to determine the mapping function that describes a decision boundary. The following multivariate methods were explored: % using a simulated sample of dijet events generated with {\sc Pythia}:
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
@@ -26,6 +27,10 @@ Boosted decision trees (BDTs)
 %Fisher discriminants
 \end{itemize}
 
+A description of each of these methods is presented in the next sections.
+
+\subsubsection{Likelihood ratio estimators}
+
 %From TMVA Users Guide
 The method of LLR consists of building a model out of probability density functions (PDF) that reproduce the distributions of the input variables for signal and background. 
 The likelihood ratio $y_{L}(i)$ for event $i$ is defined by:
@@ -34,7 +39,9 @@ The likelihood ratio $y_{L}(i)$ for event $i$ is defined by:
 y_{L}(i) = \frac{L_S(i)}{L_S(i)+L_B(i)},
 \end{equation}
 %
-In the case of poorly correlated variables, the likelihood for being of signal type is obtained by multiplying the signal probability densities of all input variables and normalising this by the sum of the signal and background likelihoods, %, which are assumed to be independent, 
+where $L_s$ and $L_B$ are the likelihoods of event $i$ under the signal and background hypothesis respectively.
+In the case of poorly correlated variables, the likelihoods  %  for being of signal type 
+are obtained by multiplying the probability densities of all input variables and normalising this by the sum of the signal and background likelihoods, %, which are assumed to be independent, 
 %
 \begin{equation}
 L_{S(B)}(i) = \prod^{n_{var}}_{k=1}  p_{S(B),k}(x_k(i)),
@@ -45,7 +52,8 @@ and where $p_{S(B),k}(x_k(i))$ is the signal (background) PDF for the $k$th inpu
 
 The parametric form of the PDFs is generally unknown, however it is possible to empirically approximate its shape % from the training data 
 by nonparametric functions. Nonparametric models differ from parametric models in that the model structure is not specified a priori but is instead determined from the data sample used for training.  A histogram is a simple example of a nonparametric estimate of a probability distribution.   The nonparametric functions can be chosen individually for each variable and can be either polynomial splines of various degrees fitted to binned histograms\footnote{A spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect. It is often referred to as polynomial interpolation. } or unbinned kernel density estimators (KDE). 
-The basic idea in the KDE approach is to model the distribution of a sample of events as the sum of individual equal-area Gaussian kernels, $G$, for each event.
+The basic idea in the KDE approach is to extract the PDF from the trainig events themselves, $x_i$ with $i=1,...,N$, via %to model the distribution of a sample of events as 
+the sum of individual equal-area Gaussian kernels, $G$, for each event.
 %The idea behind the latter approach is to estimate the shape of a PDF by the sum over smeared training events. 
 For a PDF $p(x)$ of a variable $x$, one finds~\cite{KDE},
 %
@@ -54,7 +62,7 @@ p(x) = \frac{1}{N h} \sum^N_{i=i} G(\frac{x-x_i}{h}) = \frac{1}{N} \sum^N_{i=i} 
 \end{equation}
 %
 where $N$ is the number of training events, $G_h(t) = G(t/h)h$ is the kernel function,  %and $h$ is the bandwidth of the kernel (also termed the \emph{smoothing parameter}). %For the present implementation a Gaussian form of $K$ is used.  
-and the extent of each event's contribution, $h$, can be kept constant for the entire training sample or be calculated adaptively as a function of the local densitiy of events. $h$ is termed the ``bandwidth'' of the kernel or, also, the ``smoothing parameter''.  The non-adaptive (NA) bandwidth, for a Gaussian kernel function, takes the form of
+and the extent of each event's contribution, $h$, can be kept constant for the entire training sample or be calculated adaptively as a function of the local densitiy of events. $h$ is termed the ``bandwidth'' of the kernel or, also, the ``smoothing parameter''.  The optimum non-adaptive (NA) bandwidth, $h_{\mbox{\small{NA}}}$, for a Gaussian kernel function, can be shown to be
 %
 \begin{equation}
 h_{\mbox{\small{NA}}} = (\frac{4}{3})^{1/5} \sigma_x N^{-1/5}
@@ -73,7 +81,7 @@ Instead of unbinned training data, the KDE approach we implemented uses a finely
 The smoothness of the kernel density estimate is evident compared to the discreteness of a histogram; kernel density estimates converge faster to the true underlying density for continuous random variables.
 
 
-A generalization of the LLR estimator to $n_{var}$ dimensions, where $n_{var}$ is the number of input variables, exist in the theory today.  If the multidimensional PDF for a signal and background were known, this classifier would exploit the full information contained in the input variables, and would hence be optimal. In practice however, huge training samples are necessary to sufficiently populate the phase space\footnote{Due to correlations between the input variables, only a sub-space of the full phase space may be populated.}. Kernel estimation methods may be used to approximate the shape of the PDF for finite training samples. 
+A generalization of the LLR estimator to $n_{var}$ dimensions, where $n_{var}$ is the number of correlated input variables, exist in the theory today.  If the multidimensional PDF for a signal and background were known, this classifier would exploit the full information, and would hence be optimal. In practice however, huge training samples are necessary to sufficiently populate the phase space\footnote{Due to correlations between the input variables, only a sub-space of the full phase space may be populated.}. Kernel estimation methods may be used to approximate the shape of the PDF for finite training samples. 
 
 A simple probability density estimator denoted as Projective likelihood estimator \emph{range search}, or PDE-RS, has been suggested in Ref.~\cite{Carli:2002jp}. The PDE for a given test event is obtained by counting the number of training events that occur in the ``vecinity'' of the test event. The classification of the test event as being either signal or background type can be conducted %on the basis of the majority of the nearest training events. 
 by a local estimate of the probability density of it belonging to either class.
@@ -87,6 +95,9 @@ can include or exclude a training event. Kernel functions mitigate these problem
 PDE-RS can yield competitive performance if the number of input variables is
 not too large and the statistics of the training sample is ample; on the other hand, it is a slowly responding classifier.
 
+
+\subsubsection{Neural networks}
+
 %From TMVA Users Guide
 An artificial Neural Network (NN) is a nonlinear discriminant. It is, most generally speaking, a simulated collection of interconnected neurons, with each neuron producing a certain response at a given set of input signals. It can be viewed as a mapping from a space of input variables $x_1,...,x_{n_{var}}$ onto, in the case of a signal-versus-background discimination problem, a one-dimensional output variable. The behaviour of an artificial neural network is determined by the layout of the neurons, the weights of the inter-neuron connections, and by the response of the neurons to the input, described by the neuron response function.  % $\rho$.  
 The neuron response function maps the neuron input (in $R^n$) onto the neuron output ($R$); often it can be separated into a synapse function ($R^n \rightarrow R$) and a neuron activation function ($R \rightarrow R$). The neuron activation function can be a either a $linear$, $sigmoid$, $tanh$, or a $radial$ function.
@@ -94,6 +105,10 @@ The neuron response function maps the neuron input (in $R^n$) onto the neuron ou
 While in principle a neural network with $n$ neurons can have $n^2$ directional connections, the complexity can be reduced by organising the neurons in layers and only allowing direct connections from a given layer to the following one. This kind of neural network is termed multi-layer perceptron. The first layer of a multilayer perceptron is the input layer, the last one the output layer, and all others are hidden layers. For a classification problem with $n_{var}$ input variables the input layer consists of $n_{var}$ neurons that hold the input values, $x_1,...,x_{n_{var}}$, and one neuron in the output layer that holds the output variable, the neural net estimator $y_{NN}$ .
 %The neuron response function ρ maps the neuron input i1 , . . . , in onto the neuron output (Fig. 16). Often it can be separated into a Rn → R synapse function κ, and a R → R neuron activation function α, so that ρ = α ◦ κ
 
+
+
+
+\subsubsection{Decision trees}
 
 %Decision trees % (BDT)~\cite{QUINLAN1999497} is a binary tree structured classifier. 
 %are classifiers that allow a straightforward interpretation as they can be visualized by a simple two-dimensional tree structure. They are in this respect similar to rectangular cuts. 
@@ -120,18 +135,23 @@ Boosting increases the statistical stability of the classifier and typically als
 
 
 
+\section{The double $b$-hadron jet tagger}
 
-
-\subsubsection{Training and testing the MVA methods}
-
-A sub-set of the dijet Monte Carlo sample was used for training the three methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections, described in Section~\ref{sec:EventSelection}, were performed, the $b$-tagged jets were classified as signal (single $b$-jets) or background (merged $b$). 
-
-Based on discrimination power, correlation and pile-up dependence, three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Signal and background datasets were given to the multivariate methods as input, containing a list of the $b$-tagged jets with the information of their $\pt$ and values for the chosen tracking variables.
+Three variables were selected for training the multivariate methods described in the previous section, based on discrimination power, correlation and pile-up dependence: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Signal and background datasets were given to the multivariate methods as input, containing a list of the $b$-tagged jets with the information of their $\pt$ and values for the chosen tracking variables.
 %Event samples of single and merged $b$-jets, with the information of the value of the selected variables plus their correlations  
  Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
 
+
+\subsubsection{Selection of an MVA method}
+
+A sub-set of the dijet Monte Carlo sample was used for training the methods in the context of the Toolkit for Multivariate Data Analysis, TMVA \cite{Hocker:2007ht}, written in C++ language.  After the event and jet selections, described in Section~\ref{sec:EventSelection}, were performed, the $b$-tagged jets were classified as signal (single $b$-jets) or background (merged $b$). 
+
+%Based on discrimination power, correlation and pile-up dependence, three variables were selected for the training: the jet track multiplicity, the track-jet width and the $\Delta R$ between the axes of two $k_t$ subjets in the jet.  Signal and background datasets were given to the multivariate methods as input, containing a list of the $b$-tagged jets with the information of their $\pt$ and values for the chosen tracking variables.
+%%Event samples of single and merged $b$-jets, with the information of the value of the selected variables plus their correlations  
+% Other variables such as $\tau_2$ or $\max\{\Delta R(trk,trk)\}$ were also tested leading to no gain in performance.
+
 %Different training options were evaluated for the likelihood and Neural Network classifiers. 
-Two different likelihood configurations were evaluated: the simple likelihood ratio estimator,  using an adaptive Gaussian KDE strategy for the estimation of the PDFs of the input variables; and the more sophisticated PDE-RS approach, adopting an adaptive mode for the volume search.  The multidimentional PDE-RS classifier offers no gain in discrimination with respect to the more simpler likelihood method, with the further disadvange of being more time consuming.  The likelihood method shows good performance, and, given the low correlation of the input variables accross $\pt$, constitutes an adequate method for single-merged discrimination with a fast training step.
+Two different likelihood configurations were evaluated: the simple likelihood ratio estimator,  using an adaptive Gaussian KDE strategy for the estimation of the PDFs of the input variables; and the more sophisticated PDE-RS approach, adopting an adaptive mode for the volume search.  The multidimentional PDE-RS classifier offered no gain in discrimination with respect to the more simpler likelihood method, with the further disadvange of being more time consuming.  The likelihood method shows good performance, and, given the low correlation of the input variables accross $\pt$, constitutes an adequate method for single-merged discrimination with a fast training step.
 
 An Multi-layer perceptron (MLP) neural net, with two hidden layers of $n_{var}$ and $n_{var}-1$ neurons respectively, was also trained ($n_{var}=3$).  Two different neuron activation functions were tested, $tanh$ and $sigmoid$, with the latter showing better performance.  The initial NN training was carried out in 600 cycles, also termed ``epochs'', for a fast implementation of the method. Although, faster, this configuration led to an irregularly shaped output. This was only fixed with a 3000-epoch training.  
 
@@ -140,7 +160,9 @@ The Boosted Decision Tree (BDT) approach was implemented with 400 trees in the B
 Examples of the distributions of the final output for these methods, evaluated in an orthogonal sample of simulated dijet events, are displayed in Fig.~\ref{fig:diffmethodsPerfBins} for a medium $\pt$ bin.  %The testing sample satisfies the same selection used for the training sample.
  %When building a network two rules should be kept in mind. The first is the theorem by Weierstrass, which if applied to neural nets, ascertains that for a multilayer perceptron a single hidden layer is  sufficient to approximate a given continuous correlation function to any precision, provided that a sufficiently large number of neurons is used in the hidden layer. If the available computing power and the size of the training data sample suffice, one can increase the number of neurons in the hidden layer until the optimal performance is reached.
 
-The outputs of the explored MVA discriminants are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods, expressed in rejection of merged $b$-jets as a function of single $b$-jet efficiency (see Section~\ref{sec:btaggingalgos}), agree within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
+The outputs of the explored MVA discriminants are different in terms of shape and range, although the latter could be rearranged with a suitable variable transformation.  In spite of these distinct features the performances of the different methods agree within statistics, see Fig.~\ref{fig:diffmethodsPerfBins}.  
+The performance of a classifier algorithm can be assessed by a curve of rejection of merged $b$-jets, ($1/\epsilon_{bkg}$), as a function of single $b$-jet efficiency, $\epsilon_{sig}$; where $\epsilon_{bkg}$ ($\epsilon_{sig}$) is the probability that a double (single) $b$-hadron jet passes the single $b$-jet tagger. The different points in the curve are obtained by varying the likelihood value above which a jet was classified as single (see Section~\ref{sec:btaggingalgos}).
+
 As opposed to NN discriminants with large number of training cycles, the training and the application of the likelihood are very fast operations that are suitable for very large data sets and tuning of the training parameters. Although also very fast, a shortcoming of decision trees is their instability with respect to statistical fluctuations in the training sample from which the tree structure is derived. If two input variables exhibit similar separation power, a fluctuation in the training sample may cause the tree growing algorithm to decide to split on one variable, while the other variable could have been selected without that fluctuation. In such a case the whole tree structure is altered below this node, possibly resulting also in a substantially different classifier response~\cite{Hocker:2007ht}. It is for these reasons that the likelihood classifier is the selected method for our tagger.
 
 \begin{figure}[tp]
@@ -166,7 +188,8 @@ As opposed to NN discriminants with large number of training cycles, the trainin
 %------------------------------------------------------------------------
 %\section{$\bm{ g\rightarrow b\bar{b}}$ likelihood training and performance}
 %\section{$g\rightarrow b\bar{b}$ likelihood training and performance}
-\section{Likelihood training and performance}
+%\section{Likelihood training and performance}
+\section{Results}
 %------------------------------------------------------------------------
 
 %PEAKS AT 0 - 1
@@ -178,7 +201,7 @@ As opposed to NN discriminants with large number of training cycles, the trainin
 
 
 
-As indicated in section~\ref{sec:mvamethods}, a discriminant between single and merged $b$-jets was built by training a simple likelihood estimator, with the following three variables as input, 
+A discriminant between single and merged $b$-jets was built by training a likelihood ratio estimator, with the following three variables as input, 
 %
 \begin{enumerate}\addtolength{\itemsep}{-0.4\baselineskip}
 \item
@@ -194,22 +217,10 @@ Given the correlation of the variables with the jet transverse momentum,  the tr
 
 Due to the lack of statistics 
 %In order to increase the statistics 
-of merged jets in the low $\pt$ bins, signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events. The gain in statistics in the first $\pt$ bin was of more than 500\%.   It is important to stress that, although essential for data to MC comparisons (see Section~\ref{sec:analysis}), the weighting of the dijet Monte Carlo samples by their respective cross-sections is not necessary for studies performed at simulation level only.
+of merged jets in the low $\pt$ bins, signal and background jets were not weighted by the dijet samples cross-sections to allow the contribution of subleading lower $\pt$ jets from high $\pt$ events. The gain in statistics in merged $b$-jets for the first $\pt$ bin was of more than 500\%.   It is important to stress that, although essential for data to MC comparisons (see Section~\ref{sec:analysis}), the weighting of the dijet Monte Carlo samples by their respective cross-sections is not necessary for studies performed at simulation level only.
 For the evaluation of the method the same procedure was followed.
 
-The distribution of the likelihood output for single and merged $b$-jets is shown in  Fig.~\ref{fig:outputinbins} for medium and high transverse momentum jets.
-
-\begin{figure}[tp]
-\centering
-%\includegraphics[width=0.32\textwidth,viewport=40 0 540 550]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/Likelihood/NNoutput080_LihoodKDE.pdf}
-\includegraphics[width=0.49\textwidth]{FIGS/Likelihood/NNoutput200_LihoodKDE.pdf}  
-\caption{Distribution of the likelihood output for single and merged $b$-jets for medium and high $\pt$ jets.}
-\label{fig:outputinbins}
-\end{figure}
-
-The performance of the tagger in the simulation can be 
-displayed in a plot of rejection of merged $b$-jets, ($1/\epsilon_{bkg}$), as a function of single $b$-jet efficiency, $\epsilon_{sig}$; where $\epsilon_{bkg}$ ($\epsilon_{sig}$) is the probability that a double (single) $b$-hadron jet passes the single $b$-jet tagger. This is shown in Fig.~\ref{fig:performanceinbins} for the eight bins of jet $\pt$ mentioned in section~\ref{sec:EventSelection}. The performance improves with $\pt$:
+Example distributions of the likelihood output for single and merged $b$-jets are displayed in  Fig.~\ref{fig:outputinbins} for low and high transverse momentum jets.  The performance plot including the rejection vs. efficiency curves for each of the eight $\pt$ bins studied (see Section~\ref{sec:EventSelection}) is shown in Fig.~\ref{fig:performanceinbins}. The performance of the tagger improves with $\pt$:
 
 
 \begin{itemize}\addtolength{\itemsep}{-0.4\baselineskip}
@@ -227,6 +238,15 @@ rejection above 30 at 50\% eff.
  %over 95\% rejection at 50\% eff.
 \end{itemize}
 
+
+\begin{figure}[tp]
+\centering
+%\includegraphics[width=0.32\textwidth,viewport=40 0 540 550]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/Likelihood/NNoutput040_LihoodKDE.pdf}
+\includegraphics[width=0.49\textwidth]{FIGS/Likelihood/NNoutput200_LihoodKDE.pdf}  
+\caption{Distribution of the likelihood output for single and merged $b$-jets for low and high $\pt$ jets.}
+\label{fig:outputinbins}
+\end{figure}
 
 \begin{figure}[tp]
 \centering
@@ -313,10 +333,10 @@ The impact of pile-up might be larger in 2012 data.
 \vspace{3mm}
 {\em II. b-tagging efficiency} %energy scale and 
 \\[3mm]
-The performance of heavy-flavor tagging in Monte Carlo events is calibrated to experimental data by means of the scale factors (SFs). % measured by the ATLAS Flavour Tagging Working group. 
+The performance of heavy-flavor tagging in Monte Carlo events is calibrated to experimental data by means of scale factors (SFs). % measured by the ATLAS Flavour Tagging Working group. 
 The SFs are defined as the ratio of the heavy-flavor tagging efficiency in data over that in Monte Carlo for the different jet flavors. They are measured by the ATLAS Flavour Tagging Working group,  %, and probably also as a function of jet pT and η 
 %Such a measurement carries a systematic uncertainty, and in order to estimate its effect a conservative approach is followed: %https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface
-and their measurement carries a systematic uncertainty.  
+and their measurement carries a systematic uncertainty, see Section~\ref{sec:btagcalib}.  
 
 To estimate the impact of this uncertainty a conservative approach is followed: the SFs are varied in all the $\pt$ bins simultaneously by one standard deviation both in the up and down directions. The MC distributions weighted by the varied SFs show no major deviations from the nominal, see Fig.~\ref{fig:btaggingSFs}.  %The result of this procedure for the distribution of two of the tracking variables used in our discriminant is illustrated in Fig.~\ref{fig:btaggingSFs}. 
 In the same manner, the effect of the $b$-tagging calibration uncertainty on the likelihood peformance, shown in Fig.~\ref{fig:btaggingSFsPerf}, is $< 1$\%, negligible with respect to the statistical uncertainty.
@@ -346,7 +366,7 @@ This was indeed expected. The scale factors depend on the true flavor of the jet
 
 
 
-\vspace{3mm}
+\vspace{5mm}
 { \em III. Track reconstruction efficiency}
 \\[3mm]
 
@@ -502,7 +522,7 @@ The reason for the systematic difference observed between the performances of {\
 
 \begin{figure}[tp]
 \centering
-\includegraphics[width=0.7\textwidth]{gbbRejection_vs_PT_3MonteCarlos_50Eff.pdf}
+\includegraphics[width=0.7\textwidth]{gbbRejection_vs_PT_3MonteCarlos_50Eff_shift5.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff040.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff060.pdf}
 %\includegraphics[width=0.49\textwidth]{FIGS/systematics/newInterpLlhoodKDE_ISO_DiffMCGen_rejvseff200.pdf}

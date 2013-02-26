@@ -201,7 +201,8 @@ F(x) = n_s \cdot S(x) + n_m \cdot M(x) + n_l \cdot L(x) + n_{sc} \cdot S_c(x) + 
 %
 with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for the different hypothesis; and $n_s$, $n_m$, $n_l$, $n_{sc}$ and $n_{mc}$ the free parameters representing the number of expected events for all components: single $b$, merged $b$, light, single $c$ and merged $c$-jets, respectively.  %The initial estimates for the parameters were obtained from the {\sc Pythia} Monte Carlo sample. 
 
-\emph{The fractions derived in {\sc Pythia}  as a function of the jet $\pt$ are shown in Fig.~\ref{fig:truefractions}.}
+
+\emph{The sensitivity of the fit result to fixing the relative flavour fractions  $c/b$ and $c\bar{c}/b\bar{b}$, for each $\pt$ bin, to the value extracted from the simulation was investigated by carrying out separate fits with a model with three free parameters only. This was motivated by the fact that templates for single $c$- (merged $c$-)  and single $b$-jets (merged $b$-jets) look very similar leading to inestabilities in the fitted $b$- and $c$-flavour fractions, caused by the high correlations between these components.  Table~\ref{tb:correlations} shows an example covariance matrix.  Parameters $n_s$ and $n_{sc}$ and, $n_m$ and $n_{mc}$ present the highest correlation coefficients ($\sim -0.6$, and $\sim -0.8$, respectively).The fractions in the {\sc Pythia} simulation  as a function of the jet $\pt$ are displayed in Fig.~\ref{fig:truefractions} for reference.}
 
 
 \begin{figure}[tp]
@@ -213,7 +214,6 @@ with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for
 \end{figure}
 
 
-\emph{The sensitivity of the fit result to fixing the relative flavour fractions  $c/b$ and $c\bar{c}/b\bar{b}$, for each $\pt$ bin, to the value extracted from the simulation was investigated by carrying out separate fits with a model with three free parameters only. This was motivated by the fact that templates for single $c$- (merged $c$-)  and single $b$-jets (merged $b$-jets) look very similar leading to inestabilities in the fitted $b$- and $c$-flavour fractions, caused by the high correlations between these components.  Table~\ref{tb:correlations} shows an example covariance matrix.  Parameters $n_s$ and $n_{sc}$ and, $n_m$ and $n_{mc}$ present the highest correlation coefficients ($\sim$0.6, and $\sim$0.8, respectively).}
 
 
 \begin{table}[!hbt] %[h]
@@ -228,12 +228,24 @@ with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for
   $n_{sc}$   &0.257 &-0.642 &-0.007 & 1.000 &-0.300 \\ \hline
   $n_l$      & -0.206& -0.323 &-0.117 &-0.300 & 1.000 \\ \hline
 \end{tabular}
-\caption{Parameter correlation coefficients.}
+\caption{Parameter correlation coefficients among the parameters that are adjusted to data in the unbinned maximum likelihood fit to data.}
 \label{tb:correlations}
 \end{table}
 
-\emph{The results of the template fits to the likelihood distribution in data, using the three-parameter model, are shown in table~\ref{tb:fitfractions}. Examples of this set of fits are displayed in Figures~\ref{fig:fittemplates1} and~\ref{fig:fittemplates2}.}
+\emph{The results of template fits to the likelihood distribution in data, using the three-parameter model, are summarized in table~\ref{tb:fitfractions}. Examples of this set of fits are displayed in Figures~\ref{fig:fittemplates1} and~\ref{fig:fittemplates2}. The measured fraction of merged $b$-jets increases with the calorimeter jet $\pt$,}
 
+\begin{itemize}
+\item
+$\pt>40$ GeV: above $\sim$3\% merged $b$-jets
+\item
+$\pt>80$ GeV: above $\sim$10\% merged $b$-jets
+\item
+$\pt>200$ GeV: above $\sim$20\% merged $b$-jets
+ %over 95\% rejection at 50\% eff.
+\end{itemize}
+
+\emph{The fraction of single $b$-jets changes accordingly, ranging from 60\% for low transverse momentum jets, to  40\% single $b$-jets in the highest $\pt$ bin.  The fractions of single and merged $c$-jets are fixed to their $b$-counterparts and present the same tendency (not shown in table~\ref{tb:fitfractions} for brevity) . The $n_l$ parameter representing the fraction of light jets in the data sample exhibits the largest statistical fluctuations...}
+\emph{being in most cases consistent with 0\%.}
 
 
 
@@ -264,7 +276,7 @@ with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf}
-\caption{Example result of a template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
+\caption{Example result of template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fittemplates1}
 \end{figure}
 
@@ -320,7 +332,8 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 \label{tb:systematicsfits}
 \end{table}
 
-
+\emph{The results of template fits to the likelihood distribution in data, using the three-parameter model, are summarized in table~\ref{tb:fitfractions}. The pull value of the fitted parameters, defined as the difference between the measured value and the ``true'' value extracted from the {\sc Pythia} simulation, normalized by dividing by the estimated error (statistical and systematic summed in quadrature) is also displayed to better measure the performance.}.
+%The distribution of this quantity should follow standard normal distribution $N(0,1)$ provided that the hit errors follow Gaussian statistics
 
 
 %------------------------------------------------------------------------
@@ -330,7 +343,7 @@ The systematic uncertainties are summarized in Table~\ref{tb:systematicsfits}. T
 The data sample employed in the analysis is $\sim$50\% pure in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
 
 In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets are produced mainly via the Flavour Creation (FCR) and Flavour Excitation (FEX) processes.  In the former two heavy quarks are produced in the hard scatter. The FEX one can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one of the $b$-quarks subsequently enters the hard scatter, i.e., there is one $b$-quark in the final state.
-Merged $b$-jets are produced 95\% of the time by Gluon Splitting (GSP). In this process no heavy quarks participate in the hard scatter, but they are produced via subsequent $g \rightarrow Q\bar{Q}$ branchings (see Section~\ref{sec:bproduction}).
+Merged $b$-jets are produced 95\% of the time by Gluon Splitting (GSP). In this process no heavy quarks participate in the hard scatter, but they are produced via subsequent $g \rightarrow Q\bar{Q}$ branchings (see Section~\ref{sec:bjet-production}).
 
 In the FCR process the two single $b$-quarks produced give rise to two back-to-back $b$-jets. Succesfully tagging these events is a way to build a sample enriched in single $b$-jets.  On the other hand, events with only one $b$-jet can be produced either in the FEX process, with only one central $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. These two scenarios are more difficult to disentangle. %and will require further selection cuts to be applied.
 
@@ -340,7 +353,7 @@ To help purifying the sample in single $b$-jets we can then use the $b$-tagging 
 
 Once the enriched sample is obtained, new likelihood fits are performed, for all $\pt$ bins, utilizing the same MC templates as for the nominal data sample in order to evaluate their performance.  
 The measured fractions of single $b$-jets, together with their statistical errors and the {\sc Pythia} MC predictions for each $\pt$ bin are displayed in table~\ref{tb:fitfractions2btagS}. An example of these fits is shown  in  Figure~\ref{fig:fitenriched2btag1}. % and Figures~\ref{fig:fitenriched2btag2}. 
- The model fitted to the data agrees well within statistics and the result is in agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
+ The model fitted to the data agrees well within statistics and the result is in good agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
 
 \subsubsection{Purified sample in merged $b$-jets}
 
@@ -357,10 +370,9 @@ IP3D+SV1:  $w < -2$
 %
 These weight values correspond to a MV1 tagging efficiency of more than 85\%, and an efficiency for $b$-tagging of more than 80\% for the JetFitter and IP3D+SV1 algorithms. 
 
-The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, very little enrichment was achieved with this kind of selection. The results from these fits are presented in  table~\ref{tb:fitfractions2btagM}.
+The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, very little enrichment was achieved with this kind of selection. The results from these fits (the fractions of merged $b$-jets in the enriched sample) are presented in  table~\ref{tb:fitfractions2btagM}.
 
-In order to understand this behavior an additional selection was applied: $b$-tagged jets were required to be back-to-back.   %DeltaPhi and DeltaR distributions peak at $\sim \pi$.  
-\emph{Most of the $b$-tagged jets are back-to-back. Three topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light.  In 90\% of the cases the second jet is a light jet; consecuently, $b$-jets arising from FEX process constitute the irreducible background for selecting merged $b$-jets. Very poor enrichment can be attained indeed.}
+\emph{Further studies were performed requiring the $b$-tagged jet in the event to be back-to-back to the highest (second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying:  $\Delta R>2.8$ and  $\pt^{tagged}/\pt^{lead} > 0.7$  (in the case the $b$-tagged jets is the leading jet of the event, this cut is $\pt^{second}/\pt^{tagged} > 0.7$). Actually, most of the $b$-tagged jets in one-$b$-tagged events fall in this category. Three different topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light. In oder to enrich the sample in merged $b$-jets one would like to reduce the rate of the first two configurations.  It was found that in 90\% of these cases the  non-tagged jet is a light jet. This observation imposes a limitation on how far one can go in purifying the QCD sample since $b$-jets arising from FEX process constitute and irreducible background for selecting merged $b$-jets. Other physics samples would be required in order to obtain a reasonable enrichment.}
 
  
 \begin{figure}[tp]
@@ -380,16 +392,6 @@ In order to understand this behavior an additional selection was applied: $b$-ta
 %\caption{Example result of a template fit to the likelihood distribution in data enriched in single $b$-jets. The fit is shown for jets with $\pt$ between  200~GeV and 270~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 %\label{fig:fitenriched2btag2}
 %\end{figure}
-
-1.37
--1.01
--0.72
-0.02
-0.67
-1.00
--1.25
--0.01
-
 
 
 \begin{table}[!hbt] %[h]
