@@ -1,10 +1,2 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {chapter}{\numberline {2}Fraction of double $b$-hadron jets in QCD $b$-production}{6}
-\contentsline {section}{\numberline {2.1}Introduction}{6}
-\contentsline {section}{\numberline {2.2}Unbinned maximum likelihood fits}{9}
-\contentsline {section}{\numberline {2.3}Fitting MC templates to data}{12}
-\contentsline {section}{\numberline {2.4}Systematic uncertainties}{14}
-\contentsline {section}{\numberline {2.5}Enriched samples in single and merged $b$-jets}{19}
-\contentsline {subsubsection}{Purified sample in single $b$-jets}{20}
-\contentsline {subsubsection}{Purified sample in merged $b$-jets}{20}
-\contentsline {chapter}{\numberline {3}Summary and conclusions}{25}
+\contentsline {chapter}{\numberline {2}Summary and conclusions}{5}

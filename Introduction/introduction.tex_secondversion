@@ -46,8 +46,8 @@ has several applications.
 %Here we briefly discuss two cases, the measurement of QCD $b$-quark production and the reduction of background in SM and Beyond the Standard Model (BSM) analyses.
 %\vspace{3mm}
 %{\em The measurement of the inclusive $b$-jet spectrum}
-The measurement of the QCD bottom production is one of great importance due to the correspondence between parton level production and the observed hadron level, and its potential to provide information on the $b$-quark parton distribution function. %, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours.
-%The theoretical calculation of the inclusive $b$-jet spectrum presents rather large uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. %These arise from the poor convergence of the perturbative series.  %, as evidenced by the large value of the $K$-factor (NLO/LO), $K$ = 6 -- 10, in the $\pt$ range covered by the LHC. 
+The measurement of the QCD bottom production if of great importance due to the correspondence between parton level production and the observed hadron level, and its potential to provide information on the $b$-quark parton distribution function. %, a component of the proton structure thought to be generated entirely perturbatively from the QCD evolution equations of the other flavours.
+The theoretical calculation of the inclusive $b$-jet spectrum presents rather large uncertainties ($\sim 50\%$), considerably larger than those for the light jet inclusive spectrum ($\sim 10-20\%$)~\cite{Frixione:1996nh}. %These arise from the poor convergence of the perturbative series.  %, as evidenced by the large value of the $K$-factor (NLO/LO), $K$ = 6 -- 10, in the $\pt$ range covered by the LHC. 
 %While at LO only the so-called ``flavour creation'' channel is present, at NLO two new channels open up, often referred to as ``flavour excitation'' (FEX) and ``gluon splitting'' (GSP). %, see Fig.~\ref{fig:qcd_diagrams}. NLO effects are included approximately in LO parton showering models, such as {\sc Herwig}
 %~\cite{Herwig} 
 %or {\sc Pythia}.
@@ -58,9 +58,12 @@ The measurement of the QCD bottom production is one of great importance due to t
 %the FEX and the GSP channels, which
 %receive strong enhancement from collinear logarithms~\cite{GSP}. 
 %Fig.~\ref{fig:qcd_diagrams} shows examples of diagrams at LO (``flavor creation''), where the $b$ and $\bar{b}$ quarks fly in opposite directions, and at NLO (``gluon splitting'', GSP), where a gluon splits collinearly into a close-by $b\bar{b}$-pair that the clustering algorithm classifies within the same jet. A jet containing both $b$ and $\bar{b}$ is considered to be a plain $b$-jet in standard definitions.
-It is found that the largest uncertainties in the theoretical calculation of the inclusive $b$-jet spectrum are associated to channel known as ``gluon splitting'' (GSP), where a gluon from the hard scatter decays into a close-by $b\bar{b}$ pair, that a jet clustering algorithm often classifies within the same jet. %This channel receives a strong enhancement from collinear logarithms spoiling the convergence of the perturbative series. 
+It is found that the largest uncertainties are associated to the production channel known as ``gluon splitting'' (GSP), where a gluon from the hard scatter decays into a close-by $b\bar{b}$ pair, that a jet clustering algorithm often classifies within the same jet. This channel receives a strong enhancement from collinear logarithms spoiling the convergence of the perturbative series. 
 %This channel however does not even correspond to one's physical idea of a $b$-jet, \ie the one induced by a hard $b$-quark, and it seems somehow unnatural to include it at all as part of one's $b$-jet spectrum. 
-An improvement in the accuracy of the theoretical predictions could be achieved by not including  in the production cross-section the contribution from double $b$-hadron jets. %, which in QCD are produced $\sim95\%$ of the time by the GSP channel.  
+An improvement in the accuracy of the theoretical predictions could be achieved by not including  in the production cross-section the contribution from double $b$-hadron jets, which in QCD % a parton shower MC generator 
+are produced $\sim95\%$ of the time by the GSP channel.  
+
+
 %Ref.~\cite{Salam.AccurateHQ} proposes a new observable to free the heavy-flavour spectrum calculation from collinear logarithms, and improve the accuracy of the theoretical prediction,
 %for improving the accuracy of the prediction of the heavy-flavour spectrum 
 %by not including in the production cross-section the contribution from double $b$-hadron jets. Final-state logarithms are removed by employing a recently developed jet reconstruction scheme, the flavour-$k_t$ algorithm~\cite{flavorkt}, which maintains the correspondence between partonic flavour and jet flavour. Specifically, jets containing a $b$-quark and a $b$-antiquark, which in a parton shower MC generator are produced $\sim95\%$ of the time by the GSP channel, are labeled in an IR-safe way as light jets and removed from the $b$-jet spectrum.
@@ -76,22 +79,21 @@ An improvement in the accuracy of the theoretical predictions could be achieved 
 %\label{fig:qcd_diagrams}
 %\end{figure}
 %
+
 %\\[5mm]
 %{\em Rejection of background in Standard Model analyses and beyond-SM searches}
-In addition, efficient tagging of merged $b$-jets can provide an important handle to understand, estimate and/or reject $b$-tagged backgrounds to SM and BSM analyses at the LHC 
+
+Efficient tagging of merged $b$-jets can provide an important handle to understand, estimate and/or reject $b$-tagged backgrounds to SM analyses at the LHC 
 %Within the Standard Model (SM) a range of QCD production channels exists for heavy-quark jets, either via pure QCD production or in association with heavy bosons ($W, Z, H$). These channels are expected to produce a mixture of single-$B$ and double $b$-hadron jets. On the other hand, $b$-quarks enter in many collider searches, notably because they are produced in the decays of various SM particles, \eg top quarks, the $Z$ boson and the Higgs boson (if light), and of numerous particles appearing in proposed extensions of the SM. These are expected to produce essentially single-$B$ jets. The ability to distinguish double- from single-$B$ jets is thus of wide application. 
 %SM physics analyses 
-that rely on the presence of single $b$-jets in the final state, such as top quark physics %(either in the $t\bar{t}$ or the single top channels) 
-or associated Higgs production.  %($WH\rightarrow\ell\nu b\bar{b}$ and $ZH\rightarrow\nu\nu b\bar{b}$). 
-These processes  suffer from backgrounds that can be in part removed by a merged $b$-jet tagger. 
+that rely on the presence of single $b$-jets in the final state, such as top quark physics (either in the $t\bar{t}$ or the single top channels) or associated Higgs production ($WH\rightarrow\ell\nu b\bar{b}$ and $ZH\rightarrow\nu\nu b\bar{b}$). These processes  suffer from backgrounds that can be in part removed by a merged $b$-jet tagger. 
 %These are the reducible background from QCD, which can produce double $b$-hadron jets as discussed in the previous subsection, and the irreducible background due to $W$ bosons plus $b$-jets. 
 %While at LO only single $b$-jets are present in $W+b$ production, at NLO jets containing two $b$-hadrons are expected due to the contribution of diagrams containing a $gb\bar{b}$ vertex.
 %One of the leading order diagrams in $W$ + $b$-jets corresponds to $W+g$ followed by $g\to b\bar{b}$ with the $b$-pair produced at small angles and reconstructed as a merged jet. 
 %The relevance of merged $b$-jets in this channel is supported by NLO calculations of the production of $W$ bosons and two jets with at least one $b$-quark at the LHC~\cite{Campbell:2006}. For jets with $\pt > 25$ GeV, and $|\eta| < 2.5$, they indicate that the cross section for $W(b\bar{b})j$ is almost a factor of two higher than $Wb\bar{b}$, where $(b\bar{b})$ denotes the case in which the two $b$-quarks are merged into the same jet. 
-
-%Jets containing a single $b$-quark or antiquark
-%%Single $b$-jets 
-%also enter in many BSM collider searches, notably because $b$-quarks are produced in the decays both of heavy SM particles (top quarks, the $Z$ boson and the Higgs boson), and of particles appearing in proposed extensions of the SM. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to close-by $b\bar{b}$ pairs.
+Jets containing a single $b$-quark or antiquark
+%Single $b$-jets 
+also enter in many BSM collider searches, notably because $b$-quarks are produced in the decays both of heavy SM particles (top quarks, the $Z$ boson and the Higgs boson), and of particles appearing in proposed extensions of the SM. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to close-by $b\bar{b}$ pairs.
 
 %New physics searches with $b$-quarks in the final state also benefit from rejection of QCD and $W+b$ backgrounds which have $b$-jets arising from gluon splitting. 
 % TOM % An example is the search for supersymmetry in the framework of generic $R$-parity conserving models~\cite{ATLAS-CONF-2011-098}. The superpartners of quarks and gluons could be copiously produced via the strong interaction at the LHC. The partners of the right- and left-handed quarks, \~{q}$_{L}$ and  \~{q}$_{R}$, can mix to form two mass eigenstates and, since mixing is proportional to the corresponding fermion masses, it becomes more important for the third generation producing sbottom and stop significantly lighter than the other squarks. In this model, thus, sbottom and stop production is expected to dominate. As they chain decay to $b$-quarks and the lightest supersymmetric particle, the signature for this channel is \met\ + (single) $b$-jets. The ability to distinguish single $b$-jets from jets containing two $b$-hadrons is thus here of wide application to reduce SM backgrounds giving rise to merged $b$-jets.
