@@ -5,8 +5,8 @@
 \chapter{Fraction of double $b$-hadron jets in QCD $b$-production}\label{ch:gbbfraction}
 
 
-In this chapter we apply the newly developed $g \rightarrow b\bar{b}$ tagging tool to measure the fraction of merged $b$-jets in QCD $b$-jet production. The fractions are determined both for an inclusive $b$-jet sample with $|\eta|<2.1$, and for exclusive samples enriched in single or in merged $b$-jet.
-The measured fractions are in excellent agreement, within the experimental uncertainties, with the theoretical prediction from a parton shower Monte Carlo simulation of hadronic collisions.
+In this chapter we apply the newly developed $g \rightarrow b\bar{b}$ tagging tool to measure the fraction of merged $b$-jets in QCD $b$-jet production. The fractions are determined both for an inclusive $b$-jets sample with $|\eta|<2.1$, and for exclusive samples enriched in single or in merged $b$-jet.
+The measured fractions are in excellent agreement, within the experimental uncertainties, with the theoretical predictions from a simulation of hadronic collisions.
 %The chapter is organized as follows. Section~\ref{sec:FitIntro} introduces the concept of template fitting. Section~\ref{sec:LLFits} describes the statistical method used to perform the template fits.
 
 
@@ -14,24 +14,24 @@ The measured fractions are in excellent agreement, within the experimental uncer
 \section{Introduction}\label{sec:FitIntro}
 %------------------------------------------------------------------------
 
-The $g\rightarrow b\bar{b}$ tagger developed and described in the previous chapters produces for every $b$-tagged jet a number between 0 and 1, the double $b$-hadron likelihood (LL). The closer this number if to 1 (0), the more likely the $b$-tagged jet is single (merged). When used as a tagger, a working point (Wp) is chosen so that if LL$\geq$Wp the jet is flagged as single. The value of the Wp is chosen as a compromise between good efficiency (the lower the Wp, the higher the probability that an actual single $b$-jet will not be missed by the tagger), and rejection power (the higher the Wp the higher the probability that a non-single $b$-jet will not be incorrectly flagged as single). Depending on the necessities of the particular analysis, an appropriate Wp is to be chosen form the plot in Figure~\ref{fig:performanceinbins}, and in particular the performance results presented in Chapter~\ref{ch:mva} correspond to 50\% and 60\% efficiency working points, two reasonable choices.
+The $g\rightarrow b\bar{b}$ tagger developed and described in the previous chapters produces for every $b$-tagged jet a number between 0 and 1, the double $b$-hadron likelihood (LL). The closer this number if to 1 (0), the more likely the $b$-tagged jet is single (merged). When used as a tagger, a working point (Wp) is chosen so that if LL$\geq$Wp the jet is flagged as single. The value of Wp is chosen as a compromise between good efficiency (the lower the Wp, the lower the probability that an actual single $b$-jet will be missed by the tagger), and rejection power (the higher the Wp the lower the probability that a non-single $b$-jet will be incorrectly flagged as single). Depending on the necessities of the particular analysis, an appropriate Wp is to be chosen from the plot in Figure~\ref{fig:performanceinbins}. In particular, the performance results presented in Chapter~\ref{ch:mva} correspond to the 50\% and 60\% efficiency working points, two reasonable choices.
 
-However, the values of LL in a given sample offer more information than just a jet-by-jet tagger: the distribution of LL allows to measure the composition of the particular sample. In effect, a $b$-tagged jet has a certain probability to actually originate from the hadronization of a:
+However, the values of LL in a given sample offer more information than just a jet-by-jet tagger: the distribution of LL allows to measure the composition of the particular sample. In effect, a $b$-tagged jet has a certain probability to actually originate from the hadronization of:
 
 \begin{itemize}
 \item
-$b$: $b$-quark
+$b$: a $b$-quark
 \item
 $b\bar{b}$: gluon splitting into a $b\bar{b}$ pair
 \item
-$c$: $c$-quark
+$c$: a $c$-quark
 \item
 $c\bar{c}$: gluon splitting into a $c\bar{c}$ pair
 \item
-$\ell$: light parton ($u$, $d$, $s$ quarks, or a $g$ not splitting into heavy flavor pair).
+$\ell$: a light parton ($u$, $d$, $s$ quarks, or a $g$ not splitting into heavy flavor pair).
 \end{itemize}
 
-The expected distribution of LL is different for each of the five cases. This is illustrated in Figure~\ref{fig:templates}, which plots LL for each hypothesis for jets in one $\pt$ range, representative of the energy covered in the analysis ($80<\pt\leq110$~GeV). These distributions are henceforth called ``templates''. One can determine the composition of a given sample by measuring the values of LL of the $b$-tagged jets and estimating the fractions needed from each of the templates to accurately describe the experimental LL distribution. This process is known as ``template fitting''.
+The expected distribution of LL is different for each of the five cases. This is illustrated in Figure~\ref{fig:templates}, which plots LL for each hypothesis for jets in a $\pt$ range representative of the energy covered in the analysis ($80<\pt\leq110$~GeV). These distributions are henceforth called ``templates''. One can determine the composition of a given sample by measuring the values of LL of the $b$-tagged jets and estimating the fractions needed from each of the templates to accurately describe the experimental LL distribution. This process is known as ``template fitting''.
 
 \begin{figure}[tp]
 \centering
@@ -44,9 +44,11 @@ The expected distribution of LL is different for each of the five cases. This is
 
 
 
-\emph{The shape of the templates in Figure~\ref{fig:templates} can be intuitively understood. The $b$ and $b\bar{b}$ templates behave as expected, respectively peaking at high and low values of LL. The $c$ template resembles its $b$ counterpart. The $c\bar{c}$ although similar to the $b\bar{b}$ template, also exhibits a spike for large values of LL. } %This was to be expected, given that a $c$-quark fragments mainly into into $D$-mesons which have a measurable $c\tau$ of $\sim$300$\mu$m, although shorter than the  $c\tau$ of $\sim$500$\mu$m corresponding to the $B$-mesons produced in $b$-quark fragmentation. 
-\emph{This was to be expected, given that a $c$-quark fragments mainly into into $D$-mesons which have a measurable $c\tau$ of $\sim$300$\mu$m shorter than the  $c\tau$ of $\sim$500$\mu$m corresponding to the $B$-mesons produced in $b$-quark fragmentation. Single and merged $c$-jets are thus the main background to $b$- and $b\bar{b}$-jets. The template of light jets } %on the contrary, do not contain large decay-length secondary vertices,and its distribution is driven by...}
-\emph{is comparable to the distributions observed in single $b$/$c$ jets. This can be traced to observation that gluons and light-quarks jets tend to be narrower and have lower track multiplicity than merged jets, leading to more single-like likelihood distributions (see Section~\ref{sec:gbbKine}).}
+The shape of the templates in Figure~\ref{fig:templates} can be intuitively understood. The $b$ and $b\bar{b}$ templates behave as expected, respectively peaking at high and low values of LL. The $c$ template resembles its $b$ counterpart. The $c\bar{c}$ although similar to the $b\bar{b}$ template, also exhibits a spike for large values of LL.  
+%This was to be expected, given that a $c$-quark fragments mainly into into $D$-mesons which have a measurable $c\tau$ of $\sim$300$\mu$m shorter than the  $c\tau$ of $\sim$500$\mu$m corresponding to the $B$-mesons produced in $b$-quark fragmentation. 
+This was to be expected, given that $c$-jets have less tracks than $b$-jets: they decay into to $D$ mesons, $c \rightarrow D \rightarrow \mbox{light hadrons}$, as opposed to $b$-jets which present a longer decay chain, $b \rightarrow B \rightarrow D\rightarrow \mbox{light hadrons}$. They also show smaller angular separation (width), since $m_D < m_B$  ($m_D\sim 1.9$~GeV and $m_B \sim 5.3$~GeV).
+Single and merged $c$-jets are thus the main background to $b$- and $b\bar{b}$-jets. The template of light jets  %on the contrary, do not contain large decay-length secondary vertices,and its distribution is driven by...}
+is comparable to the distributions observed in single $b$/$c$ jets. This can be traced to observation that gluons and light-quarks jets tend to be narrower and have lower track multiplicity than heavy-flavour jets, leading to a more single-like likelihood distributions (see Section~\ref{sec:gbbKine}).
 
 
 
@@ -65,7 +67,7 @@ In the case of data binned into a histogram, one approach is to use a least-squa
  \label{eq:chi2}
 \end{equation}
 %
-where $d_i$ is the number of events in the real data that fall into bin $i$; $n$ is the number of bins, and $f_i$ is the predicted number of events in bin $i$, defined by
+where $d_i$ is the number of data events that fall into bin $i$; $n$ is the number of bins, and $f_i$ is the predicted number of events in bin $i$, defined by
 %
 \begin{equation}
 f_i = N_D\sum^m_{j=1} p_j \cdot a_{ji}/N_j
@@ -73,7 +75,7 @@ f_i = N_D\sum^m_{j=1} p_j \cdot a_{ji}/N_j
 %
 with $p_j$, the proportions of the different $m$ sources; $a_{ij}$, the number of Monte Carlo events from source $j$ in bin $i$, with $i=1,2,...,n$; $N_D$, the total number of events in the data sample; and $N_j$, the total number in the MC sample for source $j$.
 
-This $\chi^2$ assumes that the distribution for $d_i$ is Gaussian and that $a_{ij}$ has no uncertainty. The distribution of $d_i$ is of course Poisson, but the Gaussian $N(\mu = d_i,\sigma = \sqrt{d_i})$ is a good approximation to the Poisson for large numbers. Unfortunately it often happens that many of the $d_i$ are small, making the $\chi^2$ value given in Equation~\ref{eq:chi2} inappropiate to describe the problem.  Instead one can go back to the original Poisson distribution, and write down the probability for observing a particular $d_i$ as
+This $\chi^2$ assumes that the distribution for $d_i$ is Gaussian and that $a_{ij}$ has no uncertainty. The distribution of $d_i$ is of course Poisson, but the Gaussian $N(\mu = d_i,\sigma = \sqrt{d_i})$ is a good approximation for large  $d_i$.  Unfortunately it often happens that many of the $d_i$ are small, making the $\chi^2$ value given in Equation~\ref{eq:chi2} inappropiate to describe the problem.  Instead one can go back to the original Poisson distribution, and write down the probability for observing a particular $d_i$ as
 %
 \begin{equation}
 e^{-f_i} \frac{f_i^{d_i}}{d_i!} 
@@ -85,30 +87,30 @@ and the estimates of the proportions $p_j$ are found by maximizing the total lik
 \mathcal{L} = \prod^n_{i=1} e^{-f_i} \frac{f_i^{d_i}}{d_i!}.
 \end{equation}
 %
-This accounts correctly for the small numbers of data events in the bins.  It is often referred to as a ``binned maximum likelihood'' fit. Actually this formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exists, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. 
+This accounts correctly for bins with small numbers of events.  It is often referred to as a ``binned maximum likelihood'' fit. Actually this formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exists, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. 
 
 
-The technique of binned maximum likelihood fit is fast and analytical; unfortunately, this method only works satisfactory with weighted events if the weights do not differ very much~\cite{Barlow1993219}.
-We observed that the obtained uncertainties were unnaturally large.  This was traced to the use of events with rather different weights.
+The technique of binned maximum likelihood fit is fast and analytical; %unfortunately, 
+however, we observed that the obtained uncertainties were unnaturally large.  This was traced to the use of events with rather different weights. In effect, Ref.~\cite{Barlow1993219} reports that this method only works satisfactory with weighted events if the weights do not differ very much~\cite{Barlow1993219}.
 We had thus to move to a different, more general technique, an ``unbinned maximum likelihood fit'',  which allows arbitrary weights and has the further advantage of using all the information contained in the data sample; although it is not analytical but numerical and iterative. 
 %The binned maximum likelihood fits is a technique in general use. Unfortunately  this method does not behave well in problems where it is necessary to apply weights to the Monte Carlo, such as in our composite dijet sample. We will use instead a different technique for fitting, an ``unbinned maximum likelihood fit'', which does support weighted datasets. %But use with care. Error analysis in ML fits to weighted unbinned data can be complicated...
 %Binned or unbinned MF fit. %Roofit presentation page 112
 %In most RooFit applications it doesn't matter. Internally binned data is represented the same way as unbinned data, a ROOT TTree with the bin coordinates.
 
-The likelihood to be maximized in an unbinned dataset of events $\{x_k\}^N_{k=1}$ is
+The likelihood to be maximized in an unbinned dataset of events $\{\vec{x}_k\}^N_{k=1}$ is the product of the $F(\vec{x},\vec{p})$ PDF over all events
 %
 \begin{equation}
-\mathcal{L}(\vec{x};\vec{p}) =\prod^N_{k=1} F(x_k;\vec{p})
+\mathcal{L}(\vec{x};\vec{p}) =\prod^N_{k=1} F(\vec{x}_k;\vec{p})
 \end{equation}
 %
-which, can be rewritten in terms of the probability of observing an event from source $j$ in the sample,
+which, can be rewritten in terms of distribution the probability of oberving an event from source $j$ in the sample,
 %
 \begin{equation}
-\mathcal{L} =  \prod^N_{k=1} \sum^m_{j=1} n_j  \mathcal{P}_j(x_k)
+\mathcal{L} =  \prod^N_{k=1} \sum^m_{j=1} p_j  \mathcal{T}_j(\vec{x}_k)
  \label{eq:LLgeneral}
 \end{equation}
 %
-where $\mathcal{P}_j$ are the PDFs that represent the total probability for each of the $m$ hypothesis, $p_j=n_j$ are the parameters representing the number of events for the $j^{th}$ hypothesis, and $N$ is the total number of input data points.
+where $\mathcal{T}_j$ are the PDFs that represent the distribution of $\vec{x}_k$ for each of the $m$ hypothesis, $p_j$ are the parameters representing the proportions for the $j^{th}$ hypothesis, and $N$ is the total number of input data points.
 
 %\subsubsection{Extended maximum likelihood fits}
 
@@ -128,15 +130,14 @@ where $\mathcal{P}_j$ are the PDFs that represent the total probability for each
 %%
 %The fit then finds the values of $n_j$, the number of events for each hypothesis $j$. 
 
-\emph{In the case of one dimensional fits, $N=1$ in Equation~\ref{eq:LLgeneral}, and the total PDF (also called ``model'' in the following) can be expressed as a sum of multiple probability density functions}
+The PDF in~\ref{eq:LLgeneral} is the sum  of multiple probability density functions. Mathematically, the sum of two probability density functions is also a normalized probability density function as long as the coeffients add up to 1 (for simplicity we take $\vec{x}_k=x_k$),
 % 
-\begin{equation}
-M(x) = c_0 \cdot F_0(x) + c_1 \cdot F_1(x)+...+c_{m-1}F_{m-1}(x)+ (1-\sum^{m-1}_{i=1}c_i) F_m(x)
+\begin{equation} 
+F(x_k) = p_0 \cdot \mathcal{T}_0(x_k) + p_1 \cdot \mathcal{T}_1(x_k)+...+p_{m-1}\mathcal{T}_{m-1}(x_k)+ (1-\sum^{m-1}_{i=1}p_i) \mathcal{T}_m(x_k).
 \end{equation}
 %
-Mathematically, the sum of two probability density functions is also a normalized probability density function as long as the coeffients add up to 1. 
 If the sum of these coefficients becomes larger than one, the remainder coefficient will be assigned a negative fraction. As long as the summed p.d.f is greater than zero everywhere, this is not ill-defined. %but may pose some problems in the interpretation
-
+In the case of the present analysis $x_k$ represents the double $b$-hadron likelihood, LL. 
 
 The fits were performed in this thesis by means of the RooFit Toolkit for data modelling~\cite{RooFit}. Performing a fit consists of minimizing the negative log-likelihood of a PDF calculated over the data set % (for simplicity we drop for a moment the extra term)
 %
@@ -196,13 +197,13 @@ Likelihood Monte Carlo templates were derived from the simulated dijet sample de
 The likelihood template fits are performed using the unbinned maximum likelihood technique (see Section~\ref{sec:LLFits}). A separated fit is carried out for each $\pt$ bin. Different combinations of templates were used to fit the likelihood distribution in data. The first implemented model uses all five templates,
 %
 \begin{equation}
-F(x) = n_s \cdot S(x) + n_m \cdot M(x) + n_l \cdot L(x) + n_{sc} \cdot S_c(x) + n_{mc} \cdot M_c(x)
+F(x) = p_s \cdot S(x) + p_m \cdot M(x) + p_l \cdot L(x) + p_{sc} \cdot S_c(x) + p_{mc} \cdot M_c(x)
 \end{equation}
 %
-with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for the different hypothesis; and $n_s$, $n_m$, $n_l$, $n_{sc}$ and $n_{mc}$ the free parameters representing the number of expected events for all components: single $b$, merged $b$, light, single $c$ and merged $c$-jets, respectively.  %The initial estimates for the parameters were obtained from the {\sc Pythia} Monte Carlo sample. 
+with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for the different hypothesis; and $p_s$, $p_m$, $p_l$, $p_{sc}$ and $p_{mc}$ the free parameters representing the number of expected events for all components: single $b$, merged $b$, light, single $c$ and merged $c$-jets, respectively.  %The initial estimates for the parameters were obtained from the {\sc Pythia} Monte Carlo sample. 
 
 
-\emph{The sensitivity of the fit result to fixing the relative flavour fractions  $c/b$ and $c\bar{c}/b\bar{b}$, for each $\pt$ bin, to the value extracted from the simulation was investigated by carrying out separate fits with a model with three free parameters only. This was motivated by the fact that templates for single $c$- (merged $c$-)  and single $b$-jets (merged $b$-jets) look very similar leading to inestabilities in the fitted $b$- and $c$-flavour fractions, caused by the high correlations between these components.  Table~\ref{tb:correlations} shows an example covariance matrix.  Parameters $n_s$ and $n_{sc}$ and, $n_m$ and $n_{mc}$ present the highest correlation coefficients ($\sim -0.6$, and $\sim -0.8$, respectively).The fractions in the {\sc Pythia} simulation  as a function of the jet $\pt$ are displayed in Fig.~\ref{fig:truefractions} for reference.}
+\emph{The sensitivity of the fit result to fixing the relative flavour fractions  $c/b$ and $c\bar{c}/b\bar{b}$, for each $\pt$ bin, to the value extracted from the simulation was investigated by carrying out separate fits with a model with three free parameters only. This was motivated by the fact that templates for single $c$- (merged $c$-)  and single $b$-jets (merged $b$-jets) look very similar leading to inestabilities in the fitted $b$- and $c$-flavour fractions, caused by the high correlations between these components.  Table~\ref{tb:correlations} shows an example covariance matrix.  Parameters $p_s$ and $p_{sc}$ and, $p_m$ and $p_{mc}$ present the highest correlation coefficients ($\sim -0.6$, and $\sim -0.8$, respectively).The fractions in the {\sc Pythia} simulation  as a function of the jet $\pt$ are displayed in Fig.~\ref{fig:truefractions} for reference.}
 
 
 \begin{figure}[tp]
@@ -221,12 +222,12 @@ with $S(x)$, $M(x)$, $L(x)$, $S_c(x)$ and $M_c(x)$ being the likelihood PDFs for
 \centering
 \begin{tabular}{ | c | c | c | c | c | c |}
 \hline
-  Parameter & $n_{mc}$  & $n_b$  & $n_m$  & $n_{sc}$  &  $n_l$ \\ \hline
-  $n_{mc}$   & 1.000 &-0.464 &-0.813&  0.257 &-0.206 \\ \hline
-  $n_b$     & -0.464 & 1.000 & 0.325& -0.642 &-0.323 \\ \hline
-  $n_m$     &-0.813 & 0.325 & 1.000& -0.007& -0.117 \\ \hline
-  $n_{sc}$   &0.257 &-0.642 &-0.007 & 1.000 &-0.300 \\ \hline
-  $n_l$      & -0.206& -0.323 &-0.117 &-0.300 & 1.000 \\ \hline
+  Parameter & $p_{mc}$  & $p_s$  & $p_m$  & $p_{sc}$  &  $p_l$ \\ \hline
+  $p_{mc}$   & 1.000 &-0.464 &-0.813&  0.257 &-0.206 \\ \hline
+  $p_s$     & -0.464 & 1.000 & 0.325& -0.642 &-0.323 \\ \hline
+  $p_m$     &-0.813 & 0.325 & 1.000& -0.007& -0.117 \\ \hline
+  $p_{sc}$   &0.257 &-0.642 &-0.007 & 1.000 &-0.300 \\ \hline
+  $p_l$      & -0.206& -0.323 &-0.117 &-0.300 & 1.000 \\ \hline
 \end{tabular}
 \caption{Parameter correlation coefficients among the parameters that are adjusted to data in the unbinned maximum likelihood fit to data.}
 \label{tb:correlations}
@@ -244,7 +245,7 @@ $\pt>200$ GeV: above $\sim$20\% merged $b$-jets
  %over 95\% rejection at 50\% eff.
 \end{itemize}
 
-\emph{The fraction of single $b$-jets changes accordingly, ranging from 60\% for low transverse momentum jets, to  40\% single $b$-jets in the highest $\pt$ bin.  The fractions of single and merged $c$-jets are fixed to their $b$-counterparts and present the same tendency (not shown in table~\ref{tb:fitfractions} for brevity) . The $n_l$ parameter representing the fraction of light jets in the data sample exhibits the largest statistical fluctuations...}
+\emph{The fraction of single $b$-jets changes accordingly, ranging from 60\% for low transverse momentum jets, to  40\% single $b$-jets in the highest $\pt$ bin.  The fractions of single and merged $c$-jets are fixed to their $b$-counterparts and present the same tendency (not shown in table~\ref{tb:fitfractions} for brevity) . The $p_l$ parameter representing the fraction of light jets in the data sample exhibits the largest statistical fluctuations...}
 \emph{being in most cases consistent with 0\%.}
 
 
@@ -257,7 +258,7 @@ $\pt>200$ GeV: above $\sim$20\% merged $b$-jets
 \begin{tabular}{ | c || c | c | c || c | c | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jet} & \multicolumn{3}{c||}{merged $b$-jet} & \multicolumn{3}{c||}{~light jet~}\\ \cline{2-10}
-    (GeV ) & $n_s$ & pred.& pull & $n_m$ & pred.& pull & $n_l$ & pred.& pull \\ \hline
+    (GeV ) & $p_s$ & pred.& pull & $p_m$ & pred.& pull & $p_l$ & pred.& pull \\ \hline
    40 - 60 &  62$\pm$3 & 56 & ~1.57 &  ~~3$\pm$1   & ~3 & ~0.05 &  ~4$\pm$4  & 12 & -1.75\\ 
    60 - 80 &  62$\pm$1 & 60 & ~1.03 &  5.2$\pm$0.4 & ~5 & -0.01 &  ~2$\pm$2  & ~5 & -1.13\\ 
    80 - 110&  57$\pm$1 & 58 & -0.62 &  8.5$\pm$0.4 & ~7 & ~0.70 &  ~3$\pm$2  & ~5 & -0.39\\ 
@@ -400,7 +401,7 @@ The idea behind the anti-b-tagging requirement is to eliminate FCR events for wh
 \begin{tabular}{ | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jet}\\ \cline{2-4}
-    (Ge ) & ~~~~~~~$n_s$~~~~~~ & pythia prediction & ~~~~~~pull~~~~~~\\ \hline
+    (Ge ) & ~~~~~~~$p_s$~~~~~~ & pythia prediction & ~~~~~~pull~~~~~~\\ \hline
    40 - 60 &  99$\pm$11 & 84   & ~1.37 \\  
    60 - 80 &  82$\pm$5  &  87  & -1.01\\ 
    80 - 110&  84$\pm$5  &  88 &  -0.72\\ 
@@ -440,7 +441,7 @@ The idea behind the anti-b-tagging requirement is to eliminate FCR events for wh
 \begin{tabular}{ | c || c | c | c ||}
   \hline
   Jet $\pt$ & \multicolumn{3}{c||}{merged $b$-jet}\\ \cline{2-4}
-    (GeV ) & ~~~~~~~$n_m$~~~~~~ & pythia prediction & ~~~~~~pull~~~~~~~~~~\\ \hline
+    (GeV ) & ~~~~~~~$p_m$~~~~~~ & pythia prediction & ~~~~~~pull~~~~~~~~~~\\ \hline
    40 - 60 &  ~~4$\pm$1  &    ~~3  &  ~0.26  \\  
    60 - 80 &  6.1$\pm$0.5  &  5.9  &  ~0.09  \\ 
    80 - 110&  9.4$\pm$0.5  &  8.2  &  ~0.55  \\ 
