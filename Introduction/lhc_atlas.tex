@@ -117,13 +117,15 @@ The ATLAS detector coordinate system is used to describe the position of particl
 direction. The azimuthal angle $\phi$ is measured as usual around the beam axis, and the polar angle $\theta$ is the angle from the beam axis. The pseudorapidity is defined as $\eta = -\ln (\tan (\frac{\theta}{2}))$, regions of low $\eta$ are referred to as ``central'', and regions of high $\eta$ are referred to as ``forward''. % (in the case of massive objects such as jets, the rapidity y = 1/2ln[(E + pz )/(E − pz )] is used). 
 The transverse momentum $\pt$ is defined in the $x-y$ plane unless stated otherwise. The distance $\Delta R$ in the pseudorapidity-azimuthal angle space is defined as $\Delta R = \sqrt{ \Delta \eta^2  + \Delta \phi^2}$ .
 
+
 \begin{figure}[htbp]
   \begin{center}
-      \includegraphics[width=0.9\textwidth]{Fig2/ATLASDetector.pdf}
+      \includegraphics[angle=90,width=1\textwidth]{Fig2/ATLASDetector.pdf}
     \caption{The ATLAS Detector.}
     \label{fig:ATLAS}
   \end{center}
 \end{figure}
+
 
 To meet the extremely high demands that the LHC luminosity places on the speed with which ATLAS must record data, a dedicated trigger and data acquisition (TDAQ) system is used. The interaction rate at the design luminosity is approximately 1~GHz, while the event data recording, based on technology and resource restrictions, is limited to about $\sim$200~Hz. This requires a high rejection of minimum-bias processes while maintaining maximum efficiency for the new physics. The Level-1 (L1) trigger system uses a
 subset of the total detector information to make a decision on whether or not to continue processing an event, reducing the data rate to approximately 75~kHz (limited by the bandwidth of the readout system, which is upgradeable to~100 kHz). The subsequent two levels, collectively known as the high-level trigger (HLT), are the Level-2 (L2) trigger and the Event Filter (EF). They provide the reduction to a final data-taking rate of approximately 200 Hz. 
