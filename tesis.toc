@@ -1,2 +1,82 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {chapter}{\numberline {2}Summary and conclusions}{5}
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {chapter}{\numberline {2}Theoretical introduction}{7}
+\contentsline {section}{\numberline {2.1}The Standard Model}{7}
+\contentsline {section}{\numberline {2.2}Perturbative QCD}{13}
+\contentsline {section}{\numberline {2.3}Monte Carlo tools}{17}
+\contentsline {subsubsection}{Pythia}{19}
+\contentsline {subsubsection}{Herwig$++$}{20}
+\contentsline {subsubsection}{Detector simulation}{21}
+\contentsline {section}{\numberline {2.4}Jet physics}{22}
+\contentsline {subsection}{\numberline {2.4.1}Jet algorithms}{23}
+\contentsline {subsubsection}{Fixed cone jet finder in ATLAS}{23}
+\contentsline {subsubsection}{Sequential recombination algorithms}{25}
+\contentsline {subsection}{\numberline {2.4.2}Jet substructure}{29}
+\contentsline {section}{\numberline {2.5}Production of {\em b\hspace {0.5mm}}-jets}{31}
+\contentsline {section}{\numberline {2.6}Identification of {\em b\hspace {0.5mm}}-jets from gluon splitting}{36}
+\contentsline {subsection}{\numberline {2.6.1}The measurement of the inclusive $b$-jet spectrum}{36}
+\contentsline {subsection}{\numberline {2.6.2}Rejection of background in Standard Model analyses and beyond-SM searches}{37}
+\contentsline {subsection}{\numberline {2.6.3}Jet substructure and boosted objects}{39}
+\contentsline {chapter}{\numberline {3}The ATLAS Detector at the LHC}{41}
+\contentsline {section}{\numberline {3.1}The Large Hadron Collider}{41}
+\contentsline {subsection}{\numberline {3.1.1}Luminosity and pile-up}{45}
+\contentsline {section}{\numberline {3.2}The ATLAS Detector}{48}
+\contentsline {subsection}{\numberline {3.2.1}Inner Tracking System}{51}
+\contentsline {subsubsection}{The Pixel detector}{51}
+\contentsline {subsubsection}{The SCT}{53}
+\contentsline {subsubsection}{The TRT}{53}
+\contentsline {subsection}{\numberline {3.2.2}The Calorimeter System}{54}
+\contentsline {subsubsection}{Liquid argon EM calorimeter}{56}
+\contentsline {subsubsection}{The hadronic calorimeter}{58}
+\contentsline {subsection}{\numberline {3.2.3}The Muon System}{61}
+\contentsline {subsection}{\numberline {3.2.4}Forward Detectors}{63}
+\contentsline {subsection}{\numberline {3.2.5}Trigger and Data Adquisition System}{63}
+\contentsline {subsection}{\numberline {3.2.6}ATLAS performance and data quality}{65}
+\contentsline {chapter}{\numberline {4}Event reconstruction and \emph {\textbf {b}}-Tagging }{68}
+\contentsline {section}{\numberline {4.1}Jet reconstruction and calibration}{68}
+\contentsline {subsubsection}{Jet calibration}{70}
+\contentsline {subsubsection}{Jet energy scale uncertainties for the EM+JES scheme}{74}
+\contentsline {section}{\numberline {4.2}Reconstruction of charged particle tracks}{77}
+\contentsline {section}{\numberline {4.3}Vertex reconstruction}{81}
+\contentsline {section}{\numberline {4.4} $b$-jet Tagging}{82}
+\contentsline {subsubsection}{Association of tracks to jets}{84}
+\contentsline {subsection}{\numberline {4.4.1}$b$-tagging algorithms}{85}
+\contentsline {subsubsection}{Impact parameter based $b$-tagging algorithms }{85}
+\contentsline {subsubsection}{Secondary vertex based $b$-tagging algorithms }{90}
+\contentsline {subsubsection}{Algorithm combinations and performance}{93}
+\contentsline {subsubsection}{The MV1 tagging algorithm}{94}
+\contentsline {subsection}{\numberline {4.4.2}$b$-tagging calibration}{95}
+\contentsline {chapter}{\numberline {5}Single and double \emph {\textbf {b}}-hadron jet properties}{98}
+\contentsline {section}{\numberline {5.1}Data sample}{98}
+\contentsline {section}{\numberline {5.2}Monte Carlo sample}{100}
+\contentsline {section}{\numberline {5.3}Event and jet selection}{100}
+\contentsline {subsection}{\numberline {5.3.1}Track selection}{104}
+\contentsline {section}{\numberline {5.4}Kinematic differences between single and double \emph {\textbf {b}}-hadron jets}{106}
+\contentsline {subsubsection}{Jet track multiplicity}{107}
+\contentsline {subsubsection}{Jet width}{110}
+\contentsline {subsubsection}{Jet Mass}{112}
+\contentsline {subsubsection}{$\Delta R$ between leading tracks}{114}
+\contentsline {subsubsection}{Maximum $\Delta R$ between track pairs}{115}
+\contentsline {subsubsection}{Subjet multiplicity}{116}
+\contentsline {subsubsection}{$\Delta R$ between the axes of two $k_t$ subjets}{117}
+\contentsline {subsubsection}{$N$-subjettiness variables}{119}
+\contentsline {subsubsection}{Jet eccentricity}{122}
+\contentsline {section}{\numberline {5.5}Validation of the jet variables in data}{124}
+\contentsline {chapter}{\numberline {6}Identification of double \emph {\textbf {b}}-hadron jets}{131}
+\contentsline {section}{\numberline {6.1}Multivariate methods}{131}
+\contentsline {subsubsection}{Likelihood ratio estimators}{132}
+\contentsline {subsubsection}{Neural networks}{135}
+\contentsline {subsubsection}{Decision trees}{136}
+\contentsline {section}{\numberline {6.2}The double $b$-hadron jet tagger}{136}
+\contentsline {subsubsection}{Selection of an MVA method}{137}
+\contentsline {section}{\numberline {6.3}Results}{140}
+\contentsline {section}{\numberline {6.4}Systematic uncertainties}{143}
+\contentsline {section}{\numberline {6.5}Other Monte Carlo generators}{151}
+\contentsline {chapter}{\numberline {7}Fraction of double $b$-hadron jets in QCD $b$-production}{155}
+\contentsline {section}{\numberline {7.1}Introduction}{155}
+\contentsline {section}{\numberline {7.2}Unbinned maximum likelihood fits}{158}
+\contentsline {section}{\numberline {7.3}Fitting MC templates to data}{161}
+\contentsline {section}{\numberline {7.4}Systematic uncertainties}{164}
+\contentsline {section}{\numberline {7.5}Enriched samples in single and merged $b$-jets}{169}
+\contentsline {subsubsection}{Purified sample in single $b$-jets}{170}
+\contentsline {subsubsection}{Purified sample in merged $b$-jets}{170}
+\contentsline {chapter}{\numberline {8}Summary and conclusions}{175}
