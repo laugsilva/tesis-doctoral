@@ -46,7 +46,8 @@ In order to have sufficient statistics over the entire $\pt$ spectrum, seven sam
 %J5       280-560 GeV
 %J6      560-1120 GeV
 %The $\pt$ distribution for these samples is shown in Fig.~\ref{fig:JXpt}a. 
- For the Monte Carlo $\pt$ distribution (or the distribution of any other observable)  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. The unweighted distribution is shown in Fig.~\ref{fig:JXptNW}. The $\pt$ spectrum obtained after performing this procedure is displayed in Fig.~\ref{fig:JXpt}.
+ For the Monte Carlo $\pt$ distribution (or the distribution of any other observable)  to be compared to that in experimental data, events from the different samples need to be weighted by their respective production cross sections. 
+The (raw) generated distributions are shown in Fig.~\ref{fig:JXptNW}. The $\pt$ spectrum obtained after weighting is displayed in Fig.~\ref{fig:JXpt}, showing that a smooth distribution is obtained, with an even population of events over the whole $\pt$ range.
 
 \begin{figure}[tp]
 \centering
@@ -406,7 +407,7 @@ In spite of its good discrimination power, alternative characterising variables 
 \subsubsection{Subjet multiplicity} 
 
 
-Subjet reconstruction has a similar approach as jet reconstruction but, rather than looking at all clusters (for topocluster jets) in an event, the subjet analysis is limited to objects only within a jet.  The subjet multiplicity is the number of the reconstructed subjets within a jet and it provides information on the distribution of energy and multiplicity of particles within a jet.  A measurement of this observable for quark and gluon jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity~\cite{Snihur1999494}. % the result of measuring this variable on quark- and gluon-initiated jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity. 
+Subjet reconstruction has a similar approach as jet reconstruction but, rather than looking at all clusters (for topocluster jets) in an event, the subjet analysis is limited to objects only within a jet.  The subjet multiplicity is the number of the reconstructed subjets and it provides information on the distribution of energy and multiplicity of particles within a jet.  A measurement of this observable for quark and gluon jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity~\cite{Snihur1999494}. % the result of measuring this variable on quark- and gluon-initiated jets indicates that gluon-initiated jets tend to have on average higher subjet multiplicity. 
 This result is consistent with the QCD prediction that gluons radiate more than quarks.  %and different other analyses % see for instance  http://iopscience.iop.org/1126-6708/1999/09/009/
 %In this case the $k_t$ algorithm is rerun for subjet finding.
 
@@ -616,8 +617,8 @@ a comprehensive programme of data and MC comparisons was carried on. A few examp
 Figures~\ref{fig:datamcinputvarsNTRK} to~\ref{fig:datamcinputvars2TAU2} show distributions of jet track multiplicity, track-jet width, $\Delta R$ between the axes of the two $k_t$ subjets, $\max\{\Delta R(trk,trk)\}$ and $\tau_2$ in two different $\pt$ bins for $b$-tagged jets in dijet Monte Carlo and data events passing the selection described in Section~\ref{sec:EventSelection}.
 The distributions are normalized to unit area to allow for shape comparisons. There is a very good agreement between data and simulation in all cases.
 
-It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects. To study this posibility, the agreement between data and simulation was evaluated in $b$-jets selected with a looser cut of MV1 tagger (70\% efficiency working point) as well as with another $b$-tagging algorithm, the JetFitter. The result is shown for the jet track multiplicity in Figures~\ref{fig:datamcinputvarsNTRKMV170} and~\ref{fig:datamcinputvarsNTRKJETFIT}.The agreement is still very good, suggesting that this compensation is not likely to occur in samples sufficiently enriched in $b$-jets.
-
+It should be remarked that the observed agreement is actually not a direct validation of the description in the MC of the relevant variables, but its convolution with the simulated relative fractions of light-, $c$-, $b$- and $bb$-jets in the $b$-tagged generated jet sample. To some extent, there could be some level of compensation between these two effects. To study this posibility, the agreement between data and simulation was evaluated in $b$-jets selected with a looser cut of MV1 tagger (70\% efficiency working point) as well as with another $b$-tagging algorithm, the JetFitter. The result is shown for the jet track multiplicity in Figures~\ref{fig:datamcinputvarsNTRKMV170} and~\ref{fig:datamcinputvarsNTRKJETFIT}.The agreement is still very good, suggesting that %this compensation is not likely to occur in samples sufficiently enriched in $b$-jets.
+it is not the result of a compensation.
 
 \begin{figure}[tp]
 \centering

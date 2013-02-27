@@ -74,9 +74,9 @@
 \contentsline {chapter}{\numberline {7}Fraction of double {\em b\hspace {.5mm}}-hadron jets in QCD {\em b\hspace {.5mm}}-production}{155}
 \contentsline {section}{\numberline {7.1}Introduction}{155}
 \contentsline {section}{\numberline {7.2}Unbinned maximum likelihood fits}{159}
-\contentsline {section}{\numberline {7.3}Templates to data}{162}
+\contentsline {section}{\numberline {7.3}Measurement for the inclusive QCD sample}{162}
 \contentsline {section}{\numberline {7.4}Systematic uncertainties}{165}
 \contentsline {section}{\numberline {7.5}Enriched single and merged {\em b}-jet samples}{167}
 \contentsline {subsubsection}{Purified sample in single {\em b}-jets}{168}
-\contentsline {subsubsection}{Purified sample in merged {\em b}-jets}{169}
+\contentsline {subsubsection}{Purified sample in merged {\em b}-jets}{170}
 \contentsline {chapter}{\numberline {8}Summary and conclusions}{174}
