@@ -1,5 +1,11 @@
 \begin{thebibliography}{100}
 
+\bibitem{Salam.AccurateHQ}
+Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
+\newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
+  lhc.
+\newblock {\em JHEP}, 0707:026, 2007.
+
 \bibitem{CDFAzimutalCorrelation}
 {CDF Collaboration}.
 \newblock {Measurements of Bottom Anti-Bottom Azimuthal Production Correlations
@@ -288,12 +294,6 @@ E.~Norrbin and T.~Sjostrand.
 S.~Frixione and M.L. Mangano.
 \newblock {Heavy quark jets in hadronic collisions}.
 \newblock {\em Nucl.Phys.}, B483:321--338, 1997.
-
-\bibitem{Salam.AccurateHQ}
-Andrea Banfi, Gavin Salam, and Giulia Zanderighi.
-\newblock Accurate qcd predictions for heavy-quark jets at the tevatron and
-  lhc.
-\newblock {\em JHEP}, 0707:026, 2007.
 
 \bibitem{Herwig}
 G.~Corcella, I.G. Knowles, G.~Marchesini, S.~Moretti, K.~Odagiri, et~al.

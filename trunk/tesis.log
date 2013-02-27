@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  27 FEB 2013 13:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  27 FEB 2013 18:19
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -336,11 +336,7 @@ File: Fig2/sumLumiByDay.pdf Graphic file (type pdf)
 <Fig2/ATLASDetector.pdf, id=281, 810.52812pt x 520.94624pt>
 File: Fig2/ATLASDetector.pdf Graphic file (type pdf)
 
-<use Fig2/ATLASDetector.pdf>
-
-LaTeX Warning: Float too large for page by 62.87663pt on input line 127.
-
-[49] [50 <./Fig2/ATLASDetector.pdf>] [51]
+<use Fig2/ATLASDetector.pdf> [49] [50 <./Fig2/ATLASDetector.pdf>] [51]
 <Fig2/InnerDetector.pdf, id=296, 3614.00188pt x 2409.34137pt>
 File: Fig2/InnerDetector.pdf Graphic file (type pdf)
 
@@ -419,7 +415,7 @@ Chapter 5.
 
 
 ] [99]
-Overfull \hbox (3.11276pt too wide) in paragraph at lines 41--50
+Overfull \hbox (3.11276pt too wide) in paragraph at lines 41--51
 \T1/cmr/m/n/12 tonic trans-verse mo-men-tum $[]$: 8-17 GeV, 17-35 GeV, 35-70 Ge
 V, 70-140 GeV,
  []
@@ -534,12 +530,13 @@ File: FIGS/VarsSingleMerged/Nsubjets080.pdf Graphic file (type pdf)
 <FIGS/VarsSingleMerged/Nsubjets200.pdf, id=1239, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/Nsubjets200.pdf Graphic file (type pdf)
 
-<use FIGS/VarsSingleMerged/Nsubjets200.pdf> [117]
-Overfull \hbox (2.3621pt too wide) in paragraph at lines 443--446
+<use FIGS/VarsSingleMerged/Nsubjets200.pdf>
+Overfull \hbox (2.3621pt too wide) in paragraph at lines 444--447
 []\T1/cmr/m/n/12 The $\OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 R$ \T1/cmr/m/n/12 be-
 tween the axes of the two ex-clu-sive sub-jets is shown in Fig. 5.13[].
  []
 
+[117]
 <FIGS/VarsSingleMerged/DRkt2axes080.pdf, id=1243, 569.12625pt x 546.04pt>
 File: FIGS/VarsSingleMerged/DRkt2axes080.pdf Graphic file (type pdf)
 
@@ -556,7 +553,7 @@ Nsubjets080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/Nsubjets2
 .pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/DRkt2axes200.pdf, pa
 ge is rotated 90 degrees>] [120 <./FIGS/TEMPFigs/TESTEventDisplay2Cluster.pdf, 
 page is rotated 90 degrees>]
-Overfull \hbox (5.87827pt too wide) in paragraph at lines 493--495
+Overfull \hbox (5.87827pt too wide) in paragraph at lines 494--496
 \T1/cmr/m/n/12 elec-troweak bosons and top quarks de-cay-ing into col-li-mated 
 show-ers of hadrons
  []
@@ -586,13 +583,13 @@ File: FIGS/VarsSingleMerged/TauRatio200.pdf Graphic file (type pdf)
 ! Missing delimiter (. inserted).
 <to be read again> 
                    $
-l.566  \end{bmatrix}
+l.567  \end{bmatrix}
                     
 ? 
 ! Extra \right.
 <to be read again> 
                    $
-l.566  \end{bmatrix}
+l.567  \end{bmatrix}
                     
 ? 
 [122 <./FIGS/VarsSingleMerged/Tau2080.pdf, page is rotated 90 degrees> <./FIGS/
@@ -601,7 +598,7 @@ gleMerged/Tau2trkWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMe
 rged/NtrktrkWidth080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/
 TauRatio080.pdf, page is rotated 90 degrees> <./FIGS/VarsSingleMerged/TauRatio2
 00.pdf, page is rotated 90 degrees>]
-Overfull \hbox (26.3682pt too wide) detected at line 581
+Overfull \hbox (26.3682pt too wide) detected at line 582
 \OML/cmm/m/it/12 r \OT1/cmr/m/n/12 = [] = []\OML/cmm/m/it/12 :
  []
 
@@ -770,7 +767,7 @@ File: FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf Graphic file
  (type pdf)
 
 <use FIGS/systematics/LlhoodKDE_ISO_BTagCalibTest_rejvseff200.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
 
  []
 
@@ -880,32 +877,32 @@ rees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf, page is rotated
 90 degrees>] [164 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf, page is r
 otated 90 degrees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin5.pdf, pag
 e is rotated 90 degrees>]
-Overfull \hbox (43.37703pt too wide) in paragraph at lines 290--306
+Overfull \hbox (43.37703pt too wide) in paragraph at lines 291--307
 [][] 
  []
 
 
-Overfull \hbox (7.11829pt too wide) in paragraph at lines 317--318
+Overfull \hbox (7.11829pt too wide) in paragraph at lines 318--319
 \T1/cmr/m/n/12 The sys-tem-atic un-cer-tain-ties af-fect-ing the com-pos-tion m
 ea-sure-ment are mainly
  []
 
-[165] [166] [167] [168] [169]
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf, id=3870, 56
-9.12625pt x 480.79625pt>
-File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf Graphic
- file (type pdf)
+[165] [166] [167] [168]
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf Graphic file (type p
+df)
 
-<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf>
-<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin2.pdf, id=3871
-, 569.12625pt x 480.79625pt>
-File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin2.pdf Gra
-phic file (type pdf)
+<use FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf>
+<FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_Bin2.pdf, id=
+3867, 569.12625pt x 480.79625pt>
+File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_Bin2.pdf
+ Graphic file (type pdf)
 
-<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin2.pdf>)
-[170] [171 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf
-, page is rotated 90 degrees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnr
-iched2btagZOOM_Bin2.pdf, page is rotated 90 degrees>] [172] [173]
+<use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_Bin2.pdf>
+
+LaTeX Warning: Float too large for page by 13.11313pt on input line 415.
+
+[169] [170] [171 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOO
+Mtest_Bin2.pdf, page is rotated 90 degrees>]) [172] [173]
 \openout2 = `Summary/summary.aux'.
 
 
@@ -919,7 +916,7 @@ Chapter 8.
 
 
 ] [178]
-Underfull \hbox (badness 1178) in paragraph at lines 136--140
+Underfull \hbox (badness 1178) in paragraph at lines 142--146
 []\T1/cmr/m/n/12 M Bahr, S. Gieseke, M.A. Gigg, A. Grellscheid, K. Hamil-ton,
  []
 
@@ -928,18 +925,18 @@ Missing character: There is no â in font cmr8!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
  [180] [181]
-Underfull \hbox (badness 1622) in paragraph at lines 270--275
+Underfull \hbox (badness 1622) in paragraph at lines 276--281
 []\T1/cmr/m/n/12 Stephen El-lis, Christo-pher Ver-mil-ion, Jonathan Walsh, An-d
 rew
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 270--275
+Underfull \hbox (badness 1783) in paragraph at lines 276--281
 \T1/cmr/m/n/12 Hornig, and Christo-pher Lee.  Jet shapes and jet al-go-rithms
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 270--275
+Underfull \hbox (badness 3333) in paragraph at lines 276--281
 \T1/cmr/m/n/12 in scet.  \T1/cmr/m/it/12 Jour-nal of High En-ergy Physics\T1/cm
 r/m/n/12 , 2010:1--83, 2010.
  []
@@ -973,10 +970,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3145 strings out of 495061
- 51671 string characters out of 1182621
+ 3140 strings out of 495061
+ 51357 string characters out of 1182621
  94068 words of memory out of 3000000
- 6105 multiletter control sequences out of 15000+50000
+ 6101 multiletter control sequences out of 15000+50000
  36195 words of font info for 91 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,15n,24p,1786b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1010,9 +1007,9 @@ ive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/sym
 bols/msam10.pfb>
-Output written on tesis.pdf (194 pages, 13273507 bytes).
+Output written on tesis.pdf (194 pages, 13254196 bytes).
 PDF statistics:
- 4704 PDF objects out of 5155 (max. 8388607)
+ 4664 PDF objects out of 5155 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 520 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 words of extra memory for PDF output out of 10000 (max. 10000000)
 

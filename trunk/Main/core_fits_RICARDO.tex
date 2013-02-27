@@ -359,24 +359,63 @@ The resulting systematic uncertainties are summarized in Table~\ref{tb:systemati
 \section{Enriched single and merged {\em b}-jet samples}\label{sec:Enriched}
 %------------------------------------------------------------------------
 
-The data sample employed in the analysis is $\sim$50\% pure in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. Having a purer data sample of single or  merged $b$-jets would facilitate the validation of the Monte Carlo templates used for template fitting. To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
+The inclusive QCD data sample is $\sim$50\% pure in single $b$-jets, according to the measurements described in Section~\ref{sec:FitsResults}. It is interesting to envisage the use of semi-inclusive samples, defined with adequate selection cuts to have a higher composition in single or in merged $b$-jets. On the one hand, this can be used to test the theoretical picture of QCD $b$-jet production. On the other, it would help validate the universality of the Monte Carlo templates used for fitting. 
+%To this end we consider the Monte Carlo dijet sample to determine the purity than can be achieved by simple kinematic and $b$-tagging cuts, leaving reasonable statistics.
 
-In a MC parton shower generator such as {\sc Pythia} generator, single $b$-jets are produced mainly via the Flavour Creation (FCR) and Flavour Excitation (FEX) processes.  In the former two heavy quarks are produced in the hard scatter. The FEX one can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one of the $b$-quarks subsequently enters the hard scatter, i.e., there is one $b$-quark in the final state.
-Merged $b$-jets are produced 95\% of the time by Gluon Splitting (GSP). In this process no heavy quarks participate in the hard scatter, but they are produced via subsequent $g \rightarrow Q\bar{Q}$ branchings (see Section~\ref{sec:bjet-production}).
+As discussed in Section~\ref{sec:bjet-production}, single $b$-jets are produced via the Flavour Creation (FCR) and Flavour Excitation (FEX) processes.  In the former two heavy quarks are produced in the hard scatter, yielding two hard $b$-quarks in the final state. The latter can be depicted as an initial state gluon splitting into a $b\bar{b}$ pair, where one of the $b$-quarks subsequently scatters off a parton in the opposite proton, yielding one hard $b$-quark and one forward $b$-quark in the final state.
+Merged $b$-jets are produced 95\% ({\em PREGUNTAR}) of the time by Gluon Splitting (GSP)\footnote{Merged $b$-jets can also be produced by the fortuitous coincidence of two $b$-quarks within the same phase space.}. In this process no heavy quarks participate in the hard scatter, but they are produced via the subsequent $g \rightarrow b\bar{b}$ branching with both $b$-quarks clustered in the same jet. 
 
-In the FCR process the two single $b$-quarks produced give rise to two back-to-back $b$-jets. Succesfully tagging these events is a way to build a sample enriched in single $b$-jets.  On the other hand, events with only one $b$-jet can be produced either in the FEX process, with only one central $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. These two scenarios are more difficult to disentangle. %and will require further selection cuts to be applied.
+In the FCR process the two $b$-quarks give rise to a back-to-back pair of single $b$-jets in the transverse plane\footnote{The presence of jets from initial and final state radiation distorts this simplified picture. This sentence should thus be understood as a first order description of the process.}. On the contrary, FEX and GSP also give rise to two back-to-back jets, but with only one of them containing heavy flavor. This picture suggests that requiring events with two $b$-tags is an efficient way to build a sample enriched in single $b$-jets.  On the other hand, requesting events with only one $b$-tag enriches the FEX and GSP contributions, giving rise to a light jet plus a single or merged $b$-jet, respectively.
+%can be produced either in the FEX process, with only one central $b$-quark in the final state, or via GSP, where $b\bar{b}$ pairs produced at small angles can be reconstructed as a single $b$-jet. 
+These two scenarios are more difficult to disentangle. %and will require further selection cuts to be applied.
 
 \subsubsection{Purified sample in single {\em b}-jets}
 
-To help purifying the sample in single $b$-jets we can then use the $b$-tagging information. Jets in data events with exactly two $b$-tags, selected with MV1 tagging algorithm at its 60\% working point, and satisfying the event and jet selection described in Section~\ref{sec:EventSelection} compose the purified data set.  In order to increase the statistics no requirement on the $\pt$ of the $b$-tagged jets was initially imposed for the event selection. 
+A sample enriched in single $b$-jets is achieved by restricting the data to events with exactly two $b$-tags,
+%To help purify the sample in single $b$-jets we can then use the $b$-tagging information. Jets in data events with exactly two $b$-tags, 
+selected with the MV1 tagging algorithm at its 60\% working point and satisfying the event and jet selection described in Section~\ref{sec:EventSelection}.
+% compose the purified data set.  
+In order to increase the statistics no requirement on the $\pt$ of the second $b$-tagged jet is imposed. 
+This sample is expected to be very pure, albeit with some contamination from FEX and GSP due to mistags, where the accompanying jet is incorrectly tagged as a $b$.
 
-Once the enriched sample is obtained, new likelihood fits are performed, for all $\pt$ bins, utilizing the same MC templates as for the nominal data sample in order to evaluate their performance.  
-The measured fractions of single $b$-jets, together with their statistical errors and the {\sc Pythia} MC predictions for each $\pt$ bin are displayed in table~\ref{tb:fitfractions2btagS}. An example of these fits is shown  in  Figure~\ref{fig:fitenriched2btag1}. % and Figures~\ref{fig:fitenriched2btag2}. 
- The model fitted to the data agrees well within statistics and the result is in good agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
+\begin{table}[!hbt] %[h]
+\renewcommand{\arraystretch}{1.2}
+\centering
+\begin{tabular}{ | c || c | c | c || c | c | c ||}
+  \hline
+  Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jets}& \multicolumn{3}{c||}{merged $b$-jets}\\ \cline{2-7}
+    (GeV) & ~~data~~ & ~theory~ & ~~~pull~~~& ~~data~~ & ~theory~ & ~~~pull~~~\\ \hline
+   40 - 60 &  99$\pm$11 & 84   & ~1.37&  -1$\pm$1& 1 &-0.74 \\  
+   60 - 80 &  82$\pm$5  &  87  & -1.01&  -3$\pm$1& 1 &-1.60 \\ 
+   80 - 110&  84$\pm$5  &  88 &  -0.72&  ~2$\pm$1& 1 &~0.37 \\ 
+  110 - 150&  86$\pm$8  &  85 &  ~0.02&  ~4$\pm$2& 3 &~0.41 \\ 
+  150 - 200&  89$\pm$9  &  83 &  ~0.67&  ~4$\pm$2& 3 &~0.20 \\ 
+  200 - 270&  95$\pm$5  &  80 &  ~1.00&  ~7$\pm$2& 5 &~0.61 \\ 
+  270 - 360&  67$\pm$11  &  81 & -1.25&  12$\pm$2& 6 &~2.21 \\ 
+  360 - 480&  73$\pm$16  &  73 & -0.01&  10$\pm$1& 8 &~0.98 \\ \hline
+\end{tabular}
+\caption{Percentage of single  and merged $b$-jets in a QCD sample enriched in single $b$-jets by requiring events with two $b$-tags. See details in the text.} %in experimental data from 2011 run, enriched in single $b$-jets.}
+\label{tb:fitfractions2btagS}
+\end{table}
+%Once the enriched sample is obtained, new likelihood fits are performed for all $\pt$ bins, utilizing the same MC templates as for the inclusive data sample.  
+The likelihood fits are performed on the purified sample, utilizing the same MC templates as for the inclusive case.
+The measured fractions of single and merged $b$-jets, together with their statistical errors and {\sc Pythia} MC predictions for each $\pt$ bin are displayed in Table~\ref{tb:fitfractions2btagS}. The agreement between theory and experiment is excellent. The fraction of single (merged) $b$-jets substantially increases (decreases) as expected, confirming the intuitive picture discussed in Section~\ref{sec:bjet-production} in terms of Feynman diagrams.
+
+
+An example of the enriched template fits is shown in Figure~\ref{fig:fitenriched2btag1}, comparing for the same $\pt$ bin the inclusive and the semi-inclusive single-$b$ enriched cases.  % and Figures~\ref{fig:fitenriched2btag2}. 
+The template description agrees very well within statistics with the data. In fact, even by ocular inspection it can be ascertained that the merged-$b$ fraction decreases, given the evident reduction in the peak at low LL. 
+% and the result is in good agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
+\begin{figure}[tp]
+\centering
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf}
+\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin2.pdf}
+\caption{{\em CAMBIAR}: Example result of a template fit to the likelihood distribution in data enriched in single $b$-jets. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
+\label{fig:fitenriched2btag1}
+\end{figure}
 
 \subsubsection{Purified sample in merged {\em b}-jets}
 
-Events with only one $b$-tagged jet were selected for the purification of the data sample in double $b$-hadron jets.  In order to reinforce this selection, a tight anti-b-tagging on any non-tagged jet in the event was implemented.  The anti-b-tagging was performed by imposing, simultaneously, strict cuts on the $b$-tagging weights of the three supported (calibrated) taggers available:
+Events with only one $b$-tagged jet were selected for the purification of the data sample in double $b$-hadron jets.  In order to reinforce this selection, a tight anti-$b$-tagging requirement on any non-tagged jet in the event was implemented.  The anti-$b$-tagging was performed by imposing, simultaneously, strict cuts on the $b$-tag weights of the three supported taggers available within ATLAS:
 %
 \begin{itemize}
 \item
@@ -387,22 +426,13 @@ JetFitter:  $w < -2$
 IP3D+SV1:  $w < -2$
 \end{itemize}
 %
-These weight values correspond to a MV1 tagging efficiency of more than 85\%, and an efficiency for $b$-tagging of more than 80\% for the JetFitter and IP3D+SV1 algorithms. 
+These weight values correspond to a MV1 tagging efficiency of more than 85\%, and an efficiency for $b$-tagging of more than 80\% for the JetFitter and IP3D+SV1 algorithms. These high efficiencies are chosen because we want to safely veto on the second jet amd do not ming if the price is a high level of contamiation.
 
 The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, very little enrichment was achieved with this kind of selection. The results from these fits (the fractions of merged $b$-jets in the enriched sample) are presented in  table~\ref{tb:fitfractions2btagM}.
 
-\emph{Further studies were performed requiring the $b$-tagged jet in the event to be back-to-back to the highest (second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying:  $\Delta R>2.8$ and  $\pt^{tagged}/\pt^{lead} > 0.7$  (in the case the $b$-tagged jets is the leading jet of the event, this cut is $\pt^{second}/\pt^{tagged} > 0.7$). Actually, most of the $b$-tagged jets in one-$b$-tagged events fall in this category. Three different topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light. In oder to enrich the sample in merged $b$-jets one would like to reduce the rate of the first two configurations.  It was found that in 90\% of these cases the  non-tagged jet is a light jet. This observation imposes a limitation on how far one can go in purifying the QCD sample since $b$-jets arising from FEX process constitute and irreducible background for selecting merged $b$-jets. Other physics samples would be required in order to obtain a reasonable enrichment.}
+The results are summarized in Table~\ref{tb:fitfractions2btagM}, which shows the measured fractions of single and merged $b$-jets, together with their statistical errors and {\sc Pythia} MC predictions for each $\pt$ bin. Although there is good agreement between data and experiment, it is clear that a much lower level of purification has been achieved that for the previous case of single $b$-tagged jets. This was expected, given that the selection cuts enhance the composition not only of the GSP, but also the FEX component. Some further studies were performed but with onbly relative success. In particular the $b$-tagged jet was requested to be back-to-back to the highest (or second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying:  $\Delta R>2.8$ and  $\pt^\text{tagged}/\pt^\text{leading} > 0.7$  (if the $b$-tagged jets is the leading one, the cut is replaced by $\pt^\text{subleading}/\pt^\text{tagged} > 0.7$). No improvement was found either by restrintig to the case where the $b$-jet is the leading or the sub-leading one.
 
- 
-\begin{figure}[tp]
-\centering
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btag_Bin2.pdf}
-\includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOM_Bin2.pdf}
-\caption{Example result of a template fit to the likelihood distribution in data enriched in single $b$-jets. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
-\label{fig:fitenriched2btag1}
-\end{figure}
-
-
+%\emph{Further studies were performed requiring the $b$-tagged jet in the event to be back-to-back to the highest (second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying:  $\Delta R>2.8$ and  $\pt^{tagged}/\pt^{lead} > 0.7$  (in the case the $b$-tagged jets is the leading jet of the event, this cut is $\pt^{second}/\pt^{tagged} > 0.7$). Actually, most of the $b$-tagged jets in one-$b$-tagged events fall in this category. Three different topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light. In oder to enrich the sample in merged $b$-jets one would like to reduce the rate of the first two configurations.  It was found that in 90\% of these cases the  non-tagged jet is a light jet. This observation imposes a limitation on how far one can go in purifying the QCD sample since $b$-jets arising from FEX process constitute and irreducible background for selecting merged $b$-jets. Other physics samples would be required in order to obtain a reasonable enrichment.}
 
 %\begin{figure}[tp]
 %\centering
@@ -411,28 +441,6 @@ The idea behind the anti-b-tagging requirement is to eliminate FCR events for wh
 %\caption{Example result of a template fit to the likelihood distribution in data enriched in single $b$-jets. The fit is shown for jets with $\pt$ between  200~GeV and 270~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 %\label{fig:fitenriched2btag2}
 %\end{figure}
-
-
-\begin{table}[!hbt] %[h]
-\renewcommand{\arraystretch}{1.2}
-\centering
-\begin{tabular}{ | c || c | c | c ||}
-  \hline
-  Jet $\pt$ & \multicolumn{3}{c||}{single $b$-jets}\\ \cline{2-4}
-    (GeV) & ~~data~~ & ~theory~ & ~~~pull~~~\\ \hline
-   40 - 60 &  99$\pm$11 & 84   & ~1.37 \\  
-   60 - 80 &  82$\pm$5  &  87  & -1.01\\ 
-   80 - 110&  84$\pm$5  &  88 &  -0.72\\ 
-  110 - 150&  86$\pm$8  &  85 &  ~0.02\\ 
-  150 - 200&  89$\pm$9  &  83 &  ~0.67 \\ 
-  200 - 270&  95$\pm$5  &  80 &  ~1.00 \\ 
-  270 - 360&  67$\pm$11  &  81 & -1.25 \\ 
-  360 - 480&  73$\pm$16  &  73 & -0.01 \\ \hline
-\end{tabular}
-\caption{Proportion (in percentage) of single $b$-jets in a QCD sample enriched in single $b$-jets by requiring events with two $b$-tags. See details in the text.} %in experimental data from 2011 run, enriched in single $b$-jets.}
-\label{tb:fitfractions2btagS}
-\end{table}
-
 %\begin{table}[!hbt] %[h]
 %\renewcommand{\arraystretch}{1.2}
 %\centering
