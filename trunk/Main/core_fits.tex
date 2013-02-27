@@ -5,7 +5,7 @@
 \chapter{Fraction of double {\em b\hspace{.5mm}}-hadron jets in QCD {\em b\hspace{.5mm}}-production}\label{ch:gbbfraction}
 
 
-In this chapter we apply the newly developed $g \rightarrow b\bar{b}$ tagging tool to measure the fraction of merged $b$-jets in QCD $b$-jet production. The fractions are determined both for an inclusive $b$-jets sample with $|\eta|<2.1$, and for exclusive samples enriched in single or in merged $b$-jet.
+In this chapter we apply the newly developed $g \rightarrow b\bar{b}$ tagging tool to measure the fraction of merged $b$-jets in QCD $b$-jet production. The fractions are determined both for an inclusive $b$-jets sample with $|\eta|<2.1$, and for exclusive samples enriched in single or in merged $b$-jets.
 The measured fractions are in excellent agreement, within the experimental uncertainties, with the theoretical predictions from a simulation of hadronic collisions.
 %The chapter is organized as follows. Section~\ref{sec:FitIntro} introduces the concept of template fitting. Section~\ref{sec:LLFits} describes the statistical method used to perform the template fits.
 
@@ -41,9 +41,11 @@ The expected distribution of LL is different for each of the five cases. This is
 \end{figure}
 The shape of the distributions in Figure~\ref{fig:templates} can be intuitively understood. The $b$ and $b\bar{b}$ templates behave as expected, respectively peaking at high and low values of LL. The $c$ template resembles its $b$ counterpart. The $c\bar{c}$ although similar to the $b\bar{b}$ template, also exhibits a spike for large values of LL.  
 %This was to be expected, given that a $c$-quark fragments mainly into into $D$-mesons which have a measurable $c\tau$ of $\sim$300$\mu$m shorter than the  $c\tau$ of $\sim$500$\mu$m corresponding to the $B$-mesons produced in $b$-quark fragmentation. 
-This was to be expected, given that $c$-jets have less tracks than $b$-jets: they decay to $D$ mesons, $c \rightarrow D \rightarrow \mbox{light hadrons}$, as opposed to $b$-jets which present a longer decay chain, $b \rightarrow B \rightarrow D\rightarrow \mbox{light hadrons}$. They also show smaller angular separation (width), since $m_D < m_B$  ($m_D\sim 1.9$~GeV and $m_B \sim 5.3$~GeV).
-Single and merged $c$-jets are thus the main background to $b$- and $b\bar{b}$-jets. The template of light jets  %on the contrary, do not contain large decay-length secondary vertices,and its distribution is driven by...}
-is comparable to the distributions observed in single $b$/$c$ jets. This can be traced to observation that gluons and light-quarks jets tend to be narrower and have lower track multiplicity than heavy-flavour jets, leading to a more single-like likelihood distributions (see Section~\ref{sec:gbbKine}).
+This was to be expected, given that $c$-jets have less tracks than $b$-jets: they decay to $D$ mesons, $c \rightarrow D \rightarrow \mbox{light hadrons}$, as opposed to $b$-jets which present a longer decay chain, $b \rightarrow B \rightarrow D\rightarrow \mbox{light hadrons}$. They also show smaller angular separation (width), since $m_D < m_B$  ($m_D\sim 1.9$~GeV and $m_B \sim 5.3$~GeV).  
+The template of light jets  %on the contrary, do not contain large decay-length secondary vertices,and its distribution is driven by...}
+%is comparable to the distributions observed in single $b$/$c$ jets. 
+has a larger peak at LL$\rightarrow 1$ than for single $b$-jets.
+This can be traced to the observation that gluons and light-quarks jets tend to be narrower and have lower track multiplicity than heavy-flavour jets, leading to a more single-like likelihood distributions (see Section~\ref{sec:gbbKine}).
 
 
 One can determine the composition of a given sample by measuring the values of LL of the $b$-tagged jets and estimating the fractions needed from each of the templates to accurately describe the experimental LL distribution. This process is known as ``template fitting'', see Section~\ref{sec:FitsResults}. The measured composition can then be compared to the theoretical prediction from QCD. 
@@ -54,7 +56,7 @@ One can determine the composition of a given sample by measuring the values of L
 \caption{Theoretical predictions of the fractions of $b$-, $b\bar{b}$-, $c$-, $c\bar{c}$-, and $\ell$-jets in $b$-tagged jets from a {\sc Pythia} simulation of QCD jet production.}
 \label{fig:truefractions}
 \end{figure}
-Figure~\ref{fig:truefractions} shows the expected fractions as a function of $\pt$ from a {\sc Pythia} simulation of QCD jet production in $pp$ collisions at 7~TeV. We observe that the fraction of single (merged) $b$-jets tends to decrease (increase) with $\pt$. This is expected as, with increasing $\pt$, the larger the boost of the $b\bar{b}$ pair produced by gluon splitting, and the higher the probability that they will be produced at a small angle and reconstructed within the same jet. The fraction of merged jets is slightly smaller for the first $\pt$ bin because the $b$-tagging efficiency drops at low $\pt$, bringing about a larger fraction of light jets. 
+Figure~\ref{fig:truefractions} shows the expected fractions as a function of $\pt$ from a {\sc Pythia} simulation of QCD jet production in $pp$ collisions at 7~TeV. We observe that the fraction of single (merged) $b$-jets tends to decrease (increase) with $\pt$. This is expected as, with increasing $\pt$, the larger the boost of the $b\bar{b}$ pair produced by gluon splitting and the higher the probability that they will be produced at a small angle and reconstructed within the same jet. The fraction of merged jets is slightly smaller for the first $\pt$ bin because the $b$-tagging efficiency drops at low $\pt$, bringing about a larger fraction of light jets. 
 
 
 %------------------------------------------------------------------------
@@ -75,12 +77,12 @@ In the case of data binned into a histogram, one approach is to use a least-squa
 where $d_i$ is the number of data events that fall into bin $i$; $n$ is the number of bins, and $f_i$ is the predicted number of events in bin $i$, defined by
 %
 \begin{equation}
-f_i = N_D\sum^m_{j=1} p_j \cdot a_{ji}/N_j
+f_i = N_D\sum^m_{j=1} p_j \cdot a_{ij}/N_j
 \end{equation}
 %
 with $p_j$, the proportions of the different $m$ sources; $a_{ij}$, the number of Monte Carlo events from source $j$ in bin $i$, with $i=1,2,...,n$; $N_D$, the total number of events in the data sample; and $N_j$, the total number in the MC sample for source $j$.
 
-This $\chi^2$ assumes that the distribution for $d_i$ is Gaussian and that $a_{ij}$ has no uncertainty. The distribution of $d_i$ is of course Poisson, but the Gaussian $N(\mu = d_i,\sigma = \sqrt{d_i})$ is a good approximation for large  $d_i$.  Unfortunately it often happens that many of the $d_i$ are small, making the $\chi^2$ value given in Equation~\ref{eq:chi2} inappropiate to describe the problem.  Instead one can go back to the original Poisson distribution, and write down the probability for observing a particular $d_i$ as
+This $\chi^2$ assumes that the distribution for $d_i$ is Gaussian and that $a_{ij}$ has no uncertainty. The distribution of $d_i$ is of course Poisson, but the Gaussian $N(\mu$=$ d_i,\sigma$=$\sqrt{d_i})$ is a good approximation for large  $d_i$.  Unfortunately it often happens that many of the $d_i$ are small, making the $\chi^2$ value given in Equation~\ref{eq:chi2} inappropiate to describe the problem.  Instead one can go back to the original Poisson distribution, and write down the probability for observing a particular $d_i$ as
 %
 \begin{equation}
 e^{-f_i} \frac{f_i^{d_i}}{d_i!} 
@@ -92,7 +94,7 @@ and the estimates of the proportions $p_j$ are found by maximizing the total lik
 \mathcal{L} = \prod^n_{i=1} e^{-f_i} \frac{f_i^{d_i}}{d_i!}.
 \end{equation}
 %
-This accounts correctly for bins with small numbers of events.  It is often referred to as a ``binned maximum likelihood'' fit. Actually this formalism does not account for fluctuations in the $a_{ji}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exists, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. 
+This accounts correctly for bins with small numbers of events.  It is often referred to as a ``binned maximum likelihood'' fit. Actually this formalism does not account for fluctuations in the $a_{ij}$ due to finite Monte Carlo samples. A similar methodology that correctly describes this scenario exists, see Ref.~\cite{Barlow1993219}. The effects of finite MC data size can be considered small for MC samples ten times larger than the data sample. 
 
 
 The technique of binned maximum likelihood fit is fast and analytical; %unfortunately, 
@@ -108,14 +110,14 @@ The likelihood to be maximized in an unbinned dataset of events $\{\vec{x}_k\}^N
 \mathcal{L}(\vec{x};\vec{p}) =\prod^N_{k=1} F(\vec{x}_k;\vec{p})
 \end{equation}
 %
-which, can be rewritten in terms of distribution the probability of oberving an event from source $j$ in the sample,
+which can be rewritten in terms of the probability distributions of observing an event from source $j$ in the sample,
 %
 \begin{equation}
 \mathcal{L} =  \prod^N_{k=1} \sum^m_{j=1} p_j  \mathcal{T}_j(\vec{x}_k)
  \label{eq:LLgeneral}
 \end{equation}
 %
-where $\mathcal{T}_j$ are the PDFs that represent the distribution of $\vec{x}_k$ for each of the $m$ hypothesis, $p_j$ are the parameters representing the proportions for the $j^{th}$ hypothesis, and $N$ is the total number of input data points.
+where $\mathcal{T}_j$ are the PDFs that represent the distribution of $\vec{x}_k$ for each of the $m$ hypothesis (the ``templates''), $p_j$ are the parameters representing the proportions for the $j^{th}$ hypothesis, and $N$ is the total number of input data points.
 
 %\subsubsection{Extended maximum likelihood fits}
 
@@ -135,14 +137,14 @@ where $\mathcal{T}_j$ are the PDFs that represent the distribution of $\vec{x}_k
 %%
 %The fit then finds the values of $n_j$, the number of events for each hypothesis $j$. 
 
-The PDF in~\ref{eq:LLgeneral} is the sum  of multiple probability density functions. Mathematically, the sum of two probability density functions is also a normalized probability density function as long as the coeffients add up to 1 (for simplicity we take $\vec{x}_k=x_k$),
+The PDF in Equation~\ref{eq:LLgeneral} is the sum  of multiple probability density functions. Mathematically, the sum of two probability density functions is also a normalized probability density function as long as the coeffients add up to 1 
 % 
 \begin{equation} 
-F(x_k) = p_0 \cdot \mathcal{T}_0(x_k) + p_1 \cdot \mathcal{T}_1(x_k)+...+p_{m-1}\mathcal{T}_{m-1}(x_k)+ (1-\sum^{m-1}_{i=1}p_i) \mathcal{T}_m(x_k).
+F(\vec{x}_k) = p_0 \cdot \mathcal{T}_0(\vec{x}_k) + p_1 \cdot \mathcal{T}_1(\vec{x}_k)+...+p_{m-1}\mathcal{T}_{m-1}(\vec{x}_k)+ (1-\sum^{m-1}_{i=1}p_i) \mathcal{T}_m(\vec{x}_k).
 \end{equation}
 %
-If the sum of these coefficients becomes larger than one, the remainder coefficient will be assigned a negative fraction. As long as the summed p.d.f is greater than zero everywhere, this is not ill-defined. %but may pose some problems in the interpretation
-In the case of the present analysis $x_k$ represents the double $b$-hadron likelihood, LL. 
+If the sum of these coefficients becomes larger than one, the remainding coefficient will be assigned a negative fraction. As long as the summed p.d.f is greater than zero everywhere, this is not ill-defined. %but may pose some problems in the interpretation
+In the case of the present analysis $\vec{x}_k$ represents a one-dimensional variable, the double $b$-hadron likelihood LL. 
 
 The fits were performed in this thesis by means of the RooFit Toolkit for data modelling~\cite{RooFit}. Performing a fit consists of minimizing the negative log-likelihood of a PDF calculated over the data set % (for simplicity we drop for a moment the extra term)
 %
@@ -213,18 +215,18 @@ The fit to the full sample of 4.7 fb$^{-1}$ of $pp$ collision data at $\sqrt{s}=
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin2.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf}
-\caption{Example result of template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
+\caption{Example result of a template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  80~GeV and 110~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fittemplates1}
 \end{figure}
 \begin{figure}[tp]
 \centering
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf}
 \includegraphics[width=0.7\textwidth]{FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin5.pdf}
-\caption{Example result of a template fit to the likelihood distribution in data. The fit is shown for jets with $\pt$ between  200~GeV and 270~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
+\caption{Example result of a template fit to the likelihood distribution in data. The result is shown for jets with $\pt$ between  200~GeV and 270~GeV, in full scale (top) and zooming the vertical scale, to better display the flavour content of the data (bottom). Uncertainties shown are statistical only.}
 \label{fig:fittemplates2}
 \end{figure}
 
-The fit results are summarized in Table~\ref{tb:fitfractions} for all $\pt$ bins, together with the theoretical prediction from a {\sc Pythia} MC simulation of QCD $b$-jet production (Section~\ref{sec:MCtools}). The errors shown are statistical, and they arise from the finite statistics of the data and template samples. The level of agreement is quantified in the Table by the pulls, which correspond to the difference between data and theory normalized to the total uncertainty (pull = (data-theory)/$\sqrt{\text{stat}^2+\text{syst}^2}$, where the systematic errors are to be discussed in Section~\ref{sec:FractionSystematics}). 
+The fit results are summarized in Table~\ref{tb:fitfractions} for all $\pt$ bins, together with the theoretical prediction from a {\sc Pythia} MC simulation of QCD $b$-jet production (Section~\ref{sec:MCtools}). The errors shown are statistical, and they arise from the finite statistics of the data and template samples. The level of agreement is quantified in the Table by the pulls, which correspond to the difference between data and theory normalized to the total uncertainty (pull = (data-theory)/$\sqrt{\text{stat}^2+\text{syst}^2}$), where the systematic errors are to be discussed in Section~\ref{sec:FractionSystematics}. 
 
 The measured composition of $b$-jets is observed to be in very good agreement with the prediction from the simulation. The single $b$-jet fraction decreases as expected with $\pt$, from 63\% to 42\%, while the merged $b$-jet fraction increases, from 8\% to 20\%. The fraction of light jets is the smallest and, except at the higher $\pt$ bins, consistent with zero. The larger fraction of light jets at high $\pt$ is expected from the simulation and is due to the increasing difficulty to efficiently tag $b$-jets in the boosted regime where the tracks associated to a jet tend to be collimated within a narrow angle.
 
@@ -304,7 +306,7 @@ The measured composition of $b$-jets is observed to be in very good agreement wi
   270 - 360& 51$\pm$4~& 44 & ~1.34 & 22$\pm$1 & 18  & ~1.45 & ~7$\pm$4 &  11 &  -0.95 & 13$\pm$3 & 13 & -0.14 & ~8$\pm$2 &  13 & -1.64\\
   360 - 480& 42$\pm$7~& 36 & ~0.73 & 19$\pm$1 & 21  & -0.64 & 13$\pm$6 &  19 &  -0.82 & ~9$\pm$5 & 11 & -0.33 & 17$\pm$2 &  14 & ~1.02\\ \hline
 \end{tabular}
-\caption{Measured proportions (in percentage) of the composition of $b$-jets in QCD production, compared to the theoretical prediction from a MC {\sc Phythia} simulation. Errors shown are only statistical. The pull corresponds to (data-theory)/$\sqrt{\text{stat}^2+\text{syst}^2}$}
+\caption{Measured proportions (in percentage) of the composition of $b$-jets in QCD production, compared to the theoretical prediction from a MC {\sc Pythia} simulation. Errors shown are only statistical. The pull corresponds to (data-theory)/$\sqrt{\text{stat}^2+\text{syst}^2}$}
 \label{tb:fitfractions}
 \end{sidewaystable}
                    
@@ -400,11 +402,11 @@ This sample is expected to be very pure, albeit with some contamination from FEX
 \end{table}
 %Once the enriched sample is obtained, new likelihood fits are performed for all $\pt$ bins, utilizing the same MC templates as for the inclusive data sample.  
 The likelihood fits are performed on the purified sample, utilizing the same MC templates as for the inclusive case.
-The measured fractions of single and merged $b$-jets, together with their statistical errors and {\sc Pythia} MC predictions for each $\pt$ bin are displayed in Table~\ref{tb:fitfractions2btagS}. The agreement between theory and experiment is excellent. The fraction of single (merged) $b$-jets substantially increases (decreases) as expected, confirming the intuitive picture discussed in Section~\ref{sec:bjet-production} in terms of Feynman diagrams.
+The measured fractions of single and merged $b$-jets, together with their statistical errors and {\sc Pythia} MC predictions for each $\pt$ bin are displayed in Table~\ref{tb:fitfractions2btagS}. The agreement between theory and experiment is excellent. The fraction of single (merged) $b$-jets substantially increases (decreases) with respect to the inclusive case, as expected, confirming the intuitive picture discussed in Section~\ref{sec:bjet-production} in terms of Feynman diagrams.
 
 
-An example of the enriched template fits is shown in Figure~\ref{fig:fitenriched2btag1}, comparing for the same $\pt$ bin the inclusive and the semi-inclusive single-$b$ enriched cases.  % and Figures~\ref{fig:fitenriched2btag2}. 
-The template description agrees very well within statistics with the data. In fact, even by ocular inspection it can be ascertained that the merged-$b$ fraction decreases, given the evident reduction in the peak at low LL. 
+An example of an enriched template fit is shown in Figure~\ref{fig:fitenriched2btag1}, comparing for the same $\pt$ bin the inclusive and the semi-inclusive single-$b$ enriched cases.  % and Figures~\ref{fig:fitenriched2btag2}. 
+The template description agrees very well within statistics with the data. In fact, even by a simple ocular inspection it can be ascertained that the merged-$b$ fraction decreases, given the evident reduction in the peak at low LL in the lower panel. 
 % and the result is in good agreement with the predictions made by {\sc Pythia} on a sample with the same level of enrichment.  
 \begin{figure}[tp]
 \centering
@@ -429,10 +431,10 @@ IP3D+SV1:  $w < -2$
 %
 These weight values correspond to a MV1 tagging efficiency of more than 85\%, and an efficiency for $b$-tagging of more than 80\% for the JetFitter and IP3D+SV1 algorithms. These high efficiencies are chosen because we want to safely veto on the second jet and do not mind if the price is a high level of fake vetos. %a high level of contamination.
 
-The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, very little enrichment was achieved with this kind of selection. %The results from these fits (the fractions of merged $b$-jets in the enriched sample) are presented in  table~\ref{tb:fitfractions2btagM}.
+%The idea behind the anti-b-tagging requirement is to eliminate FCR events for which one of the produced $b$-quark jets failed to be tagged. However, although a certain level of purification was expected, very little enrichment was achieved with this kind of selection. %The results from these fits (the fractions of merged $b$-jets in the enriched sample) are presented in  table~\ref{tb:fitfractions2btagM}.
 
-The results are summarized in Table~\ref{tb:fitfractions2btagM}, which shows the measured fractions of single and merged $b$-jets, together with their statistical errors and {\sc Pythia} MC predictions for each $\pt$ bin. Although there is good agreement between data and experiment, it is clear that a much lower level of purification has been achieved than for the previous case of single $b$-tagged jets. This was expected, given that the selection cuts enhance the composition not only of the GSP, but also the FEX component. 
-Some further studies were performed but with only relative success. In particular the $b$-tagged jet was requested to be back-to-back to the highest (or second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying:  $\Delta R>2.8$ and  $\pt^\text{tagged}/\pt^\text{leading} > 0.7$  (if the $b$-tagged jets is the leading one, the cut is replaced by $\pt^\text{subleading}/\pt^\text{tagged} > 0.7$). No improvement was found either by restrintig to the case where the $b$-jet is the leading or the sub-leading one.
+The results are summarized in Table~\ref{tb:fitfractions2btagM}, which shows the measured fractions of single and merged $b$-jets, together with their statistical errors and {\sc Pythia} MC predictions for each $\pt$ bin. Although there is good agreement between data and experiment, it is clear that a much lower level of purification has been achieved than for the previous case of single $b$-tagged jets. This was expected, given that the selection cuts enhance not only the GSP, but also the FEX component. 
+Some further studies were performed but with only relative success. In particular the $b$-tagged jet was requested to be back-to-back to the highest (or second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying  $\Delta R>2.8$ and  $\pt^\text{tagged}/\pt^\text{leading} > 0.7$  (if the $b$-tagged jets is the leading one, the cut is replaced by $\pt^\text{subleading}/\pt^\text{tagged} > 0.7$). No further  improvement was found either by restricting to the case where the $b$-jet is the leading or the sub-leading one.
 
 %\emph{Further studies were performed requiring the $b$-tagged jet in the event to be back-to-back to the highest (second highest) $\pt$ jet in the event.  Back-to-back jets were defined as those satisfying:  $\Delta R>2.8$ and  $\pt^{tagged}/\pt^{lead} > 0.7$  (in the case the $b$-tagged jets is the leading jet of the event, this cut is $\pt^{second}/\pt^{tagged} > 0.7$). Actually, most of the $b$-tagged jets in one-$b$-tagged events fall in this category. Three different topologies are expected to be left after the selection described above: FCR back-to-back single $b$-jets not tagged,  FEX single $b$-jets back-to-back with light jets, and GSP merged $b$-jets, also back-to-back with light. In oder to enrich the sample in merged $b$-jets one would like to reduce the rate of the first two configurations.  It was found that in 90\% of these cases the  non-tagged jet is a light jet. This observation imposes a limitation on how far one can go in purifying the QCD sample since $b$-jets arising from FEX process constitute and irreducible background for selecting merged $b$-jets. Other physics samples would be required in order to obtain a reasonable enrichment.}
 
