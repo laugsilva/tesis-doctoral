@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  27 FEB 2013 18:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.23)  27 FEB 2013 19:12
 entering extended mode
  %&-line parsing enabled.
 **tesis
@@ -877,36 +877,35 @@ rees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf, page is rotated
 90 degrees>] [164 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_Bin5.pdf, page is r
 otated 90 degrees> <./FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin5.pdf, pag
 e is rotated 90 degrees>]
-Overfull \hbox (43.37703pt too wide) in paragraph at lines 291--307
+Overfull \hbox (43.37703pt too wide) in paragraph at lines 293--309
 [][] 
  []
 
 
-Overfull \hbox (7.11829pt too wide) in paragraph at lines 318--319
+Overfull \hbox (7.11829pt too wide) in paragraph at lines 320--321
 \T1/cmr/m/n/12 The sys-tem-atic un-cer-tain-ties af-fect-ing the com-pos-tion m
 ea-sure-ment are mainly
  []
 
-[165] [166] [167] [168]
+[165] [166] [167] [168] [169]
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf Graphic file (type p
 df)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_ZOOM_Bin2.pdf>
 <FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_Bin2.pdf, id=
-3867, 569.12625pt x 480.79625pt>
+3870, 569.12625pt x 480.79625pt>
 File: FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_Bin2.pdf
  Graphic file (type pdf)
 
 <use FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_Bin2.pdf>
 
-LaTeX Warning: Float too large for page by 13.11313pt on input line 415.
+LaTeX Warning: Float too large for page by 13.11313pt on input line 417.
 
-[169] [170] [171 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOO
-Mtest_Bin2.pdf, page is rotated 90 degrees>]) [172] [173]
+[170] [171 <./FIGS/Fits/LikelihoodFit_3param_ETAFull_DataEnriched2btagZOOMtest_
+Bin2.pdf, page is rotated 90 degrees>]) [172] [173]
 \openout2 = `Summary/summary.aux'.
 
-
-(./Summary/summary.tex
+ (./Summary/summary.tex
 Chapter 8.
 [174
 
@@ -1007,7 +1006,7 @@ ive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/sym
 bols/msam10.pfb>
-Output written on tesis.pdf (194 pages, 13254196 bytes).
+Output written on tesis.pdf (194 pages, 13253935 bytes).
 PDF statistics:
  4664 PDF objects out of 5155 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
